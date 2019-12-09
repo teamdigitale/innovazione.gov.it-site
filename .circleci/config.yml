@@ -90,8 +90,8 @@ jobs:
       - deploy:
           name: Update GitHub Pages
           command: |
-            git config --global user.email francesco.zaia@gmail.com
-            git config --global user.name francescozaia
+            git config --global user.email no-reply@teamdigitale.governo.it
+            git config --global user.name "Deploy Bot"
 
             cd /tmp/gh-pages
             git checkout gh-pages || git checkout --orphan gh-pages
