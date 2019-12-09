@@ -170,6 +170,7 @@
       </section>
       {% endcomment %}
 
+      {% if site.data.t.social-links[page.lang].size > 0 %}
       <section class="mt-5">
         <div class="row">
           <div class="col">
@@ -192,6 +193,8 @@
           </div>
         </div>
       </section>
+      {% endif %}
+
     </div>
   </div>
   {% include footer/footer-slim.html %}

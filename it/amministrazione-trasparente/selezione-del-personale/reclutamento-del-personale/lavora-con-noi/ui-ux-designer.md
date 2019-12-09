@@ -1,17 +1,16 @@
 ---
-title: UI/UX Designer
+title: UI/UX designer
 description:
 lang: it
 layout: page-job
 ref: ui-ux-designer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/emrvJTI5b3/Esperto-UIUX-Designer.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-**UI/UX Designer***.* La figura sarà responsabile per la
+Il dipartimento per la trasformazione digitale è alla ricerca di esperti
+**UI/UX designer**. La figura sarà responsabile per la
 concettualizzazione, il *design* e il miglioramento continuo delle
 interfacce utente per le applicazioni *mobile* e *web* realizzate dal
 dipartimento per la trasformazione digitale e dalle Pubbliche
@@ -55,7 +54,7 @@ impatto positivo sulle vite delle persone.
     cross-dispositivo, con capacità di dialogo con l’area di sviluppo ed
     il project management
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea o Master in Design, Ingegneria, Informatica o affine con
     almeno 5 anni di esperienza in *UI/UX design* (non solo *graphic

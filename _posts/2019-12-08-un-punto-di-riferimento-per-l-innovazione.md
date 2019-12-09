@@ -14,7 +14,7 @@ categories:
   - cittadini
 ---
 
-<img src="{{ site.baseURL }}/assets/images/posts/mid-logo.jpg" alt="Logo del Ministro per l’innovazione tecnologica e la digitalizzazione"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/mid-logo.jpg" alt="Logo del Ministro per l’innovazione tecnologica e la digitalizzazione"/>
 
 Con questo post vi presentiamo il sito del [Ministro per l’innovazione e la trasformazione digitale]({% link it/chi-siamo/ministro.md %}) e del [Dipartimento per la trasformazione digitale]({% link it/chi-siamo/dipartimento.md %}). Il neonato portale - esattamente come la nostra struttura - è destinato **a crescere, a evolversi, a riempirsi di contenuti**.<!-- MORE --> Ma già in questa prima fase lo abbiamo progettato in linea con le caratteristiche del nostro team, ovvero:  
 

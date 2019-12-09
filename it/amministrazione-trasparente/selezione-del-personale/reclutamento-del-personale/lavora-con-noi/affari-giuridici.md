@@ -6,12 +6,11 @@ layout: page-job
 ref: affari-giuridici
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/uUMwfRfS8B/Affari-Giuridici-privacy-Specialist
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-professionista con una comprovata esperienza in **affari legali,
+Il dipartimento per la trasformazione digitale è alla ricerca di
+professionisti con una comprovata esperienza in **affari legali,
 giuridici e regolamentari nazionali ed europei** e altresì in relazioni
 istituzionali, insegnamento di materie connesse al diritto e alla
 politica dell’innovazione e nella progettazione e gestione di iniziative
@@ -54,7 +53,7 @@ commercio elettronico, *e-procurement*, amministrazione digitale e
     nell’ambito dell’*ICT* ed elevata attitudine nella redazione di
     documenti istituzionali e *drafting* di atti normativi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Legge, Informatica giuridica e diritto delle nuove
     tecnologie (o titoli e specializzazioni accademiche equivalenti) con

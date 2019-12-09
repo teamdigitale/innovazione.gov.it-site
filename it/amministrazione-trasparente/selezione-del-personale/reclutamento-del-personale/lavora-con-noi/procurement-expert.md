@@ -6,12 +6,11 @@ layout: page-job
 ref: procurement-expert
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/F6UPRIEJkW/Procurement-Expert-Esperto-Del-Codice-Appalti.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento della trasformazione digitale è alla ricerca di un
-**esperto in ambito Procurement** con particolare riferimento al codice
+Il dipartimento della trasformazione digitale è alla ricerca di
+**esperti in ambito procurement** con particolare riferimento al codice
 degli appalti.
 
 Questa figura sarà responsabile della supervisione dei progetti e
@@ -50,7 +49,7 @@ all’interno della Pubblica Amministrazione.
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     professionisti
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Giurisprudenza, Economia o affine, con almeno 5 anni di
     comprovata esperienza nel *procurement* di servizi tecnologici

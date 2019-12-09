@@ -6,12 +6,11 @@ layout: page-job
 ref: open-source-project-leader
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/ctLvEh2meo/Open-Source-Project-Leader.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di esperti
-**Open Source Project Leaders**.
+**open source project leader**.
 
 Le figure saranno responsabili di gestire la piattaforma Developers
 Italia, mantenendo da un lato la relazione con le Pubbliche
@@ -65,7 +64,7 @@ sviluppo *open source* e nelle comunità collaborative.
     interpersonale, ragionamento analitico, capacità di comunicare
     concetti complessi in maniera chiara
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
     esperienza come contributore o *maintainer* di progetti *open

@@ -26,6 +26,7 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
               </a>
             </div>
             <div class="it-right-zone">
+              {% if site.data.t.social-links[page.lang].size > 0 %}
               <div class="it-socials d-none d-md-flex">
                 <span>{{ site.data.t.social-intro[page.lang] }}</span>
                 <ul>
@@ -41,6 +42,7 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
                   {% endfor %}
                 </ul>
               </div>
+              {% endif %}
               {% comment %}
               <!-- Search button -->
               <div class="it-search-wrapper">

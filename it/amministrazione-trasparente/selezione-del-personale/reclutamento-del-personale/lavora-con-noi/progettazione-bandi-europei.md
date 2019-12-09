@@ -6,12 +6,11 @@ layout: page-job
 ref: progettazione-bandi-europei
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/hbTXrQ6bAC/Esperti-In-Progettazione-Bandi-Europei.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di due
-**esperti nella Progettazione dei bandi a livello europeo**.
+Il dipartimento per la trasformazione digitale è alla ricerca di
+**esperti nella progettazione dei bandi a livello europeo**.
 
 Queste figure saranno responsabili della progettazione di iniziative
 finanziate dai fondi comunitari, nonché della loro implementazione
@@ -42,7 +41,7 @@ reportistica.
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     professionisti
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Scienze Politiche, Relazioni Internazionali,
     Giurisprudenza, Economia o affine, con almeno 5 anni di esperienza

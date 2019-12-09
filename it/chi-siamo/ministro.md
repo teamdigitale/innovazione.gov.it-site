@@ -14,7 +14,7 @@ hide_child_of_ref: true
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3 my-4">
             <figure class="figure">
-              <img src="{{ site.baseurl }}/assets/images/people/paola-pisano.jpg" class="figure-img img-fluid rounded" alt="Il Ministro Paola Pisano">
+              <img src="{{ site.baseurl }}/assets/images/people/paola-pisano.jpg" class="w-100 figure-img img-fluid rounded" alt="Il Ministro Paola Pisano">
               <figcaption class="figure-caption text-center">Paola Pisano, Ministro per l'innovazione tecnologica e la digitalizzazione</figcaption>
             </figure>
         </div>

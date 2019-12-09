@@ -6,11 +6,10 @@ layout: page-job
 ref: api-expert
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/TIb1Bs7B8a/API-Expert
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
+Il dipartimento per la trasformazione digitale è alla ricerca di
 **API expert** per l’analisi, la progettazione, lo sviluppo e
 l’implementazione su larga scala di un ecosistema e framework di API
 (*Application Programming Interfaces*).
@@ -51,7 +50,7 @@ ed implementazione di *API*.
 -   Esperienza nella *leadership*, direzione e *mentorship* per un team
     di ingegneri software
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
     esperienza in *API testing* e *API development*, tecnologie *cloud*,

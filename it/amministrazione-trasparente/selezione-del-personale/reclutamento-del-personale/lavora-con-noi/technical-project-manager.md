@@ -1,22 +1,21 @@
 ---
-title: Technical Project Manager
+title: Technical project manager
 description:
 lang: it
 layout: page-job
 ref: technical-project-manager
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/CDBfVh58He/Technical-Project-Manager.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di
-**Technical Project Manager**.
+Il dipartimento per la trasformazione digitale è alla ricerca di esperti
+**technical project manager**.
 
 Le figure supporteranno la gestione e lo sviluppo delle piattaforme
 digitali coordinate dal dipartimento*.*
 
-I *Technical Project Manager* dovranno stabilire e attuare processi e
+I *technical project manager* dovranno stabilire e attuare processi e
 strategie di formazione per il personale tecnico, analizzare,
 pianificare e sviluppare requisiti e standard in riferimento ai progetti
 programmati, assegnare e supervisionare le attività quotidiane del
@@ -25,7 +24,7 @@ lavorino attivamente verso traguardi stabiliti, tenere riunioni
 periodiche del team tecnico per determinare i progressi e affrontare
 eventuali domande o sfide relative ai progetti.
 
-Il *Technical Project Manager* deve avere una solida preparazione
+Il *technical project manager* deve avere una solida preparazione
 tecnica e scientifica.
 
 ## Qualifiche chiave
@@ -46,7 +45,7 @@ tecnica e scientifica.
 -   Eccellenti doti comunicative, di presentazione, interpersonali e
     analitiche e capacità di comunicare chiaramente concetti complessi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Ingegneria, Informatica o affine con almeno 3 anni di
     esperienza nella gestione dello sviluppo di piattaforme digitali,

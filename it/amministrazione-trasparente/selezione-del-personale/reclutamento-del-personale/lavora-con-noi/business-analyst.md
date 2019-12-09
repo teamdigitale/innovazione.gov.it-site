@@ -1,17 +1,16 @@
 ---
-title: Business Analyst
+title: Business analyst
 description:
 lang: it
 layout: page-job
 ref: business-analyst
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/NU47rq6Jhg/Business-Analyst.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di
-**Business Analyst** a supporto dello sviluppo di piattaforme
+**business analyst** a supporto dello sviluppo di piattaforme
 tecnologiche e dell’esecuzione di programmi critici di trasformazione
 digitale su larga scala all’interno della Pubblica Amministrazione.
 
@@ -46,7 +45,7 @@ trasformazione digitale.
 -   Eccellenti doti comunicative, di presentazione, interpersonali e
     analitiche e capacità di comunicare chiaramente concetti complessi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Economia, Ingegneria, Matematica o affine con almeno 5
     anni di esperienza in *business analysis* oppure, in assenza di

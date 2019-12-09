@@ -6,12 +6,11 @@ layout: page-job
 ref: responsabile-immagine-e-promozione
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/xp6CuDqULG/Responsabile-Immagine-E-Promozione.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-**responsabile immagine e promozione dei servizi pubblici.**
+Il dipartimento per la trasformazione digitale è alla ricerca di
+**responsabili immagine e promozione dei servizi pubblici**.
 
 Questa figura assicurerà la definizione delle strategie/politiche di
 promozione e cura dell’immagine del Ministero ed avrà la responsabilità
@@ -68,7 +67,7 @@ risultati.
     individuare, analizzare e risolvere i problemi
 -   Comprovata esperienza nel gestire e fare da mentore a un team
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Comunicazione o Marketing o, in generale,di tipo
     Magistrale affine alle esigenze del ruolo, con almeno 9 anni di

@@ -1,17 +1,16 @@
 ---
-title: HR Manager
+title: HR manager
 description:
 lang: it
 layout: page-job
 ref: hr-manager
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/68g027YuRf/HR-Manager.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-esperto **HR Manager** per definire, supervisionare e gestire il
+Il dipartimento per la trasformazione digitale è alla ricerca di
+esperti **HR manager** per definire, supervisionare e gestire il
 reclutamento di talenti tecnologici e manageriali all’interno del Team
 per la Trasformazione Digitale.
 
@@ -50,7 +49,7 @@ dinamico, snello e stimolante.
 -   Autonomia nel portare a termine lo sviluppo completo di progetti
     complessi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea o Master o affine con almeno 5 anni di esperienza come *hr
     manager* in *startup* o grandi aziende tecnologiche, nel

@@ -1,17 +1,16 @@
 ---
-title: Software Engineer
+title: Software engineer
 description:
 lang: it
 layout: page-job
 ref: software-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/0eHfSntN1E/Software-Engineer.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di
-**Software Engineer** esperti. Le figure ricercate supporteranno lo
+**software engineer** esperti. Le figure ricercate supporteranno lo
 sviluppo delle piattaforme digitali coordinate dal dipartimento per la
 trasformazione digitale.
 
@@ -44,7 +43,7 @@ sviluppate in precedenza.
     aperto
 -   Esperienza nel gestire squadre di sviluppatori software
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Informatica o affine con almeno 3 anni di esperienza in
     ambienti di sviluppo di piattaforme digitali, *Mobile* e *App*,

@@ -1,30 +1,29 @@
 ---
-title: Technical Innovation Project Manager
+title: Technical innovation project manager
 description:
 lang: it
 layout: page-job
 ref: technical-project-manager
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/WMHMQXHFKh/Technical-Innovation-Project-Manager-Per-Progetti-Di-Innovazione.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento della trasformazione digitale è alla ricerca di
-**Technical Innovation Project Manager**. Le figure supporteranno
+Il dipartimento della trasformazione digitale è alla ricerca di esperti
+**technical innovation project manager**. Le figure supporteranno
 l'ideazione, la gestione e il coordinamento per il lancio e lo sviluppo
 dei progetti innovativi coordinati dal dipartimento per la
 trasformazione digitale.
 
-Le figure supporteranno il *Chief Innovation Officer* nell’
+Le figure supporteranno il *chief innovation officer* nell’
 individuazione di progetti e programmi di innovazione, nonché
 nell’adozione di nuove tecnologie e modelli di *business* all’interno di
 organizzazioni complesse.
 
 I profili dovranno avere esperienza nel coordinamento di team per
 l’ideazione, la realizzazione e la fornitura di progetti complessi e una
-solida preparazione tecnica e scientifica. Ciascun *Technical Innovation
-Project Manager* verrà impiegato in ambiti tematici specifici in
+solida preparazione tecnica e scientifica. Ciascun *technical innovation
+project manager* verrà impiegato in ambiti tematici specifici in
 relazione al focus dei diversi progetti di innovazione, che saranno
 volti sia alla diffusione di tecnologie emergenti (ad esempio,
 Artificial Intelligence, 5G, mobilità innovativa) che alla capacità di
@@ -56,7 +55,7 @@ generare innovazione stessa a beneficio del cittadino e delle imprese.
 -   Padronanza degli strumenti di lavoro per la creazione di
     presentazioni e fogli di calcolo
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Discipline Scientifiche (Ingegneria, Informatica o affine)
     o Economiche (Economia e Commercio o affine) con almeno 5 anni di

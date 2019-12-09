@@ -1,17 +1,16 @@
 ---
-title: Data Scientist
+title: Data scientist
 description:
 lang: it
 layout: page-job
 ref: data-scientist
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/RqWt2gWt9Y/Data-Scientist.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di esperti **Data Scientist** con competenze di sviluppo software e con conoscenze specifiche nella gestione, nell'analisi, nella manipolazione e nella rappresentazione dei dati.  
-Queste figure avranno il compito di rendere più intelligenti le applicazioni sviluppate. In particolare lavoreranno con i team di sviluppo e si occuperanno di raccogliere e gestire grandi quantità di dati non strutturati provenienti da più fonti, trasformare e rendere fruibili i dati con strumenti adeguati, utilizzare *Data Science* e tecniche di *Natural Language Processing* per progettare innovativi prodotti di interazione con il cittadino quali ad esempio chatbot o per la catalogazione massiva di documenti.  
+Il dipartimento per la trasformazione digitale è alla ricerca di esperti **data scientist** con competenze di sviluppo software e con conoscenze specifiche nella gestione, nell'analisi, nella manipolazione e nella rappresentazione dei dati.  
+Queste figure avranno il compito di rendere più intelligenti le applicazioni sviluppate. In particolare lavoreranno con i team di sviluppo e si occuperanno di raccogliere e gestire grandi quantità di dati non strutturati provenienti da più fonti, trasformare e rendere fruibili i dati con strumenti adeguati, utilizzare *data science* e tecniche di *natural language processing* per progettare innovativi prodotti di interazione con il cittadino quali ad esempio chatbot o per la catalogazione massiva di documenti.  
 I profili dovranno avere una forte attenzione ai risultati, non solo per i pattern nei dati, e dovranno essere in grado di capire come trasformare quanto rilevato in valore per i cittadini.
 
 ## Qualifiche chiave
@@ -29,7 +28,7 @@ I profili dovranno avere una forte attenzione ai risultati, non solo per i patte
 -   Eccellenti doti di *debugging*, pensiero critico e comunicazione
 -   Esperienza nella *leadership*, direzione e *mentorship* per un team di ingegneri software
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Ingegneria, Informatica o affine con almeno 3 anni di esperienza come *Machine Learning Data Scientist* oppure, in assenza di laurea, almeno 5 anni di esperienza come *Machine Learning Data Scientist*
 -   Ottima conoscenza della lingua inglese

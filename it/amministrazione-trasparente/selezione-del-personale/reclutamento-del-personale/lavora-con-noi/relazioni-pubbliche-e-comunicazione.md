@@ -6,17 +6,16 @@ layout: page-job
 ref: comunicazione
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/62RWeuKgeX/Relazioni-Pubbliche-E-Comunicazione.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di
-esperti in **Relazioni pubbliche e comunicazione**.
+esperti in **relazioni pubbliche e comunicazione**.
 
 Queste figure supporteranno tutte le attività di comunicazione che
 coinvolgono il dipartimento nelle relazioni con i cittadini, gli addetti
 stampa e le istituzioni, comunicando concetti complessi in modo semplice
-e chiaro, riportando al Direttore della Comunicazione.
+e chiaro, riportando al direttore della comunicazione.
 
 Avranno la responsabilità di progettare e realizzare attività di
 comunicazione utilizzando diversi strumenti (eventi, *social media*,
@@ -67,7 +66,7 @@ esecuzione e di analisi dei risultati.
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     comunicatori e partecipare alle comunità tecniche
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Comunicazione, Giornalismo o ambito similare, con almeno 7
     anni di rilevante esperienza in una redazione o in un ufficio stampa

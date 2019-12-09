@@ -1,16 +1,15 @@
 ---
-title: Head of Design
+title: Head of design
 description:
 lang: it
 layout: page-job
 ref: head-of-design
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/C0dMRmYtO1/Head-Of-Design.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un **Head of Design**. La figura sarà responsabile della visione creativa per il team di design e per l'intera organizzazione. Stabilirà processi e pratiche per realizzare la visione e si occuperà di indirizzare il lavoro in termini di consistenza e qualità. Contribuirà alla definizione del *branding* e dei principi di esperienza utente per i progetti del dipartimento e dovrà assicurarsi che questi vengano interpretati in modo appropriato attraverso il lavoro del team.
+Il dipartimento per la trasformazione digitale è alla ricerca di figure di **head of design**. La figura sarà responsabile della visione creativa per il team di design e per l'intera organizzazione. Stabilirà processi e pratiche per realizzare la visione e si occuperà di indirizzare il lavoro in termini di consistenza e qualità. Contribuirà alla definizione del *branding* e dei principi di esperienza utente per i progetti del dipartimento e dovrà assicurarsi che questi vengano interpretati in modo appropriato attraverso il lavoro del team.
 
 Questa figura avrà il compito di essere la voce principale del design all'interno e all'esterno del dipartimento, articolandone visione e processi operativi, e si occuperà di garantirne l’attuazione anche in ambiti caratterizzati da procedure, burocrazia e politiche che potrebbero limitare il potenziale del team.
 
@@ -36,7 +35,7 @@ Le sue principali responsabilità saranno:
 -   Forte cultura del servizio e approccio etico al lavoro
 -   Una solida conoscenza operativa del design online e offline, dello sviluppo del marchio e del processo creativo
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea o Master in Design, Ingegneria, Informatica, Design, Marketing, o affine con almeno 7 anni di esperienza in design di servizi e ricerca applicata; in assenza di laurea, almeno 9 anni di esperienza in design dei servizi e ricerca applicata
 -   Ottima conoscenza della lingua inglese

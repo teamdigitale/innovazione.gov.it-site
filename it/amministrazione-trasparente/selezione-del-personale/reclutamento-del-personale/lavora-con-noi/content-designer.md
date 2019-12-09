@@ -1,23 +1,22 @@
 ---
-title: Content Designer
+title: Content designer
 description:
 lang: it
 layout: page-job
 ref: content-designer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/bYVayTU2QQ/Content-Designer.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di
-**Content Designer**, che scrivano contenuti di alta qualità, incentrati
+Il dipartimento per la trasformazione digitale è alla ricerca di esperti
+**content designer**, che scrivano contenuti di alta qualità, incentrati
 sull'utente, e capiscano il *web*, la tecnologia e le persone, per
 rendere i servizi e le informazioni della Pubblica Amministrazione più
 semplici, chiare e veloci per i cittadini e le aziende.
 
 Siamo alla ricerca di talenti con una comprovata esperienza nel settore
-e una forte competenza tecnica nel *content design.* La figura deve
+e una forte competenza tecnica nel *content design*. La figura deve
 essere in grado di:
 
 -   sviluppare il linguaggio e i processi complessi della Pubblica
@@ -52,7 +51,7 @@ essere in grado di:
 -   Comprovata esperienza nel gestire e fare da mentore a squadre di
     ideatori di contenuto
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in *Design/HCI* o affine con almeno 5 anni di rilevante
     esperienza nell’ideazione di contenuti per applicazioni *web* e

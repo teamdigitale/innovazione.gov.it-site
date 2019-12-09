@@ -1,22 +1,20 @@
 ---
-title: Service Owner
+title: Service owner
 description:
 lang: it
 layout: page-job
 ref: service-owner
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/B87nR4ggcG/Service-Owner.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di
-**esperti Service Owner**.
+esperti **service owner**. Le figure gestiranno lo sviluppo delle
+piattaforme digitali coordinate dal dipartimento per la
+trasformazione digitale.
 
-Le figure gestiranno lo sviluppo delle piattaforme digitali coordinate
-dal dipartimento per la trasformazione digitale*.*
-
-I Service Owner dovranno avere esperienza nel coordinamento di team
+I service owner dovranno avere esperienza nel coordinamento di team
 multi-disciplinari composti da figure eterogenee per l’ideazione,
 la realizzazione e la fornitura di piattaforme digitali complesse
 incentrate sui bisogni degli utenti, nonché una solida preparazione
@@ -56,7 +54,7 @@ tecnica e scientifica.
 -   Esperienza nel gestire team multi-disciplinari composti da figure
     eterogenee
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
     esperienza nella gestione dello sviluppo di piattaforme digitali,

@@ -38,7 +38,7 @@ fluid: true
 ## Missione
 
 {:.max-w-40}
-Il nostro piano d’azione “**Italia 2027**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
+Il nostro piano d’azione “**Italia 2025**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
 
 {:.max-w-40}
 Il piano si divide in tre sfide:

@@ -1,17 +1,16 @@
 ---
-title: Service Designer
+title: Service designer
 description:
 lang: it
 layout: page-job
 ref: service-designer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/h2yhNCwJrI/Service-Designer.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di
-**Service Designer**. Le figure saranno responsabili per le attività di
+Il dipartimento per la trasformazione digitale è alla ricerca di esperti
+**service designer**. Le figure saranno responsabili per le attività di
 *user research* e di analisi e progettazione di servizi complessi che
 tengano in considerazione l'interazione di cittadini, enti e
 stakeholders, e i *touchpoint* digitali coinvolti. Il lavoro del
@@ -52,7 +51,7 @@ impatto positivo sulle vite delle persone.
     di comunicare chiaramente concetti complessi
 -   Autonomia nel portare a termine lo sviluppo completo del progetto
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea o Master in Design o affine con almeno 5 anni di esperienza
     in *design* di servizi e ricerca applicata; in assenza di laurea,

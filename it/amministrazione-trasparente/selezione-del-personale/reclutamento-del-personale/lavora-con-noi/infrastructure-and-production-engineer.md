@@ -1,18 +1,17 @@
 
 ---
-title: Infrastructure/Production Engineer (DevOps)
+title: Infrastructure/production engineer
 description:
 lang: it
 layout: page-job
 ref: infrastructure-and-production-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/245YyU4dWy/InfrastructureProduction-Engineer-DevOps.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un esperto
-**Infrastructure/Production Engineer**.
+Il dipartimento per la trasformazione digitale è alla ricerca di
+**ingegneri esperti in infrastructure/production (DevOps)**.
 
 Questa figura avrà il compito di supportare lo sviluppo delle
 piattaforme digitali coordinate dal dipartimento. Tra le principali
@@ -79,7 +78,7 @@ molto forte.
 -   Atteggiamento fortemente motivato, orientato all’innovazione, curioso
     e aperto
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea magistrale in Informatica o affine con almeno 5 anni di
     esperienza nell’industria IT, o, in assenza di laurea, almeno 7 anni

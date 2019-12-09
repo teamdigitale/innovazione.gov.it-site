@@ -1,17 +1,16 @@
 ---
-title: Chief Information Security Officer
+title: Chief information security officer
 description:
 lang: it
 layout: page-job
 ref: chief-information-security-officer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/Uoow5YhpUk/Chief-Information-Security-Officer.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-**Chief of Information Security Officer** esperto in sicurezza delle
+Il dipartimento per la trasformazione digitale è alla ricerca di
+**chief of information security officer** esperti in sicurezza delle
 informazioni e gestione del rischio e degli incidenti di sicurezza delle
 informazioni.
 
@@ -48,7 +47,7 @@ piattaforme digitali su larga scala e ad alta affidabilità.
 -   *Ethical hacking* e *coordinate disclosure*
 -   OSINT
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Informatica o affine con almeno 7 anni di solida
     esperienza in *security* e *cybersecurity* per piattaforme digitali

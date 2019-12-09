@@ -1,6 +1,6 @@
 {
-  "name": "{{ site.name }}",
-  "short_name": "{{ site.name }}",
+  "name": "Ministro per l’innovazione tecnologica e la digitalizzazione",
+  "short_name": "MID",
   "icons": [
     {
       "src": "/assets/images/favicons/android-icon-36x36.png",

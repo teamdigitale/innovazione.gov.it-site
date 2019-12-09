@@ -6,12 +6,11 @@ layout: page-job
 ref: relazioni-con-gli-sviluppatori
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/8029yFqWfC/Esperti-In-Relazioni-Con-Gli-Sviluppatori.html
-iframeheight: 800
 is_new: true
 ---
 
 Il dipartimento della trasformazione digitale è alla ricerca di esperti
-in **Relazioni con gli Sviluppatori** per gestire tutte le attività che
+in **relazioni con gli sviluppatori** per gestire tutte le attività che
 riguardano gli sviluppatori e gli esperti IT che lavorano con e per la
 Pubblica Amministrazione.
 
@@ -58,7 +57,7 @@ tecnica e *contributor* di progetti *open source*.
 -   Eccellenti doti comunicative, di presentazione, interpersonali,
     analitiche e abilità di comunicare chiaramente concetti complessi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Informatica o affine con almeno 5 anni di esperienza in
     ingegneria del *software*, sviluppo di applicazioni *mobile* e

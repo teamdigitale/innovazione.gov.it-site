@@ -1,26 +1,25 @@
 ---
-title: Assistente del Team
+title: Assistente del team
 description:
 lang: it
 layout: page-job
 ref: assistente-del-team
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/YN9c0HzPXF/Assistenti-Del-Team.html
-iframeheight: 800
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di due
-professionisti come **Assistenti del Team**. Tali figure avranno un
+Il dipartimento per la trasformazione digitale è alla ricerca di
+professionisti come **Assistenti del team**. Tali figure avranno un
 ruolo operativo volto a facilitare le attività quotidiane del
 dipartimento per la trasformazione digitale e a rendere fluidi i
 processi del team così da permetterne maggiore efficacia.
 
-Tali profili lavoreranno a supporto dell’Assistente Tecnico e degli
+Tali profili lavoreranno a supporto dell’assistente tecnico e degli
 altri membri del dipartimento per la trasformazione digitale per
 assicurare che le attività del direttore del dipartimento siano
 concentrate sui progetti di maggiore importanza e prioritari. In
-particolare supporteranno l’Assistente Tecnico nel:
+particolare supporteranno l’assistente tecnico nel:
 
 -   Definire gli ordini del giorno settimanali, mensili per gli incontri
     e per le attività di revisione dei progressi
@@ -40,7 +39,7 @@ particolare supporteranno l’Assistente Tecnico nel:
 -   Identificare problemi e anomalie oppure processi che necessitino di
     miglior documentazione o di un maggior presidio
 
-Il candidato ideale dovrà, inoltre, supportare l’Assistente Tecnico nel:
+Il candidato ideale dovrà, inoltre, supportare l’assistente tecnico nel:
 
 -   Confrontare le attività di uffici simili in altre nazioni guida,
     stabilendo le best practice e identificando differenze e lacune
@@ -55,7 +54,7 @@ Il candidato ideale dovrà, inoltre, supportare l’Assistente Tecnico nel:
 -   Comprovata esperienza di successo nnel lavoro per obiettivi e nel
     raggiungimento degli stessi
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in una disciplina quantitativa (preferenza in Informatica ma
     qualsiasi tipo di disciplina è ben accetta)

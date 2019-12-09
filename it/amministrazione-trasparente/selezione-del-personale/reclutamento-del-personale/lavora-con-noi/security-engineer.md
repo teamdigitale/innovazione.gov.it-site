@@ -1,17 +1,16 @@
 ---
-title: Security Engineer
+title: Security engineer
 description:
 lang: it
 layout: page-job
 ref: security-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/B5MUE1Gj93/Security-Engineer.html
-iframeheight: 800
 is_new: true
 ---
 
 l dipartimento per la trasformazione digitale è alla ricerca di
-**Ingegneri esperti in Security e Cybersecurity**.
+**ingegneri esperti in security e cybersecurity**.
 
 Queste figure valuteranno le infrastrutture, i processi e le pratiche di
 *cybersecurity* che sono sotto il coordinamento del dipartimento per la
@@ -54,7 +53,7 @@ piattaforme digitali su larga scala e ad alta affidabilità.
     criminalità informatica
 -   Formazione nel settore della sicurezza informatica
 
-## Formazione Richiesta
+## Formazione richiesta
 
 -   Laurea in Informatica o affine con almeno 7 anni di solida
     esperienza in *security* e *cybersecurity* per piattaforme digitali
