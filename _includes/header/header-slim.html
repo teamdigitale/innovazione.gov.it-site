@@ -1,0 +1,33 @@
+<div class="it-header-slim-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="http://www.governo.it/" target="_blank" rel="noopener noreferrer">{{ site.data.t.name-government[page.lang] }}</a>
+          <div class="nav-mobile">
+            <nav>
+              <a class="it-opener d-lg-none" data-toggle="collapse" href="#slim-navigation" role="button" aria-expanded="false" aria-controls="slim-navigation">
+                <span>{{ site.data.t.links[page.lang] }}</span>
+                <svg class="icon">
+                  <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="link-list-wrapper collapse" id="slim-navigation">
+                <ul class="link-list">
+                  <li class="d-lg-none"><a href="http://www.governo.it/" target="_blank" rel="noopener noreferrer">{{ site.data.t.name-government[page.lang] }}</a></li>
+                  <li><a href="https://teamdigitale.governo.it/" target="_blank" rel="noopener noreferrer">{{ site.data.t.name-team-digitale[page.lang] }}</a></li>
+                  <li><a href="https://pianotriennale-ict.italia.it/" target="_blank" rel="noopener noreferrer">{{ site.data.t.name-piano-triennale[page.lang] }}</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          {% comment %}
+          <div class="header-slim-right-zone">
+            {% include header/header-lang-switch.html %}
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

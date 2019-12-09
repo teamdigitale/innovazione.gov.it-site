@@ -1,0 +1,21 @@
+<div class="card-wrapper card-space">
+  <div class="card card-bg">
+    <div class="card-body">
+      <div class="head-tags">
+        <div class="d-flex justify-content-end w-100">
+          {% comment %}<div class="col-8">{% for category in post.categories %}<span class="d-inline-block card-tag mr-2">{{ category | replace: " ", "&nbsp;" }}</span>{% endfor %}</div>{% endcomment %}
+          <span class="data">{% include date.html date=post.date %}</span>
+        </div>
+      </div>
+      <h5 class="card-title big-heading">{{ post.title }}</h5>
+      {% comment %}<h6 class="card-subtitle">in {% for category in post.categories %}{{ category }} {% endfor %}</h6>{% endcomment %}
+      <div class="card-text">{{ post.excerpt }}</div>
+      <a class="read-more" href="{{ site.baseurl }}{{ post.url }}">
+        <span class="text">{{ site.data.t.read-more[page.lang] }}</span>
+        <svg class="icon">
+          <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

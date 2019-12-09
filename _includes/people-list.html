@@ -1,0 +1,21 @@
+{% assign t = site.data.t %}
+{% assign same_lang_pages = site.pages | where: "lang", page.lang %}
+
+{% assign people_pages_sorted = same_lang_pages | where: "layout", "page-person" %}
+
+<h2>{{ t.Team[page.lang] }}</h2>
+
+<div class="row team-list-grid">
+
+  <div class="col-12 col-md-6 col-lg-4">
+    {% for person in people_pages_sorted %}
+    {% include people-list-person.html content = person %}
+  </div>
+
+  {% assign remainder = forloop.index | modulo: 2 %}
+  {% if remainder == 0 %}<div class="clearfix"></div>{% endif %}
+  {% endfor %}
+</div>
+
+<h2>{{ t.PastMembers[page.lang] }}</h2>
+

@@ -1,0 +1,43 @@
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    {% assign breadcrumbs = '' | split: '' %}
+    {% comment %}
+    `child_of_ref` can sometimes be a list to allow the page to appear on
+    different menus. In that case, its breadcrumb always refers to its first
+    element in the list.
+    {% endcomment %}
+
+
+    {% if page.child_of_ref.first %}
+      {% assign parent = page.child_of_ref.first %}
+    {% else %}
+      {% assign parent = page.child_of_ref %}
+    {% endif %}
+
+    {% for counter in (0..9) %}
+      {%- if parent == nil -%}
+        {%- break -%}
+      {%- endif -%}
+      {%- if parent.first -%}
+        {%- assign parent = parent.first -%}
+      {%- endif -%}
+      {% assign parent_page = site.pages | where: "ref", parent | where: "lang", page.lang %}
+      {% assign breadcrumbs = breadcrumbs | concat: parent_page %}
+      {% assign parent = parent_page[0].child_of_ref %}
+    {% endfor %}
+
+    {% assign breadcrumbs = breadcrumbs | reverse %}
+
+    <li class="breadcrumb-item">
+      <a href="/">Home</a>
+      <span class="separator">&gt;</span>
+    </li>
+    {% for item in breadcrumbs %}
+    <li class="breadcrumb-item">
+      {% if page.hide_child_of_ref == nil %}<a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+      <span class="separator">&gt;</span>
+    </li>
+    {% endfor %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>

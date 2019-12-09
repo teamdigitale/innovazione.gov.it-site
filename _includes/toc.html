@@ -1,0 +1,30 @@
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side affix-top">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation" data-target="#navbarNav"><span class="it-list"></span>Menu
+  </button>
+  <div class="navbar-collapsable" id="navbarNav">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button"><span class="it-close"></span>Chiudi</button>
+    </div>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top">
+      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
+    </svg><span>Indietro</span></a>
+    <div class="menu-wrapper">
+      <div class="link-list-wrapper">
+        <h3>{{ section.title }}</h3>
+        <ul class="link-list">
+          <li class="nav-item">
+            {% assign items = site.pages | where: "child_of_ref", section.ref | where: "lang", page.lang | sort: "order" %}
+            {% for item in items %}
+            {% if item.toc_entry_disabled == nil %}
+            <a class="nav-link {% if item.url == page.url %}active{% endif %}"
+               href="{{ site.baseurl }}{{ item.url }}"><span>{{ item.title }}</span></a>
+            {% endif %}
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

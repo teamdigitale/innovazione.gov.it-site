@@ -1,0 +1,15 @@
+{% assign person = content %}
+<div class="it-grid-item-wrapper it-grid-item-overlay">
+  <a href="{{ person.ref }}">
+    <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+        <div class="img-wrapper">
+          <img class="person-avatar" src="{{ site.baseurl }}/assets/images/people/{{ person.ref }}.jpg" alt="{{ person.title }}">
+        </div>
+      </div>
+    </div>
+    <div class="it-griditem-text-wrapper">
+      <span class="it-griditem-text">{{ person.title }}</span>
+    </div>
+  </a>
+</div>

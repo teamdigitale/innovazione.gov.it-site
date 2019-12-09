@@ -1,0 +1,66 @@
+---
+title: Service Owner
+description:
+lang: it
+layout: page-job
+ref: service-owner
+child_of_ref: lavora-con-noi
+jazz_url: https://teamdigitale.applytojob.com/apply/B87nR4ggcG/Service-Owner.html
+iframeheight: 800
+is_new: true
+---
+
+Il dipartimento per la trasformazione digitale è alla ricerca di
+**esperti Service Owner**.
+
+Le figure gestiranno lo sviluppo delle piattaforme digitali coordinate
+dal dipartimento per la trasformazione digitale*.*
+
+I Service Owner dovranno avere esperienza nel coordinamento di team
+eterogenei di *service*, *content* e *UX/UI* designer, di sviluppatori,
+ingegneri e analisti, per l’ideazione, la realizzazione e la fornitura
+di piattaforme digitali complesse incentrate sui bisogni degli utenti,
+nonché una solida preparazione tecnica e scientifica.
+
+## Qualifiche chiave
+
+-   Esperienza nella gestione e coordinamento di team cross-funzionali
+    per la progettazione e lo sviluppo di piattaforme digitali /
+    applicazioni *mobile* ad alte prestazioni, con una particolare
+    attenzione alla qualità dell’esperienza utente, per assicurare la
+    corretta e tempestiva fornitura di piattaforme e servizi governativi
+    digitali ad alte prestazioni e ad alto impatto
+-   Forte senso di responsabilità personale per quanto riguarda il
+    processo decisionale e la supervisione dei team di lavoro
+-   Esperienza manageriale nell'applicazione del pensiero analitico e
+    capacità di problem solving
+-   Capacità di prevedere le sfide e cercare di evitare in modo
+    proattivo gli ostacoli
+-   Esperienza nel costruire processi, nella gestione di progetti e
+    nella definizione di scadenze
+-   Esperienza nella gestione e nel coordinamento di diverse fasi di
+    progettazione e sviluppo di piattaforme digitali e applicazioni
+    *server-side* con metodologie *agile* (ideazione, prototipazione,
+    sviluppo, realizzazione, fornitura, monitoraggio e gestione
+    operativa)
+-   Conoscenza di architetture *software* e sviluppo di sistemi ad alta
+    sicurezza, scalabili e robusti
+-   Esperienza di mentoring, coaching e sviluppo di talenti emergenti
+    nell’ambito tecnologico
+-   Atteggiamento fortemente motivato, orientato ai risultati, curioso e
+    aperto
+-   Eccellenti capacità gestionali e organizzative ed esperienza nella
+    definizione di linee guida
+-   Eccellenti doti comunicative, di presentazione, interpersonali e
+    analitiche e capacità di comunicare chiaramente concetti complessi
+-   Esperienza nel gestire squadre eterogenee di *service, content,
+    UX/UI designer e di sviluppatori* e ingegneri *software*
+
+## Formazione Richiesta
+
+-   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
+    esperienza nella gestione dello sviluppo di piattaforme digitali,
+    applicazioni *web* e *mobile*, oppure, in assenza di laurea, almeno
+    7 anni di esperienza nella gestione dello sviluppo di piattaforme
+    digitali, applicazioni *web* e *mobile*
+-   Ottima conoscenza della lingua inglese

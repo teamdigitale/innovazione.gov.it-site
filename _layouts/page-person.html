@@ -1,0 +1,52 @@
+---
+layout: page
+---
+
+<h4>{{ page.role }}</h4>
+
+<div class="row">
+  <div class="col-sm-4 col-md-3 my-3">
+    <div class="text-center">
+      <figure class="figure">
+        <img class="person-avatar figure-img img-fluid rounded" src="{{ site.baseurl }}/assets/images/people/{{ page.ref }}.jpg" alt="{{ page.title }}">
+        <figcaption class="figure-caption">{{ page.title }}</figcaption>
+      </figure>
+    </div>
+    <div class="text-center m-auto py-3">
+      <div class="d-flex justify-content-around">
+        {%- if page.social_url_twitter != nil -%}
+        <div class="person--social">
+          <a href="{{ page.social_url_twitter }}" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-sm icon-primary align-top">
+              <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
+            </svg>
+          </a>
+        </div>
+        {%- endif -%}
+        {%- if page.social_url_linkedin != nil -%}
+        <div class="person--social">
+          <a href="{{ page.social_url_linkedin }}" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-sm icon-primary align-top">
+              <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+        {%- endif -%}
+        {%- if page.social_url_medium != nil -%}
+        <div class="person--social">
+          <a href="{{ page.social_url_medium }}" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-sm icon-primary align-top">
+              <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-medium"></use>
+            </svg>
+          </a>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {% comment %}Biografia{% endcomment %}
+  <div class="col-sm-8 col-md-9 my-3">
+    <blockquote>{{ content }}</blockquote>
+  </div>
+</div>

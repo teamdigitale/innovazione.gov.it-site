@@ -1,0 +1,17 @@
+---
+
+## Social Card [1200x630]
+social-card: "/assets/images/favicons/social-card.png"
+
+## Social Card twitter [1200x600]
+social-card-twitter: "/assets/images/favicons/social-card-twitter.png"
+
+medium-posts-ids:
+  - 36ae7aee1d1a
+  - a7225030d65d
+  - d93a38f2b983
+  - fc8d7042d80a
+  - 7ac7ee356bf8
+  - 923625728a30
+  - 7dd104e8ee75
+  - 77a07b196125

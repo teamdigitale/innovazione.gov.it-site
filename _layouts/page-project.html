@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="section section-muted project-intro">
+  <div class="section-content">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-between">
+            <div style="z-index: 2">
+              {% if page.logo != nil %}
+              <img alt="{{ page.title }}" src="{{ site.baseurl }}/assets/images/projects/{{ page.logo }}" class="rounded" height="80">
+              {% endif %}
+              <h1 class="max-w-40 text-600">{{ page.title_full }}</h1>
+              <p class="lead max-w-40 text-muted">{{ page.description }}</p>
+              {% if page.project_url != nil %}<br><a class="btn btn-primary btn-sm btn-icon" href="{{ page.project_url }}" title="{{ page.title }}" target="_blank" rel="noopener noreferrer">Sito ufficiale</a>{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="project-intro--print">{{ page.title }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="mx-md-3">
+        {%- include breadcrumbs.html -%}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 my-4">
+      {{ content }}
+    </div>
+  </div>
+</div>

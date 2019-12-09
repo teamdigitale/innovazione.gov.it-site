@@ -1,0 +1,94 @@
+.hero-head--homepage {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/jose-martin-ramirez-c-45sjAjSjArQ-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/jose-martin-ramirez-c-45sjAjSjArQ-unsplash.webp");
+  }
+}
+
+.innovation-section-head--innovazione-per-i-cittadini {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/priscilla-du-preez-nF8xhLMmg0c-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/priscilla-du-preez-nF8xhLMmg0c-unsplash.webp");
+  }
+}
+
+.innovation-section-head--innovazione-per-la-pubblica-amministrazione {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/dylan-gillis-KdeqA3aTnBY-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/dylan-gillis-KdeqA3aTnBY-unsplash.webp");
+  }
+}
+
+.innovation-section-head--innovazione-per-le-imprese {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/christopher-burns-Wiu3w-99tNg-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/christopher-burns-Wiu3w-99tNg-unsplash.webp");
+  }
+}
+.innovation-section-head--notizie {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/amador-loureiro-BVyNlchWqzs-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/amador-loureiro-BVyNlchWqzs-unsplash.webp");
+  }
+}
+
+// cittadini
+.innovation-section-cittadini--io {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/io.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/io.webp");
+  }
+}
+.innovation-section-cittadini--spid {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/spid.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/spid.webp");
+  }
+}
+.innovation-section-cittadini--pagopa {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/pagopa.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/pagopa.webp");
+  }
+}
+.innovation-section-cittadini--anpr {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/anpr.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/anpr.webp");
+  }
+}
+.innovation-section-cittadini--designers-italia {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/designers-italia.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/designers-italia.webp");
+  }
+}
+.innovation-section-cittadini--developers-italia {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/developers-italia.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/projects/inspirational/developers-italia.webp");
+  }
+}
+

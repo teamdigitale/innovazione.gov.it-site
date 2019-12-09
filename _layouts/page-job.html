@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="container my-2">
+  <div class="row">
+    <div class="col-12">
+      <div class="mx-md-3">
+        {%- include breadcrumbs.html -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col{% if page.no_site_toc == nil %} col-lg-8{% endif %}">
+      <div class="mx-md-3">
+        <h1 class="mb-4">{{ page.title }} {% if page.archived==true %}<span class="badge badge-secondary">closed</span>{% endif %}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      {% include jazzhr.html %}
+    </div>
+  </div>
+</div>

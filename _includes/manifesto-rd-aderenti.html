@@ -1,0 +1,23 @@
+{% assign aderenti = site.data.aderenti_manifesto_rd.aderenti_manifesto | sort:"name" %}
+
+<div class="client-wrap mb-5">
+    {%- for aderente in aderenti -%}
+    <div class="client {{ aderente.name | downcase  | replace: " ", "-" }}">
+        <div class="client-meta">
+            <div class="client-close"></div>
+            <ul class="project-list">
+                <hr class="bar">
+                <h6 class="client-title">{{ aderente.name }}</h6>
+                {%- for link in aderente.links -%}
+                <li><a href="{{ link.link_url }}" target="_blank" rel="noopener noreferrer">{{ link.link_label }}</a></li>
+                {%- endfor -%}
+                {%- for project in aderente.projects -%}
+                <li>{{ project }}</li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        <div class="overflow-wrapper"></div>
+        <img class="client-logo" src="{{ site.baseurl }}/assets/images/aderenti-manifesto-rd/{{ aderente.logo }}" alt="{{ aderente.name }} logo">
+    </div>
+    {%- endfor -%}
+</div>

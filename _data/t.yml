@@ -1,0 +1,271 @@
+---
+
+FormatDate:
+  en: "%m/%d/%Y"
+  it: "%d/%m/%Y"
+icon-repubblica: "/assets/images/logo-repubblica-italiana.svg"
+## Main icon
+icon-main: "/assets/images/logo-mid-white.svg"
+## Main icon
+icon-main-footer: "/assets/images/logo-mid-white-footer.svg"
+## Main icon alt
+icon-repubblica-alt:
+  en: "Emblem of the Italian Republic"
+  it: "Emblema della Repubblica Italiana"
+icon-main-alt:
+  en: "Logo for the Minister for Technological Innovation and Digitization"
+  it: "Logo del Ministro per l'innovazione tecnologica e la digitalizzazione"
+name:
+  en: "Minister for Technological Innovation and Digitization"
+  it: "Ministro per l'innovazione tecnologica e la digitalizzazione"
+name-html:
+  en: "Minister for Technological Innovation and Digitization"
+  it: "<span class='font-weight-bolder'>Ministro</span><br>per l'innovazione tecnologica<br>e la digitalizzazione"
+description:
+  en: "Presidency of the Council of Ministers"
+  it: "Presidenza del Consiglio dei Ministri"
+name-government:
+  en: "Italian Government"
+  it: "Governo Italiano"
+name-team-digitale:
+  en: "Digital Transformation Team"
+  it: "Team per la Trasformazione Digitale"
+name-piano-triennale:
+  en: "The Three-Year Plan"
+  it: "Piano Triennale"
+links:
+  en: "More info"
+  it: "Altre informazioni"
+social-intro:
+  en: "Follow us on"
+  it: "Seguici su"
+author:
+  en: "Ministry for innovation"
+  it: "Ministero per l'innovazione"
+cookie-policy-info:
+  en: "This site uses technical, analytics and third-party cookies <br>By continuing to browse, you accept the use of cookies."
+  it: "Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie."
+cookie-policy-accept-btn:
+  en: "Ok"
+  it: "Accetto"
+
+italian-version:
+  en: "Italian version"
+  it: "Versione italiana"
+english-version:
+  en: "English version"
+  it: "Versione inglese"
+
+## Social
+social-links:
+  en:
+    twitter:
+      name: Twitter
+      url: "https://twitter.com/ITdigitalteam"
+      blank: true
+    medium:
+      name: Medium
+      url: "https://medium.com/team-per-la-trasformazione-digitale/"
+      blank: true
+  it:
+    twitter:
+      name: Twitter
+      url: "https://twitter.com/teamdigitaleIT"
+      blank: true
+    medium:
+      name: Medium
+      url: "https://medium.com/team-per-la-trasformazione-digitale/"
+      blank: true
+    facebook:
+      name: Facebook
+      url: "https://facebook.com/"
+      blank: true
+    instagram:
+      name: Instagram
+      url: "https://instagram.com/"
+      blank: true
+
+# Footer
+footer-trasparenza:
+  it:
+    #ministro:
+    #  name: Amministrazione Trasparente
+    #  url: "/it/amministrazione-trasparente"
+    dipartimento:
+      name: Dipartimento per la Trasformazione Digitale
+      url: "http://presidenza.governo.it/AmministrazioneTrasparente/Organizzazione/ArticolazioneUffici/Dipartimenti/DTD.html"
+      blank: true
+    #lavora-con-noi:
+    #  name: Lavora con noi
+    #  url: "/it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/"
+footer-siti-web:
+  it:
+    col-1:
+      presidenza:
+        name: Presidenza della Repubblica
+        url: "https://www.quirinale.it/"
+        blank: true
+      senato:
+        name: Senato
+        url: "http://senato.it/"
+        blank: true
+      camera:
+        name: Camera
+        url: "https://www.camera.it/"
+        blank: true
+      governo:
+        name: Governo
+        url: "http://www.governo.it/"
+        blank: true
+      unione-europea:
+        name: Unione Europea
+        url: "http://europa.eu/index_it.htm"
+        blank: true
+    col-2:
+      team-digitale:
+        name: Team per la Trasformazione Digitale
+        url: "https://teamdigitale.governo.it/"
+        blank: true
+      agid:
+        name: AgID
+        url: "https://www.agid.gov.it/"
+        blank: true
+    col-3:
+      istat:
+        name: Istat
+        url: "http://www.istat.it/it/"
+        blank: true
+
+footer-contatti-ministero:
+  it:
+    indirizzo:
+      label: "Indirizzo"
+      icon: "pa"
+      name: "Largo Pietro di Brazzà, 86<br/>00187 Roma"
+      url: "https://goo.gl/maps/V7vcjUCHqafhGChj8"
+    email:
+      label: "Posta Elettronica"
+      name: "segreteria.trasformazionedigitale@governo.it"
+      icon: "mail"
+      url: "mailto:segreteria.trasformazionedigitale@governo.it"
+    pec:
+      label: "Contatti Media"
+      name: "media@innovazione.gov.it"
+      icon: "mail"
+      url: "mailto:media@innovazione.gov.it"
+    #telefono:
+    #  label: "Telefono"
+    #  name: "+390000000000"
+    #  icon: "telephone"
+    #  url: "tel:+390000000000"
+
+footer-contatti-dipartimento:
+  it:
+    indirizzo:
+      label: "Indirizzo"
+      icon: "pa"
+      name: "Piazza San Giovanni 1,<br/>00100 Roma"
+      url: "https://www.google.com/maps?q="
+
+footer-small-prints:
+  en:
+    privacy-policy:
+      name: Privacy policy
+      url: "/en/privacy-policy"
+    cookie-policy:
+      name: Note Legali
+      url: "http://www.governo.it/note-legali"
+  it:
+    contatti-sito:
+      name: Contatti
+      url: "/it/chi-siamo/contatti"
+    privacy-policy:
+      name: Privacy policy
+      url: "/it/privacy-policy"
+    cookie-policy:
+      name: Note Legali
+      url: "http://www.governo.it/note-legali"
+
+written-on:
+  en: Written on
+  it: Scritto il
+read-more:
+  en: Read more
+  it: Leggi di più
+learn-more:
+  en: Learn more
+  it: Per saperne di più
+# Section intro
+section-intro-title:
+  en: Il punto di riferimento per l’innovazione e la trasformazione digitale in Italia
+  it: Il punto di riferimento per l’innovazione e la trasformazione digitale in Italia
+section-intro-cta:
+  en:
+    - text: Mission
+      link: "/en/about-us/mission/"
+  it:
+    - text: Missione
+      link: "/it/chi-siamo/missione/"
+
+# Section Pubblica Amministrazione
+section-pa-title:
+  en: Innovation for the Public Administration
+  it: Innovazione per la Pubblica Amministrazione
+section-pa-text:
+  en: Strumenti per servizi digitali efficienti che mettono il cittadino al centro
+  it: Strumenti per servizi digitali efficienti che mettono il cittadino al centro
+section-pa-boxes:
+  en:
+    - title: Collaboration
+      text: Strumenti di collaborazione per coinvolgere ento locali, centrali e fornitori
+      image: "/assets/images/svg/noun_collaboration_2470086.svg"
+    - title: Tecnologie abilitanti
+      text: Le infrastrutture digitali della Pubblica Amministrazione
+      image: "/assets/images/svg/noun_Technology_2935550.svg"
+    - title: Software e standard
+      text: Software open source, design system e standard tech
+      image: "/assets/images/svg/noun_quality_2274581.svg"
+  it:
+    - title: Collaborazione
+      text: Strumenti di collaborazione per coinvolgere ento locali, centrali e fornitori
+      image: "/assets/images/svg/noun_collaboration_2470086.svg"
+    - title: Tecnologie abilitanti
+      text: Le infrastrutture digitali della Pubblica Amministrazione
+      image: "/assets/images/svg/noun_Technology_2935550.svg"
+    - title: Software e standard
+      text: Software open source, design system e standard di interoperabilità
+      image: "/assets/images/svg/noun_quality_2274581.svg"
+
+# Section cittadini e imprese
+section-cittadini-imprese-title:
+  en: Innovazione per i cittadini e imprese
+  it: Innovazione per i cittadini e imprese
+section-cittadini-imprese-text:
+  en: Informazioni, risorse e punti di accesso per i servizi pubblici digitali
+  it: Informazioni, risorse e punti di accesso per i servizi pubblici digitali
+# Section news
+section-news-title:
+  en: Highlights
+  it: In primo piano
+# Section Blog Posts
+section-blog-posts-title:
+  en: News
+  it: Novità
+# Section Amministrazione Trasparente
+section-amministrazione-trasparente-title:
+  en: Transparency
+  it: Amministrazione Trasparente
+
+dashboard-update:
+  en: "The dashboard data is updated on a weekly basis. Last update: "
+  it: "I dati delle dashboard vengono aggiornati su base settimanale. Ultimo aggiornamento: "
+dashboard-update-daily:
+  en: "The dashboard data is updated on a daily basis."
+  it: "I dati delle dashboard sono aggiornati quotidianamente."
+
+collapse-btn-show:
+  en: Show
+  it: Mostra
+collapse-btn-hide:
+  en: Hide
+  it: Nascondi
