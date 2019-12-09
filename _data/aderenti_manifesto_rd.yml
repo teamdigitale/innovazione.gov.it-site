@@ -250,3 +250,23 @@ aderenti_manifesto:
     links:
       - link_label: "paroleostili.it"
         link_url: "https://paroleostili.it/"
+  - name: Assopam
+    logo: "assopam-logo.png"
+    links:
+      - link_label: "assopam.it"
+        link_url: "https://www.assopam.it/"
+  - name: Studio Casiglia Ronzoni
+    logo: "casiglia-ronzoni-logo.png"
+    links:
+      - link_label: "casigliaronzoni.it"
+        link_url: "http://www.casigliaronzoni.it/"
+  - name: Download Innovation
+    logo: "download-innovation-logo.png"
+    links:
+      - link_label: "download-event.io"
+        link_url: "https://download-event.io/it/"
+  - name: Liber Liber
+    logo: "liber-liber-logo.jpg"
+    links:
+      - link_label: "liberliber.it/"
+        link_url: "https://www.liberliber.it/online/"

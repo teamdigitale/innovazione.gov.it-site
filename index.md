@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Homepage
-description: Descrizione homepage #TODO
+description: Il punto di riferimento per l’innovazione e la trasformazione digitale in Italia
 lang: it
 ref: homepage
-permalink: /
 redirect_from:
   - /it/
 ---

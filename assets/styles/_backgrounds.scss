@@ -33,12 +33,22 @@
     background-image: url($assets + "/images/backgrounds/christopher-burns-Wiu3w-99tNg-unsplash.webp");
   }
 }
+
 .innovation-section-head--notizie {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/backgrounds/amador-loureiro-BVyNlchWqzs-unsplash.jpg");
   }
   @at-root .webp #{&} {
     background-image: url($assets + "/images/backgrounds/amador-loureiro-BVyNlchWqzs-unsplash.webp");
+  }
+}
+
+.innovation-section-head--missione {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/jeremy-lapak-CVvFVQ_-oUg-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/jeremy-lapak-CVvFVQ_-oUg-unsplash.webp");
   }
 }
 

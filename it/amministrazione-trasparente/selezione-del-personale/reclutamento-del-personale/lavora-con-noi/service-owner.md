@@ -17,10 +17,10 @@ Le figure gestiranno lo sviluppo delle piattaforme digitali coordinate
 dal dipartimento per la trasformazione digitale*.*
 
 I Service Owner dovranno avere esperienza nel coordinamento di team
-eterogenei di *service*, *content* e *UX/UI* designer, di sviluppatori,
-ingegneri e analisti, per l’ideazione, la realizzazione e la fornitura
-di piattaforme digitali complesse incentrate sui bisogni degli utenti,
-nonché una solida preparazione tecnica e scientifica.
+multi-disciplinari composti da figure eterogenee per l’ideazione,
+la realizzazione e la fornitura di piattaforme digitali complesse
+incentrate sui bisogni degli utenti, nonché una solida preparazione
+tecnica e scientifica.
 
 ## Qualifiche chiave
 
@@ -53,8 +53,8 @@ nonché una solida preparazione tecnica e scientifica.
     definizione di linee guida
 -   Eccellenti doti comunicative, di presentazione, interpersonali e
     analitiche e capacità di comunicare chiaramente concetti complessi
--   Esperienza nel gestire squadre eterogenee di *service, content,
-    UX/UI designer e di sviluppatori* e ingegneri *software*
+-   Esperienza nel gestire team multi-disciplinari composti da figure
+    eterogenee
 
 ## Formazione Richiesta
 

@@ -7,7 +7,7 @@ defaults: &defaults
   working_directory: ~/circleci/innovazione.gov.it
   add_ssh_keys: &add_ssh_keys
     fingerprints:
-      - "2f:62:5b:e9:28:2f:91:12:4a:66:55:47:11:4a:9a:3d"
+      - "6b:79:94:b3:2b:d1:e5:57:5c:44:15:ed:7a:9d:c1:8f"
   restore_cache: &restore_cache
     keys:
       - v1-dependencies-{{ checksum "Gemfile.lock" }}
@@ -101,9 +101,9 @@ jobs:
             mkdir -p .circleci && cp -a ~/circleci/innovazione.gov.it/.circleci/. .circleci/.
             # echo "innovazione.gov.it" > CNAME
 
-            # git add -A
-            # git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-            # git push origin gh-pages
+            git add -A
+            git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+            git push origin gh-pages
 
 workflows:
   version: 2

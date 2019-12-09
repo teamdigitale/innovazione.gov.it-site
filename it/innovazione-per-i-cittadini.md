@@ -61,6 +61,12 @@ Qui trovi una selezione di risorse per l’innovazione e la digitalizzazione in 
             </a>
         </li>
         <li>
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://www.anpr.interno.it/portale/web/guest/a-cittadini">
+                <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-tool"></use></svg>
+                <span class="pl-2 d-inline">Accesso ai dati anagrafici tramite CIE, CNS o SPID</span>
+            </a>
+        </li>  
+        <li>
             <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://www.pagopa.gov.it/it/pagopa/">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
                 <span class="pl-2 d-inline">Come usare il sistema di pagamento pagoPA</span>
@@ -71,7 +77,7 @@ Qui trovi una selezione di risorse per l’innovazione e la digitalizzazione in 
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-tool"></use></svg>
                 <span class="pl-2 d-inline">Forum Italia, lo spazio di discussione sui servizi pubblici</span>
             </a>
-        </li>    
+        </li> 
     </ul>
 </div>
 

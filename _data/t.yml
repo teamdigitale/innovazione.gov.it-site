@@ -14,13 +14,13 @@ icon-repubblica-alt:
   it: "Emblema della Repubblica Italiana"
 icon-main-alt:
   en: "Logo for the Minister for Technological Innovation and Digitization"
-  it: "Logo del Ministro per l'innovazione tecnologica e la digitalizzazione"
+  it: "Logo del Ministro per l’innovazione tecnologica e la digitalizzazione"
 name:
   en: "Minister for Technological Innovation and Digitization"
-  it: "Ministro per l'innovazione tecnologica e la digitalizzazione"
+  it: "Ministro per l’innovazione tecnologica e la digitalizzazione"
 name-html:
   en: "Minister for Technological Innovation and Digitization"
-  it: "<span class='font-weight-bolder'>Ministro</span><br>per l'innovazione tecnologica<br>e la digitalizzazione"
+  it: "<span class='font-weight-bolder'>Ministro</span><br>per l’innovazione tecnologica<br>e la digitalizzazione"
 description:
   en: "Presidency of the Council of Ministers"
   it: "Presidenza del Consiglio dei Ministri"
@@ -41,7 +41,7 @@ social-intro:
   it: "Seguici su"
 author:
   en: "Ministry for innovation"
-  it: "Ministero per l'innovazione"
+  it: "Ministero per l’innovazione"
 cookie-policy-info:
   en: "This site uses technical, analytics and third-party cookies <br>By continuing to browse, you accept the use of cookies."
   it: "Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie."
@@ -101,39 +101,39 @@ footer-trasparenza:
 footer-siti-web:
   it:
     col-1:
-      presidenza:
-        name: Presidenza della Repubblica
-        url: "https://www.quirinale.it/"
-        blank: true
-      senato:
-        name: Senato
-        url: "http://senato.it/"
-        blank: true
-      camera:
-        name: Camera
-        url: "https://www.camera.it/"
-        blank: true
       governo:
-        name: Governo
+        name: Governo Italiano
         url: "http://www.governo.it/"
         blank: true
-      unione-europea:
-        name: Unione Europea
-        url: "http://europa.eu/index_it.htm"
-        blank: true
-    col-2:
       team-digitale:
         name: Team per la Trasformazione Digitale
         url: "https://teamdigitale.governo.it/"
         blank: true
       agid:
-        name: AgID
+        name: Agenzia per l’Italia Digitale
         url: "https://www.agid.gov.it/"
         blank: true
+    col-2:
+      pagoPA:
+        name: pagoPA
+        url: "https://www.pagopa.gov.it/"
+        blank: true
+      anpr:
+        name: ANPR
+        url: "https://www.anpr.interno.it/portale/"
+        blank: true
+      cloud:
+        name: Cloud Italia
+        url: "https://cloud.italia.it/"
+        blank: true
     col-3:
-      istat:
-        name: Istat
-        url: "http://www.istat.it/it/"
+      designers-italia:
+        name: Designers Italia
+        url: "https://designers.italia.it/"
+        blank: true
+      developers-italia:
+        name: Developers Italia
+        url: "https://developers.italia.it/"
         blank: true
 
 footer-contatti-ministero:
@@ -185,6 +185,9 @@ footer-small-prints:
     cookie-policy:
       name: Note Legali
       url: "http://www.governo.it/note-legali"
+    credits:
+      name: Credits
+      url: "/it/credits"
 
 written-on:
   en: Written on
@@ -247,10 +250,6 @@ section-cittadini-imprese-text:
 section-news-title:
   en: Highlights
   it: In primo piano
-# Section Blog Posts
-section-blog-posts-title:
-  en: News
-  it: Novità
 # Section Amministrazione Trasparente
 section-amministrazione-trasparente-title:
   en: Transparency

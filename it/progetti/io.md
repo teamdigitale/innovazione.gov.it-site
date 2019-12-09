@@ -12,7 +12,6 @@ project_url: https://io.italia.it/
 order: 9
 categories:
  - pubblica amministrazione
- - imprese
  - cittadini
 ---
 

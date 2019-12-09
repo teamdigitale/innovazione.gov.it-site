@@ -3,7 +3,7 @@ lang: it
 layout: page
 title: Innovazione per le imprese
 title_short: Imprese
-description: I progetti, le risorse e le novità per l’innovazione e la digitalizzazione del Paese attraverso le imprese
+description: I progetti, le risorse e le novità per l’innovazione e la digitalizzazione del sistema produttivo del Paese
 ref: innovazione-per-le-imprese
 no_site_toc: true
 intro: true
@@ -18,7 +18,7 @@ order: 2
 ## Cosa puoi trovare qui?
 
 {:.max-w-40}
-Qui puoi trovare le ultime novità, una selezione di risorse e i link ai progetti a cui stiamo lavorando, dedicati all’**innovazione del tessuto sociale ed economico del Paese**. Questa sezione riguarda l’intero sistema Paese: le aziende, i ricercatori, gli innovatori, le startup. Tutti gli attori coinvolti nel processo di trasformazione che stiamo intraprendendo insieme. 
+Qui puoi trovare le ultime novità, una selezione di risorse e i link ai progetti a cui stiamo lavorando, dedicati all’**innovazione del tessuto economico del Paese**. Questa sezione riguarda l’intero sistema Paese: le aziende, i ricercatori, gli innovatori, le startup. Tutti gli attori coinvolti nel processo di trasformazione che stiamo intraprendendo insieme. 
 
 {:.mt-5.max-w-40}
 ## Le novità
@@ -32,45 +32,32 @@ Qui trovi le ultime novità su innovazione e digitalizzazione per la Pubblica Am
 ## Le risorse
 
 {:.max-w-40}
-Qui trovi una soluzione di risorse per l’innovazione e la digitalizzazione in Italia:
-
+Qui trovi una solezione di risorse per l’innovazione e la digitalizzazione in Italia:
 
 <div class="link-list-wrapper max-w-40 mb-5">
     <ul class="link-list">
         <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/">
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://cloud.italia.it/it/qualificazioni/">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
-                <span class="pl-2 d-inline">Il Codice dell’Amministrazione Digitale (CAD)</span>
+                <span class="pl-2 d-inline">Come ottenere la qualificazione dei propri servizi cloud per la Pubblica Amministrazione</span>
             </a>
         </li>
         <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="#">
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://www.agid.gov.it/it/piattaforme/eidas/cie-verso-eidas">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
-                <span class="pl-2 d-inline">TODO Fondi per l’innovazione 1</span>
+                <span class="pl-2 d-inline">Linee guida per l’integrazione del sistema di pagamento pagoPA</span>
             </a>
         </li>
         <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="#">
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://www.agid.gov.it/it/piattaforme/eidas/cie-verso-eidas">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
-                <span class="pl-2 d-inline">TODO Fondi per l’innovazione 2</span>
+                <span class="pl-2 d-inline">Come integrare dei servizi digitali con la Carta d’identità elettronica</span>
             </a>
         </li>
         <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="#">
-                <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
-                <span class="pl-2 d-inline">TODO Risorse per startup</span>
-            </a>
-        </li>
-        <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="#">
-                <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
-                <span class="pl-2 d-inline">TODO Risorse per ricercatori</span>
-            </a>
-        </li>
-        <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="#">
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://www.spid.gov.it/come-diventare-fornitore-di-servizi-pubblici-e-privati-con-spid">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-tool"></use></svg>
-                <span class="pl-2 d-inline">TODO Come integrare il sistema di identità digitale SPID nei propri servizi</span>
+                <span class="pl-2 d-inline">Come integrare il sistema di identità digitale SPID nei propri servizi</span>
             </a>
         </li>
         <li>

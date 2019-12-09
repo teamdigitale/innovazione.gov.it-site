@@ -2,21 +2,6 @@
 
 <div class="bg-light">
   <div class="container py-5">
-    <div class="row mb-3">
-      <div class="col-12">
-        <h4>{{ site.data.t.section-blog-posts-title[page.lang] }}</h4>
-      </div>
-    </div>
-    <!--<div class="row">
-      {% assign localized_posts = site.posts | where: "lang", page.lang %}
-      {% for post in localized_posts %}
-        {% unless post.categories contains 'highlights' %}
-        <div class="col-12 col-lg-4">
-          {% include post.html %}
-        </div>
-        {% endunless %}
-      {% endfor %}
-    </div>-->
     <div class="row">
       {% for medium_post in medium_posts %}
       {% if site.data.meta.medium-posts-ids contains medium_post.medium_post_id %}

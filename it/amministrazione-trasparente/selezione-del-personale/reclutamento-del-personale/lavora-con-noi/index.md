@@ -29,7 +29,7 @@ In questo momento non ci sono posizioni aperte. Tieni d’occhio questo sito per
 {% for one_page in open_jobs_pages %}
     <hr>
     <div>
-    <a href="{{ one_page.url }}" title="{{ one_page.title }}"><b>{{ one_page.title }}</b></a>
+    <a href="{{ one_page.url }}" title="{{ one_page.title }}"><span class="font-weight-bold">{{ one_page.title }}</span></a>
     {% if one_page.is_new %}
         <span class="small">&nbsp;Nuova posizione</span>
     {% endif %}
@@ -50,7 +50,7 @@ In questo momento non ci sono posizioni aperte. Tieni d’occhio questo sito per
 <div class="jobpositions archived collapse" id="jobsarchive">
   {% for one_page in closed_jobs_pages %}
   <div>
-    <a href="{{ one_page.url }}" title="{{ one_page.title }}"><b>{{ one_page.title }}</b></a>
+    <a href="{{ one_page.url }}" title="{{ one_page.title }}"><span class="font-weight-bold">{{ one_page.title }}</span></a>
     <span class="small">&nbsp;Posizione chiusa</span>
   </div>
   <hr>

@@ -13,7 +13,6 @@ order: 10
 project_url: https://pdnd.italia.it/
 categories:
  - pubblica amministrazione
- - imprese
  - cittadini
 ---
 

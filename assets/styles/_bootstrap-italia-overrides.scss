@@ -23,7 +23,7 @@ $footer-bg-color: #3e5266;
         a {
           font-size: 14px;
           border-right: 1px solid rgba(255, 255, 255, .2);
-          padding: 0 $baseline;
+          padding: 0 $baseline*2;
         }
 
       }
@@ -83,6 +83,7 @@ $footer-bg-color: #3e5266;
 }
 
 .it-hero-wrapper {
+  background-color: #FFF;
   .it-hero-text-wrapper {
     padding-top: 60px;
     @media (min-width: 992px) {
@@ -202,6 +203,9 @@ $footer-bg-color: #3e5266;
     padding: 0 8px;
   }
   &.card-teaser .card-body {
+    .card-title {
+      min-height: 2.888rem;
+    }
     .card-text,
     .card-text>p {
       margin-bottom: 1rem;
