@@ -7,7 +7,6 @@ layout: page-job
 ref: infrastructure-and-production-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/245YyU4dWy/InfrastructureProduction-Engineer-DevOps.html
-iframeheight: 800
 is_new: true
 ---
 
