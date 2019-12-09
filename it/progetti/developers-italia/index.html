@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="La community dedicata allo sviluppo di software open source per i servizi pubblici italiani">
+<meta name="author" content="Ministero per l'innovazione">
+<meta name="generator" content="Jekyll vv4.0.0">
+
+<title>Ministro per l'innovazione tecnologica e la digitalizzazione | Developers Italia</title>
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://innovazione-gov-it.netlify.com//assets/images/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/favicon-16x16.png">
+<link rel="icon" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/favicon.ico">
+<meta name="msapplication-config" content="https://innovazione-gov-it.netlify.com//assets/images/favicons/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#0066CC">
+<meta name="msapplication-TileImage" content="https://innovazione-gov-it.netlify.com//assets/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#0066CC">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@TODO">
+<meta name="twitter:title" content="Ministro per l'innovazione tecnologica e la digitalizzazione | Developers Italia">
+<meta name="twitter:description" content="La community dedicata allo sviluppo di software open source per i servizi pubblici italiani">
+<meta name="twitter:image" content="https://innovazione-gov-it.netlify.com//assets/images/favicons/social-card.png">
+<meta name="twitter:image:alt" content="Immagine  per il sito del Ministro per l'innovazione tecnologica e la digitalizzazione">
+
+<meta property="og:url" content="https://innovazione-gov-it.netlify.com//it/progetti/developers-italia/">
+<meta property="og:title" content="Ministro per l'innovazione tecnologica e la digitalizzazione | Developers Italia">
+<meta property="og:description" content="La community dedicata allo sviluppo di software open source per i servizi pubblici italiani">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://innovazione-gov-it.netlify.com//assets/images/favicons/social-card.png">
+<meta property="og:image:secure_url" content="https://innovazione-gov-it.netlify.com//assets/images/favicons/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="manifest" href="https://innovazione-gov-it.netlify.com//assets/images/favicons/manifest.json">
+
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="alternate" type="application/rss+xml" title="Ministro per l'innovazione tecnologica e la digitalizzazione | Developers Italia" href="https://innovazione-gov-it.netlify.com//feed.xml" />
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://innovazione-gov-it.netlify.com//assets/bootstrap-italia/dist/css/bootstrap-italia.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://innovazione-gov-it.netlify.com//style.css">
+</head>
+<body>
+<div class="it-header-wrapper">
+  <div class="it-header-slim-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="http://www.governo.it/" target="_blank" rel="noopener noreferrer">Governo Italiano</a>
+          <div class="nav-mobile">
+            <nav>
+              <a class="it-opener d-lg-none" data-toggle="collapse" href="#slim-navigation" role="button" aria-expanded="false" aria-controls="slim-navigation">
+                <span>Altre informazioni</span>
+                <svg class="icon">
+                  <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="link-list-wrapper collapse" id="slim-navigation">
+                <ul class="link-list">
+                  <li class="d-lg-none"><a href="http://www.governo.it/" target="_blank" rel="noopener noreferrer">Governo Italiano</a></li>
+                  <li><a href="https://teamdigitale.governo.it/" target="_blank" rel="noopener noreferrer">Team per la Trasformazione Digitale</a></li>
+                  <li><a href="https://pianotriennale-ict.italia.it/" target="_blank" rel="noopener noreferrer">Piano Triennale</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+<div class="it-nav-wrapper">
+  <div class="it-header-center-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-center-content-wrapper">
+            <div class="it-brand-wrapper">
+              <a href="/it/">
+                <img class="icon" src="/assets/images/logo-repubblica-italiana.svg" alt="Emblema della Repubblica Italiana">
+                <img class="icon innovation-main-icon" src="/assets/images/logo-mid-white.svg" alt="Logo del Ministro per l'innovazione tecnologica e la digitalizzazione">
+                <div class="it-brand-text pr-0">
+                  <h2 class="innovation-main-title">
+                    <span class='font-weight-bolder'>Ministro</span><br>per l'innovazione tecnologica<br>e la digitalizzazione
+                  </h2>
+                  
+                </div>
+              </a>
+            </div>
+            <div class="it-right-zone">
+              <div class="it-socials d-none d-md-flex">
+                <span>Seguici su</span>
+                <ul>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/teamdigitaleIT" title="Twitter" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
+                      </svg>
+                      <span class="sr-only">Twitter</span>
+                    </a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://medium.com/team-per-la-trasformazione-digitale/" title="Medium" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-medium"></use>
+                      </svg>
+                      <span class="sr-only">Medium</span>
+                    </a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://facebook.com/" title="Facebook" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-facebook"></use>
+                      </svg>
+                      <span class="sr-only">Facebook</span>
+                    </a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://instagram.com/" title="Instagram" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-instagram"></use>
+                      </svg>
+                      <span class="sr-only">Instagram</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="it-header-navbar-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg has-megamenu">
+            <button class="custom-navbar-toggler" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation" data-target="#main-navigation">
+              <svg class="icon">
+                <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
+              </svg>
+            </button>
+            <div class="navbar-collapsable" id="main-navigation">
+              <div class="overlay"></div>
+              <div class="close-div sr-only">
+                <button class="btn close-menu" type="button">
+                  <svg class="icon">
+                    <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="menu-wrapper">
+                <ul class="navbar-nav">
+                  
+                  
+                  
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <span>Chi siamo</span>
+                      <svg class="icon icon-xs">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand">
+                        </use>
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                      <div class="link-list-wrapper">
+                        <div class="row">
+                          <div class="col-12">
+                            <h3 class="it-heading-megacolumn no_toc">Chi siamo</h3>
+                          </div>
+                        </div>
+                        <ul class="link-list">
+                          
+                          
+                          <li><a class="list-item"
+                                 href="/it/chi-siamo/ministro/"><span>Il Ministro</span></a>
+                          </li>
+                          
+                          <li><a class="list-item"
+                                 href="/it/chi-siamo/dipartimento/"><span>Il Dipartimento</span></a>
+                          </li>
+                          
+                          <li><a class="list-item"
+                                 href="/it/chi-siamo/contatti/"><span>Contatti</span></a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <span>Cosa facciamo</span>
+                      <svg class="icon icon-xs">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand">
+                        </use>
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                      <div class="link-list-wrapper">
+                        <div class="row">
+                          <div class="col-12">
+                            <h3 class="it-heading-megacolumn no_toc">Cosa facciamo</h3>
+                          </div>
+                        </div>
+                        <ul class="link-list">
+                          
+                          
+                          <li><a class="list-item"
+                                 href="/it/cosa-facciamo/missione/"><span>Missione</span></a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item dropdown megamenu">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <span>Progetti</span>
+                      <svg class="icon icon-xs">
+                        <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand">
+                        </use>
+                      </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <h3 class="it-heading-megacolumn no_toc">Progetti</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-lg-4">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  
+                                  <li><a class="list-item" href="/it/progetti/anpr/"><span>ANPR</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/api/"><span>API</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/cie/"><span>CIE</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/cloud/"><span>Cloud</span></a></li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  
+                                  <li><a class="list-item" href="/it/progetti/designers-italia/"><span>Designers Italia</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/developers-italia/"><span>Developers Italia</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/pagopa/"><span>pagoPA</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/piano-triennale/"><span>Piano Triennale</span></a></li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  
+                                  <li><a class="list-item" href="/it/progetti/spid/"><span>SPID</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/io/"><span>IO</span></a></li>
+                                  
+                                  <li><a class="list-item" href="/it/progetti/pdnd/"><span>PDND</span></a></li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </li>
+                  
+                  
+                </ul>
+                <ul class="navbar-nav navbar-secondary">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-semibold" href="/it/innovazione-per-la-pubblica-amministrazione/"><span>Pubblica Amministrazione</span></a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-semibold" href="/it/innovazione-per-le-imprese/"><span>Imprese</span></a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-semibold" href="/it/innovazione-per-i-cittadini/"><span>Cittadini</span></a>
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="section section-muted project-intro">
+  <div class="section-content">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-between">
+            <div style="z-index: 2">
+              
+              <img alt="Developers Italia" src="/assets/images/projects/developers-italia.png" class="rounded" height="80">
+              
+              <h1 class="max-w-40 text-600">La community degli sviluppatori di servizi</h1>
+              <p class="lead max-w-40 text-muted">La community dedicata allo sviluppo di software open source per i servizi pubblici italiani</p>
+              <br><a class="btn btn-primary btn-sm btn-icon" href="https://developers.italia.it/" title="Developers Italia" target="_blank" rel="noopener noreferrer">Sito ufficiale</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="project-intro--print">Developers Italia</span>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="mx-md-3"><nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    
+    
+
+
+    
+
+    
+      
+      
+    
+
+    
+
+    <li class="breadcrumb-item">
+      <a href="/">Home</a>
+      <span class="separator">&gt;</span>
+    </li>
+    
+    <li class="breadcrumb-item">
+      <a href="/it/progetti/">Progetti</a>
+      <span class="separator">&gt;</span>
+    </li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Developers Italia</li>
+  </ol>
+</nav>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 my-4">
+      <h2 class="mt-5 max-w-40" id="in-breve">In breve</h2>
+
+<p class="max-w-40"><a href="https://developers.italia.it/" target="_blank" rel="noopener noreferrer">Developers Italia</a> è la community dedicata allo sviluppo di software open source a supporto dei servizi pubblici digitali italiani.<br />
+Il sito raccoglie tantissimi strumenti per l’integrazione delle piattaforme abilitanti nei servizi pubblici e privati (librerie e SDK, ma anche ambienti di test, esempi di codice e documentazione chiara).<br />
+La community è composta da tecnici della Pubblica Amministrazione o dei fornitori, singoli sviluppatori, cittadini e studenti, che collaborano sui vari progetti e comunicano attraverso gli strumenti messi a disposizione (<a href="https://slack.developers.italia.it/" target="_blank" rel="noopener noreferrer">Slack</a>, <a href="https://github.com/italia" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://forum.italia.it/" target="_blank" rel="noopener noreferrer">Forum Italia</a>).</p>
+
+<p class="max-w-40">Developers Italia è inoltre individuata dalle nuove <a href="https://developers.italia.it/it/riuso" target="_blank" rel="noopener noreferrer">Linee guida sull’acquisizione e il riuso di software</a> come piattaforma dove pubblicare il <strong>software a riuso</strong> (secondo quanto previsto dall’<a href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2017-12-13/_rst/capo6_art69.html" target="_blank" rel="noopener noreferrer">art. 69 del Codice dell’Amministrazione Digitale</a>).</p>
+
+<ul>
+  <li><a href="https://developers.italia.it/it/software/" target="_blank" rel="noopener noreferrer">Scopri il catalogo del software</a></li>
+</ul>
+
+<h2 class="mt-5 max-w-40" id="vantaggi-per-la-pubblica-amministrazione">Vantaggi per la Pubblica Amministrazione</h2>
+
+<p class="max-w-40">Questo insieme di regole, strumenti e community rappresenta un cambiamento importante per la Pubblica Amministrazione perché favorisce la collaborazione, la razionalizzazione della spesa, il consolidamento del patrimonio di software e <strong>pone le basi per creare innovazione</strong>.<br />
+Riutilizzando componenti comuni e software open source rilasciati da altri enti, le Pubbliche Amministrazioni possono <strong>risparmiare tempo e risorse</strong>: si evita di fare due volte lo stesso lavoro per rispondere a una stessa esigenza e si mettono a fattor comune gli sforzi per <strong>costruire software maturo e soprattutto sicuro</strong>.  Parliamo di razionalizzare le risorse, che possono essere utilizzate in modo molto più utile per costruire servizi a valore aggiunto e per migliorare il software esistente.<br />
+Il Catalogo del Software di Developers Italia consente alle amministrazioni di cercare facilmente le soluzioni esistenti e di effettuare una valutazione comparativa prima di commissionare nuovi software, come previsto dall’articolo 68 del Codice dell’Amministrazione Digitale.</p>
+
+<h2 class="mt-5 max-w-40" id="vantaggi-per-i-cittadini">Vantaggi per i cittadini</h2>
+
+<p class="max-w-40">Grazie al modello collaborativo e al riuso del software i cittadini possono beneficiare di servizi digitali più maturi, più sicuri, più funzionali, più integrati con le piattaforme abilitanti e più coerenti tra di loro.<br />
+La possibilità di accedere al codice sorgente offre <strong>maggiore trasparenza</strong> e addirittura permette ai cittadini di collaborare alla correzione di problemi e al miglioramento del software pubblico.</p>
+
+<h2 class="mt-5 max-w-40" id="newsletter">Newsletter</h2>
+
+<form action="https://a0x0b4.emailsp.com/frontend/subscribe.aspx" class="needs-validation" novalidate="">
+  <div class="mt-4">
+    <div class="form-group col-md-6">
+      <input aria-required="true" class="js-newsletter-email form-control" id="email" name="email" placeholder="Inserisci il tuo indirizzo email" required="" type="email" />
+      <label for="email">Email *</label>
+      <small class="form-text text-muted">Inserendo il tuo indirizzo email stai accettando la nostra <a href="/it/privacy-policy-designers-italia-developers-italia/">informativa sul trattamento dei dati personali per la newsletter</a>.</small>
+    </div>
+    <input name="list" type="hidden" value="1" />
+  </div>
+  <button class="js-newsletter-submit btn btn-primary mt-3" type="submit" disabled="">Iscriviti</button>
+</form>
+
+<h2 class="mt-5 max-w-40" id="i-dati">I dati</h2>
+
+<p><small>I dati delle dashboard sono aggiornati quotidianamente.</small></p>
+
+<iframe src="https://dashboard.pdnd.italia.it/public/dashboard/08665701-33b7-49ac-acd8-dee59a150737" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+
+<h2 class="mt-5 max-w-40" id="il-ruolo-del-dipartimento">Il ruolo del Dipartimento</h2>
+
+<p class="max-w-40">La community di Developers Italia è stata realizzata e animata dal <a href="https://teamdigitale.governo.it/" target="_blank" rel="noopener noreferrer">Team per la Trasformazione Digitale</a> durante il suo mandato, in collaborazione con l’<a href="http://www.agid.gov.it" target="_blank" rel="noopener noreferrer">Agenzia per l’Italia Digitale</a> (AgID).</p>
+
+<p class="max-w-40">Usando strumenti collaborativi molto diffusi (GitHub per il codice, ReadTheDocs per la documentazione, Discourse per il forum) il Team ha creato il sito <a href="https://developers.italia.it" target="_blank" rel="noopener noreferrer">developers.italia.it</a>, dove ha coinvolto gli enti gestori delle piattaforme abilitanti, con i quali ha messo a punto roadmap aperte e documentazione per sviluppatori e ha iniziato a rilasciare codice open source.</p>
+
+<p class="max-w-40">La community si è creata spontaneamente in poco tempo, segno che c’era molta necessità di un luogo di collaborazione e confronto. Con la supervisione del Team, molti membri della community hanno apportato altro codice sorgente e sono diventati <strong>maintainer dei repository</strong>.
+Ad ottobre 2017 Developers Italia è stata protagonista di <a href="https://hack.developers.italia.it/" target="_blank" rel="noopener noreferrer">Hack Developers</a>, il più grande Hackathon dedicato ai servizi pubblici.
+Nel 2018, il Team per la Trasformazione Digitale e AgID hanno lavorato insieme alla stesura delle nuove <a href="https://developers.italia.it/it/riuso" target="_blank" rel="noopener noreferrer">Linee Guida per l’Acquisizione e il Riuso di Software per la Pubblica Amministrazione</a>, che applicano un modello basato sull’open source e mettono le basi per un’efficace costruzione di un <strong>patrimonio di software pubblico aperto e di qualità</strong>.</p>
+
+<p class="max-w-40">Per attuare questo modello di riuso è nata nel 2019 la nuova versione del sito Developers Italia, contenente il catalogo del software popolato automaticamente da un crawler sviluppato dal Team. A tale scopo è stato definito uno standard per la metadatazione del software pubblico, chiamato <a href="https://docs.italia.it/italia/developers-italia/publiccodeyml/" target="_blank" rel="noopener noreferrer">publiccode.yml</a>, che è in corso di adozione da parte di altri stati esteri.</p>
+
+<p class="max-w-40">Il Dipartimento ha preso in carica l’attività del Team per la Trasformazione Digitale, lavorando per:</p>
+
+<ul class="max-w-40">
+  <li><strong>far crescere la vita della community</strong> e le attività di sviluppo legate ai vari progetti;</li>
+  <li>sviluppare il Catalogo del Software open source a disposizione della Pubblica Amministrazione;</li>
+  <li>creare un punto di accesso unico per tutti gli sviluppatori della Pubblica Amministrazione che vogliono <a href="https://developers.italia.it/it/piattaforme/" target="_blank" rel="noopener noreferrer">integrare i propri servizi con le piattaforme abilitanti</a>;</li>
+  <li>mettere a disposizione degli sviluppatori <a href="https://developers.italia.it/it/api/" target="_blank" rel="noopener noreferrer">una selezione delle API REST italiane</a>.</li>
+</ul>
+
+<h2 class="mt-5 max-w-40" id="media">Media</h2>
+
+<p class="max-w-40">Per ogni richiesta di contatto da parte di media e giornalisti il punto di riferimento è l’ufficio stampa e comunicazione del Ministro per l’innovazione - Dipartimento per la Trasformazione Digitale.</p>
+
+
+    </div>
+  </div>
+</div>
+
+<footer class="it-footer">
+  <div class="it-footer-main">
+    <div class="container">
+      <section>
+        <div class="row clearfix">
+          <div class="col-sm-12">
+            <div class="it-brand-wrapper">
+              <a href="/it/">
+                <img class="icon" src="/assets/images/logo-repubblica-italiana.svg" alt="Emblema della Repubblica Italiana">
+                <img class="icon" src="/assets/images/logo-mid-white-footer.svg"alt="" style="width:120px">
+                <div class="it-brand-text">
+                  <h2>Ministro per l'innovazione tecnologica e la digitalizzazione</h2>
+                  <h3 class="d-none d-md-block">Presidenza del Consiglio dei Ministri</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col-md-3">
+            <h4 class="text-uppercase">Trasparenza</h4>
+            <div class="link-list-wrapper">
+              <ul class="pt-2 bt-alpha-2 link-list clearfix">
+              
+                <li class="py-2">
+                    <a class="list-item"
+                       href="http://presidenza.governo.it/AmministrazioneTrasparente/Organizzazione/ArticolazioneUffici/Dipartimenti/DTD.html"
+                       title="Vai alla pagina: Dipartimento per la Trasformazione Digitale"
+                       target="_blank" rel="noopener noreferrer"
+                    >
+                      Dipartimento per la Trasformazione Digitale
+                    </a>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <h4 class="text-uppercase">Siti web</h4>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="link-list-wrapper">
+                  <ul class="pt-2 bt-alpha-2 link-list clearfix">
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="https://www.quirinale.it/"
+                         title="Vai alla pagina: Presidenza della Repubblica"
+                         
+                      >
+                        Presidenza della Repubblica
+                      </a>
+                    </li>
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="http://senato.it/"
+                         title="Vai alla pagina: Senato"
+                         
+                      >
+                        Senato
+                      </a>
+                    </li>
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="https://www.camera.it/"
+                         title="Vai alla pagina: Camera"
+                         
+                      >
+                        Camera
+                      </a>
+                    </li>
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="http://www.governo.it/"
+                         title="Vai alla pagina: Governo"
+                         
+                      >
+                        Governo
+                      </a>
+                    </li>
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="http://europa.eu/index_it.htm"
+                         title="Vai alla pagina: Unione Europea"
+                         
+                      >
+                        Unione Europea
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="link-list-wrapper">
+                  <ul class="pt-2 bt-alpha-2 link-list clearfix">
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="https://teamdigitale.governo.it/"
+                         title="Vai alla pagina: Team per la Trasformazione Digitale"
+                         
+                      >
+                        Team per la Trasformazione Digitale
+                      </a>
+                    </li>
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="https://www.agid.gov.it/"
+                         title="Vai alla pagina: AgID"
+                         
+                      >
+                        AgID
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="link-list-wrapper">
+                  <ul class="pt-2 bt-alpha-2 link-list clearfix">
+                    
+                    <li class="py-2">
+                      <a class="list-item"
+                         href="http://www.istat.it/it/"
+                         title="Vai alla pagina: Istat"
+                         
+                      >
+                        Istat
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="mt-4 pt-4">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="text-uppercase">Contatti</h4>
+            <div class="row">
+              <div class="col-12">
+                <h5 class="h6 mb-3">Ministro per l’Innovazione tecnologica e la digitalizzazione</h5>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="pt-2 bt-alpha-2 link-list clearfix">
+                        
+                        <li class="py-2">
+                          <svg class="mr-2 align-top icon icon-sm icon-white">
+                            <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
+                          </svg>
+                          <p class="ml-1 d-inline-block">
+                            Indirizzo
+                            <br/>
+                            <a class="list-item"
+                               href="https://goo.gl/maps/V7vcjUCHqafhGChj8">
+                              Largo Pietro di Brazzà, 86<br/>00187 Roma
+                            </a>
+                          </p>
+                        </li>
+                        
+                        <li class="py-2">
+                          <svg class="mr-2 align-top icon icon-sm icon-white">
+                            <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-mail"></use>
+                          </svg>
+                          <p class="ml-1 d-inline-block">
+                            Posta Elettronica
+                            <br/>
+                            <a class="list-item"
+                               href="mailto:segreteria.trasformazionedigitale@governo.it">
+                              segreteria.trasformazionedigitale@governo.it
+                            </a>
+                          </p>
+                        </li>
+                        
+                        <li class="py-2">
+                          <svg class="mr-2 align-top icon icon-sm icon-white">
+                            <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-mail"></use>
+                          </svg>
+                          <p class="ml-1 d-inline-block">
+                            Contatti Media
+                            <br/>
+                            <a class="list-item"
+                               href="mailto:media@innovazione.gov.it">
+                              media@innovazione.gov.it
+                            </a>
+                          </p>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="mt-5">
+        <div class="row">
+          <div class="col">
+            <ul class="list-inline text-center social">
+              
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="https://twitter.com/teamdigitaleIT"
+                   aria-label="Twitter"
+                   title="Twitter"
+                   
+                >
+                  <svg class="icon icon-lg icon-white align-top">
+                    <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
+                  </svg>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="https://medium.com/team-per-la-trasformazione-digitale/"
+                   aria-label="Medium"
+                   title="Medium"
+                   
+                >
+                  <svg class="icon icon-lg icon-white align-top">
+                    <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-medium"></use>
+                  </svg>
+                  <span class="sr-only">Medium</span>
+                </a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="https://facebook.com/"
+                   aria-label="Facebook"
+                   title="Facebook"
+                   
+                >
+                  <svg class="icon icon-lg icon-white align-top">
+                    <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-facebook"></use>
+                  </svg>
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="https://instagram.com/"
+                   aria-label="Instagram"
+                   title="Instagram"
+                   
+                >
+                  <svg class="icon icon-lg icon-white align-top">
+                    <use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-instagram"></use>
+                  </svg>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="it-footer-small-prints clearfix pt-5">
+  <section class="container border-cyan border-top">
+    <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
+      
+      <li class="list-inline-item">
+        <a class="list-item font-weight-semibold" href="/it/chi-siamo/contatti"
+           title="Contatti">Contatti</a>
+      </li>
+      
+      <li class="list-inline-item">
+        <a class="list-item font-weight-semibold" href="/it/privacy-policy"
+           title="Privacy policy">Privacy policy</a>
+      </li>
+      
+      <li class="list-inline-item">
+        <a class="list-item font-weight-semibold" href="http://www.governo.it/note-legali"
+           title="Note Legali">Note Legali</a>
+      </li>
+      
+    </ul>
+  </section>
+</div>
+
+</footer>
+
+<div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-8">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-4 mt-4 mt-md-0 d-flex justify-content-end">
+        <a class="btn btn-link" href="">Privacy policy</a>
+        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- window.__PUBLIC_PATH__ points to fonts folder location -->
+<script>window.__PUBLIC_PATH__ = "https://innovazione-gov-it.netlify.com//assets/bootstrap-italia/dist/fonts"</script>
+
+<!-- Bootstrap core JS -->
+<script src="https://innovazione-gov-it.netlify.com//assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+
+<!-- Main JS -->
+<script src="https://innovazione-gov-it.netlify.com//assets/js/vendors/modernizr-custom-touchevents-webp.js"></script>
+<script src="https://innovazione-gov-it.netlify.com//assets/js/main.js"></script>
+
+</body>
+</html>
