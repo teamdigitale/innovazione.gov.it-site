@@ -1,1 +1,1 @@
-Sitemap: https://innovazione-gov-it.netlify.com//sitemap.xml
+Sitemap: https://innovazione-gov-it.netlify.com/sitemap.xml
