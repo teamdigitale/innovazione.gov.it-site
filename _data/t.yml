@@ -80,16 +80,16 @@ social-links:
 # Footer
 footer-trasparenza:
   it:
-    #ministro:
-    #  name: Amministrazione Trasparente
-    #  url: "/it/amministrazione-trasparente"
+    amministrazione-trasparente:
+      name: Amministrazione Trasparente
+      url: "/it/amministrazione-trasparente"
     dipartimento:
       name: Dipartimento per la Trasformazione Digitale
       url: "http://presidenza.governo.it/AmministrazioneTrasparente/Organizzazione/ArticolazioneUffici/Dipartimenti/DTD.html"
       blank: true
-    #lavora-con-noi:
-    #  name: Lavora con noi
-    #  url: "/it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/"
+    lavora-con-noi:
+      name: Lavora con noi
+      url: "/it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/"
 footer-siti-web:
   it:
     col-1:

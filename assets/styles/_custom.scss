@@ -100,9 +100,6 @@
   @media (min-width: 992px) {
     height: 72px;
   }
-  @media (min-width: 576px) {
-
-  }
 }
 
 .project-image {
@@ -197,19 +194,32 @@
   }
 }
 
-#jobsarchive-collapse[aria-expanded='false'] .seeall {
-  display: inline;
-}
-#jobsarchive-collapse[aria-expanded='true'] .seeall {
-  display: none;
-}
-#jobsarchive-collapse[aria-expanded='false'] .hideall {
-  display: none;
-}
-#jobsarchive-collapse[aria-expanded='true'] .hideall {
-  display: inline;
+#jobsarchive-collapse {
+  &[aria-expanded='false'] {
+    .seeall {
+      display: inline;
+    }
+    .hideall {
+      display: none;
+    }
+  }
+  &[aria-expanded='true'] {
+    .seeall {
+      display: none;
+    }
+    .hideall {
+      display: inline;
+    }
+  }
 }
 
 iframe {
   border: 1px solid #5c6f82;
+}
+
+// Avoid layout breaking below 360px
+.it-brand-text h2 {
+  @media (max-width: 360px) {
+    display: none;
+  }
 }

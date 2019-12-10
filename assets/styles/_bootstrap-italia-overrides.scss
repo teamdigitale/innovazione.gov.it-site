@@ -52,6 +52,7 @@ $footer-bg-color: #3e5266;
       ul.link-list {
         li a.list-item {
           font-weight: 600;
+          word-break: break-word;
         }
 
         li p {
@@ -163,6 +164,13 @@ $footer-bg-color: #3e5266;
 }
 
 // usiamo lo stesso stile del megamenu anche per i dropdown semplici
+
+.navbar .navbar-collapsable .navbar-nav li a.nav-link {
+  @media (min-width: 992px) and (max-width: 1200px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 .navbar .navbar-collapsable .menu-wrapper .nav-item .dropdown-menu {
   h3.it-heading-megacolumn {
     margin: .5em 24px;

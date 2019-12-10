@@ -35,4 +35,4 @@ Il nostro sito è anche il punto di accesso per la “chiamata ai talenti” che
 Per saperne di più:
 
 * [leggi la nostra visione di “Un Paese di cui andare fieri”]({% link it/cosa-facciamo/missione.md %})
-* guarda tutte le posizioni aperte
+* [guarda tutte le posizioni aperte]({% link it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/index.md %})
