@@ -6,8 +6,6 @@ FormatDate:
 icon-repubblica: "/assets/images/logo-repubblica-italiana.svg"
 ## Main icon
 icon-main: "/assets/images/logo-mid-white.svg"
-## Main icon
-icon-main-footer: "/assets/images/logo-mid-white-footer.svg"
 ## Main icon alt
 icon-repubblica-alt:
   en: "Emblem of the Italian Republic"
@@ -60,22 +58,18 @@ english-version:
 social-links:
   en:
   it:
-#    twitter:
-#      name: Twitter
-#      url: "https://twitter.com/mininnovazione"
-#      blank: true
-#    instagram:
-#      name: LinkedIn
-#      url: "https://www.linkedin.com/company/innovazionegov/"
-#      blank: true
-#    facebook:
-#      name: Facebook
-#      url: "https://www.facebook.com/InnovazioneGov-108482817275962/"
-#      blank: true
-#    medium:
-#      name: Instagram
-#      url: "https://www.instagram.com/innovazionegov/"
-#      blank: true
+    twitter:
+      name: Twitter
+      url: "https://twitter.com/InnovazioneGov"
+      blank: true
+    linkedin:
+      name: LinkedIn
+      url: "https://www.linkedin.com/company/ministeroinnovazione/about/?viewAsMember=true"
+      blank: true
+    facebook:
+      name: Facebook
+      url: "https://www.facebook.com/MinisteroInnovazione/"
+      blank: true
 
 # Footer
 footer-trasparenza:
@@ -145,11 +139,6 @@ footer-contatti-ministero:
       name: "media@innovazione.gov.it"
       icon: "mail"
       url: "mailto:media@innovazione.gov.it"
-    #telefono:
-    #  label: "Telefono"
-    #  name: "+390000000000"
-    #  icon: "telephone"
-    #  url: "tel:+390000000000"
 
 footer-contatti-dipartimento:
   it:
