@@ -31,6 +31,8 @@ Grazie ad ANPR:
 * le procedure di variazione dei dati sono semplificate e uniformate a livello nazionale;
 * è possibile ottenere certificati senza più bisogno di recarsi allo sportello.
 
+La piattaforma ANPR del Ministero dell’Interno è stata sviluppata da [Sogei](http://www.sogei.it/){:target="_blank" rel="noopener noreferrer"}.
+
 {:.mt-5.max-w-40}
 ## Vantaggi per i cittadini e la Pubblica Amministrazione
 
@@ -39,6 +41,7 @@ ANPR è un passo essenziale nell’agenda digitale per rendere possibili success
 Con ANPR le amministrazioni possono dialogare in maniera efficiente tra di loro avendo una fonte unica e certa per i dati dei cittadini. ANPR consente ai cittadini vantaggi immediati come la richiesta di certificati anagrafici in tutti i comuni, il cambio di residenza più semplice ed immediato e (a breve) la possibilità di ottenere certificati da un portale unico.
 
 * [Scopri gli aspetti tecnici su Developers Italia](https://developers.italia.it/it/anpr/){:target="_blank" rel="noopener noreferrer"}
+
 
 {:.mt-5.max-w-40}
 ## Newsletter
