@@ -13,7 +13,7 @@ categories:
 
 <div class="responsive-embed">
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tY_QjvW-bto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Video L'Identità Digitale" width="560" height="315" src="https://www.youtube-nocookie.com/embed/tY_QjvW-bto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
 
