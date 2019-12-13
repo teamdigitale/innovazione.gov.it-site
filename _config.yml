@@ -11,7 +11,7 @@ name: "Ministro per l'innovazione tecnologica e la digitalizzazione"
 
 # Prevent site from being indexed by search engines
 # Leave empty to publish the website
-noindex: true
+noindex:
 
 # Enter your Google Analytics web tracking code (e.g. UA-000000000-0) to activate tracking
 google_analytics: UA-153507582-1
