@@ -8,7 +8,9 @@ categories:
   - highlights
   - innovazione
   - digitalizzazione
+  - pubblica amministrazione
   - imprese
+  - cittadini
 ---
 
 <div class="responsive-embed">
