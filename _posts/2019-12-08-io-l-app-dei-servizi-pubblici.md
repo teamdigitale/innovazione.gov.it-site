@@ -9,7 +9,6 @@ categories:
   - innovazione
   - digitalizzazione
   - pubblica amministrazione
-  - imprese
   - cittadini
 ---
 
