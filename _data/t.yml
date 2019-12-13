@@ -201,7 +201,7 @@ section-pa-text:
 section-pa-boxes:
   en:
     - title: Collaboration
-      text: Strumenti di collaborazione per coinvolgere ento locali, centrali e fornitori
+      text: Strumenti di collaborazione per coinvolgere enti locali, centrali e fornitori
       image: "/assets/images/svg/noun_collaboration_2470086.svg"
     - title: Tecnologie abilitanti
       text: Le infrastrutture digitali della Pubblica Amministrazione
@@ -211,7 +211,7 @@ section-pa-boxes:
       image: "/assets/images/svg/noun_quality_2274581.svg"
   it:
     - title: Collaborazione
-      text: Strumenti di collaborazione per coinvolgere ento locali, centrali e fornitori
+      text: Strumenti di collaborazione per coinvolgere enti locali, centrali e fornitori
       image: "/assets/images/svg/noun_collaboration_2470086.svg"
     - title: Tecnologie abilitanti
       text: Le infrastrutture digitali della Pubblica Amministrazione

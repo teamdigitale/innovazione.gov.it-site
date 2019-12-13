@@ -45,7 +45,7 @@ Il piano si divide in tre sfide:
 
 {:.max-w-40}
 * Una **società digitale**, dove i servizi mettono al centro i cittadini e le imprese, sono efficienti, facili da usare e da integrare. Un obiettivo per far diventare la digitalizzazione un motore di sviluppo per tutto il Paese e ripensare il rapporto tra lo Stato e le persone.
-* Un **obiettivo innovazione**, che punta su ricerca e sviluppo applicate, favorisce il proliferare di idee, che diventano imprese hi tech italiane e a sostegno delle filiere produttive tradizionali del nostro Paese.
+* Un **obiettivo innovazione**, che punta su ricerca e sviluppo applicate, favorisce il proliferare di idee, che diventano imprese hi-tech italiane e a sostegno delle filiere produttive tradizionali del nostro Paese.
 * Uno **sviluppo sostenibile e inclusivo**, dove l'innovazione è al servizio delle persone, delle comunità e dei territori e si pone obiettivi chiari e audaci di sostenibilità ambientale.
 
 {:.max-w-40}
@@ -61,7 +61,6 @@ Per realizzare queste sfide, ci occupiamo di:
 
 {% include divider.html style="background-color:#f2f7fc; margin-top: 96px" %}
 {% include pages/section-piattaforme-abilitanti.html
-  category="cittadini"
   title="I progetti del dipartimento"
   intro="Qui trovi tutti i progetti e le piattaforme abilitanti su cui stiamo lavorando, per rendere i servizi pubblici sempre più efficienti, semplici, progettati intorno ai bisogni dei cittadini."
   %}
