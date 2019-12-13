@@ -43,6 +43,7 @@ Infine, l’identità SPID può essere utilizzata anche per accedere a tutti i s
 
 * [Scopri gli aspetti tecnici di SPID su Developers Italia](https://developers.italia.it/it/spid/){:target="_blank" rel="noopener noreferrer"}
 
+{% if page.dashboard_url %}
 {:.mt-5.max-w-40}
 ## I dati
 
@@ -50,6 +51,7 @@ Infine, l’identità SPID può essere utilizzata anche per accedere a tutti i s
 I dati delle dashboard vengono aggiornati su base settimanale.
 
 {% include dashboard.html %}
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento

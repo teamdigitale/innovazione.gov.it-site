@@ -33,12 +33,14 @@ La Pubblica Amministrazione può contare su una maggiore sicurezza del documento
 
 * [Scopri gli aspetti tecnici di CIE su Developers Italia](https://developers.italia.it/it/cie/){:target="_blank" rel="noopener noreferrer"}
 
+{% if page.dashboard_url %}
 {:.mt-5.max-w-40}
 ## I dati
 
 I dati delle dashboard vengono aggiornati su base settimanale.
 
 {% include dashboard.html %}
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento

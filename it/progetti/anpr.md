@@ -48,10 +48,12 @@ Con ANPR le amministrazioni possono dialogare in maniera efficiente tra di loro 
 
 {% include newsletter/newsletter-anpr.html %}
 
+{% if page.dashboard_url %}
 {:.mt-5.max-w-40}
 ## I dati
 
 {% include dashboard.html %}
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento

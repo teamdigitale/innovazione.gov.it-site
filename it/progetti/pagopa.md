@@ -51,6 +51,7 @@ Il cittadino deve poter scegliere metodi di pagamento moderni, a minima frizione
 * Incasso delle somme D+1 (giorno lavorativo successivo al pagamento) direttamente sui conti di tesoreria.
 * Fornire più canali di incasso vuol dire incassare prima.
 
+{% if page.dashboard_url %}
 {:.mt-5.max-w-40}
 ## I dati
 
@@ -58,6 +59,7 @@ Il cittadino deve poter scegliere metodi di pagamento moderni, a minima frizione
 I dati delle dashboard vengono aggiornati su base settimanale. 
 
 {% include dashboard.html %}
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento

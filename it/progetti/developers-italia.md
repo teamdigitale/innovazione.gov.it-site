@@ -9,7 +9,7 @@ ref: developers-italia
 logo: developers-italia.png
 child_of_ref: progetti
 project_url: https://developers.italia.it/
-dashboard_url: 
+dashboard_url:
 people:
 no_site_toc: true
 order: 5
@@ -49,6 +49,13 @@ La possibilità di accedere al codice sorgente offre **maggiore trasparenza** e 
 ## Newsletter
 
 {% include newsletter/newsletter-developers-italia.html %}
+
+{% if page.dashboard_url %}
+{:.mt-5.max-w-40}
+## I dati
+
+{% include dashboard.html %}
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
