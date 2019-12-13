@@ -9,7 +9,7 @@ ref: developers-italia
 logo: developers-italia.png
 child_of_ref: progetti
 project_url: https://developers.italia.it/
-dashboard_url: https://dashboard.pdnd.italia.it/public/dashboard/08665701-33b7-49ac-acd8-dee59a150737
+dashboard_url: 
 people:
 no_site_toc: true
 order: 5
@@ -49,11 +49,6 @@ La possibilità di accedere al codice sorgente offre **maggiore trasparenza** e 
 ## Newsletter
 
 {% include newsletter/newsletter-developers-italia.html %}
-
-{:.mt-5.max-w-40}
-## I dati
-
-{% include dashboard.html %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
