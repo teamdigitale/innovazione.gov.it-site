@@ -36,7 +36,7 @@ Qui trovi una selezione di risorse per l’innovazione e la digitalizzazione deg
 <div class="link-list-wrapper max-w-40 mb-5">
     <ul class="link-list">
         <li>
-            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://pianotriennale-ict.italia.it/">
+            <a class="list-item left-icon" target="_blank" rel="noopener noreferrer" href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/">
                 <svg class="icon icon-primary icon-sm"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-presentation"></use></svg>
                 <span class="pl-2 d-inline">Il Codice dell’Amministrazione Digitale (CAD)</span>
             </a>
