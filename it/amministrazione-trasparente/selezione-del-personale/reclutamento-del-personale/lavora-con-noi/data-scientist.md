@@ -24,7 +24,7 @@ I profili dovranno avere una forte attenzione ai risultati, non solo per i patte
 -   Capacità di comunicare in maniera efficace sia con i team tecnici che con quelli *business*
 -   Elevato livello di integrità e discrezione nella gestione di informazioni confidenziali
 -   Solida esperienza in *big data analytics*, *machine learning*, e una o più delle seguenti aree: *pattern recognition*, *data mining* su larga scala o intelligenza artificiale
--   Esperienza con *framework* di *machine learning* quali Spark / MLLib e *framework* di *deep learning* quali Theano, TensorFlow, Keras
+-   Esperienza con *framework* di *machine learning* e *deep learning* quali Pytorch, TensorFlow, Keras, Sci-Kit Learn, Apache Spark ML lib
 -   Eccellenti doti di *debugging*, pensiero critico e comunicazione
 -   Esperienza nella *leadership*, direzione e *mentorship* per un team di ingegneri software
 
