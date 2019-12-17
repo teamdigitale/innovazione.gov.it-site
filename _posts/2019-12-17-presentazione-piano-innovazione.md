@@ -15,6 +15,8 @@ _Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo s
 
 [Guarda la diretta streaming →](https://www.youtube.com/watch?v=6IY7agL5p-4){:style="font-size: 20px"}
 
+[Scarica il Piano "2025" →]({{ site.baseurl }}/assets/docs/MID_Book_2025.pdf){:style="font-size: 20px"}
+
 <!-- MORE -->
 
 L’innovazione e la digitalizzazione devono far parte di una riforma strutturale dello Stato che promuova la democrazia, l'uguaglianza, l’etica, la giustizia, e lo sviluppo incentrato sul rispetto dell’essere umano e del nostro pianeta. Sono questi i pilastri fondanti della visione e della strategia che **Paola Pisano, Ministro per l’Innovazione Tecnologica e la Digitalizzazione**, illustrerà nel corso dell’evento **“2025: Piano Nazionale per l’Innovazione” domani, martedì 17 dicembre alle ore 17**, presso la Camera di Commercio di Roma, Sala del Tempio di Adriano, in Piazza di Pietra.
