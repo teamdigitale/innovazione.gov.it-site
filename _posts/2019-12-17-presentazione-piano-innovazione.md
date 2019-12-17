@@ -11,13 +11,9 @@ categories:
   - imprese
 ---
 
-<div class="responsive-embed">
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6IY7agL5p-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-
 _Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo sviluppo tecnologico, inclusivo e sostenibile del Paese. Interviene il Premier Giuseppe Conte_
+
+[Guarda la diretta streaming →](https://www.youtube.com/watch?v=6IY7agL5p-4){:style="font-size: 20px"}
 
 <!-- MORE -->
 
