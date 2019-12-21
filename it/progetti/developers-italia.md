@@ -45,10 +45,12 @@ Il Catalogo del Software di Developers Italia consente alle amministrazioni di c
 Grazie al modello collaborativo e al riuso del software i cittadini possono beneficiare di servizi digitali più maturi, più sicuri, più funzionali, più integrati con le piattaforme abilitanti e più coerenti tra di loro.  
 La possibilità di accedere al codice sorgente offre **maggiore trasparenza** e addirittura permette ai cittadini di collaborare alla correzione di problemi e al miglioramento del software pubblico.
 
+{% comment %}
 {:.mt-5.max-w-40}
 ## Newsletter
 
 {% include newsletter/newsletter-developers-italia.html %}
+{% endcomment %}
 
 {% if page.dashboard_url %}
 {:.mt-5.max-w-40}

@@ -38,10 +38,12 @@ categories:
 Il primo obiettivo di Designers Italia è supportare la creazione di nuovi servizi pubblici digitali più efficaci, inclusivi e facili da usare, primo fra tutti il [progetto IO](https://io.italia.it/){:target="_blank" rel="noopener noreferrer"}. Per farlo mette a disposizione **metodi di lavoro e strumenti operativi** a tutta la comunità di sviluppatori e designer che lavorano ai servizi pubblici.  
 Grazie al **design system di Designers Italia**, tutte le amministrazioni non sono più costrette a “reinventare ogni volta la ruota” e hanno un sistema che permette di aumentare l’efficacia dei servizi che progettano per i cittadini.
 
+{% comment %}
 {:.mt-5.max-w-40}
 ## Newsletter
 
 {% include newsletter/newsletter-designers-italia.html %}
+{% endcomment %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento

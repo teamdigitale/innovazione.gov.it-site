@@ -42,11 +42,12 @@ Con ANPR le amministrazioni possono dialogare in maniera efficiente tra di loro 
 
 * [Scopri gli aspetti tecnici su Developers Italia](https://developers.italia.it/it/anpr/){:target="_blank" rel="noopener noreferrer"}
 
-
+{% comment %}
 {:.mt-5.max-w-40}
 ## Newsletter
 
 {% include newsletter/newsletter-anpr.html %}
+{% endcomment %}
 
 {% if page.dashboard_url %}
 {:.mt-5.max-w-40}
