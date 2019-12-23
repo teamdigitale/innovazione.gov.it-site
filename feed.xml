@@ -1,8 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2019-12-21T16:07:57+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">2025: Presentazione Piano Nazionale Innovazione</title><link href="https://innovazione.gov.it/presentazione-piano-innovazione/" rel="alternate" type="text/html" title="2025: Presentazione Piano Nazionale Innovazione" /><published>2019-12-17T00:00:00+00:00</published><updated>2019-12-17T00:00:00+00:00</updated><id>https://innovazione.gov.it/presentazione-piano-innovazione</id><content type="html" xml:base="https://innovazione.gov.it/presentazione-piano-innovazione/">&lt;p&gt;&lt;em&gt;Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo sviluppo tecnologico, inclusivo e sostenibile del Paese. Interviene il Premier Giuseppe Conte&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2019-12-23T14:00:26+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">Un’anagrafe unica per 40 milioni di cittadini</title><link href="https://innovazione.gov.it/anpr-40-milioni/" rel="alternate" type="text/html" title="Un’anagrafe unica per 40 milioni di cittadini" /><published>2019-12-23T00:00:00+00:00</published><updated>2019-12-23T00:00:00+00:00</updated><id>https://innovazione.gov.it/anpr-40-milioni</id><content type="html" xml:base="https://innovazione.gov.it/anpr-40-milioni/">&lt;p&gt;&lt;img class=&quot;w-100&quot; src=&quot;/assets/images/posts/clint-adair-BW0vK-FA3eg-unsplash.jpg&quot; alt=&quot;Immagine che rappresenta una rete a maglie&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6IY7agL5p-4&quot; style=&quot;font-size: 20px&quot;&gt;Guarda la diretta streaming →&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;L’&lt;a href=&quot;/it/progetti/anpr/&quot;&gt;Anagrafe nazionale della popolazione residente&lt;/a&gt; (ANPR) negli ultimi giorni &lt;strong&gt;ha superato la soglia di 5mila Comuni&lt;/strong&gt; e &lt;strong&gt;40 milioni di cittadini subentrati&lt;/strong&gt;, mentre abbiamo attivato il servizio che permette ai cittadini di fare online &lt;strong&gt;le visure dei propri dati&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/assets/docs/MID_Book_2025.pdf&quot; style=&quot;font-size: 20px&quot;&gt;Scarica il Piano “2025” →&lt;/a&gt;&lt;/p&gt;
+&lt;!-- MORE --&gt;
+
+&lt;h3 class=&quot;mt-5&quot; id=&quot;unanagrafe-da-5mila-comuni&quot;&gt;Un’anagrafe da 5mila Comuni&lt;/h3&gt;
+
+&lt;p&gt;Nei giorni scorsi abbiamo superato &lt;strong&gt;la soglia di 5mila Comuni e oltre 40 milioni di cittadini subentrati&lt;/strong&gt; nell’anagrafe unica nazionale, che sta ormai raggiungendo ogni angolo del Paese.&lt;/p&gt;
+
+&lt;p&gt;Ad oggi i Comuni subentrati sono &lt;strong&gt;5.254&lt;/strong&gt; con una popolazione complessiva di &lt;strong&gt;40 milioni e 883 mila cittadini&lt;/strong&gt; a cui si aggiungono &lt;strong&gt;3 milioni e 136 mila cittadini residenti all’estero&lt;/strong&gt; (AIRE). Intanto altri &lt;strong&gt;903&lt;/strong&gt; Comuni sono in fase di presubentro (tra cui Roma), con una popolazione di &lt;strong&gt;8 milioni e 707 mila cittadini&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Questi numeri:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;confermano le nostre previsioni di raggiungere i &lt;strong&gt;45 milioni di cittadini italiani in ANPR entro la fine del 2019&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;raccontano una piattaforma abilitante che sta diventando un’importante infrastruttura per i &lt;strong&gt;servizi digitali&lt;/strong&gt; di tutto il Paese.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;mt-5&quot; id=&quot;visure-in-un-clic&quot;&gt;Visure in un clic&lt;/h3&gt;
+
+&lt;p&gt;Abbiamo pubblicato &lt;a href=&quot;https://www.anpr.interno.it/portale/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sul portale di ANPR&lt;/a&gt; lo strumento che consente a tutti i cittadini che vivono nei Comuni subentrati di &lt;strong&gt;fare autonomamente la visura dei propri dati anagrafici&lt;/strong&gt; e stampare un modello di autocertificazione da soli e in un clic. Per utilizzare il servizio, è necessario autenticarsi con &lt;a href=&quot;/it/progetti/spid/&quot;&gt;SPID&lt;/a&gt;, &lt;a href=&quot;/it/progetti/cie/&quot;&gt;Carta d’Identità Elettronica&lt;/a&gt; o Carta Nazionale dei Servizi.&lt;/p&gt;
+
+&lt;p&gt;Per scoprire se il tuo Comune è già in ANPR, puoi fare &lt;strong&gt;una semplice ricerca nella &lt;a href=&quot;https://stato-migrazione.anpr.it/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;dashboard del progetto&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 class=&quot;mt-5&quot; id=&quot;stare-al-passo-con-i-tempi&quot;&gt;Stare al passo con i tempi&lt;/h3&gt;
+
+&lt;p&gt;Essere parte di ANPR significa avere accesso ai servizi digitali del Paese. Oltre alle visure online, stiamo lavorando al &lt;strong&gt;Portale delle Adesioni&lt;/strong&gt;, che permetterà a tutte le Pubbliche Amministrazioni di &lt;a href=&quot;https://dait.interno.gov.it/servizi-demografici/notizie/accesso-allanpr-da-parte-delle-pubbliche-amministrazioni-e-degli&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;accedere ai dati di ANPR autonomamente&lt;/a&gt;, con processi e tecnologie che garantiscano il &lt;strong&gt;rispetto della sicurezza e della privacy&lt;/strong&gt; nella gestione dei dati dei cittadini.&lt;/p&gt;
+
+&lt;p class=&quot;text-center my-4&quot;&gt;Se il tuo Comune non è ancora subentrato, &lt;strong&gt;#chiediloaltuocomune&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Nel &lt;a href=&quot;https://www.anpr.interno.it/portale/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sito di ANPR&lt;/a&gt; trovi anche la &lt;a href=&quot;https://www.anpr.interno.it/portale/guida-anpr&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;guida per il subentro&lt;/a&gt; e le &lt;a href=&quot;https://docs.italia.it/italia/anpr/anpr/it/stabile/faq/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;FAQ&lt;/a&gt; che spiegano i vantaggi di un’anagrafe unica per Comuni e cittadini. I &lt;a href=&quot;https://docs.italia.it/italia/anpr/anpr/it/stabile/attivita-subentro/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;tempi per il subentro&lt;/a&gt; di un Comune sono di &lt;strong&gt;circa due mesi&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;x-small text-right&quot;&gt;&lt;em&gt;Fotografia di &lt;a href=&quot;https://unsplash.com/@clintadair?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Clint Adair&lt;/a&gt; su &lt;a href=&quot;https://unsplash.com/@clintadair?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">L’Anagrafe nazionale della popolazione residente (ANPR) negli ultimi giorni ha superato la soglia di 5mila Comuni e 40 milioni di cittadini subentrati, mentre abbiamo attivato il servizio che permette ai cittadini di fare online le visure dei propri dati.</summary></entry><entry xml:lang="it"><title type="html">2025: Presentazione Piano Nazionale Innovazione</title><link href="https://innovazione.gov.it/presentazione-piano-innovazione/" rel="alternate" type="text/html" title="2025: Presentazione Piano Nazionale Innovazione" /><published>2019-12-17T00:00:00+00:00</published><updated>2019-12-17T00:00:00+00:00</updated><id>https://innovazione.gov.it/presentazione-piano-innovazione</id><content type="html" xml:base="https://innovazione.gov.it/presentazione-piano-innovazione/">&lt;p&gt;&lt;img class=&quot;w-100&quot; src=&quot;/assets/images/posts/2025-pni.jpg&quot; alt=&quot;Immagine che rappresenta una rete a maglie&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo sviluppo tecnologico, inclusivo e sostenibile del Paese. Interviene il Premier Giuseppe Conte&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6IY7agL5p-4&quot;&gt;Guarda la diretta streaming →&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/docs/MID_Book_2025.pdf&quot;&gt;Scarica il Piano “2025” →&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- MORE --&gt;
 
