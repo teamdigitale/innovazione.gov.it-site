@@ -11,11 +11,13 @@ categories:
   - imprese
 ---
 
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/2025-pni.jpg" alt="Immagine che rappresenta una rete a maglie"/>
+
 _Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo sviluppo tecnologico, inclusivo e sostenibile del Paese. Interviene il Premier Giuseppe Conte_
 
-[Guarda la diretta streaming →](https://www.youtube.com/watch?v=6IY7agL5p-4){:style="font-size: 20px"}
+[Guarda la diretta streaming →](https://www.youtube.com/watch?v=6IY7agL5p-4)
 
-[Scarica il Piano "2025" →]({{ site.baseurl }}/assets/docs/MID_Book_2025.pdf){:style="font-size: 20px"}
+[Scarica il Piano "2025" →]({{ site.baseurl }}/assets/docs/MID_Book_2025.pdf)
 
 <!-- MORE -->
 
