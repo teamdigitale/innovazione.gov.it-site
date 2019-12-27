@@ -20,7 +20,7 @@ Per creare un nuovo post è sufficiente creare un nuovo file `.md` all’interno
 
 `aaaa-mm-gg-esempio-di-titolo-del-post.md`
 
-Il file dovrà contenere un’intestazione seguita dal contenuto del post.
+Il file dovrà contenere un’intestazione seguita dal contenuto del post. Si consiglia di fare riferimento ai post già esistenti nella cartella `_posts` in caso di dubbi su quanto descritto di seguito.
 
 ### Intestazione
 
@@ -46,7 +46,7 @@ I campi `title` e `ref` sono autoesplicativi, mentre le categorie `cittadini`, `
 
 ### Testo del post
 
-Finora i post sono composti da video YouTube o Immagine in testa seguiti da testo. Per quanto tale modalità non sia obbligatoria, aiuta ad avere un’armonia visiva nel sito.
+Finora i post sono tutti composti da video YouTube o Immagine in testa seguiti da testo. Per quanto tale modalità non sia obbligatoria, aiuta ad avere un’armonia visiva nel sito.
 
 #### Video YouTube
 
@@ -59,9 +59,9 @@ Per quanto riguarda i video, è bene non usare embed da altri social diversi da 
 
 #### Immagini
 
-È bene che le immagini usate veicolino un messaggio, siano di buona qualità ed esenti da problemi di copyright, ed abbiano possibilmente dimensioni pari a 960x540 
+È bene che le immagini usate veicolino un messaggio, siano di buona qualità ed esenti da problemi di copyright, ed abbiano possibilmente dimensioni pari a 960x540.
 
 #### Testo
 
-Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). L'anteprima visibile in homepage o nelle preview dei post mostra il primo paragafo del post, oppure, se presente il testo speciale `<!-- MORE -->`, tutto il contenuto prima di esso.
 
