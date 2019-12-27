@@ -1,17 +1,67 @@
 # innovazione.gov.it
 
-Sito del Ministro dell'Innovazione
+Sito del Ministro dell’Innovazione
 
 ## Come iniziare
 
-Il progetto è basato sul generatore di siti statici [Jekyll](https://jekyllrb.com/).
-
-Per installare le dipendenze lanciare il seguente comando: 
+Il progetto è costruito sul generatore di siti statici [Jekyll](https://jekyllrb.com/). Per installare l’ambiente necessario allo sviluppo è necessario avere installato sul proprio sistema [Bundler](https://bundler.io/) e lanciare il seguente comando: 
 
 `bundle install`
 
-Per lanciare il sito in ambiente locale utilizzare il seguente comando:
+Una volta installati tutti i pacchetti necessari, il sito può essere testato in ambiente locale utilizzando il seguente comando:
 
 `bundle exec jekyll serve`
 
-In questo modo il sito sarà disponibile all'indirizzo http://localhost:4000/.
+In questo modo il sito sarà disponibile all’indirizzo http://localhost:4000/.
+
+## Creazione di un nuovo post
+
+Per creare un nuovo post è sufficiente creare un nuovo file `.md` all’interno della cartella `_posts`. Il nome del file dovrà essere composto dalla data di pubblicazione desiderata (se tale data è futura il post non sarà visibile a sito) e un breve titolo nel seguente formato:
+
+`aaaa-mm-gg-esempio-di-titolo-del-post.md`
+
+Il file dovrà contenere un’intestazione seguita dal contenuto del post.
+
+### Intestazione
+
+L’intestazione è racchiusa tra due righe di tre trattini (`---`) e contiene:
+```
+---
+layout: post
+lang: it
+excerpt_separator: <!-- MORE -->
+title: Esempio di titolo del post
+ref: esempio-di-titolo-del-post
+categories:
+  - highlights
+  - cittadini
+  - pubblica amministrazione
+  - imprese
+---
+```
+
+I primi 3 campi non dovrebbero essere modificati.
+
+I campi `title` e `ref` sono autoesplicativi, mentre le categorie `cittadini`, `pubblica amministrazione` e `imprese` servono a mostrare i post nelle sezioni corrette. La categoria `highlights` fa sì che il post venga mostrato tra i post in evidenza: in sua assenza tale post non comparirà in homepage. Altre eventuali categorie al momento non hanno particolari impatti a sito.
+
+### Testo del post
+
+Finora i post sono composti da video YouTube o Immagine in testa seguiti da testo. Per quanto tale modalità non sia obbligatoria, aiuta ad avere un’armonia visiva nel sito.
+
+#### Video YouTube
+
+Per quanto riguarda i video, è bene non usare embed da altri social diversi da YouTube per rispetto della privacy dei nostri utenti. Per prelevare il codice da un video YouTube, utilizzare "Share" > "Embed" > selezionare "Enable privacy-enhanced mode." e copiare il codice generato. Racchiudere quindi il codice copiato come segue:
+
+```<div class="responsive-embed">
+...(embed)...
+</div>
+```
+
+#### Immagini
+
+È bene che le immagini usate veicolino un messaggio, siano di buona qualità ed esenti da problemi di copyright, ed abbiano possibilmente dimensioni pari a 960x540 
+
+#### Testo
+
+Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
