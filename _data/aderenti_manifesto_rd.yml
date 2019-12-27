@@ -223,8 +223,8 @@ aderenti_manifesto:
   - name: Progetto NERD
     logo: "nerd-logo.png"
     links:
-      - link_label: "progettonerd.altervista.org"
-        link_url: "http://www.progettonerd.altervista.org/"
+      - link_label: "progetto NERD su Twitter"
+        link_url: "https://twitter.com/progetto_nerd"
   - name: Consulenti Associati Campania
     logo: "ca-campania-logo.png"
     links:
