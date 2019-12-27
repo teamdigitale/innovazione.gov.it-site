@@ -65,3 +65,8 @@ Per quanto riguarda i video, è bene non usare embed da altri social diversi da 
 
 Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). L'anteprima visibile in homepage o nelle preview dei post mostra il primo paragafo del post, oppure, se presente il testo speciale `<!-- MORE -->`, tutto il contenuto prima di esso.
 
+### Verifica delle modifiche
+
+Per ogni Pull Request, GitHub (attraverso Netlify) crea automaticamente un ambiente di test compilando le modifiche presenti sul branch in lavorazione. Nella pagina dedicata alla Pull Request sarà quindi visibile un box con una serie di check che dovranno essere tutti verdi.
+
+L'ultimo di questi check è associato alla "deploy preview": una voltaa terminata la compilazione, cliccando su "details" sarà possibile avere un'anteprima del proprio lavoro.
