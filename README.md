@@ -52,8 +52,9 @@ Finora i post sono tutti composti da video YouTube o Immagine in testa seguiti d
 
 Per quanto riguarda i video, è bene non usare embed da altri social diversi da YouTube per rispetto della privacy dei nostri utenti. Per prelevare il codice da un video YouTube, utilizzare "Share" > "Embed" > selezionare "Enable privacy-enhanced mode." e copiare il codice generato. Racchiudere quindi il codice copiato come segue:
 
-```<div class="responsive-embed">
-...(embed)...
+```
+<div class="responsive-embed">
+(codice embed YouTube)
 </div>
 ```
 
