@@ -1,7 +1,6 @@
 #
 # This file contains configuration flags to customize your site
 #
-environment: "production"
 
 name: "Ministro per l'innovazione tecnologica e la digitalizzazione"
 
