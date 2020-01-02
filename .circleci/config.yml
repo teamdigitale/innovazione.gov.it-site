@@ -63,7 +63,7 @@ jobs:
       - run:
           name: Build
           command: |
-            bundle exec jekyll build
+            JEKYLL_ENV=production bundle exec jekyll build
 
       # Test the site
       - run:
