@@ -8,9 +8,9 @@ layout: default
       <div class="row">
         <div class="col-12">
           <div class="d-flex justify-content-between">
-            <div style="z-index: 2">
+            <div class="project-intro--logo mw-100">
               {% if page.logo != nil %}
-              <img alt="{{ page.title }}" src="{{ site.baseurl }}/assets/images/projects/{{ page.logo }}" class="rounded" height="80">
+              <img alt="{{ page.title }}" src="{{ site.baseurl }}/assets/images/projects/{{ page.logo }}" class="rounded img-fluid max-h-80 mb-4">
               {% endif %}
               <h1 class="max-w-40 text-600">{{ page.title_full }}</h1>
               <p class="lead max-w-40 text-muted">{{ page.description }}</p>

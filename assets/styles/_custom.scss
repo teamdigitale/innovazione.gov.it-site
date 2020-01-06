@@ -7,6 +7,10 @@
   max-width: 40rem !important;
 }
 
+.max-h-80 {
+  max-height: 80px;
+}
+
 .bg-radial-cyan {
   background: radial-gradient(100% 100% at 50% 0%, #FFF 0%, #0BD9D3 100%);
 }
@@ -142,6 +146,10 @@
     right: 0;
     left: 0;
     bottom: 0;
+  }
+
+  &--logo {
+    z-index: 2;
   }
 
   &--print {
