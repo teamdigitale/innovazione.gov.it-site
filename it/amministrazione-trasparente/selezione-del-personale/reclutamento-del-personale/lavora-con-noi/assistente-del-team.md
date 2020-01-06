@@ -49,7 +49,7 @@ Il candidato ideale dovrà, inoltre, supportare l’assistente tecnico nel:
 
 ## Qualifiche chiave
 
--   Comprovata esperienza nelle stakeholder di alto livello
+-   Comprovata esperienza nelle relazioni con _stakeholder_ di alto livello
 -   Comprovata esperienza nel muoversi e operare in situazioni in divenire
 -   Comprovata esperienza di successo nnel lavoro per obiettivi e nel
     raggiungimento degli stessi
