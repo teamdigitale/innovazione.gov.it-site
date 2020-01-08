@@ -4,7 +4,7 @@ title_full: Pagamenti digitali
 description: Il sistema di pagamenti elettronici per i servizi della Pubblica Amministrazione
 lang: it
 layout: page-project
-project_url: https://www.spid.gov.it/
+project_url: https://www.pagopa.gov.it/
 ref: pagopa
 logo: pagopa.png
 no_site_toc: true
