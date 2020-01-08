@@ -1,6 +1,6 @@
 <div class="card card-teaser align-self-stretch rounded shadow mb-4">
   <div class="card-body">
-    <h5 class="card-title mb-2">{{ post.title }}</h5>
+    <h5 class="card-title mb-2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
     <div class="card-text mb-5">{{ post.excerpt }}</div>
     <a class="read-more" href="{{ site.baseurl }}{{ post.url }}"><span class="text">{{ site.data.t.read-more[page.lang] }}</span>
       <svg class="icon">

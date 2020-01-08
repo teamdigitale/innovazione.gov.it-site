@@ -100,9 +100,9 @@
 }
 
 .hero-logo {
-  height: 48px;
+  max-height: 48px;
   @media (min-width: 992px) {
-    height: 72px;
+    max-height: 72px;
   }
 }
 
