@@ -102,13 +102,19 @@ $footer-bg-color: #3e5266;
 
   &.it-bottom-overlapping-content {
     margin-bottom: -220px;
-    @media (min-width: 992px) {
+    @media (min-width: 576px) {
+      margin-bottom: -240px;
+    }
+    @media (min-width: 768px) {
       margin-bottom: -280px;
     }
 
     .it-hero-text-wrapper {
       padding-bottom: 280px;
-      @media (min-width: 992px) {
+      @media (min-width: 576px) {
+        padding-bottom: 300px;
+      }
+      @media (min-width: 768px) {
         padding-bottom: 380px;
       }
     }
