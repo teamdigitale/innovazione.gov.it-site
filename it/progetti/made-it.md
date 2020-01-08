@@ -12,6 +12,7 @@ project_url:
 order: 9
 categories:
  - imprese
+ - innovazione
 ---
 
 
