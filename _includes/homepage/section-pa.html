@@ -1,26 +1,10 @@
 <div class="section section-pa bg-radial-blue pt-0">
-  <div class="container mb-5">
-    <div class="row">
-      <div class="col-12">
-        <h6 class="text-uppercase mw-40">{{ site.data.t.section-news-title[page.lang] }}</h6>
-      </div>
-      {% assign localized_posts = site.posts | where: "lang", page.lang %}
-      {% assign localized_highlighted_posts = localized_posts | where: "categories", "highlights" %}
-      {% for post in localized_highlighted_posts limit: 3 %}
-      <div class="col-12 col-md-4 d-flex">
-        {% include post-teaser.html %}
-      </div>
-      {% endfor %}
-      <div class="col-12 text-right">
-        <a class="btn btn-lg text-white" href="{% link it/notizie.md %}">Vedi tutte le Notizie &#8594;</a>
-      </div>
-    </div>
-  </div>
+  {% include homepage/section-in-evidenza.html %}
   <div class="container mt-5">
     <div class="row">
       <div class="col-12">
-        <h6 class="text-uppercase text-white-80 mw-40">{{ site.data.t.section-pa-title[page.lang] }}</h6>
-        <h2 class="text-white mw-40">{{ site.data.t.section-pa-text[page.lang] }}</h2>
+        <h6 class="text-uppercase text-white-80 max-w-40">{{ site.data.t.section-pa-title[page.lang] }}</h6>
+        <h2 class="text-white max-w-40">{{ site.data.t.section-pa-text[page.lang] }}</h2>
       </div>
       {% for section-pa-box in site.data.t.section-pa-boxes[page.lang] %}
       <div class="col-12 col-md-4 text-center text-white">
@@ -34,7 +18,7 @@
       </div>
       {% endfor %}
       <div class="col-12 mt-3 text-center">
-        <a class="btn btn-primary" href="{% link it/innovazione-per-la-pubblica-amministrazione.md %}">{{ site.data.t.learn-more[page.lang] }}</a>
+        <a class="btn btn-outline-primary bg-white" href="{% link it/innovazione-per-la-pubblica-amministrazione.md %}">{{ site.data.t.learn-more[page.lang] }}</a>
       </div>
     </div>
   </div>
