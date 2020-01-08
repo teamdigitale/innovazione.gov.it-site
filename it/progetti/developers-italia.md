@@ -89,5 +89,5 @@ Il Dipartimento ha preso in carica l’attività del Team per la Trasformazione 
 ## Media
 
 {:.max-w-40}
-Per ogni richiesta di contatto da parte di media e giornalisti il punto di riferimento è l’ufficio stampa e comunicazione del Ministro per l'innovazione - Dipartimento per la Trasformazione Digitale.
+Per ogni richiesta di contatto da parte di media e giornalisti il punto di riferimento è l’[ufficio stampa e comunicazione del Ministro per l'innovazione - Dipartimento per la Trasformazione Digitale]({% link it/chi-siamo/contatti.md %}).
 
