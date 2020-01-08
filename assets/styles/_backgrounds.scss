@@ -52,6 +52,15 @@
   }
 }
 
+.innovation-section-head--press {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/paola-pisano-ey.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/paola-pisano-ey.webp");
+  }
+}
+
 // cittadini
 .innovation-section-cittadini--io {
   @at-root .no-webp #{&} {

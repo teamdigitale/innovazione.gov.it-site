@@ -1,0 +1,54 @@
+<div class="giornalisti">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col px-3 px-md-0">
+          <h2 class="text-primary">
+            Comunicati stampa
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 lineright media-press">
+          {% include press/release.html %}
+          {% include press/release.html %}
+          {% include press/release.html %}
+          {% comment %}
+          <div class="row pt-3 pb-5">
+            <div class="col px-3 mt-5 ml-md-5">
+              <button type="button" class="btn btn-primary text-white text-uppercase col-12 col-md-5">
+                Vedi tutti
+              </button>
+            </div>
+          </div>
+          {% endcomment %}
+        </div>
+        <div class="col-md-4 pl-5">
+          <h5 class="text-primary text-uppercase mb-3">Contatti</h5>
+          <p>Per qualsiasi richiesta media, scrivi a <a href="mailto:media@innovazione.gov.it">media@innovazione.gov.it</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-radial-blue pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-9 pt-5 px-3 px-md-0">
+          <h2 class="text-white">
+            Risorse per i media
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col py-5 px-3 px-md-0">
+          <div class="grid-gallery">
+            {% include press/asset.html %}
+            {% include press/asset.html %}
+            {% include press/asset.html %}
+            {% include press/asset.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

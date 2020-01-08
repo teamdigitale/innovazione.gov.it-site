@@ -231,3 +231,28 @@ iframe {
     display: none;
   }
 }
+
+.giornalisti .grid-gallery {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: -3rem;
+  }
+  .image-item {
+    margin-top: 3rem;
+    @media (min-width: 768px) {
+      margin: 3rem;
+      margin-top: 0;
+      margin-left: 0;
+      width: calc(50% - 3rem);
+    }
+    @media (min-width: 992px) {
+      width: calc(33.3333% - 3rem)
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+}
