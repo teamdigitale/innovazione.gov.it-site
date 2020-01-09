@@ -11,11 +11,11 @@ categories:
 
 <img class="w-100" src="{{ site.baseURL }}/assets/images/posts/madeit.jpg" alt="Un brand per l'innovazione Made in Italy"/>
 
-_Il Ministro Pisano ha lanciato al CES di Las Vegas il progetto Made.IT:  un logo e un programma dedicati alle aziende tecnologiche e innovative italiane_
-
-Il Ministro per l’innovazione tecnologica e la digitalizzazione Paola Pisano è intervenuta al **Consumer Electronics Show** (CES), la più grande fiera internazionale di elettronica di consumo che si tiene in Nevada, per presentare [il progetto Made.IT](https://innovazione.gov.it/it/progetti/made-it/), l’iniziativa nata per **sostenere il comparto tech e digitale italiano**. 
+_Il Ministro Pisano ha lanciato al CES di Las Vegas il progetto Made.IT: un logo e un programma dedicati alle aziende tecnologiche e innovative italiane._
 
 <!-- MORE -->
+
+Il Ministro per l’innovazione tecnologica e la digitalizzazione Paola Pisano è intervenuta al **Consumer Electronics Show** (CES), la più grande fiera internazionale di elettronica di consumo che si tiene in Nevada, per presentare [il progetto Made.IT](https://innovazione.gov.it/it/progetti/made-it/), l’iniziativa nata per **sostenere il comparto tech e digitale italiano**. 
 
 “Attrarre, sviluppare e sostenere l’innovazione tecnologica e la digitalizzazione è fondamentale per il nostro Paese”, ha dichiarato il Ministro Pisano a margine della presentazione, che si è svolta nel padiglione Italia della fiera. “Made.IT è **un marchio che contraddistinguerà le aziende tech e digitali italiane** e prevederà un programma di sostegno e promozione per le _startup_ e le pubbliche e medie imprese. Lo presentiamo al CES di Las Vegas perché è il più importante appuntamento mondiale su tecnologia e innovazione e perché vogliamo che l’industria innovativa italiana sia sempre più competitiva nello scenario internazionale”.
 
