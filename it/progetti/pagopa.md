@@ -68,16 +68,4 @@ I dati delle dashboard vengono aggiornati su base settimanale.
 Lo sviluppo e la diffusione della piattaforma pagoPA sono al centro delle attività di [PagoPA S.p.A.](https://www.pagopa.gov.it/it/pagopa-spa/){:target="_blank" rel="noopener noreferrer"}, la società partecipata dallo Stato creata allo scopo di **diffondere i servizi digitali in Italia** (Decreto Legge “Semplificazioni” [n. 135 del 14 dicembre del 2018](https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg){:target="_blank" rel="noopener noreferrer"}, convertito in legge il 12 gennaio 2019). 
 
 {:.max-w-40}
-Il Dipartimento svolge una **funzione di vigilanza sugli obiettivi strategici** della società PagoPA, per conto del Presidente del Consiglio dei ministri a cui la [legge istitutiva](https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg){:target="_blank" rel="noopener noreferrer"} della società affida questo compito, insieme alle funzioni di indirizzo, coordinamento e supporto tecnico. 
-
-{:.mt-5.max-w-40}
-## Forum
-
-{:.max-w-40}
-pagoPA è un progetto di rilevanza nazionale. Per favorire la discussione e il confronto, e per incoraggiare la partecipazione di tutti gli attori coinvolti nel progetto, abbiamo creato una [sezione dedicata a questo progetto su Forum Italia](https://forum.italia.it/c/pagopa){:target="_blank" rel="noopener noreferrer"}.
-
-{:.mt-5.max-w-40}
-## Media
-
-{:.max-w-40}
-Per ogni richiesta di contatto da parte di media e giornalisti il punto di riferimento è l’ufficio stampa e comunicazione del Ministro per l'innovazione - Dipartimento per la Trasformazione Digitale.
+Il Dipartimento svolge una **funzione di vigilanza sugli obiettivi strategici** della società PagoPA, per conto del Presidente del Consiglio dei ministri a cui la [legge istitutiva](https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg){:target="_blank" rel="noopener noreferrer"} della società affida questo compito, insieme alle funzioni di indirizzo, coordinamento e supporto tecnico.

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h6 class="text-uppercase max-w-40">{{ site.data.t.section-news-title[page.lang] }}</h6>
+    </div>
+    {% assign localized_posts = site.posts | where: "lang", page.lang %}
+    {% assign localized_highlighted_posts = localized_posts | where: "categories", "highlights" %}
+    {% for post in localized_highlighted_posts limit: 3 %}
+    <div class="col-12 col-md-4 d-flex">
+      {% include post-teaser.html %}
+    </div>
+    {% endfor %}
+    <div class="col-12 text-center mt-4 mb-5">
+      <a class="btn btn-outline-primary bg-white" href="{% link it/notizie.md %}">Vedi tutte le Notizie</a>
+    </div>
+  </div>
+</div>

@@ -38,7 +38,7 @@ fluid: true
 ## Missione
 
 {:.max-w-40}
-Il nostro piano d’azione “**Italia 2025**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
+Il nostro piano d’azione “**[Italia 2025](https://innovazione.gov.it/assets/docs/MID_Book_2025.pdf)**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
 
 {:.max-w-40}
 Il piano si divide in tre sfide:
@@ -46,7 +46,7 @@ Il piano si divide in tre sfide:
 {:.max-w-40}
 * Una **società digitale**, dove i servizi mettono al centro i cittadini e le imprese, sono efficienti, facili da usare e da integrare. Un obiettivo per far diventare la digitalizzazione un motore di sviluppo per tutto il Paese e ripensare il rapporto tra lo Stato e le persone.
 * Un **obiettivo innovazione**, che punta su ricerca e sviluppo applicate, favorisce il proliferare di idee, che diventano imprese hi-tech italiane e a sostegno delle filiere produttive tradizionali del nostro Paese.
-* Uno **sviluppo sostenibile e inclusivo**, dove l'innovazione è al servizio delle persone, delle comunità e dei territori e si pone obiettivi chiari e audaci di sostenibilità ambientale.
+* Uno **sviluppo sostenibile e inclusivo**, dove l'innovazione è al servizio delle persone, delle comunità e dei territori, nel rispetto della sostenibilità ambientale.
 
 {:.max-w-40}
 Per realizzare queste sfide, ci occupiamo di:
