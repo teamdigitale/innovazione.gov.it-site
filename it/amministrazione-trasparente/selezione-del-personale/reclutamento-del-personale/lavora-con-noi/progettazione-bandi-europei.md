@@ -13,7 +13,7 @@ Il dipartimento per la trasformazione digitale è alla ricerca di
 **esperti nella progettazione dei bandi a livello europeo**.
 
 Queste figure saranno responsabili della progettazione di iniziative
-finanziate dai fondi comunitari, nonché della loro implementazione
+finanziate dai fondi europei, nonché della loro implementazione
 presso le amministrazioni centrali e locali. Saranno inoltre
 responsabili dell’attuazione di procedure e strumenti di raccolta,
 gestione, monitoraggio dei dati relativi all’avanzamento delle azioni,
@@ -27,9 +27,9 @@ reportistica.
     gestione e rendicontazione delle risorse finanziarie europee ad essi
     dedicate, quali ad esempio i Fondi Strutturali (FSER/FSE)
 -   Conoscenza approfondita della politica e della normativa
-    comunitaria
+    dell'Unione Europea
 -   Specifiche competenze sulle fonti di finanziamento europeo e sulla
-    gestione di progetti finanziati dai fondi comunitari
+    gestione di progetti finanziati dai fondi europei
     (programmazione, monitoraggio, valutazione, controllo)
 -   Conoscenza ed esperienza diretta nella realizzazione di progetti
     di innovazione e digitalizzazione del settore pubblico
@@ -51,7 +51,7 @@ reportistica.
     le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o
     regionale, o, in assenza di laurea, almeno 7 anni di esperienza
     nell’assistenza tecnica per la progettazione di azioni finanziate da
-    fondi comunitari nonché nella gestione e rendicontazione di progetti
+    fondi europei nonché nella gestione e rendicontazione di progetti
     finanziati con Fondi Strutturali (FSER/FSE), maturata anche presso
     le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o
     regionale
