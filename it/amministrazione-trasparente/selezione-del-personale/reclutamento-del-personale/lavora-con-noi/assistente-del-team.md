@@ -51,7 +51,7 @@ Il candidato ideale dovrà, inoltre, supportare l’assistente tecnico nel:
 
 -   Comprovata esperienza nelle relazioni con _stakeholder_ di alto livello
 -   Comprovata esperienza nel muoversi e operare in situazioni in divenire
--   Comprovata esperienza di successo nnel lavoro per obiettivi e nel
+-   Comprovata esperienza di successo nel lavoro per obiettivi e nel
     raggiungimento degli stessi
 
 ## Formazione richiesta
