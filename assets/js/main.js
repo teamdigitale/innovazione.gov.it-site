@@ -37,8 +37,10 @@ $(function () {
 
     function onFieldsChange() {
         // Enables submit button when at least one option is selected and the input field is filled with an actual email
-        $('.js-newsletter-submit')
-            .prop('disabled', !isEmail($('.js-newsletter-email').val()));
+        $(".js-newsletter-submit")
+            .prop("disabled", !isEmail($(".js-newsletter-email").val()));
     }
-    $('.js-newsletter-email').on('input', onFieldsChange);
+    $(".js-newsletter-email")
+        .on("input", onFieldsChange);
+
 });

@@ -160,18 +160,18 @@
       </section>
 
       {% if site.data.t.social-links[page.lang].size > 0 %}
-      <section class="mt-4">
+      <section>
         <div class="row">
           <div class="col">
             <ul class="list-inline text-center social">
               {% for social-link in site.data.t.social-links[page.lang] %}
               <li class="list-inline-item">
-                <a class="p-2 text-white" href="{{ site.baseurl }}{{ social-link[1].url }}"
+                <a class="mx-2 text-white" href="{{ site.baseurl }}{{ social-link[1].url }}"
                    aria-label="{{ social-link[1].name }}"
                    title="{{ social-link[1].name }}"
                    {% if footer-trasparenza-contatto[1].blank == true %}target="_blank" rel="noopener noreferrer"{% endif %}
                 >
-                  <svg class="icon icon-lg icon-white align-top">
+                  <svg class="icon icon-white align-top">
                     <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-{{ social-link[1].name | downcase }}"></use>
                   </svg>
                   <span class="sr-only">{{ social-link[1].name }}</span>

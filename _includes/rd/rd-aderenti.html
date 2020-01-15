@@ -1,0 +1,26 @@
+{% assign aderenti = site.data.aderenti_manifesto_rd.aderenti_manifesto | sort:"name" %}
+
+<!-- Modale -->
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modale-aderenti">
+<div class="modal-dialog modal-lg mx-2 mx-sm-auto" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title h3">Tutti gli aderenti al manifesto</h1>
+    </div>
+    <div class="modal-body">
+      <div class="mb-5 row">
+        {%- for aderente in aderenti -%}
+        <div class="col-12">
+          <h6 class="client-title"><a href="{{ aderente.link }}" target="_blank" rel="noopener noreferrer">{{ aderente.name }}</a></h6>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Chiudi</button>
+    </div>
+  </div>
+</div>
+</div>
+
+

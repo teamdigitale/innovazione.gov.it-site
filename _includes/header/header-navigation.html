@@ -28,7 +28,7 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
             <div class="it-right-zone">
               {% if site.data.t.social-links[page.lang].size > 0 %}
               <div class="it-socials d-none d-md-flex">
-                <span>{{ site.data.t.social-intro[page.lang] }}</span>
+                <span class="d-none d-lg-inline">{{ site.data.t.social-intro[page.lang] }}</span>
                 <ul>
                   {% for social-link in site.data.t.social-links[page.lang] %}
                   <li class="list-inline-item">

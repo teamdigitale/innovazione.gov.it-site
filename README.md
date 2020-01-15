@@ -82,3 +82,9 @@ Nella homepage vengono mostrati:
  
 - in alto, il post più recente con attributo `pinned: true`
 - i 3 post più recenti con la categoria `highlights`
+
+## Aggiornamento iniziative Repubblica Digitale
+
+La _sorgente dati_ delle iniziative di Repubblica Digitale è il file `_data/iniziative.csv` che viene generato da un foglio Google al seguente indirizzo: https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito
+
+Per aggiornare il file è quindi sufficiente scaricare il file, rinominarlo, sovrascrivere l'esistente... e verificare sia tutto ok. I nomi delle immagini degli aderenti sono mappati sul file `aderenti_manifesto_rd.yml`.

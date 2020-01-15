@@ -221,36 +221,6 @@ img.reset-logo {
   }
 }
 
-
-@media screen and (max-width: 1024px) {
-  .client {
-    max-width: calc(25% - 30px);
-  }
-}
-
-@media screen and (max-width: 820px) {
-  .client {
-    max-width: calc(33.33% - 30px);
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .client {
-    max-width: calc(50% - 30px);
-  }
-}
-
-@media screen and (max-width: 525px) {
-  .client {
-    float: none;
-    max-width: 260px;
-    width: 90%;
-  }
-  .client-wrap {
-    text-align: center;
-  }
-}
-
 /* Animation */
 @-webkit-keyframes fadein {
   from {

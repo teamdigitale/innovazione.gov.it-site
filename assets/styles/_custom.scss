@@ -94,6 +94,11 @@
     left: 0;
     bottom: 0;
   }
+  &.innovation-section-head--repubblica-digitale {
+    &::before {
+      background-color: rgba(0, 89, 179, 0.6);
+    }
+  }
 }
 
 .hero-head {
@@ -246,4 +251,10 @@ iframe {
 
 .img-cover {
   object-fit: cover;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  ul, ol {
+    font-size: .88889rem;
+  }
 }

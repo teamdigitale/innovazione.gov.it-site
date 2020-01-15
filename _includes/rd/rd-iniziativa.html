@@ -1,0 +1,59 @@
+{% assign ente = iniziativa.Ente | strip %}
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card-wrapper card-space">
+    <div class="card card-iniziative my-2 no-after shadow rounded">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8 d-flex">
+            <p class="text-serif align-self-center mb-0">{{ ente }}</p>
+          </div>
+          <div class="col-4 text-right">
+            {% assign aderente = aderenti | where: "name", ente %}
+            {%- if aderente[0].logo != nil -%}
+            <img src="/assets/images/aderenti-manifesto-rd/{{ aderente[0].logo }}" alt="Logo {{ ente }}" class="mb-2 img-logo"/>
+            {%- else -%}
+            <img src="/assets/images/1x1.png" alt="spacer" class="mb-2 img-logo"/>
+            {%- endif -%}
+          </div>
+        </div>
+        <div>
+          <h6 class="card-title my-3" style="font-size: 16px;">{{ iniziativa["Titolo dell'iniziativa"] }}</h6>
+          <a class="read-more" href="#" data-toggle="modal" data-target="#modale-{{forloop-index}}-{{ ente | downcase  | replace: ' ', '-' | replace: '.', '' | replace: ';', '' | replace: ',', '' | replace: "'", ''  }}">
+          <span class="text">Leggi di più</span>
+          <svg class="icon">
+            <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+          </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modale -->
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modale-{{forloop-index}}-{{ ente | downcase  | replace: ' ', '-' | replace: '.', '' | replace: ';', '' | replace: ',', '' | replace: "'", '' }}">
+  <div class="modal-dialog modal-lg mx-2 mx-sm-auto" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title h3">{{ iniziativa["Titolo dell'iniziativa"] }}</h1>
+      </div>
+      <div class="modal-body">
+        <h2 class="mt-4">Descrizione</h2>
+        {{ iniziativa["Descrizione dell'iniziativa"] | markdownify }}
+        <h2 class="mt-4">Destinatari</h2>
+        {{ iniziativa["Destinatari, fruitori dell'iniziativa"] | markdownify }}
+        <h2 class="mt-4">Tempistiche</h2>
+        {{ iniziativa["Tempistiche dell'iniziativa"] | markdownify }}
+        <h2 class="mt-4">Metriche</h2>
+        {{ iniziativa["Metriche di valutazione dell'impatto"] | markdownify }}
+        {% assign partner = iniziativa["Eventuali partner coinvolti nell'iniziativa"] | strip %}
+        {% if partner != '' %}
+        <h2 class="mt-4">Partner</h2>
+        {{ partner | markdownify }}
+        {% endif%}
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ no_site_toc: true
 intro: true
 fluid: true
 in_evidenza: true
+innovation-section-head: true
 order: 2
 ---
 
