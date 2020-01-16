@@ -38,7 +38,7 @@ fluid: true
 ## Missione
 
 {:.max-w-40}
-Il nostro piano d’azione “**[Italia 2025](https://innovazione.gov.it/assets/docs/MID_Book_2025.pdf)**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
+Il nostro piano d’azione “**[Italia 2025](https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/index.html)**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
 
 {:.max-w-40}
 Il piano si divide in tre sfide:
