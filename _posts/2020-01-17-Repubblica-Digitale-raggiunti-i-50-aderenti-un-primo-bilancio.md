@@ -62,7 +62,7 @@ Guardando ai dati relativi alla **tipologia di attività proposte**, notiamo mol
 
 In particolare molte attività riguardano le **competenze digitali di base** (61), anche se 12 di queste includono attività di facilitazione digitale, con sportelli o punti fisici di supporto ai cittadini per l’utilizzo dei servizi digitali, spesso associati ad attività formative strutturate. 
 
-Invece resta ancora molto bassa la presenza di attività indirizzate allo sviluppo di competenze per l’[e-leadership](https://lg-competenzedigitali.readthedocs.io/it/stable/doc/competenze_e-leadership/") nell’ambito delle iniziative rivolte sia al mondo del privato che a quello pubblico.
+Invece resta ancora molto bassa la presenza di attività indirizzate allo sviluppo di competenze per l’[e-leadership](https://lg-competenzedigitali.readthedocs.io/it/stable/doc/competenze_e-leadership/) nell’ambito delle iniziative rivolte sia al mondo del privato che a quello pubblico.
 
 <img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_iniziative.png" alt="Le iniziative di repubblica digitale"/>
 
