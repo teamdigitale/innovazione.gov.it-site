@@ -10,7 +10,7 @@ categories:
   
 ---
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitalecover.jpg" alt="Una repubblica digitale"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_cover.jpg" alt="Una repubblica digitale"/>
 {:.x-small.text-right}
 _Fotografia di [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/digital-school?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
 
@@ -40,7 +40,7 @@ Abbiamo classificato le iniziative in base alla tipologia di organizzazione prop
 
 Guardando alle iniziative che abbiamo accettato finora, riscontriamo una distribuzione equilibrata tra **le tre categorie considerate** (organizzazioni pubbliche, private e del terzo settore), con una leggera prevalenza delle organizzazioni private.
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_aderenti.jpg" alt="Aderenti a Repubblica Digitale"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_aderenti.png" alt="Aderenti a Repubblica Digitale"/>
 
 Guardando più in dettaglio, possiamo notare che: 
 
@@ -54,7 +54,7 @@ Guardando più in dettaglio, possiamo notare che:
 
 Per quanto riguarda i dati relativi ai **destinatari delle iniziative**, notiamo una significativa presenza di iniziative rivolte contemporaneamente a più di una delle categorie (cittadini, Pubbliche Amministrazioni e imprese). La categoria a cui si rivolge la maggior parte delle iniziative approvate finora è quella dei cittadini, con iniziative che si rivolgono in particolare agli studenti delle scuole superiori (21), mentre ancora poco numerose sono quelle destinate alle tipologie svantaggiate e agli adulti over 65. Pur con un numero ancora basso, le iniziative rivolte al mondo privato e al mondo pubblico sono ben distribuite tra dipendenti, manager, dirigenti e imprenditori (nel caso del sistema privato).
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_destinatari.jpg" alt="I destinatari di repubblica digitale"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_destinatari.png" alt="I destinatari di repubblica digitale"/>
 
 ## Quali iniziative sono state presentate
 
@@ -64,13 +64,13 @@ In particolare molte attività riguardano le **competenze digitali di base** (61
 
 Invece resta ancora molto bassa la presenza di attività indirizzate allo sviluppo di competenze per l’[e-leadership](https://lg-competenzedigitali.readthedocs.io/it/stable/doc/competenze_e-leadership/") nell’ambito delle iniziative rivolte sia al mondo del privato che a quello pubblico.
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_iniziative.jpg" alt="Le iniziative di repubblica digitale"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_iniziative.png" alt="Le iniziative di repubblica digitale"/>
 
 ## Quale localizzazione
 
 Analizzando infine i dati relativi alla **distribuzione geografica** (nazionale, regionale, locale) notiamo che la maggior parte delle iniziative garantisce una copertura nazionale, anche grazie all’utilizzo di **piattaforme online** (ad esempio per l’_e-learning_). Molte iniziative si sviluppano localmente perché avviate da parte di amministrazioni comunali o di organizzazioni non governative che operano a livello cittadino.
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_localizzazione.jpg" alt="Dove si trovano gli eventi di repubblica digitale"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_localizzazione.png" alt="Dove si trovano gli eventi di repubblica digitale"/>
 
 ## I prossimi passi
 
