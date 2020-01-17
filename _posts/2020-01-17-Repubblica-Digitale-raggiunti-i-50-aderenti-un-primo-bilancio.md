@@ -11,8 +11,6 @@ categories:
 ---
 
 <img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_cover.jpg" alt="Una repubblica digitale"/>
-{:.x-small.text-right}
-_Fotografia di [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/digital-school?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
 
 _Una panoramica delle prime 50 iniziative che hanno aderito al progetto contro il digital divide._
 
@@ -83,3 +81,7 @@ In questo quadro Repubblica Digitale sta “crescendo” come l’**iniziativa n
 - Avvio di iniziative di **comunicazione, divulgazione e diffusione della cultura digitale**. 
 
 Sappiamo che il _digital divide_ rappresenta una vera e propria emergenza. Il rischio che si corre è che "_la trasformazione digitale del Paese finisca per favorire solo i cittadini digitalmente più educati e consapevoli e per svantaggiare gli altri_” che sono tanti, milioni di cittadini che possono essere esclusi dall’esercizio dei diritti di cittadinanza, sempre più vincolati all’uso consapevole del digitale e della rete. Il nostro obiettivo è affrontare con successo questa emergenza e riusciremo a farlo solo se potremo contare sul contributo di tutti, costruendo **la più grande operazione di formazione digitale collettiva del Paese**. 
+
+
+{:.x-small.text-right}
+_Fotografia di [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/digital-school?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
