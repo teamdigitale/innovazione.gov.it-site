@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Repubblica Digitale, raggiunti i 50 aderenti: un primo bilancio
+title: "Repubblica Digitale, raggiunti i 50 aderenti: un primo bilancio"
 ref: repubblica-digitale-primo-bilancio
 lang: it
 excerpt_separator: <!-- MORE -->
