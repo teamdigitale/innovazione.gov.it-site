@@ -6,11 +6,10 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container it-hero-content">
     <div class="row">
-      <div class="col-12">
-        <div class="it-hero-text-wrapper">
-          {% comment %}<span class="it-category">Category</span>{% endcomment %}
+      <div class="col-12 col-md-8">
+        <div class="it-hero-text-wrapper py-5 px-4">
           <h1>{{ site.data.t.section-intro-title[page.lang] }}</h1>
           <p class="d-none d-lg-block" markdown="1">In questo sito puoi trovare novità, risorse e progetti, per [cittadini]({% link it/innovazione-per-i-cittadini.md %}), [imprese]({% link it/innovazione-per-le-imprese.md %}) e [Pubbliche Amministrazioni]({% link it/innovazione-per-la-pubblica-amministrazione.md %}). Strumenti e informazioni per il percorso di trasformazione del Paese.</p>
           {% comment %}
@@ -23,30 +22,28 @@
           {% endcomment %}
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="section py-0 mb-3">
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-sm-6 offset-sm-6  col-md-4 offset-md-8 text-right text-lg-center">
-      <div class="card-wrapper card-space card-repubblica-digitale pb-0">
-        <div class="card card-bg rounded shadow">
-          <div class="card-body text-center">
-            <p class="card-text">
-              <a href="{% link it/repubblica-digitale.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/logo-repubblica-digitale.svg" alt="Repubblica Digitale"></a>
-              <br><span class="d-inline-block mt-2">Un progetto contro il digital divide, per una trasformazione digitale che non lasci indietro nessuno</span>
-            </p>
+      <div class="col-12 col-md-4 d-flex flex-column justify-content-center">
+        <div class="card-wrapper card-space card-repubblica-digitale py-2 px-4 px-md-0" style="height: auto!important;">
+          <div class="card card-bg rounded shadow">
+            <div class="card-body text-center">
+              <p class="card-text">
+                <a href="{% link it/repubblica-digitale.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/logo-repubblica-digitale.svg" alt="Repubblica Digitale"></a>
+                <br><span class="d-inline-block mt-2">Un progetto contro il digital divide, per una trasformazione digitale che non lasci indietro nessuno</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper card-space card-repubblica-digitale py-2 px-4 px-md-0" style="height: auto!important;">
+          <div class="card card-bg rounded shadow">
+            <div class="card-body text-center">
+              <p class="card-text">
+                <a href="{% link _posts/2020-01-20-chi-odia-paga-un-progetto-contro-l-odio-online.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/logo-chi-odia-paga.png" alt="Chi odia paga"></a>
+                <br><span class="d-inline-block mt-2">Una piattaforma legal-tech per garantire a tutti tutela legale contro l'odio online</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      {% comment %}
-      <div class="bg-100">
-        <a href="#"><img class="hero-logo d-inline-block m-2 mx-md-4" src="{{ site.baseurl }}/assets/images/logo-chi-odia-paga.png" alt="Chi odia paga"></a>
-        <a href="{% link it/repubblica-digitale.md %}"><img class="hero-logo d-inline-block m-2" src="{{ site.baseurl }}/assets/images/logo-repubblica-digitale.svg" alt="Repubblica Digitale"></a>
-      </div>
-      {% endcomment %}
     </div>
   </div>
-</div>
 </div>
