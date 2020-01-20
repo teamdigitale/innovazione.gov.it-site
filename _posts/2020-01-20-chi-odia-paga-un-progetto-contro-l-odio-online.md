@@ -19,7 +19,7 @@ Chi Odia Paga (COP) è una startup innovativa a vocazione sociale nata per **com
 
 L’iniziativa ha aderito a [Repubblica Digitale](https://innovazione.gov.it/it/repubblica-digitale/), il programma del [Ministro per l’innovazione e la trasformazione digitale](https://innovazione.gov.it/) per l’inclusione digitale. In virtù di questo accordo, i cittadini italiani avranno a disposizione gratuitamente le prime funzionalità della piattaforma “Chi Odia Paga”, dove:
 
-- già da subito potranno ricevere **un feedback automatizzato** per capire se i commenti che si ricevono online sono contenuti legalmente sanzionabili o meno;
+- già da subito potranno ricevere **un feedback automatizzato** per capire se le condotte subite sono legalmente sanzionabili o meno;
 - nei prossimi mesi potranno utilizzare una serie di strumenti tecnici e legali necessari per difendersi dai **reati d’odio online** in modo facile, veloce, sicuro ed economico.
 
 Una ricerca Doxa Kids segnala che “circa il 6 per cento dei ragazzi tra i 9 e i 17 anni denuncia di essere stato vittima di cyberbullismo”, mentre secondo dati Vox Diritti “in Italia viene postato un tweet al minuto contenente contenuti legati a razzismo, insulti sulla disabilità, misoginia, islamofobia, omofobia ed antisemitismo”.
