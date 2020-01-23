@@ -290,3 +290,23 @@ aderenti_manifesto:
     links:
       - link_label: "15icpaolorsi.education"
         link_url: "https://www.15icpaolorsi.education/"
+  - name: Comune di Roma
+    logo: "comune-di-roma-logo.jpg"
+    links:
+      - link_label: "www.comune.roma.it"
+        link_url: "https://www.comune.roma.it/web/it/home.page"
+  - name: Unione Bassa Reggiana
+    logo: "bassa-reggiana-logo.png"
+    links:
+      - link_label: "www.bassareggiana.it"
+        link_url: "http://www.bassareggiana.it/servizi/notizie/notizie_homepage.aspx"
+  - name: Centro Studi Coding e Dintorni
+    logo: "coding-e-dintorni-logo.jpg"
+    links:
+      - link_label: "codingedintorni.it"
+        link_url: "http://www.codingedintorni.it/"
+  - name: EduPuntoZero
+    logo: "edu-logo.png"
+    links:
+      - link_label: "edupuntozero.it"
+        link_url: "https://edupuntozero.it/"
