@@ -3,12 +3,19 @@
   color: rgba(255, 255, 255, .8) !important;
 }
 
+.text-shadow-green {
+  text-shadow: 0 0 2px rgba(0,176,179,0.8);
+}
+
 .max-w-40 {
   max-width: 40rem !important;
 }
 
 .max-h-80 {
   max-height: 80px;
+}
+.max-h-240 {
+  max-height: 240px;
 }
 
 .bg-radial-cyan {
@@ -58,7 +65,7 @@
 
 .innovation-section-head {
   color: #fff;
-  padding: 10rem 0;
+  padding: 6rem 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -79,7 +86,7 @@
 
   &::before {
     content: '';
-    background-color: rgba(0, 176, 179, 0.8);
+    background-color: rgba(0, 176, 179, 0.4);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230066cc' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     position: absolute;
     top: 0;
@@ -230,4 +237,8 @@ iframe {
   @media (max-width: 360px) {
     display: none;
   }
+}
+
+.img-cover {
+  object-fit: cover;
 }

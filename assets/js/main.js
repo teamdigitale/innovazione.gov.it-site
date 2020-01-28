@@ -29,7 +29,6 @@ $(function () {
             $(this).next().slideDown().closest(".js-accordion-item").addClass("is-open");
         }
         return false;
-
     });
 
     function isEmail(email) {

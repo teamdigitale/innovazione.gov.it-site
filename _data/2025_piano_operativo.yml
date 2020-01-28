@@ -1,0 +1,346 @@
+---
+punti:
+  - titolo: Una governance per l’innovazione
+    azione: A1
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A01-governance.html
+    immagine: A1.jpg
+    descrizione_short: Definire un coordinamento per le azioni di digitalizzazione e innovazione del paese.
+    descrizione: |
+      #### Obiettivo {#A1-obiettivo}
+
+      Definire un coordinamento per le azioni di digitalizzazione e innovazione del paese all’interno della Pubblica Amministrazione, e tra Pubblica Amministrazione e stakeholder privati
+
+      #### Chi {#A1-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); stakeholder pubblici (ministeri, regioni, città, università); stakeholder privati: centri di ricerca, aziende, società civile.
+
+      #### Come {#A1-come}
+
+      * Definizione della cabina di regia tra ministeri
+      * Definizione di task force su progetti specifici: digitalizzazione, madeIT, Borghi del futuro
+      * Protocollo di intesa con le regioni e i comuni
+      * Definizione di tavoli con le regioni e i comuni su specifici argomenti: la razionalizzazione dei data centre, la mappatura e creazione di nuovi progetti di innovazione tecnologica all’interno delle regioni, la gestione della digitalizzazione e dei dati, il procurement, la banda ultra larga
+      * Creazione del tavolo di lavoro con le università e i centri di ricerca
+      * Definizione dei task specifici da affrontare con le università e i centri di ricerca: progetti sulle nuove tecnologie, formazione sugli studenti e sui cittadini
+      * Definizione del tavolo di lavoro con le aziende coinvolte nel processo di digitalizzazione e innovazione: formazione sulla cittadinanza, infrastrutture per i servizi del futuro, nuovi servizi da sperimentare nelle città
+      * Monitoraggio del progetto trimestrale
+
+      #### Quando {#A1-quando}
+
+      Il progetto è già stato avviato, grazie alla creazione della cabina di regia e all’apertura dei tavoli verticali sui temi dell’innovazione e della digitalizzazione.
+
+      #### Target {#A1-target}
+
+      Pubblica Amministrazione, cittadini
+  - titolo: Un domicilio digitale per tutti
+    azione: A3
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A03-domicilio-digitale.html
+    immagine: A3.jpg
+    descrizione_short: Permettere a ogni cittadino di eleggere un domicilio digitale, per ricevere la propria corrispondenza in formato digitale avente valore legale.
+    descrizione: |
+      #### Obiettivo {#A3-obiettivo}
+
+      Permettere a ogni cittadino di eleggere un domicilio digitale, per ricevere la propria corrispondenza in formato digitale avente valore legale (e in prospettiva, di consultarla attraverso IO, l’app dei servizi pubblici), generando risparmi di spesa, più efficienza e semplicità di spedizione, ricezione e archiviazione della corrispondenza sia per i cittadini che per la Pubblica Amministrazione.
+
+      #### Chi {#A3-chi}
+
+      Ministro per l’innovazione tecnologica e la digitalizzazione, [Agenzia per l’Italia Digitale](https://www.agid.gov.it/) (AgID), [Infocamere Spa](http://www.infocamere.it/), [PagoPA Spa](https://www.pagopa.gov.it/)
+
+      #### Come {#A3-come}
+
+      * Perfezionamento della convenzione per lo sviluppo e la gestione del registro pubblico dei domicili digitali dei cittadini tra Agid e il Ministro per l’innovazione e la trasformazione digitale
+      * Progettazione e sviluppo del registro pubblico dei domicili digitali dei cittadini
+      * Definizione delle linee guida per l’elezione del domicilio digitale da parte dei cittadini e per l’accesso al medesimo registro da parte di Pubbliche Amministrazioni e soggetti privati
+      * Promozione del diritto all’elezione del domicilio digitale e ai vantaggi, per cittadini e amministrazione, dell’utilizzo del domicilio digitale dei cittadini
+      * Integrazione tra gli strumenti di elezione del domicilio digitale e applicazioni e servizi pubblici digitali, per permettere di eleggere il domicilio digitale anche attraverso i siti, le piattaforme e le app delle Pubbliche Amministrazioni
+      * Integrazione tra il domicilio digitale e IO
+
+      #### Quando {#A3-quando}
+
+      2° trimestre 2020
+
+      #### Target {#A3-target}
+
+      Pubblica Amministrazione, cittadini, imprese
+  - titolo: IO, l’app dei servizi pubblici
+    azione: A4
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A04-app-io.html
+    immagine: A4.jpg
+    descrizione_short: Un unico punto di accesso per tutti i servizi pubblici digitali, da cui gli Enti possano contattare il cittadino in modo semplice, sicuro e personalizzato.
+    descrizione: |
+      #### Obiettivo {#A4-obiettivo}
+
+      Facilitare l’accesso di tutti i cittadini ai servizi della Pubblica Amministrazione - e ai diritti che questi servizi garantiscono - attraverso un’app per smartphone che metta le persone al centro dell’interazione con lo Stato: un unico punto di accesso per tutti i servizi pubblici digitali, da cui gli Enti centrali e locali possano contattare il cittadino in modo semplice, sicuro e personalizzato.
+
+      #### Chi {#A4-chi}
+
+      [PagoPA Spa](https://www.pagopa.gov.it/), [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), Pubbliche Amministrazioni centrali e locali
+
+      #### Come {#A4-come}
+
+      * Presa in carico del [progetto IO](https://io.italia.it/) da parte della società pubblica PagoPA Spa
+      * Ultimazione della fase di beta testing su invito della app, con finalità di _bug fixing_, perfezionamento delle funzionalità, dell’infrastruttura, dell’integrazione con le piattaforme abilitanti e ottimizzazione dell’esperienza utente
+      * _Onboarding_ di un primo gruppo di Enti pubblici centrali e locali, con l’integrazione di un primo set di servizi
+      * Pubblicazione della prima _open beta_ dell’app IO sugli store online nel 2° trimestre del 2020
+      * Messa in produzione di un sistema di _onboarding_ automatizzato, per permettere a tutte le Pubbliche Amministrazioni di portare autonomamente i propri servizi su IO
+
+      #### Quando {#A4-quando}
+
+      Il progetto è già attivo e in fase di industrializzazione.
+      2° trimestre 2020: pubblicazione della prima open beta dell’app negli store.
+
+      #### Target {#A4-target}
+
+      Cittadini, Pubbliche Amministrazioni centrali e locali e centrali, soggetti privati erogatori di servizi di pubblica utilità.
+  - titolo: Ristrutturazione digitale
+    azione: A5
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A05-ristrutturazione-digitale.html
+    immagine: A5.jpg
+    descrizione_short: Aggiornare i siti internet, le piattaforme, gli strumenti e le app per l’erogazione dei servizi pubblici digitali attraverso il contributo dei soggetti privati.
+    descrizione: |
+      #### Obiettivo {#A5-obiettivo}
+
+      Aggiornare i siti internet, le piattaforme, gli strumenti e le app per l’erogazione dei servizi pubblici digitali attraverso il contributo dei soggetti privati, secondo lo schema utilizzato per la ristrutturazione dei monumenti, favorendo il ricorso a template standard e soluzioni informatiche in riuso disponibili rispettivamente nell’ambito dei progetti Designers Italia e Developers Italia
+
+      #### Chi {#A5-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); Pubbliche Amministrazioni e enti titolari di siti, app e servizi digitali; sponsor privati
+
+      #### Come {#A5-come}
+
+      * Progettazione e sviluppo di una guida per l’implementazione del progetto
+      * Identificazione di una o più amministrazioni pilota e di uno o più partner privati interessati allo sviluppo del sito o del servizio in cambio di visibilità, da coinvolgere in una prima fase sperimentale
+      * Promozione di template e strumenti per le Pubbliche Amministrazioni, per garantire una l’adozione dei migliori standard per la progettazione e realizzazione dei servizi digitali
+      * Analisi e divulgazione dei risultati raggiunti nell’ambito delle iniziative pilota, per stimolarne la moltiplicazione
+
+      #### Quando {#A5-quando}
+
+      2° trimestre 2020
+
+      #### Target {#A5-target}
+
+      Pubblica Amministrazione
+  - titolo: Diritto a innovare
+    azione: A12
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A12-diritto-a-innovare.html
+    immagine: A12.jpg
+    descrizione_short: Se l’innovazione dimostra di avere un impatto sociale positivo, promuovere un aggiornamento del quadro normativo di riferimento.
+    descrizione: |
+      #### Obiettivo {#A12-obiettivo}
+
+      Consentire a startup e imprese innovative di sperimentare le proprie attività, anche nei casi in cui il quadro normativo - pur non vietandole espressamente - ne renda dubbia la legittimità o le costringa a rispettare un regime autorizzatorio particolarmente stringente, di fatto bloccando la sperimentazione. Se l’innovazione dimostra di avere un impatto sociale positivo, promuovere un aggiornamento del quadro normativo di riferimento.
+
+      #### Chi {#A12-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); altre autorità coinvolte nelle materie oggetto di richiesta di sperimentazione.
+
+      #### Come {#A12-come}
+
+      * Redazione e promozione di una disposizione di legge idonea a consentire a startup e imprese innovative di fare innovazione anche in presenza di contesti normativi dubbi
+      * In caso di approvazione della disposizione di legge, progettazione e implementazione del processo per la gestione delle istanze di innovazione, coinvolgendo nel processo le authority di riferimento
+      * Lancio dell’iniziativa, raccolta e valutazione delle prime istanze
+      * Avvio delle prime sperimentazioni e loro valutazione
+      * Presentazione delle prime proposte di aggiornamento del quadro normativo per superare gli eventuali ostacoli emersi nel corso delle sperimentazioni
+
+      #### Quando {#A12-quando}
+
+      1° trimestre 2020 - Redazione e promozione della disposizione di legge
+
+      #### Target {#A12-target}
+
+      Imprese (startup e PMI innovative)
+  - titolo: madeIT
+    azione: A13
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A13-made-it-impresa.html
+    immagine: A13.jpg
+    descrizione_short: Creare un brand per la valorizzazione del comparto innovativo e un programma strutturale che aggreghi le misure esistenti per sviluppare il settore delle tecnologie innovative nel Paese.
+    descrizione: |
+      #### Obiettivo {#A13-obiettivo}
+
+      Creare un brand per la valorizzazione del comparto innovativo in Italia e un programma strutturale che aggreghi le misure esistenti per sviluppare il settore delle tecnologie innovative nel Paese. Obiettivo del programma è supportare la crescita e l’internazionalizzazione di startup e PMI, razionalizzare le misure di supporto all’innovazione e aumentare l’efficacia delle diverse azioni in essere, grazie ad una regia comune.
+
+      #### Chi {#A13-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); [Ministero degli affari esteri e della cooperazione internazionale](http://www.esteri.it); [Ministero dello sviluppo economico](https://mise.gov.it); [Italian Trade Agency](https://www.ice.it/it); altri _stakeholder_ in Italia e all’estero.
+
+      ##### Come {#A13-come}
+
+      * Creazione del brand e del sito internet del progetto
+      * Definizione dei criteri per ottenere il brand e definizione della procedura amministrativa legale per il rilascio del brand
+      * Definizione del comitato che selezionerà i beneficiari del programma
+      * Definizione di una lista di “_Envoys_” della PA per la promozione delle startup all’estero
+      * Definizione del programma per le startup in fase _early stage_, del team di supporto alle startup, dei partner di progetto nazionali e internazionali. Selezione delle startup che accedono al programma startup _early stage_
+      * Definizione del programma per le startup in fase _growth_, del team di supporto alle startup, dei partner di progetto nazionali e internazionali. Selezione delle startup che accedono al programma startup _growth_
+      * Definizione del programma per le PMI innovative, del team di supporto alle startup, dei partner di progetto nazionali e internazionali. Selezione delle startup che accedono al programma PMI innovative
+      * Monitoraggio dei progetti
+
+      #### Quando {#A13-quando}
+
+      * 2° trimestre 2020 - lancio del programma _early stage_ e selezione delle startup
+      * 4° trimestre 2020 - lancio del programma _growth_ e selezione delle startup
+      * 1° trimestre 2021 - lancio del programma PMI innovative e selezione delle imprese
+
+      #### Target {#A13-target}
+
+      Imprese (startup tecnologiche e PMI innovative basate in Italia)
+  - titolo: AI ethical LAB-EL
+    azione: A17
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A17-ai-etichal-lab-el.html
+    immagine: A17.jpg
+    descrizione_short: Elaborare dei principi etico-giuridici capaci di governare l’adozione di soluzioni di intelligenza artificiale da parte della Pubblica Amministrazione.
+    descrizione: |
+      #### Obiettivo {#A17-obiettivo}
+
+      Elaborare dei principi etico-giuridici capaci di governare l’adozione di soluzioni di intelligenza artificiale da parte della Pubblica Amministrazione. In prospettiva, questi principi di sostenibilità etico-giuridica porteranno a un processo di certificazione di tali soluzioni, ai fini della loro adozione da parte di Pubbliche Amministrazioni e privati.
+
+      #### Chi {#A17-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); [Ministero dello sviluppo economico](https://mise.gov.it); [Ministro per la Pubblica Amministrazione](http://www.funzionepubblica.gov.it/); [Commissione Europea](https://ec.europa.eu/info/index_it), [Consip](http://www.consip.it/), centri di ricerca pubblici e privati.
+
+      #### Come {#A17-come}
+
+      * Costituzione di un gruppo di lavoro (il comitato “Alleanza per l’intelligenza artificiale sostenibile”) per l’elaborazione dei principi etico-giuridici e la progettazione del processo per il rilascio della certificazione
+      * Redazione di un manifesto di principi etico-giuridici per guidare l’adozione di soluzioni di intelligenza artificiale nell’amministrazione
+      * Valutazione della compliance ai principi etico-giuridici delle due soluzioni oggetto di sperimentazione nell’ambito dell’[azione 08 della strategia](https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A08-intelligenza-artificiale.html) (“Intelligenza artificiale al servizio dello Stato”) e loro certificazione
+      * Progettazione e implementazione di un processo capace di garantire l’analisi delle diverse soluzioni di AI da adottare nella Pubblica Amministrazione, anche attraverso apposite convenzioni con enti dotati delle necessarie competenze
+      * Integrazione del processo di certificazione di sostenibilità etico-giuridica delle soluzioni di AI nei processi di procurement pubblico
+
+      #### Quando {#A17-quando}
+
+      1° trimestre 2020
+
+      #### Target {#A17-target}
+
+      Pubbliche Amministrazioni, Imprese
+  - titolo: Un anziano, un tablet e un sorriso per l’inclusione digitale
+    azione: A19
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A19-un-anziano-un-tablet.html
+    immagine: A19.jpg
+    descrizione_short: Per l'inclusione degli over 65 nel processo.
+    descrizione: |
+      #### Obiettivo {#A19-obiettivo}
+
+      Includere degli over 65 nel processo di trasformazione digitale, mettendo loro a disposizione un tablet personalizzato che gli permetta di accedere in modo semplice e intuitivo ai giornali online e ai servizi digitali della Pubblica Amministrazione.
+
+      #### Chi {#A19-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/); aziende private partner dell’iniziativa (testate news; produttori di tecnologia); associazioni no profit.
+
+      #### Come {#A19-come}
+
+      * Dialogo con associazioni no profit per la verifica del numero dei soggetti target e delle modalità di coinvolgimento
+      * Protocollo di intesa tra le testate giornalistiche e le aziende di tecnologia (ad oggi il progetto coinvolge Tim e La Stampa)
+      * Definizione del numero di tablet necessari e della loro distribuzione (ad oggi la distribuzione può contare sul progetto Rinascimento digitale di Tim)
+      * Definizione dell’accordo per l’accesso alle testate giornalistiche online (gratuito per il primo periodo, a prezzo concordato in una seconda fase)
+      * Definizione dei servizi digitali da inserire nel tablet (es. applicazione IO)
+      * Definizione della _task force_ di volontari per educare gli utenti nell’utilizzo del tablet e delle app
+      * Definizione dei servizi a supporto degli utenti (es. _call center_)
+      * Definizione del piano di distribuzione dei dispositivi
+      * Monitoraggio trimestrale del progetto
+
+      #### Quando {#A19-quando}
+
+      3° trimestre 2020
+
+      #### Target {#A19-target}
+
+      Cittadini (over 65 ad alto rischio di esclusione dalla trasformazione digitale)
+  - titolo: Repubblica Digitale
+    titolo_ext: "Repubblica Digitale: un hub di formazione sul futuro"
+    azione: A20
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A20-repubblica-digitale.html
+    immagine: A20.jpg
+    descrizione_short: Promuovere una serie di azioni di inclusione e cultura digitale.
+    descrizione: |
+      #### Obiettivo {#A20-obiettivo}
+
+      Combattere il divario digitale culturale presente nella popolazione italiana, in modo da sostenere la massima inclusione digitale e favorire l’educazione sulle tecnologie del futuro. Accompagnare il processo di trasformazione digitale con una serie di azioni di inclusione digitale finalizzate a abbattere ogni forma di divario digitale di carattere culturale.
+
+      #### Chi {#A20-chi}
+
+      [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), Pubbliche Amministrazioni, imprese partner dell’iniziativa, terzo settore
+
+      #### Come {#A20-come}
+
+      * Attivare, supportare, rafforzare, valorizzare iniziative locali e nazionali per lo sviluppo delle competenze per la cittadinanza digitale nei territori e nelle scuole legate al [Manifesto di Repubblica Digitale](https://innovazione.gov.it/it/repubblica-digitale/)
+      * Fornire ai cittadini gli strumenti di auto-sviluppo delle competenze digitali, con la realizzazione di una palestra digitale sul sito dell’iniziativa, dove condividere materiali realizzati nelle diverse iniziative come strumenti di supporto allo sviluppo delle competenze digitali
+      * Attivare, supportare, rafforzare, valorizzare iniziative locali e nazionali per _skilling_, _upskilling_ e _reskilling_
+      * Comunicare l’importanza delle competenze digitali e della cultura digitale, anche con la realizzazione di una iniziativa organica con Rai di divulgazione/diffusione attraverso il piano editoriale
+      * Monitorare l’evoluzione del fenomeno e l’efficacia delle politiche di intervento, anche tramite la costituzione di un osservatorio sulle competenze e il divario digitale.
+
+      #### Quando {#A20-quando}
+
+      Il progetto è in corso
+
+      #### Target {#A20-target}
+
+      Cittadini (in particolare popolazione colpita da _digital divide_ e con necessità di sviluppo delle competenze specialistiche sulle tecnologie emergenti)
+  - titolo: Identità digitale (reloaded)
+    azione: A2
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A02-identita-digitale.html
+    immagine: coming-soon.jpg
+    descrizione_short: Ogni cittadino deve disporre di un’identità digitale unica, gratuita, facile da usare, che gli permetta di identificarsi in maniera sicura e accedere a tutti i servizi digitali pubblici.
+    descrizione:
+  - titolo: Open innovation
+    titolo_ext: Open innovation nella Pubblica Amministrazione
+    azione: A6
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A06-open-innovation-pa.html
+    immagine: coming-soon.jpg
+    descrizione_short: Il progetto “PA - Porte Aperte all’innovazione” intende promuovere l’open innovation nell’amministrazione italiana.
+    descrizione:
+  - titolo: Procurement semplificato
+    titolo_ext: Procurement semplificato per l’innovazione
+    azione: A7
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A07-procurement-semplificato.html
+    immagine: coming-soon.jpg
+    descrizione_short: Ripensare il processo di procurement per le Pubbliche Amministrazioni centrali e locali per risolvere uno degli ostacoli principali alla digitalizzazione.
+    descrizione:
+  - titolo: Intelligenza artificiale al servizio dello Stato
+    azione: A8
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A08-intelligenza-artificiale.html
+    immagine: coming-soon.jpg
+    descrizione_short: Progettare, sviluppare e sperimentare soluzioni di intelligenza artificiale applicata ai procedimenti amministrativi e alla giustizia.
+    descrizione:
+  - titolo: Dati per le città del futuro
+    azione: A9
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A09-dati-per-le-citta.html
+    immagine: coming-soon.jpg
+    descrizione_short: Predisporre e promuovere la formalizzazione di un accordo quadro per la condivisione dei dati.
+    descrizione:
+  - titolo: Borghi del futuro
+    azione: A10
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A10-borghi-del-futuro.html
+    immagine: coming-soon.jpg
+    descrizione_short: Concentrare l’innovazione in piccoli centri per attirare altra innovazione.
+    descrizione:
+  - titolo: Innovazione bene comune
+    azione: A11
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A11-innovazione-bene-comune.html
+    immagine: coming-soon.jpg
+    descrizione_short: Definire gli asset strategici che possono essere un volano per la ricerca e sviluppo, sia all’interno del nostro Paese sia verso altri Paesi.
+    descrizione:
+  - titolo: Cross-Tech hub Italia
+    azione: A14
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A14-cross-tech-hub-italia.html
+    immagine: coming-soon.jpg
+    descrizione_short: Il contesto in cui si opera è importante nei processi di trasformazione. È necessario creare anche in Italia ambienti ad alto potenziale tecnologico e innovativo.
+    descrizione:
+  - titolo: MoonTransfer Fund & Missione Formare
+    azione: A15
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A15-moon-transfer-fund.html
+    immagine: coming-soon.jpg
+    descrizione_short: "5 grandi autentiche missioni, in cui giocare una parte del nostro Futuro: Mobilità, Robotica, AI, Cyber Security."
+    descrizione:
+  - titolo: Infrastrutture digitali
+    titolo_ext: Infrastrutture digitali condivise, sicure, affidabili e green
+    azione: A16
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A16-infrastrutture-digitali.html
+    immagine: coming-soon.jpg
+    descrizione_short: Sviluppare le infrastrutture digitali per garantire al nostro Paese e all’Europa l’autonomia tecnologica necessaria per il controllo dei nostri dati.
+    descrizione:
+  - titolo: Il sabato del futuro
+    azione: A18
+    link: https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/piano-d-azione/A18-il-sabato-del-futuro.html
+    immagine: coming-soon.jpg
+    descrizione_short: Provare a far innamorare i più giovani all’innovazione e accendere la loro passione per il futuro.
+    descrizione:
