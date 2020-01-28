@@ -49,25 +49,25 @@ Il Titolare acquisirà i dati personali eventualmente forniti dall’Utente attr
 Il Titolare acquisirà dati personali forniti volontariamente dall’Utente attraverso il Sito anche nel caso di candidature spontanee alle posizioni lavorative aperte pubblicate nel sito del team.
 In questo caso i dati personali sono forniti dall’Utente tramite un form per proporre la propria candidatura. L’invio dei dati contenuti nel curriculum saranno trattati, anche con l’ausilio di strumenti informatici, dal Dipartimento al solo fine di valutare la candidatura ed, eventualmente, di contattarti. L’Utente potrà domandare la cancellazione dei dati in qualsiasi momento, scrivendo a [dpo@innovazione.governo.it](mailto:dpo@innovazione.governo.it).
 
-### c) Cookies
+### c) Cookie
 
 {:.max-w-40}
-I cookies sono piccoli file di testo che i siti visitati inviano al terminale dell’Utente, dove vengono memorizzati, per poi essere ritrasmessi agli stessi siti alla visita successiva.
+I cookie sono piccoli file di testo che i siti visitati inviano al terminale dell’Utente, dove vengono memorizzati, per poi essere ritrasmessi agli stessi siti alla visita successiva.
 
 Il Sito utilizza:
 
 {:.max-w-40}
-*Cookies analytics utilizzati per raccogliere informazioni, in forma aggregata, sul numero degli Utenti e su come gli stessi visitano il Sito. Il Sito si avvale del servizio Google Analytics, la cui [cookie policy può essere visionata a questo link](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage){:target="_blank" rel="noopener noreferrer"}. Al fine di rispettare la privacy dei nostri Utenti, il servizio è utilizzato con la modalità “_anonymizeIp” che consente di mascherare gli indirizzi IP degli Utenti che navigano sul Sito internet: [maggiori informazioni sulla funzionalità](https://support.google.com/analytics/answer/2763052?hl=it){:target="_blank" rel="noopener noreferrer"}. I dati sono raccolti all’unico fine di elaborare informazioni statistiche sull’uso del Sito e per verificare il corretto funzionamento dello stesso. I cookies non sono utilizzati per attività di profilazione dell’Utente. Tali cookies vengono utilizzati dal Sito unicamente se l’Utente clicca sul cookie banner e vengono conservati per un periodo non superiore a 6 mesi dal momento della raccolta, salvo che la loro ulteriore conservazione non si renda necessaria per l’accertamento di reati. L’Utente può scegliere di disabilitare i cookies intervenendo sulle impostazioni del proprio browser di navigazione.
+* Cookie analytics utilizzati per raccogliere informazioni, in forma aggregata, sul numero degli Utenti e su come gli stessi visitano il Sito. Il Sito si avvale del servizio Google Analytics, la cui [cookie policy può essere visionata a questo link](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage){:target="_blank" rel="noopener noreferrer"}. Al fine di rispettare la privacy dei nostri Utenti, il servizio è utilizzato con la modalità “_anonymizeIp” che consente di mascherare gli indirizzi IP degli Utenti che navigano sul Sito internet: [maggiori informazioni sulla funzionalità](https://support.google.com/analytics/answer/2763052?hl=it){:target="_blank" rel="noopener noreferrer"}. I dati sono raccolti all’unico fine di elaborare informazioni statistiche sull’uso del Sito e per verificare il corretto funzionamento dello stesso. I cookie non sono utilizzati per attività di profilazione dell’Utente. Tali cookie vengono utilizzati dal Sito unicamente se l’Utente clicca sul cookie banner e vengono conservati per un periodo non superiore a 6 mesi dal momento della raccolta, salvo che la loro ulteriore conservazione non si renda necessaria per l’accertamento di reati. L’Utente può scegliere di disabilitare i cookie intervenendo sulle impostazioni del proprio browser di navigazione.
 
 {:.max-w-40}
-Un cookie per registrare il consenso dell’Utente all’utilizzo dei cookies analitici di cui sopra.
+* Un cookie per registrare il consenso dell’Utente all’utilizzo dei cookie analitici di cui sopra.
 
 {:.mt-5.max-w-40}
 ## Base giuridica del trattamento
 
 {:.max-w-40}
 La base giuridica di tale trattamento è da rinvenirsi nei compiti istituzionali affidati al Dipartimento, volti a favorire la conoscenza, lo sviluppo e la diffusione degli strumenti per l’attuazione dell’agenda digitale, nel caso specifico a fornire informazioni e aggiornamenti sull’attività e sui progetti della struttura stessa.
-La base giuridica del trattamento dei soli dati raccolti tramite cookies analitici è il consenso dell’Utente.
+La base giuridica del trattamento dei soli dati raccolti tramite cookie analitici è il consenso dell’Utente.
 
 {:.mt-5.max-w-40}
 ## Categorie di soggetti ai quali i dati personali possono essere comunicati e finalità della comunicazione
