@@ -29,3 +29,8 @@ Il gruppo di lavoro avrà **una durata prevista di tre mesi**, durante i quali p
 
 - i risultati dell’analisi;
 - una o più proposte concrete, tra cui eventuali misure correttive alla normativa attualmente prevista per contrastare l’odio online.
+
+
+{:.x-small.text-right}
+_Fotografia di [Mika Baumeister](https://unsplash.com/@mbaumi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/hate-speech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
+
