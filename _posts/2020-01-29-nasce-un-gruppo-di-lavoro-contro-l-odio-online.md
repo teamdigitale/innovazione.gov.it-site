@@ -17,7 +17,7 @@ _Siglato un decreto ministeriale per la nascita di un gruppo di lavoro con sedic
 
 Prima un’analisi approfondita delle cause dei fenomeni di odio online, poi la valutazione di possibili misure di contrasto, anche attraverso nuove proposte normative. Con questo scopo nasce il ”Gruppo di lavoro sul fenomeno dell’odio online”, istituito dal Ministro all’innovazione tecnologica e la digitalizzazione Paola Pisano, di concerto con il Ministero della Giustizia e il Dipartimento per l’Editoria della Presidenza del Consiglio, attraverso un decreto ministeriale firmato ieri sera dai Ministri Pisano e Bonafede e dal Sottosegretario della Presidenza del Consiglio Andrea Martella.
 
-“Ormai non c’è giorno senza cui non si registrino casi eclatanti di hate speech”, ha detto Paola Pisano a margine della firma. “Ho trovato aberrante il post antisemita contro la Senatrice Liliana Segre, proprio nel giorno della Memoria. Credo che la creazione di questo gruppo di lavoro sia un passo in avanti importante che testimonia l’attenzione che il Governo intende dare a un tema delicato. Ringrazio il Ministro Bonafede e il Sottosegretario Martella per avere prontamente aderito”.
+“Ormai non c’è giorno senza cui non si registrino casi eclatanti di hate speech”, ha detto Paola Pisano a margine della firma. “Credo che la creazione di questo gruppo di lavoro sia un passo in avanti importante che testimonia l’attenzione che il Governo intende dare a un tema delicato. Ringrazio il Ministro Bonafede e il Sottosegretario Martella per avere prontamente aderito”.
 
 ## Di che si tratta
 
