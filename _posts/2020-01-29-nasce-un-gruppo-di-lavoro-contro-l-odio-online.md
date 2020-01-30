@@ -23,7 +23,7 @@ Prima un’analisi approfondita delle cause dei fenomeni di odio online, poi la 
 
 Il Gruppo di lavoro sul fenomeno dell’odio online” sarà istituito presso l’Ufficio di Gabinetto del Ministro per l’innovazione tecnologica e la digitalizzazione e sarà coordinato dall’Avvocato Guido Scorza, esperto del Dipartimento per la trasformazione digitale, che si avvarrà della consulenza, a titolo gratuito, di sedici esperti esterni con diverse competenze sul mondo del digitale.
 
-Ne faranno parte i sociologi Stefano Epifani e Giovanni Boccia Altieri; i giornalisti Luca De Biase, Sonia Montegiove, Martina Pennisi, Anna Masera e Ilaria Sotis; lo scrittore Massimo Mantellini; l’avvocato Carlo Blengino; l’Ingegnere Juan Carlos De Martin; i docenti universitari Giovanni Ziccardi, Giovanna Cosenza e Sara Bentivegna; i creativi Paolo Iabichino e Rosy Russo; il ricercatore Walter Quattrociocchi.
+Ne faranno parte i sociologi Stefano Epifani e Giovanni Boccia Artieri; i giornalisti Luca De Biase, Sonia Montegiove, Martina Pennisi, Anna Masera e Ilaria Sotis; lo scrittore Massimo Mantellini; l’avvocato Carlo Blengino; l’Ingegnere Juan Carlos De Martin; i docenti universitari Giovanni Ziccardi, Giovanna Cosenza e Sara Bentivegna; i creativi Paolo Iabichino e Rosy Russo; il ricercatore Walter Quattrociocchi.
 
 Il gruppo di lavoro avrà **una durata prevista di tre mesi**, durante i quali potrà invitare a partecipare soggetti pubblici o privati al fine di acquisire informazioni e spunti. Al termine verrà stilata una relazione conclusiva, con: 
 
