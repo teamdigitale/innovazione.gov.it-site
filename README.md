@@ -70,4 +70,4 @@ Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/mar
 
 Per ogni Pull Request, GitHub (attraverso Netlify) crea automaticamente un ambiente di test compilando le modifiche presenti sul branch in lavorazione. Nella pagina dedicata alla Pull Request sarà quindi visibile un box con una serie di check che dovranno essere tutti verdi.
 
-L'ultimo di questi check è associato alla "deploy preview": una voltaa terminata la compilazione, cliccando su "details" sarà possibile avere un'anteprima del proprio lavoro.
+L'ultimo di questi check è associato alla "deploy preview": una volta terminata la compilazione, cliccando su "details" sarà possibile avere un'anteprima del proprio lavoro.
