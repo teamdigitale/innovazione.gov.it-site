@@ -51,6 +51,14 @@
     background-image: url($assets + "/images/backgrounds/jeremy-lapak-CVvFVQ_-oUg-unsplash.webp");
   }
 }
+.innovation-section-head--italia-2025 {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/cubos-italia-2025.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/cubos-italia-2025.webp");
+  }
+}
 
 // cittadini
 .innovation-section-cittadini--io {

@@ -7,7 +7,7 @@ description: La vision su cui stiamo aprendo i cantieri per l’Innovazione e la
 ref: missione
 child_of_ref: cosa-facciamo
 hide_child_of_ref: true
-order: 1
+order: 2
 no_site_toc: true
 intro: true
 fluid: true
@@ -38,7 +38,7 @@ fluid: true
 ## Missione
 
 {:.max-w-40}
-Il nostro piano d’azione “**[Italia 2025](https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/index.html)**” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
+Il nostro piano d’azione “[**Italia 2025**]({% link it/cosa-facciamo/italia-2025.md %})” punta a sviluppare e promuovere progetti chiave per l’innovazione e la trasformazione digitale del Paese.
 
 {:.max-w-40}
 Il piano si divide in tre sfide:
