@@ -19,7 +19,7 @@ redirect_from:
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-10 offset-lg-1">
-            <img class="img-fluid" alt="Avanzamento obiettivi Italia 2025" src="{{ site.baseurl }}/assets/images/italia-2025/avanzamento-obiettivi-italia-2025.jpg">
+            <img class="img-fluid" alt="Avanzamento obiettivi Italia 2025" src="{{ site.baseurl }}/assets/images/italia-2025/obiettivi-italia-2025.jpg">
         </div>
     </div>
 </div>
