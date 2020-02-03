@@ -9,7 +9,7 @@ ref: developers-italia
 logo: developers-italia.png
 child_of_ref: progetti
 project_url: https://developers.italia.it/
-dashboard_url:
+dashboard_url: https://dashboards.innovazione.gov.it/public/dashboard/3df334b2-5f1b-4f85-bf3d-b7611979b8f5
 people:
 no_site_toc: true
 order: 5
@@ -55,6 +55,8 @@ La possibilità di accedere al codice sorgente offre **maggiore trasparenza** e 
 {% if page.dashboard_url %}
 {:.mt-5.max-w-40}
 ## I dati
+
+I dati delle dashboard vengono aggiornati su base giornaliera.
 
 {% include dashboard.html %}
 {% endif %}
