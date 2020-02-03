@@ -8,7 +8,7 @@ ref: cie
 logo: cie.png
 child_of_ref: progetti
 project_url: https://www.cartaidentita.interno.gov.it/
-dashboard_url: https://dashboard.pdnd.italia.it/public/dashboard/e155f9b3-7624-4e62-8b29-25e9f7d6dad5
+dashboard_url: https://dashboards.innovazione.gov.it/public/dashboard/2cad5098-aa8a-453d-a3da-6a239ccef62c
 people: 
 no_site_toc: true
 order: 2
