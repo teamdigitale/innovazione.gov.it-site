@@ -254,10 +254,13 @@ $footer-bg-color: #3e5266;
   }
 }
 .card {
-  .overlay-wrapper .img-fluid {
-    max-height: 260px;
-    object-fit: cover;
+  .overlay-wrapper {
     width: 100%;
+    .img-fluid {
+      max-height: 260px;
+      object-fit: cover;
+      width: 100%;
+    }
   }
   &.card--disabled {
     filter: saturate(0);
