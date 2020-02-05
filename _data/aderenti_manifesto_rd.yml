@@ -310,3 +310,23 @@ aderenti_manifesto:
     links:
       - link_label: "edupuntozero.it"
         link_url: "https://edupuntozero.it/"
+  - name: Informatici senza frontiere
+    logo: "isf-logo.png"
+    links:
+      - link_label: "informaticisenzafrontiere.org"
+        link_url: "https://www.informaticisenzafrontiere.org/"
+  - name: Registro.it
+    logo: "registro-logo.png"
+    links:
+      - link_label: "nic.it"
+        link_url: "https://www.nic.it/it"
+  - name: DITEDI
+    logo: "ditedi-logo.png"
+    links:
+      - link_label: "ditedi.it"
+        link_url: "http://www.ditedi.it/"
+  - name: Mappina
+    logo: "mappina-logo.png"
+    links:
+      - link_label: "www.mappi-na.it"
+        link_url: "https://www.mappi-na.it/"
