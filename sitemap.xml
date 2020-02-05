@@ -133,12 +133,6 @@
 <loc>https://innovazione.gov.it/it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/hr-manager/</loc>
 </url>
 <url>
-<loc>https://innovazione.gov.it/it/chi-siamo/</loc>
-</url>
-<url>
-<loc>https://innovazione.gov.it/it/progetti/</loc>
-</url>
-<url>
 <loc>https://innovazione.gov.it/it/amministrazione-trasparente/selezione-del-personale/reclutamento-del-personale/lavora-con-noi/</loc>
 </url>
 <url>
@@ -166,7 +160,13 @@
 <loc>https://innovazione.gov.it/it/amministrazione-trasparente/</loc>
 </url>
 <url>
+<loc>https://innovazione.gov.it/it/progetti/</loc>
+</url>
+<url>
 <loc>https://innovazione.gov.it/it/cosa-facciamo/</loc>
+</url>
+<url>
+<loc>https://innovazione.gov.it/it/chi-siamo/</loc>
 </url>
 <url>
 <loc>https://innovazione.gov.it/</loc>
@@ -284,6 +284,6 @@
 </url>
 <url>
 <loc>https://innovazione.gov.it/assets/docs/MID_Book_2025.pdf</loc>
-<lastmod>2020-02-05T10:10:43+00:00</lastmod>
+<lastmod>2020-02-05T16:42:21+00:00</lastmod>
 </url>
 </urlset>
