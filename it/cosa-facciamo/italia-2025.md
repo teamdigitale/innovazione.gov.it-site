@@ -33,7 +33,7 @@ redirect_from:
 Stiamo sviluppando la strategia di innovazione Italia 2025. In questa pagina le azioni su cui abbiamo cominciato a lavorare e il loro stato di avanzamento.
 
 {:.max-w-40}
-“[Italia 2025](https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"}” si basa su **tre sfide principali**, identificate a partire [Obiettivi di sviluppo sostenibile](https://www.un.org/sustainabledevelopment/sustainable-development-goals/){:target="_blank" rel="noopener noreferrer"} (SDGs) delle Nazioni Unite. Le tre sfide sono:
+“[Italia 2025](https://innovazione.gov.it/assets/docs/MID_Book_2025.pdf)” si basa su **tre sfide principali**, identificate a partire [Obiettivi di sviluppo sostenibile](https://www.un.org/sustainabledevelopment/sustainable-development-goals/){:target="_blank" rel="noopener noreferrer"} (SDGs) delle Nazioni Unite. Le tre sfide sono:
 
 {:.mt-5.max-w-40}
 * **Una società digitale**, dove i servizi mettono al centro i cittadini e le imprese, sono efficienti, facili da usare e da integrare. Un obiettivo per far diventare la digitalizzazione un motore di sviluppo per tutto il Paese e ripensare il rapporto tra lo Stato e le persone.
