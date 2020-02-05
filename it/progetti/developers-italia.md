@@ -56,8 +56,6 @@ La possibilità di accedere al codice sorgente offre **maggiore trasparenza** e 
 {:.mt-5.max-w-40}
 ## I dati
 
-I dati delle dashboard vengono aggiornati su base giornaliera.
-
 {% include dashboard.html %}
 {% endif %}
 
