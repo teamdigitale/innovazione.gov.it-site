@@ -9,7 +9,7 @@ ref: spid
 logo: spid.png
 no_site_toc: true
 child_of_ref: progetti
-dashboard_url: https://dashboard.pdnd.italia.it/public/dashboard/91369902-9c46-42e9-94c6-1a8b1c92d6c4
+dashboard_url: https://dashboards.innovazione.gov.it/public/dashboard/5479676b-6413-4281-9e3f-03d10aa4b5f2
 order: 6
 categories:
  - pubblica amministrazione
