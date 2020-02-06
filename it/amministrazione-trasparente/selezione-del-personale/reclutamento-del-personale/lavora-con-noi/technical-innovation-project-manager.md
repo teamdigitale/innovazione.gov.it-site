@@ -54,14 +54,10 @@ generare innovazione stessa a beneficio del cittadino e delle imprese.
     Scrum, Kanban, JIRA costituirà un *plus*
 -   Padronanza degli strumenti di lavoro per la creazione di
     presentazioni e fogli di calcolo
-
-## Formazione richiesta
-
--   Laurea in Discipline Scientifiche (Ingegneria, Informatica o affine)
-    o Economiche (Economia e Commercio o affine) con almeno 5 anni di
-    esperienza, oppure 7 in assenza di laurea. Ambiti preferenziali di
-    esperienza riguardano lo sviluppo e gestione di progetti innovativi
-    sia legati a tecnologie emergenti e piattaforme digitali che legati
-    ai contesti dell'imprenditoria e *startup*, della formazione,
-    dell'università e della ricerca e della Pubblica Amministrazione.
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, non inferiore a
+5 anni, acquisita nella gestione di progetti di innovazione.
+

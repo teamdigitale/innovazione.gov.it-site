@@ -53,12 +53,11 @@ tecnica e scientifica.
     analitiche e capacità di comunicare chiaramente concetti complessi
 -   Esperienza nel gestire team multi-disciplinari composti da figure
     eterogenee
-
-## Formazione richiesta
-
--   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
-    esperienza nella gestione dello sviluppo di piattaforme digitali,
-    applicazioni *web* e *mobile*, oppure, in assenza di laurea, almeno
-    7 anni di esperienza nella gestione dello sviluppo di piattaforme
-    digitali, applicazioni *web* e *mobile*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, non inferiore a
+5 anni, acquisita nel coordinamento di team eterogenei di sviluppatori, UX/UI e content
+designer per l’ideazione, la realizzazione e la fornitura di piattaforme digitali complesse
+incentrate sui bisogni degli utenti.

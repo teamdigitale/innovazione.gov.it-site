@@ -66,13 +66,11 @@ risultati.
 -   Eccellente pensiero critico, doti comunicative, capacità di
     individuare, analizzare e risolvere i problemi
 -   Comprovata esperienza nel gestire e fare da mentore a un team
+-   Ottima conoscenza della lingua inglese
 
-## Formazione richiesta
+## Esperienza richiesta
 
--   Laurea in Comunicazione o Marketing o, in generale,di tipo
-    Magistrale affine alle esigenze del ruolo, con almeno 9 anni di
-    rilevante esperienza in una struttura, preferibilmente privata,
-    all’interno del settore comunicazione e *marketing* o, in assenza di
-    laurea, almeno 11 anni di rilevante e comprovata analoga esperienza
-    nel settore comunicazione e *marketing* di un’azienda.
--   Ottima conoscenza della lingua inglese.
+Esperti in possesso di comprovata esperienza, non inferiore a 9 anni, nella gestione della
+comunicazione e delle strategie di marketing/promozione, nelle relazioni pubbliche e con i
+cittadini, i media e le istituzioni nonché nella comunicazione dell’innovazione, in ambito ICT
+e digitale.

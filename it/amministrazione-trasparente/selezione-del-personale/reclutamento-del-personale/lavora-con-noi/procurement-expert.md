@@ -48,20 +48,13 @@ all’interno della Pubblica Amministrazione.
 -   Eccellente pensiero critico e capacità di *problem solving*
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     professionisti
+-   Ottima conoscenza della lingua inglese
 
-## Formazione richiesta
+## Esperienza richiesta
 
--   Laurea in Giurisprudenza, Economia o affine, con almeno 5 anni di
-    comprovata esperienza nel *procurement* di servizi tecnologici
-    all’interno della Pubblica Amministrazione, e con una profonda
-    conoscenza della normativa nazionale ed europea in materia, nonché
-    delle *best practices* a livello europeo volte ad innovare
-    l’acquisto di servizi di sviluppo tecnologico all’interno della
-    Pubblica Amministrazione, o, in assenza di laurea, almeno 7 anni di
-    comprovata esperienza nel *procurement* di servizi tecnologici
-    all’interno della Pubblica Amministrazione, e con una profonda
-    conoscenza della normativa nazionale ed europea in materia, nonché
-    delle *best practices* a livello europeo volte ad innovare
-    l’acquisto di servizi di sviluppo tecnologico all’interno della
-    Pubblica Amministrazione
--   Ottima conoscenza della lingua Inglese
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni nel procurement di
+servizi tecnologici all’interno della pubblica amministrazione, e con una profonda conoscenza
+della normativa nazionale ed europea in materia, nonché delle best practices a livello europeo
+volte ad innovare l’acquisto di servizi di sviluppo tecnologico all’interno della pubblica
+amministrazione.
+

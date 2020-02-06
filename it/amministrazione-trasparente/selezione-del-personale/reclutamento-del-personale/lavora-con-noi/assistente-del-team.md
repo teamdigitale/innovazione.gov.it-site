@@ -53,10 +53,11 @@ Il candidato ideale dovrà, inoltre, supportare l’assistente tecnico nel:
 -   Comprovata esperienza nel muoversi e operare in situazioni in divenire
 -   Comprovata esperienza di successo nel lavoro per obiettivi e nel
     raggiungimento degli stessi
-
-## Formazione richiesta
-
--   Laurea in una disciplina quantitativa (preferenza in Informatica ma
-    qualsiasi tipo di disciplina è ben accetta)
--   Studi e/o occasioni di lavoro internazionale
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza acquisita nell’implementazione di processi volti
+a garantire l'effettiva realizzazione delle attività programmate, individuando e analizzando le
+migliori pratiche e le soluzioni più innovative in ambito tecnologico, con specifico
+riferimento a quelle che possono rappresentare opportunità strategiche per l'Agenda digitale.

@@ -49,12 +49,10 @@ ed implementazione di *API*.
     concetti complessi in maniera chiara
 -   Esperienza nella *leadership*, direzione e *mentorship* per un team
     di ingegneri software
-
-## Formazione richiesta
-
--   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
-    esperienza in *API testing* e *API development*, tecnologie *cloud*,
-    e in *data management/query* oppure, in assenza di laurea, almeno 7
-    anni di esperienza in *API testing* e *API development*, tecnologie
-    *cloud*, e in *data management/query*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, in API testing e API
+development, protocolli cloud, e in data management/query, nonché nella progettazione,
+sviluppo ed implementazione su larga scala di framework basati su API.

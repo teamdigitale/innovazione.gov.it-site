@@ -27,8 +27,10 @@ I profili dovranno avere una forte attenzione ai risultati, non solo per i patte
 -   Esperienza con *framework* di *machine learning* e *deep learning* quali Pytorch, TensorFlow, Keras, Sci-Kit Learn, Apache Spark ML lib
 -   Eccellenti doti di *debugging*, pensiero critico e comunicazione
 -   Esperienza nella *leadership*, direzione e *mentorship* per un team di ingegneri software
-
-## Formazione richiesta
-
--   Laurea in Ingegneria, Informatica o affine con almeno 3 anni di esperienza come *Machine Learning Data Scientist* oppure, in assenza di laurea, almeno 5 anni di esperienza come *Machine Learning Data Scientist*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 3 anni, nella valutazione e nel
+coordinamento di progetti caratterizzati da un uso innovativo di dati e tecnologie digitali.
+

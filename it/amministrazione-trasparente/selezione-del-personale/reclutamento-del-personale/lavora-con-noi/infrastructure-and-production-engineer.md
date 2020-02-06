@@ -76,10 +76,12 @@ molto forte.
     tradizionali (Gantt) e agili (Scrum o Kanban)
 -   Atteggiamento fortemente motivato, orientato all’innovazione, curioso
     e aperto
-
-## Formazione richiesta
-
--   Laurea magistrale in Informatica o affine con almeno 5 anni di
-    esperienza nell’industria IT, o, in assenza di laurea, almeno 7 anni
-    di esperienza nell’industria IT
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nella valutazione e nella
+supervisione dello sviluppo di piattaforme digitali e della gestione di infrastrutture applicative
+in ambiente cloud, nonché nella costruzione e gestione di infrastrutture IT complesse.
+
+

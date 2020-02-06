@@ -50,11 +50,12 @@ impatto positivo sulle vite delle persone.
 -   Eccellenti doti comunicative, interpersonali e analitiche e capacità
     di comunicare chiaramente concetti complessi
 -   Autonomia nel portare a termine lo sviluppo completo del progetto
-
-## Formazione richiesta
-
--   Laurea o Master in Design o affine con almeno 5 anni di esperienza
-    in *design* di servizi e ricerca applicata; in assenza di laurea,
-    almeno 7 anni di esperienza in *design* dei servizi e ricerca
-    applicata
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nelle attività di user research e di
+analisi e progettazione di servizi complessi che tengano in considerazione l’interazione delle
+diverse tipologie di utenti e touchpoint digitali coinvolti. Il lavoro del Service Designer sarà
+propedeutico alla fase di definizione e implementazione dei servizi pubblici digitali realizzati
+dalla struttura commissariale e dalle Pubbliche Amministrazioni.

@@ -52,11 +52,10 @@ piattaforme digitali su larga scala e ad alta affidabilità.
 -   Esperienza nell’analisi forensica ed aspetti legali della
     criminalità informatica
 -   Formazione nel settore della sicurezza informatica
-
-## Formazione richiesta
-
--   Laurea in Informatica o affine con almeno 7 anni di solida
-    esperienza in *security* e *cybersecurity* per piattaforme digitali
-    oppure, in assenza di laurea, almeno 9 anni di solida esperienza in
-    *security* e *cybersecurity* per piattaforme digitali
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 7 anni, nell’individuazione e
+risoluzione di problemi di sicurezza all’interno di piattaforme digitali su larga scala e ad alta
+affidabilità.

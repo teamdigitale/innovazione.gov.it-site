@@ -65,12 +65,10 @@ esecuzione e di analisi dei risultati.
     revisione e/o traduzione dei contenuti
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     comunicatori e partecipare alle comunità tecniche
-
-## Formazione richiesta
-
--   Laurea in Comunicazione, Giornalismo o ambito similare, con almeno 7
-    anni di rilevante esperienza in una redazione o in un ufficio stampa
-    di azienda o agenzia di pubbliche relazioni, o, in assenza di
-    laurea, almeno 9 anni di rilevante esperienza in una redazione o in
-    ufficio stampa o agenzia di pubbliche relazioni
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 7 anni, nelle relazioni pubbliche
+e con i cittadini, i media e le istituzioni nonché nella comunicazione dell’innovazione, in
+ambito ICT e digitale .

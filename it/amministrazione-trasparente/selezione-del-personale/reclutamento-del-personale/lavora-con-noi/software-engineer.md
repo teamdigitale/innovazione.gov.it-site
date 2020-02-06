@@ -42,11 +42,9 @@ sviluppate in precedenza.
 -   Atteggiamento fortemente motivato, orientato ai risultati, curioso e
     aperto
 -   Esperienza nel gestire squadre di sviluppatori software
-
-## Formazione richiesta
-
--   Laurea in Informatica o affine con almeno 3 anni di esperienza in
-    ambienti di sviluppo di piattaforme digitali, *Mobile* e *App*,
-    oppure, in assenza di laurea, almeno 5 anni di esperienza in
-    ambienti di sviluppo di piattaforme digitali, *Mobile* e *App*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 3 anni, nello sviluppo di
+applicazioni web e mobile e progetti digitali.

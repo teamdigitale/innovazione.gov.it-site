@@ -56,15 +56,11 @@ tecnica e *contributor* di progetti *open source*.
     *codebase* quali GitHub
 -   Eccellenti doti comunicative, di presentazione, interpersonali,
     analitiche e abilità di comunicare chiaramente concetti complessi
-
-## Formazione richiesta
-
--   Laurea in Informatica o affine con almeno 5 anni di esperienza in
-    ingegneria del *software*, sviluppo di applicazioni *mobile* e
-    *web*, *open software* e *API*, nell’uso di Github e strumenti
-    affini per canali di condivisione di *open software* oppure, in
-    assenza di laurea, almeno 7 anni di esperienza in ingegneria del
-    *software*, sviluppo di applicazioni *mobile* e *web*, *open source
-    software* e *API*, nell’uso di Github e strumenti affini per canali
-    di condivisione di *open source software*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nel costruire relazioni,
+programmi di formazione e supporto alle comunità di sviluppatori con una forte esperienza
+tecnica e di contributo su software open source per rendere di successo lo sviluppo di
+applicazioni web e mobile e piattaforme digitali.

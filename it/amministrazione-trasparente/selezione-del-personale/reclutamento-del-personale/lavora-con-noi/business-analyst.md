@@ -44,10 +44,12 @@ trasformazione digitale.
     aperto
 -   Eccellenti doti comunicative, di presentazione, interpersonali e
     analitiche e capacità di comunicare chiaramente concetti complessi
-
-## Formazione richiesta
-
--   Laurea in Economia, Ingegneria, Matematica o affine con almeno 5
-    anni di esperienza in *business analysis* oppure, in assenza di
-    laurea, almeno 7 anni di esperienza in *business analysis*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nella ricerca,
+modellizzazione, analisi e visualizzazione di dati economico/finanziari e di processo da
+utilizzare per la risoluzione di problemi complessi maturata nell’ambito di progetti e
+programmi tecnologici.
+

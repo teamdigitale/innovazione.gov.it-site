@@ -63,11 +63,13 @@ sviluppo *open source* e nelle comunità collaborative.
 -   Eccellenti doti di comunicazione, presentazione, relazione
     interpersonale, ragionamento analitico, capacità di comunicare
     concetti complessi in maniera chiara
-
-## Formazione richiesta
-
--   Laurea in Ingegneria, Informatica o affine con almeno 5 anni di
-    esperienza come contributore o *maintainer* di progetti *open
-    source* oppure, in assenza di laurea, almeno 7 anni di esperienza
-    come contributore o *maintainer* di progetti *open source*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, come contributore o
+maintainer di progetti open source per coordinare e dirigere lo sviluppo di diversi progetti
+open source pubblicati sulla piattaforma Developers Italia nonché di gestire la relazione con le
+Pubbliche Amministrazioni e la comunità degli sviluppatori disposti a contribuire alla
+piattaforma.
+

@@ -57,15 +57,12 @@ dei servizi digitali, e con la capacità di gestire e coordinare team.
 -   Eccellente pensiero critico e capacità di *problem solving*
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     professionisti
-
-## Formazione Richiesta
-
--   MBA o Laurea in Informatica o in discipline quantitative o similari,
-    oppure Laurea in Relazioni Internazionali o similare con almeno 5
-    anni di rilevante esperienza in relazioni e collaborazioni con
-    l’Unione Europea, gli organismi internazionali e altri uffici
-    digitali di governi in altri Paesi del mondo oppure, in assenza di
-    laurea, almeno 7 anni di rilevante esperienza con l’UE, con
-    organismi internazionali e con altri uffici digitali di governi in
-    altri Paesi del mondo
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza Richiesta
+
+Esperto in possesso di comprovata esperienza, non inferiore a 5 anni, acquisita a livello
+internazionale nelle relazioni con l’Unione Europea, le organizzazioni internazionali e con gli
+altri uffici deputati al digitale di Governi stranieri, relativamente allo sviluppo dei servizi
+pubblici digitali, sia in termini di definizione delle strategie digitali sia di realizzazione
+normativa, operativa e tecnologica.

@@ -40,19 +40,11 @@ reportistica.
 -   Eccellente pensiero critico e capacità di *problem solving*
 -   Comprovata esperienza nel gestire e fare da mentore a team di
     professionisti
+-   Ottima conoscenza della lingua inglese
 
-## Formazione richiesta
+## Esperienza richiesta
 
--   Laurea in Scienze Politiche, Relazioni Internazionali,
-    Giurisprudenza, Economia o affine, con almeno 5 anni di esperienza
-    nell’assistenza tecnica per la progettazione di azioni finanziate da
-    fondi comunitari nonché nella gestione e rendicontazione di progetti
-    finanziati con Fondi Strutturali (FSER/FSE), maturata anche presso
-    le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o
-    regionale, o, in assenza di laurea, almeno 7 anni di esperienza
-    nell’assistenza tecnica per la progettazione di azioni finanziate da
-    fondi europei nonché nella gestione e rendicontazione di progetti
-    finanziati con Fondi Strutturali (FSER/FSE), maturata anche presso
-    le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o
-    regionale
--   Ottima conoscenza della lingua Inglese
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni nell’assistenza tecnica
+per la progettazione di azioni finanziate da fondi comunitari nonché nella gestione e
+rendicontazione di progetti finanziati con Fondi Strutturali (FSER/FSE), maturata anche
+presso le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o regionale.
