@@ -52,3 +52,6 @@ Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, 
 5 anni, acquisita nella gestione di progetti di sviluppo di applicazioni web e mobile e
 piattaforme digitali.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Technical Project Manager-signed.pdf %})

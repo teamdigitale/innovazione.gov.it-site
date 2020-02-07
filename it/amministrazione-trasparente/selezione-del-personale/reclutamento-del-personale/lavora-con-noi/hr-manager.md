@@ -55,3 +55,7 @@ dinamico, snello e stimolante.
 Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nel reclutamento di
 talenti manageriali tecnologici e nel disegno ed implementazione di processi e schemi
 organizzativi tali da garantire un ambiente di lavoro dinamico, snello e stimolante.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/HR Manager-signed.pdf %})

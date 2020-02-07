@@ -61,3 +61,7 @@ Esperti in possesso di comprovata esperienza acquisita nell’implementazione di
 a garantire l'effettiva realizzazione delle attività programmate, individuando e analizzando le
 migliori pratiche e le soluzioni più innovative in ambito tecnologico, con specifico
 riferimento a quelle che possono rappresentare opportunità strategiche per l'Agenda digitale.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Assistente del Team-signed.pdf %})

@@ -58,3 +58,6 @@ della normativa nazionale ed europea in materia, nonché delle best practices a 
 volte ad innovare l’acquisto di servizi di sviluppo tecnologico all’interno della pubblica
 amministrazione.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Procurement expert-signed.pdf %})

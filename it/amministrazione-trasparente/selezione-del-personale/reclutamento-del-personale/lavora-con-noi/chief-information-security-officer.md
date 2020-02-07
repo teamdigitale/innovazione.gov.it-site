@@ -54,3 +54,6 @@ Esperti in possesso di comprovata esperienza, non inferiore a 7 anni, nella valu
 supervisione delle infrastrutture, processi e pratiche di cybersecurity e security all’interno
 delle piattaforme digitali.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Chief information security officer-signed.pdf %})

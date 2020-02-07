@@ -74,3 +74,7 @@ Esperti in possesso di comprovata esperienza, non inferiore a 9 anni, nella gest
 comunicazione e delle strategie di marketing/promozione, nelle relazioni pubbliche e con i
 cittadini, i media e le istituzioni nonché nella comunicazione dell’innovazione, in ambito ICT
 e digitale.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Responsabile immagine e promozione-signed.pdf %})

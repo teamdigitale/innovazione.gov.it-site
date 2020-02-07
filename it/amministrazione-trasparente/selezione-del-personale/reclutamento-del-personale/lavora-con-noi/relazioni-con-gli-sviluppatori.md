@@ -64,3 +64,7 @@ Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nel costru
 programmi di formazione e supporto alle comunità di sviluppatori con una forte esperienza
 tecnica e di contributo su software open source per rendere di successo lo sviluppo di
 applicazioni web e mobile e piattaforme digitali.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperti in relazioni con gli sviluppatori-signed.pdf %})

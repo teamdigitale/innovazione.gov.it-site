@@ -57,3 +57,6 @@ essere in grado di:
 Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nella valutazione e nella
 supervisione del disegno e dei contenuti per applicazioni web e mobile e piattaforme digitali.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Content designer-signed.pdf %})

@@ -34,3 +34,6 @@ I profili dovranno avere una forte attenzione ai risultati, non solo per i patte
 Esperti in possesso di comprovata esperienza, non inferiore a 3 anni, nella valutazione e nel
 coordinamento di progetti caratterizzati da un uso innovativo di dati e tecnologie digitali.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Data scientist-signed.pdf %})

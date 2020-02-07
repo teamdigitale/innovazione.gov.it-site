@@ -53,3 +53,6 @@ modellizzazione, analisi e visualizzazione di dati economico/finanziari e di pro
 utilizzare per la risoluzione di problemi complessi maturata nell’ambito di progetti e
 programmi tecnologici.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Business analyst-signed.pdf %})

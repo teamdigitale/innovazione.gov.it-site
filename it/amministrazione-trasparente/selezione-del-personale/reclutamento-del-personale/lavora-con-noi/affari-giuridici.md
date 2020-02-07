@@ -62,3 +62,6 @@ amministrativi con particolare riferimento alle materie dell’informatica giuri
 privacy, della proprietà intellettuale, del commercio elettronico, dell’e-procurement,
 dell’amministrazione digitale e dell’e-gov.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Affari giuridici-signed.pdf %})

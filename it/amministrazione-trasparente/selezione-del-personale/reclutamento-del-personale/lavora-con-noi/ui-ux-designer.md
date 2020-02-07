@@ -62,3 +62,7 @@ portfolio di prodotti contenente web app single-page/headless, siti mobile-first
 applicazioni ibride e native che valuterà e, in molto casi, supervisionerà la
 concettualizzazione, il design e il miglioramento continuo delle interfacce utente di
 applicazioni mobile e web.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/UI_UX Designer-signed.pdf %})

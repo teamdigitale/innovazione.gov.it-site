@@ -61,3 +61,7 @@ Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, 
 5 anni, acquisita nel coordinamento di team eterogenei di sviluppatori, UX/UI e content
 designer per l’ideazione, la realizzazione e la fornitura di piattaforme digitali complesse
 incentrate sui bisogni degli utenti.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Service Owner-signed.pdf %})

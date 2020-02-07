@@ -48,3 +48,7 @@ Esperti in possesso di comprovata esperienza, non inferiore a 5 anni nell’assi
 per la progettazione di azioni finanziate da fondi comunitari nonché nella gestione e
 rendicontazione di progetti finanziati con Fondi Strutturali (FSER/FSE), maturata anche
 presso le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o regionale.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperti in progettazione bandi europei-signed.pdf %})

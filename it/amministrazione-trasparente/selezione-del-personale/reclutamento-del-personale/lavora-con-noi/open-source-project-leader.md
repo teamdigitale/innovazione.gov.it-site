@@ -73,3 +73,6 @@ open source pubblicati sulla piattaforma Developers Italia nonché di gestire la
 Pubbliche Amministrazioni e la comunità degli sviluppatori disposti a contribuire alla
 piattaforma.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Open Source Project Leader-signed.pdf %})

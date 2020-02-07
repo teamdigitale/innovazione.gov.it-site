@@ -48,3 +48,7 @@ sviluppate in precedenza.
 
 Esperti in possesso di comprovata esperienza, non inferiore a 3 anni, nello sviluppo di
 applicazioni web e mobile e progetti digitali.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Software engineer-signed.pdf %})

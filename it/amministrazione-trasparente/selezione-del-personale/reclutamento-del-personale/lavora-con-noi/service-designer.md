@@ -59,3 +59,7 @@ analisi e progettazione di servizi complessi che tengano in considerazione l’i
 diverse tipologie di utenti e touchpoint digitali coinvolti. Il lavoro del Service Designer sarà
 propedeutico alla fase di definizione e implementazione dei servizi pubblici digitali realizzati
 dalla struttura commissariale e dalle Pubbliche Amministrazioni.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Service Designer-signed.pdf %})

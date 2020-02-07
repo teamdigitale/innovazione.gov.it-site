@@ -59,3 +59,7 @@ piattaforme digitali su larga scala e ad alta affidabilità.
 Esperti in possesso di comprovata esperienza, non inferiore a 7 anni, nell’individuazione e
 risoluzione di problemi di sicurezza all’interno di piattaforme digitali su larga scala e ad alta
 affidabilità.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Security Engineer-signed.pdf %})

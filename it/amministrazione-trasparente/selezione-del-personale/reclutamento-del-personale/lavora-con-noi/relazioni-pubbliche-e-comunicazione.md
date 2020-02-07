@@ -71,4 +71,9 @@ esecuzione e di analisi dei risultati.
 
 Esperti in possesso di comprovata esperienza, non inferiore a 7 anni, nelle relazioni pubbliche
 e con i cittadini, i media e le istituzioni nonché nella comunicazione dell’innovazione, in
-ambito ICT e digitale .
+ambito ICT e digitale.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Relazioni pubbliche e comunicazione-signed.pdf %})
+

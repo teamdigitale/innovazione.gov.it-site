@@ -84,4 +84,6 @@ Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nella valu
 supervisione dello sviluppo di piattaforme digitali e della gestione di infrastrutture applicative
 in ambiente cloud, nonché nella costruzione e gestione di infrastrutture IT complesse.
 
+## Documentazione
 
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Infrastructure_Production Engineer-signed.pdf %})

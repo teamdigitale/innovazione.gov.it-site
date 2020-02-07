@@ -66,3 +66,7 @@ internazionale nelle relazioni con l’Unione Europea, le organizzazioni interna
 altri uffici deputati al digitale di Governi stranieri, relativamente allo sviluppo dei servizi
 pubblici digitali, sia in termini di definizione delle strategie digitali sia di realizzazione
 normativa, operativa e tecnologica.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperto in collaborazioni internazionali-signed.pdf %})

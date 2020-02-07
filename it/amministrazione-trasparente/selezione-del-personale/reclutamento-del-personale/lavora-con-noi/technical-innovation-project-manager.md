@@ -61,3 +61,6 @@ generare innovazione stessa a beneficio del cittadino e delle imprese.
 Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, non inferiore a
 5 anni, acquisita nella gestione di progetti di innovazione.
 
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Technical Innovation Project Manager-signed.pdf %})

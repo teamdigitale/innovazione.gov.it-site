@@ -56,3 +56,7 @@ ed implementazione di *API*.
 Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, in API testing e API
 development, protocolli cloud, e in data management/query, nonché nella progettazione,
 sviluppo ed implementazione su larga scala di framework basati su API.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/API Expert-signed.pdf %})
