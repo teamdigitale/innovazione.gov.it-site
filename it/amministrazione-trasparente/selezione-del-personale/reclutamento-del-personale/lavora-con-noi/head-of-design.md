@@ -34,8 +34,14 @@ Le sue principali responsabilità saranno:
 -   Autonomia nel portare a termine la progettazione completo di progetti
 -   Forte cultura del servizio e approccio etico al lavoro
 -   Una solida conoscenza operativa del design online e offline, dello sviluppo del marchio e del processo creativo
-
-## Formazione richiesta
-
--   Laurea o Master in Design, Ingegneria, Informatica, Design, Marketing, o affine con almeno 7 anni di esperienza in design di servizi e ricerca applicata; in assenza di laurea, almeno 9 anni di esperienza in design dei servizi e ricerca applicata
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di consolidate competenze tecnologiche e manageriali e di significativa
+esperienza, non inferiore a 7 anni, nell’ideazione e nella direzione di prodotti e/o servizi
+digitali all’interno di ecosistemi complessi, e nella relativa comunicazione.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Head of Design-signed.pdf %})

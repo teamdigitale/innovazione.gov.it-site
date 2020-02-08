@@ -52,18 +52,16 @@ commercio elettronico, *e-procurement*, amministrazione digitale e
 -   Forte conoscenza delle relazioni istituzionali nazionali ed europee
     nell’ambito dell’*ICT* ed elevata attitudine nella redazione di
     documenti istituzionali e *drafting* di atti normativi
-
-## Formazione richiesta
-
--   Laurea in Legge, Informatica giuridica e diritto delle nuove
-    tecnologie (o titoli e specializzazioni accademiche equivalenti) con
-    almeno 4 anni di rilevante esperienza maturata nel settore pubblico
-    e/o nel privato, nel diritto dell’informatica e delle nuove
-    tecnologie nonché nel diritto alla *privacy*, della proprietà
-    intellettuale e delle materie giuridiche connesse
-    all’*e-procurement*, oppure, in assenza di laurea, almeno 6 anni di
-    rilevante esperienza maturata nel settore pubblico e/o nel privato,
-    nel diritto dell’informatica e delle nuove tecnologie nonché nel
-    diritto alla *privacy*, della proprietà intellettuale e delle
-    materie giuridiche connesse all’*e-procurement*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 4 anni, nell’analisi di norme,
+politiche e strategie pubbliche per la crescita digitale, nonché nell’analisi dei processi
+amministrativi con particolare riferimento alle materie dell’informatica giuridica, della
+privacy, della proprietà intellettuale, del commercio elettronico, dell’e-procurement,
+dell’amministrazione digitale e dell’e-gov.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Affari giuridici-signed.pdf %})

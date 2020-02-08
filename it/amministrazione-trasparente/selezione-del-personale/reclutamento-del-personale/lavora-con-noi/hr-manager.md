@@ -48,13 +48,14 @@ dinamico, snello e stimolante.
     di comunicare chiaramente concetti complessi
 -   Autonomia nel portare a termine lo sviluppo completo di progetti
     complessi
-
-## Formazione richiesta
-
--   Laurea o Master o affine con almeno 5 anni di esperienza come *hr
-    manager* in *startup* o grandi aziende tecnologiche, nel
-    reclutamento di talenti manageriali tecnologici; oppure, in assenza
-    di laurea, almeno 7 anni di esperienza come *hr manager* in
-    *startup* o grandi aziende tecnologiche, nel reclutamento di talenti
-    manageriali tecnologici
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nel reclutamento di
+talenti manageriali tecnologici e nel disegno ed implementazione di processi e schemi
+organizzativi tali da garantire un ambiente di lavoro dinamico, snello e stimolante.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/HR Manager-signed.pdf %})

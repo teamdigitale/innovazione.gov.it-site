@@ -53,11 +53,16 @@ impatto positivo sulle vite delle persone.
 -   Autonomia nel portare a termine interfacce ed esperienze complete
     cross-dispositivo, con capacità di dialogo con l’area di sviluppo ed
     il project management
-
-## Formazione richiesta
-
--   Laurea o Master in Design, Ingegneria, Informatica o affine con
-    almeno 5 anni di esperienza in *UI/UX design* (non solo *graphic
-    design*) oppure, in assenza di laurea, almeno 7 anni di esperienza
-    in *UI/UX design* (non solo *graphic design*)
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, come UI/UX designer con un
+portfolio di prodotti contenente web app single-page/headless, siti mobile-first responsive,
+applicazioni ibride e native che valuterà e, in molto casi, supervisionerà la
+concettualizzazione, il design e il miglioramento continuo delle interfacce utente di
+applicazioni mobile e web.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/UI_UX Designer-signed.pdf %})

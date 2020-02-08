@@ -44,12 +44,14 @@ tecnica e scientifica.
     aperto
 -   Eccellenti doti comunicative, di presentazione, interpersonali e
     analitiche e capacità di comunicare chiaramente concetti complessi
-
-## Formazione richiesta
-
--   Laurea in Ingegneria, Informatica o affine con almeno 3 anni di
-    esperienza nella gestione dello sviluppo di piattaforme digitali,
-    applicazioni *web* e *mobile*, oppure, in assenza di laurea, almeno
-    5 anni di esperienza nella gestione dello sviluppo di piattaforme
-    digitali, applicazioni *web* e *mobile*
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, non inferiore a
+5 anni, acquisita nella gestione di progetti di sviluppo di applicazioni web e mobile e
+piattaforme digitali.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Technical Project Manager-signed.pdf %})

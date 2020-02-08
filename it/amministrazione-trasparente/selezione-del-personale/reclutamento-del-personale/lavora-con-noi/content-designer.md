@@ -50,14 +50,13 @@ essere in grado di:
     interlocutori e ai vari livelli dell’organizzazione
 -   Comprovata esperienza nel gestire e fare da mentore a squadre di
     ideatori di contenuto
-
-## Formazione richiesta
-
--   Laurea in *Design/HCI* o affine con almeno 5 anni di rilevante
-    esperienza nell’ideazione di contenuti per applicazioni *web* e
-    *mobile* e con un portfolio di lavori comprovante la propria
-    esperienza oppure, in assenza di laurea, almeno 7 anni di rilevante
-    esperienza nell’ideazione di contenuti per applicazioni *web* e
-    *mobile* e con un portfolio di lavori comprovante la propria
-    esperienza
 -   Ottima conoscenza della lingua inglese
+
+## Esperienza richiesta
+
+Esperti in possesso di comprovata esperienza, non inferiore a 5 anni, nella valutazione e nella
+supervisione del disegno e dei contenuti per applicazioni web e mobile e piattaforme digitali.
+
+## Documentazione
+
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Content designer-signed.pdf %})
