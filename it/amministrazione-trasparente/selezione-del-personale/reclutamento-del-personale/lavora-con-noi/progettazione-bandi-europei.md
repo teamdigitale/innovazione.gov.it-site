@@ -52,3 +52,8 @@ presso le Regioni o le Agenzie dell’Amministrazione pubblica, centrale o regio
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperti in progettazione bandi europei-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 60.000 euro

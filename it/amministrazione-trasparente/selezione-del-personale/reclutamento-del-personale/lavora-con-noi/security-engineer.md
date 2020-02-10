@@ -63,3 +63,8 @@ affidabilità.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Security Engineer-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 100.000 euro

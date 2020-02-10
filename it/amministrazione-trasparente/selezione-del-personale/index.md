@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Selezione del personale
-description: Descrizione della pagina
+description:
 lang: it
 ref: selezione-del-personale
 child_of_ref: amministrazione-trasparente

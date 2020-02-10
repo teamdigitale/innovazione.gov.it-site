@@ -68,3 +68,8 @@ applicazioni web e mobile e piattaforme digitali.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperti in relazioni con gli sviluppatori-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 90.000 euro

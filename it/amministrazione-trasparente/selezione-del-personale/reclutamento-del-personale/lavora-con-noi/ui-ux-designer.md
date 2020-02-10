@@ -66,3 +66,8 @@ applicazioni mobile e web.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/UI_UX Designer-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 80.000 euro

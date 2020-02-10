@@ -56,3 +56,8 @@ programmi tecnologici.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Business analyst-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 80.000 euro
