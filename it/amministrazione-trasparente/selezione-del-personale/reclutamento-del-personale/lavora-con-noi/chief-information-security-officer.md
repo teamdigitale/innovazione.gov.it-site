@@ -57,3 +57,8 @@ delle piattaforme digitali.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Chief information security officer-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 130.000 euro

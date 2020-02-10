@@ -70,3 +70,8 @@ normativa, operativa e tecnologica.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Esperto in collaborazioni internazionali-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 95.000 euro

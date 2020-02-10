@@ -64,3 +64,8 @@ Esperti in possesso di comprovata esperienza tecnica, tecnologica e gestionale, 
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Technical Innovation Project Manager-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 85.000 euro

@@ -37,3 +37,8 @@ coordinamento di progetti caratterizzati da un uso innovativo di dati e tecnolog
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Data scientist-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 80.000 euro

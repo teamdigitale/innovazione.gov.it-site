@@ -65,3 +65,8 @@ riferimento a quelle che possono rappresentare opportunità strategiche per l'Ag
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Assistente del Team-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 48.000 euro

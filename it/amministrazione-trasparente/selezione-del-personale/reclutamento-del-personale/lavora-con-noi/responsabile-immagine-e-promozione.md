@@ -78,3 +78,8 @@ e digitale.
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Responsabile immagine e promozione-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 100.000 euro

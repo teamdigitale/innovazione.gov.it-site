@@ -60,3 +60,8 @@ supervisione del disegno e dei contenuti per applicazioni web e mobile e piattaf
 ## Documentazione
 
 - [Avviso (in formato PDF)]({% link assets/docs/avvisi/Content designer-signed.pdf %})
+- [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
+
+## Compenso
+
+Fino a 80.000 euro
