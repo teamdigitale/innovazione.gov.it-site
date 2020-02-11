@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lavora con noi
+title: Una chiamata ai talenti
 ref: hiring-dipartimento
 lang: it
 excerpt_separator: <!-- MORE -->
@@ -9,7 +9,7 @@ categories:
   - cittadini
 ---
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/hiring.jpg" alt="Lavora con noi"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/hiring.jpg" alt="Una chiamata ai talenti"/>
 
 _Ancora due settimane di tempo per inviare la propria candidatura al Dipartimento per la trasformazione digitale._
 
