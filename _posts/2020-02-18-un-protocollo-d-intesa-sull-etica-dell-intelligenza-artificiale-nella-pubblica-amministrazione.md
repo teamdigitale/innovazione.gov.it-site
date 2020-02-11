@@ -4,14 +4,13 @@ title: Un protocollo d’intesa sull’etica dell’Intelligenza Artificiale nel
 ref: protocollo-intesa-intelligenza-artificiale
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/mouleonardo.jpg" alt="La firma del protocollo"/>
 categories:
   - highlights
   - imprese
   - pubblica amministrazione
   - cittadini
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/mouleonardo.jpg" alt="La firma del protocollo"/>
 
 _La firma tra il Ministro per l’innovazione e il Presidente di Fondazione Leonardo Luciano Violante._
 

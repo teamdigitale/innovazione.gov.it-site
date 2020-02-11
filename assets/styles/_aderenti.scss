@@ -138,6 +138,7 @@ img.reset-logo {
   background-size: cover;
   background-position: center;
   transition: .2s ease all;
+
   img {
     position: absolute;
     top: 0;
@@ -188,9 +189,11 @@ img.reset-logo {
   text-align: center;
   border-bottom: 4px solid rgb(189, 189, 255);
   transition: .2s ease all;
+
   &:hover {
     border-bottom: 4px solid rgb(255, 255, 255);
     max-height: 270px;
+
     .bar {
       max-width: 100%;
       border-top: 4px solid rgb(189, 189, 255);
@@ -212,6 +215,7 @@ img.reset-logo {
   text-align: center;
   padding: 8px 10px;
   font-size: 14px;
+
   &:hover {
     color: rgb(100, 100, 100);
   }

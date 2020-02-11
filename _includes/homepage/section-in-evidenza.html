@@ -5,11 +5,33 @@
     </div>
     {% assign localized_posts = site.posts | where: "lang", page.lang %}
     {% assign localized_highlighted_posts = localized_posts | where: "categories", "highlights" %}
-    {% for post in localized_highlighted_posts limit: 3 %}
-    <div class="col-12 col-md-4 d-flex">
-      {% include post-teaser.html %}
-    </div>
-    {% endfor %}
+
+    {% assign localized_posts_pinned = localized_posts | where: "pinned", "true" %}
+    {% assign localized_posts_pinned_size = localized_posts_pinned | size %}
+    {% if localized_posts_pinned_size == 0 %}
+      {% comment %}
+      If there isn't any pinned post, than the most recent post with the "highlights"
+      category is shown on top, so it has to be removed from the 3 highlights
+      {% endcomment %}
+      {% for post in localized_highlighted_posts limit:3 offset:1 %}
+      <div class="col-12 col-md-4 d-flex">
+        {% include post-teaser.html %}
+      </div>
+      {% endfor %}
+    {% else %}
+      {% comment %}
+      If there are pinned posts, than the most recent of them is shown on top,
+      so it has to be removed from the 3 highlights
+      {% endcomment %}
+      {% assign localized_highlighted_posts_no_pinned = localized_highlighted_posts | where: "pinned", nil %}
+      {% for post in localized_highlighted_posts_no_pinned limit:3 %}
+      <div class="col-12 col-md-4 d-flex">
+        {% include post-teaser.html %}
+      </div>
+      {% endfor %}
+    {% endif %}
+
+
     <div class="col-12 text-center mt-4 mb-5">
       <a class="btn btn-outline-primary bg-white" href="{% link it/notizie.md %}">Vedi tutte le Notizie</a>
     </div>

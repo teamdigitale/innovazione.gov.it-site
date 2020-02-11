@@ -4,14 +4,13 @@ title: Una nuova roadmap per la Banda Ultra Larga
 ref: roadmap-banda-ultra-larga
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/bandaultralarga.jpg" alt="Una roadmap per la banda ultra larga"/>
 categories:
   - highlights
   - cittadini
   - pubblica amministrazione
   - imprese
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/bandaultralarga.jpg" alt="Una roadmap per la banda ultra larga"/>
 
 _Approvato dal CoBUL il documento programmatico: entro fine estate una nuova gara per le “aree grigie” e voucher per la fibra ottica._
 

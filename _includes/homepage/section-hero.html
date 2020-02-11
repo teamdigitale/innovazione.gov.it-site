@@ -9,32 +9,79 @@
   <div class="container it-hero-content">
     <div class="row">
       <div class="col-12 col-md-8">
+        {% comment %}
         <div class="it-hero-text-wrapper py-5 px-4">
           <h1>{{ site.data.t.section-intro-title[page.lang] }}</h1>
           <p class="d-none d-lg-block" markdown="1">In questo sito puoi trovare novità, risorse e progetti, per [cittadini]({% link it/innovazione-per-i-cittadini.md %}), [imprese]({% link it/innovazione-per-le-imprese.md %}) e [Pubbliche Amministrazioni]({% link it/innovazione-per-la-pubblica-amministrazione.md %}). Strumenti e informazioni per il percorso di trasformazione del Paese.</p>
-          {% comment %}
+
           <div class="it-btn-container">
             {% assign ctas = site.data.t.section-intro-cta[page.lang] %}
             {% for cta in ctas %}
             <a class="btn btn-sm btn-outline-primary mx-2 my-1" href="{{ site.baseurl }}{{ cta.link }}">{{ cta.text }}</a>
             {% endfor %}
           </div>
-          {% endcomment %}
+        </div>
+        {% endcomment %}
+        <div class="card-wrapper card-space card-hero py-2 px-4 px-md-0">
+          <div class="card card-bg no-after rounded shadow">
+            <div class="card-body p-0">
+              {% assign localized_posts = site.posts | where: "lang", page.lang %}
+              {% assign localized_posts_pinned = localized_posts | where: "pinned", "true" %}
+              {% assign localized_posts_pinned_size = localized_posts_pinned | size %}
+              {% if localized_posts_pinned_size == 0 %}
+                {% comment %}
+                If there isn't any pinned post, than the most recent post with the "highlights"
+                category is shown
+                {% endcomment %}
+                {% assign localized_highlighted_posts = localized_posts | where: "categories", "highlights" %}
+                {% assign post = localized_highlighted_posts[0] %}
+              {% else %}
+                {% comment %}
+                If there are pinned posts, than the most recent of them is shown
+                {% endcomment %}
+                {% assign post = localized_posts_pinned[0] %}
+              {% endif %}
+              <div class="d-flex flex-column justify-content-between h-100">
+                  <div class="card-title px-4 py-3 mb-0">
+                    <h1 class="h3"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                  </div>
+                  <div class="align-flex-end">
+                    <div class="d-flex flex-column flex-lg-row">
+                      <div class="w-100" >
+                        {%- if post.asset contains "youtube-nocookie.com" or post.asset contains "youtube.com" -%}
+                        <div class="responsive-embed">{{ post.asset }}</div>
+                        {%- else -%}
+                        {{ post.asset }}
+                        {%- endif -%}
+                      </div>
+                      <div class="w-100" style="flex-shrink: 0.8;">
+                        <div class="p-3 py-lg-0">{{ post.excerpt }}</div>
+                        <a class="px-3 read-more d-none d-lg-inline-block" href="{{ site.baseurl }}{{ post.url }}"><span class="text">{{ site.data.t.read-more[page.lang] }}</span>
+                          <svg class="icon">
+                            <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-12 col-md-4 d-flex flex-column justify-content-center">
-        <div class="card-wrapper card-space card-repubblica-digitale py-2 px-4 px-md-0" style="height: auto!important;">
-          <div class="card card-bg rounded shadow">
+        <div class="card-wrapper card-space card-hero py-2 px-4 px-md-0" style="height: auto!important;">
+          <div class="card card-bg rounded shadow no-after ">
             <div class="card-body text-center">
               <p class="card-text">
-                <a href="{% link it/cosa-facciamo/italia-2025.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/italia-2025/italia-2025-logo.jpg" alt="Logo Italia 2025"></a>
+                <a href="{% link it/cosa-facciamo/italia-2025.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/logo-2025.png" alt="Logo Italia 2025"></a>
                 <br><span class="d-inline-block mt-2">La strategia per l’innovazione e la trasformazione digitale del Paese</span>
               </p>
             </div>
           </div>
         </div>
-        <div class="card-wrapper card-space card-repubblica-digitale py-2 px-4 px-md-0" style="height: auto!important;">
-          <div class="card card-bg rounded shadow">
+        <div class="card-wrapper card-space card-hero py-2 px-4 px-md-0" style="height: auto!important;">
+          <div class="card card-bg rounded shadow no-after ">
             <div class="card-body text-center">
               <p class="card-text">
                 <a href="{% link it/repubblica-digitale.md %}"><img class="hero-logo d-inline-block" src="{{ site.baseurl }}/assets/images/logo-repubblica-digitale.svg" alt="Logo Repubblica Digitale"></a>

@@ -3,14 +3,13 @@ layout: post
 title: "Un’anagrafe unica per 40 milioni di cittadini"
 ref: anpr-40-milioni
 lang: it
+asset: <img class="w-100" src="/assets/images/posts/clint-adair-BW0vK-FA3eg-unsplash.jpg" alt="Immagine che rappresenta una rete a maglie"/>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
   - cittadini
   - pubblica amministrazione
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/clint-adair-BW0vK-FA3eg-unsplash.jpg" alt="Immagine che rappresenta una rete a maglie"/>
 
 _L’[Anagrafe nazionale della popolazione residente]({% link it/progetti/anpr.md %}) (ANPR) negli ultimi giorni **ha superato la soglia di 5mila Comuni** e **40 milioni di cittadini subentrati**, mentre abbiamo attivato il servizio che permette ai cittadini di fare online **le visure dei propri dati**._
 

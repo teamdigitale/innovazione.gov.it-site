@@ -4,12 +4,11 @@ title: Startup e innovazione, continua la collaborazione tra Italia e Israele
 ref: startup-collaborazione-italia-israele
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/Paola Pisano OurCrowd Israele.jpg" alt="Paola Pisano OurCrowd Israele"/>
 categories:
   - highlights
   - imprese
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/Paola Pisano OurCrowd Israele.jpg" alt="Paola Pisano OurCrowd Israele"/>
 
 _Il ministro Pisano: rafforziamo la cooperazione tra i nostri due Paesi. A giugno il primo Innovation Day._
 

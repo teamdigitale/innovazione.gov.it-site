@@ -3,13 +3,12 @@ layout: post
 title: MadeIT, un brand per il settore tech e digitale italiano
 ref: madeit-brand-settore-tech
 lang: it
+asset: <img class="w-100" src="/assets/images/posts/madeit.jpg" alt="Un brand per l'innovazione Made in Italy"/>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
   - imprese
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/madeit.jpg" alt="Un brand per l'innovazione Made in Italy"/>
 
 _Il Ministro Pisano ha lanciato al CES di Las Vegas il progetto MadeIT: un logo e un programma dedicati alle aziende tecnologiche e innovative italiane._
 

@@ -51,6 +51,7 @@
     background-image: url($assets + "/images/backgrounds/jeremy-lapak-CVvFVQ_-oUg-unsplash.webp");
   }
 }
+
 .innovation-section-head--italia-2025 {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/backgrounds/cubos-italia-2025.jpg");
@@ -69,6 +70,7 @@
     background-image: url($assets + "/images/projects/inspirational/io.webp");
   }
 }
+
 .innovation-section-cittadini--spid {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/projects/inspirational/spid.jpg");
@@ -77,6 +79,7 @@
     background-image: url($assets + "/images/projects/inspirational/spid.webp");
   }
 }
+
 .innovation-section-cittadini--pagopa {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/projects/inspirational/pagopa.jpg");
@@ -85,6 +88,7 @@
     background-image: url($assets + "/images/projects/inspirational/pagopa.webp");
   }
 }
+
 .innovation-section-cittadini--anpr {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/projects/inspirational/anpr.jpg");
@@ -93,6 +97,7 @@
     background-image: url($assets + "/images/projects/inspirational/anpr.webp");
   }
 }
+
 .innovation-section-cittadini--designers-italia {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/projects/inspirational/designers-italia.jpg");
@@ -101,6 +106,7 @@
     background-image: url($assets + "/images/projects/inspirational/designers-italia.webp");
   }
 }
+
 .innovation-section-cittadini--developers-italia {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/projects/inspirational/developers-italia.jpg");

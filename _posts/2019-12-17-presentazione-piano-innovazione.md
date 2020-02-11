@@ -3,6 +3,7 @@ layout: post
 title: "2025: Presentazione Piano Nazionale Innovazione"
 ref: presentazione-piano-innovazione
 lang: it
+asset: <img class="w-100" src="/assets/images/posts/2025-pni.jpg" alt="Immagine che rappresenta una rete a maglie"/>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
@@ -10,8 +11,6 @@ categories:
   - pubblica amministrazione
   - imprese
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/2025-pni.jpg" alt="Immagine che rappresenta una rete a maglie"/>
 
 _Il Ministro Paola Pisano presenta la visione e la strategia che guideranno lo sviluppo tecnologico, inclusivo e sostenibile del Paese. Interviene il Premier Giuseppe Conte_
 

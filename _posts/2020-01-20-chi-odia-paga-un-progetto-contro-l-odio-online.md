@@ -4,12 +4,11 @@ title: Chi odia paga, un progetto contro l’odio online
 ref: chiodiapaga-contro-odio-online
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/chiodiapaga.jpg" alt="Un progetto contro l'odio online"/>
 categories:
   - highlights
   - cittadini
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/chiodiapaga.jpg" alt="Un progetto contro l'odio online"/>
 
 _Un progetto contro la violenza online e il cyberbullismo, che aderisce al programma [Repubblica Digitale](https://innovazione.gov.it/it/repubblica-digitale/)._
 

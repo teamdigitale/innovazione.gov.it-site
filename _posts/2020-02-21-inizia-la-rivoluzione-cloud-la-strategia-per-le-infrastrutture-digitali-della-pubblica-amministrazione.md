@@ -4,14 +4,13 @@ title: "Inizia la rivoluzione cloud: la strategia per le infrastrutture digitali
 ref: strategia-infrastrutture-digitali-pubblica-amministrazione
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/infrastrutturedigitali.jpg" alt="La strategia per le infrastrutture digitali"/>
 categories:
   - highlights
   - imprese
   - pubblica amministrazione
   - cittadini
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/infrastrutturedigitali.jpg" alt="La strategia per le infrastrutture digitali"/>
 
 _Dal censimento al Polo Strategico Nazionale, il piano per la razionalizzazione delle infrastrutture digitali della Pubblica Amministrazione._
 
