@@ -9,31 +9,9 @@ jazz_url: https://teamdigitale.applytojob.com/apply/3Y4wyLgJUj/Esperto-In-Collab
 is_new: true
 ---
 
-Il dipartimento per la trasformazione digitale è alla ricerca di un
-**Collaboratore Internazionale** esperto con profonda e comprovata
-esperienza di lavoro e/o relazioni con l’Unione Europea, le
-organizzazioni internazionali e con altri uffici deputati al digitale di
-governi stranieri.
+l dipartimento per la trasformazione digitale è alla ricerca di un esperto in relazioni internazionali con comprovata esperienza di lavoro e/o relazioni con l’Unione Europea, le organizzazioni internazionali e con altri uffici di governi stranieri deputati alla trasformazione digitale.
 
-Questa figura coordinerà tutte le attività e collaborazioni
-internazionali del dipartimento per la trasformazione digitale. In
-particolare seguirà i dossier di pertinenza delle attività del Team
-nell’ambito della Ue e di rilevanti organismi internazionali. Avrà
-inoltre la responsabilità di avviare collaborazioni con gli altri uffici
-deputati al digitale di governi dei paesi membri dell’Unione Europea e
-stranieri tra i quali: *UK Government Digital Service* e i principali,
-*Australian Digital Transformation Office* e *US Digital Service*.
-
-Fornirà al dipartimento per la trasformazione digitale analisi
-approfondite dei parametri di riferimento internazionali relativi ad
-altri servizi pubblici digitali, sia in termini di definizione delle
-strategie digitali sia di realizzazione normativa, operativa e
-tecnologica.
-
-Siamo alla ricerca di un professionista molto esperto a livello
-internazionale, con una comprovata esperienza nel settore, con una forte
-preparazione tecnica e/o di *policy* nel settore della trasformazione e
-dei servizi digitali, e con la capacità di gestire e coordinare team.
+Questa figura seguirà i dossier di competenza del dipartimento nell’ambito della UE e di rilevanti organismi internazionali fornendo approfondite analisi comparate sotto il profilo normativo, operativo e tecnologico relativamente alle strategie digitali e alla trasformazione digitale dei servizi pubblici.
 
 ## Qualifiche chiave
 
