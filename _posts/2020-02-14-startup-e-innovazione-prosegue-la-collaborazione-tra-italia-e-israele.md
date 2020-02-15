@@ -9,7 +9,7 @@ categories:
   - imprese
 ---
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/hiring.jpg" alt="Paola Pisano OurCrowd Israele.jpg"/>
+<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/Paola Pisano OurCrowd Israele.jpg" alt="Paola Pisano OurCrowd Israele"/>
 
 _Il ministro Pisano: rafforziamo la cooperazione tra i nostri due Paesi. A giugno il primo Innovation Day._
 
