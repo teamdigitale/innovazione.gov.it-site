@@ -12,7 +12,7 @@ redirect_from:
   - /contatti
 ---
 
-Per qualsiasi informazione sulle attività o segnalazione sui nostri progetti, scrivi a [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it).
+Per qualsiasi informazione sulle attività o segnalazione sui nostri progetti, scrivi a [segreteriaministropisano@governo.it](mailto:segreteriaministropisano@governo.it).
 
 Per richieste media, scrivi a [media@innovazione.gov.it](mailto:media@innovazione.gov.it).
 

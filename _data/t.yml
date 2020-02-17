@@ -131,9 +131,9 @@ footer-contatti-ministero:
       url: "https://goo.gl/maps/V7vcjUCHqafhGChj8"
     email:
       label: "Posta Elettronica"
-      name: "segreteria.trasformazionedigitale@governo.it"
+      name: "segreteriaministropisano@governo.it"
       icon: "mail"
-      url: "mailto:segreteria.trasformazionedigitale@governo.it"
+      url: "mailto:segreteriaministropisano@governo.it"
     pec:
       label: "Contatti Media"
       name: "media@innovazione.gov.it"
