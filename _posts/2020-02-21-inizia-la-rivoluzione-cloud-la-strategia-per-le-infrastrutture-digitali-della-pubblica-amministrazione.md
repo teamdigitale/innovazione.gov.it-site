@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inizia la rivoluzione cloud: la strategia per le infrastrutture digitali della Pubblica Amministrazione 
+title: "Inizia la rivoluzione cloud: la strategia per le infrastrutture digitali della Pubblica Amministrazione" 
 ref: strategia-infrastrutture-digitali-pubblica-amministrazione
 lang: it
 excerpt_separator: <!-- MORE -->
