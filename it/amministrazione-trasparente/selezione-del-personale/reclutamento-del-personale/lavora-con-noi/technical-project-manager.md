@@ -7,6 +7,7 @@ ref: technical-project-manager
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/CDBfVh58He/Technical-Project-Manager.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di esperti

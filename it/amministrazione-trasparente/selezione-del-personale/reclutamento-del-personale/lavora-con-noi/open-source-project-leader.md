@@ -7,6 +7,7 @@ ref: open-source-project-leader
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/ctLvEh2meo/Open-Source-Project-Leader.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di esperti

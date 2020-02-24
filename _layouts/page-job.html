@@ -16,14 +16,16 @@ layout: default
   <div class="row">
     <div class="col{% if page.no_site_toc == nil %} col-lg-8{% endif %}">
       <div class="mx-md-3">
-        <h1 class="mb-4">{{ page.title }} {% if page.archived==true %}<span class="badge badge-secondary">closed</span>{% endif %}</h1>
+        <h1 class="mb-4 d-inline">{{ page.title }}</h1>{% if page.archived == true %} <span class="badge badge-secondary d-inline align-text-top">Posizione chiusa</span>{% endif %}
         {{ content }}
       </div>
     </div>
   </div>
+  {% if page.archived == nil%}
   <div class="row">
     <div class="col-12">
       {% include jazzhr.html %}
     </div>
   </div>
+  {% endif %}
 </div>

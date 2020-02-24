@@ -7,6 +7,7 @@ ref: progettazione-bandi-europei
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/hbTXrQ6bAC/Esperti-In-Progettazione-Bandi-Europei.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di

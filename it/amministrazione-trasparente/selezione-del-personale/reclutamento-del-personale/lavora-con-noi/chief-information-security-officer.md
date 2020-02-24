@@ -7,6 +7,7 @@ ref: chief-information-security-officer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/Uoow5YhpUk/Chief-Information-Security-Officer.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di

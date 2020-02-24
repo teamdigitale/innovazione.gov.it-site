@@ -7,6 +7,7 @@ ref: relazioni-con-gli-sviluppatori
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/8029yFqWfC/Esperti-In-Relazioni-Con-Gli-Sviluppatori.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento della trasformazione digitale è alla ricerca di esperti

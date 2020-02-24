@@ -7,6 +7,7 @@ ref: ui-ux-designer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/emrvJTI5b3/Esperto-UIUX-Designer.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di esperti

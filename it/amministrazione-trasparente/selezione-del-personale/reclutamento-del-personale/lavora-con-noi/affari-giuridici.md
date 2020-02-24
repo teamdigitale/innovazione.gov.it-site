@@ -7,6 +7,7 @@ ref: affari-giuridici
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/uUMwfRfS8B/Affari-Giuridici-privacy-Specialist
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di

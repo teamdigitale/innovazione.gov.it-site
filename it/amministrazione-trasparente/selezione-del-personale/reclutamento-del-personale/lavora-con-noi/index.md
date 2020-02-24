@@ -22,7 +22,7 @@ layout_wide: true
 {% assign closed_jobs_pages = jobs_pages | where: "archived", true %}
 
 {% if open_jobs_pages.size == 0 %}
-In questo momento non ci sono posizioni aperte. Tieni d’occhio questo sito perché nelle prossime settimane apriremo nuove posizioni.
+In questo momento non ci sono posizioni aperte.
 {% else %}
 
 <div class="jobpositions">

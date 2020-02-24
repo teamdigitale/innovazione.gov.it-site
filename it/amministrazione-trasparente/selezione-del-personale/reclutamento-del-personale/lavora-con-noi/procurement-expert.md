@@ -7,6 +7,7 @@ ref: procurement-expert
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/F6UPRIEJkW/Procurement-Expert-Esperto-Del-Codice-Appalti.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento della trasformazione digitale è alla ricerca di
