@@ -7,6 +7,7 @@ ref: collaborazioni-internazionali
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/3Y4wyLgJUj/Esperto-In-Collaborazioni-Internazionali.html
 is_new: true
+archived: true
 ---
 
 l dipartimento per la trasformazione digitale è alla ricerca di un esperto in relazioni internazionali con comprovata esperienza di lavoro e/o relazioni con l’Unione Europea, le organizzazioni internazionali e con altri uffici di governi stranieri deputati alla trasformazione digitale.

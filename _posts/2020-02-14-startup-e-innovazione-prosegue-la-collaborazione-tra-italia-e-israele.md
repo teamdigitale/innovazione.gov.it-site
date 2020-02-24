@@ -5,6 +5,7 @@ ref: startup-collaborazione-italia-israele
 lang: it
 excerpt_separator: <!-- MORE -->
 categories:
+  - highlights
   - imprese
 ---
 

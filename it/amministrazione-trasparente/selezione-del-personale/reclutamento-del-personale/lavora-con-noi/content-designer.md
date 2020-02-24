@@ -7,6 +7,7 @@ ref: content-designer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/bYVayTU2QQ/Content-Designer.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di esperti

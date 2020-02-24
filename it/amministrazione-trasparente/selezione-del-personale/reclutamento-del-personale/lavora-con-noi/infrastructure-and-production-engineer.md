@@ -7,6 +7,7 @@ ref: infrastructure-and-production-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/245YyU4dWy/InfrastructureProduction-Engineer-DevOps.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di

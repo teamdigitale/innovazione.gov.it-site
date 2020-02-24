@@ -7,6 +7,7 @@ ref: software-engineer
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/0eHfSntN1E/Software-Engineer.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di

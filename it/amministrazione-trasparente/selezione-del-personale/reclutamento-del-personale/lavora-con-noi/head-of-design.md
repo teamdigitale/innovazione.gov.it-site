@@ -7,6 +7,7 @@ ref: head-of-design
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/C0dMRmYtO1/Head-Of-Design.html
 is_new: true
+archived: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di figure di **head of design**. La figura sarà responsabile della visione creativa per il team di design e per l'intera organizzazione. Stabilirà processi e pratiche per realizzare la visione e si occuperà di indirizzare il lavoro in termini di consistenza e qualità. Contribuirà alla definizione del *branding* e dei principi di esperienza utente per i progetti del dipartimento e dovrà assicurarsi che questi vengano interpretati in modo appropriato attraverso il lavoro del team.
