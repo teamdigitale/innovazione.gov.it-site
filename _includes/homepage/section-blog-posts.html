@@ -1,7 +1,12 @@
 {% assign medium_posts = site.medium_feed | where: "medium_detected_lang", page.lang | sort: "medium_firstpublished_at" | reverse %}
 
-<div class="bg-light">
-  <div class="container py-5">
+<div class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      <h2 class="max-w-40 mb-4">Dal Blog per la Trasformazione Digitale</h2>
+      </div>
+    </div>
     <div class="row">
       {% for medium_post in medium_posts %}
       {% if site.data.meta.medium-posts-ids contains medium_post.medium_post_id %}

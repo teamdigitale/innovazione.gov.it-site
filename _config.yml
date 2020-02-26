@@ -39,7 +39,7 @@ sass:
   style: :compressed # You might prefer to minify using :compressed
 
 # Medium posts importer / display settings
-medium_archive_url: https://medium.com/team-per-la-trasformazione-digitale
+medium_archive_url: https://medium.com/blog-per-la-trasformazione-digitale
 medium_posts_per_row: 3
 medium_max_rows: 10
 

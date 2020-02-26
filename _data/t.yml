@@ -70,6 +70,10 @@ social-links:
       name: Facebook
       url: "https://www.facebook.com/MinisteroInnovazione/"
       blank: true
+    medium:
+      name: Medium
+      url: "https://medium.com/blog-per-la-trasformazione-digitale"
+      blank: true
 
 # Footer
 footer-trasparenza:
