@@ -9,7 +9,14 @@
       </div>
       <h5 class="card-title big-heading">{{ post.title }}</h5>
       {% comment %}<h6 class="card-subtitle">in {% for category in post.categories %}{{ category }} {% endfor %}</h6>{% endcomment %}
-      <div class="card-text">{{ post.excerpt }}</div>
+      <div class="card-text">
+        {%- if post.asset contains "youtube-nocookie.com" or post.asset contains "youtube.com" -%}
+        <div class="responsive-embed">{{ post.asset }}</div>
+        {%- else -%}
+        {{ post.asset }}
+        {%- endif -%}
+        {{ post.excerpt }}
+      </div>
       <a class="read-more" href="{{ site.baseurl }}{{ post.url }}">
         <span class="text">{{ site.data.t.read-more[page.lang] }}</span>
         <svg class="icon">

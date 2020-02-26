@@ -3,6 +3,7 @@ layout: post
 title: Inizia la consultazione pubblica per la strategia per l’innovazione “Italia 2025”
 ref: consultazione-pubblica-strategia-innovazione
 lang: it
+asset: <img class="w-100" src="/assets/images/posts/consultazione.jpg" alt="Inizia la consultazione per la strategia innovazione"/>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
@@ -10,8 +11,6 @@ categories:
   - cittadini
   - pubblica amministrazione
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/consultazione.jpg" alt="Inizia la consultazione per la strategia innovazione"/>
 
 _Da oggi e fino al 30 aprile è possibile contribuire con delle proposte al piano strategico per l’innovazione tecnologica e digitale._
 

@@ -4,12 +4,13 @@ title: Nasce un gruppo di lavoro contro l’odio online
 ref: gruppo-di-lavoro-contro-odio-online
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/odioonline.jpg" alt="La firma del decreto"/>
 categories:
   - highlights
   - cittadini
 ---
 
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/odioonline.jpg" alt="La firma del decreto"/>
+
 
 _Siglato un decreto ministeriale per la nascita di un gruppo di lavoro con sedici esperti per contrastare i fenomeni di hate speech._
 

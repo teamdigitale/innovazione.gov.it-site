@@ -9,6 +9,7 @@
   background-position: center center;
   background-size: cover;
   position: relative;
+
   .gallery-item-inner {
     position: absolute;
     width: 100%;
@@ -17,13 +18,14 @@
     top: 0;
     background: transparent;
     transition: all 0.4s ease 0s;
+
     .gallery-item-inner-text {
       position: absolute;
       left: 50px;
       right: 0px;
       bottom: 50px;
       color: #fff;
-      text-shadow: 0 1px 4px rgba(0,0,0,.5);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
     }
   }
 }
@@ -32,20 +34,25 @@
   .gallery-item-inner .gallery-item-inner-text {
     opacity: 0;
     transition: all 0.3s ease 0s;
+
     h2 {
       white-space: nowrap;
       overflow: hidden;
       letter-spacing: 10px;
       transition: all 0.3s ease 0s;
     }
+
     p {
       padding-right: 50px;
     }
   }
+
   &:hover .gallery-item-inner {
     background: rgba(0, 20, 24, 0.8);
+
     .gallery-item-inner-text {
       opacity: 1;
+
       h2 {
         letter-spacing: 0;
         transition: all 0.3s ease 0s;

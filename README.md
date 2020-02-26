@@ -32,6 +32,8 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: Esempio di titolo del post
 ref: esempio-di-titolo-del-post
+asset: 
+pinned: 
 categories:
   - highlights
   - cittadini
@@ -50,17 +52,19 @@ Finora i post sono tutti composti da video YouTube o Immagine in testa seguiti d
 
 #### Video YouTube
 
-Per quanto riguarda i video, è bene non usare embed da altri social diversi da YouTube per rispetto della privacy dei nostri utenti. Per prelevare il codice da un video YouTube, utilizzare "Share" > "Embed" > selezionare "Enable privacy-enhanced mode." e copiare il codice generato. Racchiudere quindi il codice copiato come segue:
+Per quanto riguarda i video, è bene non usare embed da altri social diversi da YouTube per rispetto della privacy dei nostri utenti. Per prelevare il codice da un video YouTube, utilizzare "Share" > "Embed" > selezionare "Enable privacy-enhanced mode." e copiare il codice generato nel campo `asset`, come segue:
 
 ```
-<div class="responsive-embed">
-(codice embed YouTube)
-</div>
+asset: <iframe title="..." width="560" height="315" src="https://www.youtube-nocookie.com/embed/..." frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 #### Immagini
 
-È bene che le immagini usate veicolino un messaggio, siano di buona qualità ed esenti da problemi di copyright, ed abbiano possibilmente dimensioni pari a 960x540.
+È bene che le immagini usate veicolino un messaggio, siano di buona qualità ed esenti da problemi di copyright, ed abbiano possibilmente dimensioni pari a 960x540. L'immagine principale, obbligatoria, non va inserita nel post ma nel campo `asset`, come segue:
+
+```
+asset: <img class="w-100" src="/assets/images/posts/..." alt="..."/>
+```
 
 #### Testo
 
@@ -71,3 +75,10 @@ Il testo segue la normale [formattazione Markdown](https://github.com/adam-p/mar
 Per ogni Pull Request, GitHub (attraverso Netlify) crea automaticamente un ambiente di test compilando le modifiche presenti sul branch in lavorazione. Nella pagina dedicata alla Pull Request sarà quindi visibile un box con una serie di check che dovranno essere tutti verdi.
 
 L'ultimo di questi check è associato alla "deploy preview": una volta terminata la compilazione, cliccando su "details" sarà possibile avere un'anteprima del proprio lavoro.
+
+### Post in homepage
+
+Nella homepage vengono mostrati:
+ 
+- in alto, il post più recente con attributo `pinned: true`
+- i 3 post più recenti con la categoria `highlights`

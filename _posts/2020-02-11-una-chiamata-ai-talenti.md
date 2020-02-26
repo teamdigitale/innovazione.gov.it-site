@@ -4,12 +4,11 @@ title: Una chiamata ai talenti
 ref: hiring-dipartimento
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/hiring.jpg" alt="Una chiamata ai talenti"/>
 categories:
   - highlights
   - cittadini
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/hiring.jpg" alt="Una chiamata ai talenti"/>
 
 _Ancora due settimane di tempo per inviare la propria candidatura al Dipartimento per la trasformazione digitale._
 

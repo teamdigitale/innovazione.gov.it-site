@@ -3,13 +3,12 @@ layout: post
 title: Francesco Paorici nominato nuovo Direttore Generale di AgID
 ref: nuovo-direttore-generale-agid
 lang: it
+asset: <img class="w-100" src="/assets/images/posts/agid-logo.png" alt="Logo dell’Agenzia per l’Italia digitale"/>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
   - pubblica amministrazione
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/agid-logo.png" alt="Logo dell’Agenzia per l’Italia digitale"/>
 
 Francesco Paorici è il nuovo Direttore Generale dell’[Agenzia per l’Italia digitale](https://www.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} (AgID). Lo ha annunciato oggi il [Ministro per l’innovazione e la trasformazione digitale Paola Pisano]({% link it/chi-siamo/ministro.md %}), aggiungendo che Paorici è il profilo migliore emerso dal processo di selezione delle ultime settimane e che ha accettato l’incarico. 
 

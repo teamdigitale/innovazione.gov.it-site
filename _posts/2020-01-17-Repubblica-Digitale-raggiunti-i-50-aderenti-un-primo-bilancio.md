@@ -4,13 +4,12 @@ title: "Repubblica Digitale, raggiunti i 50 aderenti: un primo bilancio"
 ref: repubblica-digitale-primo-bilancio
 lang: it
 excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/repubblicadigitale_cover.jpg" alt="Una repubblica digitale"/>
 categories:
   - highlights
   - cittadini
   
 ---
-
-<img class="w-100" src="{{ site.baseURL }}/assets/images/posts/repubblicadigitale_cover.jpg" alt="Una repubblica digitale"/>
 
 _Una panoramica delle prime 50 iniziative che hanno aderito al progetto contro il digital divide._
 

@@ -3,6 +3,7 @@ layout: post
 title: IO, l'app dei servizi pubblici
 ref: io-l-app-dei-servizi-pubblici
 lang: it
+asset: <iframe title="Video Progetto IO, l'app dei servizi pubblici" width="560" height="315" src="https://www.youtube-nocookie.com/embed/nD9q8cPIlwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 excerpt_separator: <!-- MORE -->
 categories:
   - highlights
@@ -11,12 +12,6 @@ categories:
   - pubblica amministrazione
   - cittadini
 ---
-
-<div class="responsive-embed">
-
-<iframe title="Video Progetto IO, l'app dei servizi pubblici" width="560" height="315" src="https://www.youtube-nocookie.com/embed/nD9q8cPIlwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
 
 IO [io.italia.it](https://io.italia.it/){:target="_blank" rel="noopener noreferrer"} è il progetto sviluppato per portare i servizi pubblici negli smartphone dei cittadini tramite un’unica app. In questo video, insieme a Matteo De Santi, responsabile del #progettoIO, voglio darvi un assaggio di cosa è possibile fare con questa app, che migliaia di persone stanno già testando in versione beta in diverse città d’Italia.
 

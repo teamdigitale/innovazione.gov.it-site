@@ -27,7 +27,14 @@ layout: default
           </div>
           <div class="card-body">
             <h5 class="card-title">{{ page.title }}</h5>
-            <div class="card-text">{{ content }}</div>
+            <div class="card-text">
+              {%- if page.asset contains "youtube-nocookie.com" or page.asset contains "youtube.com" -%}
+              <div class="responsive-embed">{{ page.asset }}</div>
+              {%- else -%}
+              {{ page.asset }}
+              {%- endif -%}
+              {{ content }}
+            </div>
           </div>
         </div>
       </div>
