@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "L’innovazione al servizio delle persone in quarantena per il Coronavirus" 
-ref: innovazione-al-servizio-persone-quarantena-coronavirus
+title: "Coronavirus, la digitalizzazione a supporto delle zone rosse" 
+ref: Coronavirus-digitalizzazione-supporto-zone-rosse
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/smartworking.jpg" alt="Lavorare da casa con lo smart working"/>
