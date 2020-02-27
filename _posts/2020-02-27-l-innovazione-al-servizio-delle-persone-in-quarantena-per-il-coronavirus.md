@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "L’innovazione al servizio delle persone colpite dall’emergenza Coronavirus" 
-ref: innovazione-al-servizio-persone-colpite-emergenza-coronavirus
+title: "L’innovazione al servizio delle persone in quarantena per il Coronavirus" 
+ref: innovazione-al-servizio-persone-quarantena-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/smartworking.jpg" alt="Lavorare da casa con lo smart working"/>
@@ -32,9 +32,7 @@ Le iniziative, i servizi e le soluzioni che vogliamo adottare hanno il comune ob
 - restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di _e-learning_**;
 - farsi visitare da un medico senza dover uscire da casa, attraverso **servizi online** sviluppati a questo scopo. 
 
-## Come partecipare
-
-[Repubblica digitale](https://innovazione.gov.it/it/repubblica-digitale/) è un progetto che ha coinvolto finora decine di soggetti pubblici e privati, che hanno manifestato l’intenzione di fare squadra per rendere il nostro Paese, nella sua dimensione digitale, un Paese per tutti, nel quale **nessuno resti indietro**. Nell'ambito di questa iniziativa, oggi chiediamo ad aziende dell’ICT, enti pubblici e privati, piccole e medie imprese, startup, centri di ricerca e privati cittadini, collaborare con noi al fine di mettere a disposizione dei cittadini e delle imprese più colpiti dall’emergenza del Coronavirus **i propri servizi nelle quattro aree sopra citate**.
+## Come collaborare con noi
 
 Chiunque può aderire all’iniziativa semplicemente scrivendo a [repubblicadigitale@teamdigitale.governo.it](mailto:repubblicadigitale@teamdigitale.governo.it). Nella propria candidatura è necessario:
 
@@ -42,13 +40,10 @@ Chiunque può aderire all’iniziativa semplicemente scrivendo a [repubblicadigi
 - definire le modalità e tempistiche di applicazione in uno degli ambiti proposti;
 - manifestare l’intenzione di porre il servizio in questione a disposizione della popolazione o delle autorità per il tempo necessario.
 
-L’Italia è un solo grande Comune e **un’emergenza come questa ci riguarda tutti**, nessuno escluso. Digitale e innovazione possono aiutarci a vincere e abbiamo il dovere di provare a usarli nell’interesse comune, nel modo migliore possibile e senza lasciare nessuno indietro.
+L’Italia è un solo grande Comune e **una situazione come questa ci riguarda tutti**, nessuno escluso. Digitale e innovazione possono aiutarci a vincere e abbiamo il dovere di provare a usarli nell’interesse comune, nel modo migliore possibile e senza lasciare nessuno indietro.
 
-Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, un’associazione di volontari o semplicemente degli appassionati di digitale e tecnologia, se pensate di disporre di una soluzione, di un servizio capace di fare la differenza, di dare una mano a garantire a chi è più colpito dall’emergenza un quotidiano sostenibile scriveteci.
+Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, un’associazione di volontari o semplicemente degli appassionati di digitale e tecnologia, se pensate di disporre di una soluzione, di un servizio capace di **fare la differenza** per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci.
 
-## Per i cittadini
-
-I cittadini che vivono nelle aree soggette a limitazioni per l’emergenza Coronavirus possono scoprire e richiedere i servizi a loro disposizione a questo link. 
 
 
 Grazie,
