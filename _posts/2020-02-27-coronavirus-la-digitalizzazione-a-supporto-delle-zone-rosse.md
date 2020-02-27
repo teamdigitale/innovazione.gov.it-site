@@ -29,8 +29,7 @@ Le iniziative, i servizi e le soluzioni che vogliamo adottare hanno il comune ob
 
 - lavorare da remoto, attraverso **connettività rapida e gratuita** e l’utilizzo di **piattaforme di _smart working_ avanzate**;
 - leggere gratuitamente un giornale anche senza andare in edicola o un libro senza andare in libreria **sul proprio smartphone o tablet**;
-- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di _e-learning_**;
-- farsi visitare da un medico senza dover uscire da casa, attraverso **servizi online** sviluppati a questo scopo. 
+- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di _e-learning_**.
 
 ## Come collaborare con noi
 
