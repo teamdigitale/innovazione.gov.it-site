@@ -1,332 +1,287 @@
 ---
 aderenti_manifesto:
   - name: Altroconsumo
-    logo: "altroconsumo-logo.png"
-    links:
-      - link_label: "www.altroconsumo.it"
-        link_url: "https://www.altroconsumo.it/"
-  - name: ACI
+    logo: "altroconsumo-ta-google-logo.png"
+    link: "https://www.altroconsumo.it/"
+  - name: ACI Informatica S.p.A.
     logo: "aci-logo.png"
-    links:
-      - link_label: "www.aci.it"
-        link_url: "http://www.aci.it/"
+    link: "http://www.aci.it/"
   - name: Anitec-Assinform
     logo: "anitec-assinform-logo.png"
-    links:
-      - link_label: "www.anitec-assinform.it"
-        link_url: "http://www.anitec-assinform.it/"
-  - name: Facebook Italia
-    logo: "facebook-logo.png"
-    links:
-      - link_label: "facebook.com"
-        link_url: "https://www.facebook.com/"
-  - name: IBM Italia
+    link: "http://www.anitec-assinform.it/"
+  - name: Facebook
+    logo: "facebook-fmd-logo.png"
+    link: "https://www.facebook.com/"
+  - name: Fondazione IBM Italia
     logo: "ibm-logo.png"
-    links:
-      - link_label: "www.ibm.com/it-it"
-        link_url: "https://www.ibm.com/it-it"
+    link: "https://www.ibm.com/it-it"
   - name: Google Italia
     logo: "google-logo.png"
-    links:
-      - link_label: "google.it"
-        link_url: "https://www.google.it/"
+    link: "https://www.google.it/"
   - name: Microsoft Italia
     logo: "microsoft-logo.png"
-    links:
-      - link_label: "microsoft.com/it-it"
-        link_url: "https://www.microsoft.com/it-it"
+    link: "https://www.microsoft.com/it-it"
   - name: PayPal Italia
     logo: "paypal-logo.png"
-    links:
-      - link_label: "www.paypal.com/it/"
-        link_url: "https://www.paypal.com/it/webapps/mpp/home"
+    link: "https://www.paypal.com/it/webapps/mpp/home"
   - name: Telefono Azzurro
     logo: "telefono-azzurro-logo.png"
-    links:
-      - link_label: "www.azzurro.it"
-        link_url: "https://www.azzurro.it/"
+    link: "https://www.azzurro.it/"
   - name: Unione Nazionale Consumatori
     logo: "unc-logo.png"
-    links:
-      - link_label: "www.consumatori.it"
-        link_url: "https://www.consumatori.it/"
+    link: "https://www.consumatori.it/"
   - name: Time4Child
     logo: "time-4-child-logo.png"
-    links:
-      - link_label: "www.time4child.com"
-        link_url: "http://www.time4child.com/"
+    link: "http://www.time4child.com/"
   - name: Fondazione Scholas occurrentes
     logo: "scholas-logo.png"
-    links:
-      - link_label: "www.scholasoccurrentes.org"
-        link_url: "https://www.scholasoccurrentes.org/"
+    link: "https://www.scholasoccurrentes.org/"
   - name: Accademia Italiana Videogiochi
     logo: "aiv-logo.png"
-    links:
-      - link_label: "www.aiv01.it"
-        link_url: "https://www.aiv01.it/"
+    link: "https://www.aiv01.it/"
   - name: Forum PA
     logo: "forum-pa-logo.png"
-    links:
-      - link_label: "www.forumpa.it"
-        link_url: "https://www.forumpa.it/"
+    link: "https://www.forumpa.it/"
   - name: Grey Panthers
     logo: "grey-panthers-logo.jpg"
-    links:
-      - link_label: "www.grey-panthers.it"
-        link_url: "https://www.grey-panthers.it/"
-  - name: Camera di Commercio di Roma
+    link: "https://www.grey-panthers.it/"
+  - name: Innova Camera Azienda Speciale Camera di Commercio di Roma
     logo: "camera-commercio-roma-logo.png"
-    links:
-      - link_label: "www.rm.camcom.it"
-        link_url: "https://www.rm.camcom.it/"
+    link: "https://www.rm.camcom.it/"
   - name: Maker Faire Rome The European edition
     logo: "maker-fair-logo.png"
-    links:
-      - link_label: "makerfairerome.eu"
-        link_url: "https://2019.makerfairerome.eu/it/"
+    link: "https://2019.makerfairerome.eu/it/"
   - name: Olivetti
     logo: "olivetti-logo.png"
-    links:
-      - link_label: "olivetti.com"
-        link_url: "https://www.olivetti.com/"
-  - name: ClubTI
+    link: "https://www.olivetti.com/"
+  - name: Club TI Milano
     logo: "clubti-logo.png"
-    links:
-      - link_label: "www.clubtimilano.net"
-        link_url: "http://www.clubtimilano.net/"
-  - name: TIM
+    link: "http://www.clubtimilano.net/"
+  - name: TIM S.p.A.
     logo: "tim-logo.png"
-    links:
-      - link_label: "tim.it"
-        link_url: "https://www.tim.it/"
-  - name: ACCA Software
+    link: "https://www.tim.it/"
+  - name: ACCA software S.p.A.
     logo: "acca-logo.png"
-    links:
-      - link_label: "acca.it"
-        link_url: "https://www.acca.it/"
-  - name: CINI<br/><small>Consorzio Interuniversitario Nazionale per l’Informatica</small>
-    logo: "cini-logo.png"
-    links:
-      - link_label: "consorzio-cini.it"
-        link_url: "http://www.consorzio-cini.it"
+    link: "https://www.acca.it/"
+  - name: CINI - Consorzio Interuniversitario Nazionale per l'Informatica; GII - Gruppo di Ingegneria Informatica; GRIN - Gruppo di Informatica
+    logo: "cini-gii-grin-logo.png"
+    link: "http://www.consorzio-cini.it"
   - name: Fondazione Mondo Digitale
     logo: "fondazione-mondo-digitale-logo.png"
-    links:
-      - link_label: "mondodigitale.org"
-        link_url: "https://mondodigitale.org/it"
+    link: "https://mondodigitale.org/it"
   - name: Gruppo di Ingegneria Informatica
     logo: "gii-logo.png"
-    links:
-      - link_label: "gii.it"
-        link_url: "http://www.gii.it"
+    link: "http://www.gii.it"
   - name: Gruppo di Informatica
     logo: "grin-logo.png"
-    links:
-      - link_label: "grin-informatica.it"
-        link_url: "http://www.grin-informatica.it"
+    link: "http://www.grin-informatica.it"
   - name: Smart Nation
     logo: "smartnation-logo.png"
-    links:
-      - link_label: "smartnation.it"
-        link_url: "https://smartnation.it/"
+    link: "https://smartnation.it/"
   - name: Associazione InnovaFiducia
     logo: "innovafiducia-logo.png"
-    links:
-      - link_label: "innovafiducia.org"
-        link_url: "https://innovafiducia.org/"
-  - name: Trentino School of Management
+    link: "https://innovafiducia.org/"
+  - name: TSM - Trentino School of Management
     logo: "tsm-logo.png"
-    links:
-      - link_label: "www.tsm.tn.it"
-        link_url: "https://www.tsm.tn.it/"
+    link: "https://www.tsm.tn.it/"
   - name: Associazione Open Genova
     logo: "open-genova-logo.png"
-    links:
-      - link_label: "opengenova.org"
-        link_url: "https://associazione.opengenova.org/"
-  - name: Fondazione PICO
+    link: "https://associazione.opengenova.org/"
+  - name: Fondazione Pico
     logo: "pico-logo.png"
-    links:
-      - link_label: "pico.coop"
-        link_url: "https://www.pico.coop/"
-  - name: Harpaceas
+    link: "https://www.pico.coop/"
+  - name: Harpaceas S.r.l.
     logo: "harpaceas-logo.png"
-    links:
-      - link_label: "harpaceas.it"
-        link_url: "https://harpaceas.it/"
-  - name: WeSchool
+    link: "https://harpaceas.it/"
+  - name: Oilproject S.r.l. - WeSchool
     logo: "weschool-logo.png"
-    links:
-      - link_label: "weschool.com"
-        link_url: "https://www.weschool.com/"
-  - name: Consorzio.IT S.p.A.
-    logo: "consorzio-it-logo.png"
-    links:
-      - link_label: "consorzioit.net"
-        link_url: "https://www.consorzioit.net/"
+    link: "https://www.weschool.com/"
   - name: Comune di Milano
     logo: "milano-logo.png"
-    links:
-      - link_label: "comune.milano.it"
-        link_url: "https://www.comune.milano.it/"
+    link: "https://www.comune.milano.it/"
   - name: Comune di Venezia
-    logo: "venezia-logo.png"
-    links:
-      - link_label: "comune.venezia.it"
-        link_url: "https://www.comune.venezia.it/"
-  - name: VENIS S.p.A.
-    logo: "venis-logo.png"
-    links:
-      - link_label: "venis.it"
-        link_url: "https://www.venis.it/"
-  - name: Webidoo
+    logo: "venezia-venis-logo.png"
+    link: "https://www.comune.venezia.it/"
+  - name: Webidoo S.p.A.
     logo: "webidoo-logo.jpg"
-    links:
-      - link_label: "www.webidoo.it"
-        link_url: "https://www.webidoo.it/"
-  - name: FUSS<br/><small>Sostenibilità digitale nella scuola</small><br/><small>Provincia Autonoma di Bolzano</small>
+    link: "https://www.webidoo.it/"
+  - name: Progetto FUSS - Direzione Istruzione e Formazione Italiana - Provincia Autonoma di Bolzano
     logo: "fuss-logo.png"
-    links:
-      - link_label: "fuss.bz.it"
-        link_url: "https://fuss.bz.it"
-  - name: Fuzzy Brains
+    link: "https://fuss.bz.it"
+  - name: Fuzzy Brains APS
     logo: "fuzzy-brains-logo.png"
-    links:
-      - link_label: "fuzzybrains.org"
-        link_url: "https://www.fuzzybrains.org"
-  - name: ANORC<br/><small>Il portale della governance digitale</small>
+    link: "https://www.fuzzybrains.org"
+  - name: ANORC
     logo: "anorc-logo.png"
-    links:
-      - link_label: "anorc.eu"
-        link_url: "https://www.anorc.eu/"
-  - name: Palestra per la mente
+    link: "https://www.anorc.eu/"
+  - name: APS Palestra Per la Mente
     logo: "ppm-logo.png"
-    links:
-      - link_label: "palestraperlamente.org"
-        link_url: "http://www.palestraperlamente.org/"
+    link: "http://www.palestraperlamente.org/"
   - name: Camera di Commercio di Verona
     logo: "camera-commercio-verona-logo.png"
-    links:
-      - link_label: "vr.camcom.it"
-        link_url: "http://www.vr.camcom.it/"
-  - name: Digital Innovation Hub Vicenza<br><small>Confartigianato Vicenza</small>
+    link: "http://www.vr.camcom.it/"
+  - name: Digital Innovation Hub Vicenza - Confartigianato Vicenza
     logo: "dih-logo.jpg"
-    links:
-      - link_label: "digitalinnovationhubvicenza.it"
-        link_url: "https://digitalinnovationhubvicenza.it/"
-  - name: TOUCH M.E.<br><small>CerTIC Academy</small>
+    link: "https://digitalinnovationhubvicenza.it/"
+  - name: Associazione Touch M.E.
     logo: "touchme-logo.png"
-    links:
-      - link_label: "www.certicacademy.it"
-        link_url: "https://www.certicacademy.it/"
+    link: "https://www.certicacademy.it/"
   - name: Progetto NERD
     logo: "nerd-logo.png"
-    links:
-      - link_label: "progetto NERD su Twitter"
-        link_url: "https://twitter.com/progetto_nerd"
-  - name: Consulenti Associati Campania
+    link: "https://twitter.com/progetto_nerd"
+  - name: Consulenti Associati Campania S.r.l.s.
     logo: "ca-campania-logo.png"
-    links:
-      - link_label: "ca-campania.com"
-        link_url: "https://www.ca-campania.com/"
-  - name: Domanipress News
+    link: "https://www.ca-campania.com/"
+  - name: Domanipress
     logo: "domanipress-logo.png"
-    links:
-      - link_label: "domanipress.it"
-        link_url: "https://www.domanipress.it/"
-  - name: Maker Camp
+    link: "https://www.domanipress.it/"
+  - name: Maker Camp S.r.l.s.
     logo: "maker-camp-logo.png"
-    links:
-      - link_label: "makercamp.it"
-        link_url: "https://www.makercamp.it/wp/"
+    link: "https://www.makercamp.it/wp/"
   - name: FamigliAttiva ODV
     logo: "famigliattiva-logo.jpg"
-    links:
-      - link_label: "famigliattiva.org"
-        link_url: "http://www.famigliattiva.org/"
+    link: "http://www.famigliattiva.org/"
   - name: Parole O_Stili
     logo: "po-logo.png"
-    links:
-      - link_label: "paroleostili.it"
-        link_url: "https://paroleostili.it/"
+    link: "https://paroleostili.it/"
   - name: Assopam
     logo: "assopam-logo.png"
-    links:
-      - link_label: "assopam.it"
-        link_url: "https://www.assopam.it/"
-  - name: Studio Casiglia Ronzoni
+    link: "https://www.assopam.it/"
+  - name: Studio consulenza del lavoro Casiglia e Ronzoni
     logo: "casiglia-ronzoni-logo.png"
-    links:
-      - link_label: "casigliaronzoni.it"
-        link_url: "http://www.casigliaronzoni.it/"
+    link: "http://www.casigliaronzoni.it/"
   - name: Download Innovation
     logo: "download-innovation-logo.png"
-    links:
-      - link_label: "download-event.io"
-        link_url: "https://download-event.io/it/"
+    link: "https://download-event.io/it/"
   - name: Liber Liber
     logo: "liber-liber-logo.jpg"
-    links:
-      - link_label: "liberliber.it"
-        link_url: "https://www.liberliber.it/online/"
-  - name: Sogei
+    link: "https://www.liberliber.it/online/"
+  - name: SOGEI S.p.A.
     logo: "sogei-new-logo.png"
-    links:
-      - link_label: "sogei.it"
-        link_url: "http://www.sogei.it/"
-  - name: Chi Odia Paga
+    link: "http://www.sogei.it/"
+  - name: COP S.r.l.
     logo: "cop-logo.png"
-    links:
-      - link_label: "chiodiapaga.it"
-        link_url: "https://chiodiapaga.it/"
-  - name: EGInA
+    link: "https://chiodiapaga.it/"
+  - name: European Grants International Academy
     logo: "egina-logo.png"
-    links:
-      - link_label: "egina.eu"
-        link_url: "https://egina.eu/index2.html"
-  - name: Istituto Paolo Orsi Siracusa
+    link: "https://egina.eu/index2.html"
+  - name: XV Istituto Comprensivo Paolo Orsi di Siracusa
     logo: "paolo-orsi-logo.png"
-    links:
-      - link_label: "15icpaolorsi.education"
-        link_url: "https://www.15icpaolorsi.education/"
-  - name: Comune di Roma
+    link: "https://www.15icpaolorsi.education/"
+  - name: Roma Capitale
     logo: "comune-di-roma-logo.jpg"
-    links:
-      - link_label: "www.comune.roma.it"
-        link_url: "https://www.comune.roma.it/web/it/home.page"
-  - name: Unione Bassa Reggiana
+    link: "https://www.comune.roma.it/web/it/home.page"
+  - name: Unione di Comuni Bassa Reggiana
     logo: "bassa-reggiana-logo.png"
-    links:
-      - link_label: "www.bassareggiana.it"
-        link_url: "http://www.bassareggiana.it/servizi/notizie/notizie_homepage.aspx"
+    link: "http://www.bassareggiana.it/servizi/notizie/notizie_homepage.aspx"
   - name: Centro Studi Coding e Dintorni
     logo: "coding-e-dintorni-logo.jpg"
-    links:
-      - link_label: "codingedintorni.it"
-        link_url: "http://www.codingedintorni.it/"
-  - name: EduPuntoZero
+    link: "http://www.codingedintorni.it/"
+  - name: Edupuntozero S.r.l.
     logo: "edu-logo.png"
-    links:
-      - link_label: "edupuntozero.it"
-        link_url: "https://edupuntozero.it/"
-  - name: Informatici senza frontiere
+    link: "https://edupuntozero.it/"
+  - name: ISF - Informatici Senza Frontiere
     logo: "isf-logo.png"
-    links:
-      - link_label: "informaticisenzafrontiere.org"
-        link_url: "https://www.informaticisenzafrontiere.org/"
-  - name: Registro.it
-    logo: "registro-logo.png"
-    links:
-      - link_label: "nic.it"
-        link_url: "https://www.nic.it/it"
-  - name: DITEDI
+    link: "https://www.informaticisenzafrontiere.org/"
+  - name: Registro .it dell'Istituto di Informatica e telematica del Cnr
+    logo: "ludoteca-logo.png"
+    link: "https://www.nic.it/it"
+  - name: DITEDI S.c.a r.l.
     logo: "ditedi-logo.png"
-    links:
-      - link_label: "ditedi.it"
-        link_url: "http://www.ditedi.it/"
-  - name: Mappina
+    link: "http://www.ditedi.it/"
+  - name: Mappina APS
     logo: "mappina-logo.png"
-    links:
-      - link_label: "www.mappi-na.it"
-        link_url: "https://www.mappi-na.it/"
+    link: "https://www.mappi-na.it/"
+  - name: Digital Transformation Institute
+    logo: "dti-logo.jpg"
+    link: "https://www.digitaltransformationinstitute.it/"
+  - name: Madeinitalyfor.me S.r.l.
+    logo: "madeinitalyforme-logo.png"
+    link: "https://www.madeinitalyfor.me/"
+  - name: Associazione internazionale per la promozione della Scuola a Rete DiCultHer
+    logo: "diculther-logo.png"
+    link: "https://www.diculther.it/"
+  - name: Binario 10
+    logo: "binario10-logo.jpg"
+    link: "https://www.binario10.it/"
+  - name: Centro di ricerca universitario DITES - Link Campus University
+    logo: "dites-logo.png"
+    link: "https://dites.unilink.it/"
+  - name: Fastweb
+    logo: "fastweb-logo.png"
+    link: "https://www.fastweb.it/"
+  - name: FonARCom
+    logo: "fonarcom-logo.png"
+    link: "https://www.fonarcom.it/"
+  - name: Girls Tech
+    logo: "girlstech-logo.png"
+    link: "https://www.girlstech.it/"
+  - name: Generazione Ypsilon
+    logo: "gy-logo.png"
+    link: "https://generazioneypsilon.it/"
+  - name: Impactscool
+    logo: "impactscool-logo.png"
+    link: "https://www.impactscool.com/"
+  - name: Kilometro rosso
+    logo: "kilometrorosso-logo.png"
+    link: "http://www.kilometrorosso.com/"
+  - name: SIGM - Associazione Italiana Giovani Medici
+    logo: "sigm-logo.png"
+    link: "http://www.giovanemedico.it/"
+  - name: Web Marketing Festival
+    logo: "wmf-logo.png"
+    link: "https://www.webmarketingfestival.it/"
+  - name: Comune di Cagliari
+    logo: "comune-cagliari-logo.jpg"
+    link: "https://www.comune.cagliari.it/portale/"
+  - name: Comune di Cinisi
+    logo: "comune-cinisi-it.png"
+    link: "http://www.comune.cinisi.pa.it/"
+  - name: InContra Innovazione Contrattazione Partecipazione
+    logo: "incontra-logo.png"
+    link: "https://www.incontra.info/"
+  - name: Club Dirigenti Tecnologie dell'Informazione di Roma
+    logo: "cdti-logo.png"
+    link: "https://www.cdti.org/"
+  - name: Cifa
+    logo: "cifa-logo.jpg"
+    link: "https://www.incontra.info/"
+  - name: Sistema Impresa Roma - Associazione di imprese e professionisti
+    logo: "si-logo.gif"
+    link: "http://www.sistema-impresa.org/"
+  - name: Darwin technologies
+    logo: "darwin-logo.png"
+    link: "https://www.darwintechnologies.it/"
+  - name: Synesthesia S.r.l.
+    logo: "girlstech-logo.png"
+    link: "https://www.girlstech.it/"
+  - name: Unioncamere - Unione italiana delle Camere di commercio, industria, artigianato e agricoltura
+    logo: "unioncamere-logo.png"
+    link: "http://www.unioncamere.gov.it/"
+  - name: AICA - Associazione Italiana per l'Informatica ed il Calcolo Automatico
+    logo: "aica-logo.png"
+    link: "https://www.aicanet.it/"
+  - name: AICA - Associazione Italiana per l'Informatica ed il Calcolo Automatico
+    logo: "aica-logo.png"
+    link: "https://www.aicanet.it/"
+  - name: SORINT.lab S.p.A.
+    logo: "sorint-logo.jpg"
+    link: "https://www.sorint.it/it/italian-next-generation-system-integrator/"
+  - name: Consorzio Informatica e Territorio
+    logo: "consorzio-it-logo.png"
+    link: "https://www.consorzioit.net/"
+  - name: IIS Tecnico economico e professionale Casagrande Cesi - Terni
+    logo: "alfec-logo.jpg"
+    link: "https://www.casagrandecesi.edu.it/"
+  - name: Developer Circle Rome
+    logo: "fdc-logo.png"
+    link: "https://www.facebook.com/groups/DevCRome/"
+  - name: Inforav
+    logo: "inforav-logo.gif"
+    link: "http://www.inforav.it/"
+  - name: Vodafone Italia
+    logo: "vodafone-logo.png"
+    link: "https://www.vodafone.it/"
+  - name: Comune di Lecco
+    logo: "comune-di-lecco-logo.jpg"
+    link: "http://www.comune.lecco.it/"

@@ -68,10 +68,6 @@
   text-align: left;
   border: 1px solid rgb(228, 228, 228);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-  -webkit-transition: .2s ease all;
-  -moz-transition: .2s ease all;
-  -ms-transition: .2s ease all;
-  -o-transition: .2s ease all;
   transition: .2s ease all;
 }
 
@@ -147,10 +143,6 @@ img.reset-logo {
     opacity: 0;
     padding: 1px;
     border-radius: 4px 4px 0 0;
-    -webkit-transition: .15s ease all;
-    -moz-transition: .15s ease all;
-    -ms-transition: .15s ease all;
-    -o-transition: .15s ease all;
     transition: .15s ease all;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1, 1);
@@ -218,36 +210,6 @@ img.reset-logo {
 
   &:hover {
     color: rgb(100, 100, 100);
-  }
-}
-
-
-@media screen and (max-width: 1024px) {
-  .client {
-    max-width: calc(25% - 30px);
-  }
-}
-
-@media screen and (max-width: 820px) {
-  .client {
-    max-width: calc(33.33% - 30px);
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .client {
-    max-width: calc(50% - 30px);
-  }
-}
-
-@media screen and (max-width: 525px) {
-  .client {
-    float: none;
-    max-width: 260px;
-    width: 90%;
-  }
-  .client-wrap {
-    text-align: center;
   }
 }
 

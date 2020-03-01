@@ -61,6 +61,24 @@
   }
 }
 
+.innovation-section-head--repubblica-digitale {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/shapelined-_JBKdviweXI-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/shapelined-_JBKdviweXI-unsplash.webp");
+  }
+}
+
+.innovation-section-head--repubblica-digitale {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/shapelined-_JBKdviweXI-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/shapelined-_JBKdviweXI-unsplash.webp");
+  }
+}
+
 // cittadini
 .innovation-section-cittadini--io {
   @at-root .no-webp #{&} {

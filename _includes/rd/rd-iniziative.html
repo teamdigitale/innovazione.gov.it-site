@@ -1,0 +1,46 @@
+{% assign iniziative = site.data.iniziative | sort: "Data Approvazione" | reverse %}
+{% assign aderenti = site.data.aderenti_manifesto_rd.aderenti_manifesto %}
+
+<div class="iniziative-aderenti container mt-4">
+  <div class="row">
+    <div class="col col-lg-10 small">
+      <h2 class="mt-5 mb-3" id="iniziative-aderenti">Le iniziative aderenti al Manifesto</h2>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        {%- for iniziativa in iniziative limit:6 -%}
+          {% assign forloop-index=forloop.index0 %}
+          {% include rd/rd-iniziativa.html iniziativa=iniziativa forloop-index=forloop-index %}
+        {%- endfor -%}
+      </div>
+      <div class="collapse-div" role="tablist">
+        <div class="row">
+          <div class="collapse-header w-100 mt-3 mx-2" id="collapse-iniziative-heading">
+            <button data-toggle="collapse" data-target="#collapse-iniziative" aria-expanded="false" aria-controls="collapse-iniziative">
+              Vedi tutte le iniziative
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="collapse-iniziative" class="collapse" role="tabpanel" aria-labelledby="collapse-iniziative-heading">
+        <div class="collapse-body px-0">
+          <div class="row">
+          {%- for iniziativa in iniziative offset:6 -%}
+            {% assign forloop-index = forloop.index0 | plus: 6 %}
+            {% include rd/rd-iniziativa.html iniziativa=iniziativa forloop-index=forloop-index %}
+          {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}
+    <div class="col-12 mt-5 mx-4 text-right">
+        <a class="read-more" href="#" data-toggle="modal" data-target="#modale-aderenti">
+          Vedi tutti gli aderenti
+          <svg class="icon">
+            <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+          </svg></a>
+    </div>
+    {% endcomment %}
+  </div>
+</div>
