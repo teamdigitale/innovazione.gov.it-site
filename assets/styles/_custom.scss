@@ -4,7 +4,7 @@
 }
 
 .text-shadow-green {
-  text-shadow: 0 0 2px rgba(0,176,179,0.8);
+  text-shadow: 0 0 2px rgba(0, 176, 179, 0.8);
 }
 
 .max-w-40 {
@@ -14,6 +14,7 @@
 .max-h-80 {
   max-height: 80px;
 }
+
 .max-h-240 {
   max-height: 240px;
 }
@@ -94,6 +95,7 @@
     left: 0;
     bottom: 0;
   }
+
   &.innovation-section-head--repubblica-digitale {
     &::before {
       background-color: rgba(0, 89, 179, 0.6);
@@ -203,6 +205,7 @@
       transition: background-color 0.2s ease;
       margin-left: 0;
       margin-right: 0;
+
       &:hover {
         background-color: rgba(255, 255, 255, 1);
       }
@@ -224,14 +227,17 @@
     .seeall {
       display: inline;
     }
+
     .hideall {
       display: none;
     }
   }
+
   &[aria-expanded='true'] {
     .seeall {
       display: none;
     }
+
     .hideall {
       display: inline;
     }
