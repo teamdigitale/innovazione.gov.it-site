@@ -13,7 +13,7 @@ categories:
   - cittadini
 ---
 
-_Un’iniziativa per ridurre l’impatto sociale ed economico nelle aree soggette a restrizioni grazie a servizi e soluzioni innovativi._
+_Un’iniziativa per ridurre l’impatto sociale ed economico nelle aree soggette a restrizioni grazie a servizi innovativi._
 
 <!-- MORE -->
 
