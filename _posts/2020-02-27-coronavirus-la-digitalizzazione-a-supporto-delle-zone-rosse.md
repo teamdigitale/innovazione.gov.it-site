@@ -11,6 +11,8 @@ categories:
   - imprese
   - pubblica amministrazione
   - cittadini
+redirect_from:
+  - /it/solidarieta-digitale/
 ---
 
 _Un’iniziativa per ridurre l’impatto sociale ed economico nelle aree soggette a restrizioni grazie a servizi innovativi._
@@ -49,15 +51,21 @@ Grazie,
 
 Ministro per l’innovazione tecnologica e la digitalizzazione
 
-
-*Nella pagina dedicata a [Solidarietà digitale]({% link it/solidarieta-digitale.md %}) è possibile trovare maggiori informazioni sull'iniziativa e sui servizi per i cittadini che si trovano nelle zone interessate dalle misure urgenti di contenimento.* 
-
-<div class="w-100 text-center mt-4 mb-5">
-    <a class="btn btn-primary" role="button" href="{% link it/solidarieta-digitale.md %}">
-    Solidarietà digitale
-    </a>
-</div>
-
+<!--
+<section class="section bg-radial-blue">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mt-4" id="come-aderire">Servizi per i cittadini</h2>
+        <p><b>Ti trovi nelle zone interessate</b> dalle misure urgenti di contenimento e gestione del contagio per il #COVID19? Guarda subito l’elenco aggiornato dei servizi e delle soluzioni innovative a cui puoi accedere:</p>
+        <div class="text-center w-100 my-5">
+          <a class="btn btn-lg btn-outline-light" role="button" href="https://solidarietadigitale.agid.gov.it/">Vai all'elenco dei servizi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
 
 {:.x-small.text-right}
 _Fotografia di [Bench Accounting](https://unsplash.com/@benchaccounting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/home-working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
