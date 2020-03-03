@@ -27,7 +27,7 @@ I servizi che vogliamo rendere disponibili hanno il comune obiettivo di **miglio
 
 - lavorare da remoto, attraverso **connettività rapida e gratuita** e l’utilizzo di **piattaforme di _smart working_ avanzate**;
 - leggere gratuitamente un giornale anche senza andare in edicola o un libro senza andare in libreria **sul proprio smartphone o tablet**;
-- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di _e-learning_**.
+- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di _e-learning_**, come [proposto dal MIUR](https://www.miur.gov.it/web/guest/-/coronavirus-pubblicate-due-call-per-sostenere-la-didattica-a-distanza).
 
 ## Come collaborare con noi
 
