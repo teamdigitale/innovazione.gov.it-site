@@ -79,6 +79,15 @@
   }
 }
 
+.innovation-section-head--solidarieta-digitale {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/bench-accounting-nvzvOPQW0gc-unsplash.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/bench-accounting-nvzvOPQW0gc-unsplash.webp");
+  }
+}
+
 // cittadini
 .innovation-section-cittadini--io {
   @at-root .no-webp #{&} {
