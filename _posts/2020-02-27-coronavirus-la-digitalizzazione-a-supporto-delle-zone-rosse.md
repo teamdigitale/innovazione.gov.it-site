@@ -50,7 +50,13 @@ Grazie,
 Ministro per l’innovazione tecnologica e la digitalizzazione
 
 
+*Nella pagina dedicata a [Solidarietà digitale]({% link it/solidarieta-digitale.md %}) è possibile trovare maggiori informazioni sull'iniziativa e sui servizi per i cittadini che si trovano nelle zone interessate dalle misure urgenti di contenimento.* 
 
+<div class="w-100 text-center mt-4 mb-5">
+    <a class="btn btn-primary" role="button" href="{% link it/solidarieta-digitale.md %}">
+    Solidarietà digitale
+    </a>
+</div>
 
 
 {:.x-small.text-right}

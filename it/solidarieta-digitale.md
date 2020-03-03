@@ -63,7 +63,7 @@ Grazie,
         <h2 class="mt-4" id="come-aderire">Servizi per i cittadini</h2>
         <p><b>Ti trovi nelle zone interessate</b> dalle misure urgenti di contenimento e gestione del contagio per il #COVID19? Guarda subito l’elenco aggiornato dei servizi e delle soluzioni innovative a cui puoi accedere:</p>
         <div class="text-center w-100 my-5">
-          <a class="btn btn-lg btn-outline-light" role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSerfb-oJkGwn1lB2GO8aqVODxxqEdlqZyjYg7udv9pgvGiVcQ/viewform">Vai all'elenco dei servizi</a>
+          <a class="btn btn-lg btn-outline-light" role="button" href="https://solidarietadigitale.agid.gov.it/">Vai all'elenco dei servizi</a>
         </div>
       </div>
     </div>
