@@ -21,11 +21,9 @@ Digitale e innovazione possono rappresentare, se utilizzate nel modo giusto, **r
 
 Partendo da questa considerazione, come [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) ho deciso di intraprendere una serie di azioni per essere a fianco dei nostri cittadini e delle nostre imprese utilizzando servizi e soluzioni innovative. 
 
-Invitiamo  soggetti privati e pubblici a partecipare a questa iniziativa.
-
 ## Gli obiettivi
 
-Le iniziative, i servizi e le soluzioni che vogliamo adottare hanno il comune obiettivo di **migliorare la vita delle persone** che in questo momento si vedono costrette a cambiare le loro abitudini  permettendo di:
+I servizi che vogliamo rendere disponibili hanno il comune obiettivo di **migliorare la vita delle persone** che in questo momento si vedono costrette a cambiare le loro abitudini  permettendo di:
 
 - lavorare da remoto, attraverso **connettività rapida e gratuita** e l’utilizzo di **piattaforme di _smart working_ avanzate**;
 - leggere gratuitamente un giornale anche senza andare in edicola o un libro senza andare in libreria **sul proprio smartphone o tablet**;
@@ -41,7 +39,7 @@ Chiunque può aderire all’iniziativa semplicemente scrivendo a [repubblicadigi
 
 L’Italia è un solo grande Comune e **una situazione come questa ci riguarda tutti**, nessuno escluso. Digitale e innovazione possono aiutarci a vincere e abbiamo il dovere di provare a usarli nell’interesse comune, nel modo migliore possibile e senza lasciare nessuno indietro.
 
-Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, un’associazione di volontari o semplicemente degli appassionati di digitale e tecnologia, se pensate di disporre di una soluzione, di un servizio capace di **fare la differenza** per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci.
+Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, o un’associazione di volontari, se pensate di disporre di una soluzione, di un servizio capace di **fare la differenza** per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci.
 
 
 
