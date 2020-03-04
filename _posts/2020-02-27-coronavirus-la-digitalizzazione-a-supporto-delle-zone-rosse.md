@@ -51,7 +51,7 @@ Grazie,
 
 Ministro per l’innovazione tecnologica e la digitalizzazione
 
-<!--
+
 <section class="section bg-radial-blue">
   <div class="container text-white">
     <div class="row">
@@ -65,7 +65,7 @@ Ministro per l’innovazione tecnologica e la digitalizzazione
     </div>
   </div>
 </section>
--->
+
 
 {:.x-small.text-right}
 _Fotografia di [Bench Accounting](https://unsplash.com/@benchaccounting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/s/photos/home-working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
