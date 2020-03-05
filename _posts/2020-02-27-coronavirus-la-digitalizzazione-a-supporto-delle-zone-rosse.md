@@ -47,12 +47,11 @@ Che siate una multinazionale o una partecipata pubblica, una startup, una piccol
 
 Grazie,
 
-**Paola Pisano**
-
+**Paola Pisano**  
 Ministro per l’innovazione tecnologica e la digitalizzazione
 
 
-<section class="section bg-radial-blue">
+<section class="section bg-radial-blue mb-2">
   <div class="container text-white">
     <div class="row">
       <div class="col-12">
@@ -65,6 +64,8 @@ Ministro per l’innovazione tecnologica e la digitalizzazione
     </div>
   </div>
 </section>
+
+Ringraziamo gli Identity Provider che, con l’obiettivo di facilitare la fruizione online dei servizi della PA e dei privati aderenti attraverso SPID, hanno messo a disposizione le modalità di riconoscimento via webcam in forma gratuita per i cittadini che si trovano nelle zone rosse.
 
 
 {:.x-small.text-right}
