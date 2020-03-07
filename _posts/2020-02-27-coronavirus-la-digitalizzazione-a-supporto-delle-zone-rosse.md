@@ -33,11 +33,7 @@ I servizi che vogliamo rendere disponibili hanno il comune obiettivo di **miglio
 
 ## Come collaborare con noi
 
-Chiunque può aderire all’iniziativa semplicemente scrivendo a [repubblicadigitale@teamdigitale.governo.it](mailto:repubblicadigitale@teamdigitale.governo.it). Nella propria candidatura è necessario:
-
-- descrivere il proprio servizio;
-- definire le modalità e tempistiche di applicazione in uno degli ambiti proposti;
-- manifestare l’intenzione di porre il servizio in questione a disposizione della popolazione o delle autorità per il tempo necessario.
+Chiunque può aderire all’iniziativa semplicemente compilando il form presente nella sezione _"Come aderire"_ all’interno della pagina [Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/#come-aderire).
 
 L’Italia è un solo grande Comune e **una situazione come questa ci riguarda tutti**, nessuno escluso. Digitale e innovazione possono aiutarci a vincere e abbiamo il dovere di provare a usarli nell’interesse comune, nel modo migliore possibile e senza lasciare nessuno indietro.
 
