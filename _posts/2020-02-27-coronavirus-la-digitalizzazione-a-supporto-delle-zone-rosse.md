@@ -11,8 +11,6 @@ categories:
   - imprese
   - pubblica amministrazione
   - cittadini
-redirect_from:
-  - /it/solidarieta-digitale/
 ---
 
 _Un’iniziativa per ridurre l’impatto sociale ed economico nelle aree soggette a restrizioni grazie a servizi innovativi._

@@ -11,6 +11,8 @@ categories:
   - imprese
   - pubblica amministrazione
   - cittadini
+redirect_from:
+  - /it/solidarieta-digitale/
 ---
 
 _Il digitale a supporto della popolazione italiana per migliorare la gestione del lavoro e delle normali attività quotidiane._
