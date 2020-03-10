@@ -4,7 +4,7 @@ title: "Coronavirus, la solidarietà digitale si estende in tutta Italia"
 ref: coronavirus-solidarieta-digitale-in-tutta-italia
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/nong-vang-572081-unsplash.jpg" alt="La solidarietà digitale si estende in tutta Italia"/>
+asset: <img class="w-100" src="/assets/images/posts/josh-hild-WjZ4eaHq9G4-unsplash.jpg" alt="La solidarietà digitale si estende in tutta Italia"/>
 pinned: 
 categories:
   - highlights
@@ -45,4 +45,4 @@ Nella [stessa pagina dedicata all’iniziativa](https://solidarietadigitale.agid
 _Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, o un’associazione di volontari, se pensate di disporre di una soluzione, di un servizio capace di **fare la differenza** per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci. Grazie!_
 
 {:.x-small.text-right}
-_Fotografia di [Nong Vang](https://unsplash.com/@californong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
+_Fotografia di [Josh Hild](https://unsplash.com/@joshhild?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/WjZ4eaHq9G4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
