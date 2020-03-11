@@ -40,6 +40,11 @@ Per questo l’iniziativa riguarda servizi gratuiti rivolti a cittadini, profess
 
 ## Come partecipare
 
+<div class="callout">
+  <div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg>Attenzione</div>
+  <p>A causa della grande risposta all'iniziativa sulla solidarietà digitale e alle centinaia di offerte che stanno arrivando, l’istruttoria e la pubblicazione potrebbero richiedere qualche giorno. Ci scusiamo per l'attesa.</p>
+</div>
+
 Se hai un servizio **da offrire gratuitamente per un periodo di tempo limitato** a tutta la popolazione italiana o solo in alcune regioni e che rientra negli obiettivi dell’iniziativa che abbiamo elencato, compila subito il form presente nella sezione _"Come aderire"_ all’interno della pagina [Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/#come-aderire){:target="_blank" rel="noopener noreferrer"}.
 
 Nella [stessa pagina dedicata all’iniziativa](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"}, tutti i cittadini possono trovare un **elenco di servizi a loro disposizione** e le istruzioni per attivarli o farne richiesta (quando necessario).
