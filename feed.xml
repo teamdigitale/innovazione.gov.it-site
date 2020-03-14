@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2020-03-11T16:49:36+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">Coronavirus, la solidarietà digitale si estende in tutta Italia</title><link href="https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/" rel="alternate" type="text/html" title="Coronavirus, la solidarietà digitale si estende in tutta Italia" /><published>2020-03-10T00:00:00+00:00</published><updated>2020-03-10T00:00:00+00:00</updated><id>https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia</id><content type="html" xml:base="https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/">&lt;p&gt;&lt;em&gt;Il digitale a supporto della popolazione italiana per migliorare la gestione del lavoro e delle normali attività quotidiane.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2020-03-14T16:15:00+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">Coronavirus, la solidarietà digitale si estende in tutta Italia</title><link href="https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/" rel="alternate" type="text/html" title="Coronavirus, la solidarietà digitale si estende in tutta Italia" /><published>2020-03-10T00:00:00+00:00</published><updated>2020-03-10T00:00:00+00:00</updated><id>https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia</id><content type="html" xml:base="https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/">&lt;p&gt;&lt;em&gt;Il digitale a supporto della popolazione italiana per migliorare la gestione del lavoro e delle normali attività quotidiane.&lt;/em&gt;&lt;/p&gt;
 
 &lt;!-- MORE --&gt;
 
@@ -27,7 +27,7 @@
 
 &lt;h2 id=&quot;come-partecipare&quot;&gt;Come partecipare&lt;/h2&gt;
 
-&lt;div class=&quot;callout&quot;&gt;
+&lt;div class=&quot;callout important&quot;&gt;
   &lt;div class=&quot;callout-title&quot;&gt;&lt;svg class=&quot;icon&quot;&gt;&lt;use xlink:href=&quot;/assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Attenzione&lt;/div&gt;
   &lt;p&gt;A causa della grande risposta all'iniziativa sulla solidarietà digitale e alle centinaia di offerte che stanno arrivando, l’istruttoria e la pubblicazione potrebbero richiedere qualche giorno. Ci scusiamo per l'attesa.&lt;/p&gt;
 &lt;/div&gt;
@@ -36,7 +36,21 @@
 
 &lt;p&gt;Nella &lt;a href=&quot;https://solidarietadigitale.agid.gov.it/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;stessa pagina dedicata all’iniziativa&lt;/a&gt;, tutti i cittadini possono trovare un &lt;strong&gt;elenco di servizi a loro disposizione&lt;/strong&gt; e le istruzioni per attivarli o farne richiesta (quando necessario).&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, o un’associazione di volontari, se pensate di disporre di una soluzione, di un servizio capace di &lt;strong&gt;fare la differenza&lt;/strong&gt; per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci. Grazie!&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;requisiti-per-la-pubblicazione-dei-servizi&quot;&gt;Requisiti per la pubblicazione dei servizi&lt;/h3&gt;
+
+&lt;p&gt;Saranno pubblicati, previa verifica, &lt;strong&gt;solo i servizi, esclusivamente digitali, che rispondano ai seguenti criteri&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;i proponenti siano aziende, enti o associazioni, quindi non singole persone o professionisti;&lt;/li&gt;
+  &lt;li&gt;siano servizi gratuiti o resi gratuiti per l’emergenza (non scontistica), senza alcun impegno od obbligo di rinnovo al termine del periodo dell’offerta;&lt;/li&gt;
+  &lt;li&gt;sia esplicitata la durata dell’offerta;&lt;/li&gt;
+  &lt;li&gt;rientrino nelle categorie proposte nel form;&lt;/li&gt;
+  &lt;li&gt;siano validi per tutto il territorio nazionale o per una o più regioni;&lt;/li&gt;
+  &lt;li&gt;la cui descrizione non sia redatta in tono promozionale;&lt;/li&gt;
+  &lt;li&gt;preferibilmente, sia previsto un canale di adesione dedicato all’iniziativa per l’emergenza coronavirus.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;mt-4&quot;&gt;&lt;em&gt;Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, o un’associazione di volontari, se pensate di disporre di una soluzione, di un servizio capace di &lt;strong&gt;fare la differenza&lt;/strong&gt; per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci. Grazie!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p class=&quot;x-small text-right&quot;&gt;&lt;em&gt;Fotografia di &lt;a href=&quot;https://unsplash.com/@joshhild?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Josh Hild&lt;/a&gt; su &lt;a href=&quot;https://unsplash.com/photos/WjZ4eaHq9G4?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Il digitale a supporto della popolazione italiana per migliorare la gestione del lavoro e delle normali attività quotidiane.</summary></entry><entry xml:lang="it"><title type="html">Coronavirus, la digitalizzazione a supporto delle zone rosse</title><link href="https://innovazione.gov.it/coronavirus-la-digitalizzazione-a-supporto-delle-zone-rosse/" rel="alternate" type="text/html" title="Coronavirus, la digitalizzazione a supporto delle zone rosse" /><published>2020-02-27T00:00:00+00:00</published><updated>2020-02-27T00:00:00+00:00</updated><id>https://innovazione.gov.it/coronavirus-la-digitalizzazione-a-supporto-delle-zone-rosse</id><content type="html" xml:base="https://innovazione.gov.it/coronavirus-la-digitalizzazione-a-supporto-delle-zone-rosse/">&lt;p&gt;&lt;em&gt;Un’iniziativa per ridurre l’impatto sociale ed economico nelle aree soggette a restrizioni grazie a servizi innovativi.&lt;/em&gt;&lt;/p&gt;
 
