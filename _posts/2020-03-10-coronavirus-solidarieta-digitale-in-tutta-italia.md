@@ -40,7 +40,7 @@ Per questo l’iniziativa riguarda servizi gratuiti rivolti a cittadini, profess
 
 ## Come partecipare
 
-<div class="callout">
+<div class="callout important">
   <div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg>Attenzione</div>
   <p>A causa della grande risposta all'iniziativa sulla solidarietà digitale e alle centinaia di offerte che stanno arrivando, l’istruttoria e la pubblicazione potrebbero richiedere qualche giorno. Ci scusiamo per l'attesa.</p>
 </div>
@@ -49,6 +49,19 @@ Se hai un servizio **da offrire gratuitamente per un periodo di tempo limitato**
 
 Nella [stessa pagina dedicata all’iniziativa](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"}, tutti i cittadini possono trovare un **elenco di servizi a loro disposizione** e le istruzioni per attivarli o farne richiesta (quando necessario).
 
+### Requisiti per la pubblicazione dei servizi
+
+Saranno pubblicati, previa verifica, **solo i servizi, esclusivamente digitali, che rispondano ai seguenti criteri**:
+
+- i proponenti siano aziende, enti o associazioni, quindi non singole persone o professionisti;
+- siano servizi gratuiti o resi gratuiti per l’emergenza (non scontistica), senza alcun impegno od obbligo di rinnovo al termine del periodo dell’offerta;
+- sia esplicitata la durata dell’offerta;
+- rientrino nelle categorie proposte nel form;
+- siano validi per tutto il territorio nazionale o per una o più regioni;
+- la cui descrizione non sia redatta in tono promozionale;
+- preferibilmente, sia previsto un canale di adesione dedicato all’iniziativa per l’emergenza coronavirus.
+
+{:.mt-4}
 _Che siate una multinazionale o una partecipata pubblica, una startup, una piccola o media impresa, o un’associazione di volontari, se pensate di disporre di una soluzione, di un servizio capace di **fare la differenza** per garantire un quotidiano sostenibile a chi vive nelle aree sottoposte a misure di contenimento per il virus, scriveteci. Grazie!_
 
 {:.x-small.text-right}
