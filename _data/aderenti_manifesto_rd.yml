@@ -288,3 +288,9 @@ aderenti_manifesto:
   - name: Associazione di Promozione Sociale Binario 10 - Barletta
     logo: "binario10-logo.jpg"
     link: "https://www.binario10.it/"
+  - name: Cisco
+    logo: "cisco-logo.png"
+    link: "https://www.netacad.com/"
+  - name: "Istituto Europeo per l'Innovazione e la Sostenibilità"
+    logo: "eiis-logo.png"
+    link: "https://eiis.it/"
