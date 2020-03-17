@@ -5,7 +5,7 @@ ref: coronavirus-solidarieta-digitale-in-tutta-italia
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/josh-hild-WjZ4eaHq9G4-unsplash.jpg" alt="La solidarietà digitale si estende in tutta Italia"/>
-pinned: 
+pinned: true
 categories:
   - highlights
   - imprese
