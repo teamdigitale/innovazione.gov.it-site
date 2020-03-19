@@ -27,7 +27,7 @@ L’iniziativa “Innova per l’Italia” si inserisce nel solco del [Decreto l
 
 I fondi stanziati, 50 milioni di euro complessivamente, hanno il fine di assicurare la produzione e la fornitura di questi dispositivi (ai valori di mercato correnti). Inoltre il decreto prevede che, fino al termine dello stato di emergenza, è consentito **produrre mascherine chirurgiche anche in deroga alle norme vigenti** purché nel rispetto delle linee guida dell'Organizzazione Mondiale della Sanità e in conformità alle attuali evidenze scientifiche.
 
-##Gli obiettivi
+## Gli obiettivi
 
 Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, in particolare negli ambiti:
 
@@ -76,7 +76,7 @@ Le proposte verranno analizzate dalla segreteria organizzativa e, se ammissibili
 
 Per alcune tipologie di proposte, le aziende che verranno contattate devono essere in grado di **certificare le proprie attività e produzioni**, tramite opportuna rete di soggetti (ad esempio Università, Enti di Ricerca).  
 
-##Requisiti per la pubblicazione dei servizi
+## Requisiti per la pubblicazione dei servizi
 
 Saranno considerati **solo i servizi e interventi che rispondano ai seguenti criteri**:
 
