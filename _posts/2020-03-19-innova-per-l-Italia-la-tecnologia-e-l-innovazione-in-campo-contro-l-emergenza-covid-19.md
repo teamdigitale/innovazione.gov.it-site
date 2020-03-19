@@ -14,9 +14,9 @@ _Un nuovo appello alle aziende e enti, per l’utilizzo di tecnologie utili al t
 
 <!-- MORE -->
 
-“Innova per l’Italia” è una chiamata alle aziende, università, enti di ricerca e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è una chiamata alle aziende, università, enti di ricerca pubblici e privati e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
-Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/) e alla struttura del **Commissario Straordinario al Coronavirus**.
+Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/) e alla struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
 
 _La tecnologia e l’innovazione in tutte le sue forme, attraverso processi, prodotti e soluzioni, può contribuire significativamente a rispondere all’emergenza. L’iniziativa [Solidarietà digitale](https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/) ha già riscosso un successo importante, aiutando le persone ad affrontare meglio il momento difficile che stiamo vivendo, mantenendo per quanto possibile la propria quotidianità. Ora abbiamo nuovamente bisogno di voi, aziende e enti di ricerca, perché **l’innovazione tecnologica può essere la leva per rispondere velocemente a una situazione di crisi** che impatta il nostro Paese in maniera drammatica_.
 
@@ -42,21 +42,21 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
   - dispositivi di protezione individuale, in particolare mascherine chirurgiche, mascherine FFP2/N95 con e senza filtro, mascherine FFP3/N99 conforme con Dir. 93/42 CEE, direttiva europea 89/686, e EN149:2001+A1:2009 o equivalenti;
   - produzione dei sistemi complessi dei respiratori per il trattamento delle sindromi respiratorie, inclusi tutti gli elementi che compongono il sistema complesso in cui i respiratori si inseriscono (valvole, display, …).
 
-Per questo motivo ci rivolgiamo alle aziende che già producono questi beni oppure quelle che, ad esempio, possano convertire la propria produzione tessile per la manifattura di mascherine adatte agli scopi medici e nel rispetto degli standard necessari, oppure che possano sfruttare la propria capacità di produrre materiali adatti alla produzione o al funzionamento dei respiratori artificiali. 
+  Per questo motivo ci rivolgiamo alle aziende che già producono questi beni oppure quelle che, ad esempio, possano convertire la propria produzione tessile per la manifattura di mascherine adatte agli scopi medici e nel rispetto degli standard necessari, oppure che possano sfruttare la propria capacità di produrre materiali adatti alla produzione o al funzionamento dei respiratori artificiali. 
 
 2. Il reperimento di kit o tecnologie innovative che facilitino la **diagnosi del Covid-19** in termini di:
-  -tamponi e elementi accessori;
-  -strumenti per la diagnosi facilitata e veloce, nel rispetto degli standard di affidabilità richiesta.
+  - tamponi e elementi accessori;
+  - strumenti per la diagnosi facilitata e veloce, nel rispetto degli standard di affidabilità richiesta.
   
-Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei tamponi adatti alla diagnosi del Covid-19 così come quelle che potrebbero indirizzare la produzione. Ci rivolgiamo anche a quelle aziende che hanno già avviato sperimentazione e innovazione di tecnologie per una diagnosi facilitata e veloce che aiuterebbe significativamente il processo di identificazione rapida della popolazione infetta, dei pazienti in modalità pre-triage, così come di contenimento sia in ottica di breve che di medio termine. 
+  Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei tamponi adatti alla diagnosi del Covid-19 così come quelle che potrebbero indirizzare la produzione. Ci rivolgiamo anche a quelle aziende che hanno già avviato sperimentazione e innovazione di tecnologie per una diagnosi facilitata e veloce che aiuterebbe significativamente il processo di identificazione rapida della popolazione infetta, dei pazienti in modalità pre-triage, così come di contenimento sia in ottica di breve che di medio termine. 
 
 3. Disponibilità di **tecnologie e strumenti** che, nel rispetto della normativa vigente, **consentano o facilitino il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19** e l’elaborazione di nuove politiche e misure di governance sociale, in termini di:
-  -tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza;
-  -tecnologie innovative per la prevenzione, il trattamento e il controllo della diffusione del Covid-19 nelle sue diverse forme.
+  - tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza;
+  - tecnologie innovative per la prevenzione, il trattamento e il controllo della diffusione del Covid-19 nelle sue diverse forme.
 
-L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione, il trattamento e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
+  L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione, il trattamento e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
 
-Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
+  Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
  
 ## Informazioni per la partecipazione 
 
