@@ -58,7 +58,7 @@ L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prev
 
 Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
  
-##Informazioni per la partecipazione 
+## Informazioni per la partecipazione 
 
 Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando un form dedicato nella [pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/).
 
@@ -85,7 +85,3 @@ Saranno considerati **solo i servizi e interventi che rispondano ai seguenti cri
 - Preferibilmente, sia previsto un “canale” specifico dedicato all’iniziativa per l’emergenza coronavirus, che includa il top management dell’azienda o Ente.
 
 Se pensate di disporre di una soluzione o di un servizio capace di fare la differenza scriveteci. Grazie!
-
-
-{:.x-small.text-right}
-_Fotografia di [Louis Melendez](https://unsplash.com/@lcma1028?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
