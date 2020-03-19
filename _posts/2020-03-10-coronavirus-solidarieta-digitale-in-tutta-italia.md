@@ -34,7 +34,7 @@ Per questo l’iniziativa riguarda servizi gratuiti rivolti a cittadini, profess
 
 - lavorare da remoto, attraverso **connettività rapida e gratuita** e l’utilizzo di **piattaforme di smart working avanzate**;
 - leggere gratuitamente un giornale anche senza andare in edicola o un libro senza andare in libreria **sul proprio smartphone o tablet**;
-- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di e-learning**, come [proposto dal MIUR](https://www.miur.gov.it/web/guest/-/coronavirus-pubblicate-due-call-per-sostenere-la-didattica-a-distanza){:target="_blank" rel="noopener noreferrer"};
+- restare al passo con i percorsi scolastici e di formazione, grazie a **piattaforme di e-learning**, come [proposto dal Ministero dell'Istruzione](https://www.miur.gov.it/web/guest/-/coronavirus-pubblicate-due-call-per-sostenere-la-didattica-a-distanza){:target="_blank" rel="noopener noreferrer"};
 - usufruire di servizi digitali online, come l’accesso a **servizi pubblici o specialistici**, come ad esempio una consulenza medica o professionale; 
 - svolgere a distanza **attività della vita di tutti i giorni**, come fare la spesa, attività sportiva, ma anche la socialità, la vita politica e quella religiosa, l’associazionismo, o persino gli hobby, come le arti o la cucina.  
 
