@@ -14,7 +14,7 @@ _Un nuovo appello alle aziende e enti, per l’utilizzo di tecnologie utili al t
 
 <!-- MORE -->
 
-“Innova per l’Italia” è una chiamata alle aziende, università, enti di ricerca pubblici e privati e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è una chiamata alle aziende, università, enti di ricerca pubblici e privati, istituti e fondazioni che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/) e alla struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
 
@@ -56,7 +56,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
 
   L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione, il trattamento e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
 
-  Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
+  Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca, istituti e fondazioni**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
  
 ## Informazioni per la partecipazione 
 
