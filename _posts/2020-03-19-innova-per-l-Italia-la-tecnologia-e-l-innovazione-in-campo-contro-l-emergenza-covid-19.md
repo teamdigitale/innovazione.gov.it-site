@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Innova per l’Italia: la tecnologia in campo contro l’emergenza Covid-19" 
+title: "Innova per l’Italia: la tecnologia e l'innovazione in campo contro l’emergenza Covid-19" 
 ref: innovaperlitalia-tecnologia-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/medici.jpg" alt="Medici al lavoro per gestire l'emergenza"/>
+asset: <img class="w-100" src="/assets/images/posts/innovaperlitalia.png" alt="Il progetto Innova per l'Italia"/>
 pinned: 
 categories:
   - highlights
@@ -14,11 +14,11 @@ _Un nuovo appello alle aziende e enti, per l’utilizzo di tecnologie utili al t
 
 <!-- MORE -->
 
-“Innova per l’Italia” è un appello alle aziende e agli enti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e l’utilizzo dei dati** per il contenimento, il monitoraggio e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è una chiamata alle aziende, università, enti di ricerca e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento, il monitoraggio e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
-Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministero dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministero dell’Università e Ricerca](https://www.miur.gov.it/), insieme a Invitalia e alla struttura del **Commissario Straordinario al Coronavirus**.
+Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/) e alla struttura del **Commissario Straordinario al Coronavirus**.
 
-“_La tecnologia e l’innovazione in tutte le sue forme, attraverso processi, prodotti e soluzioni, può contribuire significativamente a rispondere all’emergenza_”, afferma Paola Pisano, [ministro per l’Innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/it/chi-siamo/ministro/).  “L’iniziativa [Solidarietà digitale](https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/) ha già riscosso un successo importante, aiutando le persone ad affrontare meglio il momento difficile che stiamo vivendo, mantenendo per quanto possibile la propria quotidianità. Ora abbiamo nuovamente bisogno di voi, aziende e enti di ricerca, perché **l’innovazione tecnologica può essere la leva per rispondere velocemente a una situazione di crisi** che impatta il nostro Paese in maniera drammatica”.
+_La tecnologia e l’innovazione in tutte le sue forme, attraverso processi, prodotti e soluzioni, può contribuire significativamente a rispondere all’emergenza. L’iniziativa [Solidarietà digitale](https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/) ha già riscosso un successo importante, aiutando le persone ad affrontare meglio il momento difficile che stiamo vivendo, mantenendo per quanto possibile la propria quotidianità. Ora abbiamo nuovamente bisogno di voi, aziende e enti di ricerca, perché **l’innovazione tecnologica può essere la leva per rispondere velocemente a una situazione di crisi** che impatta il nostro Paese in maniera drammatica_.
 
 L’iniziativa “Innova per l’Italia” si inserisce nel solco del [Decreto legge del 16 marzo](https://www.gazzettaufficiale.it/eli/id/2020/03/17/20G00034/sg) ("Cura Italia"), che punta anche sull'innovazione tecnologica per affrontare l'emergenza in corso. Il testo stanzia risorse per il potenziamento del personale e delle strutture sanitarie e prevede **finanziamenti agevolati o contributi a fondo perduto**, tramite Invitalia, destinati alle imprese produttrici di:
 
@@ -54,27 +54,21 @@ Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei ta
   -tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza;
   -tecnologie innovative per la prevenzione, il trattamento e il controllo della diffusione del Covid-19 nelle sue diverse forme.
 
-Ogni giorno vengono raccolti quantità enormi di dati tanto eterogenei quanto preziosi per scoprire di più sulla diffusione del virus e sulla mobilità dei cittadini. Si tratta di un patrimonio di inestimabile valore che, se adeguatamente gestito, nel rispetto della normativa vigente, consentirebbe da un lato una migliore intercettazione della diffusione del virus e dall’altro un miglior monitoraggio del  rispetto dei presidi sanitari.
+L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione, il trattamento e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
 
-L’innovazione offre anche altri strumenti e tecnologie all’avanguardia utili per la prevenzione, il trattamento e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
-
-Per questo motivo ci rivolgiamo anche ad **aziende, Università e ad Enti di Ricerca**, che operando in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di intelligenza artificiale e big data analysis, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
+Per questo motivo ci rivolgiamo anche ad **aziende, Università, Enti di ricerca e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione, il trattamento e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
  
 ##Informazioni per la partecipazione 
 
-E’ possibile proporre la propria adesione scrivendo alla mail [innovaperlitalia@innovazione.gov.it](mailto:innovaperlitalia@innovazione.gov.it). La proposta dovrà tassativamente indicare: 
-
-- Chi è il soggetto proponente
-- In quale ambito rientra la sua proposta
-- Una descrizione breve della proposta (max 250 caratteri)
-- Una descrizione più dettagliata (max 1000 caratteri) 
-- Un referente per l’iniziativa (contatti) 
+Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando un form dedicato nella [pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/).
 
 Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto. 
 
-Le proposte verranno analizzate dalla segreteria organizzativa e, se ammissibili, valutate dalla struttura del Commissario Straordinario, che deciderà se attivarsi per i passi successivi, in relazione alla tipologia di proposta e urgenza emergenziale. 
+Le proposte verranno analizzate dalla segreteria organizzativa e, se ammissibili, valutate dalla struttura del Commissario Straordinario, che deciderà se attivarsi per i passi successivi mettendosi in contatto con i soggetti proponenti, anche in considerazione della tipologia di proposta e urgenza emergenziale. 
 
-Per alcune tipologie di proposte, le aziende che verranno contattate devono essere in grado di **certificare le proprie attività e produzioni**, tramite opportuna rete di soggetti (ad esempio Università, Enti di Ricerca).  
+Per alcune tipologie di proposte, le aziende che verranno contattate devono essere in grado di **certificare le proprie attività e produzioni**, tramite opportuna rete di soggetti (ad esempio Università, Enti di Ricerca).  In particolare, per i punti 1 e 2 , in relazione al prevalente impatto sulla produzione industriale, le Università e gli Enti di Ricerca, per la loro rilevante funzione sociale,  scientifica,  tecnologica e di supporto territoriale, potranno supportare le attività di attestazione dei requisiti dei prodotti sviluppati dalla aziende. Le Università e gli Enti di Ricerca disponibili saranno inclusi in un elenco che sarà successivamente condiviso per dare supporto alle aziende rispondenti. La rete di soggetti partecipanti potrà essere successivamente estesa in relazione alle necessità. La Conferenza Rettori Università Italiane e gli Enti di ricerca contribuiscono al coordinamento delle attività.
+
+Ogni contributo che sarà finalizzato attraverso il Commissario Straordinario verrà anche pubblicato [sul sito dell’iniziativa](https://innovaperlitalia.agid.gov.it/).
 
 ## Requisiti per la pubblicazione dei servizi
 
