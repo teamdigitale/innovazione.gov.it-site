@@ -17,7 +17,7 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 “Innova per l’Italia” è un invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
-Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
+Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus Domenico Arcuri**.
 
 ## Gli obiettivi
 
