@@ -17,7 +17,7 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 “Innova per l’Italia” è un invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
-Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
+Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
 
 ## Gli obiettivi
 
@@ -46,7 +46,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
  
 ## Informazioni per la partecipazione 
 
-Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando un form dedicato nella [pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/).
+Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando un form dedicato che sarà pubblicato nei prossimi giorni.
 
 Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto. 
 
