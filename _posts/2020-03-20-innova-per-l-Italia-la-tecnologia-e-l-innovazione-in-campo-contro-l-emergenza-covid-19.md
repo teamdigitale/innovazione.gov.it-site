@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Innova per l’Italia: la tecnologia e l'innovazione in campo contro l’emergenza Covid-19" 
+title: "Innova per l’Italia: la tecnologia, la ricerca e l’innovazione in campo contro l’emergenza Covid" 
 ref: innovaperlitalia-tecnologia-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
@@ -10,7 +10,7 @@ categories:
   - highlights
 ---
 
-_Un nuova chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti, per l’utilizzo di tecnologie utili al monitoraggio e al contenimento del virus._
+_Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti, per l’utilizzo di tecnologie utili al monitoraggio e al contenimento del virus._
 
 <!-- MORE -->
 
