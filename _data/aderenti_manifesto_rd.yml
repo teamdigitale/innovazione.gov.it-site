@@ -294,3 +294,12 @@ aderenti_manifesto:
   - name: "Istituto Europeo per l'Innovazione e la Sostenibilità"
     logo: "eiis-logo.png"
     link: "https://eiis.it/"
+  - name: Wikimedia Italia
+    logo: "wikimedia-italia-logo.jpg"
+    link: "https://www.wikimedia.it/"
+  - name: Informatici senza frontiere
+    logo: "isf-festival-logo.png"
+    link: "https://www.informaticisenzafrontiere.org/"
+  - name: Italia4Blockchain
+    logo: "italia4blockchain-logo.png"
+    link: "https://www.italia4blockchain.it/"
