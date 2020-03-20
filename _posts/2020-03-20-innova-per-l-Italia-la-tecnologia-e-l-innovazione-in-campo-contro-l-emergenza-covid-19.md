@@ -14,7 +14,7 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 <!-- MORE -->
 
-“Innova per l’Italia” è una chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è un invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
 
@@ -58,7 +58,7 @@ Per alcune tipologie di proposte, le aziende potrebbero necessitare di **certifi
 
 Saranno considerati **solo i servizi e interventi che rispondano ai seguenti criteri**:
 
-- I proponenti siano aziende (startup, PMI, grandi imprese), enti e centri di ricerca pubblici e privati (che possono interagire con associati in grado di rispondere a queste esigenze) ove previsto Università e Enti di Ricerca, quindi non singole persone o professionisti.
+- I proponenti siano aziende (startup, PMI, grandi imprese), enti e centri di ricerca pubblici e privati, associazioni (che possono interagire con associati in grado di rispondere a queste esigenze), cooperative, consorzi, fondazioni e istituti, quindi non singole persone o professionisti.
 - Siano concrete proposte realizzabili in **tempi compatibili** con l’emergenza, pur senza alcun impegno od obbligo.
 - Possano mettere a disposizione, autocertificandosi, una componente significativa in termini di **capacità produttiva e volumi** per l’impiego sul territorio nazionale o a livello regionale in tempi brevi.
 - Sia esplicitato a quale ambito si desideri aderire tra quelle rientranti nelle categorie proposte nel form.
