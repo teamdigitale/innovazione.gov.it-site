@@ -10,11 +10,11 @@ categories:
   - highlights
 ---
 
-_Un nuova chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, fondazioni e istituti, per l’utilizzo di tecnologie utili al monitoraggio e al contenimento del virus._
+_Un nuova chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti, per l’utilizzo di tecnologie utili al monitoraggio e al contenimento del virus._
 
 <!-- MORE -->
 
-“Innova per l’Italia” è una chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è una chiamata alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/), del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/), insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus**.
 
@@ -22,7 +22,7 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
 
 Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, nell’ambito della **prevenzione** (es. DPI quali mascherine chirurgiche,  mascherine FFP2/FFP3),  **diagnostica e trattamento** (es. respiratori artificiali per le unità di terapia intensiva), **monitoraggio**. 
 
-A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende, università, enti e centri di ricerca pubblici e privati, fondazioni e istituti che possono contribuire, attraverso:
+A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che possono contribuire, attraverso:
 
 1. **Il reperimento, l’innovazione o la riconversione industriale delle proprie tecnologie e processi**, per accrescere la disponibilità di:
   - dispositivi di protezione individuale, in particolare mascherine chirurgiche, mascherine FFP2/N95 con e senza filtro, mascherine FFP3/N99 conforme con Dir. 93/42 CEE, direttiva europea 89/686, e EN149:2001+A1:2009 o equivalenti;
@@ -42,7 +42,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
 
   L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
 
-  Per questo motivo ci rivolgiamo anche ad **aziende, università, enti e centri di ricerca pubblici e privati, fondazioni e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
+  Per questo motivo ci rivolgiamo anche ad **alle  aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
  
 ## Informazioni per la partecipazione 
 
@@ -59,8 +59,8 @@ Per alcune tipologie di proposte, le aziende potrebbero necessitare di **certifi
 Saranno considerati **solo i servizi e interventi che rispondano ai seguenti criteri**:
 
 - I proponenti siano aziende (startup, PMI, grandi imprese), enti e centri di ricerca pubblici e privati (che possono interagire con associati in grado di rispondere a queste esigenze) ove previsto Università e Enti di Ricerca, quindi non singole persone o professionisti.
-- Siano concrete proposte realizzabili in tempi compatibili con l’emergenza, pur senza alcun impegno od obbligo.
-- Possano mettere a disposizione, autocertificandosi, una componente significativa in termini di capacità produttiva e volumi per l’impiego sul territorio nazionale o a livello regionale in tempi brevi.
+- Siano concrete proposte realizzabili in **tempi compatibili** con l’emergenza, pur senza alcun impegno od obbligo.
+- Possano mettere a disposizione, autocertificandosi, una componente significativa in termini di **capacità produttiva e volumi** per l’impiego sul territorio nazionale o a livello regionale in tempi brevi.
 - Sia esplicitato a quale ambito si desideri aderire tra quelle rientranti nelle categorie proposte nel form.
 - La proposta sia corredata da opportune informazioni che consentano di valutare in tempi rapidi l’effettiva applicabilità.
 - Siano indicati i tempi, le modalità e le possibili quantità per la realizzazione della proposta.
