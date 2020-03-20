@@ -8,6 +8,8 @@ asset: <img class="w-100" src="/assets/images/posts/digitalizzazione.jpg" alt="S
 pinned: 
 categories:
   - highlights
+  - imprese
+  - cittadini
 ---
 
 _Un percorso agevolato per attivare servizi digitali per cittadini e imprese e facilitare lo smart working per i dipendenti della Pubblica Amministrazione._
