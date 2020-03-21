@@ -46,7 +46,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
  
 ## Informazioni per la partecipazione 
 
-Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando un form dedicato che sarà pubblicato nei prossimi giorni.
+Tutte le aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti hanno la possibilità di aderire compilando un form dedicato che **sarà pubblicato lunedì 23 marzo (a partire dalle ore 9)**.
 
 Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto. 
 
