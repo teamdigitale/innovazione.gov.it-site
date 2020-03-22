@@ -37,7 +37,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
      
      > Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei tamponi adatti alla diagnosi del Covid-19 così come quelle che potrebbero indirizzare la produzione. Ci rivolgiamo anche a quelle aziende che hanno già avviato sperimentazione e innovazione di tecnologie per una diagnosi facilitata e veloce,coerentemente con gli standard necessari definiti.
 
-3. Disponibilità di **tecnologie e strumenti** che, nel rispetto della normativa vigente, **consentano o facilitino il monitoraggio, la prevenzione e il controllo del Covid-19** e l’elaborazione di nuove politiche e misure di governance sociale, in termini di:
+3. Disponibilità di **tecnologie e strumenti** che, nel rispetto della normativa vigente, **consentano o facilitino il monitoraggio, la prevenzione e il controllo del Covid-19**, in termini di:
      - tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza;
      - tecnologie innovative per la prevenzione e il controllo della diffusione del Covid-19 nelle sue diverse forme.
      
