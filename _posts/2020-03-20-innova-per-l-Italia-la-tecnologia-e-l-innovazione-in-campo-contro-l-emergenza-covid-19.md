@@ -19,6 +19,10 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus Domenico Arcuri**.
 
+_In queste settimane l’iniziativa Innova per l’Italia sarà anche un contenitore per “call to action” che risponderanno a delle **esigenze specifiche di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc). In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici._
+
+_La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis](https://www.innovazione.gov.it/innovaperlitalia-telemedicina-e-data-analysis), e sarà online **da martedì 24 marzo ore 9 a giovedì 26 marzo ore 13**._
+
 ## Gli obiettivi
 
 Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, nell’ambito della **prevenzione** (es. DPI quali mascherine chirurgiche,  mascherine FFP2/FFP3),  **diagnostica e trattamento** (es. respiratori artificiali per le unità di terapia intensiva), **monitoraggio**. 
