@@ -19,6 +19,17 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus Domenico Arcuri**.
 
+
+<div class="callout mb-4">
+  <div class="callout-title"><svg class="icon d-none d-sm-inline-block"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-inbox"></use></svg>Le “fast call”</div>
+  <div markdown="1">
+  All'interno del programma Innova per l’Italia saranno anche aperte delle “call to action” specifiche e di breve durata che risponderanno alle **esigenze di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc) nei tre ambiti di riferimento del programma. In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
+  
+  La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}), e sarà online **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13**.
+  </div>
+</div>
+
+
 ## Gli obiettivi
 
 Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, nell’ambito della **prevenzione** (es. DPI quali mascherine chirurgiche,  mascherine FFP2/FFP3),  **diagnostica e trattamento** (es. respiratori artificiali per le unità di terapia intensiva), **monitoraggio**. 
