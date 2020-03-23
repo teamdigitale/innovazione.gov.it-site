@@ -23,9 +23,9 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
 <div class="callout mb-4">
   <div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-inbox"></use></svg>Le “fast call”</div>
   <div markdown="1">
-  In queste settimane l’iniziativa Innova per l’Italia sarà anche un contenitore per “call to action” che risponderanno a delle **esigenze specifiche di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc). In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
+  All'interno del programma Innova per l’Italia saranno anche aperte delle “call to action” specifiche e di breve durata che risponderanno alle **esigenze di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc) nei tre ambiti di riferimento del programma. In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
   
-  La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}), e sarà online **da martedì 24 marzo ore 9 a giovedì 26 marzo ore 13**.
+  La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}), e sarà online **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13**.
   </div>
 </div>
 
