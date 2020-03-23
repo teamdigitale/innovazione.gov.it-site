@@ -54,7 +54,7 @@ Nella [stessa pagina dedicata all’iniziativa](https://solidarietadigitale.agid
 Saranno pubblicati, previa verifica, **solo i servizi, esclusivamente digitali, che rispondano ai seguenti criteri**:
 
 - i proponenti siano aziende, enti o associazioni, quindi non singole persone o professionisti;
-- siano servizi gratuiti o resi gratuiti per l’emergenza (non scontistica), senza alcun impegno od obbligo di rinnovo al termine del periodo dell’offerta;
+- siano servizi resi gratuiti per l’emergenza (non scontistica), senza alcun impegno od obbligo di rinnovo al termine del periodo dell’offerta;
 - sia esplicitata la durata dell’offerta;
 - rientrino nelle categorie proposte nel form;
 - siano validi per tutto il territorio nazionale o per una o più regioni;
