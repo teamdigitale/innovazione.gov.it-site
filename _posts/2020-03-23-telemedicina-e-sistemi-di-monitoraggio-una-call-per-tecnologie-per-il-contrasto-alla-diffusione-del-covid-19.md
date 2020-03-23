@@ -5,7 +5,7 @@ ref: innovaperlitalia-telemedicina-e-data-analysis
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/dataanalysis.png" alt="Fast call su app e data analysis"/>
-pinned: true
+pinned: false
 categories:
   - highlights
   - imprese
@@ -44,7 +44,7 @@ Saranno considerati solo i servizi e interventi che rispondano ai seguenti crite
   - caratteristiche di alta interoperabilità o possibilità di integrazione con i sistemi aziendali/regionali e non siano soggetti a significativi vincoli di front-end/back-end che renderebbero difficile l’implementazione;
   - funzionalità di interazione con l’utente mobile, garantendo un affidabile definizione della posizione;
   - caratteristiche di alta interoperabilità o possibilità di integrazione con i sistemi aziendali/regionali.
-- In particolare, le proposte relative alla teleassistenza devono prevedere modalità efficaci e user friendly per identificazione, autenticazione e trattamento informativa e/o consenso informato
+- In particolare, le proposte relative alla teleassistenza devono prevedere modalità efficaci e user friendly per identificazione, autenticazione e trattamento informativa e/o consenso informato.
 
 
 _Se pensate di disporre di una soluzione capace di fare la differenza scriveteci. Grazie!_
