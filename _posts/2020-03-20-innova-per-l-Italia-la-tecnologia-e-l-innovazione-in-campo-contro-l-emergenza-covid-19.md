@@ -21,7 +21,7 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
 
 
 <div class="callout mb-4">
-  <div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-inbox"></use></svg>Le “fast call”</div>
+  <div class="callout-title"><svg class="icon d-none d-sm-inline-block"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-inbox"></use></svg>Le “fast call”</div>
   <div markdown="1">
   All'interno del programma Innova per l’Italia saranno anche aperte delle “call to action” specifiche e di breve durata che risponderanno alle **esigenze di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc) nei tre ambiti di riferimento del programma. In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
   
