@@ -9,6 +9,7 @@ pinned:
 categories:
   - highlights
   - imprese
+english_version: "tele-medicine-and-monitoring-systems-a-call-for-technologies-to-contrast-the-spread-of-covid-19"
 ---
 
 _Una call for contributions di tre giorni a supporto del Ministero della Salute e dell’Istituto Superiore di Sanità in collaborazione con l’Organizzazione Mondiale della Sanità: valutiamo le migliori proposte disponibili, per agire in modo coordinato a livello nazionale._

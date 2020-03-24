@@ -9,6 +9,7 @@ pinned: true
 categories:
   - highlights
   - imprese
+english_version: innova-per-l-italia-technology-research-and-innovation-against-the-covid-emergency
 ---
 
 _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti, per l’utilizzo di tecnologie utili al monitoraggio e al contenimento del virus._
