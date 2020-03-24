@@ -28,6 +28,26 @@ layout: default
           <div class="card-body">
             <h5 class="card-title">{{ page.title }}</h5>
             <div class="card-text">
+              {%- if page.english_version != nil -%}
+              <div class="w-100 text-center my-4">
+                <a href="{{ site.baseurl }}/{{page.english_version}}">
+                  Read this post in English
+                  <svg class="icon icon-sm icon-primary">
+                    <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              {%- endif -%}
+              {%- if page.italian_version != nil -%}
+              <div class="w-100 text-center my-4">
+                <a href="{{ site.baseurl }}/{{page.italian_version}}">
+                  Leggi questo post in Italiano
+                  <svg class="icon icon-sm icon-primary">
+                    <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              {%- endif -%}
               {%- if page.asset contains "youtube-nocookie.com" or page.asset contains "youtube.com" -%}
               <div class="responsive-embed">{{ page.asset }}</div>
               {%- else -%}

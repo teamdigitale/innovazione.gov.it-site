@@ -7,6 +7,7 @@ excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/innovaperlitaliaEN.png" alt="Innova per l'Italia"/>
 pinned: 
 categories:
+italian_version: innova-per-l-Italia-la-tecnologia-e-l-innovazione-in-campo-contro-l-emergenza-covid-19
 ---
 
 _A new call to companies, universities, public and private entities and research centers, associations, cooperatives, consortia, foundations and institutes, to monitor and contain the virus._
