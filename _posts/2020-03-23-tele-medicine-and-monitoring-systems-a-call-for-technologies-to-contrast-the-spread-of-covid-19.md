@@ -2,13 +2,11 @@
 layout: post
 title: "Tele-medicine and monitoring systems: a call for technologies to contrast the spread of Covid-19" 
 ref: innovaperlitalia-telemedicina-e-data-analysis
-lang: en
+lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/dataanalysisENG.png" alt="Fast call app and data analysis"/>
 pinned:
 categories:
-  - highlights
-  - imprese
 ---
 
 _A  three-day  call for contributions to support the Ministry of Health and the Higher institute for Health, in collaboration with the World Health Organization. We evaluate the best proposals,  acting together._

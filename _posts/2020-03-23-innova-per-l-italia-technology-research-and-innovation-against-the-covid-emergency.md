@@ -2,13 +2,11 @@
 layout: post
 title: "Innova per l’Italia: technology, research and innovation against the COVID emergency" 
 ref: innovaperlitalia-tecnologia-emergenza-coronavirus
-lang: en
+lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/innovaperlitaliaEN.png" alt="Innova per l'Italia"/>
-pinned: true
+pinned: 
 categories:
-  - highlights
-  - imprese
 ---
 
 _A new call to companies, universities, public and private entities and research centers, associations, cooperatives, consortia, foundations and institutes, to monitor and contain the virus._
