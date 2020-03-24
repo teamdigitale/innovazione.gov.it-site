@@ -5,7 +5,7 @@ ref: innovaperlitalia-telemedicina-e-data-analysis
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/dataanalysis.png" alt="Fast call su app e data analysis"/>
-pinned: false
+pinned:
 categories:
   - highlights
   - imprese
