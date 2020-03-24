@@ -30,7 +30,7 @@ L'obiettivo della call è individuare soluzione tecnologiche già realizzate nei
 
 ## Informazioni per la partecipazione
 
-Tutti i soggetti pubblici e privati che vogliono sottoporre una soluzione possono compilare un form dedicato relativamente ai due temi evidenziati, a partire **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13**. Verranno contattati solo i proponenti di soluzioni compatibili con i requisiti per la partecipazione e ritenute adatte dal gruppo di lavoro, in tempi e modi compatibili con le caratteristiche della proposta e la priorità emergenziale
+Tutti i soggetti pubblici e privati che vogliono sottoporre una soluzione possono [compilare un form dedicato](https://innovaperlitalia.agid.gov.it/call2action/index.html) relativamente ai due temi evidenziati, disponibile **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13**. Verranno contattati solo i proponenti di soluzioni compatibili con i requisiti per la partecipazione e ritenute adatte dal gruppo di lavoro, in tempi e modi compatibili con le caratteristiche della proposta e la priorità emergenziale
 
 ## Requisiti per la partecipazione
 
