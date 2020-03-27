@@ -259,7 +259,7 @@ aderenti_manifesto:
     logo: "unioncamere-logo.png"
     link: "http://www.unioncamere.gov.it/"
   - name: AICA - Associazione Italiana per l'Informatica ed il Calcolo Automatico
-    logo: "aica-logo.png"
+    logo: "aica-icdl-logo.png"
     link: "https://www.aicanet.it/"
   - name: AICA - Associazione Italiana per l'Informatica ed il Calcolo Automatico
     logo: "aica-logo.png"
@@ -303,3 +303,9 @@ aderenti_manifesto:
   - name: Italia4Blockchain
     logo: "italia4blockchain-logo.png"
     link: "https://www.italia4blockchain.it/"
+  - name: FuturMakers
+    logo: "futurmakers-logo.png"
+    link: "https://futurmakers.it/"
+  - name: "Osservatorio Agenda Digitale, Politecnico di Milano"
+    logo: "oss-logo.png"
+    link: "https://www.osservatori.net/it_it/"
