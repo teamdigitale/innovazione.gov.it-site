@@ -16,7 +16,7 @@ _Un nuovo invito alle aziende, università, enti e centri di ricerca pubblici e 
 
 <!-- MORE -->
 
-“Innova per l’Italia” è un invito alle aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che, attraverso le proprie tecnologie, possono fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
+“Innova per l’Italia” è un programma che invita aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti a fornire un contributo nell’ambito dei **dispositivi per la prevenzione, la diagnostica e il monitoraggio** per il contenimento e il contrasto del diffondersi del Coronavirus (SARS-CoV-2) sull’intero territorio nazionale.
 
 Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/) Paola Pisano, del [Ministro dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/) Stefano Patuanelli e del [Ministro dell’Università e Ricerca](https://www.miur.gov.it/) Gaetano Manfredi, insieme a [Invitalia](https://www.invitalia.it/)  e a sostegno della struttura del **Commissario Straordinario per l'emergenza Coronavirus Domenico Arcuri**.
 
@@ -26,7 +26,7 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
   <div markdown="1">
   All'interno del programma Innova per l’Italia saranno anche aperte delle “call to action” specifiche e di breve durata che risponderanno alle **esigenze di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc) nei tre ambiti di riferimento del programma. In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
   
-  La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}), e sarà online **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13**.
+  La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}) per il monitoraggio,  stata aperta **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13** e ha già coperto la necessità di scouting e analisi su questi temi.
   </div>
 </div>
 
@@ -50,7 +50,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
      > Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei tamponi adatti alla diagnosi del Covid-19 così come quelle che potrebbero indirizzare la produzione. Ci rivolgiamo anche a quelle aziende che hanno già avviato sperimentazione e innovazione di tecnologie per una diagnosi facilitata e veloce,coerentemente con gli standard necessari definiti.
 
 3. Disponibilità di **tecnologie e strumenti** che, nel rispetto della normativa vigente, **consentano o facilitino il monitoraggio, la prevenzione e il controllo del Covid-19**, in termini di:
-     - tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza;
+     - tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza (già oggetto di una Fast Call terminata il 26 Marzo);
      - tecnologie innovative per la prevenzione e il controllo della diffusione del Covid-19 nelle sue diverse forme.
      
      > L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.  
@@ -66,9 +66,13 @@ Le proposte verranno valutate dalla struttura del Commissario Straordinario, che
 
 Per alcune tipologie di proposte, le aziende potrebbero necessitare di **certificare le proprie attività e produzioni**, tramite opportuna rete di soggetti (ad esempio Università, Enti di Ricerca).  In particolare, per i punti 1 e 2 , in relazione al prevalente impatto sulla produzione industriale, le Università, gli Enti e Centri di Ricerca, per la loro rilevante funzione sociale,  scientifica,  tecnologica e di supporto territoriale, potranno supportare le attività di attestazione dei requisiti dei prodotti sviluppati dalla aziende. Le Università, gli Enti e Centri di Ricerca disponibili saranno inclusi in un elenco che sarà successivamente condiviso per dare supporto alle aziende rispondenti. La rete di soggetti partecipanti potrà essere successivamente estesa in relazione alle necessità. La Conferenza Rettori Università Italiane e gli Enti di ricerca contribuiscono al coordinamento delle attività.
 
+Non è stata definita una scadenza per il programma Innova per l’Italia ad oggi, ma potranno essere indicate successivamente, anche compatibilmente con le “Fast Call” che verranno lanciate sui temi specifici.
+
+**!!Attenzione!!** Le risposte ricevute finora per servizi di telemedicina e data analysis per il monitoraggio, inclusi nell’ambito 3. e durante la relativa “fast call” hanno già coperto i fabbisogni richiesti e ulteriori proposte su questi temi non verranno considerate.
+
 ## Requisiti per la partecipazione
 
-Saranno considerati **solo i servizi e interventi che rispondano ai seguenti criteri**:
+L’adesione è consentita solo tramite la compilazione del form, non saranno prese in considerazione proposte mezzo mail e saranno considerati **solo i servizi e interventi che rispondano ai seguenti criteri**:
 
 - I proponenti siano aziende (startup, PMI, grandi imprese), enti e centri di ricerca pubblici e privati, associazioni (che possono interagire con associati in grado di rispondere a queste esigenze), cooperative, consorzi, fondazioni e istituti, quindi non singole persone o professionisti.
 - Siano concrete proposte realizzabili in **tempi compatibili** con l’emergenza, pur senza alcun impegno od obbligo.
@@ -79,5 +83,6 @@ Saranno considerati **solo i servizi e interventi che rispondano ai seguenti cri
 - Siano validi per tutto il territorio nazionale o per una o più regioni.
 - La descrizione dell’intervento non sia redatta in tono promozionale.
 - Preferibilmente, sia previsto un “canale” specifico dedicato all’iniziativa per l’emergenza coronavirus, che includa il top management dell’azienda o Ente.
+- Non si riferiscano a temi specifici che hanno già coperto i fabbisogni richiesti, ad esempio tramite Fast Call.
 
 Se pensate di disporre di una soluzione capace di fare la differenza scriveteci. Grazie!
