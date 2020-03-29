@@ -7,3 +7,14 @@
 <!-- Main JS -->
 <script src="/assets/js/vendors/modernizr-custom-touchevents-webp.js"></script>
 <script src="/assets/js/main.js?build={{ site.time | date: '%Y%m%d%H%M' }}"></script>
+
+<!-- COVID-19 Watson Assistant -->
+<script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
+<script>
+    window.loadWatsonAssistantChat({
+        integrationID: "55b57f73-bf4b-4038-951c-3810552ee2ca", // The ID of this integration.
+        region: "us-south" // The region your integration is hosted in.
+    }).then(function(instance){
+        instance.render();
+    });
+</script>
