@@ -1,38 +1,19 @@
 ---
 layout: post
-title: "Decreto Ministeriale - Task force dati per l'emergenza Covid-19" 
+title: "Task force dati per l'emergenza Covid-19 - scheda" 
 ref: DM-task-force
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/DM.png" alt="Il DM sulla task force dei dati"/>
+asset: 
 pinned:  
 categories:
 
 ---
 
-_Decreto Ministeriale del 30 marzo 2020._
 
 <!-- MORE -->
-Il Ministro per l'innovazione tecnologica e la digitalizzazione
 
-**DECRETA**
-
-## Art.1
-**(Istituzione)**
-
-1. È istituito il “Gruppo di lavoro data-driven per l’emergenza COVID-19” (di seguito anche “Gruppo di lavoro”).
-2. Il Gruppo di lavoro è coordinato da Paolo De Rosa ed è articolato nei seguenti
-Sottogruppi di lavoro:
-    1) Coordinamento generale delle attività;
-    2) Infrastrutture e data collection;
-    3) Impatto economico;
-    4) Web data e impatto socio-economico;
-    5) Teleassistenza;
-    6) Tecnologie per il governo dell’emergenza;
-    7) Big data &amp; AI for policies;
-    8) Profili giuridici della gestione dei dati connessa all’emergenza.
-
-2. Il Gruppo di lavoro di cui al comma 1 è composto da:
+Il **Gruppo di lavoro** è diviso in otto sottogruppi e composto da:
 
     1) Coordinamento generale delle attività:
     Paolo De Rosa, Fidelia Cascini, Gualtiero Ricciardi;
@@ -58,24 +39,18 @@ Sottogruppi di lavoro:
     8) Profili giuridici della gestione dei dati connessa all’emergenza: Guido Scorza, Giovanni Comandè, Carlo Colapietro, Vincenzo Tiani, Marco Bassini, Antonio Iannuzzi, Guerino Oscar Massimo Fares, Fabrizio Urbani
 Neri, Ernesto Belisario, Simona Toscano.
 
-3. Fanno altresì parte del Gruppo di lavoro i rappresentanti designati: 
+Fanno parte del Gruppo di lavoro anche rappresentanti designati: 
 
   - dall’Autorità per le garanzie nelle comunicazioni, Antonio Nicita e Marco Delmastro;
   - dall'Autorità garante della concorrenza e del mercato, Filippo Arena;
   - dal Garante per la protezione dei dati personali, Giuseppe Busia;
   - dal Ministero della Salute, Silvio Brusaferro e Ranieri Guerra.
 
-4. Il Gruppo di lavoro, si riunisce a Roma o con modalità di partecipazione a distanza.
+Alle attività del gruppo possono essere invitati a partecipare soggetti pubblici o privati al fine di acquisire informazioni, pareri o proposte.
 
-5. Il Coordinatore del Gruppo di lavoro, anche avvalendosi di personale messo a disposizione dal Dipartimento per la trasformazione digitale, provvede alla convocazione delle riunioni, nonché a tutte le comunicazioni e all’adozione degli altri
-atti necessari per l’espletamento delle attività del Gruppo di lavoro.
+## Scopo e attività
 
-6. Il Coordinatore del Gruppo di lavoro può invitare a partecipare, a una o più attività, soggetti pubblici o privati al fine di acquisire informazioni, pareri o proposte.
-
-## Art. 2
-**(Scopo e attività)**
-
-1. Il Gruppo di lavoro svolge attività di studio e analisi, utile a supportare la Presidenza del Consiglio dei ministri e le Amministrazioni pubbliche nella definizione di politiche di contenimento del contagio da COVID-19. A tal fine procede all’analisi
+Il Gruppo di lavoro svolge attività di studio e analisi, utile a supportare la Presidenza del Consiglio dei ministri e le Amministrazioni pubbliche nella definizione di politiche di contenimento del contagio da COVID-19. A tal fine procede all’analisi
 del relativo impatto socio-economico ed epidemiologico sul sistema Paese e delle soluzioni tecnologiche data-driven, tenendo conto dei profili giuridici correlati alla gestione dei dati necessari a fronteggiare l’emergenza e, in particolare, svolge le seguenti attività:
 
     a) analisi e studio dei fenomeni e delle problematiche connesse alla raccolta, conservazione ed elaborazione dei dati relativi all’emergenza in atto sotto il profilo giuridico, economico, sociale, sanitario ed ambientale;
