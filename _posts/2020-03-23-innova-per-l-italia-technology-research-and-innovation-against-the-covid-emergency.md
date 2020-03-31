@@ -8,6 +8,7 @@ asset: <img class="w-100" src="/assets/images/posts/innovaperlitaliaEN.png" alt=
 pinned: 
 categories:
 italian_version: innova-per-l-Italia-la-tecnologia-e-l-innovazione-in-campo-contro-l-emergenza-covid-19
+hidden: true
 ---
 
 _A new call to companies, universities, public and private entities and research centers, associations, cooperatives, consortia, foundations and institutes, to monitor and contain the virus._

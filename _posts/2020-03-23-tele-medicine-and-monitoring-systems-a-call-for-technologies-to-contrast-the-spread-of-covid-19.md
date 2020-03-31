@@ -8,6 +8,7 @@ asset: <img class="w-100" src="/assets/images/posts/dataanalysisENG.png" alt="Fa
 pinned:
 categories:
 italian_version: telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19
+hidden: true
 ---
 
 _A  three-day  call for contributions to support the Ministry of Health and the Higher institute for Health, in collaboration with the World Health Organization. We evaluate the best proposals,  acting together._

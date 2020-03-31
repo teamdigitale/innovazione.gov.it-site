@@ -3,9 +3,11 @@
     <div class="row">
       {% assign localized_posts = site.posts | where: "lang", page.lang %}
       {% for post in localized_posts %}
+      {% if post.hidden != true %}
       <div class="col-12 col-lg-4">
         {% include post.html %}
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>

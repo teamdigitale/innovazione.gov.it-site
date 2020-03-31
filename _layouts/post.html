@@ -67,7 +67,9 @@ layout: default
       {% assign localized_posts = site.posts | where: "lang", page.lang %}
       {% for post in localized_posts limit: 3 %}
         {% if post.title != page.title %}
-        {% include post-teaser.html %}
+          {% if post.hidden != true %}
+            {% include post-teaser.html %}
+          {% endif %}
         {% endif %}
       {% endfor %}
       <a class="btn text-primary" href="{% link it/notizie.md %}">Vedi tutte le Notizie &#8594;</a>
