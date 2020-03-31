@@ -61,7 +61,7 @@ del relativo impatto socio-economico ed epidemiologico sul sistema Paese e delle
    d) analisi e studio di metodi e strumenti per la progettazione e l’attuazione di politiche basate sui dati (data driven) e sull’evidenza informativa, sfruttando tecnologie innovative per la raccolta e l’interpretazione di grandi volumi di dati
 (big data).
 
-2. Più in dettaglio, i singoli Sottogruppi di lavoro procedono allo svolgimento delle seguenti attività:
+Più in dettaglio, i singoli Sottogruppi di lavoro procedono allo svolgimento delle seguenti attività:
 
    1. Coordinamento generale delle attività: sovrintende, coordina e dà impulso a tutte le attività del Gruppo di lavoro;
 
@@ -83,4 +83,5 @@ la digitalizzazione, dal Ministro dello Sviluppo economico, dal Ministro dell’
     
    8. Profili giuridici della gestione dei dati connessa all’emergenza: procede all’analisi e alla mappatura dei vincoli normativi per l’utilizzazione e la condivisione dei dati personali tra soggetti pubblici e tra soggetti privati e pubblici e predispone una strategia di garanzia dei diritti e delle libertà fondamentali nella gestione ordinaria ed emergenziale dei dati personali, anche attraverso la ricognizione ed analisi delle strategie in atto nei paesi europei, nonché procede alla verifica della compatibilità degli strumenti tecnologici oggetto di valutazione da parte dei Sottogruppi di lavoro 5) e 6) con l’ordinamento nazionale.
     
-3. Il Gruppo di lavoro utilizza, per lo svolgimento delle proprie attività, i dati messi a disposizione da qualsiasi soggetto pubblico o privato, nel rispetto del decreto legislativo 30 giugno 2003, n. 196 recante il “Codice in materia di protezione dei dati personali” e del Regolamento UE 2016/679 (GDPR).
+
+Il Gruppo di lavoro utilizza, per lo svolgimento delle proprie attività, i dati messi a disposizione da qualsiasi soggetto pubblico o privato, nel rispetto del decreto legislativo 30 giugno 2003, n. 196 recante il “Codice in materia di protezione dei dati personali” e del Regolamento UE 2016/679 (GDPR).
