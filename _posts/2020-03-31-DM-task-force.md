@@ -7,7 +7,7 @@ excerpt_separator: <!-- MORE -->
 asset: 
 pinned:  
 categories:
-
+hidden: true
 ---
 
 
