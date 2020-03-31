@@ -77,7 +77,7 @@ l’analisi del contagio virale e informativo e relativo impatto socio-economico
 
    6. Tecnologie per il governo dell’emergenza: individua possibili soluzioni offerte dalle tecnologie digitali per la gestione dell'emergenza e per il contenimento del contagio, anche alla luce di una ricostruzione comparativa delle soluzioni
 adottate nel contesto Ue ed extra Ue (UK, Germania, Singapore, Cina e Corea del Sud) e procede alla valutazione, sotto il profilo tecnologico e dell’impatto ai fini del contrasto alla diffusione del contagio, delle soluzioni proposte nell’ambito della “Fast Call per tecnologie per il contrasto alla diffusione del Covid-19” promossa dal Ministro per l’innovazione tecnologica e
-la digitalizzazione, dal Ministro dello Sviluppo economico, dal Ministro dell’università e della ricerca e dal Ministro della Salute,;
+la digitalizzazione, dal Ministro dello Sviluppo economico, dal Ministro dell’università e della ricerca e dal Ministro della Salute;
 
    7. Big data & AI for policies: procede all’analisi e studio di metodi e strumenti per la progettazione e l’attuazione di politiche basate sui dati (data driven) e sull’evidenza informativa, sfruttando tecnologie innovative per la raccolta e l’interpretazione di grandi volumi di dati (big data), nonché individua possibili soluzioni offerte dalle tecnologie digitali per la gestione dell’emergenza e per il contenimento del contagio anche alla luce di una ricostruzione comparativa delle soluzioni adottate nel contesto Ue ed extra Ue (UK, Germania, Singapore, Cina e Corea del Sud);
     
