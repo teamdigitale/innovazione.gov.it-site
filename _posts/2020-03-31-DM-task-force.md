@@ -31,7 +31,7 @@ Il **Gruppo di lavoro** è diviso in otto sottogruppi e composto da:
     Anna Ceccarelli, Valeria Proietti, Mariangela Contenti, Francesco Gabbrielli, Paolo Traverso, Rosanna Mariniello, Luciana Patrizi, Carla Ramella, Antonietta Cavallo, William Frascarelli;
 
    6) Tecnologie per il governo dell’emergenza:
-    Ciro Cattuto, Carlo Alberto Carnevale Maffè, Alfonso Fuggetta, Andrea Nicolini, Leonardo Favario, Alberto Eugenio Tozzi, Francesca Bria, Simone Piunno;
+    Ciro Cattuto, Stefano Calabrese, Carlo Alberto Carnevale Maffè, Alfonso Fuggetta, Andrea Nicolini, Leonardo Favario, Umberto Rosini, Alberto Eugenio Tozzi, Francesca Bria, Simone Piunno;
     
    7) Big data &amp; AI for policies:
     Dino Pedreschi, Francesca Chiaromonte, Luca Ferretti, Fosca Giannotti, Giovanni Rezza, Mauro Grigioni, Patrizio Pezzotti, Paolo Vineis, Marina Davoli, Stefano Merler, Serafino Sorrenti, Elio Mungo, Massimo Bernaschi;
