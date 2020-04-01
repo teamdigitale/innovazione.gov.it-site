@@ -4,7 +4,7 @@ title: "Un avviso di finanziamento dell’Agenzia spaziale europea per l’emerg
 ref: agenzia-spaziale-europea-contro-covid-19
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/satellite.jpg" alt="L'innovazione aerospaziale contro il Covid 19"/>
+asset: <img class="w-100" src="/assets/images/posts/satellite.jpeg" alt="L'innovazione aerospaziale contro il Covid 19"/>
 pinned:  
 categories:
   - highlights
