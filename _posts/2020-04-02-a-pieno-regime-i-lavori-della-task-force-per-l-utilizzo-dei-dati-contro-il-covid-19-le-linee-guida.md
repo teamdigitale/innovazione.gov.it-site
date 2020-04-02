@@ -41,7 +41,7 @@ La task force basa il proprio lavoro di analisi e valutazione su alcune linee gu
 
 I componenti della task force COVID-19
 
-	**RITENGONO CHE**
+**RITENGONO CHE**
    
 - le tecnologie digitali e i dati possano essere democraticamente impiegati a beneficio della salute della collettività, nel rispetto delle libertà e dei diritti fondamentali;
 - la lotta contro l'attuale pandemia di COVID-19 e il contrasto agli effetti economici negativi derivanti dalla situazione emergenziale in cui si trova l’Italia, possano essere più agevolmente affrontati con un approccio innovativo basato sull’uso dei dati e delle più moderne tecnologie Big Data e di Intelligenza artificiale;
@@ -50,7 +50,7 @@ I componenti della task force COVID-19
   **SI IMPEGNANO**
 a improntare le attività della task force ai seguenti principi:
 
-** 1. Trasparenza**
+**1. Trasparenza**
 
 Siamo convinti che la trasparenza rappresenti un pilastro essenziale della nostra democrazia, un dovere che non viene meno neppure in una situazione di emergenza come quella che viviamo. 
 
@@ -60,7 +60,7 @@ Ci impegniamo altresì a fornire una chiara e, per quanto possibile, tempestiva 
 
 Laddove possibile, procederemo a pubblicare dati e documenti in formato aperto in modo da favorirne l’accesso e il riutilizzo. 
 
-** 2. Approccio data driven**
+**2. Approccio data driven**
 
 Riteniamo che assolvere il compito  affidato di  aumentare la disponibilità, la capacità operativa e la maturità del settore pubblico e privato nel riutilizzare e agire sui dati per la lotta contro l’emergenza COVID-19 sia possibile nel pieno rispetto dei diritti e delle libertà fondamentali.
 
@@ -69,7 +69,7 @@ Pertanto, ci impegniamo a definire processi di gestione, strutturazione ed elabo
 - porre domande prioritarie sui dati, al fine di facilitare una loro più rapida analisi;
 - prendere prontamente le migliori decisioni per la lotta all’emergenza.
 
-** 3. Apertura e collaborazione (coinvolgimento ampio)**
+**3. Apertura e collaborazione (coinvolgimento ampio)**
 
 Siamo convinti che nessuno abbia il monopolio delle buone idee e della conoscenza. 
 
@@ -79,7 +79,7 @@ Ci impegniamo, quindi, a creare e ad ascoltare una comunità più estesa formata
 
 Apriremo un canale pubblico di interazione che la task force presiederà, facendo tesoro di qualunque aiuto possa provenire da questo canale. 
 
-** 4. Innovazione responsabile**
+**4. Innovazione responsabile**
 
 Il nostro lavoro ha l’obiettivo di migliorare la capacità delle istituzioni di rispondere alla situazione emergenziale, definendo un modello nell’uso delle tecnologie e dei dati a supporto del processo decisionale. 
 
@@ -88,7 +88,7 @@ Ci impegniamo a:
 - utilizzare un approccio etico e con al centro l’essere umano “by design”, ponendoci nell’ambito del nostro lavoro le domande relative ai valori umani e sociali che si intendono difendere e perseguire;
 - dar conto delle risorse tecnologiche e degli algoritmi impiegati dalla task force seguendo principi di massima trasparenza, massima sicurezza e assunzione di responsabilità.
 
-** 5. Rispetto dei diritti fondamentali**
+**5. Rispetto dei diritti fondamentali**
 
 L’innovazione tecnologica può essere determinante nella risposta delle istituzioni alle situazioni emergenziali, ma i diritti fondamentali dell’individuo non devono mai essere trascurati o, peggio ancora, violati; devono, al contrario, mantenere la loro centralità.  In democrazia, anche nelle emergenze le risposte straordinarie sono legittime proprio perché previste dal regime ordinario e dal quadro delle garanzie inviolabili.
 
@@ -97,6 +97,17 @@ Nell’ambito del nostro lavoro e delle nostre proposte, ci impegniamo a:
 - proporre soluzioni e approcci sempre basati su un utilizzo delle tecnologie e dei dati che rispetti le norme e i principi vigenti, evitando ogni forma di discriminazione;
 - garantire la centralità del rispetto dei diritti fondamentali, come quello alla protezione dei dati personali, evitando ogni compressione non necessaria e proporzionale delle libertà sulle quali è basata la nostra democrazia;
 - proteggere i dati che ci definiscono come cittadini, elettori e lavoratori, per evitare di essere esposti a un potere incontrollabile, quale quello della sorveglianza di massa, della manipolazione politica e della persuasione commerciale.
+
+**6. Sicurezza**
+
+L’innovazione tecnologica può essere determinante nella risposta delle istituzioni alle situazioni emergenziali, ma i diritti fondamentali dell’individuo non devono mai essere trascurati o, peggio ancora, violati; devono, al contrario, mantenere la loro centralità.  In democrazia, anche nelle emergenze le risposte straordinarie sono legittime proprio perché previste dal regime ordinario e dal quadro delle garanzie inviolabili.
+
+Nell’ambito del nostro lavoro e delle nostre proposte, ci impegniamo a:
+
+- proporre soluzioni e approcci sempre basati su un utilizzo delle tecnologie e dei dati che rispetti le norme e i principi vigenti, evitando ogni forma di discriminazione;
+- garantire la centralità del rispetto dei diritti fondamentali, come quello alla protezione dei dati personali, evitando ogni compressione non necessaria e proporzionale delle libertà sulle quali è basata la nostra democrazia;
+- proteggere i dati che ci definiscono come cittadini, elettori e lavoratori, per evitare di essere esposti a un potere incontrollabile, quale quello della sorveglianza di massa, della manipolazione politica e della persuasione commerciale.
+
 
 {:.x-small.text-right}
 _Fotografia di [cetteup](https://unsplash.com/@cetteup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/collections/387607/d-mark-agency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
