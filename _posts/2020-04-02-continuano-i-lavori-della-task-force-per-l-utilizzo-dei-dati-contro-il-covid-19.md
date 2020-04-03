@@ -4,7 +4,7 @@ title: "Continuano i lavori della Task Force per l’utilizzo dei dati contro il
 ref: lavorie-task-force-dati-covid-19
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: 
+asset: <img class="w-100" src="/assets/images/posts/taskforce.jpg" alt="La task force al lavoro"/>
 pinned: 
 categories:
   - highlights
@@ -35,3 +35,6 @@ L’Autorità Garante per la Concorrenza e il Mercato, il Garante per la protezi
 Il sesto sottogruppo **sottopone ad un primo esame** le proposte raccolte attraverso [la Fast Call pubblicata nei giorni scorsi](https://innovazione.gov.it/telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19/) per **la gestione e il monitoraggio dell’emergenza sanitaria**. 
 
 È per il bene comune che oggi è necessario mettere a confronto punti di vista tecnici e scientifici diversi accomunati da un proposito:  consentire che le scelte delle istituzioni democratiche si avvalgano sempre più di una conoscenza della realtà vasta,  complessa e in evoluzione.  
+
+{:.x-small.text-right}
+_Fotografia di [cetteup](https://unsplash.com/@cetteup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/collections/387607/d-mark-agency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"}_
