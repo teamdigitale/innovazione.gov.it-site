@@ -49,7 +49,7 @@ I componenti della task force Covid-19
 
   **SI IMPEGNANO**
 
--a pubblicare i risultati del lavoro svolto e le raccomandazioni che indirizzeranno al Governo e al Ministro per l’Innovazione tecnologica e la digitalizzazione;
+- a pubblicare i risultati del lavoro svolto e le raccomandazioni che indirizzeranno al Governo e al Ministro per l’Innovazione tecnologica e la digitalizzazione;
 - a improntare le attività della task force ai seguenti principi:
 
 **1. Apertura e collaborazione (coinvolgimento ampio)**
