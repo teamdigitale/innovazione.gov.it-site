@@ -306,6 +306,15 @@ aderenti_manifesto:
   - name: FuturMakers
     logo: "futurmakers-logo.png"
     link: "https://futurmakers.it/"
-  - name: "Osservatorio Agenda Digitale, Politecnico di Milano"
+  - name: Osservatorio Agenda Digitale, Politecnico di Milano
     logo: "oss-logo.png"
     link: "https://www.osservatori.net/it_it/"
+  - name: Digital Innovation Hub di Confcommercio Imprese per l'Italia
+    logo: "edi-logo.png"
+    link: ""
+  - name: ForumPA
+    logo: "fpa-logo.png"
+    link: ""
+  - name: Stati Generali dell'Innovazione
+    logo: "sgi-logo.png"
+    link: ""
