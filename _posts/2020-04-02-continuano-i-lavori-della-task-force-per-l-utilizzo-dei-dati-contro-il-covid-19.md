@@ -12,7 +12,7 @@ categories:
 
 <!-- MORE -->
 
-Continua il lavoro della task force [istituita nei giorni scorsi dal Ministro per l’Innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/) per **valutare e proporre soluzioni tecnologiche _data driven_**, ossia basate sull’analisi dei dati, nell’affrontare l’emergenza sanitaria, sociale e economica causata dal virus SARS-CoV-2.
+Continua il lavoro della task force [istituita nei giorni scorsi dal Ministro per l’Innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/) in accordo con il [Ministero della Salute](http://www.salute.gov.it/portale/home.html) e l'[Istituto superiore di sanità](https://www.iss.it/) per **valutare e proporre soluzioni tecnologiche _data driven_**, ossia basate sull’analisi dei dati, nell’affrontare l’emergenza sanitaria, sociale e economica causata dal virus SARS-CoV-2.
 
 L’obiettivo del gruppo di esperti non è solo quello di fornire idee che contribuiscano a fronteggiare  le difficoltà in corso sotto il profilo sanitario. La sua funzione è anche in larga parte radunare competenze e stimoli che possano tradursi in seguito  in progressi nell’adozione di misure fondate su una conoscenza della realtà che i dati possono offrire.
 
