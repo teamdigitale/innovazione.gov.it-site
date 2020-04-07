@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "L’Italia entra a far parte della coalizione europea per l’inclusione digitale" 
-ref: coalizione-europea-inclusione-digitale
+title: "L’Italia entra nella coalizione europea per le competenze digitali" 
+ref: coalizione-europea-competenze-digitali
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/coalizione.jpg" alt="Coalizione per l'inclusione digitale"/>
@@ -9,6 +9,7 @@ pinned:
 categories:
   - highlights
 ---
+
 _Nasce la coalizione italiana che aderisce al programma della Commissione UE per le competenze e le professioni digitali._
 
 <!-- MORE -->
@@ -20,7 +21,6 @@ Si tratta di una delle dieci iniziative chiave introdotte nel 2016 dalla Commiss
 “In Italia è necessario ridurre il divario digitale nella forza lavoro, spesso più ampio che nella maggior parte degli altri paesi europei, attraverso l'aumento di competenze” - afferma il Ministro Pisano. “Per risolvere questi ostacoli, che impediscono l’efficacia di qualsiasi programma di trasformazione digitale, abbiamo lanciato la Coalizione nazionale per le competenze e le professioni digitali nell'ambito dell'iniziativa ‘Repubblica digitale’. Con la coalizione, desideriamo coinvolgere il maggior numero possibile di parti interessate in modo da favorire il cambiamento culturale e il miglioramento delle competenze necessarie per realizzare appieno i benefici della trasformazione digitale”.
 
 [Repubblica Digitale](https://innovazione.gov.it/it/repubblica-digitale/) è **un’iniziativa multistakeholder** lanciata a maggio 2019 per promuovere **l’inclusione digitale e l’adeguamento delle competenze per il lavoro** (attraverso campagne di sensibilizzazione e percorsi formativi di _upskilling_ e _reskilling_) a tutti i livelli dell'economia e della società italiana, favorendo partnership tra soggetti pubblici, mondo no profit e privati attraverso [l’adesione a un manifesto per l’inclusione digitale](https://innovazione.gov.it/it/repubblica-digitale/#manifesto). Ad oggi aderiscono oltre 90 soggetti pubblici e privati, per un totale di oltre 100 iniziative, coordinati da **un comitato interministeriale** guidato dal Ministro per l’innovazione tecnologica e la digitalizzazione. Ai lavori del comitato partecipano **vari ministeri** (Mibact, Istruzione, lavoro e welfare, politiche agricole e forestali, politiche giovanili e sport, pubblica amministrazione, sviluppo economico, università e ricerca , oltre a Regioni, UPI, Anci, esponenti del mondo dell’università, della ricerca, delle imprese, delle associazioni di cittadini. In data odierna, il comitato guida di Repubblica Digitale ha avviato i lavori per l’elaborazione del documento di strategia complessiva per le competenze digitali e di un piano di interventi in grado di rafforzare, integrare, valorizzare i progetti già in corso.  
- 
  
 Secondo le stime dell’[Organizzazione per la cooperazione e lo sviluppo economico](http://www.oecd.org/education/oecd-skills-outlook-e11c1c2d-en.htm) (Ocse),in Italia circa il 26 per cento della popolazione tra 16 e 74 anni non ha mai navigato in rete (la media Ocse è del 14 per cento), ovvero circa 10 milioni di cittadini italiani non utilizzano internet. Nel restante 74 per cento della popolazione adulta, solo il 24 per cento dei cittadini italiani utilizza internet per accedere ai servizi pubblici (media Ocse del 57 per cento). Per maggiori informazioni su Repubblica Digitale e sul digital divide in Italia, [guarda la pagina dedicata all’iniziativa](https://innovazione.gov.it/it/repubblica-digitale/).
 
