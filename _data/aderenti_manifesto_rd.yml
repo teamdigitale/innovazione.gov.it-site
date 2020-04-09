@@ -318,3 +318,9 @@ aderenti_manifesto:
   - name: Stati Generali dell'Innovazione
     logo: "sgi-logo.png"
     link: "https://www.statigeneralinnovazione.it/online/"
+  - name: IMIS - Istituto per il Management dell'Innovazione in Sanità
+    logo: "imis-logo.jpg"
+    link: "https://www.assoimis.it/"
+  - name: UPI - Unione Province d'Italia
+    logo: "upi-logo.jpg"
+    link: "https://www.provinceditalia.it//"
