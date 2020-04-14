@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Innova per l’Italia: la tecnologia, la ricerca e l’innovazione in campo contro l’emergenza Covid" 
+title: "Innova per l’Italia: la tecnologia, la ricerca e l’innovazione in campo contro l’emergenza Covid"
 ref: innovaperlitalia-tecnologia-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
@@ -25,7 +25,7 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
   <div class="callout-title px-1 px-sm-3"><svg class="icon d-none d-sm-inline-block"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-inbox"></use></svg>Le “fast call”</div>
   <div markdown="1">
   All'interno del programma Innova per l’Italia saranno anche aperte delle “call to action” specifiche e di breve durata che risponderanno alle **esigenze di altri enti e istituzioni** (es. Ministeri, Protezione civile, ecc) nei tre ambiti di riferimento del programma. In questa pagina pubblicheremo di volta in volta gli avvisi per altre call di servizi e tecnologie in ambiti specifici.
-  
+
   La prima “fast call” che abbiamo pubblicato riguarda [i servizi di telemedicina e data analysis]({% link _posts/2020-03-23-telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19.md %}) per il monitoraggio, è stata aperta **da martedì 24 marzo ore 13 a giovedì 26 marzo ore 13** e ha già coperto la necessità di scouting e analisi su questi temi.
   </div>
 </div>
@@ -33,34 +33,34 @@ Il progetto è un’iniziativa congiunta del [Ministro per l’innovazione tecno
 
 ## Gli obiettivi
 
-Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, nell’ambito della **prevenzione** (es. DPI quali mascherine chirurgiche,  mascherine FFP2/FFP3),  **diagnostica e trattamento** (es. respiratori artificiali per le unità di terapia intensiva), **monitoraggio**. 
+Il nostro Paese deve affrontare un’emergenza alla quale tutto il mondo non era preparato. Per questo ci troviamo davanti alla necessità di approntare tutti i mezzi e le soluzioni possibili, nell’ambito della **prevenzione** (es. DPI quali mascherine chirurgiche,  mascherine FFP2/FFP3),  **diagnostica e trattamento** (es. respiratori artificiali per le unità di terapia intensiva), **monitoraggio**.
 
 A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti che possono contribuire, attraverso:
 
 1. **Il reperimento, l’innovazione o la riconversione industriale delle proprie tecnologie e processi**, per accrescere la disponibilità di:
      - dispositivi di protezione individuale, in particolare mascherine chirurgiche, mascherine FFP2/N95 con e senza filtro, mascherine FFP3/N99 conforme con Dir. 93/42 CEE, direttiva europea 89/686, e EN149:2001+A1:2009 o equivalenti;
-     - produzione dei sistemi complessi dei respiratori per il trattamento delle sindromi respiratorie, inclusi tutti gli elementi che compongono il sistema complesso in cui i respiratori si inseriscono (valvole, display, …).  
+     - produzione dei sistemi complessi dei respiratori per il trattamento delle sindromi respiratorie, inclusi tutti gli elementi che compongono il sistema complesso in cui i respiratori si inseriscono (valvole, display, …).
 
-     > Per questo motivo ci rivolgiamo alle aziende che già producono questi beni oppure quelle che, ad esempio, possano convertire la propria produzione tessile per la manifattura di mascherine adatte agli scopi medici e nel rispetto degli standard necessari, oppure che possano sfruttare la propria capacità di produrre materiali adatti alla produzione o al funzionamento dei respiratori artificiali. 
+     > Per questo motivo ci rivolgiamo alle aziende che già producono questi beni oppure quelle che, ad esempio, possano convertire la propria produzione tessile per la manifattura di mascherine adatte agli scopi medici e nel rispetto degli standard necessari, oppure che possano sfruttare la propria capacità di produrre materiali adatti alla produzione o al funzionamento dei respiratori artificiali.
 
 2. Il reperimento di kit o tecnologie innovative che facilitino la **diagnosi del Covid-19** in termini di:
      - tamponi e elementi accessori;
      - strumenti per la diagnosi facilitata e veloce, nel rispetto degli standard di affidabilità richiesta.
-     
+
      > Per questo motivo ci rivolgiamo alle aziende che operano nella produzione dei tamponi adatti alla diagnosi del Covid-19 così come quelle che potrebbero indirizzare la produzione. Ci rivolgiamo anche a quelle aziende che hanno già avviato sperimentazione e innovazione di tecnologie per una diagnosi facilitata e veloce,coerentemente con gli standard necessari definiti.
 
 3. Disponibilità di **tecnologie e strumenti** che, nel rispetto della normativa vigente, **consentano o facilitino il monitoraggio, la prevenzione e il controllo del Covid-19**, in termini di:
      - tecnologie e strumenti per il monitoraggio, la localizzazione e la gestione dell’emergenza (già oggetto di una Fast Call terminata il 26 Marzo);
      - tecnologie innovative per la prevenzione e il controllo della diffusione del Covid-19 nelle sue diverse forme.
-     
-     > L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.  
+
+     > L’innovazione offre strumenti e tecnologie all’avanguardia utili per la prevenzione e il controllo dell’epidemia quali, a titolo esemplificativo, robot che svolgono attività generalmente effettuate dagli operatori sanitari e droni per disinfettare le aree pubbliche e monitorare il rispetto dei presidi sanitari.
      Per questo motivo ci rivolgiamo anche ad **alle  aziende, università, enti e centri di ricerca pubblici e privati, associazioni, cooperative, consorzi, fondazioni e istituti**, in modo singolo o associato, che hanno già a disposizione piattaforme o le possono in brevissimo tempo adattare, **tecniche e algoritmi di analisi e intelligenza artificiale, robot, droni e altre tecnologie** per il monitoraggio, la prevenzione e il controllo del Covid-19 nel rispetto dei principi della privacy, sicurezza ed etica, che possano essere utilizzati per il supporto ai pazienti così come dalla Protezione Civile e gli altri Enti interessati.
- 
-## Informazioni per la partecipazione 
 
-Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando [un form nella pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/) **entro venerdì 17 aprile 2020**. 
+## Informazioni per la partecipazione
 
-Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto. 
+Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando [un form nella pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/) **entro venerdì 17 aprile 2020 alle 9:00**.
+
+Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto.
 
 Le proposte verranno valutate dalla struttura del Commissario Straordinario, che deciderà se attivarsi per i passi successivi mettendosi in contatto con i soggetti proponenti, in considerazione della tipologia di proposta e urgenza emergenziale, in particolare quelle relative ai dispositivi di protezione individuale e respiratori che rivestono assoluta priorità. Tale processo si muoverà in conformità con le evidenze scientifiche e con le necessità di certificazione nel rispetto degli standard necessari e delle linee guida dell'Organizzazione Mondiale della Sanità.
 
