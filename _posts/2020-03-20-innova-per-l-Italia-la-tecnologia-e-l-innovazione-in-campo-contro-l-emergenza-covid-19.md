@@ -58,7 +58,7 @@ A questo scopo, “Innova per l’Italia” invita all’azione tutte le aziende
  
 ## Informazioni per la partecipazione 
 
-Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando [un form nella pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/). 
+Tutte le aziende, le associazioni, le Università, gli Enti di ricerca e gli Istituti hanno la possibilità di aderire compilando [un form nella pagina dedicata all’iniziativa](https://innovaperlitalia.agid.gov.it/) **entro venerdì 17 aprile 2020**. 
 
 Vi preghiamo di aderire in molti ma al tempo stesso **di verificare le finalità e i requisiti** per una reale ed effettiva capacità di contribuire a questo progetto. 
 
