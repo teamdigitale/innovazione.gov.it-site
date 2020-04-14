@@ -56,7 +56,7 @@ For this purpose, the "Innova per l’Italia" is a call for all companies, unive
  
 ## How to apply
 
-All companies, associations, universities, research bodies and institutes have the opportunity to join by filling out a form [on the page of the initiative](https://innovaperlitalia.agid.gov.it/). 
+All companies, associations, universities, research bodies and institutes have the opportunity to join by filling out a form [on the page of the initiative](https://innovaperlitalia.agid.gov.it/) **by Friday, April 17, 2020**. 
 
 We do encourage you to apply but please, **read carefully the purposes and requirements** so that you may give an active contribution to this project. 
 All the proposals will be assessed by the team of the Extraordinary Commissioner. The evaluation team will decide whether to contact the proposing subjects, in consideration of the type of the proposal; in particular, those relating to personal protective equipment and respirators would have priority. This process will move in accordance with scientific evidence and certification and in compliance with the  standards and guidelines of the World Health Organization.
