@@ -19,7 +19,7 @@ Il **Gruppo di lavoro** è diviso in otto sottogruppi e composto da:
     Paolo De Rosa, Fidelia Cascini, Gualtiero Ricciardi;
     
    2) Infrastrutture e data collection:
-    Maria Claudia Bodino, Giorgia Lodi, Roberto Polli, Serena Battilomo, Pierluigi Cara, Stefania Garassino, Fabio Pammolli, Umberto Rosini, Stefano Calabrese, Armando Cirillo, Giovanni Baglio;
+    Maria Claudia Bodino, Giorgia Lodi, Roberto Polli, Serena Battilomo, Pierluigi Cara, Stefania Garassino, Fabio Pammolli, Umberto Rosini*, Stefano Calabrese*, Armando Cirillo, Giovanni Baglio;
 
    3) Impatto economico:
     Andrea Roventini, Giovanni Dosi, Alessandro Santoro, Alessandro Caiani, Mauro Napoletano, Giorgio Fagiolo, Mario Martina, Leonardo Ghezzi, Renato Paniccià, Massimiliano Gambardella;
@@ -31,7 +31,7 @@ Il **Gruppo di lavoro** è diviso in otto sottogruppi e composto da:
     Anna Ceccarelli, Valeria Proietti, Mariangela Contenti, Francesco Gabbrielli, Paolo Traverso, Rosanna Mariniello, Luciana Patrizi, Carla Ramella, Antonietta Cavallo, William Frascarelli;
 
    6) Tecnologie per il governo dell’emergenza:
-    Ciro Cattuto, Stefano Calabrese, Carlo Alberto Carnevale Maffè, Alfonso Fuggetta, Andrea Nicolini, Leonardo Favario, Umberto Rosini, Alberto Eugenio Tozzi, Francesca Bria, Simone Piunno;
+    Ciro Cattuto, Stefano Calabrese*, Carlo Alberto Carnevale Maffè, Alfonso Fuggetta, Andrea Nicolini, Leonardo Favario, Umberto Rosini*, Alberto Eugenio Tozzi, Francesca Bria, Simone Piunno;
     
    7) Big data &amp; AI for policies:
     Dino Pedreschi, Francesca Chiaromonte, Luca Ferretti, Fosca Giannotti, Giovanni Rezza, Mauro Grigioni, Patrizio Pezzotti, Paolo Vineis, Marina Davoli, Stefano Merler, Serafino Sorrenti, Elio Mungo, Massimo Bernaschi;
@@ -85,3 +85,9 @@ la digitalizzazione, dal Ministro dello Sviluppo economico, dal Ministro dell’
     
 
 Il Gruppo di lavoro utilizza, per lo svolgimento delle proprie attività, i dati messi a disposizione da qualsiasi soggetto pubblico o privato, nel rispetto del decreto legislativo 30 giugno 2003, n. 196 recante il “Codice in materia di protezione dei dati personali” e del Regolamento UE 2016/679 (GDPR).
+
+
+
+
+
+Note: (*) appartengono a due gruppi di lavoro
