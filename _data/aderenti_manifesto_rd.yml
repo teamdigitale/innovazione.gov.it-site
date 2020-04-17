@@ -323,4 +323,13 @@ aderenti_manifesto:
     link: "https://www.assoimis.it/"
   - name: UPI - Unione Province d'Italia
     logo: "upi-logo.jpg"
-    link: "https://www.provinceditalia.it//"
+    link: "https://www.provinceditalia.it/"
+  - name: WikiPoesia
+    logo: "wikipoesia-logo.png"
+    link: "https://www.wikipoesia.it/wiki/Pagina_principale"
+  - name: Comune di Narni
+    logo: "dig-narni-logo.jpg"
+    link: "https://digipass.regione.umbria.it/narni/"
+  - name: "Confcommercio Imprese per l’Italia"
+    logo: "confcommercio-logo.png"
+    link: "https://www.confcommercio.it/"
