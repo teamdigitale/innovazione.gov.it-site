@@ -20,7 +20,7 @@ La task force ha valutato 319 proposte di soluzioni tecnologiche per il monitora
 
 Il tracciamento dovrà avvenire nel rispetto della normativa nazionale sulla privacy in un quadro di sicurezza e in armonia con la normativa europea e le recenti raccomandazioni della Commissione Europea in materia.
 
-Le linee generali dell’attività di ricognizione e valutazione avviata sulle possibilità di tracciamento sono state illustrate dal Ministro per l’Innovazione Tecnologica e la Digitalizzazione nell’audizione del 8 aprile 2020 davanti alla Commissione Trasporti, Poste e Telecomunicazioni della Camera dei Deputati. A seguire gli sviluppi sono stati e saranno in particolare la Presidenza del Consiglio, il Commissario Straordinario per l’emergenza Covid-19 e tutti i ministeri interessati.
+Le linee generali dell’attività di ricognizione e valutazione avviata sulle possibilità di tracciamento sono state illustrate dal Ministro per l’Innovazione Tecnologica e la Digitalizzazione nell’audizione del 8 aprile 2020 davanti alla Commissione Trasporti, Poste e Telecomunicazioni della Camera dei Deputati. A seguire gli sviluppi sono stati e saranno in particolare la Presidenza del Consiglio, il Commissario Straordinario per l’emergenza Covid-19 e tutti i ministeri interessati. Il Ministro per l'Innovazione Tecnologica e la Digitalizzazione, in coerenza con la propria qualità di ministro senza portafoglio, ha anche in questo caso un ruolo di impulso in ordine alla trasformazione digitale della Pubblica Amministrazione. 
 
 Sin dalla nascita della task force, gli obiettivi sono stati:
 
