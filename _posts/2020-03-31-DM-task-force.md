@@ -15,8 +15,7 @@ hidden: true
 
 Il **Gruppo di lavoro** è diviso in otto sottogruppi e composto da:
 
-   1) Coordinamento generale delle attività:
-    Paolo De Rosa, Fidelia Cascini, Gualtiero Ricciardi;
+   1) Paolo De Rosa, Fidelia Cascini, Gualtiero Ricciardi;
     
    2) Infrastrutture e data collection:
     Maria Claudia Bodino, Giorgia Lodi, Roberto Polli, Serena Battilomo, Pierluigi Cara, Stefania Garassino, Fabio Pammolli, Umberto Rosini*, Stefano Calabrese*, Armando Cirillo, Giovanni Baglio;
