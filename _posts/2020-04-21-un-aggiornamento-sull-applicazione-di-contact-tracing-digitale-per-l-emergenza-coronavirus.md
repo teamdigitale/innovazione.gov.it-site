@@ -1,0 +1,80 @@
+---
+layout: post
+title: "Un aggiornamento sull’applicazione di contact tracing digitale per l’emergenza coronavirus"
+ref: applicazione-contact-tracing-emergenza-coronavirus
+lang: it
+excerpt_separator: <!-- MORE -->
+asset: <img class="w-100" src="/assets/images/posts/contacttracing.jpg" alt="Contact tracing"/>
+pinned: true
+categories:
+  - highlights
+---
+
+_Dalla nascita della task force alla valutazione delle tecnologie: il percorso compiuto finora sull'applicazione per contrastare la diffusione del virus._
+
+<!-- MORE -->
+
+Lo scorso 31 marzo hanno preso il via i lavori del gruppo di lavoro istituito dal [Ministro per l’Innovazione Tecnologica e la Digitalizzazione](https://innovazione.gov.it/) in accordo con il [Ministero della Salute](http://www.salute.gov.it/portale/home.html) per valutare e proporre soluzioni tecnologiche basate sull’analisi dei dati e affrontare l’emergenza sanitaria, sociale e economica legata alla diffusione del virus SARS-CoV-2 in Italia. Il gruppo di lavoro è composto da [un contingente multidisciplinare di 74 esperti](https://innovazione.gov.it/DM-task-force/), scelti in collaborazione con il Ministero della Salute, l’[Istituto Superiore di Sanità](https://www.iss.it/) e l’[Organizzazione Mondiale della Sanità](https://www.who.int/peh-emf/publications/italy_dis/en/). In ragione delle rispettive autonomie, [Autorità Garante della Concorrenza e del mercato](https://www.agcm.it/), [Autorità per le Garanzie nelle Comunicazioni](https://www.agcom.it/) e [Autorità Garante per la protezione dei dati personali](https://www.garanteprivacy.it/) non partecipano direttamente ai lavori e forniscono pareri su questioni relative a proprie competenze. I componenti del gruppo di lavoro, diviso in otto sottogruppi con diversi campi di ricerca, sono stati individuati in base a comprovata esperienza nelle rispettive discipline di riferimento e partecipano all’attività a titolo gratuito. Il compito del gruppo di lavoro è individuare e valutare soluzioni tecnologiche basate sui dati che possano essere utili al Governo e ad alle altre istituzioni nel definire politiche di contenimento del contagio da coronavirus e da realizzare anche a emergenza terminata.
+
+Una ricognizione preliminare sull’eventuale tracciamento dei contatti, il _contact tracing_, è stata fin dall’inizio una delle priorità identificate insieme con il Ministro della Salute. Si tratta infatti di una delle azioni di sanità pubblica utilizzate in precedenza all’estero per prevenire la diffusione di alcune malattie infettive e potrebbe rappresentare un elemento importante in una strategia post-emergenza. Qualora determinazioni di Governo e Parlamento permettessero di renderlo operativo, il _contact tracing_ potrebbe aiutare a identificare individui potenzialmente infetti prima che emergano sintomi e, se condotto in modo sufficientemente rapido, potrebbe impedire la trasmissione successiva del virus dai casi secondari.
+
+Gli standard di tracciamento manuale dei contatti forniti dall’European Center for Disease Prevention and Control (ECDC) nel marzo 2020 relativamente all’epidemia di coronavirus indicano tuttavia in 12 ore il tempo medio per ogni operazione di _contact tracing_. L’operazione richiede l’utilizzo di tre unità di personale specializzato. Il suo tasso di successo è peraltro insufficiente a identificare tutti i contatti del soggetto che ha contratto il virus o comunque a ridurre il numero di contatti secondari infettati non identificati e isolati sotto l’unità. Dunque, la soluzione manuale non assicura di interrompere la riproduzione epidemica.
+
+L’uso della tecnologia in ambito di _contact tracing_ sarebbe in grado di dare un contributo rilevante a un “tracciamento di prossimità” molto più efficiente e rapido di quello tradizionale.
+
+**La tecnologia per il tracciamento dei contatti potrebbe essere adottata in modalità compatibili con le necessità di rispettare diritti e libertà fondamentali dei cittadini sanciti dalla Costituzione.**
+
+In una direzione che può soddisfare queste esigenze si sono mosse a livello europeo diverse iniziative (PEPP-PT, DP-3T, ROBERT, etc.) che mirano a definire standard tecnologici per realizzare una soluzione tecnica che renda possibile il tracciamento di contatti tramite smartphone basato su codice libero e open source, nel pieno rispetto del diritto alla privacy dei cittadini. Più recentemente anche Apple e Google hanno annunciato un’iniziativa congiunta che prevede il rilascio di un sistema di contact tracing decentralizzato ed integrato nelle loro piattaforme in linea con molti dei principi dei progetti europei.
+
+Il 15 aprile 2020, inoltre, la Commissione europea ha pubblicato le linee guida per la realizzazione di applicazioni finalizzate al tracciamento dei contagi ([Mobile applications to support contact tracing in the EU’s fight against COVID-19 - Common EU Toolbox for Member States](https://ec.europa.eu/health/sites/health/files/ehealth/docs/covid-19_apps_en.pdf). In esse la Commissione ha affermato che “_le app mobili hanno il potenziale per rafforzare le strategie di tracciamento dei contatti personali, che sono necessarie a contenere e invertire il corso della diffusione del Covid-19_”. La Commissione ha aggiunto: “_Gli Stati membri  dell’Ue stanno convergendo su soluzioni efficaci, basate su app che minimizzano il trattamento dei dati personali; riconoscono inoltre che l'interoperabilità tra queste app può non solo aiutare i servizi sanitari nazionali ma anche facilitare la riapertura delle frontiere interne dell'Ue_”.
+
+Con tempestività rispetto ad altri Paesi e alla stessa Commissione Europea, il 21 marzo 2020 il Ministro della Salute ha indetto in videoconferenza una riunione con tecnici del Ministero, rappresentanti dell’Istituto Superiore di Sanità e dell’Organizzazione Mondiale della Sanità, il Ministro per l’Innovazione Tecnologica e la Digitalizzazione e tecnici ed esperti del Dipartimento della Presidenza del Consiglio per la trasformazione digitale il cui scopo era quello di definire tratti essenziali di una linea d’azione per l’introduzione di un sistema digitale di _contact tracing_ da sottoporre in seguito ai dovuti passi successivi di valutazione da parte delle istituzioni.
+
+In base alle convergenze rilevate nell’incontro è stata avviata una _[fast call for contribution](https://innovazione.gov.it/telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19/)_ nell’ambito dell’iniziativa “[Innova per l’Italia: la tecnologia, la ricerca e l’innovazione in campo contro l’emergenza Covid-19](https://innovazione.gov.it/innova-per-l-Italia-la-tecnologia-e-l-innovazione-in-campo-contro-l-emergenza-covid-19/)” (una richiesta pubblica di offerte volta a raccogliere contributi da aziende, università, centri di ricerca e società civile nell’ambito dei dispositivi per la prevenzione, la diagnostica e il monitoraggio per il contenimento e il contrasto del diffondersi del coronavirus, promossa dai Ministri di Sviluppo Economico, Università e Ricerca e Innovazione Tecnologica e Digitalizzazione). La _fast call for contribution_ si è svolta tra il 24 e 26 marzo con l’obiettivo di individuare le migliori soluzioni digitali disponibili su applicazioni di telemedicina e assistenza domiciliare dei pazienti nonché tecnologie e strategie basate sulle tecnologie per il monitoraggio “attivo” del rischio di contagio.
+
+Le proposte di soluzioni tecnologiche sono risultate 319 per il monitoraggio e 504 per la telemedicina. Sono state sottoposte alla valutazione del “_Gruppo di lavoro data-driven per l’emergenza Covid-19_” costituito con decreto del Ministro per l’Innovazione Tecnologica e la Digitalizzazione e formato da esperti suddivisi in otto sottogruppi in ragione dell’oggetto del lavoro da svolgere.
+
+I sottogruppi “_Tecnologie per il governo dell’emergenza_” (tenuto a individuare possibili soluzioni offerte dalle tecnologie digitali per gestire l'emergenza e contenere il contagio) e “_Profili giuridici della gestione dei dati connessa all’emergenza_” (preposto a valutare i vincoli normativi per l’utilizzazione e la condivisione dei dati personali in soluzioni tecnologiche di contenimento) hanno fornito approfondite analisi e hanno informato dei primi risultati del loro lavoro l’Autorità Garante per la protezione dei dati personali, l’Autorità Garante della concorrenza e del mercato e l’Autorità per le garanzie nelle comunicazioni.
+
+Il 30 marzo 2020, su iniziativa del Segretario Generale della Presidenza del Consiglio dei Ministri, è stata convocata una riunione in videoconferenza di coordinamento per le eventuali iniziative governative da adottarsi a valle della selezione della soluzione tecnologica di _contact tracing_. Alla videoconferenza hanno partecipato i rappresentanti dei Ministri di Interno, Giustizia, Salute, Innovazione tecnologica e la digitalizzazione e Servizi del Comparto Sicurezza dello Stato.
+
+Ha fatto seguito una successiva riunione di coordinamento in videoconferenza il 4 aprile 2020. In questa sede sono state espresse e valutate posizioni e suggerimenti dei partecipanti anche alla luce delle relazioni prodotte dal gruppo di lavoro, contenenti le valutazioni - sia dal punto di vista tecnico, sia dal punto di vista giuridico - delle proposte analizzate, messe a disposizione di tutti i partecipanti alle riunioni di coordinamento.
+
+Il gruppo di lavoro ha concluso indicando, fra tutte le soluzioni esaminate, quelle  maggiormente valide e idonee a essere testate per eventualmente essere adottate nell’attuale situazione emergenziale.
+
+Il sottogruppo “Profili giuridici della gestione dei dati connessa all’emergenza” ha evidenziato che:
+
+_“Le soluzioni tecnologiche esaminate più in linea con il quadro giuridico, in generale, funzionano come segue: il segnale Bluetooth LE (Low Energy) degli utenti che hanno scelto di installare una specifica applicazione viene registrato dalle analoghe applicazioni con le quali “entrano in contatto”; quando un utente viene diagnosticato contagiato dal Covid-19 il suo dispositivo trasmette i dati al server del soggetto pubblico che gestisce il sistema [alcune delle soluzioni valutate prevedono tale trasferimento su base sistematica e non condizionata], che provvede quindi a informare gli altri utenti - che abbiano egualmente volontariamente installato la medesima app - di essere a rischio contagio perché sono entrati in contatto con una persona risultata contagiata._
+
+_I presupposti essenziali delle valutazioni e considerazioni riassunte nel documento sono:_
+
+_(a) che l’intero sistema integrato di contact tracing sia interamente gestito da uno o più soggetti pubblici e che il suo codice sia aperto e suscettibile di revisione da qualunque soggetto indipendente voglia studiarlo;_
+
+_(b) che i dati trattati ai fini dell’esercizio del sistema siano “resi sufficientemente anonimi da impedire l’identificazione dell’interessato” [cfr. Considerando 26 GDPR] tenuto conto dell’insieme di fattori obiettivi, tra cui i costi, le tecnologie disponibili ed il valore della reidentificazione almeno in condizioni ordinarie e salvo il verificarsi di eventi patologici o, almeno, pseudo anonimi previa adozione di idonee misure idonee a limitare il rischio di identificazione degli interessati;_
+
+_(c) che la decisione di usare la soluzione tecnologica sia liberamente assunta dai singoli cittadini;_
+
+_(d) che raggiunta la finalità perseguita tutti i dati ovunque e in qualunque forma conservati, con l’eccezione di dati aggregati e pienamente anonimi a fini di ricerca o statistici, siano cancellati con conseguente garanzia assoluta per tutti i cittadini di ritrovarsi, dinanzi a soggetti pubblici e privati, nella medesima condizione nella quale si trovavano in epoca anteriore all’utilizzo della soluzione;_
+
+_(e) che la soluzione adottata - nelle sue componenti tecnologiche e non tecnologiche - possa essere considerata, almeno in una dimensione prognostica, effettivamente efficace sul piano epidemiologico giacché, in difetto, diverrebbe difficile giustificare
+qualsivoglia, pur modesta e eventuale, compressione di diritti e libertà fondamentali”._
+
+Il sistema di _contact tracing_ dovrà essere finalizzato tenendo in considerazione l’evoluzione dei sistemi di _contact tracing_ internazionali, oggi ancora non completamente definiti ([PEPP-PT](https://www.pepp-pt.org/), [DP-3T](https://github.com/DP-3T/documents), [ROBERT](https://github.com/ROBERT-proximity-tracing/documents)), e in particolare l’evoluzione del [modello annunciato da Apple e Google](https://www.apple.com/it/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). **Il codice sorgente del sistema di contact tracing sarà rilasciato con licenza Open Source MPL 2.0 e quindi come software libero e aperto**.
+
+L’applicazione non dovrà accedere alla rubrica dei contatti del proprio telefono, non chiederà nemmeno il numero e non manderà SMS per notificare chi è a rischio.
+
+Inoltre sarà necessaria l’integrazione delle indicazioni e dei protocolli sanitari stabiliti dal Ministero della Salute e dalle autorità sanitarie. L’applicazione si baserà sull’installazione volontaria da parte degli utenti e il suo funzionamento potrà cessare non appena terminerà la fase di emergenza, con cancellazione di tutti i dati generati durante il suo funzionamento.
+
+L’applicazione non conserverà i dati relativi alla geolocalizzazione degli utenti, ma registrerà esclusivamente i contatti pseudonimizzati di prossimità rilevati mediante la tecnologia _bluetooth low energy_.
+
+Le linee generali dell’attività di ricognizione e valutazione avviata sulle possibilità di tracciamento sono state illustrate nella Camera dei Deputati dal Ministro per l’innovazione tecnologica e la digitalizzazione,  chiamata in audizione l’8 aprile 2020 davanti alla Commissione Trasporti, Poste e Telecomunicazioni.
+
+Con nota indirizzata il 10 aprile 2020 al Commissario straordinario del Governo per l’attuazione ed il coordinamento delle misure per il contenimento ed il contrasto dell’emergenza epidemiologica Covid-19, dottor Domenico Arcuri, il Presidente del Consiglio ha richiamato le osservazioni dei Ministri della Salute e per l’Innovazione Tecnologica e la Digitalizzazione. Il Presidente del Consiglio ha chiesto al Commissario di procedere rapidamente, nell’ambito dei poteri conferiti dall’articolo 122 del decreto-legge 17 marzo 2020, n. 18, a valutare le modalità con cui dare attuazione alla proposta dei due Ministri. Ha precisato che, in tali attività, il Commissario sarà supportato anche dai rappresentanti delle Amministrazioni competenti _ratione materiae_ e da un rappresentante designato dal Presidente della Conferenza delle Regioni e delle Province autonome di Trento e Bolzano.
+
+Il Commissario, raccordandosi con il Segretario Generale della Presidenza del Consiglio dei Ministri, ha quindi preso contatti con la società Bending Spoons S.p.a.. Il 16 aprile 2020, previa adozione dell’ordinanza n. 10/2020, il Commissario ha stipulato il contratto con cui la stessa società, per spirito di solidarietà e, quindi, al solo ed esclusivo scopo di fornire un proprio contributo volontario utile per fronteggiare l’emergenza da coronavirus in atto e contribuire alle azioni di contenimento che il Governo intende porre in essere, ha concesso la licenza d’uso aperta, gratuita, perpetua e irrevocabile del codice sorgente e di tutte le componenti dell’applicazione. La società si è poi impegnata, sempre gratuitamente e _pro bono_, a completare gli sviluppi software necessari per la messa in esercizio del sistema nazionale di _contact tracing_ digitale.
+
+Questo il percorso compiuto finora, in attesa dei passi ulteriori nel percorso istituzionale necessario.
+
+
+{:.x-small.text-right}
+_Fotografia di [Brian McGowan](https://unsplash.com/@sushioutlaw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/zPf7zp-aX1A){:target="_blank" rel="noopener noreferrer"}_
