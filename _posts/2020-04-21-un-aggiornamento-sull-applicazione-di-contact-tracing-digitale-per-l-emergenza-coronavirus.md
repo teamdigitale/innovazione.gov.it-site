@@ -60,15 +60,13 @@ _(d) che raggiunta la finalità perseguita tutti i dati ovunque e in qualunque f
 _(e) che la soluzione adottata - nelle sue componenti tecnologiche e non tecnologiche - possa essere considerata, almeno in una dimensione prognostica, effettivamente efficace sul piano epidemiologico giacché, in difetto, diverrebbe difficile giustificare
 qualsivoglia, pur modesta e eventuale, compressione di diritti e libertà fondamentali”._
 
-Il sistema di _contact tracing_ dorà essere finalizzato tenendo in considerazione l’evoluzione dei sistemi di _contact tracing_ internazionali, oggi ancora non completamente definiti ([PEPP-PT](https://www.pepp-pt.org/), [DP-3T](https://github.com/DP-3T/documents), [ROBERT](https://github.com/ROBERT-proximity-tracing/documents)), e in particolare l’evoluzione del [modello annunciato da Apple e Google](https://www.apple.com/it/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). **Il codice sorgente del sistema di contact tracing sarà rilasciato con licenza Open Source MPL2 e quindi come codice libero e aperto**.
+Il sistema di _contact tracing_ dovrà essere finalizzato tenendo in considerazione l’evoluzione dei sistemi di _contact tracing_ internazionali, oggi ancora non completamente definiti ([PEPP-PT](https://www.pepp-pt.org/), [DP-3T](https://github.com/DP-3T/documents), [ROBERT](https://github.com/ROBERT-proximity-tracing/documents)), e in particolare l’evoluzione del [modello annunciato da Apple e Google](https://www.apple.com/it/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). **Il codice sorgente del sistema di contact tracing sarà rilasciato con licenza Open Source MPL2 e quindi come codice libero e aperto**.
 
 L’applicazione non dovrà accedere alla rubrica dei contatti del proprio telefono, non chiederà nemmeno il numero e non manderà SMS per notificare chi è a rischio.
 
 Inoltre sarà necessaria l’integrazione delle indicazioni e dei protocolli sanitari stabiliti dal Ministero della Salute e dalle autorità sanitarie. L’applicazione si baserà sull’installazione volontaria da parte degli utenti e il suo funzionamento potrà cessare non appena terminerà la fase di emergenza, con cancellazione di tutti i dati generati durante il suo funzionamento.
 
 L’applicazione non conserverà i dati relativi alla geolocalizzazione degli utenti, ma registrerà esclusivamente i contatti pseudonimizzati di prossimità rilevati mediante la tecnologia _bluetooth low energy_.
-
-I dati e lo sviluppo dell’applicazione saranno gestiti e mantenuti da soggetti governativi.
 
 Le linee generali dell’attività di ricognizione e valutazione avviata sulle possibilità di tracciamento sono state illustrate nella Camera dei Deputati dal Ministro per l’innovazione tecnologica e la digitalizzazione,  chiamata in audizione l’8 aprile 2020 davanti alla Commissione Trasporti, Poste e Telecomunicazioni.
 
