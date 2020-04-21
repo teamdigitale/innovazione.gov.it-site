@@ -20,9 +20,7 @@ Una ricognizione preliminare sull’eventuale tracciamento dei contatti, il _con
 
 Gli standard di tracciamento manuale dei contatti forniti dall’European Center for Disease Prevention and Control (ECDC) nel marzo 2020 relativamente all’epidemia di coronavirus indicano tuttavia in 12 ore il tempo medio per ogni operazione di _contact tracing_. L’operazione richiede l’utilizzo di tre unità di personale specializzato. Il suo tasso di successo è peraltro insufficiente a identificare tutti i contatti del soggetto che ha contratto il virus o comunque a ridurre il numero di contatti secondari infettati non identificati e isolati sotto l’unità. Dunque, la soluzione manuale non assicura di interrompere la riproduzione epidemica.
 
-L’uso della tecnologia in ambito di _contact tracing_ sarebbe in grado di dare un contributo rilevante a un “tracciamento di prossimità” molto più efficiente e rapido di quello tradizionale.
-
-**La tecnologia per il tracciamento dei contatti potrebbe essere adottata in modalità compatibili con le necessità di rispettare diritti e libertà fondamentali dei cittadini sanciti dalla Costituzione.**
+L’uso della tecnologia in ambito di _contact tracing_ sarebbe in grado di dare un contributo rilevante a un “tracciamento di prossimità” molto più efficiente e rapido di quello tradizionale. La tecnologia per il tracciamento dei contatti potrebbe essere adottata in modalità compatibili con le necessità di rispettare diritti e libertà fondamentali dei cittadini sanciti dalla Costituzione.
 
 In una direzione che può soddisfare queste esigenze si sono mosse a livello europeo diverse iniziative (PEPP-PT, DP-3T, ROBERT, etc.) che mirano a definire standard tecnologici per realizzare una soluzione tecnica che renda possibile il tracciamento di contatti tramite smartphone basato su codice libero e open source, nel pieno rispetto del diritto alla privacy dei cittadini. Più recentemente anche Apple e Google hanno annunciato un’iniziativa congiunta che prevede il rilascio di un sistema di contact tracing decentralizzato ed integrato nelle loro piattaforme in linea con molti dei principi dei progetti europei.
 
