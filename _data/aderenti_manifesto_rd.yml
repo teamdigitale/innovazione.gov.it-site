@@ -333,3 +333,12 @@ aderenti_manifesto:
   - name: "Confcommercio Imprese per l’Italia"
     logo: "confcommercio-logo.png"
     link: "https://www.confcommercio.it/"
+  - name: ELIS
+    logo: "elis-logo.png"
+    link: "http://www.elis.org/"
+  - name: Comune di Palermo
+    logo: "comune-palermo-logo.png"
+    link: "https://www.comune.palermo.it/"
+  - name: onData
+    logo: "ondata-logo.png"
+    link: "https://ondata.it/"
