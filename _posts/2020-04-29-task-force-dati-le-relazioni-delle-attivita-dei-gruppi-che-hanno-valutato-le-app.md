@@ -37,7 +37,7 @@ Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big
 
 Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della valutazione di tecnologie per permettere la tutela della salute pubblica insieme al ripristino delle condizioni per le attività economiche e sociali e per la tutela delle libertà e dei dati personali (libertà di circolazione e privacy). 
 
-- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
 - [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_sintesi_relazione_contact_tracing.pdf)
 - [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_allegato_tecnico_relazione_contact_tracing.pdf)
 
