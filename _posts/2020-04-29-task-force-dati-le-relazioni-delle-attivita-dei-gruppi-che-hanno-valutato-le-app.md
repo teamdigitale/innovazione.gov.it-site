@@ -43,7 +43,7 @@ Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della va
 
 ## Gruppo 7 - Big Data & AI for policy
 
-Il gruppo 7 (Big Data & AI for policy)  lavora alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si occupa anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.
+Il gruppo 7 (Big Data & AI for policy) ha lavorato alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si è occupato anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.
 
 - [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 7 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf)
 
