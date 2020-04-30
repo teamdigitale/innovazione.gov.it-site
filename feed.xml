@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2020-04-27T10:00:14+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">Lavora con noi: la convocazione per i colloqui di alcune posizoni entro il 31 maggio</title><link href="https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui/" rel="alternate" type="text/html" title="Lavora con noi: la convocazione per i colloqui di alcune posizoni entro il 31 maggio" /><published>2020-04-27T00:00:00+00:00</published><updated>2020-04-27T00:00:00+00:00</updated><id>https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui</id><content type="html" xml:base="https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui/">&lt;p&gt;&lt;em&gt;Per alcune posizioni, è posticipata la data ultima di convocazione per la seconda fase delle selezioni.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://innovazione.gov.it/feed.xml" rel="self" type="application/atom+xml" /><link href="https://innovazione.gov.it/" rel="alternate" type="text/html" /><updated>2020-04-30T14:18:16+00:00</updated><id>https://innovazione.gov.it/feed.xml</id><title type="html">Ministro per l’innovazione tecnologica e la digitalizzazione</title><entry xml:lang="it"><title type="html">Task force dati, le relazioni delle attività dei gruppi che hanno valutato le app</title><link href="https://innovazione.gov.it/task-force-dati-le-relazioni-delle-attivita-dei-gruppi-che-hanno-valutato-le-app/" rel="alternate" type="text/html" title="Task force dati, le relazioni delle attività dei gruppi che hanno valutato le app" /><published>2020-04-29T00:00:00+00:00</published><updated>2020-04-29T00:00:00+00:00</updated><id>https://innovazione.gov.it/task-force-dati-le-relazioni-delle-attivita-dei-gruppi-che-hanno-valutato-le-app</id><content type="html" xml:base="https://innovazione.gov.it/task-force-dati-le-relazioni-delle-attivita-dei-gruppi-che-hanno-valutato-le-app/">&lt;p&gt;&lt;em&gt;Pubblichiamo le relazioni conclusive dei due gruppi di lavoro della task force che si sono occupati della valutazione delle app per il monitoraggio e il contrasto dell’emergenza Covid-19.&lt;/em&gt;&lt;/p&gt;
+
+&lt;!-- MORE --&gt;
+
+&lt;p&gt;Pubblichiamo le relazioni conclusive dei lavori del gruppo 6 e del gruppo 8 della &lt;a href=&quot;https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/&quot;&gt;Task force italiana per l’utilizzo dei dati contro l’emergenza Covid-19&lt;/a&gt;. I due gruppi si sono focalizzati:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sulla valutazione delle tecnologie per la tutela della salute pubblica e il ripristino delle attività sociali e economiche nel Paese;&lt;/li&gt;
+  &lt;li&gt;sulla valutazione degli aspetti legati ai diritti e alla privacy di ciascuna tecnologia presa in esame.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La task force è nata a marzo su iniziativa del  &lt;a href=&quot;https://innovazione.gov.it/&quot;&gt;Ministro per l’Innovazione Tecnologica e la Digitalizzazione&lt;/a&gt; in accordo con il &lt;a href=&quot;http://www.salute.gov.it/portale/home.html&quot;&gt;Ministero della Salute&lt;/a&gt; per valutare e proporre soluzioni tecnologiche data driven e affrontare l’emergenza sanitaria, sociale e economica legata alla diffusione del virus SARS-CoV-2 sul territorio italiano. Ne fanno parte &lt;a href=&quot;https://innovazione.gov.it/DM-task-force/&quot;&gt;74 esperti&lt;/a&gt; divisi in &lt;a href=&quot;https://innovazione.gov.it/task-force-sui-dati-un-primo-bilancio-delle-attivita-del-gruppo-di-lavoro/&quot;&gt;otto gruppi di lavoro&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/docs/DM Gruppo di lavoro COVID 19-signed.pdf&quot;&gt;A questo link il Decreto Ministeriale di istituzione della task force - Pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Le relazioni che pubblichiamo di seguito sono frutto di autonoma valutazione dei componenti di ciascun sottogruppo di lavoro&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le relazioni delle attività degli altri gruppi di lavoro e altri documenti prodotti dalla task force saranno pubblicati nei prossimi giorni &lt;a href=&quot;https://github.com/taskforce-covid-19/documents&quot;&gt;su GitHub a questo link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;gruppo-3---impatto-economico&quot;&gt;Gruppo 3 - Impatto economico&lt;/h2&gt;
+
+&lt;p&gt;Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big Data &amp;amp; AI for policy” ha elaborato raccomandazioni su come gestire la “fase 2”: far ripartire gradualmente attività economiche e produttive senza pregiudicare la salute e la sicurezza dei cittadini e prevenendo il rischio che l’epidemia risorga.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_3_Impatto_Economico/sgdl3_analisi_come_gestire_la_fase_2.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 3 (Pdf)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gruppo-6---tecnologie-per-il-governo-dellemergenza&quot;&gt;Gruppo 6 - Tecnologie per il governo dell’emergenza&lt;/h2&gt;
+
+&lt;p&gt;Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della valutazione di tecnologie per permettere la tutela della salute pubblica insieme al ripristino delle condizioni per le attività economiche e sociali e per la tutela delle libertà e dei dati personali (libertà di circolazione e privacy).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 6 (Pdf)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_sintesi_relazione_contact_tracing.pdf&quot;&gt;A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_allegato_tecnico_relazione_contact_tracing.pdf&quot;&gt;A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gruppo-7---big-data--ai-for-policy&quot;&gt;Gruppo 7 - Big Data &amp;amp; AI for policy&lt;/h2&gt;
+
+&lt;p&gt;Il gruppo 7 (Big Data &amp;amp; AI for policy) ha lavorato alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si è occupato anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 7 (Pdf)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gruppo-8---profili-giuridici-della-gestione-dei-dati-connessa-allemergenza&quot;&gt;Gruppo 8 - Profili giuridici della gestione dei dati connessa all’emergenza&lt;/h2&gt;
+
+&lt;p&gt;Il gruppo 8 (Profili giuridici della gestione dei dati connessa all’emergenza) si è occupato di valutare l’impatto delle soluzioni tecnologiche per quanto riguarda il rispetto della privacy e di altri diritti fondamentali.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_profili_giuridici_contact_tracing.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_covid_community_alert.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “CovidApp - Covid Community Alert” del gruppo “Coronavirus Outbreak Control”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_immuni.pdf&quot;&gt;A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “Immuni” di BendingSpoons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;x-small text-right&quot;&gt;&lt;em&gt;Fotografia di &lt;a href=&quot;https://unsplash.com/@sen_sathyamony?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Sen Sathyamony&lt;/a&gt; su &lt;a href=&quot;https://unsplash.com/photos/ozWdCfU47lk&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pubblichiamo le relazioni conclusive dei due gruppi di lavoro della task force che si sono occupati della valutazione delle app per il monitoraggio e il contrasto dell’emergenza Covid-19.</summary></entry><entry xml:lang="it"><title type="html">Lavora con noi: la convocazione per i colloqui di alcune posizoni entro il 31 maggio</title><link href="https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui/" rel="alternate" type="text/html" title="Lavora con noi: la convocazione per i colloqui di alcune posizoni entro il 31 maggio" /><published>2020-04-27T00:00:00+00:00</published><updated>2020-04-27T00:00:00+00:00</updated><id>https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui</id><content type="html" xml:base="https://innovazione.gov.it/posticipata-la-convocazione-per-alcuni-colloqui/">&lt;p&gt;&lt;em&gt;Per alcune posizioni, è posticipata la data ultima di convocazione per la seconda fase delle selezioni.&lt;/em&gt;&lt;/p&gt;
 
 &lt;!-- MORE --&gt;
 
@@ -308,30 +363,4 @@ la digitalizzazione, dal Ministro dello Sviluppo economico, dal Ministro dell’
 
 &lt;p&gt;Il Gruppo di lavoro utilizza, per lo svolgimento delle proprie attività, i dati messi a disposizione da qualsiasi soggetto pubblico o privato, nel rispetto del decreto legislativo 30 giugno 2003, n. 196 recante il “Codice in materia di protezione dei dati personali” e del Regolamento UE 2016/679 (GDPR).&lt;/p&gt;
 
-&lt;p&gt;Note: (*) appartengono a due gruppi di lavoro&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry xml:lang="it"><title type="html">Nasce la task force italiana per l’utilizzo dei dati contro l’emergenza Covid-19</title><link href="https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/" rel="alternate" type="text/html" title="Nasce la task force italiana per l’utilizzo dei dati contro l’emergenza Covid-19" /><published>2020-03-31T00:00:00+00:00</published><updated>2020-03-31T00:00:00+00:00</updated><id>https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19</id><content type="html" xml:base="https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/">&lt;p&gt;&lt;em&gt;Un gruppo multidisciplinare di esperti al lavoro per valutare e proporre soluzioni tecnologiche data-driven per la gestione dell’emergenza sanitaria, economica e sociale legata alla diffusione del virus SARS-CoV-2.&lt;/em&gt;&lt;/p&gt;
-
-&lt;!-- MORE --&gt;
-
-&lt;p&gt;Prendono il via i lavori della task force istituita dal &lt;a href=&quot;https://innovazione.gov.it/&quot;&gt;Ministro per l’innovazione tecnologica e la digitalizzazione&lt;/a&gt; in accordo con il &lt;a href=&quot;http://www.salute.gov.it/portale/home.html&quot;&gt;Ministero della Salute&lt;/a&gt; per &lt;strong&gt;valutare e proporre soluzioni tecnologiche &lt;em&gt;data driven&lt;/em&gt;&lt;/strong&gt; e affrontare l’emergenza sanitaria, sociale e economica legata alla diffusione del virus SARS-CoV-2 sul territorio italiano. La task force è composta da &lt;a href=&quot;/DM-task-force/&quot;&gt;un contingente multidisciplinare di 74 esperti&lt;/a&gt;, scelti in collaborazione con il Ministero della Salute, l’&lt;a href=&quot;https://www.iss.it/&quot;&gt;Istituto Superiore di Sanità&lt;/a&gt; e l’&lt;a href=&quot;https://www.who.int/&quot;&gt;Organizzazione Mondiale della Sanità&lt;/a&gt; e tra componenti direttamente designati dall’&lt;a href=&quot;https://www.agcm.it/&quot;&gt;Autorità  garante della concorrenza e del mercato&lt;/a&gt;, dall’&lt;a href=&quot;https://www.agcom.it/&quot;&gt;Autorità per le garanzie nelle comunicazioni&lt;/a&gt; e dal &lt;a href=&quot;https://www.garanteprivacy.it/&quot;&gt;Garante per la protezione dei dati personali&lt;/a&gt;, in base a comprovata esperienza nelle rispettive discipline di riferimento, che partecipano a titolo gratuito. Il compito di questo gruppo di lavoro è &lt;strong&gt;individuare e valutare soluzioni tecnologiche &lt;em&gt;data driven&lt;/em&gt;&lt;/strong&gt; per supportare il Governo e gli altri pubblici decisori nella definizione di politiche di contenimento del contagio da Covid-19.&lt;/p&gt;
-
-&lt;p&gt;L’idea su cui si basa la task force è che l’innovazione tecnologica e la digitalizzazione possono dare un contributo significativo attraverso &lt;strong&gt;la raccolta e l’analisi di dati&lt;/strong&gt;, nel rispetto delle normative sulla privacy, per l’adozione di tutte le misure necessarie a fronteggiare la crisi in atto. Una corretta gestione e condivisione dei dati può consentire alle istituzioni pubbliche di assumere le decisioni migliori, progettare le azioni più efficaci e fornire servizi sempre più rispondenti ai bisogni ed alle necessità di cittadini ed imprese. Inoltre, l’uso delle tecnologie emergenti (data analytics, big data, intelligenza artificiale) può contribuire in modo significativo a contenere il numero di contagi e agevolare &lt;strong&gt;l’adozione tempestiva delle misure di distanziamento sociale&lt;/strong&gt; indispensabili per arginare la diffusione del virus.&lt;/p&gt;
-
-&lt;h2 id=&quot;obiettivi&quot;&gt;Obiettivi&lt;/h2&gt;
-
-&lt;p&gt;La task force nasce per:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Fare una ricognizione delle diverse soluzioni tecnologiche &lt;em&gt;data driven&lt;/em&gt;&lt;/strong&gt; di supporto al contenimento dell’epidemia di Covid-19. A questo scopo si occuperà anche della valutazione delle proposte che hanno aderito nei giorni scorsi alla &lt;a href=&quot;/telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19/&quot;&gt;Fast Call per applicazioni e servizi digitali per il monitoraggio dell’emergenza sanitaria&lt;/a&gt;, lanciata dal Ministro per l’innovazione tecnologica e la digitalizzazione a supporto del Ministero della Salute.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Studiare e analizzare&lt;/strong&gt;, nel rispetto delle normative vigenti sulla privacy e la sicurezza, &lt;strong&gt;i dati provenienti da Pubbliche Amministrazioni e soggetti privati&lt;/strong&gt; che riguardano l’emergenza epidemiologica da COVID-19, con specifico riferimento all’ambito sanitario, epidemiologico e socio-economico relativo alla produzione industriale italiana.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Per raggiungere questi obiettivi, la task force dovrà anche occuparsi di:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;analisi e studio delle problematiche connesse alla raccolta, conservazione ed elaborazione dei dati relativi all’emergenza in atto &lt;strong&gt;sotto il profilo giuridico, economico, sociale, sanitario ed ambientale&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;analisi e mappatura delle banche dati&lt;/strong&gt; di interesse per gli scopi della task force e dei livelli di interoperabilità esistenti;&lt;/li&gt;
-  &lt;li&gt;analisi e individuazione del &lt;strong&gt;quadro normativo di riferimento nazionale ed europeo&lt;/strong&gt; con particolare riferimento alla disciplina in materia di protezione dei dati personali e ricostruzione comparativa delle soluzioni adottate in altri ordinamenti, nel contesto Ue ed extra Ue;&lt;/li&gt;
-  &lt;li&gt;analisi e studio di metodi e strumenti per &lt;strong&gt;la progettazione e l’attuazione di politiche basate sui dati&lt;/strong&gt; (&lt;em&gt;data driven&lt;/em&gt;) e sull’evidenza informativa, sfruttando tecnologie innovative per la raccolta e l’interpretazione di grandi volumi di dati (&lt;em&gt;big data&lt;/em&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Per raggiungere queste finalità, le attività della task force sono organizzate in &lt;a href=&quot;/DM-task-force/&quot;&gt;otto sottogruppi&lt;/a&gt;, che si occuperanno rispettivamente del coordinamento dei lavori, della sistematizzazione della raccolta dati, di un focus sull’impatto economico e su quello sociale, degli aspetti legati alla teleassistenza medica, delle tecnologie digitali per la gestione e il governo dell’emergenza, dell’utilizzo di Big Data e AI a supporto dei decisori politici e infine della definizione dei profili giuridici per la gestione dei dati connessa all’emergenza.&lt;/p&gt;</content><author><name></name></author><summary type="html">Un gruppo multidisciplinare di esperti al lavoro per valutare e proporre soluzioni tecnologiche data-driven per la gestione dell’emergenza sanitaria, economica e sociale legata alla diffusione del virus SARS-CoV-2.</summary></entry></feed>
+&lt;p&gt;Note: (*) appartengono a due gruppi di lavoro&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
