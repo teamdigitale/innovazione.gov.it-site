@@ -31,7 +31,7 @@ Le relazioni delle attività degli altri gruppi di lavoro e altri documenti prod
 
 Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big Data & AI for policy” ha elaborato raccomandazioni su come gestire la “fase 2”: far ripartire gradualmente attività economiche e produttive senza pregiudicare la salute e la sicurezza dei cittadini e prevenendo il rischio che l’epidemia risorga.
 
-- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 3 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_3_Impatto_Economico/sgdl3_analisi_come_gestire_la_fase_2.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 3 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_3_Impatto_Economico/sgdl3_analisi_come_gestire_la_fase_2.pdf)
 
 ## Gruppo 6 - Tecnologie per il governo dell’emergenza
 
