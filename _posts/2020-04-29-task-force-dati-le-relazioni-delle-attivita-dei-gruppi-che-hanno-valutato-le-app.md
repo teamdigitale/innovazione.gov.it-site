@@ -37,23 +37,23 @@ Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big
 
 Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della valutazione di tecnologie per permettere la tutela della salute pubblica insieme al ripristino delle condizioni per le attività economiche e sociali e per la tutela delle libertà e dei dati personali (libertà di circolazione e privacy). 
 
-- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
-- [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_sintesi_relazione_contact_tracing.pdf)
-- [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_allegato_tecnico_relazione_contact_tracing.pdf)
+- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
+- [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_sintesi_relazione_contact_tracing.pdf)
+- [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_allegato_tecnico_relazione_contact_tracing.pdf)
 
 ## Gruppo 7 - Big Data & AI for policy
 
 Il gruppo 7 (Big Data & AI for policy)  lavora alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si occupa anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.
 
-- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 7 (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf)
+- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 7 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf)
 
 ## Gruppo 8 - Profili giuridici della gestione dei dati connessa all’emergenza
 
 Il gruppo 8 (Profili giuridici della gestione dei dati connessa all’emergenza) si è occupato di valutare l’impatto delle soluzioni tecnologiche per quanto riguarda il rispetto della privacy e di altri diritti fondamentali.
 
-- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 8](https://github.com/taskforce-covid-19/documents/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_profili_giuridici_contact_tracing.pdf)
-- [A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “CovidApp - Covid Community Alert” del gruppo “Coronavirus Outbreak Control”](https://github.com/taskforce-covid-19/documents/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_covid_community_alert.pdf)
-- [A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “Immuni” di BendingSpoons](https://github.com/taskforce-covid-19/documents/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_immuni.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 8](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_profili_giuridici_contact_tracing.pdf)
+- [A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “CovidApp - Covid Community Alert” del gruppo “Coronavirus Outbreak Control”](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_covid_community_alert.pdf)
+- [A questo link è possibile leggere e scaricare la relazione del gruppo 8 sulla proposta “Immuni” di BendingSpoons](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_8_Profili_Giuridici_Gestione_Dati_Emergenza/sgdl8_relazione_immuni.pdf)
 
 {:.x-small.text-right}
 _Fotografia di [Sen Sathyamony](https://unsplash.com/@sen_sathyamony?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/ozWdCfU47lk){:target="_blank" rel="noopener noreferrer"}_
