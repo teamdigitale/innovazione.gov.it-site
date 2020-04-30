@@ -23,7 +23,9 @@ La task force è nata a marzo su iniziativa del  [Ministro per l’Innovazione T
 
 [A questo link il Decreto Ministeriale di istituzione della task force - Pdf]({{ site.baseurl }}/assets/docs/DM Gruppo di lavoro COVID 19-signed.pdf)
 
-**Le relazioni che pubblichiamo di seguito sono frutto di autonoma valutazione dei componenti di ciascun sottogruppo di lavoro.**
+**Le relazioni che pubblichiamo di seguito sono frutto di autonoma valutazione dei componenti di ciascun sottogruppo di lavoro**.
+
+Le relazioni delle attività degli altri gruppi di lavoro e altri documenti prodotti dalla task force saranno pubblicati nei prossimi giorni [su GitHub a questo link](https://github.com/taskforce-covid-19/documents). 
 
 ## Gruppo 3 - Impatto economico
 
