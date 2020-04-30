@@ -25,6 +25,15 @@ La task force è nata a marzo su iniziativa del  [Ministro per l’Innovazione T
 
 **Le relazioni che pubblichiamo di seguito sono frutto di autonoma valutazione dei componenti di ciascun sottogruppo di lavoro.**
 
+## Gruppo 3 - Impatto economico
+
+Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big Data & AI for policy” ha elaborato raccomandazioni su come gestire la “fase 2”: far ripartire gradualmente attività economiche e produttive senza pregiudicare la salute e la sicurezza dei cittadini e prevenendo il rischio che l’epidemia risorga.
+
+- A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 3 (Pdf)({{ site.baseurl }}/assets/docs/)
+- A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)({{ site.baseurl }}/assets/docs/)
+- A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 3 (Pdf)({{ site.baseurl }}/assets/docs/)
+
+
 ## Gruppo 6 - Tecnologie per il governo dell’emergenza
 
 Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della valutazione di tecnologie per permettere la tutela della salute pubblica insieme al ripristino delle condizioni per le attività economiche e sociali e per la tutela delle libertà e dei dati personali (libertà di circolazione e privacy). 
@@ -32,6 +41,14 @@ Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della va
 - [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 6 (Pdf)]({{ site.baseurl }}/assets/docs/)
 - [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)]({{ site.baseurl }}/assets/docs/)
 - [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)]({{ site.baseurl }}/assets/docs/)
+
+## Gruppo 7 - Big Data & AI for policy
+
+Il gruppo 7 (Big Data & AI for policy)  lavora alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si occupa anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.
+
+- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 7 (Pdf)]({{ site.baseurl }}/assets/docs/)
+- [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)]({{ site.baseurl }}/assets/docs/)
+- [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 7 (Pdf)]({{ site.baseurl }}/assets/docs/)
 
 ## Gruppo 8 - Profili giuridici della gestione dei dati connessa all’emergenza
 
