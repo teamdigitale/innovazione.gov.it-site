@@ -342,3 +342,12 @@ aderenti_manifesto:
   - name: onData
     logo: "ondata-logo.png"
     link: "https://ondata.it/"
+  - name: Prometeo-lab
+    logo: "prometeo-logo.png"
+    link: "https://www.prometeo-lab.com/"
+  - name: ALI-Legautonomie
+    logo: "ali-legautonomie-bes-logo.jpg"
+    link: "https://aliautonomie.it/"
+  - name: Università di Urbino
+    logo: "urbino-logo.jpg"
+    link: "https://www.uniurb.it/"
