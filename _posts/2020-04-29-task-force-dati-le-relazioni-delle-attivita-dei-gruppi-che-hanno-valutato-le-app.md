@@ -31,13 +31,13 @@ Le relazioni delle attività degli altri gruppi di lavoro e altri documenti prod
 
 Il gruppo 3 (Impatto economico) in collaborazione con i membri del gruppo “Big Data & AI for policy” ha elaborato raccomandazioni su come gestire la “fase 2”: far ripartire gradualmente attività economiche e produttive senza pregiudicare la salute e la sicurezza dei cittadini e prevenendo il rischio che l’epidemia risorga.
 
-- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 3 (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_3_Impatto_Economico/sgdl3_analisi_come_gestire_la_fase_2.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 3 (Pdf)](https://github.com/taskforce-covid-19/documents/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_3_Impatto_Economico/sgdl3_analisi_come_gestire_la_fase_2.pdf)
 
 ## Gruppo 6 - Tecnologie per il governo dell’emergenza
 
 Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della valutazione di tecnologie per permettere la tutela della salute pubblica insieme al ripristino delle condizioni per le attività economiche e sociali e per la tutela delle libertà e dei dati personali (libertà di circolazione e privacy). 
 
-- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_relazione_contact_tracing.pdf)
 - [A questo link è possibile leggere e scaricare una sintesi della relazione (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_sintesi_relazione_contact_tracing.pdf)
 - [A questo link è possibile leggere e scaricare l’allegato tecnico alla relazione del gruppo 6 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_6_Tecnologie_Governo_Emergenza/sgdl6_allegato_tecnico_relazione_contact_tracing.pdf)
 
@@ -45,7 +45,7 @@ Il gruppo 6 (Tecnologie per il governo dell’emergenza) si è occupato della va
 
 Il gruppo 7 (Big Data & AI for policy)  lavora alla valutazione di strumenti per politiche basate sui dati, sfruttando tecnologie di big data analytics e intelligenza artificiale. Il gruppo si occupa anche di valutare soluzioni per rendere disponibili i dati clinici e radiologici, per mettere al lavoro i centri di ricerca italiani e internazionale allo sviluppo di modelli AI predittivi e esplicativi per il decorso clinico dei pazienti Covid.
 
-- [A questo link è possibile scaricare e leggere la relazione conclusiva del gruppo 7 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf)
+- [A questo link è possibile leggere e scaricare la relazione conclusiva del gruppo 7 (Pdf)](https://github.com/taskforce-covid-19/documents/blob/master/sgdl_7_Big_Data_AI_Policies/sgdl7_analisi_stakeholder_e_raccomandazioni.pdf)
 
 ## Gruppo 8 - Profili giuridici della gestione dei dati connessa all’emergenza
 
