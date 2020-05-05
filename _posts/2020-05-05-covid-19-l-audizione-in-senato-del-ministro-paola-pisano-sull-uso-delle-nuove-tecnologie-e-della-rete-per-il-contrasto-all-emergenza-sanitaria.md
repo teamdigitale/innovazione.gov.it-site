@@ -4,7 +4,7 @@ title: "Covid-19, l’audizione in Senato del Ministro Paola Pisano sull’uso d
 ref: covid-19-audizione-senato-paola-pisano-29-aprile
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/audizione.jpg" alt="L'audizione in videoconferenza"/>
+asset: <img class="w-100" src="/assets/images/posts/audizione.png" alt="L'audizione in videoconferenza"/>
 categories:
   - highlights
 ---
