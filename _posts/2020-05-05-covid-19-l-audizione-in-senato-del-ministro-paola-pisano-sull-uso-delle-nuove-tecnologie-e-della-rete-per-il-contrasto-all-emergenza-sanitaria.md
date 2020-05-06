@@ -18,5 +18,5 @@ Il 29 aprile il [Ministro per l’innovazione tecnologica e la digitalizzazione]
 Di seguito è possibile: 
  
 - Vedere il **video integrale** dell’audizione, [sul sito del Senato](http://webtv.senato.it/4621?video_evento=76901#)
-- Leggere e scaricare [**la relazione** con il testo integrale dell’audizione](https://drive.google.com/file/d/1qWVRR80rCxPj2oMZQdl0HAUUri5wGpon/view) (Pdf)
+- Leggere e scaricare [**la relazione** con il testo integrale dell’audizione]({{ site.baseurl }}/assets/docs/RelazioneAudizione2904VIIICommissioneSenato.pdf) (Pdf)
 
