@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CoBUL: sbloccati fondi per 1,5 miliardi. Subito piano scuole e voucher"
-ref: CoBUL-sbloccati-fondi-per-1,5-miliardi-Subito-piano-scuole-e-voucher
+ref: cobul-sbloccati-fondi-piano-scuole-e-voucher
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/taylor-wilcox-4nKOEAQaTgA-unsplash.jpg" alt="Covid-19 MISE MUR MID"/>
