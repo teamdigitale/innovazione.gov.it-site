@@ -4,7 +4,7 @@ title: "Covid-19 e innovazione tecnologica, audizione del Ministro Paola Pisano 
 ref: covid-19-audizione-paola-pisano-camera-deputati-30-aprile
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/audizionecamera.jpg" alt="Covid19 e nuove tecnologie"/>
+asset: <img class="w-100" src="/assets/images/posts/audizionecovid.jpg" alt="Covid19 e nuove tecnologie"/>
 categories:
   - highlights
 ---
