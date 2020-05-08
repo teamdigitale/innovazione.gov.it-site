@@ -351,3 +351,15 @@ aderenti_manifesto:
   - name: Università di Urbino
     logo: "urbino-logo.jpg"
     link: "https://www.uniurb.it/"
+  - name: Eutopian
+    logo: "eutopian-logo.png"
+    link: "https://eutopian.eu/it/"
+  - name: Alteredu
+    logo: "alteredu-logo.png"
+    link: "https://www.alteredu.it/"
+  - name: Assosinderesi
+    logo: "assosinderesi-logo.jpg"
+    link: "https://www.donatellarampado.com/assosinderesi/chi-siamo/"
+  - name: Assinter
+    logo: "assinteracademy-logo.jpg"
+    link: "https://www.assinteritalia.it/"
