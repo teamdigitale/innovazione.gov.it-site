@@ -9,11 +9,11 @@ categories:
   - highlights
 ---
 
-_Pubblichiamo la relazione integrale dell’audizione del Ministro presso la Camera dei Deputati del 30 aprile._
+_Pubblichiamo la relazione integrale dell’audizione del Ministro presso la Camera dei Deputati (I Commissione) del 30 aprile._
 
 <!-- MORE -->
 
-Il 30 aprile il [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/it/chi-siamo/ministro/) Paola Pisano ha svolto un’audizione alla Camera dei Deputati. L’audizione riguardava l’utilizzo di soluzioni legate all’innovazione tecnologica per contrastare l’emergenza epidemiologica legata al Covid-19.
+Il 30 aprile il [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/it/chi-siamo/ministro/) Paola Pisano ha svolto un’audizione alla Camera dei Deputati di fronte alla I Commissione, Affari costituzionali e bilancio. L’audizione riguardava l’utilizzo di soluzioni legate all’innovazione tecnologica per contrastare l’emergenza epidemiologica legata al Covid-19.
 
 Di seguito è possibile:
 
