@@ -86,7 +86,7 @@ In particolare, la scelta dell’app Immuni aveva tre caratteristiche estremamen
 Una volta che Bending Spoons ci ha consegnato il suo codice, siamo entrati in una nuova fase di lavoro, nella quale abbiamo riesaminato anche insieme a PagoPA e SoGEI tutta la soluzione, rivedendo ogni singola scelta. 
 
 
-In particolare, dopo l’annuncio della soluzione di Apple e Google avvenuto a valle della valutazione della task force, abbiamo ritenuto opportuno valutare tale soluzione perché risolutiva di molti dei problemi tecnici riscontrati su tutte le soluzioni valutate dallta task force. Su tale soluzione è poi  ricaduta la nostra scelta, infatti oggi Immuni utilizza il framework di Apple e Google Exposure Notification ovvero un sistema cosiddetto decentralizzato.
+In particolare, dopo l’annuncio della soluzione di Apple e Google avvenuto a valle della valutazione della task force, abbiamo ritenuto opportuno valutare tale soluzione perché risolutiva di molti dei problemi tecnici riscontrati su tutte le soluzioni valutate dalla task force. Su tale soluzione è poi  ricaduta la nostra scelta, infatti oggi Immuni utilizza il framework di Apple e Google Exposure Notification ovvero un sistema cosiddetto decentralizzato.
 
 
 Al lavoro di messa a punto del progetto stanno ovviamente partecipando tutti gli attori istituzionali coinvolti, secondo le rispettive competenze.
