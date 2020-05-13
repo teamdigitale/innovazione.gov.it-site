@@ -24,8 +24,7 @@ Le [relazioni](https://innovazione.gov.it/task-force-dati-le-relazioni-delle-att
 [Audizione della Ministra Pisano](https://innovazione.gov.it/covid-19-e-innovazione-tecnologica-audizione-del-ministro-paola-pisano-alla-camera-dei-deputati/) alla Camera dei Deputati  
 La Call [Innova per l’Italia](https://innovazione.gov.it/innova-per-l-Italia-la-tecnologia-e-l-innovazione-in-campo-contro-l-emergenza-covid-19/)  
 La [Fast call](https://innovazione.gov.it/telemedicina-e-sistemi-di-monitoraggio-una-call-per-tecnologie-per-il-contrasto-alla-diffusione-del-covid-19/) del 23 marzo  
-[Le domande sulla App Immuni della trasmissione Report]({% link _posts/2020-05-11-app_Immuni_domande_di_report.md %})  
-[Le risposte ai quesiti posti dall’ANORC]({% link _posts/2020-05-11-app_Immuni_risposte_quesiti_anorc.md %})
+
 
 **Immuni FAQ**  
 
