@@ -8,8 +8,8 @@
           <span class="data">{% include date.html date=medium_post_date %}</span>
         </div>
       </div>
-      {% endcomment %}
       <img src="https://cdn-images-1.medium.com/fit/t/480/160/{{ medium_post.medium_preview_image_id }}" class="img-responsive w-100" alt="{{ medium_post.medium_title }}">
+      {% endcomment %}
       <h5 class="card-title big-heading mt-3">{{ medium_post.medium_title }}</h5>
       <div class="card-text">{{ medium_post.medium_subtitle }}</div>
       <a class="read-more" href="{{ medium_post.medium_url }}" target="_blank" rel="noopener noreferrer">
