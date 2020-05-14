@@ -23,7 +23,7 @@ La validità dell’informativa contenuta nella presente pagina è limitata al s
 
 {:.max-w-40}
 Il Titolare del trattamento è il Dipartimento per la Trasformazione Digitale presso la Presidenza del Consiglio dei Ministri (di seguito solo il “Dipartimento”), con sede in Largo Pietro di Brazzà, 86 00187 Roma - Italia, email [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it).
-Il Dipartimento ha nominato un proprio Responsabile della Protezione dei dati, ai sensi dell’art. 37 del Regolamento UE 2016/679, che può essere contattato al seguente indirizzo: [dpo@innovazione.governo.it](mailto:dpo@innovazione.governo.it).
+Il Dipartimento ha nominato un proprio Responsabile della Protezione dei dati, ai sensi dell’art. 37 del Regolamento UE 2016/679, che può essere contattato al seguente indirizzo: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it).
 
 {:.mt-5.max-w-40}
 ## Categorie di dati trattati
@@ -31,7 +31,7 @@ Il Dipartimento ha nominato un proprio Responsabile della Protezione dei dati, a
 ### a) Dati di navigazione
 
 {:.max-w-40}
-I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell’uso dei protocolli di comunicazione di Internet.  
+I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell’uso dei protocolli di comunicazione di Internet.
 In questa categoria di dati rientrano gli indirizzi IP o i nomi a dominio dei computer e dei terminali utilizzati dagli utenti, gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste, l’orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all’ambiente informatico dell’utente.
 Tali dati, necessari per la fruizione dei servizi web, vengono anche trattati allo scopo di:
 ottenere informazioni statistiche sull’uso dei servizi (pagine più visitate, numero di visitatori per fascia oraria o giornaliera, aree geografiche di provenienza, ecc.);
@@ -47,7 +47,7 @@ Il Titolare acquisirà i dati personali eventualmente forniti dall’Utente attr
 
 {:.max-w-40}
 Il Titolare acquisirà dati personali forniti volontariamente dall’Utente attraverso il Sito anche nel caso di candidature spontanee alle posizioni lavorative aperte pubblicate nel sito del team.
-In questo caso i dati personali sono forniti dall’Utente tramite un form per proporre la propria candidatura. L’invio dei dati contenuti nel curriculum saranno trattati, anche con l’ausilio di strumenti informatici, dal Dipartimento al solo fine di valutare la candidatura ed, eventualmente, di contattarti. L’Utente potrà domandare la cancellazione dei dati in qualsiasi momento, scrivendo a [dpo@innovazione.governo.it](mailto:dpo@innovazione.governo.it).
+In questo caso i dati personali sono forniti dall’Utente tramite un form per proporre la propria candidatura. L’invio dei dati contenuti nel curriculum saranno trattati, anche con l’ausilio di strumenti informatici, dal Dipartimento al solo fine di valutare la candidatura ed, eventualmente, di contattarti. L’Utente potrà domandare la cancellazione dei dati in qualsiasi momento, scrivendo a [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it).
 
 ### c) Cookie
 
@@ -74,7 +74,7 @@ La base giuridica del trattamento dei soli dati raccolti tramite cookie analitic
 
 {:.max-w-40}
 Il Titolare potrà comunicare, per il perseguimento delle finalità sopra indicate, alcuni dati personali anche a soggetti terzi che forniscono un servizio al titolare stesso e che tratteranno detti dati personali in qualità di responsabili del trattamento.
-L’elenco dei responsabili del trattamento può essere richiesto al Titolare in qualsiasi momento, scrivendo a [dpo@innovazione.governo.it](mailto:dpo@innovazione.governo.it).
+L’elenco dei responsabili del trattamento può essere richiesto al Titolare in qualsiasi momento, scrivendo a [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it).
 
 {:.mt-5.max-w-40}
 ## Trasferimento dati fuori dall’UE
@@ -88,11 +88,11 @@ Alcuni dei fornitori terzi che utilizziamo risiedono negli USA. Abbiamo concluso
 {:.max-w-40}
 Gli interessati hanno il diritto di ottenere, nei casi previsti, l’accesso ai propri dati personali e la rettifica o la cancellazione degli stessi o la limitazione del trattamento che li riguarda o di opporsi al trattamento (articoli 15 e successivi del Regolamento UE 2016/679). L’apposita istanza deve essere presentata contattando il Responsabile della protezione dei dati presso il Dipartimento ai contatti:
 
-**Responsabile della protezione dei dati**  
-Dipartimento per la Trasformazione Digitale  
-Largo Pietro di Brazzà, 86  
-00186 Roma - Italia  
-[dpo@innovazione.governo.it](mailto:dpo@innovazione.governo.it)
+**Responsabile della protezione dei dati**
+Dipartimento per la Trasformazione Digitale
+Largo Pietro di Brazzà, 86
+00186 Roma - Italia
+[responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it)
 
 {:.mt-5.max-w-40}
 ## Diritti di reclamo
