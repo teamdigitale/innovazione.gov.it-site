@@ -4,7 +4,7 @@ title: "Parlare via Skype e navigare in Rete a 100 anni di età"
 ref: parlare-via-skype-100-anni-eta
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZHYB-09KbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+asset: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8ZHYB-09KbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 categories:
   - highlights
 ---
