@@ -4,7 +4,7 @@ Sito del Ministro dell’Innovazione
 
 ## Come iniziare
 
-Il progetto è costruito sul generatore di siti statici [Jekyll](https://jekyllrb.com/). Per installare l’ambiente necessario allo sviluppo è necessario avere installato sul proprio sistema [Bundler](https://bundler.io/) e lanciare il seguente comando: 
+Il progetto è costruito sul generatore di siti statici [Jekyll](https://jekyllrb.com/). Per installare l’ambiente necessario allo sviluppo è necessario avere installato sul proprio sistema [Bundler](https://bundler.io/) e lanciare il seguente comando:
 
 `bundle install`
 
@@ -32,8 +32,8 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: Esempio di titolo del post
 ref: esempio-di-titolo-del-post
-asset: 
-pinned: 
+asset:
+pinned:
 categories:
   - highlights
   - cittadini
@@ -79,12 +79,19 @@ L'ultimo di questi check è associato alla "deploy preview": una volta terminata
 ### Post in homepage
 
 Nella homepage vengono mostrati:
- 
+
 - in alto, il post più recente con attributo `pinned: true`
 - i 3 post più recenti con la categoria `highlights`
 
 ## Aggiornamento iniziative Repubblica Digitale
 
-La _sorgente dati_ delle iniziative di Repubblica Digitale è il file `_data/iniziative.csv` che viene generato da un foglio Google al seguente indirizzo: https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito
+La _sorgente dati_ delle iniziative di Repubblica Digitale è il file CSV `_data/iniziative.csv`, che viene generato da un foglio Google scaricabile [qui](https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito).0
 
-Per aggiornare il file è quindi sufficiente scaricare il file, rinominarlo, sovrascrivere l'esistente... e verificare sia tutto ok. I nomi delle immagini degli aderenti sono mappati sul file `aderenti_manifesto_rd.yml`.
+I loghi vengono invece inseriti [qui](https://drive.google.com/drive/u/1/folders/1MSkCvSb2P60_RXwOjgVo-QBL_85Nbun7): ogni logo va adattato e ridimensionato se necessario, incluso nella cartella `assets/images/aderenti-manifesto-rd`, e aggiunto alla lista presente nel file `aderenti_manifesto_rd.yml`
+
+Per aggiornare il file è quindi sufficiente:
+
+- scaricare il file CSV sovrascrivendo l'esistente
+- caricare i loghi come descritto
+- aggiornare la lista degli aderenti
+- verificare sia tutto ok

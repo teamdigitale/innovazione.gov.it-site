@@ -363,3 +363,15 @@ aderenti_manifesto:
   - name: Assinter
     logo: "assinteracademy-logo.jpg"
     link: "https://www.assinteritalia.it/"
+  - name: HPE
+    logo: "hpe-logo.png"
+    link: "https://www.hpe.com/it/it/home.html"
+  - name: Comune di Assisi
+    logo: "digipass-assisi-logo.png"
+    link: "https://digipass.regione.umbria.it/assisi/"
+  - name: Comune di Marsciano
+    logo: "digipass-media-valle-del-tevere-logo.png"
+    link: "https://digipass.regione.umbria.it/media-valle-del-tevere/"
+  - name: MakeHub
+    logo: "makehubaccademy-logo.png"
+    link: "hhttp://www.makehub.it/ecosistema/"
