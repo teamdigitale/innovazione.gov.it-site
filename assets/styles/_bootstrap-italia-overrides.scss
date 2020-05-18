@@ -6,6 +6,15 @@ $footer-bg-color: #3e5266;
   z-index: 100;
 }
 
+@media (max-width: 1199px) {
+  .it-hero-content {
+    .card a.read-more {
+      position: relative;
+      bottom: 12px;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .it-header-slim-wrapper .it-header-slim-wrapper-content {
     padding-left: $baseline*2;
