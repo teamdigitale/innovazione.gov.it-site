@@ -85,7 +85,7 @@ Nella homepage vengono mostrati:
 
 ## Aggiornamento iniziative Repubblica Digitale
 
-La _sorgente dati_ delle iniziative di Repubblica Digitale è il file CSV `_data/iniziative.csv`, che viene generato da un foglio Google scaricabile [qui](https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito).0
+La _sorgente dati_ delle iniziative di Repubblica Digitale è il file CSV `_data/iniziative.csv`, che viene generato da un foglio Google scaricabile [qui](https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito).
 
 I loghi vengono invece inseriti [qui](https://drive.google.com/drive/u/1/folders/1MSkCvSb2P60_RXwOjgVo-QBL_85Nbun7): ogni logo va adattato e ridimensionato se necessario, incluso nella cartella `assets/images/aderenti-manifesto-rd`, e aggiunto alla lista presente nel file `aderenti_manifesto_rd.yml`
 
