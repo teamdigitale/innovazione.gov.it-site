@@ -374,4 +374,13 @@ aderenti_manifesto:
     link: "https://digipass.regione.umbria.it/media-valle-del-tevere/"
   - name: MakeHub
     logo: "makehubaccademy-logo.png"
-    link: "hhttp://www.makehub.it/ecosistema/"
+    link: "http://www.makehub.it/ecosistema/"
+  - name: Comune di Gubbio
+    logo: "gubbio-digipass-logo.png"
+    link: "https://www.comune.gubbio.pg.it/pagina/digipass-gubbio"
+  - name: Great Innova
+    logo: "great-innova-logo.png"
+    link: "http://www.greatinnova.com/"
+  - name: Azione
+    logo: "inedu-logo.png"
+    link: "https://www.azione.com/in-edu-inclusive-communities-through-media-literacy-critical-thinking-education/"
