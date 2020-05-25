@@ -20,11 +20,11 @@ _È disponibile il codice sorgente delle versioni iOS e Android dell’app Immun
 La diffusione del Coronavirus si contrasta anche utilizzando le nuove tecnologie. Frutto della collaborazione tra Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio, Ministero della Salute e Commissario straordinario per l’emergenza Covid-19, l’app ha lo scopo di migliorare efficienza e  velocità nell’individuare soggetti che hanno avuto contatti con persone risultate positive agli esami di laboratorio. Il nuovo sistema potrà contribuire anche all’individuazione di eventuali nuovi focolai. Tutto questo nel rispetto della privacy e della sicurezza individuale e nazionale.
 
 
-La partecipazione a [Developers Italia](http://developers.italia.it/){:target="_blank" rel="noopener noreferrer"}, _community_ degli sviluppatori di servizi pubblici digitali, rende possibile prendere parte al processo di sviluppo del [progetto Immuni](https://app.slack.com/client/T6C27AXE0/C014KBHLVFT){:target="_blank" rel="noopener noreferrer"}.
+Per tutte le informazioni sul progetto open source e per partecipare alla community degli sviluppatori che stanno testando la app e contribuendo con miglioramenti e correzioni, consulta la [scheda del progetto Immuni](https://github.com/immuni-app/immuni){:target="_blank" rel="noopener noreferrer"} su Developers Italia.
 
 
-_Oltre al [codice](https://github.com/immuni-app){:target="_blank" rel="noopener noreferrer"}, sulla piattaforma [github](https://github.com/immuni-app){:target="_blank" rel="noopener noreferrer"} è consultabile la documentazione tecnica dell’app._
+_Sono liberamente consultabili sia il [codice sorgente](https://github.com/immuni-app){:target="_blank" rel="noopener noreferrer"}, che la [documentazione tecnica](https://github.com/immuni-app/immuni-documentation){:target="_blank" rel="noopener noreferrer"} della app._
 
 
-Il codice aperto è un bene comune del nostro Paese, della community degli sviluppatori italiani e internazionali.
+Il codice aperto è un bene comune  del nostro Paese, della community degli sviluppatori italiani e internazionali.
 
