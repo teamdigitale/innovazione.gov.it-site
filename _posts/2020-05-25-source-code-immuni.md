@@ -23,7 +23,7 @@ La diffusione del Coronavirus si contrasta anche utilizzando le nuove tecnologie
 Per tutte le informazioni sul progetto open source e per partecipare alla community degli sviluppatori che stanno testando la app e contribuendo con miglioramenti e correzioni, consulta la [scheda del progetto Immuni](https://developers.italia.it/it/software/pcm-immuni-app-immuni){:target="_blank" rel="noopener noreferrer"} su Developers Italia.
 
 
-_Sono liberamente consultabili sia il [codice sorgente](https://github.com/immuni-app){:target="_blank" rel="noopener noreferrer"}, che la [documentazione tecnica](https://github.com/immuni-app/immuni-documentation){:target="_blank" rel="noopener noreferrer"} della app._
+_Sono liberamente consultabili sia il [codice sorgente](https://github.com/immuni-app/immuni){:target="_blank" rel="noopener noreferrer"}, che la [documentazione tecnica](https://github.com/immuni-app/immuni-documentation){:target="_blank" rel="noopener noreferrer"} della app._
 
 
 Il codice aperto è un bene comune  del nostro Paese, della community degli sviluppatori italiani e internazionali.
