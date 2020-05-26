@@ -83,6 +83,11 @@ references:
     store_artifacts:
       path: ~/circleci/innovazione.gov.it/_site
 
+  setup_gh_pages: &setup_gh_pages
+    add_ssh_keys:
+      fingerprints:
+        - "6b:79:94:b3:2b:d1:e5:57:5c:44:15:ed:7a:9d:c1:8f"
+
   deploy_to_gh_pages: &deploy_to_gh_pages
     run:
       name: Update GitHub Pages
@@ -137,6 +142,7 @@ jobs:
           at: ~/circleci
       - checkout:
           path: /tmp/gh-pages
+      - <<: *setup_gh_pages
       - <<: *deploy_to_gh_pages
       - <<: *notify_on_failure
 
