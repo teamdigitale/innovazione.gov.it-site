@@ -6,7 +6,6 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/lucian-alexe-3ZzOF5qqiEA-unsplash.jpg" alt="Bando Smart Mobility"/>
 categories:
-  - highlights
   - cittadini
   - pubblica amministrazione
 ---
