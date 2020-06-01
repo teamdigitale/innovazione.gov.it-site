@@ -5,7 +5,7 @@ ref: applicazione-contact-tracing-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/contacttracing.jpg" alt="Contact tracing"/>
-pinned: true
+pinned:
 categories:
   - highlights
 ---

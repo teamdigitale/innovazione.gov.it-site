@@ -5,7 +5,7 @@ ref: Covid-19-MISE-MUR-MID-promuovono-appalti-mobilità-salute-beni-culturali
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/tower-electric-bikes-UYS3KkaSVWE-unsplash.jpg" alt="Covid-19 MISE MUR MID"/>
-pinned: true
+
 categories:
   - highlights
 ---
