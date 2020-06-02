@@ -10,6 +10,7 @@ categories:
   - highlights
   - pubblica amministrazione
   - cittadini
+english_version: app-immuni-available-from-today
 ---
 
 _Sviluppata nel pieno rispetto della privacy, l’applicazione si può scaricare in tutta Italia. Tutte le informazioni su [immuni.italia.it](http://immuni.italia.it){:target="_blank" rel="noopener noreferrer"}_
