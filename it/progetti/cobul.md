@@ -21,10 +21,8 @@ categories:
 {:.mt-5.max-w-40}
 ## In breve
 
-{:.max-w-40}
 La Strategia nazionale per la banda ultralarga, o piano BUL, è stata approvata dal Governo italiano nel 2015, per favorire lo sviluppo integrato delle infrastrutture di telecomunicazione fisse e mobili e per soddisfare gli obiettivi fissati dall’Agenda Digitale Europea entro il 2020.
 
-{:.max-w-40}
 Attualmente la Strategia nazionale per la banda ultralarga prevede: 
 * una copertura ad almeno 100 Mbps fino all’85% della popolazione italiana;
 * una copertura ad almeno 30 Mbps in download per il rimanente 15% della popolazione italiana appartenenti alle aree più remote;
@@ -33,7 +31,6 @@ Attualmente la Strategia nazionale per la banda ultralarga prevede:
 {:.mt-5.max-w-40}
 ## Vantaggi per i cittadini
 
-{:.max-w-40}
 * L’adozione della Banda Ultra Larga comporta numerosi vantaggi per i cittadini come: 
 * Accedere ad ogni tipo di servizio per lo smart working e la teledidattica
 * Permettere la connessione di più dispositivi contemporaneamente
@@ -43,7 +40,6 @@ Attualmente la Strategia nazionale per la banda ultralarga prevede:
 {:.mt-5.max-w-40}
 ## Vantaggi per i la pubblica amministrazione
 
-{:.max-w-40}
 * Migliore erogazione di servizi al cittadini
 * Miglioramento della produttività
 * Maggiore efficienza e velocità nello svolgimento di pratiche
@@ -53,7 +49,6 @@ Attualmente la Strategia nazionale per la banda ultralarga prevede:
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
 
-{:.max-w-40}
 Il Coordinamento della Strategia nazionale per la banda ultra larga è affidato al Comitato per la Banda Ultra Larga (CoBUL), istituito presso la Presidenza del Consiglio dei Ministri, presieduto dal Ministro per l’Innovazione Tecnologica e la Digitalizzazione e costituito dall’Autorità Delegata per le Politiche di Coesione, il Ministro dello Sviluppo Economico, il Ministro per la Pubblica Amministrazione, il Ministro per gli Affari Regionali e le Autonomie, il Ministro per le Politiche Agricole, Alimentari e Forestali, il Presidente della Conferenza delle Regioni e delle Province Autonome.
 
 
@@ -73,7 +68,6 @@ L’avvento del Ministro per l’Innovazione ha comportato un’accelerazione im
 {:.mt-5.max-w-40}
 ## Linee di intervento
 
-{:.max-w-40}
 * Piano “Aree bianche”  
 Il modello di intervento nelle aree bianche (aree “a fallimento di mercato” , ossia quelle aree prive di reti ultra broadband in cui nessun operatore privato era disposto a investire, approvato dalla CE con decisione del 30 giugno 2016, ha previsto l’individuazione, mediante gara svolta da Infratel, di un soggetto concessionario responsabile della progettazione e costruzione di un’infrastruttura passiva a banda ultralarga, nonché della gestione, per un periodo di 20 anni, dei servizi wholesale passivi e attivi di accesso alla rete, che rimane di proprietà pubblica e che è interamente finanziata con risorse pubbliche. 
 I tre bandi di gara sono stati aggiudicati tutti alla società Open Fiber.
