@@ -1,22 +1,25 @@
 ---
 layout: post
-title: "Immuni: tutto quello che c’è da sapere e le risposte del Dipartimento"
-ref: immuni-tutto-quello-che-ce-da-sapere-e-le-risposte-del-Dipartimento
+title: "Immuni: quello che c’è da sapere e le risposte del Dipartimento"
+ref: immuni-quello-che-ce-da-sapere-e-le-risposte-del-dipartimento
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/nordwood-themes-q8U1YgBaRQk-unsplash.jpg" alt="Immuni tutto quello da sapere"/>
-pinned: true
+pinned:
 categories:
   - highlights
+  - cittadini
 ---
 
-_La raccolta completa dei documenti, le news, gli interventi, i chiarimenti sul processo che, dalla nascita della Call “Innova per l’Italia” e la costituzione della Task Force Data Driven,  ha portato alla scelta della app Immuni._
+_Una raccolta di documenti, news, interventi, chiarimenti sul processo che, dalla nascita della Call “Innova per l’Italia” e la costituzione della Task Force Data Driven, hanno portato alla scelta della app Immuni._
 
 <!-- MORE -->
 
-Pubblichiamo tutte i documenti e le informazioni che riguardano il processo di selezione della soluzione tecnologica denominata Immuni, che, sotto forma di app da scaricare liberamente da parte dei cittadini, contribuirà, attraverso un meccanismo di digital Contact tracing che preserverà la privacy e la sicurezza dei dati, al contenimento della pandemia. Troverete i documenti ufficiali, i testi delle Audizioni della Ministra Pisano in Parlamento, le news via via prodotte e le risposte alle domande che ci hanno posto.
+Una raccolta di documenti, notizie, interventi, chiarimenti sul percorso che, dalla offerta pubblica di disponibilità “Innova per l’Italia” e la costituzione della Task Force Data Driven, hanno portato alla scelta della app Immuni.  
+
+Pubblichiamo le informazioni che riguardano il processo di selezione della soluzione tecnologica Immuni. Si tratta di uno strumento che, sotto forma di app da scaricare liberamente da parte dei cittadini, contribuirà al contenimento della pandemia. Lo farà attraverso un meccanismo digitale di notifiche dell’esposizione al virus che preserverà la privacy e la sicurezza dei dati.  
  
-**Tutta la documentazione**  
+**Documentazione**  
 La [nascita e la composizione della Task Force](https://innovazione.gov.it/nasce-la-task-force-italiana-per-l-utilizzo-dei-dati-contro-l-emergenza-covid-19/) Data Driven  
 Le [relazioni](https://innovazione.gov.it/task-force-dati-le-relazioni-delle-attivita-dei-gruppi-che-hanno-valutato-le-app/) della Task Force  
 [Aggiornamento](https://innovazione.gov.it/un-aggiornamento-sull-applicazione-di-contact-tracing-digitale-per-l-emergenza-coronavirus/) sulla app Immuni  

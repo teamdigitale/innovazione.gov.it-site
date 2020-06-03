@@ -5,7 +5,7 @@ ref: task-force-dati-primo-bilancio
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/taskforcebilancio.jpg" alt="La task force al lavoro"/>
-pinned: true
+
 categories:
   - highlights
 ---

@@ -5,7 +5,7 @@ ref: cobul-sbloccati-fondi-piano-scuole-e-voucher
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/taylor-wilcox-4nKOEAQaTgA-unsplash.jpg" alt="Covid-19 MISE MUR MID"/>
-pinned: true
+
 categories:
   - highlights
 ---

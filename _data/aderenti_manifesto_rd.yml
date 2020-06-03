@@ -384,3 +384,10 @@ aderenti_manifesto:
   - name: Azione
     logo: "inedu-logo.png"
     link: "https://www.azione.com/in-edu-inclusive-communities-through-media-literacy-critical-thinking-education/"
+  - name: Giove IN Formatica
+    logo: "gemma-umbria-logo.png"
+    link: "http://www.gioveinformatica.it/"
+  - name: "Dipartimento per le Politiche di Coesione - Presidenza del Consiglio dei Ministri"
+    logo: "opencoesione-logo.png"
+    link: "http://presidenza.governo.it/AmministrazioneTrasparente/Organizzazione/ArticolazioneUffici/Dipartimenti/DPC.html"
+
