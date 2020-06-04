@@ -16,7 +16,7 @@ _Pubblichiamo la relazione integrale dell’audizione del Ministro presso la Cam
 
 <!-- MORE -->
 
-Il 3 giugno, presso la Nuova Aula dei Gruppi parlamentari della Camera dei Deputati, il [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/it/chi-siamo/ministro/){:target="_blank" rel="noopener noreferrer"} Paola Pisano ha svolto un’audizione in videoconferenza di fronte alla Commissione Trasporti. Oggetto dell’audizione, l’applicazione per il tracciamento dei contatti per contenere la diffusione del virus Covid - 19  e i voucher per la connettività per i cittadini e le imprese.  
+Il 3 giugno, presso la Nuova Aula dei Gruppi parlamentari della Camera dei Deputati, il [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/it/chi-siamo/ministro/){:target="_blank" rel="noopener noreferrer"} Paola Pisano ha svolto un’audizione in videoconferenza di fronte alla Commissione Trasporti. Oggetto dell’audizione, l’applicazione per il tracciamento dei contatti per contenere la diffusione del virus Covid-19  e i voucher per la connettività per i cittadini e le imprese.  
 
 Di seguito è possibile:  
 
