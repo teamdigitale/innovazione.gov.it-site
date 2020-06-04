@@ -5,7 +5,6 @@ ref: coronavirus-accelera-trasformazione-digitale
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/digitalizzazione.jpg" alt="Smart working per i dipendenti pubblici"/>
-pinned: 
 categories:
   - highlights
   - imprese

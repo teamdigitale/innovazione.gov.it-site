@@ -5,7 +5,6 @@ ref: posticipata-la-convocazione-per-i-colloqui
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/nick-hillier-yD5rv8_WzxA-unsplash.jpg" alt="La convocazione per i colloqui entro il 31 marzo"/>
-pinned: 
 categories:
   - highlights
 ---

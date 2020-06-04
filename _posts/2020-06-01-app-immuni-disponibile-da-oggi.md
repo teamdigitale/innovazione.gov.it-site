@@ -5,7 +5,7 @@ ref: app-immuni-disponibile-da-oggi
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/immuni-example.jpg" alt="Immuni disponibile ai cittadini"/>
-
+pinned: true
 categories:
   - highlights
   - pubblica amministrazione

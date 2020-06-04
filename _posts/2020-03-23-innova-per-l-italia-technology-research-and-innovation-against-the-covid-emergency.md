@@ -5,7 +5,6 @@ ref: innovaperlitalia-tecnologia-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/innovaperlitaliaEN.png" alt="Innova per l'Italia"/>
-pinned:
 categories:
 italian_version: innova-per-l-Italia-la-tecnologia-e-l-innovazione-in-campo-contro-l-emergenza-covid-19
 hidden: true

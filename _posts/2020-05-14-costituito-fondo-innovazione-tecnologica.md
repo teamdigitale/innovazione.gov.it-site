@@ -5,7 +5,6 @@ ref: costituito-fondo-innovazione-tecnologica-e-digitalizzazione
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/costituito-fondoinnovazione-tecnologica-e-digitalizzazione.jpg" alt="Costituito il Fondo per Innovazione Tecnologica"/>
-pinned:
 categories:
   - highlights
 ---

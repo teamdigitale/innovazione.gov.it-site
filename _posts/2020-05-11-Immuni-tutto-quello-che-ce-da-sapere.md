@@ -5,7 +5,6 @@ ref: immuni-quello-che-ce-da-sapere-e-le-risposte-del-dipartimento
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/nordwood-themes-q8U1YgBaRQk-unsplash.jpg" alt="Immuni tutto quello da sapere"/>
-pinned:
 categories:
   - highlights
   - cittadini

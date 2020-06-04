@@ -5,7 +5,6 @@ ref: task-force-dati-valutazioni-gruppi-app
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/contact-tracing.jpg" alt="Tecnologie di contact tracing tremite app"/>
-pinned:
 categories:
   - highlights
 ---

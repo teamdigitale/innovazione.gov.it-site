@@ -5,7 +5,6 @@ ref: coalizione-europea-competenze-digitali
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/coalizione.jpg" alt="Coalizione per l'inclusione digitale"/>
-pinned: 
 categories:
   - highlights
 ---
