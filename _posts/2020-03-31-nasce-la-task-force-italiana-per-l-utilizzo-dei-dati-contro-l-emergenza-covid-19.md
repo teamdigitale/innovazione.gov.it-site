@@ -5,7 +5,6 @@ ref: task-force-utilizzo-dati-covid-19
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/covid.jpg" alt="I dati contro l'emergenza Covid-19"/>
-pinned:
 categories:
   - highlights
 ---

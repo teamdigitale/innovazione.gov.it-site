@@ -5,7 +5,6 @@ ref: risposte-quesiti-anorc
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: 
-pinned:  
 categories:
 hidden: true
 ---
