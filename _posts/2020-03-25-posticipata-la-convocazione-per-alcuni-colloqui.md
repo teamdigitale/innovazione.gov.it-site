@@ -5,7 +5,6 @@ ref: posticipata-la-convocazione-per-alcuni-colloqui
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/eric-rothermel-FoKO4DpXamQ-unsplash.jpg" alt="La convocazione per i colloqui di alcune posizoni entro il 30 aprile"/>
-pinned: 
 categories:
   - highlights
 ---

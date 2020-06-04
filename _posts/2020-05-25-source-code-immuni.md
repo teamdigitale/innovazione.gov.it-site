@@ -5,7 +5,6 @@ ref: immuni-disponibile-codice-sorgente-app-ios-android
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/app-status.jpg" alt="Immuni disponibile il codice sorgente"/>
-pinned:
 categories:
   - highlights
   - innovazione

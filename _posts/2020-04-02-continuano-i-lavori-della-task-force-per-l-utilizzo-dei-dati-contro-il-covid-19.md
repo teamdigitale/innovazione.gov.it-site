@@ -5,7 +5,6 @@ ref: lavorie-task-force-dati-covid-19
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/taskforce.jpg" alt="La task force al lavoro"/>
-pinned: 
 categories:
   - highlights
 ---

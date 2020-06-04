@@ -5,7 +5,6 @@ ref: innovaperlitalia-tecnologia-emergenza-coronavirus
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/innovaperlitalia.png" alt="Il progetto Innova per l'Italia"/>
-pinned:
 categories:
   - highlights
   - imprese
