@@ -20,4 +20,4 @@ Il 3 giugno, presso la Nuova Aula dei Gruppi parlamentari della Camera dei Deput
 
 Di seguito è possibile:  
 
-- Leggere e scaricare [**la relazione** con il testo integrale dell’audizione]({{ site.baseurl }}/assets/docs/Audizione_Ministra_Paola_Pisano_camera-2020-06-05.pdf){:target="_blank" rel="noopener noreferrer"}(Pdf)
+- Leggere e scaricare [**la relazione** con il testo integrale dell’audizione]({{ site.baseurl }}/assets/docs/Audizione_Ministra_Paola_Pisano_camera-2020-06-03.pdf){:target="_blank" rel="noopener noreferrer"}(Pdf)
