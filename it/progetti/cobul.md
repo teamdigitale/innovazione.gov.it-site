@@ -9,7 +9,7 @@ logo:
 child_of_ref: progetti
 project_url: 
 dashboard_url: https://app.powerbi.com/view?r=eyJrIjoiZDY2NzI1NTMtZDZlYS00YWNmLWJkNWEtNTdkOWQ2Zjc2MGI1IiwidCI6ImFmZDBhNzVjLTg2NzEtNGNjZS05MDYxLTJjYTBkOTJlNDIyZiIsImMiOjh9
-dashboard_data_no_updated: true
+dashboard_daily: true
 order: 13
 categories:
  - pubblica amministrazione
@@ -28,20 +28,10 @@ Attualmente la Strategia nazionale per la banda ultralarga prevede:
 * una copertura ad almeno 100 Mbps delle sedi PA, scuole e ospedali, aree di maggior interesse economico e concentrazione demografica, aree industriali, siti di datacenter, snodi logistici.
 
 {:.mt-5.max-w-40}
-## Vantaggi per i cittadini
+## I vantaggi
 
-Il Progetto Banda Ultra Larga ha l'obiettivo di portare vantaggi concreti e immediati a cittadini, imprese e pubbliche amministrazioni, rispondendo a quell'esigenza diffusa di connettività veloce che è diventata evidente con la situazione emergenziale dovuta al Covid-19.  
-La disponibilità di Banda Ultra Larga è infatti essenziale per servizi ormai divenuti parte della quotidianità quali lo smart working, la teledidattica, la telemedicina, l'accesso a contenuti in streaming e on demand, lo sviluppo delle attività di impresa.
-
-
-{:.mt-5.max-w-40}
-## Vantaggi per i la pubblica amministrazione
-
-* Migliore erogazione di servizi al cittadini
-* Miglioramento della produttività
-* Maggiore efficienza e velocità nello svolgimento di pratiche
-* Per gli ospedali, implementazione dei servizi di telemedicina 
-* Per le scuole, miglioramento dell'offerta di e-learning
+Il Progetto Banda Ultra Larga ha l’obiettivo di portare vantaggi concreti e immediati a cittadini, imprese e pubbliche amministrazioni, rispondendo a quell’esigenza diffusa di connettività veloce che è diventata evidente con la situazione emergenziale dovuta al Covid-19.  
+La disponibilità di Banda Ultra Larga è infatti essenziale per servizi ormai divenuti parte della quotidianità quali lo smart working, la teledidattica, la telemedicina, l’accesso a contenuti in streaming e on demand, lo sviluppo delle attività di impresa.  
 
 {:.mt-5.max-w-40}
 ## Il ruolo del CoBUL
