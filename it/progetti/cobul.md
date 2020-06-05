@@ -21,21 +21,19 @@ categories:
 {:.mt-5.max-w-40}
 ## In breve
 
-La Strategia nazionale per la banda ultralarga, o piano BUL, è stata approvata dal Governo italiano nel 2015, per favorire lo sviluppo integrato delle infrastrutture di telecomunicazione fisse e mobili e per soddisfare gli obiettivi fissati dall’Agenda Digitale Europea entro il 2020.
+La Strategia nazionale per la banda ultralarga, o piano BUL, è stata approvata dal Governo italiano nel 2015, per favorire lo sviluppo integrato delle infrastrutture di telecomunicazione fisse e mobili e per soddisfare gli obiettivi fissati dall'Agenda Digitale Europea entro il 2020.
 
 Attualmente la Strategia nazionale per la banda ultralarga prevede: 
-* una copertura ad almeno 100 Mbps fino all’85% della popolazione italiana;
+* una copertura ad almeno 100 Mbps fino all'85% della popolazione italiana;
 * una copertura ad almeno 30 Mbps in download per il rimanente 15% della popolazione italiana appartenenti alle aree più remote;
 * una copertura ad almeno 100 Mbps delle sedi PA, scuole e ospedali, aree di maggior interesse economico e concentrazione demografica, aree industriali, siti di datacenter, snodi logistici.
 
 {:.mt-5.max-w-40}
 ## Vantaggi per i cittadini
 
-* L’adozione della Banda Ultra Larga comporta numerosi vantaggi per i cittadini come: 
-* Accedere ad ogni tipo di servizio per lo smart working e la teledidattica
-* Permettere la connessione di più dispositivi contemporaneamente
-* Inviare e ricevere dati ad altissima velocità 
-* Fruizione di servizi in streaming e on demand
+Il Progetto Banda Ultra Larga ha l'obiettivo di portare vantaggi concreti e immediati a cittadini, imprese e pubbliche amministrazioni, rispondendo a quell'esigenza diffusa di connettività veloce che è diventata evidente con la situazione emergenziale dovuta al Covid-19.  
+La disponibilità di Banda Ultra Larga è infatti essenziale per servizi ormai divenuti parte della quotidianità quali lo smart working, la teledidattica, la telemedicina, l'accesso a contenuti in streaming e on demand, lo sviluppo delle attività di impresa.
+
 
 {:.mt-5.max-w-40}
 ## Vantaggi per i la pubblica amministrazione
@@ -44,19 +42,17 @@ Attualmente la Strategia nazionale per la banda ultralarga prevede:
 * Miglioramento della produttività
 * Maggiore efficienza e velocità nello svolgimento di pratiche
 * Per gli ospedali, implementazione dei servizi di telemedicina 
-* Per le scuole, miglioramento dell’offerta di e- learning
+* Per le scuole, miglioramento dell'offerta di e- learning
 
 {:.mt-5.max-w-40}
-## Il ruolo del Dipartimento
+## Il ruolo del CoBUL
 
-Il Coordinamento della Strategia nazionale per la banda ultra larga è affidato al Comitato per la Banda Ultra Larga (CoBUL), istituito presso la Presidenza del Consiglio dei Ministri, presieduto dal Ministro per l’Innovazione Tecnologica e la Digitalizzazione e costituito dall’Autorità Delegata per le Politiche di Coesione, il Ministro dello Sviluppo Economico, il Ministro per la Pubblica Amministrazione, il Ministro per gli Affari Regionali e le Autonomie, il Ministro per le Politiche Agricole, Alimentari e Forestali, il Presidente della Conferenza delle Regioni e delle Province Autonome.
-
-
-L’attuazione della strategia è affidata al [Ministero dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/){:target="_blank" rel="noopener noreferrer"} (MiSE), anche avvalendosi della società “in house” Infrastrutture e Telecomunicazioni per l’Italia S.p.A (Infratel, e ha previsto la stipula di un accordo di livello politico tra il Ministero dello Sviluppo economico e le Regioni per stabilire obiettivi, strumenti, modalità e risorse necessarie per la realizzazione degli interventi.
+Il Coordinamento della Strategia nazionale per la banda ultra larga è affidato al Comitato per la Banda Ultra Larga (CoBUL), istituito presso la Presidenza del Consiglio dei Ministri, presieduto dal Ministro per l'Innovazione Tecnologica e la Digitalizzazione e costituito dall'Autorità Delegata per le Politiche di Coesione, il Ministro dello Sviluppo Economico, il Ministro per la Pubblica Amministrazione, il Ministro per gli Affari Regionali e le Autonomie, il Ministro per le Politiche Agricole, Alimentari e Forestali, il Presidente della Conferenza delle Regioni e delle Province Autonome.
 
 
-L’avvento del Ministro per l’Innovazione ha comportato un’accelerazione importante sia in termini di coordinamento, rilanciando l’organo decisionale del CoBUL con riunioni a cadenza mensile, sia con lo sblocco di ingenti risorse già stanziate e destinate all’incentivo alla domanda tramite voucher e all’infrastrutturizzazione delle scuole. Tale impatto vuole altresì accelerare anche la messa a disposizione dei collegamenti a banda ultra larga nelle “aree grigie”, per ridurre il digital divide e dare una celere risposta anche alla luce dell’attuale crisi sanitaria dovuta al Covid-19.
+L'attuazione della strategia è affidata al [Ministero dello Sviluppo Economico](https://www.mise.gov.it/index.php/it/){:target="_blank" rel="noopener noreferrer"} (MiSE), anche avvalendosi della società "in house" Infratel (Infrastrutture e Telecomunicazioni per l'Italia S.p.A). 
 
+Il Ministro per l'Innovazione Tecnologica e la Digitalizzazione ha assunto la Presidenza del CoBUL alla fine del 2019, riunendo il comitato con l'obiettivo di accelerare l'attuazione del Grande progetto banda ultra larga, proporre interventi di semplificazione normativa e lanciare gli altri interventi che fanno parte del progetto BUL quali lo sblocco delle risorse per l''incentivo alla domanda tramite voucher, i collegamenti a banda ultralarga per gli istituti scolastici e l'intervento nelle cosiddette "aree grigie".  
 
 {% if page.dashboard_url %}
 {:.mt-5.max-w-40}
@@ -68,28 +64,21 @@ L’avvento del Ministro per l’Innovazione ha comportato un’accelerazione im
 {:.mt-5.max-w-40}
 ## Linee di intervento
 
-* Piano “Aree bianche”  
-Il modello di intervento nelle aree bianche (aree “a fallimento di mercato” , ossia quelle aree prive di reti ultra broadband in cui nessun operatore privato era disposto a investire, approvato dalla CE con decisione del 30 giugno 2016, ha previsto l’individuazione, mediante gara svolta da Infratel, di un soggetto concessionario responsabile della progettazione e costruzione di un’infrastruttura passiva a banda ultralarga, nonché della gestione, per un periodo di 20 anni, dei servizi wholesale passivi e attivi di accesso alla rete, che rimane di proprietà pubblica e che è interamente finanziata con risorse pubbliche. 
-I tre bandi di gara sono stati aggiudicati tutti alla società Open Fiber.
-Lo stato di avanzamento in tempo reale del Piano nelle aree bianche è disponibile sul sito di
-Infratel al link: [bandaultralarga.italia.it](http://bandaultralarga.italia.it){:target="_blank" rel="noopener noreferrer"}
-<p>&nbsp;</p>
-* Piano Scuole  
-Il piano scuole intende collegare tutti plessi scolastici delle scuole medie e secondarie e tutti i plessi delle scuole primarie delle “aree bianche”. Prevede l’interconnessione a banda ultra larga di oltre 32.000 plessi, pari all’81% del totale degli oltre 10.000 istituti scolastici italiani.
-Entro due anni, tutte le scuole statali superiori e medie dell’intero territorio nazionale e le scuole primarie e dell’infanzia nelle cosiddette “aree bianche”, saranno connesse con collegamenti in fibra ottica a 1 Gbps, necessari per l’adozione di forme sistemiche di teledidattica.
-Il piano nel suo totale ha un valore di circa 400 Milioni di Euro.
-Si struttura secondo due fasi di intervento:
-   1. Interconnessione immediata di circa 29.000 plessi.
-   2. Interconnessione, a valle delle interlocuzioni con la commissione europea, dei circa 2.800 plessi restanti, ricadenti nelle “aree grigie” e che hanno bisogno di opere di infrastrutturizzazione.
-<p>&nbsp;</p>
-* Misure di sostegno alla domanda - piano voucher  
-Il piano voucher di incentivo alla domanda è rivolto a famiglie e imprese per venire incontro alle esigenze di smart working e di teledidattica.
-Il piano nel suo totale ha Importo complessivo di 1.146.171.265 Euro, suddiviso su base regionale.
-Il piano prevede l’erogazione di un voucher per la connettività differenziato per fasce di reddito, che sarà gestito da Infratel Italia, per l’acquisto di servizi di connettività che possano supportare fin da subito le esigenze di teledidattica di studenti e docenti e il lavoro agile dei lavoratori e delle imprese.
-Le Categorie che a partire da settembre potranno beneficiarie dell’intervento Voucher sono: 
-   1. Famiglie: incentivo per  la connettività + Tablet o PC per quelle con ISEE sotto i 20.000 Euro; solo incentivo per la connettività per quelle senza limiti di ISEE; o PC;
-   2. Imprese: contributo fino a 2.000 Euro per  la connettività.
-<p>&nbsp;</p>
-* Interventi di realizzazione di infrastrutture nelle “aree grigie”:  
-Il CoBUL del 5 maggio ha concordato anche di accelerare con gli interventi nelle “aree grigie”, focalizzando l’attenzione alle zone ad alta densità di imprese che saranno segnalate dalle regioni e  studiando soluzioni coerenti anche con la strategia e gli obiettivi 2025 della Commissione Europea, espressi dalla Comunicazione COM(2016)-587 “Connectivity for a Competitive Digital Single Market – Towards a European Gigabit Society” del 14 settembre 2016, in quanto diffonde la fibra ottica in modo capillare sul territorio verso le utenze residenziali e rende disponibili connessioni FTTH alle sedi PA (scuole, sedi della sanità etc.) e alle aree produttive, abilitando anche lo sviluppo del 5G.
-I fondi disponibili ammontano a circa 1.100 milioni di euro e il Piano di azione verrà definito nei dettagli entro la metà di giugno 2020.
+1. **Piano "aree bianche"**  
+Sono le zone a fallimento di mercato, ossia quelle aree prive di reti ultra broadband in cui nessun operatore privato era disposto a investire, nelle quali il Concessionario Open Fiber, vincitore delle tre gare effettuate,  sta cablando con connessioni FTTH (Fiber-To-The-Home) oltre 7.000 Comuni italiani (oltre 6 milioni di unità immobiliari).
+Lo stato di avanzamento in tempo reale del piano nelle “aree bianche” è disponibile sul sito di Infratel al link: [bandaultralarga.italia.it](http://bandaultralarga.italia.it){:target="_blank" rel="noopener noreferrer"}  
+
+2. **Piano Scuole**  
+Il piano scuola prevede, entro due anni, di offrire connessione internet gratuita per 5 anni (in fibra ottica a 1 Gbps) a circa 37.000 edifici scolastici (sui 40.000 totali), con servizi di assistenza e CRM. L’idea, nata anche dalla situazione emergenziale dovuta al Covid-19 è quella di poter servire le prime scuole, circa 3000 edifici scolastici sparsi sul territorio nazionale, già da settembre 2020, in tempo con la riapertura dell’anno scolastico.  
+L’intervento ha un valore complessivo di 400 Milioni di Euro.  
+
+3. **Misure di sostegno alla domanda - piano voucher**  
+Il piano voucher di incentivo alla domanda rappresenta un’importante novità per  famiglie e imprese **che potranno beneficiare di un contributo per l’acquisto di servizi di connettività.**  
+Il piano nel suo totale ha Importo complessivo di 1.146 Milioni di Euro, suddiviso su base regionale. Di questi, 600 milioni circa sono destinati alle famiglie, mentre i rimanenti 546 milioni alle imprese.  
+Per tutte le famiglie è previsto un incentivo pari a 200 euro per l’attivazione di nuovi collegamenti a internet veloce o per il passaggio a collegamenti prestazionalmente più performanti. Per le famiglie meno abbienti (ISEE inferiore ai 20.000 Euro), vi sarà anche la possibilità di richiedere un contributo aggiuntivo di 300 euro per disporre in comodato d’uso di un Tablet di fascia media o di un PC.  
+Parimenti per le imprese è prevista la possibilità di ricevere un contributo fino a 2000 euro per l’attivazione di un collegamento in fibra e fino a 500 euro per una connessione a prestazioni inferiori (almeno 30 Mbps).  
+
+4. **Piano "aree grigie"**  
+Le cosiddette “aree grigie” sono quelle zone con gap tecnologico in cui sono previsti interventi mirati a favorire la diffusione della fibra ottica, abilitando anche lo sviluppo del 5G (in linea con la strategia e gli obiettivi 2025 della Commissione Europea, espressi dalla Comunicazione COM(2016)-587 “Connectivity for a Competitive Digital Single Market – Towards a European Gigabit Society” del 14 settembre 2016). 
+Per la copertura delle “aree grigie” si prevede un fabbisogno aggiuntivo di circa 5 miliardi di euro da identificare nell’ambito della prossima programmazione europea. L’esatta dimensione e posizionamento delle aree grigie è comunque in fase di ridefinizione tramite richiesta agli operatori privati dei rispettivi piani di investimento/sviluppo nei prossimi tre anni. 
+In questa fase quindi si sta focalizzando l’attenzione, in base alle risorse disponibili, sulle zone ad alta densità di imprese, alla fine di poter attivare entro fine 2020 gli interventi a favore dei territori, quale risposta alla situazione emergenziale dovuta a Covid-19.  
