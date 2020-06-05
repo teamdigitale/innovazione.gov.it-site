@@ -14,8 +14,8 @@ _Si è tenuta oggi la video conferenza tra i Ministri delle Telecomunicazioni pe
 
 <!-- MORE -->
 
-Convocata dalla Presidenza Croata, l’incontro odierno nasce con la volontà di coordinare una risposta Europea in questo momento di pandemia che ha evidenziato l'importanza della digitalizzazione in tutti i settori dell'economia e della società.  
-Come sostenuto dalla Presidente della Commissione europea, Ursula von der Leyen, dovremmo approfittare di questo tragico momento per accelerare "la transizione verso un'Europa equa, neutrale dal punto di vista climatico e digitale".  
+Convocata dalla Presidenza Croata, l’incontro odierno nasce con la volontà di coordinare una risposta Europea in questo momento di pandemia. È  ormai evidente  l’importanza della digitalizzazione in tutti i settori dell’economia e all'interno della società.  
+Come sostenuto dalla Presidente della Commissione europea, Ursula von der Leyen, é necessario accelerare "la transizione verso un’Europa equa, rispettosa dell'ambiente  e digitale".  
 Nel suo intervento il Ministro Pisano ha riportato le azioni attuate, con l’auspicio che l’innovazione tecnologica e la digitalizzazione possano essere parte di una riforma strutturale dei governi al fine di sfruttare tutti i benefici della trasformazione digitale.  
 
 Di seguito è possibile:  
