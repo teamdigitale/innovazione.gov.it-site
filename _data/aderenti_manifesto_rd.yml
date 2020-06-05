@@ -390,4 +390,10 @@ aderenti_manifesto:
   - name: "Dipartimento per le Politiche di Coesione - Presidenza del Consiglio dei Ministri"
     logo: "opencoesione-logo.png"
     link: "http://presidenza.governo.it/AmministrazioneTrasparente/Organizzazione/ArticolazioneUffici/Dipartimenti/DPC.html"
+  - name: "AICA"
+    logo: "aica_digital_academy.png"
+    link: "http://www.aicadigitalacademy.it/"
+  - name: "Coder Kids"
+    logo: "coder_kids-logo-arancio.png"
+    link: "http://www.aicadigitalacademy.it/"
 
