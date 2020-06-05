@@ -4,13 +4,12 @@ title_full: BUL
 description: LA STRATEGIA ITALIANA PER LA BANDA ULTRA LARGA
 lang: it
 layout: page-project
-dashboard_daily: true
 ref: cobul
 logo: 
 child_of_ref: progetti
 project_url: 
 dashboard_url: https://app.powerbi.com/view?r=eyJrIjoiZDY2NzI1NTMtZDZlYS00YWNmLWJkNWEtNTdkOWQ2Zjc2MGI1IiwidCI6ImFmZDBhNzVjLTg2NzEtNGNjZS05MDYxLTJjYTBkOTJlNDIyZiIsImMiOjh9
-# no_site_toc: true
+dashboard_data_no_updated: true
 order: 13
 categories:
  - pubblica amministrazione

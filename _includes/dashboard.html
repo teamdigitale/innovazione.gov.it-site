@@ -1,9 +1,14 @@
 {% assign dashboard_url = page.dashboard_url %}
 {% assign dashboard_daily = page.dashboard_daily | default: false %}
+{% assign dashboard_data_no_updated= page.dashboard_data_no_updated | default: false %}
 
+{% if dashboard_data_no_updated %}
+<div class="mb-4"></div>
+{% else %}
 {% if dashboard_daily %}
 <small>{{ site.data.t.dashboard-update-daily[page.lang] }}</small>
 {% else %}
-<small>{{ site.data.t.dashboard-update[page.lang] }}<span id="getmonday"></span> </small>
+<small>{{ site.data.t.dashboard-update[page.lang] }}<span id="getmonday"></span></small>
+{% endif %}
 {% endif %}
 <iframe src="{{dashboard_url }}" width="100%" height="600" allowtransparency></iframe>
