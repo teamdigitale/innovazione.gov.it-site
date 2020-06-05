@@ -42,7 +42,7 @@ La disponibilità di Banda Ultra Larga è infatti essenziale per servizi ormai d
 * Miglioramento della produttività
 * Maggiore efficienza e velocità nello svolgimento di pratiche
 * Per gli ospedali, implementazione dei servizi di telemedicina 
-* Per le scuole, miglioramento dell'offerta di e- learning
+* Per le scuole, miglioramento dell'offerta di e-learning
 
 {:.mt-5.max-w-40}
 ## Il ruolo del CoBUL
@@ -73,12 +73,12 @@ Il piano scuola prevede, entro due anni, di offrire connessione internet gratuit
 L’intervento ha un valore complessivo di 400 Milioni di Euro.  
 
 3. **Misure di sostegno alla domanda - piano voucher**  
-Il piano voucher di incentivo alla domanda rappresenta un’importante novità per  famiglie e imprese **che potranno beneficiare di un contributo per l’acquisto di servizi di connettività.**  
+Il piano voucher di incentivo alla domanda rappresenta un’importante novità per famiglie e imprese che potranno beneficiare di un contributo per l’acquisto di servizi di connettività.  
 Il piano nel suo totale ha Importo complessivo di 1.146 Milioni di Euro, suddiviso su base regionale. Di questi, 600 milioni circa sono destinati alle famiglie, mentre i rimanenti 546 milioni alle imprese.  
 Per tutte le famiglie è previsto un incentivo pari a 200 euro per l’attivazione di nuovi collegamenti a internet veloce o per il passaggio a collegamenti prestazionalmente più performanti. Per le famiglie meno abbienti (ISEE inferiore ai 20.000 Euro), vi sarà anche la possibilità di richiedere un contributo aggiuntivo di 300 euro per disporre in comodato d’uso di un Tablet di fascia media o di un PC.  
 Parimenti per le imprese è prevista la possibilità di ricevere un contributo fino a 2000 euro per l’attivazione di un collegamento in fibra e fino a 500 euro per una connessione a prestazioni inferiori (almeno 30 Mbps).  
 
-4. **Piano "aree grigie"**  
+1. **Piano "aree grigie"**  
 Le cosiddette “aree grigie” sono quelle zone con gap tecnologico in cui sono previsti interventi mirati a favorire la diffusione della fibra ottica, abilitando anche lo sviluppo del 5G (in linea con la strategia e gli obiettivi 2025 della Commissione Europea, espressi dalla Comunicazione COM(2016)-587 “Connectivity for a Competitive Digital Single Market – Towards a European Gigabit Society” del 14 settembre 2016). 
 Per la copertura delle “aree grigie” si prevede un fabbisogno aggiuntivo di circa 5 miliardi di euro da identificare nell’ambito della prossima programmazione europea. L’esatta dimensione e posizionamento delle aree grigie è comunque in fase di ridefinizione tramite richiesta agli operatori privati dei rispettivi piani di investimento/sviluppo nei prossimi tre anni. 
 In questa fase quindi si sta focalizzando l’attenzione, in base alle risorse disponibili, sulle zone ad alta densità di imprese, alla fine di poter attivare entro fine 2020 gli interventi a favore dei territori, quale risposta alla situazione emergenziale dovuta a Covid-19.  
