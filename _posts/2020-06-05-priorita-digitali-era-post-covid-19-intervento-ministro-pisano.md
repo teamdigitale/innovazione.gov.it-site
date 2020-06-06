@@ -20,7 +20,7 @@ Nel suo intervento il Ministro Pisano ha riportato le azioni attuate, con l’au
 
 Di seguito è possibile:  
 
-- Leggere e scaricare [l'intervento integrale del Ministro Pisano]({{ site.baseurl }}/assets/docs/speaking_notes_telco_council_june-5-2020.pdf){:target="_blank" rel="noopener noreferrer"} (in pdf)
+- Leggere e scaricare l'intervento integrale del Ministro Pisano in [inglese]({{ site.baseurl }}/assets/docs/ENG-Version-Speaking-Notes-TELCO-Council-June_5_ 2020.pdf){:target="_blank" rel="noopener noreferrer"} e [italiano]({{ site.baseurl }}/assets/docs/ITA-Version-Speaking-Notes-TELCO-Council-June_5_2020.pdf){:target="_blank" rel="noopener noreferrer"} (in pdf)  
 
 {:.x-small.text-right}
 _Fotografia di [Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/wRAHbIziQfg){:target="_blank" rel="noopener noreferrer"}_
