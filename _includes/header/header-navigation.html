@@ -114,7 +114,7 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-3">
                               <div class="link-list-wrapper">
                                 <ul class="link-list">
                                   {% for menu_child_page in current_lang_menu_child_pages limit:4 %}
@@ -123,7 +123,7 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
                                 </ul>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-3">
                               <div class="link-list-wrapper">
                                 <ul class="link-list">
                                   {% for menu_child_page in current_lang_menu_child_pages limit:4 offset:4 %}
@@ -132,11 +132,22 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
                                 </ul>
                               </div>
                             </div>
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-3">
                               <div class="link-list-wrapper">
                                 <ul class="link-list">
                                   {% for menu_child_page in current_lang_menu_child_pages limit:4 offset:8 %}
                                   <li><a class="list-item" href="{{ site.baseurl }}{{menu_child_page.url}}"><span>{{ menu_child_page.title_short | default:menu_child_page.title }}</span></a></li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  {% for menu_child_page in current_lang_menu_child_pages limit:4 offset:12 %}
+                                  <li><a class="list-item"
+                                      href="{{ site.baseurl }}{{menu_child_page.url}}"><span>{{ menu_child_page.title_short | default:menu_child_page.title }}</span></a>
+                                  </li>
                                   {% endfor %}
                                 </ul>
                               </div>
