@@ -109,9 +109,11 @@ references:
         cp -a ~/circleci/innovazione.gov.it/.circleci/. .circleci/.
         echo "innovazione.gov.it" > CNAME
 
-        git add -A
-        git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-        git push origin gh-pages
+        if [[ $(git status -s | wc -l | awk '{print $1}') -gt 0 ]]; then
+          git add -A
+          git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+          git push origin gh-pages
+        fi
 
   # In order to use this, the integration needs to be
   # setup first under CircleCI app directory and a
