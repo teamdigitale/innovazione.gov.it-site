@@ -165,8 +165,8 @@ footer-small-prints:
       name: Contatti
       url: "/it/chi-siamo/contatti"
     privacy-policy:
-      name: Privacy policy
-      url: "/it/privacy-policy"
+      name: Informativa Privacy
+      url: "/it/informativa-privacy"
     cookie-policy:
       name: Note Legali
       url: "http://www.governo.it/note-legali"
