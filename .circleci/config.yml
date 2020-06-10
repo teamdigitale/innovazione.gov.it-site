@@ -109,6 +109,8 @@ references:
         cp -a ~/circleci/innovazione.gov.it/.circleci/. .circleci/.
         echo "innovazione.gov.it" > CNAME
 
+        # Proceed only if there's something to commit
+        # Pushing empty commits causes errors and pipeline failures
         if [[ $(git status -s | wc -l | awk '{print $1}') -gt 0 ]]; then
           git add -A
           git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
