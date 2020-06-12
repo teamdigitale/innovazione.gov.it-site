@@ -1,120 +1,178 @@
-# Ruby CircleCI 2.0 configuration file
+# CircleCI 2.1 configuration file
 #
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
+# https://circleci.com/docs/reference-2-1/#section=configuration for more details
 
-defaults: &defaults
-  working_directory: ~/circleci/innovazione.gov.it
-  add_ssh_keys: &add_ssh_keys
-    fingerprints:
-      - "6b:79:94:b3:2b:d1:e5:57:5c:44:15:ed:7a:9d:c1:8f"
-  restore_cache: &restore_cache
-    keys:
-      - v1-dependencies-{{ checksum "Gemfile.lock" }}
-      - v1-dependencies-
-  save_cache: &save_cache
-    paths:
-      - ./vendor/bundle
-    key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-  docker:
-    - image: circleci/ruby:2.6.5
-      environment:
-        BUNDLE_JOBS: 3
-        BUNDLE_RETRY: 3
-        BUNDLE_PATH: vendor/bundle
-        BUNDLER_VERSION: 2.0.1
+version: 2.1
 
-version: 2
+references:
+  set_working_directory: &set_working_directory
+    working_directory: ~/circleci/innovazione.gov.it
+
+  load_image: &load_image
+    docker:
+      - image: circleci/ruby:2.6.5
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          BUNDLER_VERSION: 2.0.1
+
+  restore_gem_cache: &restore_gem_cache
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "Gemfile.lock" }}
+        - v1-dependencies-
+
+  save_gem_cache: &save_gem_cache
+    save_cache:
+      paths:
+        - ./vendor/bundle
+      key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+  configure_bundler: &configure_bundler
+    run:
+      name: Configure builder
+      command: |
+        echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+        source $BASH_ENV
+        gem install bundler
+
+  check_versions: &check_versions
+    run:
+      name: Check versions
+      command: |
+        ruby --version
+        bundle --version
+        docker --version
+
+  install_dependencies: &install_dependencies
+    run:
+      name: Install dependencies
+      command: |
+        bundle check || \
+        bundle install \
+          --jobs=4 \
+          --retry=3 \
+          --path vendor/bundle
+
+  build: &build
+    run:
+      name: Build the website
+      command: |
+        JEKYLL_ENV=production \
+        bundle exec jekyll build
+
+  test_html_proofer: &test_html_proofer
+    run:
+      name: Test with HTML proofer
+      command: |
+        bundle exec htmlproofer ./_site \
+          --check-html \
+          --allow-hash-href \
+          --only-4xx \
+          --alt-ignore '/.*/' \
+          --disable_external true
+
+  save_to_workspace: &save_to_workspace
+    persist_to_workspace:
+      root: ~/circleci
+      paths:
+        - innovazione.gov.it
+
+  store_build_artifacts: &store_build_artifacts
+    store_artifacts:
+      path: ~/circleci/innovazione.gov.it/_site
+
+  # The fingerprint corresponds to the priavte key
+  # saved in the CircleCI configuration
+  setup_gh_pages: &setup_gh_pages
+    add_ssh_keys:
+      fingerprints:
+        - "6b:79:94:b3:2b:d1:e5:57:5c:44:15:ed:7a:9d:c1:8f"
+
+  # Deploys the building artifacts to GitHub pages,
+  # in https://github.com/teamdigitale/innovazione.gov.it
+  # on the gh-pages branch
+  deploy_to_gh_pages: &deploy_to_gh_pages
+    run:
+      name: Update GitHub Pages
+      command: |
+        git config --global user.email no-reply@teamdigitale.governo.it
+        git config --global user.name "Deploy Bot"
+
+        cd /tmp/gh-pages
+        git checkout gh-pages || git checkout --orphan gh-pages
+        git rm -rf .
+
+        cp -a ~/circleci/innovazione.gov.it/_site/. .
+        mkdir -p .circleci
+        cp -a ~/circleci/innovazione.gov.it/.circleci/. .circleci/.
+        echo "innovazione.gov.it" > CNAME
+
+        # Proceed only if there's something to commit
+        # Pushing empty commits causes errors and pipeline failures
+        if [[ $(git status -s | wc -l | awk '{print $1}') -gt 0 ]]; then
+          git add -A
+          git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+          git push origin gh-pages
+        fi
+
+  # In order to use this, the integration needs to be
+  # setup first under CircleCI app directory and a
+  # SLACK_WEBOOK environment variable needs to be set
+  # in the project settings
+  notify_on_failure: &notify_on_failure
+    slack/status:
+      fail_only: true
+      only_for_branches: master
+
 jobs:
+  # Install dependencies, run tests and build the website.
+  # Save the resulting artifacts in the workspace.
   build:
-    <<: *defaults
-
+    <<: *set_working_directory
+    <<: *load_image
     steps:
-      - add_ssh_keys: *add_ssh_keys
       - checkout
+      - <<: *configure_bundler
+      - <<: *check_versions
+      - <<: *restore_gem_cache
+      - <<: *install_dependencies
+      - <<: *save_gem_cache
+      - <<: *build
+      - <<: *test_html_proofer
+      - <<: *save_to_workspace
+      - <<: *store_build_artifacts
+      - <<: *notify_on_failure
 
-      # Retrieves Bundler version from Gemfile.lock
-      - run:
-          name: Configure Bundler
-          command: |
-            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-            source $BASH_ENV
-            gem install bundler
-
-      # Version check
-      - run:
-          name: Check versions
-          command: |
-            ruby --version
-            bundle --version
-            docker --version
-
-      # Download and cache dependencies
-      - restore_cache: *restore_cache
-
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-
-      - save_cache: *save_cache
-
-      # Build the site
-      - run:
-          name: Build
-          command: |
-            JEKYLL_ENV=production bundle exec jekyll build
-
-      # Test the site
-      - run:
-          name: Test with HTML Proofer
-          command: |
-            bundle exec htmlproofer ./_site --check-html --allow-hash-href --only-4xx --alt-ignore '/.*/' --disable_external true
-
-      - persist_to_workspace:
-          root: ~/circleci
-          paths:
-            - innovazione.gov.it
-
-      - store_artifacts:
-          path: ~/circleci/innovazione.gov.it/_site
-
-  deploy-production:
-    <<: *defaults
+  # When changes get merged on master, get the artifacts
+  # from the workspace and commit them to GitHub pages
+  deploy_to_production:
+    <<: *set_working_directory
+    <<: *load_image
     steps:
       - attach_workspace:
           at: ~/circleci
-      - add_ssh_keys: *add_ssh_keys
       - checkout:
           path: /tmp/gh-pages
-      - deploy:
-          name: Update GitHub Pages
-          command: |
-            git config --global user.email no-reply@teamdigitale.governo.it
-            git config --global user.name "Deploy Bot"
+      - <<: *setup_gh_pages
+      - <<: *deploy_to_gh_pages
+      - <<: *notify_on_failure
 
-            cd /tmp/gh-pages
-            git checkout gh-pages || git checkout --orphan gh-pages
-            git rm -rf .
-
-            cp -a ~/circleci/innovazione.gov.it/_site/. .
-            mkdir -p .circleci && cp -a ~/circleci/innovazione.gov.it/.circleci/. .circleci/.
-            echo "innovazione.gov.it" > CNAME
-
-            git add -A
-            git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-            git push origin gh-pages
+orbs:
+  slack: circleci/slack@3.4.2
 
 workflows:
-  version: 2
-
+  # Build the website for any commit,
+  # any branch but gh-pages.
+  # Deploy to production if on master.
   deploy:
     jobs:
       - build:
           filters:
             branches:
               ignore: gh-pages
-      - deploy-production:
+      - deploy_to_production:
           requires:
             - build
           filters:
