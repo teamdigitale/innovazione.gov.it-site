@@ -82,16 +82,3 @@ Nella homepage vengono mostrati:
 
 - in alto, il post più recente con attributo `pinned: true`
 - i 3 post più recenti con la categoria `highlights`
-
-## Aggiornamento iniziative Repubblica Digitale
-
-La _sorgente dati_ delle iniziative di Repubblica Digitale è il file CSV `_data/iniziative.csv`, che viene generato da un foglio Google scaricabile [qui](https://docs.google.com/spreadsheets/d/1BV95DWqrytq1kSyP2EdFkJ0PSuGM5gdx0jhuS144tQI/gviz/tq?tqx=out:csv&sheet=PubblicazioneSito).
-
-I loghi vengono invece inseriti [qui](https://drive.google.com/drive/u/1/folders/1MSkCvSb2P60_RXwOjgVo-QBL_85Nbun7): ogni logo va adattato e ridimensionato se necessario, incluso nella cartella `assets/images/aderenti-manifesto-rd`, e aggiunto alla lista presente nel file `aderenti_manifesto_rd.yml`
-
-Per aggiornare il file è quindi sufficiente:
-
-- scaricare il file CSV sovrascrivendo l'esistente
-- caricare i loghi come descritto
-- aggiornare la lista degli aderenti
-- verificare sia tutto ok
