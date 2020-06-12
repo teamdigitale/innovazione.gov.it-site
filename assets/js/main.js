@@ -13,24 +13,6 @@ $(function () {
         }
     };
 
-    //$('.card').fitVids();
-
-    // Manifesto
-    var $accordion = $(".js-accordion");
-    var $allPanels = $(" .js-accordion-panel");
-    var $allItems = $(".js-accordion-item");
-
-    $accordion.on("click", ".js-accordion-toggle", function() {
-        $allPanels.slideUp();
-        $allItems.removeClass("is-open");
-        if ($(this).next().is(":visible")) {
-            $(".js-accordion-panel").slideUp();
-        } else {
-            $(this).next().slideDown().closest(".js-accordion-item").addClass("is-open");
-        }
-        return false;
-    });
-
     function isEmail(email) {
         return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email);
     }
