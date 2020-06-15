@@ -10,9 +10,10 @@ categories:
   - highlights
   - pubblica amministrazione
   - cittadini
+english_version: stati_generali-01-eng
 ---
 
-_Intervento della Ministra Paola Pisano durante gli Stati generali a Villa Pamphilj del 13 giugno 2020_
+_Intervento della Ministra Paola Pisano durante gli Stati generali a Villa Pamphilj del 13 giugno 2020_  
 
 <!-- MORE -->
 
@@ -31,8 +32,4 @@ Si tratta per esempio di introdurre in alcune normative, nelle pratiche, nella f
 Dobbiamo liberare imprese e cittadini da troppe ore impiegate per assolvere ai propri doveri secondo percorsi tortuosi o desueti, non strade adeguate al nostro tempo. Dobbiamo rendere possibile liberare tempo ed energia nelle aziende italiane affinché queste imprese dispongano di più tempo e più energie da riservare all'elaborazione inventiva di idee da mettere a frutto.  
 
 
-Saremo giudicati su questo. Noi che siamo al governo, ma anche tutta l'Italia e le sue preziose forze del lavoro nei confronti delle quali è indispensabile ridurre gli ostacoli a impegno proficuo. Occorre avanzare. Non arretrare.
-
-<!-- 
-{:.x-small.text-right}
-_Fotografia di [Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/wRAHbIziQfg){:target="_blank" rel="noopener noreferrer"}_ -->
+Saremo giudicati su questo. Noi che siamo al governo, ma anche tutta l'Italia e le sue preziose forze del lavoro nei confronti delle quali è indispensabile ridurre gli ostacoli a impegno proficuo. Occorre avanzare. Non arretrare.  
