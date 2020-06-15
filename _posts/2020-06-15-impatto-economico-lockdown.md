@@ -11,7 +11,7 @@ categories:
   - cittadini
 ---
 
-_Una analisi settoriale_
+_Il documento redatto dalla task force offre una valutazione sull’impatto economico delle misure di contenimento e fornisce informazioni utili per gestire un nuovo lockdown_
 
 <!-- MORE -->
 Il documento redatto dalla task force istituita dal [Ministro per l’innovazione tecnologica e la digitalizzazione](https://innovazione.gov.it/){:target="_blank" rel="noopener noreferrer"} in accordo con il [Ministero della Salute](http://www.salute.gov.it/portale/home.html){:target="_blank" rel="noopener noreferrer"} per valutare e proporre soluzioni tecnologiche data driven e affrontare l’emergenza sanitaria, sociale e economica legata alla diffusione del virus SARS-CoV-2 sul territorio italiano, effettua un’analisi settoriale e regionale dell’impatto economico causato dal Covid- 9 con due finalità: valutare l’impatto economico delle misure di contenimento e fornire informazioni utili per gestire un nuovo lockdown  
