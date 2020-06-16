@@ -28,7 +28,9 @@ Il processo di selezione delle proposte è stato articolato in tre fasi:
 
 Questo ha consentito di individuare cinque soluzioni tecnologiche con la più estesa corrispondenza alle esigenze di risposta all’emergenza COVID-19, sia per caratteristiche tecniche, sia per modalità di identificazione ed autenticazione dei pazienti/cittadini, sia per tempi di trasferimento operativo nell’attualità emergenziale.
 
-A questo [link](https://github.com/taskforce-covid-19/documenti/blob/master/sgdl_5_Teleassistenza_Medica/sgdl5_relazione_telemedicina.pdf){:target="_blank" rel="noopener noreferrer"} è possibile scaricare il documento (in pdf)
+A questo [link](https://github.com/taskforce-covid-19/documenti/blob/master/sgdl_5_Teleassistenza_Medica/sgdl5_sintesi_relazione_telemedicina.pdf){:target="_blank" rel="noopener noreferrer"} è possibile scaricare l'executive summary (in pdf)  
+
+A questo [link](https://github.com/taskforce-covid-19/documenti/blob/master/sgdl_5_Teleassistenza_Medica/sgdl5_relazione_telemedicina.pdf){:target="_blank" rel="noopener noreferrer"} è possibile scaricare la relazione (in pdf)  
 
 
 {:.x-small.text-right}
