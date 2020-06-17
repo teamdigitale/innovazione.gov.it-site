@@ -16,4 +16,6 @@ _Il Ministro Pisano è intervenuta in aula al Senato al termine della discussion
 
 <!-- MORE -->
 
-Il video dell’intervento del Ministro dove ha illustrato il funzionamento e l’utilità dell’app Immuni per la notifica di esposizione al Covid-19
+Il video dell’intervento del Ministro dove ha illustrato il funzionamento e l’utilità dell’app Immuni per la notifica di esposizione al Covid-19  
+
+Video estratto dalla diretta trasmessa dal Senato  
