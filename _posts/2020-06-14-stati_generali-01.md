@@ -5,7 +5,6 @@ ref: intervento-ministra-innovazione-tecnologica-e-digitalizzazione-pisano-agli-
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/pisano-stati-generali-01.jpg" alt="Paola Pisano agli Stati Generali, 13 giugno 2020"/>
-pinned: true
 categories:
   - highlights
   - pubblica amministrazione

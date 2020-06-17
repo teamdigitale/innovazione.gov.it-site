@@ -5,11 +5,7 @@ ref: speech-by-minister-for-innovation-and-tech-digitization-paola-pisano-states
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/pisano-stati-generali-01.jpg" alt="Paola Pisano agli Stati Generali, 13 giugno 2020"/>
-pinned: true
 categories:
-  - pubblica amministrazione
-  - cittadini
-
 italian_version: stati_generali-01
 hidden: true
 ---
