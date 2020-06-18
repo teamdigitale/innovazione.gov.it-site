@@ -10,11 +10,11 @@ categories:
   - cittadini
 ---
 
-_Il gruppo ha analizzato varie fonti di dati per monitorare gli effetti comportamentali e la percezione della pandemia Covid-19 nel Paese;  il lavoro si concentra anche sulla variazione dei livelli di mobilità in seguito all’emergenza._
+_Il gruppo di lavoro ha analizzato varie fonti di dati per monitorare gli effetti comportamentali e la percezione della pandemia Covid-19 nel Paese;  il lavoro si concentra anche sulla variazione dei livelli di mobilità in seguito all’emergenza._
 
 <!-- MORE -->
 
-L’obiettivo del lavoro gruppo è quello di valutare l’impatto del lockdown su variabili economiche e sociali sul territorio nazionale, al fine di sviluppare linee guida e modelli per il peso relativo di diverse variabili (fra cui demografia e mobilità) in diversi possibili scenari di uscita dal lockdown e in collaborazione con una serie di partner.  
+L’obiettivo del documento è quello di valutare l’impatto del lockdown su variabili economiche e sociali sul territorio nazionale, al fine di sviluppare linee guida e modelli per il peso relativo di diverse variabili (fra cui demografia e mobilità) in diversi possibili scenari di uscita dal lockdown e in collaborazione con una serie di partner.  
 
 Ulteriore scopo del lavoro è monitorare lo spazio e la percezione della pandemia nel Paese, specie sul web.  
 
