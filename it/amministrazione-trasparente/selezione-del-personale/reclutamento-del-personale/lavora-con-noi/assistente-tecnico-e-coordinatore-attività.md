@@ -7,7 +7,6 @@ ref: assistente-tecnico-e-coordinatore-attività
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/Ms5ReaAvkC/Assistente-Tecnico-E-Coordinatore-Delle-Attivit.html
 is_new: true
-hidden: true
 ---
 
 Il dipartimento per la trasformazione digitale è alla ricerca di un professionista come **Assistente Tecnico** (TA). L’Assistente Tecnico e coordinatore delle attività è un ruolo di grande visibilità, che funge da punto di contatto e connessione su diversi argomenti di policy e tecnologici tra Il dipartimento per la trasformazione digitale e i vari ministeri, comitati, enti e interlocutori che giocano un ruolo nell’innovazione tecnologica del Paese.
@@ -50,7 +49,7 @@ Esperto in possesso di comprovata esperienza, non inferiore a 2 anni, acquisita 
 
 ## Documentazione
 
-[comment]: <> (- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Assistente del Team-signed.pdf %}))
+- [Avviso (in formato PDF)]({% link assets/docs/avvisi/Assistente Tecnico e Coordinatore delle attività-signed.pdf %})
 - [Allegato A al DPCM del 24 gennaio 2020 (in formato PDF)]({% link assets/docs/dpcm/DPCM 24 gennaio 2020 - Allegato A.pdf %})
 
 
