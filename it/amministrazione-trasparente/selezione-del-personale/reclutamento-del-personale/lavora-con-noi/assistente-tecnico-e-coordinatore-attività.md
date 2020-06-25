@@ -7,7 +7,6 @@ ref: assistente-tecnico-e-coordinatore-attività
 child_of_ref: lavora-con-noi
 jazz_url: https://teamdigitale.applytojob.com/apply/Ms5ReaAvkC/Assistente-Tecnico-E-Coordinatore-Delle-Attivit.html
 is_new: true
-archived: true
 hidden: true
 ---
 
