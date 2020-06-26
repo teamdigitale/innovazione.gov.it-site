@@ -10,7 +10,6 @@ logo: pagopa.png
 no_site_toc: true
 child_of_ref: progetti
 order: 6
-dashboard_url: https://dashboard.pdnd.italia.it/public/dashboard/2c8ee2ee-fa84-4dbf-8b6a-e7fb5f9ca950
 categories:
  - pubblica amministrazione
  - cittadini
@@ -50,16 +49,6 @@ Il cittadino deve poter scegliere metodi di pagamento moderni, a minima frizione
 * Riduzione dei costi di transazione e processo.
 * Incasso delle somme D+1 (giorno lavorativo successivo al pagamento) direttamente sui conti di tesoreria.
 * Fornire più canali di incasso vuol dire incassare prima.
-
-{% if page.dashboard_url %}
-{:.mt-5.max-w-40}
-## I dati
-
-{:.max-w-40}
-I dati delle dashboard vengono aggiornati su base settimanale. 
-
-{% include dashboard.html %}
-{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
