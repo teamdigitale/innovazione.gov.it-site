@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Il Ministro Pisano ha ricevuto l'ambasciatore della Repubblica di Corea Kwon"
+title: "Il Ministro Pisano ha ricevuto l'Ambasciatore della Repubblica di Corea Kwon"
 ref: ministro-pisano-riceve-ambasciatore-repubblica-di-corea-kwon
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/2020-06-26-ministro-e-ambasciatore-koreano.jpg" alt="Il Ministro Pisano ha ricevuto l'ambasciatore della Repubblica di Corea Kwon"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-06-26-ministro-e-ambasciatore-koreano.jpg" alt="Il Ministro Pisano ha ricevuto l'Ambasciatore della Repubblica di Corea Kwon"/>
 categories:
   - highlights
   - cittadini
   - imprese
 ---
 
-_Il Ministro dell’Innovazione e della digitalizzazione, Paola Pisano,  ha ricevuto l’ambasciatore della Repubblica di Corea in Italia, Hee-seog Kwon_
+_Il Ministro dell’Innovazione e della digitalizzazione, Paola Pisano,  ha ricevuto l’Ambasciatore della Repubblica di Corea in Italia, Hee-seog Kwon_
 
 <!-- MORE -->
 
