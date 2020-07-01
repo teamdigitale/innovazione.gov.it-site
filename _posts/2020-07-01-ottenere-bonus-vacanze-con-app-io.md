@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Il bonus vacanze che puoi ottenere con l’App I0 dei servizi pubblici"
-ref: -bonus-vacanze--ottenere-con-app-i0--servizi-pubblici 
+ref: bonus-vacanze--ottenere-con-app-io-servizi-pubblici 
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/2020-07-01-bonus-vacanze.jpg" alt="Il bonus vacanze che puoi ottenere con l’App I0 dei servizi pubblici"/>
