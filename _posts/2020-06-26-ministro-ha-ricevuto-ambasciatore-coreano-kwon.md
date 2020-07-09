@@ -6,7 +6,6 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/2020-06-26-ministro-e-ambasciatore-koreano.jpg" alt="Il Ministro Pisano ha ricevuto l'Ambasciatore della Repubblica di Corea Kwon"/>
 categories:
-  - highlights
   - cittadini
   - imprese
 ---
