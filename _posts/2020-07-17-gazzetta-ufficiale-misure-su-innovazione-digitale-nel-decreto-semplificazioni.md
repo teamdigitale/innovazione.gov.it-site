@@ -27,7 +27,6 @@ La Pubblica Amministrazione dovrà “pensare in digitale”. Le norme intendono
 Entro il 28 febbraio 2021 è previsto che l’accesso a tutti i servizi digitali delle Pubblica Amministrazione avvenga esclusivamente tramite l’identità digitale SPID o la Carta d’identità elettronica. Entro la stessa data gli uffici pubblici  devono avviare il processo di trasformazione per consentire che i servizi digitali siano fruibili dal  telefono attraverso l’applicazione “IO”, il canale unico di accesso a tutti i servizi della Pubblica Amministrazione.  
 I cittadini non dovranno più ricercare i servizi in digitale nei vari siti delle amministrazioni, ma li troveranno tutti a disposizione  all’interno di un’unica app.  
 
-**Sintesi delle principali misure**  
 **Novità per i cittadini**  
 
 * **Solo SPID o Carte d’identità elettronica  per accedere a tutti i servizi pubblici online**  
@@ -46,8 +45,8 @@ L’applicazione “IO”, attraverso un apposito servizio, dovrà consentire ai
 * **Semplificazione per il rilascio della Carta d’identità elettronica**  
 E’ possibile chiedere il rilascio della CIE prima della scadenza della carta d’identità cartacea. In questo modo sarà agevolato e accelerato l’accesso dei cittadini ai servizi in rete.  
 
-* **Piattaforma digitale per notifica atti della P.a.**  
-Con il decreto parte la piattaforma digitale unica per le notifiche di atti e provvedimenti della P.a. a cittadini e imprese. In sostanza, la raccomandata cartacea viene sostituita da una comunicazione digitale, con  conseguente semplificazione per l’attività dell’amministrazione e risparmio di tempo per i cittadini che potranno avere la disponibilità dell’atto sul cellulare. Resta confermata, per i cittadini che non posseggono un domicilio digitale, la procedura di recapito attraverso posta ordinaria.  
+* **Piattaforma digitale per notifica atti della PA**  
+Con il decreto parte la piattaforma digitale unica per le notifiche di atti e provvedimenti della PA a cittadini e imprese. In sostanza, la raccomandata cartacea viene sostituita da una comunicazione digitale, con  conseguente semplificazione per l’attività dell’amministrazione e risparmio di tempo per i cittadini che potranno avere la disponibilità dell’atto sul cellulare. Resta confermata, per i cittadini che non posseggono un domicilio digitale, la procedura di recapito attraverso posta ordinaria.  
 
 * **Interventi per favorire l’accesso delle persone disabili agli strumenti informatici**  
 Tra le principali misure del processo di digitalizzazione inserite nel decreto-legge vi sono anche disposizioni volte a favorire l’accesso ai servizi online da parte delle persone diversamente abili.  In particolare, le norme estendono gli obblighi di accessibilità degli strumenti informatici anche agli enti o società private, con un fatturato medio negli ultimi tre anni  superiore a 900 euro, che offrono servizi al pubblico attraverso siti web o applicazioni sul telefonino.  
@@ -56,7 +55,7 @@ Tra le principali misure del processo di digitalizzazione inserite nel decreto-l
 Le persone con disabilità potranno circolare con i loro veicoli su tutto il territorio nazionale con un unico permesso. Questo sarà possibile grazie ad una piattaforma unica informatica, presso il Ministero delle Infrastrutture e dei Trasporti, che consentirà di verificare le targhe associate a permessi di circolazione dei titolari di contrassegni. Oggi il permesso di circolazione per accedere nelle zone a traffico limitato (Ztl) per i veicoli delle persone con disabilità è valido solo nel Comune in cui è stato richiesto. Per poter accedere alle Ztl in altri Comuni è necessario effettuare una pratica. Con la norma inserita nel decreto basta un solo permesso per accedere alle Ztl in tutta Italia.  
 
 **Novità per la Pubblica Amministrazione**  
-* **La P.a. e i cittadini comunicano online**  
+* **La PA e i cittadini comunicano online**  
 Quella digitale diventa la modalità “normale” con cui gli uffici pubblici interloquiscono con i cittadini. Il decreto supera l’attuale impostazione secondo cui le amministrazioni dovrebbero “incentivare” l’utilizzo del digitale nella gestione dei procedimenti. La nuova impostazione prevede che l’amministrazione deve, normalmente, utilizzare il digitale nella gestione dei procedimenti amministrativi.  
 
 * **Lavoro agile nella Pubblica Amministrazione**  
@@ -72,7 +71,7 @@ Le pubbliche amministrazioni progetteranno, realizzeranno e svilupperanno i prop
 Il decreto introduce misure di semplificazione per la gestione, lo sviluppo e il funzionamento della piattaforma digitale nazionale dati. Attraverso questa piattaforma vengono resi immediatamente interrogabili, disponibili e fruibili alla Pubblica Amministrazione i dati pubblici e conoscibili. L’interoperabilità e lo scambio dei dati pubblici tra amministrazioni rende più veloce e fluida l’erogazione dei servizi. Ai cittadini e alle imprese non dovranno essere chieste informazioni che la Pubblica Amministrazione già possiede. Le norme non ampliano le informazioni a cui la Pubblica Amministrazione può accedere, ma semplificano la modalità di condivisione dei dati tra i diversi uffici pubblici.  
 La piattaforma consentirà inoltre di valorizzare e rendere immediatamente disponibili alle amministrazioni flussi di macro dati aggregati e anonimizzati, cioè quella parte del proprio patrimonio informativo che non è soggetto a vincoli di riservatezza personale, mettendolo a disposizione delle autorità ai fini dell’assunzione delle decisioni politiche.  
 
-* **I dati dei concessionari pubblici alla P.a.**  
+* **I dati dei concessionari pubblici alla PA**  
 I concessionari dei servizi pubblici producono nella loro attività  dati che possono risultare utili per la gestione della cosa pubblica. Tali dati, di cui il concessionario è entrato in possesso in esecuzione di un contratto con un’amministrazione pubblica, fino ad ora sono rimasti appannaggio esclusivo del concessionario. Una norma del decreto obbliga a prevedere negli accordi negoziali che i concessionari forniscano alle amministrazioni concedenti, in formato aperto, i dati prodotti nell’ambito dell’erogazione del servizio pubblico.  
 
 * **Verso il cloud nazionale**  
