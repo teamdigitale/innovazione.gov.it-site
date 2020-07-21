@@ -82,3 +82,10 @@ Viene introdotto l’obbligo per le pubbliche amministrazioni centrali di migrar
 **Novità per le imprese**  
 * **Diritto a innovare**  
 La misura ha l’obiettivo di consentire alle imprese, alle università, ai centri di ricerca, alle start-up universitarie che vogliano avviare la sperimentazione di un loro progetto innovativo, di farlo, per un periodo limitato di tempo, chiedendo una semplice autorizzazione in sostituzione di tutti gli ordinari regimi amministrativi e obblighi di legge. Rientrano in questo regime i progetti di innovazione tecnologica i cui risultati attesi comportano effetti positivi sulla qualità dell’ambiente e della vita dei cittadini  Il processo autorizzativo semplificato coinvolge il Ministro per l’Innovazione e la Digitalizzazione delegato dalla Presidenza del Consiglio e  il Ministero dello Sviluppo economico, Al termine della sperimentazione, in caso di esito positivo, il governo promuove le modifiche normative e regolamentari per consentire a regime lo svolgimento dell’attività sperimentata.  
+
+**Novità per potenziare le infrastrutture per la connettività**
+* **Banda ultra larga**  
+Per agevolare il posizionamento della fibra il decreto estende l’utilizzo della cosiddetta "microtrincea", una tecnica di scavo a basso impatto ambientale che non richiede poi l’effettuazione del ripristino del manto stradale. In questo modo si riducono i tempi dei lavori, considerando che lo scavo tradizionale richiede in media 6 mesi per il ripristino mentre la microtrincea sono necessari soltanto 45 giorni.
+
+* **5G**  
+I sindaci non potranno introdurre limitazioni alla localizzazione sul proprio territorio di stazioni radio base per reti di comunicazioni elettroniche di qualunque tipologia e non potranno fissare limiti di esposizione a campi elettrici, magnetici ed elettromagnetici diversi rispetto a quelli stabiliti dallo Stato.
