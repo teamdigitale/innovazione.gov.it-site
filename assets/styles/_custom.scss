@@ -265,3 +265,27 @@ iframe {
     font-size: .88889rem;
   }
 }
+
+.indagineCovid19_container {
+  width: 100%;
+  text-align: center;
+}
+
+.indagineCovid19_box {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff2cc;
+  border: 1px solid black;
+  h5 {
+    margin: .5em 0 .5em 0;
+  }
+}
+
+.indagineCovid19_box-noBorder {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  h6 {
+    margin: 1em 0 .5em 0;
+  }
+}

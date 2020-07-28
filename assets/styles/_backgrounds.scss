@@ -52,6 +52,15 @@
   }
 }
 
+.innovation-section-head--indaginecovid19 {
+  @at-root .no-webp #{&} {
+    background-image: url($assets + "/images/backgrounds/coronavirus-statistics-on-screen-2.jpg");
+  }
+  @at-root .webp #{&} {
+    background-image: url($assets + "/images/backgrounds/coronavirus-statistics-on-screen-2.webp");
+  }
+}
+
 .innovation-section-head--italia-2025 {
   @at-root .no-webp #{&} {
     background-image: url($assets + "/images/backgrounds/cubos-italia-2025.jpg");
