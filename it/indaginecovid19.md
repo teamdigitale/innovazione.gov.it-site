@@ -11,6 +11,9 @@ intro: true
 fluid: true
 # order: 1
 no_site_toc: true
+redirect_from:
+  - /it/indaginecovid19
+  - /indaginecovid19
 ---
 
 <div class="container indagineCovid19_container">
