@@ -9,11 +9,11 @@ ref: indaginecovid19
 hide_child_of_ref: true
 intro: true
 fluid: true
-# order: 1
+# order: 1 // NoShow in nav-bar menu
 no_site_toc: true
-redirect_from:
-  - /it/indaginecovid19
-  - /indaginecovid19
+# redirect_from:
+#   - /it/indaginecovid19
+#   - /indaginecovid19
 ---
 
 <div class="container indagineCovid19_container">
