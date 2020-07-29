@@ -1,7 +1,7 @@
 ---
 lang: it
 layout: page
-title: Come gli italiani si difendono dal Covid19
+title: Come gli italiani si difendono dal Covid-19
 title_short: indegineCovid19
 description: (uno studio dell’Università di Pavia)
 ref: indaginecovid19
@@ -33,7 +33,7 @@ no_site_toc: true
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
             <h6>Perché partecipare</h6>
-            <p>Perché il virus non è ancora sconfitto, e sapere come gli italiani si proteggono dalla minaccia del Covid19 è utile a imprese e istituzioni affinché prendano le decisioni corrette.</p>
+            <p>Perché il virus non è ancora sconfitto, e sapere come gli italiani si proteggono dalla minaccia del Covid-19 è utile a imprese e istituzioni affinché prendano le decisioni corrette.</p>
             <p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlzlpYy8naGLi970LcYO6Sb6DVjOZetZPiARDBboxZzlpalg/viewform?usp=send_form" target="_blank">Questa è l'occasione per dare il tuo contributo, clicca qui per cominciare.</a>
             </p>
