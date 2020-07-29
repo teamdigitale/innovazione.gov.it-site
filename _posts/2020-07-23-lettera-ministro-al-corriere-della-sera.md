@@ -9,6 +9,7 @@ categories:
   - highlights
   - pubblica amministrazione
   - cittadini
+english_version: letter-from-minister-to-corriere
 ---
 
 _In un'epoca di innovazione tecnologica impetuosa l'Italia deve essere all'altezza dei tempi. Serve un impegno comune di maggioranza e opposizione per il bene del Paese._
