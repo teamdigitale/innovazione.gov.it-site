@@ -3,7 +3,7 @@ lang: it
 layout: page
 title: Come gli italiani si difendono dal Covid-19
 title_short: indegineCovid19
-description: (uno studio dell’Università di Pavia)
+description: Uno studio dell’Università di Pavia
 ref: indaginecovid19
 
 hide_child_of_ref: true
