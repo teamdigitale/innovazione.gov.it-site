@@ -47,20 +47,27 @@ no_site_toc: true
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6>Che uso viene fatto dei dati?</h6>
-            <p>L’indagine è assolutamente anonima, garantita da Università di Pavia. dati sono trattati nel pieno rispetto delle norme in materia e unicamente per i fini sopra indicati. Non seguirà nessuna azione diretta verso singoli individui, né commerciale, né sanitaria, né altro.</p>
+            <h6>I dati sono confidenziali? Chi li gestirà?</h6>
+            <p>I dati sono assolutamente confidenziali, anonimi e verranno conservati e trattati unicamente da Università di Pavia in piena conformità con quanto previsto da GDPR e in generale dalla normativa in materia. Verranno usati solo in forma aggregata per finalità di ricerca. Non seguirà nessuna azione diretta verso singoli individui, né commerciale, né sanitaria, né altro.</p>
+            <p>In coda al questionario, dopo aver visionato le domande, verrà chiesto di concedere l'autorizzazione all'utilizzo dei dati per soli fini di ricerca scientifica.</p>
             <p>Infine, chiunque può chiedere - indicandolo in chiusura di compilazione del questionario - di ricevere i principali risultati dello studio.</p>
         </div>
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6>Come partecipare allo studio?</h6>
-            <p>Per partecipare all’indagine e dare il tuo contributo clicca a questo link:</p>
+            <h6>Informativa sul trattamento dei dati (a cura di Università di Pavia)</h6>
             <p>
-                <a href="https://forms.gle/wHCN2XCTKzvAk4wy5" target="_blank">
-                    https://forms.gle/wHCN2XCTKzvAk4wy5
-                </a>
+                E' possibile scaricare l'informativa sul trattamento dei dati a questo <a href="https://drive.google.com/file/d/166qXGaUGh3HJrc1aEN_vowJIVtlh8Zjs/view" target="_blank">link</a>
             </p>
+        </div>
+    </div>
+    <div class="row indagineCovid19_box-noBorder">
+        <div class="col-12 col-lg-10">
+            <h6>Come partecipare allo studio?</h6>
+            <p>
+                Per partecipare all’indagine e dare il tuo contributo clicca questo <a href="https://forms.gle/wHCN2XCTKzvAk4wy5" target="_blank">link</a>
+            </p>
+            <br />
         </div>
     </div>
 </div>
