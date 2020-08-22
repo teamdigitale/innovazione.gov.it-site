@@ -5,8 +5,8 @@ ref: misure-su-innovazione-digitale-nel-decreto-semplificazioni-in-gazzetta-uffi
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/2020-07-07-misure-su-innovazione-digitale-nel-decreto-semplificazioni.jpg" alt="In Gazzetta Ufficiale il decreto legge 'misure urgenti per la semplificazione e l'innovazione digitale'"/>
-pinned: true
 categories:
+  - highlights
   - cittadini
   - pubblica amministrazione
 ---
