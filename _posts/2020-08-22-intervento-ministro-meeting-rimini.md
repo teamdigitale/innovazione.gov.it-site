@@ -14,8 +14,10 @@ _Il cambiamento della Pubblica Amministrazione al tempo del coronavirus. "Inizia
 
 <!-- MORE -->
 
-Buon pomeriggio,
-saluto gli illustri relatori che hanno parlato prima di me  non sono stata paziente ad ascoltare i vostri interventi ma molto interessata i vostri spunti e per questo vi ringrazio.  
+
+**Ecco il testo integrale dell'intervento**
+
+Saluto gli illustri relatori che hanno parlato prima di me  non sono stata paziente ad ascoltare i vostri interventi ma molto interessata i vostri spunti e per questo vi ringrazio.  
 
 Ringrazio gli organizzatori del Meeting e la rivista Public Management per avermi invitato a questo appuntamento che si svolge come avviene ogni anno secondo una tradizione ormai consolidata, ma non esattamente come ogni anno: molti di noi sono collegati via Internet. Ci troviamo fisicamente distanti eppure accomunati da un desiderio di confrontare le nostre idee con quelle degli altri.  
 
