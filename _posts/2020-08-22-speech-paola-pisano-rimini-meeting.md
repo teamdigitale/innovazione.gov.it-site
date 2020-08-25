@@ -15,8 +15,6 @@ _A changing Public Administration in the time of Coronavirus. “Starting proces
 <!-- MORE -->
 
 
-**Ecco il testo integrale dell'intervento**
-
 I wish to greet the distinguished speakers who have spoken before me. I do thank you for the interesting ideas that have been shared.  
 
 I thank the organizers of the Meeting and the Public Management magazine for inviting me to this event which takes place as it does every year according to a well-established tradition, although this year is not exactly the same as many of us are connected via the Internet. We find ourselves physically distant yet united by the desire to share and compare our ideas.  
