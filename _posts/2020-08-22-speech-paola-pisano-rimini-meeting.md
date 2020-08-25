@@ -10,7 +10,7 @@ italian_version: intervento-ministro-meeting-rimini
 hidden: true
 ---
 
-_Il cambiamento della Pubblica Amministrazione al tempo del coronavirus. "Iniziare processi più che occupare spazi". Questo il tema del webinar a cui Paola Pisano ha partecipato_
+_A changing Public Administration in the time of Coronavirus. “Starting processes rather than occupying spaces”. - The theme of the webinar in which Paola Pisano participated_
 
 <!-- MORE -->
 
@@ -42,7 +42,7 @@ What does this entail? It entails  -to stick with the themes of our meeting-  to
 
 President Mattarella wisely wrote in his greeting to the Meeting: “The recovery is possible provided that planning ability and a drive towards the integral development of the people will go hand in hand with all the legitimate interests at stake”. This is up to us, this we must do in our respective fields of action. Why? Perhaps, because of a third party’s obligation? No.  
 
-**Because it is only doing so, we can live better and we will be able to make our children live better, children who are precious and indispensable assets for the resistance and persistence of any society.**  
+**Only by doing so, we can live better and we will be able to make our children live better, children who are the precious and indispensable assets for the resistance and persistence of any society.**  
 
 Despite the difficulties, the country has a great opportunity to relaunch. In allocating 209 billion euros to Italy with the Recovery Fund, 28% of the total European fund - I repeat: 28%, not a small change - the European Union is making an enormous effort to help to reduce the economic damage of the Covid-19 pandemic.  
 
@@ -56,7 +56,7 @@ I would start from the evidence of a problem that I have been pointing out for s
 
 The connectivity would encourage foreign companies and professionals to choose Italy not only for the quality of life but also for the quality of its technological infrastructure.  
 
-**Better connecting Italy requires foresight and a strong and sustained political commitment; indeed, this project must be pursued with determination even in the years to come, no matter what political force will be at the helm of the country.**  
+**Offering the country better connectivity requires foresight and a strong and sustained political commitment; indeed, this project must be pursued with determination even in the years to come, no matter what political force will be at the helm of the country.**  
 
 The dialectic between the parliamentary majority and the opposition is needed as it’s the salt of a democracy. But we must find ways to converge on projects that are in everyone's interest: reinvigorating the Italian telecommunications sector is one of these.  
 **The help that the European Union gives us, in my opinion, should focus on strengthening our technological infrastructures,  among the main areas of intervention. We need it. It is useful to us, to all.**  
@@ -68,12 +68,12 @@ It is necessary to introduce a conducive framework to strike a balance between t
 
 However, this is not enough. Providing Italy with better connectivity without adequate services is like connecting a house to the electricity grid without supplying it with light bulbs; there is electricity but without light bulbs, it will be of little use.  
 
-Many of you have heard of the **"single network of telecommunications". As important as it is, the creation of a single network for our telecommunications is not in itself sufficient as Professor Carrozza points out: it should be integrated as of with a strategic infrastructure equally essential for the development of services.**  
+Many of you have heard of the **"single network of telecommunications". As important as it is, the creation of a single network for our telecommunications is not in itself sufficient as Professor Carrozza points out: it should be integrated with a strategic infrastructure equally essential for the development of services.**  
 This infrastructure must consist of the set of containers in which we store our data - the ‘cloud data centers’ - and which guarantee the continuous functioning of essential services: from digital systems that allow a hospital to function, to our mobile phones in which we store photos, messages, information about us.  
-**The cloud store makes available and potentially analyzes the digital data of billions of devices of our companies and citizens. Today, it represents the most important challenge for the digitalization of the country as it not only enables the use of remote services but is the foundation for the development of new technologies that are so much talked about such as artificial intelligence, robotics, 4.0 manufacturing.**  
+**The cloud makes available and potentially analyzes the digital data of billions of devices of our companies and citizens. Today, it represents the most important challenge for the digitalization of the country as it not only enables the use of remote services but is the foundation for the development of new technologies that are so much talked about such as artificial intelligence, robotics, 4.0 manufacturing.**  
 **Strengthening the European and Italian cloud system is a new project which has not been launched yet. Why?**  
 
-Because it needs strong political support and needs relevant economic support. The Recovery Fund can provide financial support.   
+Because it needs strong political support and needs relevant economic support. The Recovery Fund can provide the much needed financial support.   
 
 It is up to us to put the will, the commitment, the foresight into it. And, if we love Italy and we care for our future, this undertaking is not only for the current government and its majority but also for the opposition, with all its critical contributions and insights.  
 
@@ -89,9 +89,9 @@ Who will benefit from such a huge amount of information? Only those countries an
 
 There are some public sector data centers that should remain autonomous as they have specific security needs. However, this does not justify the fact that many branches of the public administration will be unable to communicate with each other forever. Nor should it involve sporadic and out-of-context investments which are not commensurate with the actual need of any specific administration.  
 
-Today, in Italy, we use clouds outside the European Union for 60% of our needs. **we do not turn this situation soon, our country risks technological dependency on an oligopoly of foreign big techs; even more worrisome, the rules of the countries in which the data centers are based will apply.** We cannot shy away from the problem. I don’t have an ideological approach but I wish to point it out because we need to deal with this reality: because of technological limitations, we must use cloud data centers located in other countries. However, from now on we must make the best use of the secure infrastructures available to the country, push in favor of a national cloud in synergy with the European Union and with the Gaia X project: a federation of clouds of private entities in which we are considering participating with our best companies.  
+Today, in Italy, we use clouds outside the European Union for 60% of our needs. **we do not turn this situation soon, our country risks technological dependency on an oligopoly of foreign big techs; even more worrisome, the rules of the countries in which the data centers are based will apply.** We cannot shy away from the problem. I don’t have an ideological approach but I wish to point it out because we need to deal with this reality: because of technological limitations, we must use cloud data centers located in other countries. However, from now on we must make the best use of the secure infrastructures available to the country, and push in favor of a national cloud in synergy with the European Union and with the Gaia X project: a federation of clouds of private entities in which we are considering participating with our best companies.  
 
-**Someone may ask: what does the government do? In the Decree “Simplification and digital innovation”, under the coordination of the Prime Minister’s Office, we have moved towards this direction and promoted the development of a highly reliable national cloud infrastructure.**  
+**Someone may ask: what does the government do? It is indeed working. In the Decree “Simplification and digital innovation”, under the coordination of the Prime Minister’s Office, we have moved towards this direction and promoted the development of a highly reliable national cloud infrastructure.**  
 
 **In the same decree, the different Public Administrations are required to develop their services in the cloud and not in their separate and closed data centers.**  
 
@@ -117,7 +117,8 @@ Do we want to start pushing our limits? Are we going to build the future?
 
 Let's start from the facts. As Mario Draghi, the authoritative economist and former President of the European Central Bank, has pointed out here at the Meeting: "Il debito creato con la pandemia è senza precedenti e dovrà essere ripagato principalmente da coloro che sono oggi i giovani. E’ nostro dovere far sì che abbiano tutti gli strumenti per farlo". One of these tools must certainly be an adequate ability to work with new technologies.  
 
-There is a book _Scuola di Religione (School of Religion)_ the title of which may seem to lead us away from our theme. As many know, it is a Father Giussani's book. He wrote:
+There is a book _Scuola di Religione (School of Religion)_ the title of which may seem to lead us away from our theme. As many know, Father Giussani is the author. He wrote:  
+
 "Let’s take a student who, for whatever reason, doesn't like maths and therefore never put any effort into studying the subject. He will never understand what his mathematical abilities truly are. If conversely, he begins to put the effort into studying maths, he may as well realize to have above-average abilities in that subject. The only action unveils talent and human character." (_Scuola di Religione, p. 7_).  
 
 Indeed, in Italy, we must do more to promote, unleash, exploit the technical and scientific talent of our young people.  
