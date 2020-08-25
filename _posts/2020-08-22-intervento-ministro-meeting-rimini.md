@@ -8,6 +8,7 @@ asset: <img class="w-100" src="/assets/images/posts/2020-08-22-intervento-minist
 pinned: true
 categories:
   - pubblica amministrazione
+english_version: speech-paola-pisano-rimini-meeting
 ---
 
 _Il cambiamento della Pubblica Amministrazione al tempo del coronavirus. "Iniziare processi più che occupare spazi". Questo il tema del webinar a cui Paola Pisano ha partecipato_
