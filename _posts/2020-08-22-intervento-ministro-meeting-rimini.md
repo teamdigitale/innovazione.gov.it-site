@@ -6,6 +6,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/2020-08-22-intervento-ministro-meeting-rimini.jpg" alt="La Ministra Paola Pisano è intervenuta al Meeting di Rimini"/>
 categories:
+  - highlights
   - pubblica amministrazione
 english_version: speech-paola-pisano-rimini-meeting
 ---
