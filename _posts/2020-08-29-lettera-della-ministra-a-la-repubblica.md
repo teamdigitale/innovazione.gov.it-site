@@ -10,7 +10,7 @@ categories:
  - cittadini
 ---
 
-_Paola Pisano illustrata la sua proposta di inserire nei cicli scolastici e nei corsi universitari una nuova materia dedicata alle competenze digitali._
+_Paola Pisano illustra la sua proposta di inserire nei cicli scolastici e nei corsi universitari una nuova materia dedicata alle competenze digitali._
 
 <!-- MORE -->
 
