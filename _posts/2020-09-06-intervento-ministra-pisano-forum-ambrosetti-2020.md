@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "La lettera che la ministra dell’Innovazione tecnologica e della Digitalizzazione Pisano ha scritto al direttore di Repubblica"
+title: "DRAFT AMBROSETTI La lettera che la ministra dell’Innovazione tecnologica e della Digitalizzazione Pisano ha scritto al direttore di Repubblica"
 ref: lettera-della-ministra-pisano-al-direttore-di-repubblica
 lang: it
 excerpt_separator: <!-- MORE -->
