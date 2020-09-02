@@ -8,6 +8,7 @@ asset: <img class="w-100" src="/assets/images/posts/2020-08-29-lettera-della-min
 pinned: true
 categories:
  - cittadini
+english_version: letter-from-minister-to-repubblica
 ---
 
 _Paola Pisano illustra la sua proposta di inserire nei cicli scolastici e nei corsi universitari una nuova materia dedicata alle competenze digitali._
