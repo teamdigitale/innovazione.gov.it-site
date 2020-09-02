@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Letter from the Minister for Technological Innovation and Digitalization to the Director of La Repubblica"
-ref: lettera-della-ministra-pisano-al-direttore-di-repubblica
+ref: letter-from-minister-technological-innovation-to-la-repubblica
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/2020-08-29-lettera-della-ministra-pisano-al-direttore-di-repubblica.jpg" alt="La lettera della ministra dell’Innovazione tecnologica Pisano al direttore di Repubblica"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-08-29-lettera-della-ministra-pisano-al-direttore-di-repubblica.jpg" alt="Letter from the Minister for Technological Innovation and Digitalization to the Director of La Repubblica"/>
 categories:
 italian_version: lettera-della-ministra-a-la-repubblica
 hidden: true
 ---
 
-_Paola Pisano explains her proposa to improve digital skills in the Primary and Lower Secondary Education, and University_
+_Paola Pisano explains her proposal to improve digital skills in the Primary and Lower Secondary Education, and University_
 
 <!-- MORE -->
 
