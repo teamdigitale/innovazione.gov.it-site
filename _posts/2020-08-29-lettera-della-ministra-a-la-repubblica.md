@@ -4,7 +4,7 @@ title: "La lettera che la ministra dell’Innovazione tecnologica e della Digita
 ref: lettera-della-ministra-pisano-al-direttore-di-repubblica
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/2020-08-29-lettera-della-ministra-pisano-al-direttore-di-repubblica.jpg" alt="Lettera del Ministro al Corriere della Sera del 23 luglio"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-08-29-lettera-della-ministra-pisano-al-direttore-di-repubblica.jpg" alt="La lettera della ministra dell’Innovazione tecnologica Pisano al direttore di Repubblica"/>
 pinned: true
 categories:
  - cittadini
