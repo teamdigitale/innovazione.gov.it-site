@@ -4,7 +4,7 @@ title: "Articolo di prova di daniele"
 ref: articolo-prova-daniele
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/Screenshot 2020-09-03 at 17.22.08.jpg" 
+asset: <img class="w-100" src="/assets/images/posts/2020-07-08-prova-foto-daniele.png" 
 alt="La lettera della ministra dell’Innovazione tecnologica Pisano al direttore di Repubblica"/>
 pinned: true
 categories:
