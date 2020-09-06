@@ -6,7 +6,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano"/>
 pinned: true
-english_version: intervento-ministra-pisano-forum-ambrosetti
+english_version: pisano-forum-ambrosetti-2020
 categories:
  - PA
 ---
