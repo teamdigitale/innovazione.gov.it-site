@@ -10,7 +10,7 @@ categories:
  - PA
 ---
 
-_Gli scenari di oggi e di domani per le strategie competitive’. Questo il tema della 46° edizione del Forum_
+_'Gli scenari di oggi e di domani per le strategie competitive’: questo il tema della 46° edizione del Forum_
 
 <!-- MORE -->
 
@@ -104,6 +104,3 @@ Come ha detto il Presidente della Repubblica Sergio Mattarella: “La crisi prov
 Su questi obiettivi occorre una convergenza di rami alti e intermedi dell’amministrazione, degli enti locali, di datori di lavoro e organizzazioni dei lavoratori, di maggioranza e opposizione. Credo che l’alternativa, il non procedere così, possa comportare esclusivamente declino. 
 E’ per questo che servono le idee e gli sforzi costruttivi di tutti noi. Lo dobbiamo al nostro Paese. Lo facciamo per il nostro ruolo in Europa. Lo dobbiamo fare per le generazioni che verranno dopo di noi.
 
-
-Paola Pisano  
-Ministra per l'Innovazione Tecnologica e della Digitalizzazione  
