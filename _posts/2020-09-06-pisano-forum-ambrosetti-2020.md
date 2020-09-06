@@ -10,7 +10,7 @@ italian_version: intervento-ministra-pisano-forum-ambrosetti-2020
 hidden: true
 ---
 
-_'Gli scenari di oggi e di domani per le strategie competitive’: this the theme of the 46th edition of the Forum Ambrosetti_
+_'Intelligence on the World, Europe, and Italy’: this the theme of the 46th edition of the Forum Ambrosetti_
 
 <!-- MORE -->
 
