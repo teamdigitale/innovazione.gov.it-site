@@ -5,7 +5,7 @@ ref: Outline-of-the-intervention-Minister-of-Technological-Innovation-and-Digita
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="Paola Pisano at Forum Ambrosetti"/>
-pinned: true
+pinned: false
 italian_version: intervento-ministra-pisano-forum-ambrosetti-2020
 hidden: true
 ---
