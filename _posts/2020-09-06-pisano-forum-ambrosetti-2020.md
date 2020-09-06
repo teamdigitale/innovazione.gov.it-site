@@ -6,7 +6,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="Paola Pisano at Forum Ambrosetti"/>
 pinned: true
-italian_version: intervento-ministra-pisano-forum-ambrosetti
+italian_version: intervento-ministra-pisano-forum-ambrosetti-2020
 hidden: true
 ---
 
