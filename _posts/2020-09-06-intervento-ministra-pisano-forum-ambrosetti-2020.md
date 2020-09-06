@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L’intervento della Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"
-ref: L’intervento-della Ministra-per-lInnovazione-Tecnologica-e-la-Digitalizzazione-Paola-Pisano-al-Forum-Ambrosetti-di-Cernobbio"
+ref: intervento-della-ministra-per-l-innovazione-tecnologica-e-la-digitalizzazione-al-forum-ambrosetti-di-cernobbio
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano"/>
@@ -18,7 +18,7 @@ _'Gli scenari di oggi e di domani per le strategie competitive’: questo il tem
 
 Ringrazio studio Ambrosetti per aver promosso questo confronto al quale partecipiamo stamattina e per la  tecnologia utilizzata. Perché anche nei convegni c’e’ molto da innovare.
 
-L’ associare l’ineludibile fattore umano della presenza  di una parte dei convegnisti in un luogo fisico con una rete così estesa di collegamenti più  l’utilizzo di ologrammi e un bell’esempio di utilizzo delle tecnologie. 
+L’associare l’ineludibile fattore umano della presenza  di una parte dei convegnisti in un luogo fisico con una rete così estesa di collegamenti più  l’utilizzo di ologrammi e un bell’esempio di utilizzo delle tecnologie. 
 
 
 Quegli ologrammi che ci sembrano di aria nella realtà tecnica, dal punto di vista della  trasmissione di informazioni necessarie per dare forma a quelle immagini, sono pesanti. Molto pesanti. 
@@ -50,7 +50,7 @@ Sia la rete sia gli altri strumenti dei quali ci avvaliamo nelle nostre attivit�
  Intendo dire che **i nostri prossimi investimenti devono dotarci di infrastrutture e mezzi che corrano meno rischi possibile di venire presto superati da altri più efficienti e meno costosi. Significa che devono essere, quanto meno, facilmente aggiornabili senza dover essere interamente sostituiti.
 
 **In Italia sappiamo tutti che prima o poi dovremmo fare i conti con il 5G. Mi permetto di dire che non sarebbe male farli prima piuttosto che dopo. Intendo con questo che è bene lasciare alle sedi dovute e con le procedure dovute le decisioni su come e con quali fornitori avvalerci della quinta generazione di connettività mobile. 
-Però non riusciamo ad essere lungimiranti se togliamo dalla nostra visuale questa infrastruttura perchè prima o poi arriverà anche da noi. In diverse parti del mondo è già arrivata. Noi dobbiamo attrezzare il nostro Paese a vincere le gare future nell’evoluzione delle nuove tecnologie più che attardarci nello sperare di vincere gare già vinte da altri. Guardare avanti, non indietro.**
+Però non riusciamo ad essere lungimiranti se togliamo dalla nostra visuale questa infrastruttura perché prima o poi arriverà anche da noi. In diverse parti del mondo è già arrivata. Noi dobbiamo attrezzare il nostro Paese a vincere le gare future nell’evoluzione delle nuove tecnologie più che attardarci nello sperare di vincere gare già vinte da altri. Guardare avanti, non indietro.**
 
 La lettera di intenti definita da Tim e Cassa depositi e prestiti Equity è un primo passo, ma dovrà essere seguito velocemente da altri e lungo un percorso ambizioso, non facile e tuttavia indispensabile.
 
@@ -76,7 +76,7 @@ Nel decreto “Semplificazione e innovazione digitale” abbiamo inserito per gl
 I servizi dovranno essere accessibili attraverso le così dette “piattaforme abilitanti”.
 Tra queste:
 
-Spid, il Servizio pubblico per l’identità digitale che ha credenziali uniche e sicure: ad oggi 10 milioni di cittadini hanno l’identità digitale. Un anno fa, quando ho avuto l’onore di entrare a far parte del nuovo governo guidato da Giuseppe Conte, erano 4 milioni. E’ stato uno dei miei campi di intervento.
+SPID, il Servizio pubblico per l’identità digitale che ha credenziali uniche e sicure: ad oggi 10 milioni di cittadini hanno l’identità digitale. Un anno fa, quando ho avuto l’onore di entrare a far parte del nuovo governo guidato da Giuseppe Conte, erano 4 milioni. E’ stato uno dei miei campi di intervento.
 
 App “Io”: canale unico della Pubblica amministrazione. L’abbiamo sviluppata in pieno Covid-19 e da aprile tutti i cittadini possono scaricarla dagli “store” accessibili via cellulare. Da aprile ad oggi tre milioni di cittadini l’hanno scaricata. Un milione e mezzo l’hanno utilizzata per ricevere il  Bonus vacanze predisposto dal Ministro dei Beni culturali Dario Franceschini.
 
@@ -92,13 +92,13 @@ Rientrano in questo impegno le nuove infrastrutture digitali e la sicurezza, i d
 
 A mio avviso deve rientrare in questo impegno, tra gli altri aspetti, **il passaggio da una fase nella quale i nostri ragazzi conoscono le nuove tecnologie da autodidatti, come avviene adesso nella maggior parte dei casi, a una nella quale imparano a conoscerle sempre più con metodo e in maniere tali da alzare il livello delle loro competenze e consapevolezze. Non solo. Anche di allargare il bacino potenziale dei nostri futuri tecnici e delle nostre creatività innovative.** 
 
-Ne ha bisogno il Paese, ne hanno e ne avranno bisogno le imprese. Per questo ho proposto: alla Ministra dell’Istruzione Lucia Azzolina di aggiungere spazi appositi nei programmi didattici per far conoscere ai nostri studenti opportunità e rischi della Rete, per spiegare loro il pensiero computazionale -  ossia come definire un problema che possa essere affrontato anche da una macchina - l’intelligenza artificiale, la sicurezza cibernetica, criteri di analisi dei dati e altro. Non esistono i nativi digitali solo perchè nasciamo con un cellulare in mano. Con il Ministro della Ricerca Gaetano Manfredi condividiamo l’idea che in ogni corso universitario una piccola parte del tempo vada dedicata alla conoscenza di strumenti e metodologie digitali che possono essere utili per il campo oggetto di studio.
+Ne ha bisogno il Paese, ne hanno e ne avranno bisogno le imprese. Per questo ho proposto: alla Ministra dell’Istruzione Lucia Azzolina di aggiungere spazi appositi nei programmi didattici per far conoscere ai nostri studenti opportunità e rischi della Rete, per spiegare loro il pensiero computazionale -  ossia come definire un problema che possa essere affrontato anche da una macchina - l’intelligenza artificiale, la sicurezza cibernetica, criteri di analisi dei dati e altro. Non esistono i nativi digitali solo perché nasciamo con un cellulare in mano. Con il Ministro della Ricerca Gaetano Manfredi condividiamo l’idea che in ogni corso universitario una piccola parte del tempo vada dedicata alla conoscenza di strumenti e metodologie digitali che possono essere utili per il campo oggetto di studio.
 
 Con le nuove tecnologie dobbiamo fare tutti i conti. In futuro l’intelligenza artificiale farà parte sempre di più della nostra vita e dobbiamo capirla da adesso.
  Questo non significa essere degli ingegneri del software. Non dobbiamo mica essere un pilota di formula uno per guidare un’automobile. Ma se ormai tutti sappiamo cambiare una ruota di un’auto è giusto che tutti in futuro sappiano capire come funziona l'intelligenza artificiale. 
 
 Per questo abbiamo definito una strategia di competenze digitali, un programma per formare la cittadinanza  (si chiama Repubblica digitale) e nelle prossime settimane introdurremo una piattaforma che aiuti tutti i  cittadini nello sviluppo di competenze sull’intelligenza artificiale. 
-Perchè servirà. Proprio come serve oggi saper cambiare una ruota di una macchina. 
+Perché servirà. Proprio come serve oggi saper cambiare una ruota di una macchina. 
 Chiaramente, tutto il percorso che ho descritto, non sarà una passeggiata.  
 Come ha detto il Presidente della Repubblica Sergio Mattarella: “La crisi provocata dalla pandemia è stata uno spartiacque per l’Unione Europea che in meno di sei mesi ha compiuto scelte coraggiose e innovative”.
 Su questi obiettivi occorre una convergenza di rami alti e intermedi dell’amministrazione, degli enti locali, di datori di lavoro e organizzazioni dei lavoratori, di maggioranza e opposizione. Credo che l’alternativa, il non procedere così, possa comportare esclusivamente declino. 
