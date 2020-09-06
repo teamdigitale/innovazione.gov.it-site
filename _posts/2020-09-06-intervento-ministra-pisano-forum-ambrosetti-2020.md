@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "TRACCIA INTERVENTO MINISTRO PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE"
-ref: lettera-della-ministra-pisano-al-direttore-di-repubblica
+ref: TRACCIA-INTERVENTO-MINISTRO-PER-L’INNOVAZIONE-TECNOLOGICA-E-LA-DIGITALIZZAZIONE
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="TRACCIA INTERVENTO MINISTRO PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE "/>
 pinned: true
 categories:
  - cittadini
-english_version: letter-from-minister-to-repubblica
+english_version: speech-ambrosetti
 ---
 
 _Paola Pisano illustra la sua proposta di inserire nei cicli scolastici e nei corsi universitari una nuova materia dedicata alle competenze digitali._
