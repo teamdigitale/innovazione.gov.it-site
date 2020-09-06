@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "L’intervento della Ministra per l’Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"
-ref: TRACCIA-INTERVENTO-MINISTRA-PER-L’INNOVAZIONE-TECNOLOGICA-E-LA-DIGITALIZZAZIONE
+ref: L’intervento-della Ministra-per-lInnovazione-Tecnologica-e -a Digitalizzazione-Paola-Pisano-al-Forum-Ambrosetti-di-Cernobbio"
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="TRACCIA INTERVENTO MINISTRA PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE "/>
+asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l'Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio""/>
 pinned: true
 categories:
  - PA
