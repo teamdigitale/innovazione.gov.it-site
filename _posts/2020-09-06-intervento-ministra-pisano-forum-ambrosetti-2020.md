@@ -7,11 +7,10 @@ excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="TRACCIA INTERVENTO MINISTRO PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE "/>
 pinned: true
 categories:
- - cittadini
-english_version: speech-ambrosetti
+ - PA
 ---
 
-_Paola Pisano illustra la sua proposta di inserire nei cicli scolastici e nei corsi universitari una nuova materia dedicata alle competenze digitali._
+_Intervento di Paola Pisano al Forum The European House Ambrosetti del 6 Settembre 2020_
 
 <!-- MORE -->
 
