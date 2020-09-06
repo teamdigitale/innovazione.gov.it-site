@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TRACCIA INTERVENTO MINISTRA PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE"
+title: "L’intervento della Ministra per l’Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"
 ref: TRACCIA-INTERVENTO-MINISTRA-PER-L’INNOVAZIONE-TECNOLOGICA-E-LA-DIGITALIZZAZIONE
 lang: it
 excerpt_separator: <!-- MORE -->
