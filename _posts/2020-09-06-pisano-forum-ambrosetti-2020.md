@@ -6,6 +6,8 @@ lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="Paola Pisano at Forum Ambrosetti"/>
 pinned: true
+italian_version: lettera-della-ministra-a-la-repubblica
+hidden: true
 categories:
  - PA
 ---
