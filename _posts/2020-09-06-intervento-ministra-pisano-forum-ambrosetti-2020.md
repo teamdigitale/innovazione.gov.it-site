@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "TRACCIA INTERVENTO MINISTRO PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE"
-ref: TRACCIA-INTERVENTO-MINISTRO-PER-L’INNOVAZIONE-TECNOLOGICA-E-LA-DIGITALIZZAZIONE
+title: "TRACCIA INTERVENTO MINISTRA PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE"
+ref: TRACCIA-INTERVENTO-MINISTRA-PER-L’INNOVAZIONE-TECNOLOGICA-E-LA-DIGITALIZZAZIONE
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="TRACCIA INTERVENTO MINISTRO PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE "/>
+asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="TRACCIA INTERVENTO MINISTRA PER L’INNOVAZIONE TECNOLOGICA E LA DIGITALIZZAZIONE "/>
 pinned: true
 categories:
  - PA
 ---
 
-_Intervento di Paola Pisano al Forum The European House Ambrosetti del 6 Settembre 2020_
+_Intervento di Paola Pisano al forum “Lo scenario di oggi e di domani per le strategie competitive” organizzato dallo Studio Ambrosetti. Cernobbio, 6 Settembre 2020_
 
 <!-- MORE -->
 
