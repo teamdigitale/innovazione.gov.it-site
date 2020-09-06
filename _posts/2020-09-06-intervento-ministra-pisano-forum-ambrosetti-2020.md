@@ -4,7 +4,7 @@ title: "L’intervento della Ministra dell’Innovazione tecnologica e della Dig
 ref: L’intervento-della Ministra-per-lInnovazione-Tecnologica-e-la-Digitalizzazione-Paola-Pisano-al-Forum-Ambrosetti-di-Cernobbio"
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"/>
+asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano"/>
 pinned: true
 categories:
  - PA
