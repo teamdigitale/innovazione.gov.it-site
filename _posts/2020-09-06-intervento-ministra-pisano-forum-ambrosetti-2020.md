@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "L’intervento della Ministra per l’Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"
+title: "L’intervento della Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"
 ref: L’intervento-della Ministra-per-lInnovazione-Tecnologica-e-la-Digitalizzazione-Paola-Pisano-al-Forum-Ambrosetti-di-Cernobbio"
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio""/>
+asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisano.jpeg" alt="L’intervento della Ministra per l Innovazione Tecnologica e la Digitalizzazione Paola Pisano al Forum Ambrosetti di Cernobbio"/>
 pinned: true
 categories:
  - PA
 ---
 
-_Intervento di Paola Pisano al forum “Lo scenario di oggi e di domani per le strategie competitive” organizzato dallo Studio Ambrosetti. Cernobbio, 6 Settembre 2020_
+_Gli scenari di oggi e di domani per le strategie competitive’. Questo il tema della 46° edizione del Forum_
 
 <!-- MORE -->
+
+**La traccia dell’intervento della Ministra Paola Pisano**
 
 Ringrazio studio Ambrosetti per aver promosso questo confronto al quale partecipiamo stamattina e per la  tecnologia utilizzata. Perché anche nei convegni c’e’ molto da innovare.
 
