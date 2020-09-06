@@ -8,8 +8,6 @@ asset: <img class="w-100" src="/assets/images/posts/ForumAmbrosetti2020PaolaPisa
 pinned: true
 italian_version: intervento-ministra-pisano-forum-ambrosetti
 hidden: true
-categories:
- - PA
 ---
 
 _'Gli scenari di oggi e di domani per le strategie competitive’: this the theme of the 46th edition of the Forum Ambrosetti_
