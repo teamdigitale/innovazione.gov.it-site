@@ -4,7 +4,7 @@ title: "Articolo di prova di daniele"
 ref: articolo-prova-daniele
 lang: it
 excerpt_separator: <!-- MORE -->
-asset: asset: <img class="w-100" src="/assets/images/posts/2020-07-08-prova-foto-daniele.png" alt="immagine di prova"/>
+asset: asset: <img class="w-100" src="/assets/images/posts/2020_09_08_foto_prova_articolo_Daniele.png" alt="immagine di prova"/>
 pinned: true
 categories:
  - cittadini
