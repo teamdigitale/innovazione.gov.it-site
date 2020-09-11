@@ -4,7 +4,8 @@ layout: page
 title: Come gli italiani si difendono dal Covid-19
 title_short: indegineCovid19
 description: Uno studio dell’Università di Pavia
-meta_customized_keywords: Coronavirus, Covid19, Sicurezza, contagio, sanità, virus, contatti? mascherina? questionari, indagine, volontariato, no profit, beneficienza
+meta_customized_keywords: Coronavirus, Covid19, Sicurezza, contagio, sanità, virus, contatti, mascherina, questionari, indagine, volontariato, no profit, beneficienza
+# meta_customized_keywords:
 ref: indaginecovid19
 
 hide_child_of_ref: true
@@ -12,9 +13,8 @@ intro: true
 fluid: true
 # order: 1 // NoShow in nav-bar menu
 no_site_toc: true
-# redirect_from:
-#   - /it/indaginecovid19
-#   - /indaginecovid19
+redirect_from:
+  - /indaginecovid19
 ---
 
 <div class="container indagineCovid19_container">
