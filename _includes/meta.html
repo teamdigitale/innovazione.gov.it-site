@@ -24,6 +24,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="{{ meta_description }}">
+{%- comment %} Inserite custom Keywords per la pagina Survey Covid-19 UniPV {% endcomment -%}
+{% if page.meta_customized_keywords %}
+{% include meta_customized_keywords.html %}
+{% endif %}
 <meta name="author" content="{{ site.data.t.author[page.lang] }}">
 <meta name="generator" content="Jekyll {{ site.version }}">
 {% comment %} Title {% endcomment %}

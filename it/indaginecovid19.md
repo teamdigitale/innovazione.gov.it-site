@@ -4,6 +4,7 @@ layout: page
 title: Come gli italiani si difendono dal Covid-19
 title_short: indegineCovid19
 description: Uno studio dell’Università di Pavia
+meta_customized_keywords: Coronavirus, Covid19, Sicurezza, contagio, sanità, virus, contatti? mascherina? questionari, indagine, volontariato, no profit, beneficienza
 ref: indaginecovid19
 
 hide_child_of_ref: true
@@ -25,7 +26,7 @@ no_site_toc: true
     <div class="row indagineCovid19_box">
         <div class="col-12 col-lg-10 offset-lg-1">
             <h5>
-                <a href="https://forms.gle/z9wRsDoiVGVFy4L97" target="_blank">Dai il tuo contributo, clicca qui per partecipare allo studio</a>
+                <a href="https://forms.gle/svUWNq4XURRYSgN8A" target="_blank">Dai il tuo contributo, clicca qui per partecipare allo studio</a>
             </h5>
             <p>partecipare non ti costa nulla e può essere di grande aiuto, bastano 5 minuti ed è tutto completamente anonimo</p>
         </div>
@@ -65,7 +66,7 @@ no_site_toc: true
         <div class="col-12 col-lg-10">
             <h6>Come partecipare allo studio?</h6>
             <p>
-                Per partecipare all’indagine e dare il tuo contributo clicca questo <a href="https://forms.gle/wHCN2XCTKzvAk4wy5" target="_blank">link</a>
+                Per partecipare all’indagine e dare il tuo contributo clicca questo <a href="https://forms.gle/svUWNq4XURRYSgN8A" target="_blank">link</a>
             </p>
             <br />
         </div>
