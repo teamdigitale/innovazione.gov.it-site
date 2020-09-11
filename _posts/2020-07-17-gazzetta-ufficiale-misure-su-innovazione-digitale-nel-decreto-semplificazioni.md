@@ -5,8 +5,8 @@ ref: misure-su-innovazione-digitale-nel-decreto-semplificazioni-in-gazzetta-uffi
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <img class="w-100" src="/assets/images/posts/2020-07-07-misure-su-innovazione-digitale-nel-decreto-semplificazioni.jpg" alt="In Gazzetta Ufficiale il decreto legge 'misure urgenti per la semplificazione e l'innovazione digitale'"/>
-pinned: true
 categories:
+  - highlights
   - cittadini
   - pubblica amministrazione
 ---
@@ -49,7 +49,7 @@ E’ possibile chiedere il rilascio della CIE prima della scadenza della carta d
 Con il decreto parte la piattaforma digitale unica per le notifiche di atti e provvedimenti della PA a cittadini e imprese. In sostanza, la raccomandata cartacea viene sostituita da una comunicazione digitale, con  conseguente semplificazione per l’attività dell’amministrazione e risparmio di tempo per i cittadini che potranno avere la disponibilità dell’atto sul cellulare. Resta confermata, per i cittadini che non posseggono un domicilio digitale, la procedura di recapito attraverso posta ordinaria.  
 
 * **Interventi per favorire l’accesso delle persone disabili agli strumenti informatici**  
-Tra le principali misure del processo di digitalizzazione inserite nel decreto-legge vi sono anche disposizioni volte a favorire l’accesso ai servizi online da parte delle persone diversamente abili.  In particolare, le norme estendono gli obblighi di accessibilità degli strumenti informatici anche agli enti o società private, con un fatturato medio negli ultimi tre anni  superiore a 900 euro, che offrono servizi al pubblico attraverso siti web o applicazioni sul telefonino.  
+Tra le principali misure del processo di digitalizzazione inserite nel decreto-legge vi sono anche disposizioni volte a favorire l’accesso ai servizi online da parte delle persone diversamente abili. In particolare, le norme estendono gli obblighi di accessibilità degli strumenti informatici anche agli enti o società private, con un fatturato medio negli ultimi tre anni superiore a 900 milioni di euro, che offrono servizi al pubblico attraverso siti web o applicazioni sul telefonino.  
 
 * **Un unico permesso di circolazione su tutto il  territorio nazionale per la mobilità delle persone con disabilità**  
 Le persone con disabilità potranno circolare con i loro veicoli su tutto il territorio nazionale con un unico permesso. Questo sarà possibile grazie ad una piattaforma unica informatica, presso il Ministero delle Infrastrutture e dei Trasporti, che consentirà di verificare le targhe associate a permessi di circolazione dei titolari di contrassegni. Oggi il permesso di circolazione per accedere nelle zone a traffico limitato (Ztl) per i veicoli delle persone con disabilità è valido solo nel Comune in cui è stato richiesto. Per poter accedere alle Ztl in altri Comuni è necessario effettuare una pratica. Con la norma inserita nel decreto basta un solo permesso per accedere alle Ztl in tutta Italia.  

@@ -13,7 +13,7 @@ _Previsto nel Decreto “Rilancio” e affidato alla Ministra Pisano avrà una p
 
 <!-- MORE -->
 
-Con l’articolo 230 del decreto “Rilancio” è stato costituito il **Fondo per l’Innovazione tecnologica e la digitalizzazione**. La sua prima dotazione è di **50 milioni** di euro. Serviranno a digitalizzare servizi della Pubblica amministrazione ai cittadini e alle imprese. Affidate per la sua gestione al **ministro per l’Innovazione tecnologica e la digitalizzazione Paola Pisano**, che aveva proposto di costituire il Fondo, le risorse finanziarie verranno impiegate innanzitutto per aumentare la tipologia di pratiche che gli italiani possono svolgere per via telematica.
+Con l’articolo 239 del decreto “Rilancio” è stato costituito il **Fondo per l’Innovazione tecnologica e la digitalizzazione**. La sua prima dotazione è di **50 milioni** di euro. Serviranno a digitalizzare servizi della Pubblica amministrazione ai cittadini e alle imprese. Affidate per la sua gestione al **ministro per l’Innovazione tecnologica e la digitalizzazione Paola Pisano**, che aveva proposto di costituire il Fondo, le risorse finanziarie verranno impiegate innanzitutto per aumentare la tipologia di pratiche che gli italiani possono svolgere per via telematica.
 
 
 Già adesso, attraverso il **Servizio per l’identità digitale (Spid)** chi ha scaricato l’app “Io” accede a informazioni che lo riguardano, può conoscere o verificare scadenze di adempimenti da compiere, effettuare pagamenti e ricevere eventuali bonus ai quali ha diritto. Il nuovo Fondo ha lo scopo di accrescere la **quantità dei servizi** ottenibili attraverso questa applicazione.
