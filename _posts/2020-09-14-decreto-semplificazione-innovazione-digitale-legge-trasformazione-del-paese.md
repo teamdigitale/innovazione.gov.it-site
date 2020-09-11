@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Il decreto ‘Semplificazione e innovazione digitale’ è legge, le norme per guidare la trasformazione del Paese"
 ref: decreto-semplificazione-innovazione-digitale-legge-trasformazione-del-paese
-asset: <img class="w-100" src="/assets/images/posts/Decreto_semplificazione_innovazione_legge.jpg" alt="Decreto semplificazione e innovazione digitale legge"/>
+asset: <img class="w-100" src="/assets/images/posts/Decreto_semplificazione_innovazione_legge2.jpg" alt="Decreto semplificazione e innovazione digitale legge"/>
 pinned:true
 categories:
   - highlights
