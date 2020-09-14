@@ -17,15 +17,16 @@ _Nel provvedimento i nuovi strumenti per agevolare la digitalizzazione dei servi
 
 <!-- MORE -->
 
-La digitalizzazione al servizio di cittadini e imprese, per semplificare i loro rapporti con la Pubblica amministrazione e contribuire al rilancio economico del Paese dopo la crisi generata dalla pandemia. Con la pubblicazione in gazzetta ufficiale della legge di conversione, si conclude l’iter del decreto ‘Semplificazione e innovazione digitale’ che rappresenta la base normativa per velocizzare il processo di trasformazione digitale.   
+La digitalizzazione al servizio di cittadini e imprese, per semplificare i loro rapporti con la Pubblica amministrazione e contribuire al rilancio economico del Paese dopo la crisi generata dalla pandemia. Con la pubblicazione in gazzetta ufficiale della legge di conversione, si conclude l’iter del decreto ‘Semplificazione e innovazione digitale’ che rappresenta **la base normativa per velocizzare il processo di trasformazione digitale.**   
 
-“Abbiamo ora un insieme di norme che ci permette di correre, di accelerare lo sviluppo migliorando la qualità della vita dei cittadini e agevolando il lavoro delle imprese - sottolinea la Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano -. Con questo provvedimento dimostriamo all’Europa che ci stiamo già muovendo nella direzione indicata dal Recovery Fund. Ringrazio il Parlamento per l’esame approfondito che ha svolto in un clima costruttivo ”.    
+“Abbiamo ora un insieme di norme che ci permette di correre, di accelerare lo sviluppo **migliorando la qualità della vita dei cittadini e agevolando il lavoro delle imprese** - sottolinea la Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano -. Con questo provvedimento dimostriamo all’Europa che ci stiamo già muovendo nella direzione indicata dal Recovery Fund. **Ringrazio il Parlamento per l’esame approfondito che ha svolto in un clima costruttivo ”.**    
 
-Entro il 28 febbraio 2021 le amministrazioni sono tenute ad avviare i loro processi di trasformazione digitale. I servizi pubblici dovranno diventare quindi fruibili attraverso lo smartphone, lo strumento più usato dagli italiani per comunicare a distanza. Fissando questa scadenza è stata prevista flessibilità per i piccoli Comuni con popolazione inferiore a 5000 abitanti, per tenere conto delle difficoltà legate all’emergenza Covid-19.    
+Entro il 28 febbraio 2021 le amministrazioni sono tenute ad avviare i loro processi di trasformazione digitale. **I servizi pubblici dovranno diventare quindi fruibili attraverso lo smartphone**, lo strumento più usato dagli italiani per comunicare a distanza. Fissando questa scadenza è stata prevista flessibilità per i piccoli Comuni con popolazione inferiore a 5000 abitanti, per tenere conto delle difficoltà legate all’emergenza Covid-19.    
 
-La transizione digitale passa attraverso la cultura dell'innovazione ossia la predisposizione della pubblica amministrazione ad utilizzare nuovi approcci e nuove tecnologie offerete dal mercato per rispondere alle sfide della nostra società in campi diversi come la mobilità, la medicina e altro. Per questo la norma del decreto su “diritto a innovare” prevede procedure semplificate di cui beneficeranno imprese, start up e centri di ricerca per sperimentare progetti innovativi per lo sviluppo.
+La transizione digitale passa attraverso **la cultura dell'innovazione** ossia la predisposizione della pubblica amministrazione ad utilizzare nuovi approcci e nuove tecnologie offerete dal mercato per rispondere alle sfide della nostra società in campi diversi come la mobilità, la medicina e altro. Per questo la norma del decreto su **“diritto a innovare”** prevede procedure semplificate di cui beneficeranno imprese, start up e centri di ricerca per sperimentare progetti innovativi per lo sviluppo.
 
-Tutte le novità del provvedimento a questo link
+Tutte le novità del provvedimento a questo link  
+
 Qui le slide riassuntive delle norme
 
 
