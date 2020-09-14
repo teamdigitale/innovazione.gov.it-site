@@ -27,7 +27,7 @@ La transizione digitale passa attraverso **la cultura dell'innovazione** ossia l
 
 Tutte le novità del provvedimento a questo [link]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
 
-Qui le slide riassuntive delle norme
+Qui le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
 
 
 {:.x-small.text-right}
