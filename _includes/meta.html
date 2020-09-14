@@ -15,6 +15,12 @@
 {%- capture meta_image_social -%}
 {%- if page.image -%}
 {{ site.url | append: page.image }}
+{%- elsif page.asset | slice: 0, 4 == "<img" -%}
+{% assign post_img = page.asset | split:"src=" %}
+{% assign post_img_src = post_img[1] | split:" " %}
+{% assign post_img_src_to_strip = post_img_src[0] | remove: '"' %}
+{% assign post_img_src_stripped = post_img_src_to_strip | strip %}
+{{ site.url | append: post_img_src_stripped }}
 {%- else -%}
 {{ site.url | append: site.data.meta.social-card }}
 {%- endif -%}
@@ -56,15 +62,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ meta_title }}">
 <meta name="twitter:description" content="{{ meta_description }}">
-<meta name="twitter:image" content="{{ meta_image_social }}">
+<meta name="twitter:image" content="{{ meta_image_social | strip }}">
 <meta name="twitter:image:alt" content="Immagine per il sito del {{ site.name }}">
 {% comment %} OpenGraph {% endcomment %}
 <meta property="og:url" content="{{ site.url | append: page.url }}">
 <meta property="og:title" content="{{ meta_title }}">
 <meta property="og:description" content="{{ meta_description }}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{{ meta_image_social | replace: 'https://', 'http://' }}">
-<meta property="og:image:secure_url" content="{{ meta_image_social }}">
+<meta property="og:image" content="{{ meta_image_social | strip | replace: 'https://', 'http://' }}">
+<meta property="og:image:secure_url" content="{{ meta_image_social | strip }}">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
