@@ -3,8 +3,8 @@ layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
 title: "Solidarietà Digitale al servizio della scuola"
-ref: Solidarietà-Digitale-al-servizio-della-scuola
-asset: <img class="w-100" src="/assets/images/posts/Decreto_semplificazione_innovazione_legge2.jpg" alt="Solidarietà Digitale al servizio della scuola"/>
+ref: Solidarieta-Digitale-al-servizio-della-scuola
+asset: <img class="w-100" src="/assets/images/posts/2020-09-15-solidarieta-digitale-fase-2.jpg" alt="Solidarietà Digitale al servizio della scuola"/>
 pinned:
 categories:
   - highlights
