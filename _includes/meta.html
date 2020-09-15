@@ -12,18 +12,13 @@
 {%- endif -%}
 {%- endcapture -%}
 
-{%- capture meta_image_social -%}
-{%- if page.image -%}
-{{ site.url | append: page.image }}
-{%- else -%}
-{{ site.url | append: site.data.meta.social-card }}
-{%- endif -%}
-{%- endcapture -%}
+{% comment %} gestione immagine utilizzata per i social media {% endcomment %}
+{% include meta_customize_image.html %}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="{{ meta_description }}">
+<meta name="description" content="{{ meta_description | strip }}">
 {%- comment %} Inserite custom Keywords per la pagina Survey Covid-19 UniPV {% endcomment -%}
 {% if page.meta_customized_keywords %}
 {% include meta_customized_keywords.html %}
@@ -55,19 +50,17 @@
 {% comment %} <meta name="twitter:site" content="@TODO"> {% endcomment %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ meta_title }}">
-<meta name="twitter:description" content="{{ meta_description }}">
-<meta name="twitter:image" content="{{ meta_image_social }}">
+<meta name="twitter:description" content="{{ meta_description | strip }}">
+<meta name="twitter:image" content="{{ meta_image_social | strip }}">
 <meta name="twitter:image:alt" content="Immagine per il sito del {{ site.name }}">
 {% comment %} OpenGraph {% endcomment %}
 <meta property="og:url" content="{{ site.url | append: page.url }}">
 <meta property="og:title" content="{{ meta_title }}">
-<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:description" content="{{ meta_description | strip }}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{{ meta_image_social | replace: 'https://', 'http://' }}">
-<meta property="og:image:secure_url" content="{{ meta_image_social }}">
+<meta property="og:image" content="{{ meta_image_social | strip | replace: 'https://', 'http://' }}">
+<meta property="og:image:secure_url" content="{{ meta_image_social | strip }}">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 {% comment %} Cloudflare temporary innovazione.gov.it verification token {% endcomment %}
 <meta name="cf-2fa-verify" content="b00aedc88ffcfe2">
 {% comment %} Cloudflare temporary madeit.gov.it verification token {% endcomment %}

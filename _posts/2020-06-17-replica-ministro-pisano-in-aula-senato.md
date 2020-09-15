@@ -5,6 +5,7 @@ ref: replica-ministro-pisano-aula-senato
 lang: it
 excerpt_separator: <!-- MORE -->
 asset: <iframe title="Replica del Ministro Pisano in aula al Senato" width="560" height="315" src="https://www.youtube-nocookie.com/embed/YQpTtvSeYrY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+social_image: /assets/images/posts/pisano-qt-17_06_2020.jpg
 categories:
   - highlights
   - pubblica amministrazione
