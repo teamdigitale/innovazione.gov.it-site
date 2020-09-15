@@ -17,7 +17,7 @@ _Nel provvedimento i nuovi strumenti per agevolare la digitalizzazione dei servi
 
 <!-- MORE -->
 
-La digitalizzazione al servizio di cittadini e imprese, per semplificare i loro rapporti con la Pubblica amministrazione e contribuire al rilancio economico del Paese dopo la crisi generata dalla pandemia. Con la pubblicazione in [Gazzetta ufficiale](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2020-09-14&atto.codiceRedazionale=20G00139&elenco30giorni=false){:target="_blank" rel="noopener noreferrer"} della legge di conversione, si conclude l’iter del decreto ‘Semplificazione e innovazione digitale’ che rappresenta **la base normativa per velocizzare il processo di trasformazione digitale.**   
+La digitalizzazione al servizio di cittadini e imprese, per semplificare i loro rapporti con la Pubblica amministrazione e contribuire al rilancio economico del Paese dopo la crisi generata dalla pandemia. Con la pubblicazione in [Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"} della legge di conversione, si conclude l’iter del decreto ‘Semplificazione e innovazione digitale’ che rappresenta **la base normativa per velocizzare il processo di trasformazione digitale.**   
 
 “Abbiamo ora un insieme di norme che ci permette di accelerare lo sviluppo **migliorando la qualità della vita dei cittadini e agevolando il lavoro delle imprese** - sottolinea la Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano -. Con questo provvedimento dimostriamo all’Europa che ci stiamo già muovendo nella direzione indicata dal Recovery Fund. **Ringrazio il Parlamento per l’esame approfondito che ha svolto in un clima costruttivo ”.**    
 
@@ -29,7 +29,7 @@ Tutte le novità del provvedimento a questo [link]({{ site.baseurl }}/assets/doc
 
 Qui le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
 
-Il [testo della Legge 120 dell'11 settembre - Gazzetta ufficiale](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2020-09-14&atto.codiceRedazionale=20G00139&elenco30giorni=false){:target="_blank" rel="noopener noreferrer"}
+Il [testo della Legge 120 dell'11 settembre - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"}
 
 
 {:.x-small.text-right}
