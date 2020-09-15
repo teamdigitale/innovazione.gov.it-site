@@ -28,8 +28,7 @@ La transizione digitale passa attraverso la cultura dell'innovazione ossia la pr
 Per saperne di più:
 
 - Tutte le [novità del provvedimento]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
-- Le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
-- Il testo della [Legge 11 settembre 2020, n.120 - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20A04921/sg){:target="_blank" rel="noopener noreferrer"}
+- Il testo della [Legge 11 settembre 2020, n.120 - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20A04921/sg){:target="_blank" rel="noopener noreferrer"}. Le norme in tema di digitalizzazione e innovazione sono inserite negli articoli dal 23bis-37bis.
 
 
 
