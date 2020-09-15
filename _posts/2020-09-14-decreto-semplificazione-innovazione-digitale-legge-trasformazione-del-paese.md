@@ -25,11 +25,17 @@ Entro il 28 febbraio 2021 le amministrazioni sono tenute ad avviare i loro proce
 
 La transizione digitale passa attraverso la cultura dell'innovazione ossia la predisposizione della pubblica amministrazione ad utilizzare nuovi approcci e nuove tecnologie offerete dal mercato per rispondere alle sfide della nostra società in campi diversi come la mobilità, la medicina e altro. Per questo la norma del decreto su **“diritto a innovare”** prevede procedure semplificate di cui beneficeranno imprese, start up e centri di ricerca per sperimentare progetti innovativi per lo sviluppo.
 
-Tutte le novità del provvedimento a questo [link]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
+Per saperne di più:
 
-Qui le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
+- Tutte le [novità del provvedimento]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
+- Le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
+- Il testo della [Legge 11 settembre 2020, n.120 - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"}
 
-Il testo della [Legge 11 settembre 2020, n.120 - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"}
+
+
+
+
+
 
 
 {:.x-small.text-right}
