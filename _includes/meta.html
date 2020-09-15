@@ -12,28 +12,8 @@
 {%- endif -%}
 {%- endcapture -%}
 
-{%- capture meta_image_social -%}
-{% comment %} Dichiaro var per il check sotto {% endcomment %}
-{% assign asset_is_img = page.asset | slice: 1, 4 | strip %}
-
-{% comment %} Rep Digitale al momento ha una sua immagine per i Socials {% endcomment %}
-{%- if page.image -%}
-{{ site.url | append: page.image }}
-{% comment %} Il post contiene un video in asset e ha dichiarata anche l'img per i socials {% endcomment %}
-{%- elsif page.social_image -%}
-{{ site.url | append: page.social_image }}
-{% comment %} Il post contiene una immagine nell'asset {% endcomment %}
-{%- elsif asset_is_img == 'img' -%}
-{% assign post_img = page.asset | split:"src=" %}
-{% assign post_img_src = post_img[1] | split:" " %}
-{% assign post_img_src_to_strip = post_img_src[0] | remove: '"' %}
-{% assign post_img_src_stripped = post_img_src_to_strip | strip %}
-{{ site.url | append: post_img_src_stripped }}
-{% comment %} Non c'è una immagine, si passa quella di default {% endcomment %}
-{%- else -%}
-{{ site.url | append: site.data.meta.social-card }}
-{%- endif -%}
-{%- endcapture -%}
+{% comment %} gestione immagine utilizzata per i social media {% endcomment %}
+{% include meta_customize_image.html %}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,8 +61,6 @@
 <meta property="og:image" content="{{ meta_image_social | strip | replace: 'https://', 'http://' }}">
 <meta property="og:image:secure_url" content="{{ meta_image_social | strip }}">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 {% comment %} Cloudflare temporary innovazione.gov.it verification token {% endcomment %}
 <meta name="cf-2fa-verify" content="b00aedc88ffcfe2">
 {% comment %} Cloudflare temporary madeit.gov.it verification token {% endcomment %}
