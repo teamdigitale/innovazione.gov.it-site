@@ -29,7 +29,7 @@ Tutte le novità del provvedimento a questo [link]({{ site.baseurl }}/assets/doc
 
 Qui le [slide riassuntive della norma]({{ site.baseurl }}/assets/docs/Decreto Semplificazione e innovazione digitale - MID (1).pdf){:target="_blank" rel="noopener noreferrer"}
 
-Il [testo della Legge 120 dell'11 settembre - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"}
+Il testo della [Legge 11 settembre 2020, n.120 - Gazzetta ufficiale](https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg){:target="_blank" rel="noopener noreferrer"}
 
 
 {:.x-small.text-right}
