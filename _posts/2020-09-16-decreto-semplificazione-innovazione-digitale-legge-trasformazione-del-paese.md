@@ -25,7 +25,7 @@ Entro il 28 febbraio 2021 le amministrazioni sono tenute ad avviare i loro proce
 
 La transizione digitale passa attraverso la cultura dell'innovazione ossia la predisposizione della pubblica amministrazione ad utilizzare nuovi approcci e nuove tecnologie offerete dal mercato per rispondere alle sfide della nostra società in campi diversi come la mobilità, la medicina e altro. Per questo la norma del decreto su **“diritto a innovare”** prevede procedure semplificate di cui beneficeranno imprese, start up e centri di ricerca per sperimentare progetti innovativi per lo sviluppo.
 
-Anche il decreto "Cura Italia" ha introdotto disposizioni per aiutare la pubblica amministrazione nel dotarsi di tecnologie innovative, con l'intento di agevolare le attività da remoto come il **lavoro agile e la didattica a distanza.**
+Anche il decreto "Cura Italia" ha introdotto disposizioni per aiutare la Pubblica amministrazione nel dotarsi di tecnologie innovative, con l'intento di agevolare le attività da remoto come il **lavoro agile e la didattica a distanza.**
 
 
 Per saperne di più:
