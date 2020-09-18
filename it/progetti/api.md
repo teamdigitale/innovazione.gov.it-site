@@ -37,6 +37,7 @@ ed [è superato dal nuovo modello aperto](https://www.agid.gov.it/it/infrastrutt
 Lavoriamo insieme all’Agenzia per l’Italia Digitale
 alla definizione di regole tecniche, linee guida, [standard tecnologici e profili](https://www.agid.gov.it/it/infrastrutture/sistema-pubblico-connettivita/il-nuovo-modello-interoperabilita){:target="_blank" rel="noopener noreferrer"}
 che ogni Pubblica Amministrazione dovrà adottare, nonchè nella progettazione e diffusione di un nuovo [Catalogo delle API](https://developers.italia.it/it/api){:target="_blank" rel="noopener noreferrer"}.  
+
 Ci stiamo inoltre confrontando con gli organismi di standardizzazione
 ed i [Paesi Membri dell'Unione Europea](https://ec.europa.eu/jrc/en/news/igniting-digital-transformation-governments-apis){:target="_blank" rel="noopener noreferrer"}
 affinché le regole tecniche individuate trovino riscontro negli standard tecnologici esistenti.
