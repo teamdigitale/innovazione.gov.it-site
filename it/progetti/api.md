@@ -32,7 +32,7 @@ Il vecchio modello di [Cooperazione Applicativa SPCoop](http://www.agid.gov.it/a
 ## Il ruolo del Dipartimento
 
 {:.max-w-40}
-Stiamo lavorando insieme all’Agenzia per l’Italia Digitale nella definizione di regole tecniche, linee guida, standard tecnologici e profili che ogni Pubblica Amministrazione dovrà adottare, nonchè nella progettazione e diffusione di un nuovo [Catalogo delle API](https://developers.italia.it/it/api/){:target="_blank" rel="noopener noreferrer"}.  
+Stiamo lavorando insieme all’Agenzia per l’Italia Digitale nella definizione di regole tecniche, linee guida, standard tecnologici e profili che ogni Pubblica Amministrazione dovrà adottare, nonchè nella progettazione e diffusione di un nuovo [Catalogo delle API](https://developers.italia.it/it/api){:target="_blank" rel="noopener noreferrer"}.  
 Ci stiamo inoltre confrontando con gli organismi di standardizzazione ed i Paesi Membri dell'Unione Europea affinché le regole tecniche individuate trovino riscontro negli standard tecnologici esistenti.
 
 {:.mt-5.max-w-40}
