@@ -1,0 +1,28 @@
+---
+title: Concessione Patrocini e logo MID
+title_short: Patrocini
+description: ''
+image: /assets/images/repubblica-digitale/repubblica-digitale-logo-blue-twitter-summary-large-image.png
+
+lang: it
+layout: page
+ref: patrocini
+
+child_of_ref: chi-siamo
+hide_child_of_ref: true
+order: 15
+
+redirect_from:
+  - /patrocini
+---
+Il Ministro per l’Innovazione Tecnologica e la Digitalizzazione, ai sensi della circolare UCE-0004713-P-10/06/2019, concede il proprio Patrocinio gratuito a iniziative ed eventi che abbiano contenuti e finalità pertinenti alle materie rientranti nella propria competenza.  
+
+Con la concessione del patrocinio, le organizzazioni e gli enti promotori di un evento o di una manifestazione sono autorizzati ad utilizzare la dicitura _"con il patrocinio del Ministro per l’Innovazione Tecnologica e la Digitalizzazione"_ sul materiale promozionale dell’iniziativa (ad esempio brochure, invito, locandine, etc.).  
+
+La richiesta dovrà essere inviata esclusivamente per posta elettronica certificata [ministroinnovazione@pec.governo.it](mailto:ministroinnovazione@pec.governo.it) dopo aver compilato il modulo editabile reperibile al seguente [link]({{ site.baseurl }}/assets/docs/patrocini/modulo_patrocini.pdf){:target="_blank" rel="noopener noreferrer"}.  
+
+La concessione del patrocinio richiede un adeguato tempo di istruttoria. Pertanto, le richieste dovranno pervenire almeno tre mesi prima della data prevista per l’evento.  
+
+Link: Vai a Nota Criteri e modalità per la concessione;  
+[Modulo di Richiesta Patrocinio]({{ site.baseurl }}/assets/docs/patrocini/modulo_patrocini.pdf){:target="_blank" rel="noopener noreferrer"}  
+[Circolare Presidenza del Consiglio dei Ministri]({{ site.baseurl }}/assets/docs/patrocini/Circ_20190610_4713.pdf){:target="_blank" rel="noopener noreferrer"}  
