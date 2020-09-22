@@ -19,6 +19,8 @@ Il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio de
 
 Questa è la prima di una serie di azioni chiave nel quadro di _Solidarietà Digitale_ che pongono l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
 
+![Infografica solidarietà digitale 2](/assets/images/posts/2020_09_22_InfoSolidarietaDigitale.png)
+
 In questa fase, la ripartenza della scuola è un aspetto cruciale per i ragazzi e le loro famiglie. Il digitale può svolgere un ruolo fondamentale per arricchire l’apprendimento degli studenti degli istituti di ogni ordine e grado, per facilitare la didattica con metodologie innovative e promuovere percorsi di apprendimento  mirati a soddisfare particolari esigenze e fornire materiale aggiuntivo al corpo docente.  
 
 ![Infografica solidarietà digitale](/assets/images/posts/2020-09-25-infografica-solidarieta-digitale.png)
@@ -28,3 +30,6 @@ In questa fase, la ripartenza della scuola è un aspetto cruciale per i ragazzi 
 Con la missione che parte oggi, il progetto Solidarietà Digitale si dedica a promuovere servizi digitali per il mondo della scuola, come strumenti efficaci per la didattica digitale integrata, piattaforme avanzate di e-learning, contenuti didattici digitali di qualità, opportunità di formazione per i docenti ed esercizi innovativi per sostenere gli studenti nello studio. Tutti i servizi, messi disposizione da aziende ed associazioni, saranno accessibili gratuitamente attraverso [il sito dedicato](https://solidarietadigitale.agid.gov.it/#/){:target="_blank" rel="noopener noreferrer"}.  
 
 
+
+{:.x-small.text-right}
+_Fotografia di [John Schnobrich](https://unsplash.com/@johnschno){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/FlPc9_VocJ4){:target="_blank" rel="noopener noreferrer"}_
