@@ -7,7 +7,6 @@ ref: Solidarieta-Digitale-al-servizio-della-scuola
 asset: <img class="w-100" src="/assets/images/posts/2020-09-15-solidarieta-digitale-fase-2.jpg" alt="Solidarietà Digitale al servizio della scuola"/>
 pinned:
 categories:
-  - highlights
   - cittadini
 ---
 
@@ -15,9 +14,9 @@ _Si apre la nuova missione di Solidarietà Digitale: soluzioni innovative e serv
 
 <!-- MORE -->
 
-Il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei ministri lancia oggi la nuova missione di _Solidarietà Digitale_. Il focus dell’iniziativa, con il supporto tecnico dell’Agenzia per l’Italia Digitale, si concentra sul rientro a scuola, offrendo soluzioni innovative e servizi digitali gratuiti a sostegno di studenti, insegnanti ed istituti scolastici.  
+Il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei ministri lancia oggi la nuova missione di _Solidarietà Digitale_. L’iniziativa, con il supporto tecnico dell’Agenzia per l’Italia Digitale, si concentra sul rientro a scuola, offrendo soluzioni innovative e servizi digitali gratuiti a sostegno di studenti, insegnanti ed istituti scolastici.  
 
-Questa è la prima di una serie di azioni chiave nel quadro di _Solidarietà Digitale_ che pongono l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
+La nuova missione pone l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
 
 ![Infografica solidarietà digitale 2](/assets/images/posts/2020_09_22_InfoSolidarietaDigitale.png)
 
