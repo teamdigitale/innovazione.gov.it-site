@@ -17,7 +17,7 @@ redirect_from:
 ---
 <div class="container indagineCovid19_container">
     <p>
-        <a href="/patrocini">torna alla Richiesta Patrocini</a>
+        <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
     </p>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
@@ -105,7 +105,7 @@ redirect_from:
         </div>
     </div>
     <p>
-        <a href="/patrocini">torna alla Richiesta Patrocini</a>
+        <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
     </p>
 </div>
 
