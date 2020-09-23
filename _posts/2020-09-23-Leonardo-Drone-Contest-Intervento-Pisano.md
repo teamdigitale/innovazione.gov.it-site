@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Leonardo Drone Contest, l'intervento della Ministra Pisano"
 ref: Leonardo-Drone-Contest-Intevento-Pisano
-asset: <img class="w-100" src="/assets/images/posts/2020-09-12-DRONE-CONTEST-LEONARDO.JPG" alt="Leonardo Drone Contest"/>
+asset: <img class="w-100" src="/assets/images/Leonardo_Drone_Contest_foto_2.jpg" alt="Leonardo Drone Contest"/>
 pinned:
 categories:
   - highlights
@@ -24,3 +24,7 @@ All'evento hanno partecipato, oltre alla Ministra per l'innovazione tecnologica 
 "La sperimentazione nel campo dell'AI (Artificial Intelligence) è fondamentale. - ha dichiarato la Ministra dell’Innovazione tecnologica e della Digitalizzazione Paola Pisano - In questo veloce cammino verso un ancora inesplorato e imprevedibile futuro digitale ricordiamoci sempre delle generazioni che verranno e dei valori fondamentali: rispetto delle idee e della dignità umana, rispetto per le categorie svantaggiate e gli individui più deboli. La nostra visione tecnologica deve rimanere etica e questo sarà un impegno che il nostro paese e l’Europa dovrà preservare per le future generazioni."
 
 Leggi [il discorso completo della Ministra Paola Pisano]({{ site.baseurl }}/assets/docs/Leonardo_Drone_Contest_Intervento_Paola_Pisano.pdf){:target="_blank" rel="noopener noreferrer"}
+
+
+{:.x-small.text-right}
+_Fotografia di [Karl Greif](https://unsplash.com/@kg_media_pgh){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/H5IXIH254AU){:target="_blank" rel="noopener noreferrer"}_
