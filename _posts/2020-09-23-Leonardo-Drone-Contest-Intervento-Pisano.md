@@ -3,8 +3,8 @@ layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
 title: "Leonardo Drone Contest, l'intervento della Ministra Pisano"
-ref: Solidarieta-Digitale-al-servizio-della-scuola
-asset: <img class="w-100" src="/assets/images/posts/2020-09-15-solidarieta-digitale-fase-2.jpg" alt="Solidarietà Digitale al servizio della scuola"/>
+ref: Leonardo-Drone-Contest-Intevento-Pisano
+asset: <img class="w-100" src="/assets/images/posts/2020-09-12-DRONE-CONTEST-LEONARDO.JPG" alt="Leonardo Drone Contest"/>
 pinned:
 categories:
   - highlights
