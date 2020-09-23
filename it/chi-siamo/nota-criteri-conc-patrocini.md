@@ -74,7 +74,7 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <h6>UTILIZZO DEL LOGO</h6>
             <p>
-                L’utilizzo del logo del Ministro per l’Innovazione Tecnologica e la Digitalizzazione può avvenire esclusivamente a seguito di apposita e specifica autorizzazione.<br />
+                La concessione del logo è condizionata a quella del patrocinio. L’utilizzo del logo del Ministro per l’Innovazione Tecnologica e la Digitalizzazione può avvenire esclusivamente a seguito di apposita e specifica autorizzazione.<br />
                 Si ricorda, infatti, che la concessione del patrocinio non implica automaticamente anche l’autorizzazione all’utilizzo del logo, che viene concesso esclusivamente per eventi che abbiano caratteristiche di eccezionale e straordinaria rilevanza, sia in termini di qualità che di contenuti, interessando in maniera diretta e significativa l’attività del Ministro.<br />
                 In caso di assenza dell'autorizzazione all'uso del logo, nelle pubblicazioni relative a iniziative patrocinate può essere inserita solo la dicitura <i>"con il patrocinio del Ministro per l’Innovazione Tecnologica e la Digitalizzazione"</i>.<br />
                 L'utilizzo del logo può avvenire esclusivamente per il periodo di svolgimento dell'iniziativa patrocinata.
@@ -86,6 +86,7 @@ redirect_from:
             <h6>ULTERIORI INDICAZIONI</h6>
             <p>
                 Il patrocinio viene concesso esclusivamente per l’evento indicato nell’istanza e unicamente per la durata di quest’ultimo. Non è consentito estendere il patrocinio ad altri eventi. In caso di sospensione e/o rinvio dell’evento patrocinato, deve esserne dato immediato avviso a questo ufficio, indicando quanto prima le nuove date di svolgimento dell’evento stesso. L’eventuale avvenuta concessione del patrocinio sarà comunicata ai richiedenti a mezzo pec.<br />
+                La menzione del patrocinio e l'eventuale logo del Ministro per l'Innovazione Tecnologica e la Digitalizzazione, in tutte le forme di comunicazione legate all'iniziativa, devono essere collocati, in relazione ai formati e alle dimensioni dei supporti, in posizione preminente e distante da eventuali marchi di sponsor.<br />
                 Il Ministro non concede contributi a sostegno di iniziative patrocinate, né attribuisce coppe, trofei, medaglie o qualsiasi tipologia di premio.
             </p>
         </div>
