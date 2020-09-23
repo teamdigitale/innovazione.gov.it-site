@@ -13,7 +13,7 @@ categories:
   - imprese
 ---
 
-_Il ruolo dell'AI (Artificial Intelligence) nella nostra società: una visione tecnologica etica per le future generazioni. L'intervento al Leonardo Drone Contest organizzato della Ministra Pisano._
+_Il ruolo dell'AI (Artificial Intelligence) nella nostra società: una visione tecnologica etica per le future generazioni. L'intervento al Leonardo Drone Contest della Ministra Pisano._
 
 <!-- MORE -->
 
