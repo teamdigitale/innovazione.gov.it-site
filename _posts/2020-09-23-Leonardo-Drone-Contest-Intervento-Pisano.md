@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Leonardo Drone Contest, l'intervento della Ministra Pisano"
 ref: Leonardo-Drone-Contest-Intevento-Pisano
-asset: <img class="w-100" src="/assets/images/post/Leonardo_Drone_Contest_foto_2.jpg" alt="Leonardo Drone Contest"/>
+asset: <img class="w-100" src="/assets/images/posts/Leonardo_Drone_Contest_foto_2.jpg" alt="Leonardo Drone Contest"/>
 pinned:
 categories:
   - highlights
