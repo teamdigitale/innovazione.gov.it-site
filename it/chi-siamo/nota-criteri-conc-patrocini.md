@@ -23,7 +23,7 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <p>
                 Il Ministro per l’Innovazione Tecnologica e la Digitalizzazione concede il proprio patrocinio gratuito, e attesta la sua disponibilità alla partecipazione al Comitato d’onore, relativamente ad iniziative ed eventi che abbiano contenuti e finalità pertinenti alle materie di propria competenza.
-                La richiesta deve essere inviata, esclusivamente in <a href="mailto:ministroinnovazione@pec.governo.it?subjet=Richiesta di patrocinio”">PEC</a> con oggetto: “Richiesta di patrocinio”, compilando il <a href="/assets/docs/patrocini/modulo_patrocini.pdf" target="_blank">MODULO</a> editabile, in ogni sua parte, corredato dalla documentazione.
+                La richiesta deve essere inviata, esclusivamente in <a href="mailto:ministroinnovazione@pec.governo.it?subjet=Richiesta di patrocinio”">PEC</a> con oggetto: <i>“Richiesta di patrocinio”</i>, compilando il <a href="/assets/docs/patrocini/modulo_patrocini.pdf" target="_blank">MODULO</a> editabile, in ogni sua parte, corredato dalla documentazione.
             </p>
         </div>
     </div>
@@ -33,11 +33,11 @@ redirect_from:
             <p>
                 La richiesta, oltre ad una breve sintesi dell’iniziativa, deve contenere le seguenti informazioni personali, logistiche e organizzative:
                 <ul>
-                    <li>dati anagrafici del promotore dell’evento (nome, data e luogo di nascita e residenza),</li>
-                    <li>Ente richiedente: indirizzo, numero telefonico, e-mail, PEC, sito web e documento di identità in corso di validità del richiedente,</li>
-                    <li>qualifica del promotore dell’evento (attività professionale, ruolo svolto nell’evento specifico),</li>
-                    <li>luogo e data in cui si svolgerà l'evento e durata,</li>
-                    <li>programma dettagliato, con l'indicazione dei partecipanti e dei relatori, contenuti ed obiettivi.</li>
+                    <li>dati anagrafici del promotore dell’evento (nome, data e luogo di nascita e residenza);</li>
+                    <li>Ente richiedente: indirizzo, numero telefonico, e-mail, PEC, sito web e documento di identità in corso di validità del richiedente;</li>
+                    <li>qualifica del promotore dell’evento (attività professionale, ruolo svolto nell’evento specifico);</li>
+                    <li>luogo e data in cui si svolgerà l'evento e durata;</li>
+                    <li>programma dettagliato, con l'indicazione dei partecipanti e dei relatori, contenuti ed obiettivi,</li>
                 </ul>
             <div>N.B.</div>
             <i>
@@ -50,8 +50,8 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <h6>TEMPI DI PRESENTAZIONE DELLA RICHIESTA</h6>
             <p>
-                Qualora le richieste provengano da istituzioni pubbliche, l’istruttoria finalizzata alla concessione del patrocinio è curata dal Gabinetto del Ministro per l’innovazione tecnologica al termine della quale provvede alla concessione del patrocinio. Allorché le richieste provengano da enti o associazioni private si provvederà ad inoltrare le stesse, corredate di un motivato parere, all’Ufficio del Cerimoniale di Stato e per le onorificenze della Presidenza del Consiglio dei Ministri, che al termine dell’istruttoria autorizzerà la concessione del Patrocinio e del logo.
-                In entrambi i casi, al fine di consentire la regolare conclusione del procedimento istruttorio è necessario presentare l'istanza di patrocinio con anticipo di almeno tre mesi dalla data dell’evento.
+                Qualora le richieste provengano da istituzioni pubbliche, l’istruttoria finalizzata alla concessione del patrocinio è curata dal Gabinetto del Ministro per l’Innovazione Tecnologica e la Digitalizzazione al termine della quale provvede alla concessione del patrocinio. Allorché le richieste provengano da enti o associazioni private si provvederà ad inoltrare le stesse, corredate di un motivato parere, all’Ufficio del Cerimoniale di Stato e per le onorificenze della Presidenza del Consiglio dei Ministri, che al termine dell’istruttoria autorizzerà la concessione del Patrocinio e del logo.<br />
+                In entrambi i casi, al fine di consentire la regolare conclusione del procedimento istruttorio <b>è necessario presentare l’istanza di patrocinio con anticipo di almeno tre mesi dalla data dell’evento.</b>
             </p>
         </div>
     </div>
@@ -59,7 +59,7 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <h6>REQUISITI RICHIESTI</h6>
             <p>
-                Al fine di ottenere il riconoscimento del patrocinio del Ministro per l’Innovazione tecnologica e la digitalizzazione, le iniziative devono possedere le seguenti caratteristiche:
+                Al fine di ottenere il riconoscimento del patrocinio del Ministro per l’Innovazione Tecnologica e la Digitalizzazione, le iniziative devono possedere le seguenti caratteristiche:
                 <ul>
                     <li>essere di chiaro ed indiscutibile rilievo,</li>
                     <li>avere una valenza nazionale ed elevati livelli di qualità organizzativa,</li>
@@ -74,9 +74,9 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <h6>UTILIZZO DEL LOGO</h6>
             <p>
-                L’utilizzo del logo del Ministro per l’Innovazione tecnologica e la digitalizzazione può avvenire esclusivamente a seguito di apposita e specifica autorizzazione.<br />
+                L’utilizzo del logo del Ministro per l’Innovazione Tecnologica e la Digitalizzazione può avvenire esclusivamente a seguito di apposita e specifica autorizzazione.<br />
                 Si ricorda, infatti, che la concessione del patrocinio non implica automaticamente anche l’autorizzazione all’utilizzo del logo, che viene concesso esclusivamente per eventi che abbiano caratteristiche di eccezionale e straordinaria rilevanza, sia in termini di qualità che di contenuti, interessando in maniera diretta e significativa l’attività del Ministro.<br />
-                In caso di assenza dell'autorizzazione all'uso del logo, nelle pubblicazioni relative a iniziative patrocinate può essere inserita solo la dicitura <i>"con il patrocinio del Ministro per l’innovazione tecnologica e la digitalizzazione"</i>.<br />
+                In caso di assenza dell'autorizzazione all'uso del logo, nelle pubblicazioni relative a iniziative patrocinate può essere inserita solo la dicitura <i>"con il patrocinio del Ministro per l’Innovazione Tecnologica e la Digitalizzazione"</i>.<br />
                 L'utilizzo del logo può avvenire esclusivamente per il periodo di svolgimento dell'iniziativa patrocinata.
             </p>
         </div>
@@ -94,8 +94,8 @@ redirect_from:
         <div class="col-12 col-lg-10">
             <h6>CONTATTI</h6>
             <p>
-                Ministro per l’Innovazione tecnologica e la digitalizzazione<br />
-                Dipartimento per la trasformazione digitale<br />
+                Ministro per l’Innovazione Tecnologica e la Digitalizzazione<br />
+                Dipartimento per la Trasformazione Digitale<br />
                 Largo Pietro di Brazzà, 86<br />
                 00187 Roma - Italia<br />
                 Email <a href="mailto:segreteriaministropisano@governo.it">segreteriaministropisano@governo.it</a><br />
