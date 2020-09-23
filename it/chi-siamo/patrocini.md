@@ -23,6 +23,6 @@ La richiesta dovrà essere inviata esclusivamente per posta elettronica certific
 
 La concessione del patrocinio richiede un adeguato tempo di istruttoria. Pertanto, le richieste dovranno pervenire almeno tre mesi prima della data prevista per l’evento.  
 
-Link: Vai a Nota Criteri e modalità per la concessione;  
+[Nota Criteri e modalità per la concessione]({{ site.baseurl }}/it/chi-siamo/nota-criteri-conc-patrocini);  
 [Modulo di Richiesta Patrocinio]({{ site.baseurl }}/assets/docs/patrocini/modulo_patrocini.pdf){:target="_blank" rel="noopener noreferrer"}  
 [Circolare Presidenza del Consiglio dei Ministri]({{ site.baseurl }}/assets/docs/patrocini/Circ_20190610_4713.pdf){:target="_blank" rel="noopener noreferrer"}  
