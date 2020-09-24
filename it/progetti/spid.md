@@ -5,7 +5,7 @@ description: Un sistema unico di Identità Digitale per accedere a tutti i servi
 lang: it
 layout: page-project
 project_url: https://www.spid.gov.it/
-dashboard_ref: https://avanzamentodigitale.italia.it/it/progetto/spid
+dashboard_url: https://avanzamentodigitale.italia.it/it/progetto/spid
 ref: spid
 logo: spid.png
 no_site_toc: true
@@ -48,7 +48,7 @@ Infine, l’identità SPID può essere utilizzata anche per accedere a tutti i s
 ## I dati
 
 {:.max-w-40}
-I dati delle dashboard sono pubblicati [qui]({{ page.dashboard_ref }}){:target="_blank" rel="noopener noreferrer"}.
+I dati delle dashboard sono pubblicati [qui]({{ page.dashboard_url }}){:target="_blank" rel="noopener noreferrer"}.
 
 {% endif %}
 
