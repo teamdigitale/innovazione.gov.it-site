@@ -5,6 +5,7 @@ description: Un sistema unico di Identità Digitale per accedere a tutti i servi
 lang: it
 layout: page-project
 project_url: https://www.spid.gov.it/
+dashboard_url: https://avanzamentodigitale.italia.it/it/progetto/spid
 ref: spid
 logo: spid.png
 no_site_toc: true
@@ -41,6 +42,15 @@ Il cittadino ha l’opportunità di avere **un solo set di credenziali**, che pu
 Infine, l’identità SPID può essere utilizzata anche per accedere a tutti i servizi pubblici digitali di tutti i paesi membri dell’Unione Europea e ad alcuni servizi erogati da privati che hanno integrato il sistema SPID.
 
 * [Scopri gli aspetti tecnici di SPID su Developers Italia](https://developers.italia.it/it/spid/){:target="_blank" rel="noopener noreferrer"}
+
+{% if page.dashboard_url %}
+{:.mt-5.max-w-40}
+## I dati
+
+{:.max-w-40}
+I dati delle dashboard sono pubblicati [qui]({{ page.dashboard_url }}){:target="_blank" rel="noopener noreferrer"}.
+
+{% endif %}
 
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
