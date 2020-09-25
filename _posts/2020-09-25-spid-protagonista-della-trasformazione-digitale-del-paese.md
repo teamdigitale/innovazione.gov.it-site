@@ -17,7 +17,7 @@ _Spid diventa la credenziale unica di accesso per i servizi Inps. Un esempio di 
 
 <!-- MORE -->
 
-La Ministra dell’Innovazione tecnologica e della digitalizzazione Paola Pisano ha partecipato alla conferenza stampa organizzata dall’Istituto nazionale della previdenza sociale (Inps) per illustrare il passaggio dal Pin all’identità digitale Spid per accedere ai servizi online.  
+La Ministra dell’innovazione tecnologica e della digitalizzazione Paola Pisano ha partecipato alla conferenza stampa organizzata dall’Istituto nazionale della previdenza sociale (Inps) per illustrare il passaggio dal Pin all’identità digitale Spid per accedere ai servizi online.  
 
 A partire dal 1° ottobre 2020 l’Inps non rilascerà più sue credenziali di accesso ai servizi digitali e adotterà Spid, il Sistema pubblico di identità digitale, come unica credenziale per fruire dei servizi. Un passaggio importante nella direzione di semplificare i rapporti tra cittadini e Pubblica amministrazione. E’ prevista una fase di transizione durante la quale i precedenti codici Pin potranno continuare ad essere utilizzati. 
 
