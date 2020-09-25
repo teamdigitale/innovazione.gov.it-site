@@ -23,7 +23,7 @@ A partire dal 1° ottobre 2020 l’Inps non rilascerà più sue credenziali di a
 
 La Ministra Pisano, nel suo intervento, ha ricordato che dal 28 febbraio 2021 tutte le pubbliche amministrazioni sono tenute a riconoscere Spid come la sola credenziale di accesso ai servizi digitali ed ha ringraziato l’Inps per aver assunto la decisione ‘ambiziosa’ di anticipare quel termine. “A più breve scadenza che ci siamo posti vi sono due obiettivi - ha sottolineato -: quello di aumentare i servizi pubblici online accessibili via spid  dallo smartphone, lo strumento più comunemente usato dai cittadini per le loro comunicazioni e quello  di semplificare l’ottenimento di Spid da parte dei cittadini. Lo sviluppo e la diffusione dell’identità digitale Spid è parte di un progetto ampio di digitalizzazione del Paese, che coinvolge Pubblica amministrazione, cittadini e imprese”.  
 
-Per l’intervento completo della Ministra Pisano, clicca qui
+Per l’intervento completo della Ministra Pisano, [clicca qui]({{ site.baseurl }}/assets/docs/Evento_InpsSpid_Intervento_MinistraPisano.pdf){:target="_blank" rel="noopener noreferrer"}
 
 
 Link utili:
