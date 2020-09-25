@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Spid protagonista della trasformazione digitale del paese"
 ref: Spid-protagonista-della-trasformazione-digitale-del-paese
-asset: <img class="w-100" src="/assets/images/posts/Leonardo_Drone_Contest_foto_2.jpg" alt="Leonardo Drone Contest"/>
+asset: <img class="w-100" src="/assets/images/posts/Spid_cover_1.png" alt="Leonardo Drone Contest"/>
 pinned:
 categories:
   - highlights
@@ -13,7 +13,7 @@ categories:
   - imprese
 ---
 
-_Spid diventa lo strumento unico di accesso per i servizi Inps. Un esempio di semplificazione del rapporto tra cittadini e Pubblica amministrazione._
+_Spid diventa la credenziale unica di accesso per i servizi Inps. Un esempio di semplificazione del rapporto tra cittadini e Pubblica amministrazione._
 
 <!-- MORE -->
 
