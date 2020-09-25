@@ -43,15 +43,6 @@ Infine, l’identità SPID può essere utilizzata anche per accedere a tutti i s
 
 * [Scopri gli aspetti tecnici di SPID su Developers Italia](https://developers.italia.it/it/spid/){:target="_blank" rel="noopener noreferrer"}
 
-{% if page.dashboard_url %}
-{:.mt-5.max-w-40}
-## I dati
-
-{:.max-w-40}
-I dati delle dashboard sono pubblicati [qui]({{ page.dashboard_url }}){:target="_blank" rel="noopener noreferrer"}.
-
-{% endif %}
-
 {:.mt-5.max-w-40}
 ## Il ruolo del Dipartimento
 
@@ -74,3 +65,11 @@ SPID è un progetto di rilevanza nazionale. Per favorire la discussione e il con
 {:.max-w-40}
 Per ogni richiesta di contatto da parte di media e giornalisti il punto di riferimento è l’[ufficio stampa e comunicazione del Ministro per l'innovazione - Dipartimento per la Trasformazione Digitale]({% link it/chi-siamo/contatti.md %}).
 
+{% if page.dashboard_url %}
+{:.mt-5.max-w-40}
+## Dati
+
+{:.max-w-40}
+I dati (statistici) su SPID sono pubblicati sul sito [Avanzamento trasformazione digitale (curato da AGID)]({{ page.dashboard_url }}){:target="_blank" rel="noopener noreferrer"}.
+
+{% endif %}
