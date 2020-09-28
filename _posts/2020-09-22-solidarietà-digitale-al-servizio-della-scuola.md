@@ -14,7 +14,7 @@ _Si apre la nuova missione di Solidarietà Digitale: soluzioni innovative e serv
 
 <!-- MORE -->
 
-Il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei ministri ed il Ministero dell’Istruzione lanciano #DidatticaDigitale, il primo di una serie di avvisi pubblici nel quadro del progetto [Solidarietà digitale](https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/){:target="_blank" rel="noopener noreferrer"}
+Il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei ministri ed il Ministero dell’Istruzione lanciano **#DidatticaDigitale**, il primo di una serie di avvisi pubblici nel quadro del progetto [Solidarietà digitale](https://innovazione.gov.it/coronavirus-solidarieta-digitale-in-tutta-italia/){:target="_blank" rel="noopener noreferrer"}.
  
 La nuova missione dell’iniziativa, con il supporto tecnico dell’Agenzia per l’Italia Digitale, si concentra sul rientro a scuola, offrendo soluzioni innovative e servizi digitali gratuiti a sostegno di studenti, insegnanti ed istituti scolastici.
 
@@ -24,7 +24,7 @@ A questo proposito, il Dipartimento per la Trasformazione Digitale e il Minister
 
 Sarà possibile inviare le richieste di partecipazione, sotto forma di Manifestazione d’interesse, da oggi, 28 settembre 2020, fino al 28 ottobre 2020. L'[Avviso Pubblico]({{ site.baseurl }}/assets/docs/Didattica_Digitale_Avviso_Manifestazione_interesse_2020_09_28.pdf){:target="_blank" rel="noopener noreferrer"} e l'[Allegato A]({{ site.baseurl }}/assets/docs/Allegato A_Avviso__Pubblico_DidatticaDigitale.pdf){:target="_blank" rel="noopener noreferrer"} contenenti le modalità di partecipazione ed i requisiti richiesti sono consultabili online.
 
-#DidatticaDigitale è la prima di una serie di azioni chiave nel quadro di Solidarietà Digitale che pongono l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
+**#DidatticaDigitale** è la prima di una serie di azioni chiave nel quadro di Solidarietà Digitale che pongono l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
 
 In questa fase, la ripartenza della scuola è un aspetto cruciale per i ragazzi e le loro famiglie. Il digitale può svolgere un ruolo fondamentale per arricchire l’apprendimento degli studenti degli istituti di ogni ordine e grado, per facilitare la didattica con metodologie innovative e promuovere percorsi di apprendimento  mirati a soddisfare particolari esigenze e fornire materiale aggiuntivo al corpo docente.
  
