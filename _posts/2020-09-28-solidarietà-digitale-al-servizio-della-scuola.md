@@ -23,7 +23,7 @@ A questo proposito, il Dipartimento per la Trasformazione Digitale e il Minister
 
 ![Infografica solidarietà digitale 2](/assets/images/posts/2020_09_22_InfoSolidarietaDigitale.png)
 
-Sarà possibile inviare le richieste di partecipazione, sotto forma di Manifestazione d’interesse, da oggi, 28 settembre 2020, fino al 28 ottobre 2020. L' [Avviso Pubblico]({{ site.baseurl }}/assets/docs/Didattica_Digitale_Avviso_Manifestazione_interesse_2020_09_28.pdf){:target="_blank" rel="noopener noreferrer"} e l' [Allegato A]({{ site.baseurl }}/assets/docs/Allegato A_Avviso__Pubblico_DidatticaDigitale.pdf){:target="_blank" rel="noopener noreferrer"} contenenti le modalità di partecipazione ed i requisiti richiesti sono consultabili online.
+Sarà possibile inviare le richieste di partecipazione, sotto forma di Manifestazione d’interesse, da oggi, 28 settembre 2020, fino al 28 ottobre 2020. L'[avviso Pubblico]({{ site.baseurl }}/assets/docs/Didattica_Digitale_Avviso_Manifestazione_interesse_2020_09_28.pdf){:target="_blank" rel="noopener noreferrer"} e l'[allegato A]({{ site.baseurl }}/assets/docs/Allegato A_Avviso__Pubblico_DidatticaDigitale.pdf){:target="_blank" rel="noopener noreferrer"} contenenti le modalità di partecipazione ed i requisiti richiesti sono consultabili online.
 
 **#DidatticaDigitale** è la prima di una serie di azioni chiave nel quadro di Solidarietà Digitale che pongono l’innovazione al servizio di percorsi di apprendimento efficaci ed inclusivi. Perché nessuno rimanga indietro.
 
