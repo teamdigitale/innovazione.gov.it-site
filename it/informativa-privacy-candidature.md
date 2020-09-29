@@ -72,9 +72,7 @@ Largo Pietro di Brazzà 86
 00186 Roma - Italia  
 
 {:.mt-5}
-## Diritti di reclamo
+## Diritto di reclamo
 
 Per i trattamenti di cui alla presente informativa, gli interessati che ritengono che il trattamento che li riguardi avvenga in violazione di quanto previsto dal Regolamento, hanno il diritto di presentare un reclamo al Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 ROMA ([www.garanteprivacy.it](https://www.garanteprivacy.it/)), ai sensi dell’art. 77 del Regolamento.
-
-Gli interessati che ritengono che il trattamento dei dati personali a loro riferiti effettuato attraverso questo sito avvenga in violazione di quanto previsto dal Regolamento hanno il diritto di proporre reclamo al Garante, come previsto dall’art. 77 del Regolamento stesso, o di adire le opportune sedi giudiziarie (art. 79 del Regolamento).
 </div>
