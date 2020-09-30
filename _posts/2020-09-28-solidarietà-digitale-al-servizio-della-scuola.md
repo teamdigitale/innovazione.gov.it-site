@@ -38,7 +38,7 @@ Con la missione che parte oggi, il progetto Solidarietà Digitale promuove  serv
 
 Link utili:
 
-- L'iniziativa dal sito del [Minisero dell'istruzione](https://www.miur.gov.it/web/guest/solidariet%c3%a0-digitale){:target="_blank" rel="noopener noreferrer"}
+- L'iniziativa dal sito del [Ministero dell'istruzione](https://www.miur.gov.it/web/guest/solidariet%c3%a0-digitale){:target="_blank" rel="noopener noreferrer"}
 - [Avviso Pubblico]({{ site.baseurl }}/assets/docs/Didattica_Digitale_Avviso_Manifestazione_interesse_2020_09_28.pdf){:target="_blank" rel="noopener noreferrer"}
 - [Allegato A]({{ site.baseurl }}/assets/docs/Allegato A_Avviso__Pubblico_DidatticaDigitale.pdf){:target="_blank" rel="noopener noreferrer"} 
 
