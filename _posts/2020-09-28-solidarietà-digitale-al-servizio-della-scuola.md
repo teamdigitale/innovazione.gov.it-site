@@ -36,9 +36,11 @@ In questa fase, la ripartenza della scuola è un aspetto cruciale per i ragazzi 
 
 Con la missione che parte oggi, il progetto Solidarietà Digitale promuove  servizi digitali aggiuntivi per il mondo della scuola,  tra cui strumenti per la didattica digitale integrata, piattaforme avanzate di e-learning, contenuti didattici digitali di qualità, opportunità di formazione per i docenti ed esercizi innovativi per sostenere gli studenti nello studio. Tutti i servizi, messi disposizione da aziende ed associazioni, saranno accessibili gratuitamente attraverso [il sito dedicato](https://solidarietadigitale.agid.gov.it/#/){:target="_blank" rel="noopener noreferrer"}.
 
+L'iniziativa è condotta in collaborazione con il [Ministero dell'istruzione](https://www.miur.gov.it/web/guest/solidariet%c3%a0-digitale){:target="_blank" rel="noopener noreferrer"}
+
+
 Link utili:
 
-- L'iniziativa dal sito del [Ministero dell'istruzione](https://www.miur.gov.it/web/guest/solidariet%c3%a0-digitale){:target="_blank" rel="noopener noreferrer"}
 - [Avviso Pubblico]({{ site.baseurl }}/assets/docs/Didattica_Digitale_Avviso_Manifestazione_interesse_2020_09_28.pdf){:target="_blank" rel="noopener noreferrer"}
 - [Allegato A]({{ site.baseurl }}/assets/docs/Allegato A_Avviso__Pubblico_DidatticaDigitale.pdf){:target="_blank" rel="noopener noreferrer"} 
 
