@@ -23,7 +23,7 @@ ll Convegno, organizzato dall’Ambasciata britannica a Roma, dal British Counci
 
 “La pandemia da Covid-19 ha messo in evidenza le fragilità del nostro mondo, ha sconvolto in maniera imprevedibile i nostri stili di vita e le nostre economie. Ci ha tuttavia offerto - ha affermato la Ministra Pisano - la possibilità di costruire un futuro diverso, ha cambiato la nostra percezione della tecnologia facendola diventare una componente essenziale per il funzionamento della nostra economia e della nostra società”.
 
-Leggi l’[intervento completo]({{ site.baseurl }}/assets/docs/Conferenza_Pontignano_2020_10_02_InterventoPisano.pdf){:target="_blank" rel="noopener noreferrer"}
+Leggi l’[intervento completo]({{ site.baseurl }}/assets/docs/Conferenza_Pontignano_2020_10_02_InterventoPisano.pdf){:target="_blank" rel="noopener noreferrer"} (il testo originale in inglese e una traduzione di cortesia).
 
 
 
