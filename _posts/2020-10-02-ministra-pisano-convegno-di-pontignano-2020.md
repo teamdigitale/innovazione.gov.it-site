@@ -15,6 +15,8 @@ categories:
 
 _Decision maker e influencer governativi a uno degli eventi annuali più importanti nel rapporto bilaterale tra Regno Unito e Italia._
 
+<!-- MORE -->
+
 La Ministra per l’innovazione tecnologica e la digitalizzazione Paola Pisano ha partecipato oggi al XXVII Convegno di Pontignano “Regno Unito e Italia: insieme per un futuro prospero, sicuro e sostenibile”.  
 
 Istituito nel 1993 dal British Council e St Antony’s College Oxford, il Convegno è attualmente organizzato dall’Ambasciata britannica a Roma, dal British council e dall'Università di Siena. L’evento di quest’anno si svolge dall’1 al 3 ottobre, e si sofferma sulle tante sfide apportate dalla pandemia Covid-19. Presso la Certosa di Pontignano, poco fuori Siena, il Convegno si articola su quattro aree tematiche: i) Il futuro della nostra sicurezza; ii) Priorità per il futuro del commercio e degli investimenti Regno Unito-Italia; iii) Coronavirus e innovazione tecnologica – cogliere le opportunità e mitigare i rischi; iv) Più vicini o più lontani? Qual è l'impatto del Coronavirus sulle nostre società? E come dovremmo affrontarlo?
