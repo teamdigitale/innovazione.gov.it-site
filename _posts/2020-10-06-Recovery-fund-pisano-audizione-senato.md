@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Recovery fund, la ministra Pisano in audizione al Senato"
 ref: Recovery-fund-pisano-audizione-senato
-asset: <img class="w-100" src="/assets/images/posts/2020_10_06_AudizionePisanoSenato.jpeg" alt="Ministra Pisano Audizione Senato Recovery Fund"/>
+asset: <img class="w-100" src="/assets/images/posts/2020_10_06_AudizionePisanoSenato.jpg" alt="Ministra Pisano Audizione Senato Recovery Fund"/>
 pinned:
 categories:
   - cittadini
