@@ -10,7 +10,7 @@ logo: pdnd.png
 child_of_ref: progetti
 no_site_toc: true
 order: 10
-project_url: https://pdnd.italia.it/
+project_url: 
 categories:
  - pubblica amministrazione
  - cittadini
@@ -21,7 +21,7 @@ categories:
 ## In breve
 
 {:.max-w-40}
-I dati pubblici sono un bene comune e una risorsa del Paese, che va resa disponibile per produrre valore. Sulla base di questa considerazioni nasce il progetto  della [Piattaforma Digitale Nazionale Dati (PDND)](https://pdnd.italia.it/){:target="_blank" rel="noopener noreferrer"}: un’interfaccia unica, all’interno della quale singole amministrazioni possono comunicare e condividere dati e API in maniera libera e aperta, permettendo la nascita di servizi e data application nuovi e prima impensabili realizzati sui bisogni del cittadino. Ovviamente nel massimo rispetto delle norme di privacy e nella piena sicurezza tecnologica.
+I dati pubblici sono un bene comune e una risorsa del Paese, che va resa disponibile per produrre valore. Sulla base di questa considerazioni nasce il progetto  della Piattaforma Digitale Nazionale Dati (PDND): un’interfaccia unica, all’interno della quale singole amministrazioni possono comunicare e condividere dati e API in maniera libera e aperta, permettendo la nascita di servizi e data application nuovi e prima impensabili realizzati sui bisogni del cittadino. Ovviamente nel massimo rispetto delle norme di privacy e nella piena sicurezza tecnologica.
 
 {:.mt-5.max-w-40}
 ## Vantaggi per la Pubblica Amministrazione e i cittadini
