@@ -20,4 +20,4 @@ _A Palazzo Madama sono state illustrate le priorità strategiche nel campo dell'
 Presso la Commissione Affari costituzionali del Senato, si è tenuta l'audizione della Ministra per l'innovazione tecnologica e la digitalizzazione Paola Pisano sulle linee guida per la definizione del Piano nazionale di ripresa e resilienza.
 
 
-Leggi l'[intervento completo]({{ site.baseurl }}/assets/docs/Conferenza_Pontignano_2020_10_02_InterventoPisano.pdf){:target="_blank" rel="noopener noreferrer"}
+Leggi l'[intervento completo]({{ site.baseurl }}/assets/docs/2020_10_06_AudizioneSenato_RecoveryFund_MinistraPisano.pdf){:target="_blank" rel="noopener noreferrer"}
