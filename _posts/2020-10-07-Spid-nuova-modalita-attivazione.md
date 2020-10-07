@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Spid: disponibile una nuova modalità di attivazione con video e senza 
 operatore"
-ref: Recovery-fund-pisano-audizione-senato
+ref: spid-nuova-modalita-accesso
 asset: <img class="w-100" src="/assets/images/posts/Spid_cover_1.png" alt="Le novità su Spid"/>
 pinned:
 categories:
