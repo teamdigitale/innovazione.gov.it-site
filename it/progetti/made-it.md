@@ -47,4 +47,4 @@ L’accesso  ai programmi è subordinato al rispetto di alcuni criteri specifici
 ## Media
 
 {:.max-w-40}
-Per ogni richiesta media scrivere a [media@innovazione.gov.it](mailto:media@innovazione.gov.it).
+Per ogni richiesta media scrivere a [madeit@innovazione.gov.it](mailto:madeit@innovazione.gov.it).
