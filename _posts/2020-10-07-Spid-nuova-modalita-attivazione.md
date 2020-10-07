@@ -32,13 +32,14 @@ Attraverso la nuova modalità di riconoscimento online, il cittadino potrà otte
 
 2. realizzare con il proprio telefono o computer un video in cui mostra il suo documento di  riconoscimento italiano (carta d’identità, carta d’identità elettronica, patente o passaporto) e la tessera sanitaria o, 
 in alternativa, il tesserino del codice fiscale. Come misura di tutela contro il furto di identità, durante il video il cittadino dovrà leggere un codice ricevuto via sms o tramite una delle app dei gestori di identità, che avrà provveduto ad installare sul proprio cellulare;
+
 3. effettuare un bonifico da un conto corrente italiano a lui intestato (o cointestato), indicando nella causale un codice specifico che avrà ricevuto dal gestore di identità.
 
 Il bonifico è un ulteriore elemento di verifica dell’identità. Alcuni gestori hanno già scelto di chiedere una somma simbolica, anche di pochi centesimi di euro, da devolvere poi in beneficenza. Altri potranno decidere di adottare scelte commerciali.
 
 L’operatore verificherà nel giro di pochi giorni le informazioni ricevute dal cittadino ai fini di controlli  di sicurezza e antifrode, quindi rilascerà l’identità digitale. 
 
-Tutte le procedure di attivazione sono reperibili sul sito https://spid.gov.it: esistono modalità gratuite o a pagamento che è bene conoscere prima di scegliere il gestore. 
+Tutte le procedure di attivazione sono reperibili sul sito [Spid](https://www.spid.gov.it/){:target="_blank" rel="noopener noreferrer"}: esistono modalità gratuite o a pagamento che è bene conoscere prima di scegliere il gestore. 
 
 Questa nuova modalità ha ricevuto nei giorni scorsi il parere favorevole del Garante per la protezione dei dati personali e successivamente è stata adottata da AgID, ente vigilato dalla Ministra per l’Innovazione Tecnologica e la Digitalizzazione.
 
