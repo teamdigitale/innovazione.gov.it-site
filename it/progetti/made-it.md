@@ -6,7 +6,7 @@ lang: it
 layout: page-project
 dashboard_daily: true
 ref: made-it
-logo: made-it.png
+logo: made-it_new.png
 child_of_ref: progetti
 project_url: 
 order: 9
