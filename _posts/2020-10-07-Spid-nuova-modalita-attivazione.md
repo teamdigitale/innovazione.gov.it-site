@@ -28,13 +28,11 @@ Nell’ultimo anno Spid si è diffuso notevolmente, arrivando a superare oggi il
 
 Attraverso la nuova modalità di riconoscimento online, il cittadino potrà ottenere Spid, comodamente da casa, senza l’aiuto di un operatore e con pochi passaggi. Per richiederlo dovrà:
 
-registrarsi sul sito del gestore di identità prescelto, che ha attiva la nuova modalità, avendo a portata di mano indirizzo e-mail e numero di cellulare personali;
+1. registrarsi sul sito del gestore di identità prescelto, che ha attiva la nuova modalità, avendo a portata di mano indirizzo e-mail e numero di cellulare personali;
 
-
-
-realizzare con il proprio telefono o computer un video in cui mostra il suo documento di riconoscimento italiano (carta d’identità, carta d’identità elettronica, patente o passaporto) e la tessera sanitaria o, 
+2. realizzare con il proprio telefono o computer un video in cui mostra il suo documento di  riconoscimento italiano (carta d’identità, carta d’identità elettronica, patente o passaporto) e la tessera sanitaria o, 
 in alternativa, il tesserino del codice fiscale. Come misura di tutela contro il furto di identità, durante il video il cittadino dovrà leggere un codice ricevuto via sms o tramite una delle app dei gestori di identità, che avrà provveduto ad installare sul proprio cellulare;
-effettuare un bonifico da un conto corrente italiano a lui intestato (o cointestato), indicando nella causale un codice specifico che avrà ricevuto dal gestore di identità.
+3. effettuare un bonifico da un conto corrente italiano a lui intestato (o cointestato), indicando nella causale un codice specifico che avrà ricevuto dal gestore di identità.
 
 Il bonifico è un ulteriore elemento di verifica dell’identità. Alcuni gestori hanno già scelto di chiedere una somma simbolica, anche di pochi centesimi di euro, da devolvere poi in beneficenza. Altri potranno decidere di adottare scelte commerciali.
 
@@ -48,6 +46,6 @@ Tra le misure a garanzia della sicurezza e della tutela della privacy, concordat
 
 **Approfondimenti**
 
-La determina AgID 426/2020 - Procedure per il rilascio dell’identità digitale Spid
-I dettagli sulle modalità di rilascio (Allegato tecnico alla determina AgID)
-Il parere del Garante per la protezione dei dati personali
+- La determina AgID 426/2020 - [Procedure per il rilascio dell’identità digitale Spid](https://www.agid.gov.it/sites/default/files/repository_files/426_dt_dg_n._426_-_1_ott_2020_-_determinazione_avbonifico.pdf){:target="_blank" rel="noopener noreferrer"}
+- I dettagli sulle modalità di rilascio - [Allegato tecnico alla determina AgID](https://www.agid.gov.it/sites/default/files/repository_files/allegato-determinazione_avbonifico_v.1.0.pdf){:target="_blank" rel="noopener noreferrer"}
+- Il [parere](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9461061){:target="_blank" rel="noopener noreferrer"} del Garante per la protezione dei dati personali 
