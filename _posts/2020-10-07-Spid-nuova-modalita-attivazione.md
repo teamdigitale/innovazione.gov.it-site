@@ -2,8 +2,7 @@
 layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
-title: "Spid: disponibile una nuova modalità di attivazione con video e senza 
-operatore"
+title: "Spid: disponibile una nuova modalità di attivazione con video e senza operatore"
 ref: spid-nuova-modalita-accesso
 asset: <img class="w-100" src="/assets/images/posts/Spid_cover_1.png" alt="Le novità su Spid"/>
 pinned:
