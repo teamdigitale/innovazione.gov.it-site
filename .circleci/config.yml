@@ -71,7 +71,7 @@ references:
           --allow-hash-href \
           --only-4xx \
           --alt-ignore '/.*/' \
-          --disable_external true
+          --disable_external false
 
   save_to_workspace: &save_to_workspace
     persist_to_workspace:
