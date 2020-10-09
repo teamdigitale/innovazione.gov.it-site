@@ -1,7 +1,7 @@
 ---
 lang: it
 layout: page
-title: CRITERI E MODALITÀ’ PER LA CONCESSIONE DEL PATROCINIO
+title: CRITERI E MODALITÀ PER LA CONCESSIONE DEL PATROCINIO
 title_short: ModalitaConcessionePatrocinio
 ref: critericoncpatrocinio
 
@@ -66,7 +66,7 @@ redirect_from:
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6 class="h6Centered">MODALITÀ’ DI RICHIESTA</h6>
+            <h6 class="h6Centered">MODALITÀ DI RICHIESTA</h6>
             <p>
                 La richiesta, oltre ad una breve sintesi dell’iniziativa, deve contenere le seguenti informazioni personali, logistiche e organizzative:
                 <ol>
