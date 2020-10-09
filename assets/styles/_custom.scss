@@ -102,6 +102,12 @@
       background-color: rgba(0, 89, 179, 0.6);
     }
   }
+
+  &.innovation-section-head--concessione-patrocini {
+    &::before {
+      background-color: rgba(0, 89, 179, 0.6);
+    }
+  }
 }
 
 .hero-head {
@@ -285,5 +291,8 @@ iframe {
   text-align: left;
   h6 {
     margin: 1em 0 .5em 0;
+  }
+  h6.h6Centered {
+    text-align: center;
   }
 }

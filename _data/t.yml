@@ -143,6 +143,11 @@ footer-contatti-ministero:
       name: "media@innovazione.gov.it"
       icon: "mail"
       url: "mailto:media@innovazione.gov.it"
+    patrocini:
+      label: "Patrocinio"
+      name: "Concessione Patrocinio e logo MID"
+      icon: "star-outline"
+      url: "/it/chi-siamo/patrocini"
 
 footer-contatti-dipartimento:
   it:
