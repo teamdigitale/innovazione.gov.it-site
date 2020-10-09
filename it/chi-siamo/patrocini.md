@@ -30,7 +30,7 @@ La concessione del patrocinio richiede un adeguato tempo di istruttoria, pertant
 
 L’utilizzo del Logo MID viene concesso a condizione che sia richiesto il patrocinio.  
 
-[Criteri e modalità per la concessione]({{ site.baseurl }}/it/chi-siamo/nota-criteri-conc-patrocini);  
+[Criteri e modalità per la concessione]({{ site.baseurl }}/it/chi-siamo/nota-criteri-conc-patrocini)
 
 [Modulo di Richiesta Patrocinio]({{ site.baseurl }}/assets/docs/patrocini/ModuloPatrocini.pdf){:target="_blank" rel="noopener noreferrer"}  
 
