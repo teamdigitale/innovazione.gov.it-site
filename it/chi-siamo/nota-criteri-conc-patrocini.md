@@ -16,12 +16,16 @@ redirect_from:
   - /nota-criteri-conc-patrocini
 ---
 <div class="container indagineCovid19_container">
-    <p>
-        <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
-    </p>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-        <h6 class="h6Centered">CRITERI</h6>
+            <p class="text-center">
+                <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
+            </p>
+        </div>
+    </div>
+    <div class="row indagineCovid19_box-noBorder">
+        <div class="col-12 col-lg-10">
+        <h6 class="text-center">CRITERI</h6>
             <p>
                 Il Ministro per l’innovazione tecnologica e la digitalizzazione può concedere il proprio patrocinio gratuito, relativamente ad iniziative ed eventi che abbiano contenuti e finalità pertinenti alle materie di propria competenza.  
             </p>
@@ -51,7 +55,7 @@ redirect_from:
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6 class="h6Centered">REQUISTI RICHIESTI</h6>
+            <h6 class="text-center">REQUISTI RICHIESTI</h6>
             <p>
                 Al fine di ottenere il riconoscimento del patrocinio del Ministro per l'innovazione tecnologica e la digitalizzazione, le iniziative devono possedere le seguenti caratteristiche:
                 <ul>
@@ -66,7 +70,7 @@ redirect_from:
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6 class="h6Centered">MODALITÀ DI RICHIESTA</h6>
+            <h6 class="text-center">MODALITÀ DI RICHIESTA</h6>
             <p>
                 La richiesta, oltre ad una breve sintesi dell’iniziativa, deve contenere le seguenti informazioni personali, logistiche e organizzative:
                 <ol>
@@ -90,7 +94,7 @@ redirect_from:
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6 class="h6Centered">ISTRUTTORIA E TEMPI DI PRESENTAZIONE DELLA RICHIESTA</h6>
+            <h6 class="text-center">ISTRUTTORIA E TEMPI DI PRESENTAZIONE DELLA RICHIESTA</h6>
             <p>
                 Qualora le richieste provengano da istituzioni pubbliche, l’istruttoria finalizzata alla concessione del patrocinio è curata dal Gabinetto del Ministro per l’innovazione tecnologica e la digitalizzazione al termine della quale, il predetto ufficio provvede alla concessione del patrocinio.
             </p>
@@ -110,7 +114,7 @@ redirect_from:
     </div>
     <div class="row indagineCovid19_box-noBorder">
         <div class="col-12 col-lg-10">
-            <h6 class="h6Centered">UTILIZZO DEL LOGO</h6>
+            <h6 class="text-center">UTILIZZO DEL LOGO</h6>
             <p>
                 L’utilizzo del logo del Ministro per l’Innovazione tecnologica e la digitalizzazione può avvenire esclusivamente a seguito di apposita e specifica autorizzazione.
             </p>
@@ -139,9 +143,13 @@ redirect_from:
             </p>
         </div>
     </div>
-    <p>
-        <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
-    </p>
+    <div class="row indagineCovid19_box-noBorder">
+        <div class="col-12 col-lg-10">
+            <p class="text-center">
+                <a href="/it/chi-siamo/patrocini">torna alla Richiesta Patrocini</a>
+            </p>
+        </div>
+    </div>
 </div>
 
 
