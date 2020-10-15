@@ -17,12 +17,11 @@ _Firmata dai ministri la dichiarazione congiunta sul cloud._
 
 <!-- MORE -->
 
-La Ministra per l’Innovazione tecnologica e la digitalizzazione, Paola Pisano, ha partecipato alla video Conferenza informale dei ministri dell’Unione europea  responsabili per le telecomunicazioni e il digitale. La Presidenza tedesca del Consiglio dell’Unione europea, che ha promosso in confronto, ha chiesto ai ministri di esprimersi su tre questioni: quali misure si dovrebbero adottare per rafforzare gli standard europei sui dati oltre i confini del mercato unico; quali principi fondamentali dovrebbero guidare lo sviluppo dell’intelligenza artificiale in Europa; quali siano gli orientamenti sul Paper Digital Services Act package (i principi per l’attuazione dei servizi digitali ai quali i Paesi dell’Unione si devono attenere).
+La Ministra per l’Innovazione tecnologica e la digitalizzazione Paola Pisano ha partecipato oggi alla video Conferenza informale dei ministri dell’Unione europea responsabili per le Telecomunicazioni e il Digitale. La Presidenza tedesca del Consiglio dell’Unione europea aveva chiesto ai partecipanti di esprimersi su tre questioni: quali misure andrebbero adottate per estendere gli standard europei sui dati oltre i confini del mercato unico; quali principi fondamentali dovrebbero guidare lo sviluppo dell’intelligenza artificiale in Europa; quali siano gli orientamenti nazionali sui principi per la realizzazione dei servizi digitali ai quali i Paesi dell’Unione si devono attenere, ”Paper digital services act package”.
 
-Durante la conferenza informale i ministri hanno sottoscritto la 'European Cloud Federation Joint declaration' la dichiarazione congiunta sul cloud.
+Durante la conferenza informale i ministri hanno sottoscritto la dichiarazione congiunta sul cloud.
 
 Leggi l’intervento integrale della Ministra Pisano
-
 
 {:.x-small.text-right}
 _Fotografia di [Nasa](https://unsplash.com/@nasa){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8){:target="_blank" rel="noopener noreferrer"}_
