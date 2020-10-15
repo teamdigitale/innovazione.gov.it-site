@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Paola Pisano alla video Conferenza informale con i ministri europei per le telecomunicazioni e il digitale"
 ref: ministra-pisano-evento-ministri-ue-digitale
-asset: <img class="w-100" src="/assets/images/posts/2020-10-15-evento-pisano-ministri-ue.jpg" alt="Evento-Pisano-Ministri-UE"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-10-15-cloud-ue.jpg" alt="Evento-Pisano-Ministri-UE"/>
 pinned:
 categories:
   - cittadini
@@ -22,3 +22,7 @@ La Ministra per l’innovazione tecnologica e la digitalizzazione, Paola Pisano,
 Durante la conferenza informale i ministri hanno sottoscritto la 'European Cloud Federation Joint declaration' la dichiarazione congiunta sul cloud.
 
 Leggi l’intervento integrale della Ministra Pisano
+
+
+{:.x-small.text-right}
+_Fotografia di [Nasa](https://unsplash.com/@nasa){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8){:target="_blank" rel="noopener noreferrer"}_
