@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "La Ministra Pisano alla video conferenza con i Ministri Ue per il digitale"
 ref: ministra-pisano-evento-ministri-ue-digitale
-asset: <img class="w-100" src="/assets/images/posts/Spid_cover_1.png" alt="Le novità su Spid"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-10-15-evento-pisano-ministri-ue.jpg" alt="Evento-Pisano-Ministri-UE"/>
 pinned:
 categories:
   - cittadini
