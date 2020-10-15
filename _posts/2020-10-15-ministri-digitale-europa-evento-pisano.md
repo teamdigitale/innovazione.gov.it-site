@@ -21,7 +21,7 @@ La Ministra per l’Innovazione tecnologica e la digitalizzazione Paola Pisano h
 
 Durante la conferenza informale i ministri hanno sottoscritto la dichiarazione congiunta sul cloud.
 
-Leggi [l’intervento integrale della Ministra Pisano]({{ site.baseurl }}/assets/docs/2020_10_06_AudizioneSenato_RecoveryFund_MinistraPisano.pdf){:target="_blank" rel="noopener noreferrer"}
+Leggi [l’intervento integrale della Ministra Pisano]({{ site.baseurl }}/assets/docs/2020_10_15_Conferenza_Informale_Ministri_Ue_Intervento_Pisano.pdf){:target="_blank" rel="noopener noreferrer"}
 
 {:.x-small.text-right}
 _Fotografia di [Nasa](https://unsplash.com/@nasa){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8){:target="_blank" rel="noopener noreferrer"}_
