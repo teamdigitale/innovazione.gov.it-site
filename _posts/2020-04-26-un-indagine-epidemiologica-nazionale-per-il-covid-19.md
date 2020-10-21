@@ -24,4 +24,4 @@ La compilazione del questionario richiede soltanto pochi minuti e [può essere f
 
 
 {:.x-small.text-right}
-_Fotografia di [Kaitlyn Baker](https://unsplash.com/@kaitlynbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/vZJdYl5JVXY)}_
+_Fotografia di [Kaitlyn Baker](https://unsplash.com/@kaitlynbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/vZJdYl5JVXY){:target="_blank" rel="noopener noreferrer"}_
