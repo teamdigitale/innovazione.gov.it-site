@@ -21,13 +21,19 @@ hide_child_of_ref: true
     </div>
 </div>
 
-Ha ottenuto un PhD in Business Administration ed è Professore di Innovazione e Management all’Università di Torino. Ha fondato e diretto il laboratorio ICxT all’Università di Torino e partecipato alla fondazione della ESCP Europe Business School.
+Dopo aver ottenuto un PhD in Business Administration, nel 2007 è diventata Docente di Innovazione e Management all’Università di Torino.  
 
-È stata visiting lecturer alla Glasgow Caledonian University e all’Università di Westminster e ha pubblicato oltre 80 paper sull’innovazione e sulla business administration innovativa.
+Tra 2011 e il 2013 è stata visiting lecturer alla Glasgow Caledonian University e all’Università di Westminster. Nel biennio 2014-2016 è stata Docente di Disruptive Innovazione al dottorato di Ricerca in Informatica dell’Università di Torino.  
 
-Dal 2016 è stata assessore all’innovazione del Comune di Torino dove ha portato una nuova visione che sta trasformando la città in un laboratorio dove sperimentare l’innovazione e ha contribuito a definire la strategia di digitalizzazione della città.
+Dal 2014 al 2016 ha diretto il Centro Interdipartimentale di innovazione dell’Università di Torino (ICxT). Il centro sviluppa progetti di innovazione con PMI in collaborazione con altri centri di ricerca. ICxT presidia tutta la filiera della gestione di un progetto innovativo: dallo studio dei materiali, alla prototipazione, al testing e all’eventuale industrializzazione.  
 
-E’ diventata Ministro per l’innovazione tecnologica e la digitalizzazione nel Settembre 2019.
+Nella sua carriera accademica ha pubblicato oltre 80 paper sull’innovazione e sulla business administration innovativa.  
+
+Negli anni ha anche avuto importanti esperienze nel privato, dal settore farmaceutico a consulenze tecnologiche in vari ambiti.  
+
+Dal 2016 al 2019 è stata assessore all’innovazione del Comune di Torino. Il suo lavoro ha contribuito alla creazione di una nuova visione, con l’obiettivo di trasformare la città in un laboratorio dove sperimentare l’innovazione. Ha anche partecipato alla definizione della strategia di digitalizzazione della città.  
+
+E’ diventata Ministro per l’innovazione tecnologica e la digitalizzazione nel Settembre 2019.  
 
 {:.mt-5.max-w-40}
 ## Link di riferimento
