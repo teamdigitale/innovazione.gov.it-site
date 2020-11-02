@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Cobul: da novembre alle famiglie i primi voucher per internet, pc e tablet"
 ref: cobul-da-novembre-i-primi-voucher
-asset: <img class="w-100" src="/assets/images/posts/indagine.jpg" alt="Cobul da novembre alle famiglie i primi voucher per internet, pc e tablet"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-11-02-cobul-vouch-9-novembre.jpg" alt="Cobul da novembre alle famiglie i primi voucher per internet, pc e tablet"/>
 
 categories:
   - cittadini
@@ -22,4 +22,7 @@ Il Cobul è il Comitato interministeriale costituito per coordinare la Strategia
 
 Questa prima fase di erogazione del bonus è parte di un progetto più ampio che prevede anche per le famiglie con reddito Isee inferiore a 50.000 euro e per le micro, piccole e medie imprese la possibilità di usufruire di voucher per la connessione veloce a internet.  
 
-Per i voucher alle imprese è stata prevista la cifra di 515 milioni di euro la cui assegnazione avverrà attraverso un incentivo graduale in base alla qualità della connettività.  Il Cobul, su proposta del Mise, ha quindi deliberato di attribuire un voucher che va da un minimo di 300 euro ad un massimo di 2.500 euro, a seconda la velocità della connessione.
+Per i voucher alle imprese è stata prevista la cifra di 515 milioni di euro la cui assegnazione avverrà attraverso un incentivo graduale in base alla qualità della connettività. Il Cobul, su proposta del Mise, ha quindi deliberato di attribuire un voucher che va da un minimo di 300 euro ad un massimo di 2.500 euro, a seconda la velocità della connessione.
+
+{:.x-small.text-right}
+_Fotografia di [Tyler Franta](https://unsplash.com/@tfrants){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/RbFDzMKTH6Q){:target="_blank" rel="noopener noreferrer"}_
