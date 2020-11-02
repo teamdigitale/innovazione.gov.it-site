@@ -11,7 +11,7 @@ categories:
   - highlights
 ---
 
-_Al via la prima fase di erogzaione del bonus: questa la decisione presa dal Cobul presieduto dalla Ministra Paola Pisano_
+_Al via la prima fase di erogazione del bonus: questa la decisione presa dal Cobul presieduto dalla Ministra Paola Pisano_
 
 <!-- MORE -->
 
