@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Dal 9 novembre voucher internet e pc/tablet fruibili per le famiglie"
 ref: cobul-da-novembre-i-primi-voucher
-asset: <img class="w-100" src="/assets/images/posts/2020-11-02-cobul-vouch-9-novembre.jpg" alt="Cobul da novembre alle famiglie i primi voucher per internet, pc e tablet"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-11-02-cobul-vouch-9-novembre.jpg" alt="Dal 9 novembre voucher internet e pc/tablet fruibili per le famiglie"/>
 
 categories:
   - cittadini
