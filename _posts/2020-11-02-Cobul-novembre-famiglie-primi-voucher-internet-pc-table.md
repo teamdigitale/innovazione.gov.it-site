@@ -2,7 +2,7 @@
 layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
-title: "Cobul: da novembre alle famiglie i primi voucher per internet, pc e tablet"
+title: "Dal 9 novembre voucher internet e pc/tablet fruibili per le famiglie"
 ref: cobul-da-novembre-i-primi-voucher
 asset: <img class="w-100" src="/assets/images/posts/2020-11-02-cobul-vouch-9-novembre.jpg" alt="Cobul da novembre alle famiglie i primi voucher per internet, pc e tablet"/>
 
@@ -11,7 +11,7 @@ categories:
   - highlights
 ---
 
-_Al via la prima fase di erogzaione del bonus: questa la decisione presa dal Cobul presieduta dalla Ministra Paola Pisano_
+_Al via la prima fase di erogzaione del bonus: questa la decisione presa dal Cobul presieduto dalla Ministra Paola Pisano_
 
 <!-- MORE -->
 
