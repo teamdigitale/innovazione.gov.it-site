@@ -31,8 +31,9 @@ Il Gruppo di lavoro è quindi alla ricerca di contributi su diversi punti. Dalla
 
 Per partecipare è possibile inviare i propri contributi scritti entro il 18 novembre 2020, con la possibilità di corredare il tutto o con un video ( durata massima di 4 minuti) o condividendo allegati tecnici a sostegno delle posizioni espresse. In seguito, potrà essere richiesto un approfondimento in videoconferenza da parte del gruppo di lavoro. 
 
-Scopri tutti i dettagli per partecipare
+[Scopri tutti i dettagli per partecipare](https://ec.europa.eu/eusurvey/runner/OdioOnLine){:target="_blank" rel="noopener noreferrer"}.
 
 
 
-Leggi l'[intervento completo]({{ site.baseurl }}/assets/docs/2020_10_06_AudizioneSenato_RecoveryFund_MinistraPisano.pdf){:target="_blank" rel="noopener noreferrer"}
+{:.x-small.text-right}
+_Fotografia di [Mika Baumeister](https://unsplash.com/@mbaumi){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/QBCS3iSKAyE){:target="_blank" rel="noopener noreferrer"}_
