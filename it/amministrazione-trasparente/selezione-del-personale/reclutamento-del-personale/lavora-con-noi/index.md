@@ -57,3 +57,10 @@ In questo momento non ci sono posizioni aperte.
   {% endfor %}
 </div>
 {% endif %}
+
+## Esito Selezioni
+{: .mt-4}
+
+<a class="btn btn-primary btn-sm" href="http://presidenza.governo.it/AmministrazioneTrasparente/BandiConcorso/index.html" target="_blank">
+  <span class="seeall">{{ site.data.t.collapse-btn-show[page.lang] }}</span>
+</a>
