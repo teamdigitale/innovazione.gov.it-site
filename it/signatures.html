@@ -11,10 +11,332 @@ sitemap: false
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="robots" content="noindex, nofollow">
+  <style>
+    body {
+      font-family: "Titillium Web", Geneva, Tahoma, sans-serif;
+    }
+
+    .addressContainer {
+      position: relative;
+      text-align: center;
+      margin: 50px auto;
+      padding-bottom: 1em;
+      border:1px solid #ccc;
+      width: 60em;
+    }
+    
+    .addressContainer div {
+      width: 30em;
+      margin: 10px auto;
+      text-align: left;
+    }
+    
+    .addressContainer button {
+      padding: .5em;
+    }
+    .addressContainer .containerH5 {
+      text-align: left;
+      width: 45em;
+    }
+
+    .addressContainer .containerH5 h5{
+      margin: .5em .8em 1em;
+      padding: 0;
+    }
+
+    .addressContainer .betaVersion {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 10px;
+      background-color: #008758;
+      margin: 0;
+      width: auto;
+      padding: 0 1em;
+      color: #fff;
+    }
+
+    input {
+      width: 20em;
+      padding: .5em;
+    }
+  
+    label {
+      width: 6em;
+      display: inline-block;
+    }
+    
+    .codeContainer {
+      position: relative;
+      margin: 50px auto;
+      padding: .5em;
+      background: #f7f7f7;
+      border:1px solid #ccc;
+      width: 60em;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 60em;
+      height: 90%;
+      background: #fff;
+      opacity: 0.7;
+    }
+    
+    .btnForCopy {
+      padding: .5em;
+    }
+    
+    .btnForCopy span{
+      font-size: 15px;
+      padding: .5em;
+    }
+    
+    .btnForCopy img{
+      width: 13px;
+    }
+    .alert {
+      position: relative;
+      padding: 1rem 1rem 1rem 4em;
+      margin-bottom: 1rem;
+      border: 1px solid #b1b1b3;
+      width: 50em !important;
+    }
+    
+    .alert-success {
+      display: none;
+      background-position: 20px 16px;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      border-left: 8px solid #008758;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.1 7.9l.7.7-7.8 7.6-4.7-4.6.7-.7 4 3.9zM22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10zm-1 0a9 9 0 1 0-9 9 9 9 0 0 0 9-9z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    .alertCopyOk {
+      position: absolute;
+      top: 3.5em;
+      left: 2.5em;
+      background-color: #fff;
+    }
+
+    .alert-danger {
+      display: none;
+      background-position: 20px 16px;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      border-left: 8px solid #d9364f;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.5 14.2V5.7h1.2v8.5zm-.1 4.1h1.2v-1.8h-1.2zM22 7.9v8.3L16.1 22H7.9L2 16.2V7.9L7.9 2h8.2zm-1 .4L15.7 3H8.3L3 8.3v7.5L8.3 21h7.4l5.3-5.2z'%3E%3C/path%3E%3C/svg%3E");
+    }
+    .alert-heading {
+      line-height: 1;
+      margin-top: .5em;
+    }
+
+    .radioContainer {
+      text-align: center !important;
+    }
+
+    .radioContainer input {
+      width: auto;
+      padding: .5em;
+    }
+  
+    .radioContainer label {
+      width: 6.5em;
+      display: inline-block;
+      border:1px solid  #008758;
+      padding: .5em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+    }
+
+  </style>
 </head>
 <body>
+  <div class="addressContainer">
+    <div class="betaVersion">&beta; ver. 0.1</div>
+    <h4>Creazione del codice per l'inserimento della Firma nel Client di posta</h4>
+    <div class="containerH5">
+      <h5>1 - Inserisci il tuo nome e cognome</h5>
+      <h5>2 - Seleziona il Settore di appartenenza</h5>
+      <h5>3 - Clicca su "Verifica"</h5>
+      <h5>4 - Clicca su "Copia..." per copiare la firma generata negli appunti</h5>
+      <h5>5 - Apri il tuo Client di posta, accedi alle impostazioni, crea la nuova firma incollando(Ctrl+v) il contenuto degli appunti</h5>
+    </div>
+    <div>
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" class="inputFields" id="nome" value="" />
+    </div>
+    <div>
+      <label for="cognome">Cognome</label>
+      <input type="text" name="cognome" class="inputFields" id="cognome" value="" />
+    </div>
+    <div class="radioContainer">
+      <label for="DTDRadio">
+        <span>DTD</span>
+        <input type="radio" name="department" id="DTDRadio" value="DTD" onclick="checkRadio()">
+      </label>
+      <label for="MIDRadio">
+        <span>MID</span>
+        <input type="radio" name="department" id="MIDRadio" value="MID" onclick="checkRadio()">
+      </label>
+    </div>
+    <button id="clearData" class="btn btn-sm btn-primary mr-2 mb-2">Reset</button>
+    <button id="checkUsersList" class="btn btn-sm btn-primary mr-2 mb-2" disabled> Verifica </button>
+    <div id="alertOk" class="alert alert-success" role="alert">
+      Nominativo registrato, la firma è pronta per essere copiata, clicca sul pulsante "Clicca qui per..."
+    </div>
+    <div id="alertKo" class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Nominativo non trovato!</h4>
+      <p>Il nominativo inserito "<b id="searchedName"></b>" non è ancora stato registrato</p>
+      <hr>
+      <p class="mb-0">
+        Se devi inserire comunque la firma, copia ugualmente il codice sotto cliccando sul pulsante "Clicca qui per..." e,
+        una volta incollato nella firma del Client di posta, <b>inserisci a mano il tuo "Ruolo"</b>.
+      </p>
+    </div>
+  </div>
+  <div class="codeContainer">
+    <div id="overlay" class="overlay"></div>
+    <button id="btnForCopy" class="btnForCopy" data-clipboard-target="#codeToCopy">
+      <span>Clicca qui per copiare la firma negli appunti</span>
+      <span>
+        <img src="/assets/images/favicons/clippy.svg" alt="Copia negli appunti">
+      </span>
+    </button>
+    {% include signatures.html %}
+  </div>
+  
+  <script src="/assets/js/clipboard.min.js"></script>
+  
+  <script>
+    let departmentSelected = false;
 
-{% include signatures.html %}
+    const activateCheckButton = () => {
+        var nome = document.getElementById('nome').value.toLowerCase();
+        var cognome = document.getElementById('cognome').value.toLowerCase();
+        if (!nome || !cognome || !departmentSelected) {
+          document.getElementById('checkUsersList').disabled = true;
+          document.getElementById('overlay').style.display = 'block';
+        } else {
+          if (nome.length > 2 && cognome.length > 3) {
+            document.getElementById('checkUsersList').disabled = false;
+          }
+        }
+      };
 
+    const checkRadio = () => {
+      var radios = document.getElementsByName('department');
+      for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+          document.getElementById('DTD').style.display = 'none';
+          document.getElementById('MID').style.display = 'none';
+          const id = radios[i].value;
+          document.getElementById(id).style.display = 'block';
+          departmentSelected = true;
+          activateCheckButton();
+          break;
+        }
+      }
+    }
+
+    const resetCheckRadio = () => {
+      var radios = document.getElementsByName('department');
+      for (var i = 0, length = radios.length; i < length; i++) {
+        const id = radios[i].checked = false;
+        departmentSelected = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      var clipboard = new ClipboardJS('.btnForCopy');
+
+      clipboard.on('success', function (e) {
+        document.getElementById('alertCopyOk').style.display = 'block';
+        setTimeout(function () {
+          document.getElementById('alertCopyOk').style.display = 'none';
+        }, 3000);
+      });
+
+      clipboard.on('error', function (e) {
+        console.log('error on copy', e);
+      });
+
+      const usersArray = [
+        {%- for userObj in site.data.utenti -%}
+          {%- if userObj.Nome and userObj.Cognome and userObj.Settore and userObj.Incarico -%}
+            {
+              "nome": "{{ userObj.Nome }}",
+              "cognome": "{{ userObj.Cognome }}",
+              "incarico": "{{ userObj.Incarico }}",
+            }
+            {% unless forloop.last %},{% endunless %}
+          {%- endif -%}
+        {%- endfor -%}
+      ];
+
+      const defaultCode = 'Nome Cognome<br><i id="role" style="color:#5c5c5d;font-size:12px;line-height:12px;">Ruolo</i>';
+
+      document.getElementById('clearData').onclick = () => {
+        document.getElementById('nome').value = '';
+        document.getElementById('cognome').value = '';
+        resetCheckRadio();
+
+        document.getElementById('nameSurnameDTD').innerHTML = defaultCode;
+        document.getElementById('nameSurnameMID').innerHTML = defaultCode;
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('alertKo').style.display = 'none';
+        document.getElementById('alertOk').style.display = 'none';
+        document.getElementById('DTD').style.display = 'none';
+        document.getElementById('MID').style.display = 'none';
+      };
+  
+      function findUser(user) {
+        var nome = document.getElementById('nome').value.toLowerCase();
+        var cognome = document.getElementById('cognome').value.toLowerCase();
+        return user.nome.toLowerCase() === nome && user.cognome.toLowerCase() === cognome;
+      };
+
+      document.getElementById('checkUsersList').onclick = () => {
+        var nomeToCheck = document.getElementById('nome').value.toLowerCase();
+        var cognomeToCheck = document.getElementById('cognome').value.toLowerCase();
+        const userMatch = usersArray.find(findUser);
+
+        if (userMatch) {
+          const customCode = userMatch.nome.toUpperCase() + ' ' + userMatch.cognome.toUpperCase() + '<br/><i id="role" style="color:#5c5c5d;font-size:12px;line-height:12px;">'+ userMatch.incarico+'</i>';
+          document.getElementById('nameSurnameDTD').innerHTML = customCode;
+          document.getElementById('nameSurnameMID').innerHTML = customCode;
+          document.getElementById('overlay').style.display = 'none';
+          document.getElementById('alertOk').style.display = 'block';
+        } else {
+          const nameNotResolvedCode = nomeToCheck.toUpperCase()+' '+ cognomeToCheck.toUpperCase()+'<br><i id="role" style="color:#5c5c5d;font-size:12px;line-height:12px;">Ruolo</i>';
+          document.getElementById('searchedName').innerHTML = nomeToCheck + ' ' + cognomeToCheck;
+          document.getElementById('nameSurnameMID').innerHTML = nameNotResolvedCode;
+          document.getElementById('nameSurnameDTD').innerHTML = nameNotResolvedCode;
+          document.getElementById('overlay').style.display = 'none';
+          document.getElementById('alertKo').style.display = 'block';  
+        }
+      };
+
+      class ChangeBtnStatus {
+        constructor(element) {
+          this.element = element;
+          this.bindingButtons();
+        }
+
+        bindingButtons() {
+          const inputFields = document.querySelectorAll('.inputFields');
+          inputFields.forEach(function (el) {
+            addEventListener('keyup', (evt) => {
+              checkRadio();
+            });
+          })
+
+        }
+      }
+      window.changeBtnStatus = new ChangeBtnStatus(document.getElementById('checkUsersList'));
+    });
+  </script>
 </body>
 </html>
