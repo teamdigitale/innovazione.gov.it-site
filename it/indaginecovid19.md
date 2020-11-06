@@ -32,7 +32,7 @@ redirect_from:
         <div class="col-12 col-lg-12">
             <h6>Sconfiggiamo insieme il Coronavirus</h6>
             <p>
-                Specie durante il lockdown abbiamo vissuto un dramma socio-sanitario ed economico senza precedenti. Questo incubo potrebbe ripresentarsi? Per scongiurare questo scenario serve anche il tuo aiuto: <a href="https://forms.gle/4CggkXW7JEb5Ue3WA" target="_blank">partecipa online all’indagine anonima di Università di Pavia</a>. Infatti, avere dati oggettivi e <b>raccogliere l’opinione degli italiani</b> è fondamentale per affrontare al meglio le prossime fasi dell’epidemia.
+                Zone rosse, arancioni e gialle: il lockdown evoca un dramma socio-sanitario ed economico senza precedenti.<br />Per scongiurare questo scenario e uscire presto dalle restrizioni che stiamo vivendo serve anche il tuo aiuto: <a href="https://forms.gle/4CggkXW7JEb5Ue3WA" target="_blank">partecipa online all’indagine anonima di Università di Pavia</a>. Infatti, avere dati oggettivi e <b>raccogliere l’opinione degli italiani</b> è fondamentale per affrontare al meglio le prossime fasi dell’epidemia.
             </p>
             <p>
                 <a href="https://drive.google.com/file/d/1cFlmiAzrsHX1LQgzSKBx9KO86nvK7kEC/view?usp=sharing" target="_blank">Leggi la lettera aperta del team di ricerca.</a>
@@ -43,7 +43,7 @@ redirect_from:
         <div class="col-12 col-lg-12">
             <h6>Bastano 5 minuti sul web</h6>
             <p>
-                Oltre 4000 italiani hanno già aderito, ma abbiamo bisogno anche il tuo punto di vista. Bastano circa 5 minuti, tutto è online e i risultati sono anonimi. Per ulteriori informazioni visita la pagina:<br />
+                Quasi 10.000 italiani hanno già aderito, ma abbiamo bisogno anche il tuo punto di vista. Bastano circa 5 minuti, tutto è online e i risultati sono anonimi. Per ulteriori informazioni visita la pagina:<br />
                 <a href="https://www.digita4good.unipv.it/index.php/indaginecovid19/" target="_blank">https://www.digita4good.unipv.it/index.php/indaginecovid19/</a>
             </p>
         </div>
