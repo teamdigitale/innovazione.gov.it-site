@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Odio online, partecipa alla discussione"
 ref: gruppo-odio-online-partecipa-alla-discussione
-asset: <img class="w-100" src="/assets/images/posts/2020_11_05_hatespeech.jpg" alt="Gruppo Odio Online, discussinoe pubblica"/>
+asset: <img class="w-100" src="/assets/images/posts/2020_11_09_hatespeech.jpg" alt="Gruppo Odio Online, discussinoe pubblica"/>
 pinned:
 categories:
   - cittadini
@@ -37,4 +37,4 @@ Per partecipare è possibile inviare i propri contributi scritti entro il 18 nov
 
 
 {:.x-small.text-right}
-_Fotografia di [Mika Baumeister](https://unsplash.com/@mbaumi){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/QBCS3iSKAyE){:target="_blank" rel="noopener noreferrer"}_
+_Fotografia di [Guillaume de Germain](https://unsplash.com/@guillaumedegermain){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/UdB_8NYVAdg){:target="_blank" rel="noopener noreferrer"}_
