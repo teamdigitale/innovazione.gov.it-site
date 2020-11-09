@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Odio online, partecipa alla discussione"
 ref: gruppo-odio-online-partecipa-alla-discussione
-asset: <img class="w-100" src="/assets/images/posts/2020_11_09_hatespeech.jpg" alt="Gruppo Odio Online, discussinoe pubblica"/>
+asset: <img class="w-100" src="/assets/images/posts/2020_11_09_hatespeech.jpg" alt="Gruppo Odio Online, discussione pubblica"/>
 pinned:
 categories:
   - cittadini
