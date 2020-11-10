@@ -7,6 +7,9 @@ ref: repubblica-digitale
 layout: page
 intro: true
 fluid: true
+child_of_ref: progetti
+order: 14
+project_url: https://repubblicadigitale.innovazione.gov.it/it/
 no_site_toc: true
 dashboard_url: https://dashboards.innovazione.gov.it/public/dashboard/91eb75f5-f214-4653-9282-2f83082f9c38
 dashboard_daily: true
