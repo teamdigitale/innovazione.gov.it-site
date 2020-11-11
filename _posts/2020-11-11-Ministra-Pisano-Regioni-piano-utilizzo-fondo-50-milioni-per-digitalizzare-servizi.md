@@ -3,8 +3,8 @@ layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
 title: "Paola Pisano illustra alle Regioni il piano sull'utilizzo del fondo da 50 milioni per digitalizzare servizi"
-ref: risposte-Dipartimento-domande-Report-Immuni
-asset: <img class="w-100" src="/assets/images/posts/2020_11_09_ImmuniReport.png" alt="Dipartimento risposte Report su Immuni"/>
+ref: Ministra-Pisano-Regioni-piano-utilizzo-fondo-50-milioni-per-digitalizzare-servizi
+asset: <img class="w-100" src="/assets/images/posts/2020_11_09_ImmuniReport.png" alt="Pisano Regioni fondi 50 milioni digitalizzare servizi"/>
 pinned:
 categories:
   - cittadini
@@ -29,3 +29,6 @@ La Ministra per la Pubblica amministrazione **Fabiana Dadone** ha spiegato: “L
 Il Ministro per gli Affari regionali **Francesco Boccia** ha sottolineato: “Il fondo per la digitalizzazione degli enti locali è un'occasione importante per diffondere l'utilizzo delle piattaforme digitali abilitanti dello Stato come pagoPa, Spid e App Io. Lo scopo di questa iniziativa è diffondere servizi pubblici digitali sempre più a misura di cittadino incentivando l'uso di pagamenti digitali verso la Pubblica amministrazione, valorizzando le infrastrutture tecnologiche regionali e le best practice nazionali. Le Regioni, infatti, avranno un importante ruolo di facilitatore/intermediario tra lo Stato centrale ed enti locali con l'obiettivo di creare dei poli di eccellenza in cui le Regioni sono protagoniste nel "trainare" i piccoli Comuni accelerandone il loro processo di digitalizzazione”.
 
 L’Assessore del Friuli Venezia Giulia **Sebastiano Callari**, in qualità di presidente della Commissione Agenda Digitale della Conferenza delle Regioni e delle Province Autonome, è intervenuto definendo “importante e strategico consolidare una modalità di cooperazione Governo-Regioni sui temi della digitalizzazione che permetta di rispondere in modo efficace e veloce ai bisogni dei cittadini e delle imprese dei territori”.
+
+{:.x-small.text-right}
+_Fotografia di [NordWood Themes](https://unsplash.com/@nordwood){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/q8U1YgBaRQk){:target="_blank" rel="noopener noreferrer"}_
