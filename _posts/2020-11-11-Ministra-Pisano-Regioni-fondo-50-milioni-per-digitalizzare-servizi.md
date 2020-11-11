@@ -3,7 +3,7 @@ layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
 title: "Paola Pisano illustra alle Regioni il piano sull'utilizzo del fondo da 50 milioni per digitalizzare servizi"
-ref: Ministra-Pisano-Regioni-piano-utilizzo-fondo-50-milioni-per-digitalizzare-servizi
+ref: Ministra-Pisano-Regioni-fondo-50-milioni-per-digitalizzare-servizi
 asset: <img class="w-100" src="/assets/images/posts/2020-11-11-fondo-servizi-digiali-pisano-regioni.jpg" alt="Pisano Regioni fondi 50 milioni digitalizzare servizi"/>
 pinned:
 categories:
