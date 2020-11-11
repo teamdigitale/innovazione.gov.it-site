@@ -2,7 +2,7 @@
 layout: post
 lang: it
 excerpt_separator: <!-- MORE -->
-title: "La Ministra Pisano illustra alle Regioni il piano sull'utilizzo del fondo da 50 milioni per digitalizzare servizi"
+title: "Paola Pisano illustra alle Regioni il piano sull'utilizzo del fondo da 50 milioni per digitalizzare servizi"
 ref: risposte-Dipartimento-domande-Report-Immuni
 asset: <img class="w-100" src="/assets/images/posts/2020_11_09_ImmuniReport.png" alt="Dipartimento risposte Report su Immuni"/>
 pinned:
@@ -12,7 +12,7 @@ categories:
   - highlights
 ---
 
-_Strategico sarà il ruolo delle regioni._
+_La Ministra: "Strategico sarà il ruolo delle regioni."_
 
 <!-- MORE -->
 
