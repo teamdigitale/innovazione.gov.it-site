@@ -16,14 +16,6 @@ redirect_from:
   - /italia-2025
 ---
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1">
-            <img class="img-fluid" alt="Avanzamento obiettivi Italia 2025" src="{{ site.baseurl }}/assets/images/italia-2025/obiettivi-italia-2025.jpg">
-        </div>
-    </div>
-</div>
-
 <div class="container" markdown="1">
 
 {:.mt-4}
@@ -43,5 +35,5 @@ Stiamo sviluppando la strategia di innovazione Italia 2025. In questa pagina le 
 {:.mt-5.max-w-40}
 [All’interno della strategia](https://docs.italia.it/italia/mid/piano-nazionale-innovazione-2025-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"} queste tre sfide sono state declinate in **venti azioni di innovazione e digitalizzazione** a cui, come Dipartimento legato al Ministro per l’innovazione tecnologica e la digitalizzazione, stiamo lavorando, di concerto con altri Ministeri, Pubbliche Amministrazioni centrali e locali, enti pubblici, agenzie, aziende private e normali cittadini. Un processo che coinvolge tutto l’ecosistema, per **una trasformazione strutturale e radicale del nostro Paese**.
 </div>
+<br /><br />
 
-{% include italia-2025/punti-operativi.html %}
