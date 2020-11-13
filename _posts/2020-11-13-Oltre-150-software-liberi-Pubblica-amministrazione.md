@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Oltre 150 software liberi per la Pubblica amministrazione"
 ref: Oltre-150-software-liberi-Pubblica-amministrazione
-asset: <img class="w-100" src="/assets/images/posts/2020-11-13-catalogo-dev.jpg" alt="Catalogo developers 150 software liberi"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-11-13-catalogo-dev-150.jpg" alt="Catalogo developers 150 software liberi"/>
 pinned:
 categories:
   - highlights
@@ -45,4 +45,4 @@ Sono bene 336 gli enti che hanno deciso di adottare la soluzione [PiTre](https:/
 Se vuoi scoprire di più sul catalogo, proporre una nuova soluzione open source oppure contribuire anche tu al lavoro della community, visita il [sito dedicato](https://developers.italia.it/it/come-partecipo){:target="_blank" rel="noopener noreferrer"}.
 
 {:.x-small.text-right}
-_Fotografia di [Karl Greif](https://unsplash.com/@adigold1){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/n2V4ZNflsHM){:target="_blank" rel="noopener noreferrer"}_
+_Fotografia di [Artem Beliaikin](https://unsplash.com/@belart84){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/N35J0N8ZglQ){:target="_blank" rel="noopener noreferrer"}_
