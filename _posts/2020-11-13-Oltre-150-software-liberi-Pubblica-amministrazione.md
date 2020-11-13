@@ -20,7 +20,7 @@ _Continua a crescere il catalogo di Developers Italia, la community italiana deg
 
 A poco più di un anno dalla pubblicazione delle [linee guida](https://docs.italia.it/italia/developers-italia/lg-acquisizione-e-riuso-software-per-pa-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"} sull’acquisizione e riuso di software per la Pubblica amministrazione, il [catalogo di Developers Italia](https://developers.italia.it/it/software){:target="_blank" rel="noopener noreferrer"} continua a crescere. E’ stata infatti raggiunta l’importante soglia dei 159 software disponibili, certificando l’enorme potenziale del progetto.
 
-### Cos’è il catalogo di Developers Italia?
+##### Cos’è il catalogo di Developers Italia?
 
 Developers Italia è la community dedicata allo sviluppo di software open source per i servizi pubblici italiani. E’ composta da tecnici della Pubblica amministrazione, fornitori, ma non solo, anche appassionati sviluppatori che a vario titolo intendono contribuire al progetto di miglioramento della PA. Il catalogo di Developers Italia consente alle amministrazioni di tutto il Paese di cercare facilmente tra software già esistenti, evitando così l’onere di dover progettare e sviluppare nuovi strumenti. 
 
@@ -28,13 +28,13 @@ Grazie a questo modello collaborativo, i cittadini possono quindi beneficiare di
 
 Il catalogo è realmente aperto a tutti: è infatti possibile proporre e utilizzare soluzioni progettate in contesti diversi dalla Pubblica amministrazione, ma di potenziale interesse per un ente pubblico italiano.
 
-### Perché è importante
+##### Perché è importante
 
 Fino ad oggi sono ben [663 le amministrazioni](https://developers.italia.it/it/dashboard){:target="_blank" rel="noopener noreferrer"} presenti sul territorio nazionale che hanno utilizzato uno dei 159 software disponibili sul catalogo. Significa che in 663 occasioni la pubblica amministrazione ha agito in maniera più efficiente e rapida, evitando sprechi di risorse e di tempo. E ancora, sono 55 le amministrazioni che hanno dato il loro contributo, mettendo a disposizione almeno uno dei software presenti nel catalogo. Una vera e propria community che si rafforza grazie ad un lavoro di condivisione e progresso comune. 
 
 Dalla raccolta dati, alla gestione dei documenti, passando per applicativi di data collection e data analysis. Soluzioni che proprio per la loro eterogeneità, possono trovare applicazione in molti ambiti dall’alto interesse, sia per i cittadini che per le imprese. Se lo andiamo a vedere nel dettaglio infatti, scopriamo che le proposte contenute nel Catalogo vengono utilizzate nel campo del turismo, dell’ambiente, della cultura, della ricerca e tanto altro. Un patrimonio messo liberamente a disposizione, che mira a migliorare i servizi resi ai cittadini. 
 
-### Qualche esempio pratico
+##### Qualche esempio pratico
 
 Tra le numerose PA, che hanno contribuito al catalogo con le loro soluzioni, portiamo l’esempio del CNR. Il Consiglio Nazionale di Ricerca ha seguito sin dall’inizio l’approccio previsto dal CAD e dalle linee guida, concependo i propri software proprio in questa ottica: utilizzando standard internazionali, secondo una logica cloud first e open source e interagendo da subito con le altre PA potenzialmente interessate. Ha reso disponibile [SIGLA](https://developers.italia.it/it/software/cnr-consiglionazionaledellericerche-sigla-main){:target="_blank" rel="noopener noreferrer"}, per esempio, soluzione per la gestione di processi amministrativi e contabili, di previsione, e di rendicontazione già oggi adottati dall’Ispettorato Nazionale per la Sicurezza Nucleare e la Radioprotezione e dall’Istituto Superiore di Sanità. 
 
