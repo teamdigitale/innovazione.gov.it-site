@@ -31,7 +31,7 @@ Per svolgere al meglio questo importante lavoro di analisi, il Gruppo  vuole apr
 
 **Il Gruppo di lavoro è quindi alla ricerca di contributi** su diversi punti. Dalla definizione del concetto di “odio online” alla delineazione dei suoi comportamenti, passando per l’analisi del ruolo della rete nello sviluppo di queste dinamiche. Lavori che potranno aiutare a capire anche i danni prodotti dai comportamenti generati dall’odio, stabilendo azioni ritenute utili per contrastare il fenomeno. 
 
-Per partecipare è possibile inviare i propri contributi scritti entro il **18 novembre 2020**, con la possibilità di corredare il tutto o con un video (durata massima di 3 minuti) o condividendo allegati tecnici a sostegno delle posizioni espresse. In seguito, potrà essere richiesto un approfondimento in videoconferenza da parte del gruppo di lavoro. 
+Per partecipare è possibile inviare i propri contributi scritti entro il **22 novembre 2020**, con la possibilità di corredare il tutto o con un video (durata massima di 3 minuti) o condividendo allegati tecnici a sostegno delle posizioni espresse. In seguito, potrà essere richiesto un approfondimento in videoconferenza da parte del gruppo di lavoro. 
 
 [Scopri tutti i dettagli per partecipare](https://ec.europa.eu/eusurvey/runner/OdioOnLine){:target="_blank" rel="noopener noreferrer"}.
 
