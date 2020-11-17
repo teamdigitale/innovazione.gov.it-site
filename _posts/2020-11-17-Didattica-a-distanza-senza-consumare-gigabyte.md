@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "La didattica a distanza senza consumare gigabyte"
 ref: Didattica-a-distanza-senza-consumare-gigabyte
-asset: <img class="w-100" src="/assets/images/posts/2020-11-13-catalogo-dev-150.jpg" alt="Catalogo developers 150 software liberi"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-11-17-gigabite-didattica-distanza.jpg" alt="La didattica a distanza senza consumare gigabyte"/>
 pinned:
 categories:
   - highlights
@@ -27,4 +27,4 @@ La Ministra per l’Innovazione tecnologica e la digitalizzazione Pisano ha ring
 
 
 {:.x-small.text-right}
-_Fotografia di [Artem Beliaikin](https://unsplash.com/@belart84){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/N35J0N8ZglQ){:target="_blank" rel="noopener noreferrer"}_
+_Fotografia di [Thomas Park](https://unsplash.com/@thomascpark){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/6MePtA9EVDA){:target="_blank" rel="noopener noreferrer"}_
