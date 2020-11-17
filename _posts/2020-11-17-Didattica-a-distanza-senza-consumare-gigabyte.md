@@ -11,7 +11,7 @@ categories:
   - cittadini
 ---
 
-_Una collaborazione tra governo e i principali operatori di telefonia mobile a favore di studentesse e studenti._
+_Una collaborazione tra governo e i principali operatori di telefonia mobile a favore della scuola._
 
 <!-- MORE -->
 
