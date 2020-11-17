@@ -11,7 +11,7 @@ categories:
   - cittadini
 ---
 
-_Una collaborazione tra governo e i principali operatori di telefonia mobile a favore della scuola._
+_Pisano: "Grazie a Tim, Vodafone e Wind Tre per aver risposto all'invito del Governo"._
 
 <!-- MORE -->
 
