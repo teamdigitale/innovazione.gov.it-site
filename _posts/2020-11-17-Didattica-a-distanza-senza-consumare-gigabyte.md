@@ -11,7 +11,7 @@ categories:
   - cittadini
 ---
 
-_Pisano: "Grazie a Tim, Vodafone e Wind Tre per aver risposto all'invito del Governo"._
+_Pisano: “Grazie a Tim, Vodafone e Wind Tre per aver risposto positivamente all’invito del Governo"._
 
 <!-- MORE -->
 
