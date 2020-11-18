@@ -40,14 +40,14 @@ Sul sito di Solidarietà Digitale sarà poi possibile per i commercianti ricerca
  
 Con Vicini e Connessi i piccoli esercizi locali e di quartiere e le botteghe artigiane avranno l’opportunità di:
  
-	- vendere i propri prodotti e servizi attraverso piattaforme di commercio online, portali e altri strumenti digitali per rendere acquistabili in rete i prodotti in vendita nei propri negozi;
-	- ricevere supporto e assistenza informatica;
-	- effettuare le consegne a domicilio;
-	- promuovere e valorizzare il commercio di prossimità, anche attraverso azioni di comunicazione e pubblicità.
+- vendere i propri prodotti e servizi attraverso piattaforme di commercio online, portali e altri strumenti digitali per rendere acquistabili in rete i prodotti in vendita nei propri negozi;
+- ricevere supporto e assistenza informatica;
+- effettuare le consegne a domicilio;
+- promuovere e valorizzare il commercio di prossimità, anche attraverso azioni di comunicazione e pubblicità.
  
  
 Link utili:
  
-	- Avviso Pubblico
-	- Come partecipare
-	- [Sito di Solidarietà Digitale](https://docs.italia.it/italia/developers-italia/lg-acquisizione-e-riuso-software-per-pa-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"}
+- Avviso Pubblico
+- Come partecipare
+- [Sito di Solidarietà Digitale](https://docs.italia.it/italia/developers-italia/lg-acquisizione-e-riuso-software-per-pa-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"}
