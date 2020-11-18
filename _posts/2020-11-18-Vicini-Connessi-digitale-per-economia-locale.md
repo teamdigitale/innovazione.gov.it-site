@@ -17,7 +17,7 @@ _La nuova campagna di Solidarietà Digitale promossa dal Dipartimento per la Tra
 
 <!-- MORE -->
 
-Vicini e Connessi è il progetto di [Solidarietà Digitale](https://docs.italia.it/italia/developers-italia/lg-acquisizione-e-riuso-software-per-pa-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"} che permette a commercianti locali e negozi di prossimità di promuovere le proprie attività attraverso piattaforme e servizi digitali.
+Vicini e Connessi è il progetto di [Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} che permette a commercianti locali e negozi di prossimità di promuovere le proprie attività attraverso piattaforme e servizi digitali.
 Lo scopo, in tempi di limitazioni dei movimenti dovuti al Covid-19 ma anche in futuro, è di salvaguardare e accrescere le dimensioni della propria clientela per fornitori che si trovano vicini ai consumatori. Questo viene fatto facilitando offerte di beni e servizi che permettano a piccoli e medi esercizi di utilizzare gratuitamente strumenti innovativi.
 
 ###### Il digitale per l’economia locale
@@ -26,15 +26,15 @@ Promossa dal Dipartimento per la trasformazione digitale, l’iniziativa Vicini 
  
 Il progetto aumenta i punti di contatto tra “piattaforme abilitanti” legate al commercio elettronico, l’e-commerce, i fornitori di servizi di logistica e consegna a domicilio e consulenti in grado di rendere più facile l’uso di prodotti e servizi digitali. I piccoli esercizi locali e di quartiere e le botteghe artigiane potranno, attraverso questi strumenti digitali, continuare a servire nel migliore dei modi i clienti abituali e anche ampliare le rispettive clientele raggiungendo persone che dispongono o non dispongono in ogni momento dei mezzi e delle capacità necessarie per gli spostamenti.
  
-In questa prima fase è possibile inviare la propria adesione mettendo a disposizione servizi e prodotti all’interno della piattaforma. Le offerte solidali ricevute verranno poi pubblicate per essere utilizzabili da attività commerciali, negozi di prossimità, artigiani.
+In questa prima fase è possibile inviare [la propria adesione](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} mettendo a disposizione servizi e prodotti all’interno della piattaforma. Le offerte solidali ricevute verranno poi pubblicate per essere utilizzabili da attività commerciali, negozi di prossimità, artigiani.
  
 Grazie a Vicini e Connessi i servizi offerti sia per le aree urbane sia per zone montane e aree rurali del nostro Paese potranno aiutare a rispondere alle particolari esigenze di questa fase.
  
 ###### Come partecipare
  
-Quanti vogliono partecipare, anche per un periodo limitato, su tutto il territorio italiano o solo in alcune Regioni, possono aderire seguendo le istruzioni nel sito e presentando le proprie offerte solidali. Vicini e Connessi si rivolge a una pluralità di soggetti presenti sul territorio nazionale: piccole e medie imprese, società multinazionali, aziende a partecipazione pubblica, enti e associazioni di volontariato. Con l'Avviso Pubblico vengono esposti gli obiettivi dell’iniziativa, le modalità di partecipazione ed i requisiti richiesti per partecipare
+Quanti vogliono partecipare, anche per un periodo limitato, su tutto il territorio italiano o solo in alcune Regioni, [possono aderire](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} seguendo le istruzioni nel sito e presentando le proprie offerte solidali. Vicini e Connessi si rivolge a una pluralità di soggetti presenti sul territorio nazionale: piccole e medie imprese, società multinazionali, aziende a partecipazione pubblica, enti e associazioni di volontariato. Con l'[Avviso Pubblico](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} vengono esposti gli obiettivi dell’iniziativa, le modalità di partecipazione ed i requisiti richiesti per partecipare
  
-Sul sito di Solidarietà Digitale sarà poi possibile per i commercianti ricercare tra un elenco di servizi gratuiti quelli che meglio rispondono alle loro esigenze. La piattaforma presenterà in modo semplice e intuitivo anche le istruzioni per attivare questi servizi.
+Sul sito di [Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} sarà poi possibile per i commercianti ricercare tra un elenco di servizi gratuiti quelli che meglio rispondono alle loro esigenze. La piattaforma presenterà in modo semplice e intuitivo anche le istruzioni per attivare questi servizi.
  
 ###### Gli strumenti offerti
  
@@ -48,6 +48,6 @@ Con Vicini e Connessi i piccoli esercizi locali e di quartiere e le botteghe art
  
 Link utili:
  
-- Avviso Pubblico
+- [Avviso Pubblico](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"}
 - Come partecipare
-- [Sito di Solidarietà Digitale](https://docs.italia.it/italia/developers-italia/lg-acquisizione-e-riuso-software-per-pa-docs/it/stabile/index.html){:target="_blank" rel="noopener noreferrer"}
+- [Sito di Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"}
