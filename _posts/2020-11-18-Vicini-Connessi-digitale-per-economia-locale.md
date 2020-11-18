@@ -26,7 +26,7 @@ Promossa dal Dipartimento per la trasformazione digitale, l’iniziativa Vicini 
  
 Il progetto aumenta i punti di contatto tra “piattaforme abilitanti” legate al commercio elettronico, i fornitori di servizi di logistica e consegna a domicilio e consulenti in grado di rendere più facile l’uso di prodotti e servizi digitali. I piccoli esercizi locali e di quartiere e le botteghe artigiane potranno, attraverso questi strumenti digitali, continuare a servire nel migliore dei modi i clienti abituali e anche ampliare le rispettive clientele raggiungendo persone che dispongono o non dispongono in ogni momento dei mezzi e delle capacità necessarie per gli spostamenti.
  
-In questa prima fase è possibile inviare [la propria adesione](https://pmi.solidarietadigitale.agid.gov.it/partners/s/){:target="_blank" rel="noopener noreferrer"} mettendo a disposizione servizi e prodotti all’interno della piattaforma. Le offerte solidali ricevute verranno poi pubblicate per essere utilizzabili da attività commerciali, negozi di prossimità, artigiani.
+In questa prima fase è possibile inviare [la propria adesione](https://pmi.solidarietadigitale.agid.gov.it/partners/s/){:target="_blank" rel="noopener noreferrer"} mettendo a disposizione servizi e prodotti all’interno della piattaforma. Le offerte solidali ricevute verranno poi pubblicate per essere utilizzabili da attività commerciali, negozi di prossimità e artigiani.
  
 Grazie a Vicini e Connessi i servizi offerti sia per le aree urbane sia per zone montane e aree rurali del nostro Paese potranno aiutare a rispondere alle particolari esigenze di questa fase.
  
