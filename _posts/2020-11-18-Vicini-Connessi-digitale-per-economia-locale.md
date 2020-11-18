@@ -4,7 +4,7 @@ lang: it
 excerpt_separator: <!-- MORE -->
 title: "Vicini e Connessi: il digitale per l’economia locale"
 ref: Vicini-Connessi-digitale-per-economia-locale
-asset: <img class="w-100" src="/assets/images/posts/2020-11-13-catalogo-dev-150.jpg" alt="Vicini e Connessi il digitale per l’economia locale"/>
+asset: <img class="w-100" src="/assets/images/posts/2020-11-18-vicini-connessi.jpg" alt="Vicini e Connessi il digitale per l’economia locale"/>
 pinned:
 categories:
   - highlights
