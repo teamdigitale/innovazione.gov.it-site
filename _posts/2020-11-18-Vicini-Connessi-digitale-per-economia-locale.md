@@ -34,7 +34,7 @@ Grazie a Vicini e Connessi i servizi offerti sia per le aree urbane sia per zone
  
 Quanti vogliono partecipare, anche per un periodo limitato, su tutto il territorio italiano o solo in alcune Regioni, [possono aderire](https://pmi.solidarietadigitale.agid.gov.it/partners/s/){:target="_blank" rel="noopener noreferrer"} seguendo le istruzioni nel sito e presentando le proprie offerte solidali. Vicini e Connessi si rivolge a una pluralità di soggetti presenti sul territorio nazionale: piccole e medie imprese, società multinazionali, aziende a partecipazione pubblica, enti e associazioni di volontariato. Con l'[Avviso pubblico]({{ site.baseurl }}/assets/docs/Avviso_Pubblico Solidarieta_Digitale_Vicini_Connessi.pdf){:target="_blank" rel="noopener noreferrer"} vengono esposti gli obiettivi dell’iniziativa, le modalità di partecipazione ed i requisiti richiesti per partecipare
  
-Sul sito di [Solidarietà Digitale](https://solidarietadigitale.agid.gov.it/){:target="_blank" rel="noopener noreferrer"} sarà poi possibile per i commercianti ricercare tra un elenco di servizi gratuiti quelli che meglio rispondono alle loro esigenze. La piattaforma presenterà in modo semplice e intuitivo anche le istruzioni per attivare questi servizi.
+Sul sito di [Solidarietà Digitale](https://pmi.solidarietadigitale.agid.gov.it/partners){:target="_blank" rel="noopener noreferrer"} sarà poi possibile per i commercianti ricercare tra un elenco di servizi gratuiti quelli che meglio rispondono alle loro esigenze. La piattaforma presenterà in modo semplice e intuitivo anche le istruzioni per attivare questi servizi.
  
 ###### Gli strumenti offerti
  
