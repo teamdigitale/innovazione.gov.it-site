@@ -22,15 +22,15 @@ Nel messaggio le Ministre hanno ricordato che le Amministrazioni sono tenute ent
 
 Questa app diventerà l’unico canale di accesso via cellulare ai servizi della Pubblica Amministrazione. 
 
-La trasformazione digitale, spiegano nella lettera le Ministre Pisano e Dadone, determinerà molti vantaggi. Le Amministrazioni potranno ridurre costi e semplificare  proprie attività, i cittadini e le imprese che potranno usufruire di servizi in modo più semplice, veloce e sicuro’.
+La trasformazione digitale, spiegano nella lettera le Ministre Pisano e Dadone, determinerà molti vantaggi. Le Amministrazioni potranno ridurre costi e semplificare  proprie attività, i cittadini e le imprese che potranno usufruire di servizi in modo più semplice, veloce e sicuro.
 
 Per la trasformazione digitale del Paese sottolinea la lettera è “fondamentale il contributo di ciascuna Amministrazione”.
 
 [Sul sito del Dipartimento per la trasformazione](https://innovazione.gov.it/it/linee-guida-decreto-semplificazione/){:target="_blank" rel="noopener noreferrer"} digitale è disponibile il materiale informativo.
 
-Per sostenere la trasformazione digitale dei Comuni, che sono gli Enti che erogano il maggior numero di servizi a cittadini e imprese, sono a disposizione 60 milioni di euro complessivi. La cifra comprende le risorse dell’Avviso pubblico del Dipartimento della Funzione pubblica del 20 maggio scorso e quelle del Fondo per l’innovazione tecnologica e la digitalizzazione
+Per sostenere la trasformazione digitale dei Comuni, che sono gli Enti che erogano il maggior numero di servizi a cittadini e imprese, sono a disposizione 60 milioni di euro complessivi. La cifra comprende le risorse dell’Avviso pubblico del Dipartimento della Funzione pubblica del 20 maggio scorso e quelle del Fondo per l’innovazione tecnologica e la digitalizzazione.
 
-Leggi [il testo della lettera]({{ site.baseurl }}/assets/docs/Nota_doppia_firma_Pisano_Dadone_Piattaforme_abilitanti.pdf){:target="_blank" rel="noopener noreferrer"}
+Leggi [il testo della lettera]({{ site.baseurl }}/assets/docs/Nota_doppia_firma_Pisano_Dadone_Piattaforme_abilitanti.pdf){:target="_blank" rel="noopener noreferrer"}.
 
 {:.x-small.text-right}
 _Fotografia di [Gilles Lambert](https://unsplash.com/@gilleslambert){:target="_blank" rel="noopener noreferrer"} su [Unsplash](https://unsplash.com/photos/pb_lF8VWaPU){:target="_blank" rel="noopener noreferrer"}_
