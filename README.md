@@ -1,7 +1,3 @@
-# innovazione.gov.it
-
-Sito del Ministro dell’Innovazione
-
 ## Come iniziare
 
 Il progetto è costruito sul generatore di siti statici [Jekyll](https://jekyllrb.com/). Per installare l’ambiente necessario allo sviluppo è necessario avere installato sul proprio sistema [Bundler](https://bundler.io/) e lanciare il seguente comando:
