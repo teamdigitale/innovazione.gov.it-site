@@ -14,13 +14,14 @@ const extractMiniCss = new MiniCssExtractPlugin({
 module.exports = {
   entry: {
     application: './source/javascripts/index.js',
-    // styles: './source/stylesheets/_application.sass'
+    styles: './source/stylesheets/_application.scss'
   },
   resolve: {
     modules: [
       path.join(__dirname, 'source/stylesheets'),
       path.join(__dirname, 'source/javascripts'),
-      'node_modules'
+      'node_modules',
+      'node_modules/bootstrap-italia'
     ],
     alias: {
       modernizr$: path.resolve(__dirname, '.modernizrrc.js')
@@ -62,7 +63,14 @@ module.exports = {
               plugins: () => [autoprefixer()]
             }
           },
-          { loader: 'sass-loader' }
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                indentedSyntax: false
+              }
+            }
+          }
         ]
       }
     ]
