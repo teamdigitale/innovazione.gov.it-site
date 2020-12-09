@@ -1,0 +1,14 @@
+doctype 5
+html lang=I18n.locale
+  head = partial "partials/head"
+  body
+    .canvas
+      aside.canvas__aside--left
+        = partial "partials/aside-nav-left"
+      main.canvas__main
+        = partial "partials/site-nav"
+        = yield
+        = partial "partials/site-footer"
+
+    .svg-sprite-inliner= partial "images/sprite.svg"
+    = partial "partials/js_includes"

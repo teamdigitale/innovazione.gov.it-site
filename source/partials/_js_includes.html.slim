@@ -1,0 +1,32 @@
+= javascript_include_tag  "application"
+- if data.config.google_maps_key
+  = javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{data.config.google_maps_key}&callback=initMap", async: true, defer: true
+
+= yield_content :page_js
+
+- if build?
+  javascript:
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '#{data.config.google_analytics_key}', 'auto');
+      ga('set', 'anonymizeIP', true);
+      ga('send', 'pageview');
+
+    (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+    // COOKIES POLICY
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      cookiePolicyId: #{I18n.t('iubenda_id')},
+      siteId: '#{data.config.iubenda_site_id}',
+      lang: '#{I18n.locale}',
+      banner: {
+        position: "float-top-center",
+        acceptButtonDisplay: true,
+        customizeButtonDisplay: true
+      }
+    };
+
+  script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async="async"

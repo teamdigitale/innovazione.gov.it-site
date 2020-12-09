@@ -1,0 +1,28 @@
+nav.site-nav
+  .wrap
+    .site-nav__inner
+      = link_to "#",
+        class: "site-nav__menu-toggler js-nav-toggler--left" do
+        = i("hamburger")
+      .site-nav__left
+        = link_to "/",
+          class: "site-nav__logo",
+          title: t("nav.home")
+            = inline_svg("logo.svg", id: "site_nav_logo", title: "LOGO")
+
+      .site-nav__right
+        ul.site-nav__menu
+          li.site-nav__menu__item
+            = active_link_to t("nav.home"),
+              "/",
+              class: "site-nav__menu__link"
+
+          - site_nav_menu.each do |page|
+            li.site-nav__menu__item
+              = active_link_to page.menu_label,
+                page.slug,
+                class: "site-nav__menu__link"
+
+      = link_to "#",
+        class: "site-nav__menu-toggler js-nav-toggler--right" do
+        i.icon--hamburger

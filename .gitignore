@@ -1,3 +1,5 @@
-.idea
-.jekyll-cache
-_site
+/build/
+/.env
+/node_modules/
+/.tmp/
+/.sass-cache/

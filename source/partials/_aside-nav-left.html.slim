@@ -1,0 +1,17 @@
+= link_to "#",
+  class: "aside-nav__menu-toggler js-nav-close" do
+  = i("cross")
+
+.aside-nav
+  .aside-nav__inner
+    ul.aside-nav__menu
+      li.aside-nav__menu__item
+        = active_link_to "Home",
+          "/",
+          class: "aside-nav__menu__link"
+
+      - site_nav_menu.each do |page|
+        li.aside-nav__menu__item
+          = active_link_to page.menu_label,
+            page.slug,
+            class: "aside-nav__menu__link"

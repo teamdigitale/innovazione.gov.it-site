@@ -1,0 +1,40 @@
+#map class="map__google" style="width: 100%; height: 620px; background: #ececec; position: relative; z-index: 1;"
+
+javascript:
+  var map_style = [];
+
+  function initMap() {
+    var isDraggable = jQuery(document).width() > 480 ? true : false;
+    var container = document.getElementById('map');
+    var position = new google.maps.LatLng('43.769616', '11.215202');
+    var map = new google.maps.Map(container, {
+      zoom: 14,
+      center: position,
+      mapTypeControl: false,
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+      },
+      scaleControl: false,
+      streetViewControl: false,
+      scrollwheel: false,
+      draggable: isDraggable,
+      styles: map_style
+    });
+
+    var image = new google.maps.MarkerImage(
+      window.location.origin+"#{image_path("map-marker.png")}",
+      new google.maps.Size(40, 40),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(0, 0),
+      new google.maps.Size(25, 25)
+    );
+
+    var marker = new google.maps.Marker({
+      position: position,
+      map: map,
+      icon: image
+    });
+
+    infowindow.open(map, marker);
+  }

@@ -1,0 +1,52 @@
+{
+  "name": "innovazione.gov.it",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Sito https://innovazione.gov.it/",
+  "scripts": {
+    "dev": "webpack --mode development --watch -d --progress --color",
+    "build": "webpack --mode production --bail -p",
+    "start:proxy": "./proxy/proxy.js",
+    "start:lambda": "netlify-lambda serve -c netlify.config.js functions/source",
+    "build:lambda": "netlify-lambda build -c netlify.config.js functions/source",
+    "lint": "yarn run eslint source/javascripts/*",
+    "lint:autocorrect": "eslint source/javascripts/* --fix",
+    "start": "concurrently \"npm run start:proxy\" \"npm run start:lambda\" \"npm run start:webpack\""
+  },
+  "author": "Cantiere Creativo s.r.l.",
+  "main": "index.js",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@fancyapps/fancybox": "^3.5.7",
+    "animejs": "^3.0.1",
+    "aos": "^2.3.4",
+    "autoprefixer": "7.2.5",
+    "babel-loader": "^8.0.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "bemo-scaffold": "*",
+    "compression-webpack-plugin": "^3.0.0",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "get-caller-file": "1.0.3",
+    "glob": "^7.1.2",
+    "glob-loader": "0.3.0",
+    "import-glob-loader": "1.1.0",
+    "jquery": ">=3.4.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "7.3.1",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^0.23.1",
+    "svg-spritemap-webpack-plugin": "^3.4.0",
+    "webpack": "4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-modernizr-loader": "4.0.1"
+  },
+  "dependencies": {
+    "lazyload": "^2.0.0-rc.2"
+  }
+}
