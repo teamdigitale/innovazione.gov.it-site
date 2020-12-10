@@ -2,10 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
+const CompressionPlugin = require('compression-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
-const MinifyPlugin = require('babel-minify-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const extractMiniCss = new MiniCssExtractPlugin({
   filename: 'stylesheets/[name].css'
@@ -81,7 +81,7 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new SVGSpritemapPlugin(
-      'source/fonts/svg/*.svg',
+      path.join(__dirname, 'source/fonts/svg/*.svg'),
       {
         output: {
           filename: 'images/sprite.svg',
@@ -135,9 +135,12 @@ module.exports = {
       }
     ),
     extractMiniCss,
-    new MinifyPlugin(),
     new CompressionPlugin({
-      cache: true
+      compressionOptions: {cache: true}
     })
-  ]
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()]
+  }
 }
