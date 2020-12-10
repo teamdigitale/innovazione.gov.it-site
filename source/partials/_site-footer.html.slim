@@ -1,3 +1,19 @@
-footer.site-footer: .site-footer__inner
-  .wrap
-    p.site-footer__copy
+footer.it-footer
+  .it-footer-main
+    .container
+      .row.clearfix
+        .col-sm-12
+          .it-brand-wrapper
+            = link_to root_path,
+              title: "Vai alla Pagina Iniziale"
+              = image_tag "logo-repubblica-italiana.svg",
+                alt: "Logo Repubblica Italiana",
+                class: "icon"
+
+              = image_tag "logo-mid-white.svg",
+                alt: "Logo Ministro per l'Innovazione Tecnologica e Digitalizzazione",
+                style: "width: 120px",
+                class: "icon"
+
+              h2.it-brand-text
+                = "Ministro per l’innovazione tecnologica e la digitalizzazione"

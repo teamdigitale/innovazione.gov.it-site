@@ -3,10 +3,9 @@ html lang=I18n.locale
   head = partial "partials/head"
   body
     = partial "partials/site-nav"
-    header.navbar-main.navbar.navbar-dark.bd-navbar.px-3
+
     main#content
       = yield
-    = partial "partials/site-footer"
 
-    .svg-sprite-inliner= partial "images/sprite.svg"
+    = partial "partials/site-footer"
     = partial "partials/js_includes"
