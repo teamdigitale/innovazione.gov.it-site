@@ -20,9 +20,6 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
-    "@fancyapps/fancybox": "^3.5.7",
-    "animejs": "^3.0.1",
-    "aos": "^2.3.4",
     "autoprefixer": "^9",
     "babel-loader": "^8.0.5",
     "bemo-scaffold": "*",
@@ -38,7 +35,6 @@
     "postcss-loader": "^3.0.0",
     "sass": ">= 0.0.0",
     "sass-loader": ">= 10.1.0",
-    "slick-carousel": "^1.8.1",
     "style-loader": "^0.23.1",
     "svg-spritemap-webpack-plugin": ">= 3.7.1",
     "terser-webpack-plugin": "^5.0.3",
@@ -47,6 +43,6 @@
     "webpack-modernizr-loader": "^5"
   },
   "dependencies": {
-    "lazyload": "^2.0.0-rc.2"
+    "lazysizes": "^5.2.2"
   }
 }
