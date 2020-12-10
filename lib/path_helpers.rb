@@ -1,6 +1,10 @@
 module PathHelpers
   module_function
 
+  def root_path
+    "/"
+  end
+
   def active?(url)
     url == current_page.url
   end
