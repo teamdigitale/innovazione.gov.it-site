@@ -1,0 +1,3 @@
+@function font-url($path) {
+  @return url("~bootstrap-italia/src/fonts/#{$path}");
+}
