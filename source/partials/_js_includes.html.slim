@@ -12,19 +12,3 @@
       ga('create', '#{data.config.google_analytics_key}', 'auto');
       ga('set', 'anonymizeIP', true);
       ga('send', 'pageview');
-
-    (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
-    // COOKIES POLICY
-    var _iub = _iub || [];
-    _iub.csConfiguration = {
-      cookiePolicyId: #{I18n.t('iubenda_id')},
-      siteId: '#{data.config.iubenda_site_id}',
-      lang: '#{I18n.locale}',
-      banner: {
-        position: "float-top-center",
-        acceptButtonDisplay: true,
-        customizeButtonDisplay: true
-      }
-    };
-
-  script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async="async"
