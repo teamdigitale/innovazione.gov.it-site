@@ -1,10 +1,5 @@
+@import "functions/**/*";
+@import "mixins/**/*";
 @import "variables/**/*";
-
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: url("~bootstrap-italia/src/fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
-}
 
 @import "node_modules/bootstrap-italia/src/scss/bootstrap-italia";

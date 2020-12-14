@@ -1,0 +1,38 @@
+/* Titillium+Web:300,400,600,700 */
+@include font-face(
+  "Titillium Web",
+  "Titillium_Web/TitilliumWeb-Light",
+  300,
+  normal
+);
+@include font-face(
+  "Titillium Web",
+  "Titillium_Web/TitilliumWeb-Regular",
+  400,
+  normal
+);
+@include font-face(
+  "Titillium Web",
+  "Titillium_Web/TitilliumWeb-Semibold",
+  600,
+  normal
+);
+@include font-face(
+  "Titillium Web",
+  "Titillium_Web/TitilliumWeb-Bold",
+  700,
+  normal
+);
+
+/* Lora:400,700 */
+@include font-face("Lora", "Lora/Lora-Regular", 400, normal);
+@include font-face("Lora", "Lora/Lora-Bold", 700, normal);
+
+/* Roboto+Mono:400,700 */
+@include font-face(
+  "Roboto_Mono",
+  "Roboto_Mono/RobotoMono-Regular",
+  400,
+  normal
+);
+@include font-face("Roboto_Mono", "Roboto_Mono/RobotoMono-Bold", 700, normal);
