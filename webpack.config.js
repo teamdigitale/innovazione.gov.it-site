@@ -30,6 +30,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '.tmp/dist'),
     filename: 'javascripts/[name].js',
+    publicPath: ''
   },
   module: {
     rules: [
@@ -72,6 +73,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '/fonts/[name].[ext]',
+        }
       }
     ]
   },

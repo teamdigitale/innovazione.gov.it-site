@@ -26,6 +26,7 @@
     "bootstrap-italia": "^1.4.1",
     "compression-webpack-plugin": "^7.0.0",
     "css-loader": "^5",
+    "file-loader": "^6.2.0",
     "get-caller-file": "1.0.3",
     "glob": "^7.1.2",
     "glob-loader": "0.3.0",
