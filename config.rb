@@ -62,18 +62,8 @@ helpers do
   end
 end
 
-LOCALES.each do |locale|
-  I18n.with_locale(locale) do
-    proxy "/index.html",
-      "/localizable/index.html",
-      locale: locale
-
-    proxy "/contact/index.html",
-      "templates/contact_page.html",
-      locals: { locale: I18n.locale },
-      locale: locale
-  end
-end
+proxy "/contact/index.html",
+  "templates/contact_page.html"
 
 proxy "site.webmanifest",
   "templates/site.webmanifest",
