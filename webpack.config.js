@@ -89,7 +89,9 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new SVGSpritemapPlugin(
-      path.join(__dirname, 'source/fonts/svg/*.svg'),
+      [
+        path.join(__dirname, 'node_modules/bootstrap-italia/src/svg/*.svg'),
+      ],
       {
         output: {
           filename: 'images/sprite.svg',
@@ -138,7 +140,7 @@ module.exports = {
           }
         },
         sprite: {
-          prefix: 'icons-'
+          prefix: false
         }
       }
     ),
