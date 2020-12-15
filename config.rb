@@ -14,7 +14,7 @@ set :url_root, ENV.fetch("BASE_URL")
 ignore "/templates/*"
 
 LOCALES = ["it"]
-activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0]
+activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 
 activate :asset_hash
 activate :directory_indexes
