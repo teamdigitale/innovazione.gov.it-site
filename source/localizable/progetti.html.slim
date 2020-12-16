@@ -1,7 +1,7 @@
 /- content_for(:head)
 /  == dato_meta_tags(page)
 
-.container
+main.container
 
   nav.breadcrumb-container aria-label="breadcrumb" 
     ol.breadcrumb
@@ -12,11 +12,20 @@
       li.breadcrumb-item.active aria-current="page" Progetti
 
 
+  header.section
+    .section-content
+      .container
+        h1.text-center.text-sm-left Progetti
+        .row
+          .col-sm
+            p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
 
-  h1 Progetti
-  .row
-    .col-sm
-      .lead
-        | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
-    .col-sm
+            .link-list-wrapper
+              ul.link-list
+                li: h3 APPROFONDISCI
+                li: a.list-item href="#"
+                  span.text-decoration-none.font-weight-bold Link list 3
+
+
+          .col-sm
   
