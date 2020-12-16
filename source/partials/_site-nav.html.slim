@@ -51,7 +51,7 @@ header.it-header-wrapper
           .col-12
             /! start nav
             nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
-              button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=("Toggle navigation") data-target="#nav02" type="button"
+              button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t('main_nav_label') data-target="#nav02" type="button"
                 svg.icon
                   use xlink:href="/images/sprite.svg#it-burger"
 
@@ -60,7 +60,7 @@ header.it-header-wrapper
                 .close-div.sr-only
                   button.btn.close-menu type="button"
                     span.it-close
-                    | close
+                      = t('close')
 
                 .menu-wrapper
                   ul.navbar-nav
@@ -77,22 +77,3 @@ header.it-header-wrapper
                     li.nav-item
                       a.nav-link href="#"
                         span = "Notizie"
-
-                    li.nav-item.dropdown
-                      a.nav-link.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
-                        span Dropdown item
-                        svg.icon.icon-xs.icon-white
-                          use xlink:href="/images/sprite.svg#it-expand"
-
-                      .dropdown-menu
-                        .link-list-wrapper
-                          ul.link-list
-                            li
-                              a.list-item href="#"
-                                span Link list 1
-                            li
-                              a.list-item href="#"
-                                span Link list 2
-                            li
-                              a.list-item href="#"
-                                span Link list 3
