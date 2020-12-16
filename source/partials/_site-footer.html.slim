@@ -3,7 +3,7 @@ footer.it-footer
     .container
       .row.clearfix
         .col-sm-12
-          .it-brand-wrapper
+          .it-brand-wrapper.d-flex.justify-content-center.justify-content-sm-start
             = link_to root_path,
               title: "Vai alla Pagina Iniziale"
               = image_tag "logo-repubblica-italiana.svg",
@@ -11,9 +11,102 @@ footer.it-footer
                 class: "icon"
 
               = image_tag "logo-mid-white.svg",
-                alt: "Logo Ministro per l'Innovazione Tecnologica e Digitalizzazione",
+                alt: "Logo #{dato.company.name}",
                 style: "width: 120px",
                 class: "icon"
 
-              h2.it-brand-text
-                = "Ministro per l’innovazione tecnologica e la digitalizzazione"
+              .it-brand-text
+                h2.d-none.d-sm-block
+                  = t("formatted_site_name")
+
+    .py-4
+      .container
+        .row
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("contacts")
+
+            .mb-2
+              - if dato.company.google_maps_url.present?
+                .text-center.text-md-left
+                  svg.mb-3.align-top.icon.icon-sm.icon-white
+                    use xlink:href="/images/sprite.svg#it-pa"
+
+                  .link-list-wrapper
+                    ul.link-list
+                      li
+                        = link_to dato.company.google_maps_url,
+                          class: "list-item font-weight-bold",
+                          target: "_blank",
+                          rel: "noopener"
+                          = t('formatted_address')
+
+            .mb-2
+              .text-center.text-md-left
+                svg.mb-3.align-top.icon.icon-sm.icon-white
+                  use xlink:href="/images/sprite.svg#it-mail"
+
+                .link-list-wrapper
+                  - if dato.company.secretariat_email.present?
+                    ul.link-list
+                      li
+                        = t("ministry_secretariat")
+
+                      li
+                        = link_to "mailto:#{dato.company.secretariat_email}",
+                          class: "list-item font-weight-bold",
+                          target: "_blank",
+                          rel: "noopener"
+                          = dato.company.secretariat_email
+
+                  - if dato.company.media_email.present?
+                    ul.link-list
+                      li
+                        = t("media_comunication")
+
+                      li
+                        = link_to "mailto:#{dato.company.media_email}",
+                          class: "list-item font-weight-bold",
+                          target: "_blank",
+                          rel: "noopener"
+                          = dato.company.media_email
+
+          .col-md-6.col-xl-3.mb-5
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("follow_us_on")
+
+            .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
+              = partial "partials/socials"
+
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("other_links")
+
+            .text-center.text-md-left
+              .link-list-wrapper
+                ul.link-list.align-
+                  - ["Designers Italia", "Developers Italia", "PagoPA", "Piano Triennale"].each do |item|
+                    li
+                      = link_to item,
+                        "#",
+                        class: "list-item font-weight-bold",
+                        target: "_blank",
+                        rel: "noopener"
+
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("transparency")
+
+            .text-center.text-md-left
+              .link-list-wrapper
+                ul.link-list
+                  - ["Amministrazione trasparente", "Dipartimento per la Trasformazione Digitale", "Lavora con noi"].each do |item|
+                    li
+                      = link_to item,
+                        "#",
+                        class: "list-item font-weight-bold",
+                        target: "_blank",
+                        rel: "noopener"
+
+  .it-footer-small-prints
+    = "Other footer"
