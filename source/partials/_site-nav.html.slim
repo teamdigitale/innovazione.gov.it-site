@@ -17,25 +17,26 @@ header.it-header-wrapper
           .col-12
             .it-header-center-content-wrapper
               .it-brand-wrapper
-                a href="#"
+                = link_to root_path
                   = image_tag "logo-repubblica-italiana.svg",
                     alt: "Logo #{t("state_name")}",
                     class: "icon"
 
                   = image_tag "logo-mid-white.svg",
-                    alt: "Logo #{t("site_name")}",
+                    alt: "Logo #{dato.company.name}",
                     style: "width: 120px",
                     class: "icon"
 
                   .it-brand-text
                     h2.no_toc.d-none.d-xl-inline-block
-                      = t("site_name")
+                      = t("formatted_site_name")
 
               .it-right-zone
                 .it-socials.d-none.d-md-flex.text-nowrap
                   span = t("follow_us_on")
 
-                  = partial "partials/socials"
+                  .ml-3
+                    = partial "partials/socials"
 
                 .it-search-wrapper
                   span.d-none.d-md-block= t('search')

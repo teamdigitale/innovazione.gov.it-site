@@ -1,8 +1,14 @@
 it:
   close: Chiudi
-  main_nav_label: Mostra/Nascondi la navigazione
+  contacts: Contatti
   follow_us_on: Seguici su
+  formatted_address: "Largo Pietro di Brazzà, 86<br>00187 Roma"
+  formatted_site_name: "<strong>Ministro</strong> per l'innovazione tecnologica e la digitalizzazione"
+  main_nav_label: Mostra/Nascondi la navigazione
   owner_name: Governo Italiano
+  other_links: Altri siti web
   search: Cerca
-  site_name: "<strong>Ministro</strong> per l'innovazione tecnologica e la digitalizzazione"
   state_name: Repubblica Italiana
+  transparency: Trasparenza
+  ministry_secretariat: Segreteria del Ministro
+  media_comunication: Media e comunicazione
