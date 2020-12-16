@@ -21,10 +21,30 @@ main.container
 
           .link-list-wrapper.text-center.text-sm-left.mt-5
             ul.link-list.text-center.text-sm-left
-              li: h3.p-0 APPROFONDISCI
+              li: h3.text-capitalize.p-0 Approfondisci
               li: a.p-0.list-item href="#"
                 span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
 
-
         .col-sm
   
+  .section
+    .section-content
+      h2.font-weight-light In evidenza
+
+      .row
+        - (1..2).each do
+          .col-sm-6
+            .card-wrapper
+              .card
+                .card-body
+                  .card-img.no-after
+                    .img-responsive-wrapper
+                      figure.img-wrapper
+                        img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
+                  h3.card-title Repubblica Digitale
+                  p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                  a.read-more href="#" 
+                    span.text Sito web
+                    svg.icon.d-none.d-sm-inline-block
+                      use xlink:href="/images/sprite.svg#it-external-link"
