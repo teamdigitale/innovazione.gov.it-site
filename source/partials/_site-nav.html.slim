@@ -1,2 +1,98 @@
-header.navbar-main.navbar.navbar-dark.bd-navbar.px-3
-  = "header"
+header.it-header-wrapper
+  .it-header-slim-wrapper
+    .container
+      .row
+        .col-12
+          .it-header-slim-wrapper-content
+            = link_to t('owner_name'),
+              "//www.governo.it/",
+              target: "_blank",
+              rel: "noopener",
+              class: "navbar-brand"
+
+  .it-nav-wrapper
+    .it-header-center-wrapper
+      .container
+        .row
+          .col-12
+            .it-header-center-content-wrapper
+              .it-brand-wrapper
+                a href="#"
+                  = image_tag "logo-repubblica-italiana.svg",
+                    alt: "Logo #{t("state_name")}",
+                    class: "icon"
+
+                  = image_tag "logo-mid-white.svg",
+                    alt: "Logo #{t("site_name")}",
+                    style: "width: 120px",
+                    class: "icon"
+
+                  .it-brand-text
+                    h2.no_toc.d-none.d-xl-inline-block
+                      = t("site_name")
+
+              .it-right-zone
+                .it-socials.d-none.d-md-flex
+                  span = t("follow_us_on")
+
+                  = partial "partials/socials"
+
+                .it-search-wrapper
+                  span.d-none.d-md-block= t('search')
+                  = link_to "#",
+                    class: "search-link rounded-icon",
+                    aria: {"label": t('search')}
+                    svg.icon
+                      use xlink:href="/images/sprite.svg#it-search"
+
+    .it-header-navbar-wrapper
+      .container
+        .row
+          .col-12
+            /! start nav
+            nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
+              button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=("Toggle navigation") data-target="#nav02" type="button"
+                svg.icon
+                  use xlink:href="/images/sprite.svg#it-burger"
+
+              #nav02.navbar-collapsable style=("display: block;")
+                .overlay style=("display: none;")
+                .close-div.sr-only
+                  button.btn.close-menu type="button"
+                    span.it-close
+                    | close
+
+                .menu-wrapper
+                  ul.navbar-nav
+                    li.nav-item.active
+                      a.nav-link.active href="#"
+                        span = "Ministro"
+                        span.sr-only current
+                    li.nav-item
+                      a.nav-link href="#"
+                        span = "Dipartimento"
+                    li.nav-item
+                      a.nav-link href="#"
+                        span = "Progetti"
+                    li.nav-item
+                      a.nav-link href="#"
+                        span = "Notizie"
+
+                    li.nav-item.dropdown
+                      a.nav-link.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
+                        span Dropdown item
+                        svg.icon.icon-xs.icon-white
+                          use xlink:href="/images/sprite.svg#it-expand"
+
+                      .dropdown-menu style=("display: none;")
+                        .link-list-wrapper
+                          ul.link-list
+                            li
+                              a.list-item href="#"
+                                span Link list 1
+                            li
+                              a.list-item href="#"
+                                span Link list 2
+                            li
+                              a.list-item href="#"
+                                span Link list 3
