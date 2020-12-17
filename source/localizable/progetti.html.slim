@@ -12,7 +12,7 @@ main.container
       li.breadcrumb-item.active aria-current="page" Progetti
 
 
-  header.section.border-bottom.mb-5
+  header.section.border-bottom
     .section-content
       h1.text-center.text-sm-left Progetti
       .row
@@ -27,23 +27,24 @@ main.container
 
         .col-sm
   
+  .section.px-0
+    .section-container
+      .row
+        h2.font-weight-light In evidenza
+      .row
+        - (1..2).each do
+          .col-sm-6
+            .card-wrapper
+              .card
+                .card-body.pl-0
+                  .card-img.no-after
+                    .img-responsive-wrapper
+                      figure.img-wrapper
+                        img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
+                  h3.card-title Repubblica Digitale
+                  p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-  .row
-    h2.font-weight-light In evidenza
-  .row
-    - (1..2).each do
-      .col-sm-6
-        .card-wrapper
-          .card
-            .card-body.pl-0
-              .card-img.no-after
-                .img-responsive-wrapper
-                  figure.img-wrapper
-                    img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
-              h3.card-title Repubblica Digitale
-              p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-              a.read-more.text-decoration-none href="#" 
-                span.text Sito web
-                svg.icon.d-none.d-sm-inline-block
-                  use xlink:href="/images/sprite.svg#it-external-link"    
+                  a.read-more.text-decoration-none href="#" 
+                    span.text Sito web
+                    svg.icon.d-none.d-sm-inline-block
+                      use xlink:href="/images/sprite.svg#it-external-link"    
