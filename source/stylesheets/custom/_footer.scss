@@ -1,3 +1,16 @@
-.it-footer-small-prints a:hover:not(.disabled) {
+.it-footer .list-item:not(.disabled) span,
+.it-footer-small-prints .list-item:not(.disabled) span {
+  color: $analogue-2;
+  text-decoration: underline;
+}
+
+.it-footer .list-item:not(.disabled):hover span,
+.it-footer-small-prints .list-item:not(.disabled):hover span {
+  color: $analogue-2;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.it-footer-small-prints a:hover:not(.disabled) span {
   text-decoration: underline;
 }
