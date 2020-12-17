@@ -36,7 +36,7 @@ footer.it-footer
                     ul.link-list
                       li
                         = link_to dato.company.google_maps_url,
-                          class: "list-item font-weight-bold",
+                          class: "list-item font-weight-semibold",
                           target: "_blank",
                           rel: "noopener"
                           = t('formatted_address')
@@ -54,7 +54,7 @@ footer.it-footer
 
                       li
                         = link_to "mailto:#{dato.company.secretariat_email}",
-                          class: "list-item font-weight-bold",
+                          class: "list-item font-weight-semibold",
                           target: "_blank",
                           rel: "noopener"
                           = dato.company.secretariat_email
@@ -66,7 +66,7 @@ footer.it-footer
 
                       li
                         = link_to "mailto:#{dato.company.media_email}",
-                          class: "list-item font-weight-bold",
+                          class: "list-item font-weight-semibold",
                           target: "_blank",
                           rel: "noopener"
                           = dato.company.media_email
@@ -84,12 +84,12 @@ footer.it-footer
 
             .text-center.text-md-left
               .link-list-wrapper
-                ul.link-list.align-
+                ul.link-list
                   - ["Designers Italia", "Developers Italia", "PagoPA", "Piano Triennale"].each do |item|
                     li
                       = link_to item,
                         "#",
-                        class: "list-item font-weight-bold",
+                        class: "list-item font-weight-semibold",
                         target: "_blank",
                         rel: "noopener"
 
@@ -104,7 +104,7 @@ footer.it-footer
                     li
                       = link_to item,
                         "#",
-                        class: "list-item font-weight-bold",
+                        class: "list-item font-weight-semibold",
                         target: "_blank",
                         rel: "noopener"
 
