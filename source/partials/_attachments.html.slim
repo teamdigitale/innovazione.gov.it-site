@@ -1,25 +1,22 @@
 section.section
   .section-content
-    .row
-      .col
-        h4 Allegati
+    h4 Allegati
 
     .row.mt-lg-2
-      .col
-        - dato.attachments.each_with_index do |attachment, index|
-          - if index.even?
-            .card-wrapper.card-teaser-wrapper.card-teaser-wrapper-equal.card-teaser-block-2
-              .card.card-teaser.rounded.shadow.align-items-center
-                svg.icon.icon-primary
-                  use xlink:href="/images/sprite.svg#it-copy"
-                .card-body
-                  = link_to "#",
-                    class: "card-title text-decoration-none"
-                    h5.text-dark.text-decoration-none
-                      = attachment.file_title
-                  h6.card-text
-                    = attachment.file_description
-          - elsif index.odd?
+      - dato.attachments.each do |attachment|
+        .col-md-6.mt-4
+          .card.card-teaser.rounded.shadow.align-items-center
+            svg.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-copy"
+            .card-body
+              = link_to attachment.file.url,
+                class: "card-title text-decoration-none"
+                h5.text-dark.text-decoration-none
+                  = attachment.file_title
+              h6.card-text
+                = attachment.file_description
+
+          /- elsif index.odd?
               .card.card-teaser.rounded.shadow.align-items-center
                 svg.icon.icon-primary
                   use xlink:href="/images/sprite.svg#it-copy"
