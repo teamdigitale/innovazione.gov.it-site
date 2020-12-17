@@ -30,31 +30,24 @@ main.container
   .section.px-0
     .section-container
       .row
-        h2.font-weight-light.font-weight-semibold = t("projects.highlights")
-      .row
-        - (1..2).each do
-          .col-sm-6
-            .card-wrapper
-              .card
-                .card-body.pl-0
-                  .card-img.no-after
-                    .img-responsive-wrapper
-                      figure.img-wrapper
-                        img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
-                  h3.card-title Repubblica Digitale
-                  p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                  = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
+        .col-sm-4
+          p aside
+                
+        .col-sm-8
+          .row
+            h2.font-weight-light.font-weight-semibold = t("projects.highlights")
+          .row
+            - (1..2).each do
+              .col-sm-6
+                = partial "partials/project_card"
   
 .section.section-muted.px-0
   .section-container
     .container
       .row
         .col-sm-4
-          p aside
+                
         .col-sm-8
-
-
           .row
             .col-sm-10
               h2.font-weight-semibold.mb-3 Infrastruttura
@@ -62,22 +55,6 @@ main.container
                 strong Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis commodi saepe illo animi blanditiis ex distinctio accusamus alias rerum eaque, provident, tempora delectus modi, porro voluptas sunt enim sed voluptatum!
 
           .row
-            - (1..8).each do
+            - (1..4).each do
               .col-sm-6
-                .card-wrapper
-                  .card.bg-transparent
-                    .card-body.pl-0
-                      .card-img.no-after
-                        .img-responsive-wrapper
-                          figure.img-wrapper
-                            img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
-                      h3.card-title Repubblica Digitale
-                      p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-
-                      ul.list-inline
-                        li.list-inline-item
-                          = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
-
-                        li.list-inline-item
-                          = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
+                = partial "partials/project_card"
