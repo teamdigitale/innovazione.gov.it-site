@@ -21,6 +21,8 @@ module.exports = {
       path.join(__dirname, 'source/stylesheets'),
       path.join(__dirname, 'source/javascripts'),
       'node_modules',
+      'node_modules/bootstrap',
+      'node_modules/bootstrap-select',
       'node_modules/bootstrap-italia'
     ],
     alias: {
