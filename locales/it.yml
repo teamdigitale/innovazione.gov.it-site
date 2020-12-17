@@ -14,3 +14,6 @@ it:
   ministry_secretariat: Segreteria del Ministro
   media_comunication: Media e comunicazione
   view_more: "Vedi di più"
+  link_labels:
+    website: "Sito web"
+    forum: "Forum Italia"

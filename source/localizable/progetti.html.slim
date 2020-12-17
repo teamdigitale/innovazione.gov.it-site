@@ -44,7 +44,7 @@ main.container
                   h3.card-title Repubblica Digitale
                   p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-                  = partial "partials/card-link", locals: {label: "Sito web", url: "#"}
+                  = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
   
 .section.section-muted.px-0
   .section-container
@@ -77,7 +77,7 @@ main.container
 
                       ul.list-inline
                         li.list-inline-item
-                          = partial "partials/card-link", locals: {label: "Sito web", url: "#"}
+                          = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
 
                         li.list-inline-item
-                          = partial "partials/card-link", locals: {label: "Forum Italia", url: "#"}
+                          = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
