@@ -1,4 +1,47 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-h1 = project.title
+main.container.my-2
+
+  nav.breadcrumb-container aria-label="breadcrumb" 
+    ol.breadcrumb
+      li.breadcrumb-item
+        = link_to "home", "#"
+        span.separator
+          | /
+      li.breadcrumb-item
+        = link_to "Progetti", "/progetti/"
+        span.separator
+          | /
+      li.breadcrumb-item.active aria-current="page" = project.title
+
+
+  header.section.border-bottom
+    .section-content
+      h1.text-center.text-sm-left.font-weight-semibold = project.title
+      .row
+        .col-sm
+          p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
+
+        .col-sm
+          .text-center
+            .img-responsive-wrapper
+              figure.img-wrapper
+                img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
+      
+      .row.mt-5
+        .col-sm-4
+          h6.font-weight-semibold.text-uppercase = t("projects.category")
+
+          = link_to "Nome categoria", "#"
+          
+        .col-sm-4
+          h6.font-weight-semibold.text-uppercase = t("projects.topics")
+
+          - (1..3).each do
+            = link_to "#", class: "chip chip-primary chip-lg" do
+              span.chip-label Divario digitale
+
+
+        .col-sm-4.text-center
+          = link_to t("link_labels.go_to_website"), "#", class: "btn btn-primary"
