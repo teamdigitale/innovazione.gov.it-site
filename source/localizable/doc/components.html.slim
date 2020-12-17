@@ -5,11 +5,11 @@ main.container.my-5
 
 = partial "partials/doc/title", locals: {title: "Layout"}
 = partial "partials/doc/section", locals: {title: "Breadcrumbs"} do
-  = partial "partials/breadcrumb",
-    locals: {page: dato.articles_index}
+= partial "partials/breadcrumb",
+  locals: {page: dato.articles_index}
 
-  = partial "partials/breadcrumb",
-    locals: {page: dato.minister_interviews_index}
+= partial "partials/breadcrumb",
+  locals: {page: dato.minister_interviews_index}
 
 = partial "partials/doc/title", locals: {title: "Page headers"}
 
