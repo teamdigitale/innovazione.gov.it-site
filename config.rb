@@ -181,6 +181,7 @@ helpers do
 
 end
 
+<<<<<<< HEAD
 dato.tap do |dato|
   locale = LOCALES[0]
   I18n.with_locale(locale) do
