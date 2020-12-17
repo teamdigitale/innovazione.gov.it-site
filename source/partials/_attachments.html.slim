@@ -3,35 +3,33 @@ section.section
     .row
       .col
         h4 Allegati
+
     .row.mt-lg-2
       .col
-        .card-wrapper.card-teaser-wrapper.card-teaser-wrapper-equal.card-teaser-block-2
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-copy"
-            .card-body
-              h5.card-title = "Il testo del decreto semplificazione"
-              h6.card-text = "Scarica il PDF (10MB)"
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-copy"
-            .card-body
-              h5.card-title = "La Gazzetta Ufficiale No.XXX"
-              h6.card-text = "Scarica il PDF (10MB)"
-
-        .card-wrapper.card-teaser-wrapper.card-teaser-wrapper-equal.card-teaser-block-2
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-copy"
-            .card-body
-              h5.card-title = "Il testo del decreto semplificazione"
-              h6.card-text = "Scarica il PDF (10MB)"
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-copy"
-            .card-body
-              h5.card-title = "Il testo del decreto semplificazione"
-              h6.card-text = "Scarica il PDF (10MB)"
+        - dato.attachments.each_with_index do |attachment, index|
+          - if index.even?
+            .card-wrapper.card-teaser-wrapper.card-teaser-wrapper-equal.card-teaser-block-2
+              .card.card-teaser.rounded.shadow.align-items-center
+                svg.icon.icon-primary
+                  use xlink:href="/images/sprite.svg#it-copy"
+                .card-body
+                  = link_to "#",
+                    class: "card-title text-decoration-none"
+                    h5.text-dark.text-decoration-none
+                      = attachment.file_title
+                  h6.card-text
+                    = attachment.file_description
+          - elsif index.odd?
+              .card.card-teaser.rounded.shadow.align-items-center
+                svg.icon.icon-primary
+                  use xlink:href="/images/sprite.svg#it-copy"
+                .card-body
+                  = link_to "#",
+                    class: "card-title text-decoration-none"
+                    h5.text-dark.text-decoration-none
+                      = attachment.file_title
+                  h6.card-text
+                    = attachment.file_description
 
   .section-content.mt-5
     .row
