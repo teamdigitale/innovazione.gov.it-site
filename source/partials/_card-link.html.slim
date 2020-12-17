@@ -1,0 +1,12 @@
+- url ||= nil
+- label ||= nil
+- icon ||= "it-external-link"
+
+- if url.present? and label.present?
+  = link_to url,
+    class: "btn btn-link pl-0",
+    title: label,
+    aria: {"label": label} do
+    span.text = label
+    svg.icon.icon.icon-xs.icon-primary.ml-1
+      use xlink:href="/images/sprite.svg#it-external-link"    
