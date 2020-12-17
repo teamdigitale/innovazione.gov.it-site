@@ -1,0 +1,74 @@
+main.container.my-5
+  h1 Documentazione
+  p.lead Qui sviluppiamo nuovi componenti da usare/copiare all'interno delle varie pagine. Allo stesso tempo una documentazione live per l'uso di eventuali partials.
+
+
+= partial "partials/doc/title", locals: {title: "Layout"}
+= partial "partials/doc/section", locals: {title: "Breadcrumbs"} do
+  nav.breadcrumb-container aria-label="breadcrumb" 
+    ol.breadcrumb
+      li.breadcrumb-item
+        a href="#"  Home
+        span.separator
+          | /
+      li.breadcrumb-item.active aria-current="page" Progetti
+
+
+= partial "partials/doc/title", locals: {title: "Page headers"}
+
+= partial "partials/doc/section", locals: {title: "Header pagina a una colonna"} do
+  header.section.border-bottom
+    .section-content
+      h1.text-center.text-sm-left.font-weight-semibold Progetti
+      .row
+        .col-sm
+          p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
+
+          .link-list-wrapper.text-center.text-sm-left.mt-5
+            ul.link-list.text-center.text-sm-left
+              li: h3.text-uppercase.p-0 = t("projects.deepen")
+              li: a.p-0.list-item href="#"
+                span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
+
+        .col-sm
+
+
+
+
+= partial "partials/doc/title", locals: {title: "Cards"}
+
+= partial "partials/doc/section", locals: {title: "Card trasparente", classes: "section-muted"} do
+  .row
+    - (1..2).each do
+      .col-sm-6
+        = partial "partials/project_card"
+  p <code>project_card</code> TBD, dovrà prevedere un oggetto DatoCMS di tipo <code>project</code>
+
+
+
+
+= partial "partials/doc/section", locals: {title: "Link multipli nelle card"} do
+  ul.list-inline
+    li.list-inline-item
+      = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
+    li.list-inline-item
+      = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
+
+    p <code>card-link</code> richiede 2 parametri obbligatori: <code>label</code> per il testo che si vuole visualizzare, e <code>url</code> per il link a cui deve puntare. Un terzo parametro <code>icon</code> è opzionale e richiede il nome dell'icona; il defualt è il link esterno.
+
+
+
+
+= partial "partials/doc/title", locals: {title: "Tags"}
+
+= partial "partials/doc/section", locals: {title: "Tags", classes: "section-muted"} do
+    
+    = link_to "#",
+      class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+      span.chip-label
+        = "tag.name"
+    
+    = link_to "#",
+      class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+      span.chip-label
+        = "tag.name"
