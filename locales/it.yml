@@ -17,8 +17,12 @@ it:
   home_label: Home
   permalink_label: Permalink
   link_labels:
-    website: Sito web
     forum: Forum Italia
+    go_to_website: Vai al sito
+    website: Sito web
   projects:
     highlights: In evidenza
     deepen: Approfondisci
+    category: Categoria
+    topics: Argomenti
+
