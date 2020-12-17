@@ -1,18 +1,19 @@
 section.section.section-neutral.bg-dark
-  .row
-    .col-12.col-lg-6.container.white-color
-      .container
+  .container
+    .row
+      .col-12.col-lg-6.container.white-color
+
         h6.text-uppercase.text-center.text-lg-left
           = t("tags_title")
 
-      .my-4
-        - dato.tags.each do |tag|
-          = link_to "#",
-            class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-            span.chip-label.text-white
-              = tag.name
+        .my-4
+          - dato.tags.each do |tag|
+            = link_to "#",
+              class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+              span.chip-label.text-white
+                = tag.name
 
-    .col-12.col-lg-6.bg-dark.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
-      = link_to t("view_more"),
-        "#",
-        class: "btn btn-outline-primary text-uppercase"
+      .col-12.col-lg-6.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
+        = link_to t("view_more"),
+          "#",
+          class: "btn btn-outline-primary text-uppercase"
