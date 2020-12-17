@@ -1,10 +1,9 @@
 section.section
   .section-content
     h4 Allegati
-
-    .row.mt-lg-2
+    .row.mt-lg-2.mx-n4
       - dato.attachments.each do |attachment|
-        .col-md-6.mt-4
+        .col-md-6.mt-4.px-4
           = link_to attachment.file.url,
             class: "text-decoration-none"
             .card.card-teaser.rounded.shadow.align-items-center
@@ -18,9 +17,8 @@ section.section
 
   .section-content.mt-5
     h4 Collegamenti utili
-
-    .row.mt-lg-2
-      .col-md-6.mt-4
+    .row.mt-lg-2.mx-n4
+      .col-md-6.mt-4.px-4
         = link_to "#",
           class: "text-decoration-none"
           .card.card-teaser.rounded.shadow.align-items-center
@@ -31,7 +29,7 @@ section.section
                 = "Il sito web di App IO"
               h6.card-text
                 = "Description"
-      .col-md-6.mt-4
+      .col-md-6.mt-4.px-4
         = link_to "#",
           class: "text-decoration-none"
           .card.card-teaser.rounded.shadow.align-items-center
