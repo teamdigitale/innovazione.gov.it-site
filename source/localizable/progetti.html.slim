@@ -48,3 +48,37 @@ main.container
                     span.text Sito web
                     svg.icon.d-none.d-sm-inline-block
                       use xlink:href="/images/sprite.svg#it-external-link"    
+  
+  
+.section.section-muted.px-0
+  .section-container
+    .container
+      .row
+        .col-sm-4
+          p aside
+        .col-sm-8
+
+
+          .row
+            .col-sm-10
+              h2.mb-3 Infrastruttura
+              p.lead
+                strong Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis commodi saepe illo animi blanditiis ex distinctio accusamus alias rerum eaque, provident, tempora delectus modi, porro voluptas sunt enim sed voluptatum!
+
+          .row
+            - (1..8).each do
+              .col-sm-6
+                .card-wrapper
+                  .card.bg-transparent
+                    .card-body.pl-0
+                      .card-img.no-after
+                        .img-responsive-wrapper
+                          figure.img-wrapper
+                            img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
+                      h3.card-title Repubblica Digitale
+                      p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                      a.read-more.text-decoration-none href="#" 
+                        span.text Sito web
+                        svg.icon.d-none.d-sm-inline-block
+                          use xlink:href="/images/sprite.svg#it-external-link"    
