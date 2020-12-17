@@ -108,5 +108,11 @@ footer.it-footer
                         target: "_blank",
                         rel: "noopener"
 
-  .it-footer-small-prints
-    = "Other footer"
+  .it-footer-small-prints.py-4
+    .container
+      ul.list-inline.link-list.mb-0.text-center.text-md-left
+        - ["Dichiarazione di Accessibilità", "Informativa privacy", "Note legali", "Mappa del sito"].each do |item|
+          li.list-inline-item
+            = link_to item,
+              "#",
+              class: "list-item font-weight-semibold"
