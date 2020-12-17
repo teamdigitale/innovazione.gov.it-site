@@ -14,14 +14,14 @@ main.container
 
   header.section.border-bottom
     .section-content
-      h1.text-center.text-sm-left Progetti
+      h1.text-center.text-sm-left.font-weight-semibold Progetti
       .row
         .col-sm
           p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
 
           .link-list-wrapper.text-center.text-sm-left.mt-5
             ul.link-list.text-center.text-sm-left
-              li: h3.text-capitalize.p-0 Approfondisci
+              li: h3.text-uppercase.p-0 Approfondisci
               li: a.p-0.list-item href="#"
                 span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
 
@@ -30,7 +30,7 @@ main.container
   .section.px-0
     .section-container
       .row
-        h2.font-weight-light In evidenza
+        h2.font-weight-light.font-weight-semibold In evidenza
       .row
         - (1..2).each do
           .col-sm-6
@@ -44,11 +44,7 @@ main.container
                   h3.card-title Repubblica Digitale
                   p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-                  a.read-more.text-decoration-none href="#" 
-                    span.text Sito web
-                    svg.icon.d-none.d-sm-inline-block
-                      use xlink:href="/images/sprite.svg#it-external-link"    
-  
+                  = partial "partials/card-link", locals: {label: "Sito web", url: "#"}
   
 .section.section-muted.px-0
   .section-container
@@ -61,7 +57,7 @@ main.container
 
           .row
             .col-sm-10
-              h2.mb-3 Infrastruttura
+              h2.font-weight-semibold.mb-3 Infrastruttura
               p.lead
                 strong Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis commodi saepe illo animi blanditiis ex distinctio accusamus alias rerum eaque, provident, tempora delectus modi, porro voluptas sunt enim sed voluptatum!
 
@@ -78,7 +74,10 @@ main.container
                       h3.card-title Repubblica Digitale
                       p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-                      a.read-more.text-decoration-none href="#" 
-                        span.text Sito web
-                        svg.icon.d-none.d-sm-inline-block
-                          use xlink:href="/images/sprite.svg#it-external-link"    
+
+                      ul.list-inline
+                        li.list-inline-item
+                          = partial "partials/card-link", locals: {label: "Sito web", url: "#"}
+
+                        li.list-inline-item
+                          = partial "partials/card-link", locals: {label: "Forum Italia", url: "#"}
