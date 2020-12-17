@@ -13,7 +13,10 @@ it:
   transparency: Trasparenza
   ministry_secretariat: Segreteria del Ministro
   media_comunication: Media e comunicazione
-  view_more: "Vedi di più"
+  view_more: Vedi di più
   link_labels:
-    website: "Sito web"
-    forum: "Forum Italia"
+    website: Sito web
+    forum: Forum Italia
+  projects:
+    highlights: In evidenza
+    deepen: Approfondisci

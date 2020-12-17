@@ -21,7 +21,7 @@ main.container
 
           .link-list-wrapper.text-center.text-sm-left.mt-5
             ul.link-list.text-center.text-sm-left
-              li: h3.text-uppercase.p-0 Approfondisci
+              li: h3.text-uppercase.p-0 = t("projects.deepen")
               li: a.p-0.list-item href="#"
                 span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
 
@@ -30,7 +30,7 @@ main.container
   .section.px-0
     .section-container
       .row
-        h2.font-weight-light.font-weight-semibold In evidenza
+        h2.font-weight-light.font-weight-semibold = t("projects.highlights")
       .row
         - (1..2).each do
           .col-sm-6
