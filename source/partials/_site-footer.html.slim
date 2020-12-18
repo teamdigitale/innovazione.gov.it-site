@@ -54,7 +54,7 @@ footer.it-footer
 
                       li
                         = link_to "mailto:#{dato.company.secretariat_email}",
-                          class: "list-item font-weight-semibold",
+                          class: "list-item mid-footer-link",
                           target: "_blank",
                           rel: "noopener"
                           span= dato.company.secretariat_email
@@ -66,7 +66,7 @@ footer.it-footer
 
                       li
                         = link_to "mailto:#{dato.company.media_email}",
-                          class: "list-item font-weight-semibold",
+                          class: "list-item mid-footer-link",
                           target: "_blank",
                           rel: "noopener"
                           span= dato.company.media_email
@@ -88,7 +88,7 @@ footer.it-footer
                   - ["Designers Italia", "Developers Italia", "PagoPA", "Piano Triennale"].each do |item|
                     li
                       = link_to "#",
-                        class: "list-item font-weight-semibold",
+                        class: "list-item mid-footer-link",
                         target: "_blank",
                         rel: "noopener"
                         span= item
@@ -103,7 +103,7 @@ footer.it-footer
                   - ["Amministrazione trasparente", "Dipartimento per la Trasformazione Digitale", "Lavora con noi"].each do |item|
                     li
                       = link_to "#",
-                        class: "list-item font-weight-semibold",
+                        class: "list-item mid-footer-link",
                         target: "_blank",
                         rel: "noopener"
                         span= item
@@ -114,5 +114,5 @@ footer.it-footer
         - ["Dichiarazione di Accessibilità", "Informativa privacy", "Note legali", "Mappa del sito"].each do |item|
           li.list-inline-item
             = link_to "#",
-              class: "list-item font-weight-semibold"
+              class: "list-item mid-footer-link"
               span= item
