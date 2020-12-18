@@ -62,13 +62,77 @@ main.container.my-5
 = partial "partials/doc/title", locals: {title: "Tags"}
 
 = partial "partials/doc/section", locals: {title: "Tags", classes: "section-muted"} do
-    
-    = link_to "#",
-      class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-      span.chip-label
-        = "tag.name"
-    
-    = link_to "#",
-      class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-      span.chip-label
-        = "tag.name"
+  .row
+    .col-12.col-lg-6.container
+      .my-4
+        = link_to "#",
+          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+          span.chip-label
+            = "tag.name"
+        = link_to "#",
+          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+          span.chip-label
+            = "tag.name"
+        = link_to "#",
+          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
+          span.chip-label
+            = "tag.name"
+    .col-12.col-lg-6.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
+      =link_to t("view_more"),
+        "#",
+        class: "btn btn-outline-primary text-uppercase"
+
+= partial "partials/doc/title", locals: {title: "Attachments and Links"}
+
+= partial "partials/doc/section", locals: {title: "Attachments", classes: "section-muted"} do
+  .section-content
+    h4 = "Sezione Allegati"
+    .row.mt-lg-2.mx-n4
+      .col-md-6.mt-4.px-4
+        = link_to "#",
+          class: "text-decoration-none"
+          .card.card-teaser.rounded.shadow.align-items-center
+            svg.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-copy"
+            .card-body
+              h5.card-title
+                = "File Title"
+              h6.card-text
+                = "Description"
+      .col-md-6.mt-4.px-4
+        = link_to "#",
+          class: "text-decoration-none"
+          .card.card-teaser.rounded.shadow.align-items-center
+            svg.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-copy"
+            .card-body
+              h5.card-title
+                = "File Title"
+              h6.card-text
+                = "Description"
+  .section-content.mt-5.py-3
+    h4 = "Collegamenti Utili"
+    .row.mt-lg-2.mx-n4
+      .col-md-6.mt-4.px-4
+        = link_to "#",
+          class: "text-decoration-none"
+          .card.card-teaser.rounded.shadow.align-items-center
+            svg.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-external-link"
+            .card-body
+              h5.card-title
+                = "Link esterno"
+              h6.card-text
+                = "Description"
+      .col-md-6.mt-4.px-4
+        = link_to "#",
+          class: "text-decoration-none"
+          .card.card-teaser.rounded.shadow.align-items-center
+            svg.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-link"
+            .card-body
+              h5.card-title
+                = "Link interno"
+              h6.card-text
+                = "Description"
+  p The cards for attachments should loop over the attachments in Dato, linking to `attachment.file.url`, and displaying `attachment.file_title` and `attachment.file_description`. The cards for internal and external links should loop over the appropriate `link_external` and `link_internal` objects in Dato.
