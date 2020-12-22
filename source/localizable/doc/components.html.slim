@@ -5,14 +5,11 @@ main.container.my-5
 
 = partial "partials/doc/title", locals: {title: "Layout"}
 = partial "partials/doc/section", locals: {title: "Breadcrumbs"} do
-  nav.breadcrumb-container aria-label="breadcrumb" 
-    ol.breadcrumb
-      li.breadcrumb-item
-        a href="#"  Home
-        span.separator
-          | /
-      li.breadcrumb-item.active aria-current="page" Progetti
+  = partial "partials/breadcrumb",
+    locals: {page: dato.articles_index}
 
+  = partial "partials/breadcrumb",
+    locals: {page: dato.minister_interviews_index}
 
 = partial "partials/doc/title", locals: {title: "Page headers"}
 
