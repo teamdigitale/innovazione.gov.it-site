@@ -173,8 +173,6 @@ helpers do
 
 end
 
-proxy "/contact/index.html",
-  "templates/contact_page.html"
 
 proxy "site.webmanifest",
   "templates/site.webmanifest",
