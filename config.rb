@@ -49,6 +49,68 @@ configure :development do
   activate :livereload
 end
 
+module PresentationHelper
+  def self.published_announcements(announcements)
+    announcements.sort_by(&:date_shown).reverse
+  end
+
+  def self.published_articles(articles)
+    articles.sort_by(&:date_shown).reverse
+  end
+
+  def self.published_department_subpages(department_subpages)
+    department_subpages.sort_by(&:position)
+  end
+
+  def self.published_focus_pages(focus_pages)
+    focus_pages.sort_by(&:position)
+  end
+
+  def self.published_general_pages(general_pages)
+    general_pages.sort_by(&:position)
+  end
+
+  def self.published_interviews(interviews)
+    interviews.sort_by(&:date_shown).reverse
+  end
+
+  def self.published_minister_subpages(minister_subpages)
+    minister_subpages.sort_by(&:position)
+  end
+
+  def self.published_news_subpages(news_subpages)
+    news_subpages.sort_by(&:position)
+  end
+
+  def self.published_participations(participations)
+    participations.sort_by(&:date_shown).reverse
+  end
+
+  def self.published_press_releases(press_releases)
+    press_releases.sort_by(&:date_shown).reverse
+  end
+
+  def self.published_projects_categories(projects_categories)
+    projects_categories.sort_by(&:position)
+  end
+
+  def self.published_projects(projects)
+    projects.sort_by(&:position)
+  end
+
+  def self.published_projects_subpages(projects_subpages)
+    projects_subpages.sort_by(&:position)
+  end
+
+  def self.published_schedule_events(schedule_events)
+    schedule_events.sort_by(&:agenda_date).reverse
+  end
+
+  def self.published_tags(tags)
+    tags.sort_by(&:name)
+  end
+end
+
 helpers do
   include PathHelpers
   include ImageHelpers
