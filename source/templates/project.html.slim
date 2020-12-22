@@ -17,26 +17,28 @@ main.container.my-2
         = link_to "Competenze Digitali", "/progetti/"
         span.separator
           | /
-      li.breadcrumb-item.active aria-current="page" = project.title
+      li.breadcrumb-item.active aria-current="page" = page.title
 
   header.section.border-bottom
     .section-content
-      h1.text-center.text-sm-left.font-weight-semibold = project.title
       .row
-        .col-sm
-          p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
+        .col-sm-8
+          h1.text-center.text-sm-left.font-weight-semibold.mb-5 = page.title
+          p.lead.text-center.text-sm-left = page.subtitle
 
-        .col-sm
+        .col-sm-4
           .text-center
             .img-responsive-wrapper
               figure.img-wrapper
-                img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
+                = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
+                    alt: "Logo #{page.image_project_logo}",
+                    class: "img-fluid"
       
       .row.mt-5
         .col-sm-4
           p.font-weight-semibold.text-uppercase.text-muted = t("projects.category")
 
-          = link_to "Nome categoria", "#"
+          / = link_to page.project_category.name, page_path(page.project_category)
           
         .col-sm-4
           p.font-weight-semibold.text-uppercase.text-muted = t("projects.topics")
