@@ -56,6 +56,13 @@ module PathHelpers
       'focus_index'
       dato.department_page
 
+    when 'announcements_index',
+      'articles_index',
+      'interviews_index',
+      'participations_index',
+      'press_releases_index'
+      dato.news_page
+
     when 'focus_page'
       dato.focus_index
 
@@ -79,7 +86,7 @@ module PathHelpers
 
     when 'tag'
       dato.tags_index
-      
+
     end
   end
 
