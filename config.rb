@@ -171,6 +171,14 @@ helpers do
     PresentationHelper.published_tags(dato.tags)
   end
 
+  def menu_label_with_fallback(page)
+    if page.respond_to?(:menu_label) && page.menu_label.present?
+      page.menu_label
+    elsif page.respond_to?(:name) && page.name.present?
+      page.name
+    end
+  end
+
 end
 
 dato.tap do |dato|
