@@ -1,0 +1,34 @@
+- content_for(:head)
+  == dato_meta_tags(page)
+
+.container
+  .row
+    .col-12.col-lg-4
+      .card-wrapper.card-space
+        .card.card-bg
+          .card-body
+            h5.card-title
+              = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+
+            .card-text
+              = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+
+= partial "partials/attachments"
+
+.container
+  = link_to "Link a indice articoli",
+    page_path(dato.articles_index)
+
+.container
+  = link_to "Link a indice articoli ministro",
+    page_path(dato.minister_articles_index)
+
+.container
+  - visible_projects.each do |project|
+    = link_to "Link a progetto",
+      page_path(project)
+
+.container
+  - visible_projects_categories.each do |projects_category|
+    = link_to "Ancora a categoria progetto #{projects_category.name}",
+      "#{page_path(dato.projects_page)}##{projects_category.slug}"
