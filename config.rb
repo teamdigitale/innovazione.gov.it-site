@@ -173,6 +173,233 @@ helpers do
 
 end
 
+dato.tap do |dato|
+  locale = LOCALES[0]
+  I18n.with_locale(locale) do
+    prefix = locale == LOCALES[0] ? "" : "/#{locale}"
+
+    proxy "#{prefix}/index.html",
+      "/templates/homepage.html",
+      locals: { page: dato.homepage },
+      locale: locale
+
+    proxy "#{prefix}/#{dato.search_page.slug}/index.html",
+      "/templates/search.html",
+      locals: { page: dato.search_page },
+      locale: locale
+
+    dato.general_pages.each do |general_page|
+      parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
+      proxy "#{prefix}/#{parent_path}/#{general_page.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: general_page },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/index.html",
+      "/templates/minister.html",
+      locals: { page: dato.minister_page },
+      locale: locale
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
+      "/templates/schedule.html",
+      locals: { page: dato.schedule_page },
+      locale: locale
+
+    PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
+      proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
+        "/templates/schedule_event.html",
+        locals: { page: schedule_event },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.minister_articles_index,
+        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owner.include?(dato.minister_page)}},
+      locale: locale
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.minister_interviews_index,
+        elements: PresentationHelper.published_interviews(dato.interviews).select{|i| i.owner.include?(dato.minister_page)}},
+      locale: locale
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.minister_participations_index,
+        elements: PresentationHelper.published_participations(dato.participations).select{|p| p.owner.include?(dato.minister_page)}},
+      locale: locale
+
+    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.minister_press_releases_index,
+        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owner.include?(dato.minister_page)}},
+      locale: locale
+
+    PresentationHelper.published_minister_subpages(dato.minister_subpages).each do |minister_subpage|
+      parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
+      proxy "#{prefix}/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: minister_subpage },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.department_page.slug}/index.html",
+      "/templates/department.html",
+      locals: { page: dato.department_page },
+      locale: locale
+
+    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.focus_index,
+        elements: PresentationHelper.published_focus_pages(dato.focus_pages)},
+      locale: locale
+
+    PresentationHelper.published_focus_pages(dato.focus_pages).each do |focus_page|
+      proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
+        "/templates/focus.html",
+        locals: { page: focus_page },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_announcements_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.department_announcements_index,
+        elements: PresentationHelper.published_announcements(dato.announcements).select{|a| a.owners.include?(dato.department_page)}},
+      locale: locale
+
+    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_articles_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.department_articles_index,
+        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.department_page)}},
+      locale: locale
+
+    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_press_releases_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.department_press_releases_index,
+        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owners.include?(dato.department_page)}},
+      locale: locale
+
+    PresentationHelper.published_department_subpages(dato.department_subpages).each do |department_subpage|
+      parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
+      proxy "#{prefix}/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: department_subpage },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.projects_page.slug}/index.html",
+      "/templates/projects.html",
+      locals: { page: dato.projects_page },
+      locale: locale
+
+    PresentationHelper.published_projects(dato.projects).each do |project|
+      proxy "#{prefix}/#{dato.projects_page.slug}/#{project.slug}/index.html",
+        "/templates/project.html",
+        locals: { page: project },
+        locale: locale
+    end
+
+    PresentationHelper.published_projects_subpages(dato.projects_subpages).each do |projects_subpage|
+      parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
+      proxy "#{prefix}/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: projects_subpage },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.news_page.slug}/index.html",
+      "/templates/news.html",
+      locals: { page: dato.news_page },
+      locale: locale
+
+    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.announcements_index,
+        elements: PresentationHelper.published_announcements(dato.announcements)},
+      locale: locale
+
+    PresentationHelper.published_announcements(dato.announcements).each do |announcement|
+      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
+        "/templates/announcement.html",
+        locals: { page: announcement },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.articles_index,
+        elements: PresentationHelper.published_articles(dato.articles)},
+      locale: locale
+
+    PresentationHelper.published_articles(dato.articles).each do |article|
+      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
+        "/templates/article.html",
+        locals: { page: article },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.interviews_index,
+        elements: PresentationHelper.published_interviews(dato.interviews)},
+      locale: locale
+
+    PresentationHelper.published_interviews(dato.interviews).each do |interview|
+      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
+        "/templates/interview.html",
+        locals: { page: interview },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.participations_index,
+        elements: PresentationHelper.published_participations(dato.participations)},
+      locale: locale
+
+    PresentationHelper.published_participations(dato.participations).each do |participation|
+      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
+        "/templates/participation.html",
+        locals: { page: participation },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/index.html",
+      "/templates/index_page.html",
+      locals: { page: dato.press_releases_index,
+        elements: PresentationHelper.published_press_releases(dato.press_releases)},
+      locale: locale
+
+    PresentationHelper.published_press_releases(dato.press_releases).each do |press_release|
+      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
+        "/templates/press_release.html",
+        locals: { page: press_release },
+        locale: locale
+    end
+
+    PresentationHelper.published_news_subpages(dato.news_subpages).each do |news_subpage|
+      parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
+      proxy "#{prefix}/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: news_subpage },
+        locale: locale
+    end
+
+    proxy "#{prefix}/#{dato.tags_index.slug}/index.html",
+      "/templates/tags.html",
+      locals: { page: dato.tags_index },
+      locale: locale
+
+    PresentationHelper.published_tags(dato.tags).each do |tag|
+      proxy "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}/index.html",
+        "/templates/tag.html",
+        locals: { page: tag },
+        locale: locale
+    end
+  end
+end
 
 proxy "site.webmanifest",
   "templates/site.webmanifest",
