@@ -115,12 +115,6 @@ helpers do
   include PathHelpers
   include ImageHelpers
 
-  # Custom helper to theme
-  def site_nav_menu
-    [
-      # dato.about_page,
-      # dato.contact_page
-    ]
   end
 end
 
