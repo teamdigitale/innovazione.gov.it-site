@@ -15,4 +15,16 @@ module PathHelpers
     options[:class] = options.fetch(:class, "") + " is-active" if active?(url)
     link_to name, url, options
   end
+
+  private
+
+  def path_prefix(locale)
+    locale == locales[0] ? "" : "/#{locale}"
+  end
+
+  def locales
+    if LOCALES
+      LOCALES.split(",").map(&:to_sym)
+    end
+  end
 end
