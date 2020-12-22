@@ -1,0 +1,102 @@
+.section
+  .section-content
+    h4 Gli approfondimenti su Medium
+    .d-lg-none.text-secondary
+      svg.icon
+        use xlink:href="/images/sprite.svg#it-external-link"
+      span.px-2 Link esterni
+
+    .row.mt-4.mt-lg-5.mx-n4
+      .col-lg-4.px-4
+        .card-wrapper
+          =link_to "#",
+            class: "text-decoration-none"
+            .card.card-img.no-after.rounded.shadow
+              .img-responsive-wrapper
+                .img-responsive
+                  figure.img-wrapper.h-75
+                    = image_tag "images/trial_image.jpg"
+              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
+                .row.px-4
+                  h4.text-primary
+                    = "Una Repubblica Digitale e inclusiva per tutti i cittadini"
+                  .text-black.mt-2
+                    = "di Luca Attias, Erika Miglietta e Guido Scorza"
+                div.my-4
+                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Innova per l'Italia"
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Normativa"
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Altro"
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Hello world"
+
+      .col-lg-4.px-4
+        .card-wrapper
+          =link_to "#",
+            class: "text-decoration-none"
+            .card.card-img.no-after.rounded.shadow
+              .img-responsive-wrapper
+                .img-responsive
+                  figure.img-wrapper.h-75
+                    = image_tag "images/trial_image.jpg"
+              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
+                .row.px-4
+                  h4.text-primary
+                    = "Un kit per portare i servizi pubblici nel cloud"
+                  .text-black.mt-2
+                    = "di Paolo de Rosa"
+                div.my-4
+                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Innova per l'Italia"
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Normativa"
+
+      .col-lg-4.px-4
+        .card-wrapper
+          =link_to "#",
+            class: "text-decoration-none"
+            .card.card-img.no-after.rounded.shadow
+              .img-responsive-wrapper
+                .img-responsive
+                  figure.img-wrapper.h-75
+                    = image_tag "images/trial_image.jpg"
+              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
+                .row.px-4
+                  h4.text-primary
+                    = "Come far diventare il tuo Comune una amministrazione virtuosa del digitale"
+                  .text-black.mt-2
+                    = "di Luca Attias, Simone Piunno e Giuseppe Virgone"
+                div.my-4
+                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                  = link_to "#",
+                    class: "chip mr-3 mt-2 text-decoration-none"
+                    span.chip-label.text-primary
+                      = "Odio online"
+  .container.mt-2
+    .row
+      .col-12.my-3.mt-lg-5.text-center
+        button.btn.btn-sm.btn-outline-primary.btn-icon.text-uppercase
+          = link_to "#",
+            class: "text-decoration-none align-middle"
+            .d-inline-block.pr-3
+              h6.font-weight-bold = t("medium")
+            span
+              svg.icon.icon-lg.icon-primary
+                use xlink:href="/images/sprite.svg#it-medium"
+
