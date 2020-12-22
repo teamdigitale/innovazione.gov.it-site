@@ -115,7 +115,62 @@ helpers do
   include PathHelpers
   include ImageHelpers
 
+  def visible_announcements
+    PresentationHelper.published_announcements(dato.announcements)
   end
+
+  def visible_articles
+    PresentationHelper.published_articles(dato.articles)
+  end
+
+  def visible_department_subpages
+    PresentationHelper.published_department_subpages(dato.department_subpages)
+  end
+
+  def visible_focus_pages
+    PresentationHelper.published_focus_pages(dato.focus_pages)
+  end
+
+  def visible_interviews
+    PresentationHelper.published_interviews(dato.interviews)
+  end
+
+  def visible_minister_subpages
+    PresentationHelper.published_minister_subpages(dato.minister_subpages)
+  end
+
+  def visible_news_subpages
+    PresentationHelper.published_news_subpages(dato.news_subpages)
+  end
+
+  def visible_participations
+    PresentationHelper.published_participations(dato.participations)
+  end
+
+  def visible_press_releases
+    PresentationHelper.published_press_releases(dato.press_releases)
+  end
+
+  def visible_projects_categories
+    PresentationHelper.published_projects_categories(dato.projects_categories)
+  end
+
+  def visible_projects
+    PresentationHelper.published_projects(dato.projects)
+  end
+
+  def visible_projects_subpages
+    PresentationHelper.published_projects_subpages(dato.projects_subpages)
+  end
+
+  def visible_schedule_events
+    PresentationHelper.published_schedule_events(dato.schedule_events)
+  end
+
+  def visible_tags
+    PresentationHelper.published_tags(dato.tags)
+  end
+
 end
 
 proxy "/contact/index.html",
