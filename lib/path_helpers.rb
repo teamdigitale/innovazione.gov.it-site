@@ -1,8 +1,10 @@
 module PathHelpers
   module_function
 
-  def root_path
-    "/"
+  def locale_path(path = "", locale: I18n.locale)
+    File.join("", path_prefix(locale), path, "")
+  end
+
   end
 
   def active?(url)
