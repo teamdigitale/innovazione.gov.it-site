@@ -1,0 +1,3 @@
+- page.content_blocks.each do |block|
+  = partial "partials/blocks/#{block.item_type.api_key}",
+    locals: {block: block}
