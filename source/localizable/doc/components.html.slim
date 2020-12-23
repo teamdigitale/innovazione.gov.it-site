@@ -38,8 +38,8 @@ main.container.my-5
   .row
     - (1..2).each do
       .col-sm-6
-        = partial "partials/project_card"
-  p <code>project_card</code> TBD, dovrà prevedere un oggetto DatoCMS di tipo <code>project</code>
+        = partial "partials/project_card", locals: {project: nil}
+  p <code>project_card</code>: il partial prevede un oggetto DatoCMS di tipo <code>project</code>
 
 
 
