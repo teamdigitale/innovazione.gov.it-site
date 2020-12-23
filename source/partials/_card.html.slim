@@ -1,0 +1,25 @@
+.card-wrapper
+  = link_to card_link,
+    class: "text-decoration-none"
+    .card.card-img.no-after.rounded.shadow
+      .img-responsive-wrapper
+        .img-responsive
+          figure.img-wrapper.h-75
+            = image_tag image_link
+      .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
+        .row.px-4
+          h4.text-primary
+            = card_title
+          h6.text-black.mt-2
+            = card_subtitle
+          p.text-black.mt-2
+            = card_text
+        div.my-4
+        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+          - if card_tags.present?
+            - card_tags.each do |tag|
+              = partial "partials/chip",
+                locals: {chip_name: tag.name,
+                  text_color: "text-primary",
+                  chip_link: "#"}
+
