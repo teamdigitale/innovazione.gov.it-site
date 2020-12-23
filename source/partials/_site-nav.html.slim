@@ -40,7 +40,7 @@ header.it-header-wrapper
 
                 .it-search-wrapper
                   span.d-none.d-md-block= t('search')
-                  = link_to "#",
+                  = link_to page_path(dato.search_page),
                     class: "search-link rounded-icon",
                     aria: {"label": t('search')}
                     svg.icon
