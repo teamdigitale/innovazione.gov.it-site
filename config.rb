@@ -179,6 +179,10 @@ helpers do
     end
   end
 
+  def cta_label(item)
+    item.cta_label.present? ? item.cta_label : item.title
+  end
+
 end
 
 dato.tap do |dato|
