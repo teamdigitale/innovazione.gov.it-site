@@ -1,3 +1,18 @@
+/ esempio card per gli articoli
+.section
+  .section-content
+
+    = partial "partials/card",
+      locals: {card_link: "#",
+        image_link: "images/trial_image.jpg",
+        responsive_panoramic: "img-responsive-panoramic",
+        card_date: "10 novembre 2020",
+        card_title: "Una Repubblica Digitale e inclusiva per tutti i cittadini",
+        card_subtitle: "di Luca Attias, Erika Miglietta e Guido Scorza",
+        card_text: "Nel provedimento i nuovi strumenti per agevolare la digitalizzazione dei servizi per cittadini e imprese",
+        card_tags: dato.tags}
+
+/ sezione card degli articoli su Medium
 .section
   .section-content
     h4 Gli approfondimenti su Medium
@@ -6,96 +21,53 @@
         use xlink:href="/images/sprite.svg#it-external-link"
       span.px-2 Link esterni
     .row.mt-4.mt-lg-5.mx-n4
-      - dato.medium_articles[0..2].map do |article|
-        .col-lg-4.px-4
-          = partial "partials/card",
-            locals: {card_link: "#",
-              image_link: "images/trial_image.jpg",
-              card_title: article.title,
-              card_subtitle: "di #{article.owners[0..2].join(', ')} e #{article.owners[-1]}}",
-              card_text: "",
-              card_tags: article.tags}
-
-        /.card-wrapper
-          =link_to "#",
-            class: "text-decoration-none"
-            .card.card-img.no-after.rounded.shadow
-              .img-responsive-wrapper
-                .img-responsive
-                  figure.img-wrapper.h-75
-                    = image_tag "images/trial_image.jpg"
-              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
-                .row.px-4
-                  h4.text-primary
-                    = "Una Repubblica Digitale e inclusiva per tutti i cittadini"
-                  h6.text-black.mt-2
-                    = "di Luca Attias, Erika Miglietta e Guido Scorza"
-                div.my-4
-                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Innova per l'Italia"
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Normativa"
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Altro"
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Hello world"
+      .col-lg-4.px-4
+        = partial "partials/card",
+          locals: {card_link: "#",
+            image_link: "images/trial_image.jpg",
+            card_date: "10 novembre 2020",
+            card_title: "Una Repubblica Digitale e inclusiva per tutti i cittadini",
+            card_subtitle: "di Luca Attias, Erika Miglietta e Guido Scorza",
+            card_tags: dato.tags}
 
       .col-lg-4.px-4
-        .card-wrapper
-          =link_to "#",
-            class: "text-decoration-none"
-            .card.card-img.no-after.rounded.shadow
-              .img-responsive-wrapper
-                .img-responsive
-                  figure.img-wrapper.h-75
-                    = image_tag "images/trial_image.jpg"
-              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
-                .row.px-4
-                  h4.text-primary
-                    = "Un kit per portare i servizi pubblici nel cloud"
-                  h6.text-black.mt-2
-                    = "di Paolo de Rosa"
-                div.my-4
-                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Innova per l'Italia"
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Normativa"
+        = partial "partials/card",
+          locals: {card_link: "#",
+            image_link: "images/trial_image.jpg",
+            card_title: "Un kit per portare i servizi pubblici nel cloud",
+            card_subtitle: "di Paolo de Rosa",
+            card_tags: dato.tags}
 
       .col-lg-4.px-4
-        .card-wrapper
-          =link_to "#",
-            class: "text-decoration-none"
-            .card.card-img.no-after.rounded.shadow
-              .img-responsive-wrapper
-                .img-responsive
-                  figure.img-wrapper.h-75
-                    = image_tag "images/trial_image.jpg"
-              .card-body.mt-n5.mb-4.d-flex.flex-column.justify-content-between
-                .row.px-4
-                  h4.text-primary
-                    = "Come far diventare il tuo Comune una amministrazione virtuosa del digitale"
-                  h6.text-black.mt-2
-                    = "di Luca Attias, Simone Piunno e Giuseppe Virgone"
-                div.my-4
-                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                  = link_to "#",
-                    class: "chip mr-3 mt-2 text-decoration-none"
-                    span.chip-label.text-primary
-                      = "Odio online"
+        = partial "partials/card",
+          locals: {card_link: "#",
+            image_link: "images/trial_image.jpg",
+            card_title: "Come far diventare il tuo Comune una amministrazione virtuosa del digitale",
+            card_subtitle: "di Luca Attias, Simone Piunno e Giuseppe Virgone",
+            card_tags: dato.tags}
+
+  /--------COLLEGATO A DATO----------------------------------
+  /.section
+    .section-content
+      h4 Gli approfondimenti su Medium
+      .d-lg-none.text-secondary
+        svg.icon
+          use xlink:href="/images/sprite.svg#it-external-link"
+        span.px-2 Link esterni
+      .row.mt-4.mt-lg-5.mx-n4
+        - dato.medium_articles[0..2].map do |article|
+          .col-lg-4.px-4
+            = partial "partials/card",
+              locals: {card_link: "#",
+                image_link: "images/trial_image.jpg",
+                card_title: article.title,
+                card_subtitle: "di #{article.owners[0..2].join(', ')} e #{article.owners[-1]}}",
+                card_text: "",
+                adjust_height: "h-75",
+                adjust_margin_top: "mt-n5",
+                card_tags: article.tags}
+  /-------------------------------------------
+
   .container.mt-2
     .row
       .col-12.my-3.mt-lg-5.text-center
