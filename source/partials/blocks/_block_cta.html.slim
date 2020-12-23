@@ -1,1 +1,5 @@
 = "CTA block"
+
+- block.cta_items.each do |item|
+  = partial "partials/links/#{item.item_type.api_key}",
+    locals: {item: item}
