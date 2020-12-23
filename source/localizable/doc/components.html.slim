@@ -14,20 +14,10 @@ main.container.my-5
 = partial "partials/doc/title", locals: {title: "Page headers"}
 
 = partial "partials/doc/section", locals: {title: "Header pagina a una colonna"} do
-  header.section.border-bottom
-    .section-content
-      h1.text-center.text-sm-left.font-weight-semibold Progetti
-      .row
-        .col-sm
-          p.lead.text-center.text-sm-left Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium maiores veniam quis, nemo necessitatibus at. Eaque ab totam consequatur, excepturi illum temporibus, aliquam non nam iste vel, voluptatibus ducimus.
+  = partial "partials/headers/header-one-column",
+    locals: {title: "title", subtitle: "subtitle", subpages: nil}
+  p <code>partials/headers/header-one-column</code>: il partial prevede tre parametri <code>title, subtitle, subpages</code> che dovrebbero esser presenti in tutte le index
 
-          .link-list-wrapper.text-center.text-sm-left.mt-5
-            ul.link-list.text-center.text-sm-left
-              li: h3.text-uppercase.p-0 = t("projects.deepen")
-              li: a.p-0.list-item href="#"
-                span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
-
-        .col-sm
 
 
 
