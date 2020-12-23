@@ -14,7 +14,7 @@
                   title: project.image_project_logo.title
 
         h5.card-title
-          = link_to project.title, "#", class: "text-decoration-none"
+          = link_to project.title, page_path(project), class: "text-decoration-none"
 
         p.card-text.text-sans-serif = project.subtitle
 
