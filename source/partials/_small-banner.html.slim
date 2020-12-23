@@ -1,0 +1,7 @@
+- if banner.title.present?
+  = banner.title
+
+= banner.text
+
+= partial "partials/#{banner.link.item_type.api_key}",
+  locals: {item: banner.link}
