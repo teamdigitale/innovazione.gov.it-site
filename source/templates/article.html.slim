@@ -1,7 +1,8 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+= partial "partials/page-cover",
+  locals: {page: page}
 
-= partial "page-cover"
-
-= partial "page-blocks"
+= partial "partials/page-blocks",
+  locals: {page: page}
