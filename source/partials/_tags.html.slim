@@ -1,3 +1,5 @@
+- featured_tags = visible_tags & dato.homepage.featured_tags
+
 section.section.section-neutral.bg-dark
   .container
     .row
@@ -7,7 +9,7 @@ section.section.section-neutral.bg-dark
           = t("tags_title")
 
         .my-4
-          - dato.homepage.featured_tags.each do |tag|
+          - featured_tags.each do |tag|
             = link_to page_path(tag),
               class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
               span.chip-label.text-white
