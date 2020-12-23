@@ -1,2 +1,8 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+= page.title
+
+- elements.each do |element|
+  = partial "partials/previews/#{element.item_type.api_key}",
+    locals: {element: element}

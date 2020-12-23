@@ -1,4 +1,13 @@
 it:
+  models:
+    announcement: Avviso pubblico
+    article: Articolo
+    focus: Focus
+    interview: Intervista
+    participation: Intervento
+    press_release: Comunicato stampa
+    project: Progetto
+
   close: Chiudi
   contacts: Contatti
   follow_us_on: Seguici su
@@ -26,4 +35,3 @@ it:
     deepen: Approfondisci
     category: Categoria
     topics: Argomenti
-
