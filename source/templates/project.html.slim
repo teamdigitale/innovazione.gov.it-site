@@ -23,10 +23,7 @@ header.section.border-bottom
       .col-sm-4
         p.font-weight-semibold.text-uppercase.text-muted = t("projects.category")
 
-        .link-list-wrapper
-          ul.link-list
-            - page.project_categories.each do |cat|
-              li = link_to cat.name, page_path(cat), class: "list-item"
+        = link_to page.category.name, page_path(page)
         
       .col-sm-4
         p.font-weight-semibold.text-uppercase.text-muted = t("projects.topics")
