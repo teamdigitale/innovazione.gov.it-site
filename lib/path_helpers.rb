@@ -87,6 +87,9 @@ module PathHelpers
     when 'tag'
       dato.tags_index
 
+    when 'projects_categories'
+      dato.projects_categories
+
     end
   end
 
