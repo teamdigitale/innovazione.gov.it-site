@@ -1,6 +1,10 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+- page.banners.each do |block|
+  = partial "partials/blocks/#{block.item_type.api_key}",
+    locals: {block: block}
+
 .container
   .row
     .col-12.col-lg-4
