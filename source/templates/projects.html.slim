@@ -36,6 +36,6 @@
                 strong = cat.description
               
               .row
-                - visible_projects.select{|p| p.project_categories.include?(cat)}.each do |p|
+                - visible_projects.select{|p| p.category == cat}.each do |p|
                   .col-sm-6
                     = partial "partials/project_card", locals: {project: p}
