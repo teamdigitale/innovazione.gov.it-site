@@ -1,51 +1,44 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-main.container.my-2
+= partial "partials/breadcrumb",
+  locals: {page: dato.projects_page}
 
-  nav.breadcrumb-container aria-label="breadcrumb" 
-    ol.breadcrumb
-      li.breadcrumb-item
-        a href="#"  Home
-        span.separator
-          | /
-      li.breadcrumb-item.active aria-current="page" = page.title
+header.section.border-bottom
+  .section-content
+    h1.text-center.text-sm-left.font-weight-semibold = page.title
 
-  header.section.border-bottom
-    .section-content
-      h1.text-center.text-sm-left.font-weight-semibold = page.title
+    .col-sm-6
+      p.lead.text-center.text-sm-left = page.subtitle
 
-      .col-sm-6
-        p.lead.text-center.text-sm-left = page.subtitle
+      .link-list-wrapper.text-center.text-sm-left.mt-5
+        ul.link-list.text-center.text-sm-left
+          li: h3.text-uppercase.p-0 = t("projects.deepen")
+          li: a.p-0.list-item href="#"
+            span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
 
-        .link-list-wrapper.text-center.text-sm-left.mt-5
-          ul.link-list.text-center.text-sm-left
-            li: h3.text-uppercase.p-0 = t("projects.deepen")
-            li: a.p-0.list-item href="#"
-              span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
 
-  
-  .section.px-0
-    .section-container
-      .row
-        .col-sm-4
-          p aside
-          ul
-            - visible_projects_categories.each do |p|
-              li = link_to p.name, page_path(p)
-                
-          ul
-            - visible_projects.each do |p|
-              li = link_to p.title, page_path(p)
-                
-        .col-sm-8
-          .row
-            h2.font-weight-light.font-weight-semibold = t("projects.highlights")
-          .row
-            - (1..2).each do
-              .col-sm-6
-                = partial "partials/project_card"
-  
+.section.px-0
+  .section-container
+    .row
+      .col-sm-4
+        p aside
+        ul
+          - visible_projects_categories.each do |p|
+            li = link_to p.name, page_path(p)
+              
+        ul
+          - visible_projects.each do |p|
+            li = link_to p.title, page_path(p)
+              
+      .col-sm-8
+        .row
+          h2.font-weight-light.font-weight-semibold = t("projects.highlights")
+        .row
+          - (1..2).each do
+            .col-sm-6
+              = partial "partials/project_card"
+
 
 - visible_projects_categories.each do |cat|
   .section.section-muted.px-0
