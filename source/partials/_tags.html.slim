@@ -7,13 +7,13 @@ section.section.section-neutral.bg-dark
           = t("tags_title")
 
         .my-4
-          - dato.tags.each do |tag|
-            = link_to "#",
+          - dato.homepage.featured_tags.each do |tag|
+            = link_to page_path(tag),
               class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
               span.chip-label.text-white
                 = tag.name
 
       .col-12.col-lg-6.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
         = link_to t("view_more"),
-          "#",
+          page_path(dato.tags_index),
           class: "btn btn-outline-primary text-uppercase"
