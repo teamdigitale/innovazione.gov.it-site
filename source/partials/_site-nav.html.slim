@@ -65,16 +65,22 @@ header.it-header-wrapper
 
                 .menu-wrapper
                   ul.navbar-nav
-                    li.nav-item.active
-                      a.nav-link.active href="#"
-                        span = "Ministro"
-                        span.sr-only current
                     li.nav-item
-                      a.nav-link href="#"
-                        span = "Dipartimento"
+                      = active_link_to dato.minister_page.menu_label,
+                        page_path(dato.minister_page),
+                        class: "nav-link"
+
                     li.nav-item
-                      a.nav-link href="#"
-                        span = "Progetti"
+                      = active_link_to dato.department_page.menu_label,
+                        page_path(dato.department_page),
+                        class: "nav-link"
+
                     li.nav-item
-                      a.nav-link href="#"
-                        span = "Notizie"
+                      = active_link_to dato.projects_page.menu_label,
+                        page_path(dato.projects_page),
+                        class: "nav-link"
+
+                    li.nav-item
+                      = active_link_to dato.news_page.menu_label,
+                        page_path(dato.news_page),
+                        class: "nav-link"
