@@ -1,18 +1,26 @@
-.card-wrapper
-  .card.bg-transparent
-    .card-body.pl-0
-      .card-img.no-after
-        .img-responsive-wrapper
-          figure.img-wrapper
-            img alt="imagealt" title="img title" src="https://via.placeholder.com/50x50/0066cc/FFFFFF/?text=IMG" 
-      h5.card-title
-        = link_to "Repubblica Digitale", "#", class: "text-decoration-none"
+- project ||= nil
 
-      p.card-text.text-sans-serif Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- if project.present?
+  .card-wrapper
+    .card.bg-transparent
+      .card-body.pl-0
+        .card-img.no-after
+          .container-fluid.mb-4: .row
+            .col-6
+              figure
+                = image_tag project.image_project_logo.url(h: 250, auto:'format,compress'),
+                  class: "img-fluid",
+                  alt: project.image_project_logo.alt,
+                  title: project.image_project_logo.title
 
-      ul.list-inline
-        li.list-inline-item
-          = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
+        h5.card-title
+          = link_to project.title, "#", class: "text-decoration-none"
 
-        li.list-inline-item
-          = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
+        p.card-text.text-sans-serif = project.subtitle
+
+        ul.list-inline
+          li.list-inline-item
+            = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
+
+          li.list-inline-item
+            = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}

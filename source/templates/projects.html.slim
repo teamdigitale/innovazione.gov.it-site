@@ -1,8 +1,6 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-
-
 main.container.my-2
 
   nav.breadcrumb-container aria-label="breadcrumb" 
@@ -13,21 +11,19 @@ main.container.my-2
           | /
       li.breadcrumb-item.active aria-current="page" = page.title
 
-
   header.section.border-bottom
     .section-content
       h1.text-center.text-sm-left.font-weight-semibold = page.title
-      .row
-        .col-sm
-          p.lead.text-center.text-sm-left = page.subtitle
 
-          .link-list-wrapper.text-center.text-sm-left.mt-5
-            ul.link-list.text-center.text-sm-left
-              li: h3.text-uppercase.p-0 = t("projects.deepen")
-              li: a.p-0.list-item href="#"
-                span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
+      .col-sm-6
+        p.lead.text-center.text-sm-left = page.subtitle
 
-        .col-sm
+        .link-list-wrapper.text-center.text-sm-left.mt-5
+          ul.link-list.text-center.text-sm-left
+            li: h3.text-uppercase.p-0 = t("projects.deepen")
+            li: a.p-0.list-item href="#"
+              span.mr-0.text-decoration-none.font-weight-bold Attività Internazionali
+
   
   .section.px-0
     .section-container
@@ -50,20 +46,22 @@ main.container.my-2
               .col-sm-6
                 = partial "partials/project_card"
   
-.section.section-muted.px-0
-  .section-container
-    .container
-      .row
-        .col-sm-4
-                
-        .col-sm-8
-          .row
-            .col-sm-10
-              h2.font-weight-semibold.mb-3 Infrastruttura
-              p.lead
-                strong Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis commodi saepe illo animi blanditiis ex distinctio accusamus alias rerum eaque, provident, tempora delectus modi, porro voluptas sunt enim sed voluptatum!
 
-          .row
-            - (1..4).each do
-              .col-sm-6
-                = partial "partials/project_card"
+- visible_projects_categories.each do |cat|
+  .section.section-muted.px-0
+    .section-container
+      .container
+        .row
+          .col-sm-4
+                  
+          .col-sm-8
+            .row
+              .col-sm-10
+                h2.font-weight-semibold.mb-3 = cat.name
+                p.lead
+                  strong = cat.description
+
+            .row
+              - visible_projects.select{|p| p.project_categories.include?(cat)}.each do |p|
+                .col-sm-6
+                  = partial "partials/project_card", locals: {project: p}
