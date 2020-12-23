@@ -1,0 +1,20 @@
+- title ||= nil
+- subtitle ||= nil
+- subpages ||= nil
+
+.container
+  header.section.border-bottom.p-5
+    .section-content
+      h1.text-center.text-sm-left.font-weight-semibold = title
+      .row
+        .col-sm-6
+          p.lead.text-center.text-sm-left = subtitle
+
+          - if subpages.present? && subpages.count > 0
+            .link-list-wrapper.text-center.text-sm-left.mt-5
+              ul.link-list.text-center.text-sm-left
+                li: h3.text-uppercase.p-0 = t("projects.deepen")
+                - subpages.each do |sub|
+                  li
+                    = link_to page_path(sub), class: "p-0 list-item" do
+                      span.mr-0.text-decoration-none.font-weight-bold = sub.title
