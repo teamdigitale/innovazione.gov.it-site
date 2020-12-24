@@ -16,11 +16,7 @@ module PathHelpers
       'focus_page'
       dato.department_page
 
-    when 'projects_category'
-      dato.projects_page
-
     when 'projects_subpage'
-      # FIXME
       dato.projects_page
 
     when 'news_subpage',
@@ -90,9 +86,6 @@ module PathHelpers
 
     when 'tag'
       dato.tags_index
-
-    when 'projects_categories'
-      dato.projects_categories
 
     end
   end
