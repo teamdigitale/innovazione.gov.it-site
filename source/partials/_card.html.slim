@@ -1,4 +1,5 @@
 / card_date and card_text are optional, set with card_date and card_text if needed
+
 - date = locals.key?(:card_date) ? card_date : ""
 - text = locals.key?(:card_text) ? card_text : ""
 
@@ -12,7 +13,7 @@
             = image_tag image_link
       .card-body.mb-4.d-flex.flex-column.justify-content-between.mt-n5
         .row.px-4
-          p.small.mt-n3
+          p.small.mt-n3.text-secondary
             = date
           h4.text-primary
             = card_title
