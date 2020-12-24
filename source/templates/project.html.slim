@@ -23,7 +23,8 @@ header.section.border-bottom
       .col-sm-4
         p.font-weight-semibold.text-uppercase.text-muted = t("projects.category")
 
-        = link_to page.category.name, page_path(page.category)
+        = link_to page.category.name,
+                  "#{page_path(dato.projects_page)}##{page.category.slug}"
         
       .col-sm-4
         p.font-weight-semibold.text-uppercase.text-muted = t("projects.topics")
