@@ -1,21 +1,20 @@
 header.it-header-wrapper
-  .it-header-slim-wrapper
+  .it-header-slim-wrapper.px-0
     .container
       .row
-        .col-12
-          .it-header-slim-wrapper-content
-            = link_to t('owner_name'),
-              "//www.governo.it/",
-              target: "_blank",
-              rel: "noopener",
-              class: "navbar-brand"
+        .it-header-slim-wrapper-content
+          = link_to t('owner_name'),
+            "//www.governo.it/",
+            target: "_blank",
+            rel: "noopener",
+            class: "navbar-brand"
 
   .it-nav-wrapper
     .it-header-center-wrapper
       .container
         .row
           .col-12
-            .it-header-center-content-wrapper
+            .it-header-center-content-wrapper.px-0
               .it-brand-wrapper
                 = link_to locale_path("/")
                   = image_tag "logo-repubblica-italiana.svg",
@@ -49,38 +48,37 @@ header.it-header-wrapper
     .it-header-navbar-wrapper
       .container
         .row
-          .col-12
-            /! start nav
-            nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
-              button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t('main_nav_label') data-target="#nav02" type="button"
-                svg.icon
-                  use xlink:href="/images/sprite.svg#it-burger"
+          /! start nav
+          nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
+            button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t('main_nav_label') data-target="#nav02" type="button"
+              svg.icon
+                use xlink:href="/images/sprite.svg#it-burger"
 
-              #nav02.navbar-collapsable style=("display: none;")
-                .overlay style=("display: none;")
-                .close-div.sr-only
-                  button.btn.close-menu type="button"
-                    span.it-close
-                      = t('close')
+            #nav02.navbar-collapsable style=("display: none;")
+              .overlay style=("display: none;")
+              .close-div.sr-only
+                button.btn.close-menu type="button"
+                  span.it-close
+                    = t('close')
 
-                .menu-wrapper
-                  ul.navbar-nav
-                    li.nav-item
-                      = active_link_to dato.minister_page.menu_label,
-                        page_path(dato.minister_page),
-                        class: "nav-link"
+              .menu-wrapper
+                ul.navbar-nav
+                  li.nav-item
+                    = active_link_to dato.minister_page.menu_label,
+                      page_path(dato.minister_page),
+                      class: "nav-link"
 
-                    li.nav-item
-                      = active_link_to dato.department_page.menu_label,
-                        page_path(dato.department_page),
-                        class: "nav-link"
+                  li.nav-item
+                    = active_link_to dato.department_page.menu_label,
+                      page_path(dato.department_page),
+                      class: "nav-link"
 
-                    li.nav-item
-                      = active_link_to dato.projects_page.menu_label,
-                        page_path(dato.projects_page),
-                        class: "nav-link"
+                  li.nav-item
+                    = active_link_to dato.projects_page.menu_label,
+                      page_path(dato.projects_page),
+                      class: "nav-link"
 
-                    li.nav-item
-                      = active_link_to dato.news_page.menu_label,
-                        page_path(dato.news_page),
-                        class: "nav-link"
+                  li.nav-item
+                    = active_link_to dato.news_page.menu_label,
+                      page_path(dato.news_page),
+                      class: "nav-link"
