@@ -11,8 +11,8 @@
 .container.py-5: .row
   .col-sm-4
     ul
-      - visible_projects_categories.each do |p|
-        li = link_to p.name, page_path(p)
+      - visible_projects_categories.each do |cat|
+        li = link_to cat.name, "#{page_path(dato.projects_page)}##{cat.slug}"
                     
   .col-sm-8
     h2.font-weight-light.font-weight-semibold = t("projects.highlights")
@@ -20,7 +20,6 @@
     - visible_projects.select{|p| p.highlight == true}.each do |prj|
       .col-sm-6
         = partial "partials/project_card", locals: {project: prj}
-
 
 - visible_projects_categories.each_with_index do |cat, i|
   .section.px-0.py-7 class=(i.even? ? "section-muted" : "")
