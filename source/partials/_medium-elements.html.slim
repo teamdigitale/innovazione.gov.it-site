@@ -1,18 +1,3 @@
-/ esempio card per gli articoli
-.section
-  .section-content
-
-    = partial "partials/card",
-      locals: {card_link: "#",
-        image_link: "images/trial_image.jpg",
-        responsive_panoramic: "img-responsive-panoramic",
-        card_date: "10 novembre 2020",
-        card_title: "Una Repubblica Digitale e inclusiva per tutti i cittadini",
-        card_subtitle: "di Luca Attias, Erika Miglietta e Guido Scorza",
-        card_text: "Nel provedimento i nuovi strumenti per agevolare la digitalizzazione dei servizi per cittadini e imprese",
-        card_tags: dato.tags}
-
-/ sezione card degli articoli su Medium
 .section
   .section-content
     h4 Gli approfondimenti su Medium
@@ -21,52 +6,17 @@
         use xlink:href="/images/sprite.svg#it-external-link"
       span.px-2 Link esterni
     .row.mt-4.mt-lg-5.mx-n4
-      .col-lg-4.px-4
-        = partial "partials/card",
-          locals: {card_link: "#",
-            image_link: "images/trial_image.jpg",
-            card_date: "10 novembre 2020",
-            card_title: "Una Repubblica Digitale e inclusiva per tutti i cittadini",
-            card_subtitle: "di Luca Attias, Erika Miglietta e Guido Scorza",
-            card_tags: dato.tags}
-
-      .col-lg-4.px-4
-        = partial "partials/card",
-          locals: {card_link: "#",
-            image_link: "images/trial_image.jpg",
-            card_title: "Un kit per portare i servizi pubblici nel cloud",
-            card_subtitle: "di Paolo de Rosa",
-            card_tags: dato.tags}
-
-      .col-lg-4.px-4
-        = partial "partials/card",
-          locals: {card_link: "#",
-            image_link: "images/trial_image.jpg",
-            card_title: "Come far diventare il tuo Comune una amministrazione virtuosa del digitale",
-            card_subtitle: "di Luca Attias, Simone Piunno e Giuseppe Virgone",
-            card_tags: dato.tags}
-
-  /--------COLLEGATO A DATO----------------------------------
-  /.section
-    .section-content
-      h4 Gli approfondimenti su Medium
-      .d-lg-none.text-secondary
-        svg.icon
-          use xlink:href="/images/sprite.svg#it-external-link"
-        span.px-2 Link esterni
-      .row.mt-4.mt-lg-5.mx-n4
-        - dato.medium_articles[0..2].map do |article|
-          .col-lg-4.px-4
-            = partial "partials/card",
-              locals: {card_link: "#",
-                image_link: "images/trial_image.jpg",
-                card_title: article.title,
-                card_subtitle: "di #{article.owners[0..2].join(', ')} e #{article.owners[-1]}}",
-                card_text: "",
-                adjust_height: "h-75",
-                adjust_margin_top: "mt-n5",
-                card_tags: article.tags}
-  /-------------------------------------------
+      - dato.medium_articles[0..2].map do |article|
+        .col-lg-4.px-4
+          - owners = article.owners.map(&:title)
+          - authors = owners.length > 1 ? "di #{owners[0..-2].join(', ')} e #{owners[-1]}" : "di #{owners[0]}"
+          = partial "partials/card",
+            locals: {card_link: "#",
+              image_link: "images/trial_image.jpg",
+              card_title: article.title,
+              card_subtitle: authors,
+              adjust_margin_top: "mt-n5",
+              card_tags: article.tags}
 
   .container.mt-2
     .row
