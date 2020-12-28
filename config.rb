@@ -228,25 +228,25 @@ dato.tap do |dato|
     proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}/index.html",
       "/templates/index_page.html",
       locals: { page: dato.minister_articles_index,
-        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owner.include?(dato.minister_page)}},
+        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.minister_page)}},
       locale: locale
 
     proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}/index.html",
       "/templates/index_page.html",
       locals: { page: dato.minister_interviews_index,
-        elements: PresentationHelper.published_interviews(dato.interviews).select{|i| i.owner.include?(dato.minister_page)}},
+        elements: PresentationHelper.published_interviews(dato.interviews).select{|i| i.owners.include?(dato.minister_page)}},
       locale: locale
 
     proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}/index.html",
       "/templates/index_page.html",
       locals: { page: dato.minister_participations_index,
-        elements: PresentationHelper.published_participations(dato.participations).select{|p| p.owner.include?(dato.minister_page)}},
+        elements: PresentationHelper.published_participations(dato.participations).select{|p| p.owners.include?(dato.minister_page)}},
       locale: locale
 
     proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}/index.html",
       "/templates/index_page.html",
       locals: { page: dato.minister_press_releases_index,
-        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owner.include?(dato.minister_page)}},
+        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owners.include?(dato.minister_page)}},
       locale: locale
 
     PresentationHelper.published_minister_subpages(dato.minister_subpages).each do |minister_subpage|
