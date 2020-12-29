@@ -1,32 +1,32 @@
-.section
-  .section-content
-    h4 Gli approfondimenti su Medium
-    .d-lg-none.text-secondary
-      svg.icon
-        use xlink:href="/images/sprite.svg#it-external-link"
-      span.px-2 Link esterni
-    .row.mt-4.mt-lg-5.mx-n4
-      - dato.medium_articles[0..2].map do |article|
-        .col-lg-4.px-4
-          - owners = article.owners.map(&:title)
-          - authors = owners.length > 1 ? "di #{owners[0..-2].join(', ')} e #{owners[-1]}" : "di #{owners[0]}"
-          = partial "partials/card",
-            locals: {card_link: "#",
-              image_link: "images/trial_image.jpg",
-              card_title: article.title,
-              card_subtitle: authors,
-              adjust_margin_top: "mt-n5",
-              card_tags: article.tags}
+h4 Gli approfondimenti su Medium
+.d-lg-none.text-secondary
+  svg.icon
+    use xlink:href="/images/sprite.svg#it-external-link"
+  span.px-2 Link esterni
+.row.mt-4.mt-lg-5.mx-n4
+  - dato.medium_articles[0..2].map do |article|
+    .col-lg-4.px-4
+      - owners = article.owners.map(&:title)
+      - authors = owners.length > 1 ? "di #{owners[0..-2].join(', ')} e #{owners[-1]}" : "di #{owners[0]}"
+      = partial "partials/card",
+        locals: {card_link: "#",
+          image: true,
+          image_link: article.image_thumbnail.url,
+          card_title: article.title,
+          card_subtitle: authors,
+          adjust_margin_top: "mt-n5",
+          tall_small_img: true,
+          card_tags: article.tags}
 
-  .container.mt-2
-    .row
-      .col-12.my-3.mt-lg-5.text-center
-        button.btn.btn-sm.btn-outline-primary.btn-icon.text-uppercase
-          = link_to "#",
-            class: "text-decoration-none align-middle"
-            .d-inline-block.pr-3
-              h6.font-weight-bold = t("medium")
-            span
-              svg.icon.icon-lg.icon-primary
-                use xlink:href="/images/sprite.svg#it-medium"
+.container.mt-2
+.row
+  .col-12.my-3.mt-lg-5.text-center
+    button.btn.btn-sm.btn-outline-primary.btn-icon.text-uppercase
+      = link_to "#",
+        class: "text-decoration-none align-middle"
+        .d-inline-block.pr-3
+          h6.font-weight-bold = t("medium")
+        span
+          svg.icon.icon-lg.icon-primary
+            use xlink:href="/images/sprite.svg#it-medium"
 
