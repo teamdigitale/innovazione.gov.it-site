@@ -26,6 +26,9 @@ it:
   view_more: Vedi di più
   home_label: Home
   permalink_label: Permalink
+  ontology:
+    arguments: Argomenti
+
   link_labels:
     forum: Forum Italia
     go_to_website: Vai al sito

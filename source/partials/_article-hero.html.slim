@@ -2,18 +2,20 @@
 .container
   header.section.border-bottom.p-5
     .section-content
-      .row
-        .col-sm-6
+      .row.mb-5
+        .col-sm-8
           h1.text-center.text-sm-left.font-weight-semibold = page.title
           p.lead.text-center.text-sm-left = page.subtitle
+          .row
+            .col-sm-4
+              = partial "partials/column-title", locals: {title: "Data"}
+              p = I18n.l(page.date_shown, format: "%d %B %Y")
 
-        .col-sm-6
+            .col-sm-4
+                = partial "partials/column-title", locals: {title: "Tempo di lettura"}
+
+        .col-sm-4.pl-5
+
           = partial "partials/article-sidebar"
       
       .row
-        .col-sm-4
-          = partial "partials/column-title", locals: {title: "Data"}
-          p = I18n.l(page.date_shown, format: "%d %B %Y")
-
-        .col-sm-4
-          = partial "partials/column-title", locals: {title: "Tempo di lettura"}
