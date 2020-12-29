@@ -7,5 +7,10 @@
 = partial "partials/page-cover",
   locals: {page: page}
 
-= partial "partials/page-blocks",
-  locals: {page: page}
+.container
+  .row
+    .col-sm-4
+
+    .col-sm-8
+      = partial "partials/page-blocks",
+        locals: {page: page}
