@@ -1,12 +1,11 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/article-hero"
+= partial "partials/article-hero",
+  locals: {page: page}
 
 = partial "partials/page-cover",
   locals: {page: page}
 
 = partial "partials/page-blocks",
   locals: {page: page}
-/ = dato.articles
-
