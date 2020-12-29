@@ -39,46 +39,8 @@
             = text
         div class="#{white_space}"
         .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-          - if card_tags.present?
-            - card_tags.each do |tag|
-              = partial "partials/chip",
-                locals: {chip_name: tag.name,
-                  text_color: "text-primary",
-                  chip_link: "#"}
-
-
-/ card_date, card_text and card_subtitle are optional, set with card_date and card_text if needed
-
-/ - date = locals.key?(:card_date) ? card_date : ""
-/ - text = locals.key?(:card_text) ? card_text : ""
-/ - subtitle = locals.key?(:card_subtitle) ? card_subtitle : ""
-
-/ for cards with longer whitespace between text and tags, set long_white_space to true
-
-/ - white_space = locals.key?(:extra_white_space) ? "my-5": ""
-
-/.card-wrapper
-  = link_to card_link,
-    class: "text-decoration-none"
-    .card.card-img.no-after.rounded.shadow
-      .img-responsive-wrapper
-        .img-responsive
-          figure.img-wrapper.h-75
-            = image_tag image_link
-      .card-body.mb-4.d-flex.flex-column.justify-content-between.mt-n5
-        .row.px-4
-          p.small.mt-n3.text-secondary
-            = date
-          h4.text-primary
-            = card_title
-          h6.text-black.mt-2
-            = subtitle
-          p.text-black.mt-2
-            = text
-        div class="#{white_space}"
-        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-          - if card_tags.present?
-            - card_tags.each do |tag|
+          - if tags.present?
+            - tags.each do |tag|
               = partial "partials/chip",
                 locals: {chip_name: tag.name,
                   text_color: "text-primary",
