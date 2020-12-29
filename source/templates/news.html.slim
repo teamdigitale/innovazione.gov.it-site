@@ -1,7 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container.px-4.pt-4.lightgrey-bg-a3
+.container.px-4.pt-5.lightgrey-bg-a3
   .row.border-top.d-none.d-lg-flex
     .col-lg-8.border-right.py-5.pr-5
       h4.mb-5
@@ -32,19 +32,18 @@
               card_date: press_release.date_shown,
               image_link: "",
               card_title: press_release.title,
-              card_text: press_release.subtitle,
-              card_tags: press_release.tags}
+              card_text: press_release.subtitle}
         .d-flex.flex-row.justify-content-center.my-4
           = link_to t("view_more"),
             page_path(dato.press_releases_index),
             class: "btn btn-primary text-white text-uppercase"
 
   .row.d-lg-none
-    h4.mb-5
+    h4.mb-3
       = t("articles_section_title")
     .d-flex.flex-column.justify-content-start
       - visible_articles[0..2].map do |article|
-        div.my-3
+        div.my-1
           = partial "partials/card",
             locals: {card_link: page_path(article)
             card_date: article.date_shown,
@@ -57,7 +56,7 @@
         = link_to t("view_more"),
           page_path(dato.articles_index),
           class: "btn btn-primary text-white text-uppercase"
-    h4.mb-5
+    h4.mt-5.mb-3
       = t("press_releases_section_title")
     .d-flex.flex-column.justify-content-start
       - dato.press_releases[0..4].map do |press_release|
@@ -67,12 +66,12 @@
             card_date: press_release.date_shown,
             image_link: "",
             card_title: press_release.title,
-            card_text: press_release.subtitle,
-            card_tags: press_release.tags}
+            card_text: press_release.subtitle}
       .d-flex.flex-row.justify-content-center.my-4
         = link_to t("view_more"),
           page_path(dato.press_releases_index),
           class: "btn btn-primary text-white text-uppercase"
 
 
-  = partial "partials/medium-elements"
+  .mt-5
+    = partial "partials/medium-elements"
