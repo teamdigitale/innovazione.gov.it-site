@@ -28,6 +28,8 @@ it:
   permalink_label: Permalink
   ontology:
     arguments: Argomenti
+  reading-time: "Tempo di lettura"
+  minutes: minuti
 
   link_labels:
     forum: Forum Italia
