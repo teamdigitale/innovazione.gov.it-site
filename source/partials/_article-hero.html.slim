@@ -1,14 +1,21 @@
+
 .container
-  .row
-    .offset-lg-1.col-lg-6.col-md-8
-      .bd-highlight
-        h2 = page.title
-        p = page.subtitle
-    .offset-lg-1.col-lg-3.col-md-4
-      = partial "partials/article-sidebar"
-  .row.mt40
-    .offset-xl-1.col-xl-2.offset-lg-1.col-lg-3.col-md-3
-      p.data-articolo
-        span Data:
-        br/
-        strong = page.date_shown
+  header.section.border-bottom.p-5
+    .section-content
+      .row
+        .col-sm-6
+          h1.text-center.text-sm-left.font-weight-semibold = page.title
+          p.lead.text-center.text-sm-left = page.subtitle
+
+        .col-sm-6
+          = partial "partials/article-sidebar"
+      
+      .row
+        .col-sm-4
+          = partial "partials/column-title", locals: {title: "Data"}
+          p.data-articolo = page.date_shown.strftime("%d %B %Y")
+          p = I18n.l(page.date_shown, format: "%d %B %Y", locale: :'it')
+          p = I18n.l(page.date_shown, format: "%d %B %Y")
+
+        .col-sm-4
+          = partial "partials/column-title", locals: {title: "Tempo di lettura"}
