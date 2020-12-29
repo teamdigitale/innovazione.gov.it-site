@@ -13,8 +13,6 @@
       .row
         .col-sm-4
           = partial "partials/column-title", locals: {title: "Data"}
-          p.data-articolo = page.date_shown.strftime("%d %B %Y")
-          p = I18n.l(page.date_shown, format: "%d %B %Y", locale: :'it')
           p = I18n.l(page.date_shown, format: "%d %B %Y")
 
         .col-sm-4
