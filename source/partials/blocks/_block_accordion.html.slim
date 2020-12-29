@@ -1,8 +1,8 @@
 - block.accordion_items.each_with_index do |accordion, index|
   .collapse-div role="tablist" id="accordionDiv-#{index}"
     .collapse-header id='headingA-#{index}'
-      button aria-controls="accordion-#{index}" aria-expanded="true" data-target="#accordion-#{index}" data-toggle="collapse" 
+      button aria-controls="accordion-#{index}" aria-expanded="false" data-target="#accordion-#{index}" data-toggle="collapse" 
         = accordion.accordion_item_title
-    .collapse.show aria-labelledby="headingA-#{index}" id="accordion-#{index}" data-parent="#accordionDiv-#{index}" role="tabpanel" 
+    .collapse aria-labelledby="headingA-#{index}" id="accordion-#{index}" data-parent="#accordionDiv-#{index}" role="tabpanel" 
       .collapse-body
         = accordion.accordion_item_body_text
