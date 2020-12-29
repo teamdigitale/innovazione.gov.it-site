@@ -8,21 +8,24 @@ it:
     press_release: Comunicato stampa
     project: Progetto
 
+  articles_section_title: "Gli articoli"
+  press_releases_section_title: "I comunicati stampa"
   close: Chiudi
   contacts: Contatti
   follow_us_on: Seguici su
   formatted_address: "Largo Pietro di Brazzà, 86<br>00187 Roma"
   formatted_site_name: "<strong>Ministro</strong> per l'innovazione tecnologica e la digitalizzazione"
   main_nav_label: Mostra/Nascondi la navigazione
+  medium: "Vai su Medium"
+  medium_articles: "Gli approfondimenti su Medium"
+  ministry_secretariat: Segreteria del Ministro
+  media_comunication: Media e comunicazione
   owner_name: Governo Italiano
   other_links: Altri siti web
   search: Cerca
   state_name: Repubblica Italiana
   tags_title: "Gli argomenti dell'innovazione"
   transparency: Trasparenza
-  medium: "Vai su Medium"
-  ministry_secretariat: Segreteria del Ministro
-  media_comunication: Media e comunicazione
   view_more: Vedi di più
   home_label: Home
   permalink_label: Permalink
