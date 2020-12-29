@@ -1,12 +1,12 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container.px-4.my-4.lightgrey-bg-a3
-  .row.border-top
+.container.px-4.pt-4.lightgrey-bg-a3
+  .row.border-top.d-none.d-lg-flex
     .col-lg-8.border-right.py-5.pr-5
-      h4.mb-5 Gli articoli
+      h4.mb-5
+        = t("articles_section_title")
       .d-flex.flex-column.justify-content-start
-
         - visible_articles[0..2].map do |article|
           div.my-3
             = partial "partials/card",
@@ -17,11 +17,15 @@
               card_text: article.subtitle,
               card_tags: article.tags}
 
+        .d-flex.flex-row.justify-content-center.my-4
+          = link_to t("view_more"),
+            page_path(dato.articles_index),
+            class: "btn btn-primary text-white text-uppercase"
     .col-lg-4.pl-4.py-5
-      h4.mb-5 I comunicati stampa
+      h4.mb-5
+        = t("press_releases_section_title")
       .d-flex.flex-column.justify-content-start
-
-        - dato.press_releases[0..2].map do |press_release|
+        - dato.press_releases[0..4].map do |press_release|
           div.my-3
             = partial "partials/card",
               locals: {card_link: press_release.slug,
@@ -30,5 +34,45 @@
               card_title: press_release.title,
               card_text: press_release.subtitle,
               card_tags: press_release.tags}
+        .d-flex.flex-row.justify-content-center.my-4
+          = link_to t("view_more"),
+            page_path(dato.press_releases_index),
+            class: "btn btn-primary text-white text-uppercase"
+
+  .row.d-lg-none
+    h4.mb-5
+      = t("articles_section_title")
+    .d-flex.flex-column.justify-content-start
+      - visible_articles[0..2].map do |article|
+        div.my-3
+          = partial "partials/card",
+            locals: {card_link: page_path(article)
+            card_date: article.date_shown,
+            image_link: article.image_cover ? article.image_cover.url : "",
+            card_title: article.title,
+            card_text: article.subtitle,
+            card_tags: article.tags}
+
+      .d-flex.flex-row.justify-content-center.my-4
+        = link_to t("view_more"),
+          page_path(dato.articles_index),
+          class: "btn btn-primary text-white text-uppercase"
+    h4.mb-5
+      = t("press_releases_section_title")
+    .d-flex.flex-column.justify-content-start
+      - dato.press_releases[0..4].map do |press_release|
+        div.my-3
+          = partial "partials/card",
+            locals: {card_link: press_release.slug,
+            card_date: press_release.date_shown,
+            image_link: "",
+            card_title: press_release.title,
+            card_text: press_release.subtitle,
+            card_tags: press_release.tags}
+      .d-flex.flex-row.justify-content-center.my-4
+        = link_to t("view_more"),
+          page_path(dato.press_releases_index),
+          class: "btn btn-primary text-white text-uppercase"
+
 
   = partial "partials/medium-elements"
