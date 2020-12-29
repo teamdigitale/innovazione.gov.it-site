@@ -1,2 +1,6 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+ul
+  - visible_articles.each do |article|
+   li = link_to article.title, page_path(article)
