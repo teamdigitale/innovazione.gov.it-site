@@ -19,7 +19,12 @@ main.container.my-5
   p <code>partials/headers/header-one-column</code>: il partial prevede tre parametri <code>title, subtitle, subpages</code> che dovrebbero esser presenti in tutte le index
 
 
+= partial "partials/doc/title", locals: {title: "Texts"}
 
+= partial "partials/doc/section", locals: {title: "Titoli sezioni colonne"} do
+  = partial "partials/column-title", locals: {title: "Approfondisci"}
+  = partial "partials/column-title", locals: {title: "Data"}
+  = partial "partials/column-title", locals: {title: "Tempo di lettura"}
 
 
 = partial "partials/doc/title", locals: {title: "Cards"}
