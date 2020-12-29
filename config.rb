@@ -10,6 +10,7 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 
 set :url_root, ENV.fetch("BASE_URL")
+set :markdown_engine, :redcarpet
 
 ignore "/templates/*"
 
@@ -114,6 +115,12 @@ end
 helpers do
   include PathHelpers
   include ImageHelpers
+
+  def markdown(content)
+    return '' if content.blank?
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, autolink: true, space_after_headers: true)
+    markdown.render(content)
+  end
 
   def visible_announcements
     PresentationHelper.published_announcements(dato.announcements)
