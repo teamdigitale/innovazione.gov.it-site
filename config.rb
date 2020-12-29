@@ -122,6 +122,10 @@ helpers do
     markdown.render(content)
   end
 
+  def article_reading_time(content)
+    content.inject(0){|sum, block| sum + block.text.reading_time.to_i }
+  end
+
   def visible_announcements
     PresentationHelper.published_announcements(dato.announcements)
   end
