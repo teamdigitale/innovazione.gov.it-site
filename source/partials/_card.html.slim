@@ -30,7 +30,8 @@
       .card-body class="#{longer_card_body}"
         div class="#{longer_text_box}"
           p.text-secondary class="#{date_style}"
-            = date
+            = partial "partials/formatted-date", locals: {date: date}
+
           h4.text-primary class="#{title_style}"
             = card_title
           h6.text-black.mt-2
