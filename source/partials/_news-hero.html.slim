@@ -1,0 +1,24 @@
+.container
+  header.section.border-bottom.p-5
+    .section-content
+      .row.mb-5
+        .col-12
+          h1.text-center.text-sm-left.font-weight-semibold = page.title
+          p.lead.text-center.text-sm-left = page.subtitle
+      .row
+        .col-4
+          = partial "partials/column-title", locals: {title: "Approfondisci"}
+          p = "Link to ufficio stampa"
+
+        .col-8
+          = partial "partials/column-title", locals: {title: "Argomenti in evidenza"}
+
+          .my-4
+            - dato.tags[0..9].each do |tag|
+              = partial "partials/chip",
+                locals: {chip_name: tag.name,
+                  text_color: "text-primary",
+                  chip_size: "chip-lg",
+                  chip_link: "#"}
+
+      .row

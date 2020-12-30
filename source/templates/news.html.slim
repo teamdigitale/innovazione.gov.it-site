@@ -1,7 +1,13 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container.px-4.pt-5.lightgrey-bg-a3
+= partial "partials/breadcrumb",
+  locals: {page: dato.news_page}
+
+= partial "partials/news-hero",
+  locals: {page: page}
+
+.container.px-4.pt-5
   .row.mid-border-lg-top.d-lg-flex
     .col-lg-8.mid-border-lg-right.py-lg-5.pr-lg-5
       h4.mg-3.mb-lg-5
@@ -11,7 +17,7 @@
           div.my-1.my-lg-3
             = partial "partials/card",
               locals: {card_link: page_path(article),
-              card_date: article.date_shown,
+              card_date: I18n.l(article.date_shown, format: "%d %B %Y"),
               image_link: article.image_cover ? article.image_cover.url : "",
               card_title: article.title,
               card_text: article.subtitle,
@@ -25,11 +31,11 @@
       h4.mt-5.mb-3.mt-lg-0.mb-lg-5
         = t("press_releases_section_title")
       .d-flex.flex-column.justify-content-start
-        - dato.press_releases[0..4].map do |press_release|
+        - visible_press_releases[0..4].map do |press_release|
           div.my-1.my-lg-3
             = partial "partials/card",
               locals: {card_link: press_release.slug,
-              card_date: press_release.date_shown,
+              card_date: I18n.l(press_release.date_shown, format: "%d %B %Y"),
               image_link: "",
               card_title: press_release.title,
               card_text: press_release.subtitle}
