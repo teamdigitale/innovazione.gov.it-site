@@ -45,7 +45,7 @@
       - visible_articles[0..2].map do |article|
         div.my-1
           = partial "partials/card",
-            locals: {card_link: page_path(article)
+            locals: {card_link: page_path(article),
             card_date: article.date_shown,
             image_link: article.image_cover ? article.image_cover.url : "",
             card_title: article.title,
@@ -56,6 +56,7 @@
         = link_to t("view_more"),
           page_path(dato.articles_index),
           class: "btn btn-primary text-white text-uppercase"
+
     h4.mt-5.mb-3
       = t("press_releases_section_title")
     .d-flex.flex-column.justify-content-start
