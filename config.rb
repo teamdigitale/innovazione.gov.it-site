@@ -2,6 +2,7 @@ require "dotenv"
 
 require "lib/path_helpers"
 require "lib/image_helpers"
+require "lib/text_helpers"
 
 Dotenv.load
 
@@ -115,16 +116,7 @@ end
 helpers do
   include PathHelpers
   include ImageHelpers
-
-  def markdown(content)
-    return '' if content.blank?
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, autolink: true, space_after_headers: true)
-    markdown.render(content)
-  end
-
-  def article_reading_time(content)
-    content.inject(0){|sum, block| sum + block.text.reading_time.to_i }
-  end
+  include TextHelpers
 
   def visible_announcements
     PresentationHelper.published_announcements(dato.announcements)

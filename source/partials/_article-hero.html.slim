@@ -14,7 +14,7 @@
                 = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
 
                 .post__reading-time
-                  => article_reading_time(page.content_blocks.select{|block| block.item_type.api_key == "body_text" })
+                  => article_reading_time(page)
                   = I18n.t("minutes")
 
         .col-sm-4.pl-5
