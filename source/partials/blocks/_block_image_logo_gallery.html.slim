@@ -1,1 +1,8 @@
-= "Image logo gallery block"
+.swiper-container
+  .swiper-wrapper
+    - block.images_logo.each do |image|
+      .swiper-slide
+        = image_tag image.file.width(860).format('pjpg').to_url, title: ""
+  .swiper-pagination
+  .swiper-button-prev
+  .swiper-button-next

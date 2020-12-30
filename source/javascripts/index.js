@@ -1,6 +1,39 @@
-//import Swiper from "swiper/bundle";
+import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
 import "lazysizes";
+
+if ($('.swiper-container').length > 0) { //some-slider-wrap-in
+  let swiperInstances = [];
+  $(".swiper-container").each(function(index, element){ //some-slider-wrap-in
+      const $this = $(this);
+      $this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
+      $this.parent().find(".swiper-pagination").addClass("pagination-" + index);
+      $this.parent().find(".swiper-button-prev").addClass("prev-" + index); //prev must be unique (ex: some-slider-prev)
+      $this.parent().find(".swiper-button-next").addClass("next-" + index); //next must be unique (ex: some-slider-next)
+      swiperInstances[index] = new Swiper(".instance-" + index, { //instance need to be unique (ex: some-slider)
+          // your settings ...
+          navigation: {
+              prevEl: ".prev-" + index,  //prev must be unique (ex: some-slider-prev)
+              nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
+          },
+          pagination: {
+              el: '.pagination-' + index,
+              type: 'bullets',
+              clickable: true
+          },
+      });
+  });
+
+  // Now you can call the update on a specific instance in the "swiperInstances" object
+  // e.g.
+  swiperInstances[3].update();
+  //or all of them
+  setTimeout(function () {
+      for (const slider of swiperInstances) {
+          slider.update();
+      }
+  }, 50);
+}
