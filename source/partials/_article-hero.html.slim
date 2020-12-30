@@ -8,7 +8,7 @@
           .row
             .col-sm-4
               = partial "partials/column-title", locals: {title: "Data"}
-              p = I18n.l(page.date_shown, format: "%d %B %Y")
+              = partial "partials/formatted-date", locals: {date: page.date_shown}
 
             .col-sm-4
                 = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
