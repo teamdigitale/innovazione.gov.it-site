@@ -5,7 +5,7 @@
       div.my-1.my-lg-3
         = partial "partials/card",
           locals: {card_link: page_path(article),
-          card_date: I18n.l(article.date_shown, format: "%d %B %Y"),
+          card_date: article.date_shown,
           image_link: article.image_cover ? article.image_cover.url : "",
           card_title: article.title,
           card_text: article.subtitle,
