@@ -21,6 +21,11 @@ main.container.my-5
 
 = partial "partials/doc/title", locals: {title: "Texts"}
 
+= partial "partials/doc/section", locals: {title: "Data formattata"} do
+  = partial "partials/formatted-date", locals: {date: Time.now}
+  p <code>partials/formatted-date</code>: prevede un parametro con un oggetto data valido e ritorna il fomrmato DD mese YYYY con il mese tradotto
+
+
 = partial "partials/doc/section", locals: {title: "Titoli sezioni colonne"} do
   = partial "partials/column-title", locals: {title: "Approfondisci"}
   = partial "partials/column-title", locals: {title: "Data"}
