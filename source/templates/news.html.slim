@@ -12,18 +12,39 @@
   .container.px-4.lightgrey-bg-c1
     .row.mid-border-lg-top.d-lg-flex
       .col-lg-8.mid-border-lg-right.py-lg-5.pr-lg-5
-        = partial "partials/article-list",
-          locals: {title: t("press_releases_section_title"),
-          articles: visible_articles,
-          btn_text: t("view_more"),
-          index_link: dato.articles_index}
+        h4.mb-4.mb-lg-5
+          = t("articles_section_title")
+        .d-flex.flex-column.justify-content-start
+          - visible_articles.each do |article|
+            div.my-1.my-lg-3
+            = partial "partials/card",
+              locals: {card_link: page_path(article),
+              card_date: article.date_shown,
+              image_link: article.image_cover.present? ? article.image_cover.url : '',
+              card_title: article.title,
+              card_text: article.subtitle,
+              card_tags: article.tags}
+          .d-flex.flex-row.justify-content-center.my-4
+            = link_to t("view_more"),
+              page_path(dato.articles_index),
+              class: "btn btn-primary text-white text-uppercase"
 
       .col-lg-4.pl-lg-4.py-lg-5.mt-5.mb-3.my-lg-0.
-        = partial "partials/article-list",
-          locals: {title: t("articles_section_title"),
-          articles: visible_press_releases,
-          btn_text: t("view_more"),
-          index_link: dato.press_releases_index}
+        h4.mb-4.mb-lg-5
+          = t("press_releases_section_title")
+        .d-flex.flex-column.justify-content-start
+          - visible_press_releases.map do |article|
+            div.my-1.my-lg-3
+            = partial "partials/card",
+              locals: {card_link: page_path(article),
+              card_date: article.date_shown,
+              card_title: article.title,
+              card_text: article.subtitle,
+              image_link: ''}
+          .d-flex.flex-row.justify-content-center.my-4
+            = link_to t("view_more"),
+              page_path(dato.press_releases_index),
+              class: "btn btn-primary text-white text-uppercase"
 
     .py-5
       = partial "partials/medium-elements"
