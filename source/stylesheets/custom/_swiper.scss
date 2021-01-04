@@ -1,0 +1,38 @@
+.swiper-container {
+  height: 400px;
+  z-index: 3;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.swiper-pagination {
+  margin-top: 10px;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  height: 25px;
+  margin-right: 20px;
+  width: 25px;
+
+  &:last-child {
+    margin-right: none;
+  }
+}

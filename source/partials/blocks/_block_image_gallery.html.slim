@@ -1,8 +1,9 @@
-.swiper-container
-  .swiper-wrapper
-    - block.images.each do |image|
-      .swiper-slide
-        = image_tag image.file.width(860).format('pjpg').to_url, title: ""
+.swiper
+  .swiper-container
+    .swiper-wrapper
+      - block.images.each do |image|
+        .swiper-slide
+          = image_tag image.file.width(860).format('pjpg').to_url, title: "#{image.title}"
+    .swiper-button-prev
+    .swiper-button-next
   .swiper-pagination
-  .swiper-button-prev
-  .swiper-button-next
