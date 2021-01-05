@@ -25,5 +25,5 @@
           = partial "partials/column-title", locals: {title: "Allegati"}
           .row
             - page.attachments.each do |attachment|
-              .col-6
+              .col-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
