@@ -4,40 +4,26 @@ section.section
     .row.mt-lg-2.mx-n4
       - dato.attachments.each do |attachment|
         .col-md-6.mt-4.px-4
-          = link_to attachment.file.url,
-            class: "text-decoration-none"
-            .card.card-teaser.rounded.shadow.align-items-center
-              svg.icon.icon-primary
-                use xlink:href="/images/sprite.svg#it-copy"
-              .card-body
-                h5.card-title
-                  = attachment.file_title
-                h6.card-text
-                  = attachment.file_description
+          = partial "partials/card-teaser",
+            locals: {card_link: attachment.file.url,
+              svg_link: "/images/sprite.svg#it-copy",
+              title: attachment.file_title,
+              text: attachment.file_description}
 
   .section-content.mt-5.py-3
     h4 Collegamenti utili
     .row.mt-lg-2.mx-n4
       .col-md-6.mt-4.px-4
-        = link_to "#",
-          class: "text-decoration-none"
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-external-link"
-            .card-body
-              h5.card-title
-                = "Il sito web di App IO"
-              h6.card-text
-                = "Description"
+        = partial "partials/card-teaser",
+          locals: {card_link: "#",
+            svg_link: "/images/sprite.svg#it-external-link",
+            title: "Il sito web di App IO",
+            text: "Description"}
+
       .col-md-6.mt-4.px-4
-        = link_to "#",
-          class: "text-decoration-none"
-          .card.card-teaser.rounded.shadow.align-items-center
-            svg.icon.icon-primary
-              use xlink:href="/images/sprite.svg#it-link"
-            .card-body
-              h5.card-title
-                = "Link interno"
-              h6.card-text
-                = "Description"
+        = partial "partials/card-teaser",
+          locals: {card_link: "#",
+            svg_link: "/images/sprite.svg#it-link",
+            title: "Link esterno",
+            text: "Description"}
 
