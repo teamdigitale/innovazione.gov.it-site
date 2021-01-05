@@ -27,7 +27,10 @@
             - page.attachments.each do |attachment|
               .col-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
-
+        
+      - if page.credits.present?
+        = partial "partials/credits", locals: {credits: page.credits}
+              
   .row.mid-border-lg-top
     - if page.related_items.count > 0
       .col-12.col-lg-8.mt-5
