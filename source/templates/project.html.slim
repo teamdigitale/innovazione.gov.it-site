@@ -46,6 +46,9 @@
       = partial "partials/page-blocks",
         locals: {page: page}
 
+      - if page.embed_dashboard.present?
+        .container.my-5
+          = page.embed_dashboard
 
       - if page.attachments.count > 0
         .mt-5.py-3
