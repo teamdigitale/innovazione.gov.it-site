@@ -21,6 +21,14 @@ main.container.my-5
 
 = partial "partials/doc/title", locals: {title: "Texts"}
 
+= partial "partials/doc/section", locals: {title: "Credits"} do
+
+  = partial "partials/credits", locals: {credits: visible_articles.select{|a| a.credits != ""}.first.credits}
+  p <code>partials/credits</code>: prevede un parametro credit con un oggetto credits
+
+
+
+
 = partial "partials/doc/section", locals: {title: "Data formattata"} do
   = partial "partials/formatted-date", locals: {date: Time.now}
   p <code>partials/formatted-date</code>: prevede un parametro con un oggetto data valido e ritorna il fomrmato DD mese YYYY con il mese tradotto
