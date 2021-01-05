@@ -1,0 +1,6 @@
+- credits ||= nil
+
+- if credits.present?
+.my-5
+    = partial "partials/column-title", locals: {title: "Crediti"}
+    = markdown credits
