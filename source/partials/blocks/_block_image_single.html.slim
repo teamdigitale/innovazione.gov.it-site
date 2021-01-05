@@ -1,15 +1,15 @@
-= "Image single block"
+- image = block.image ||= nil
 
-- image = block.image
-
-figure
-  = image_tag image.url(w: 10, h: 6, fit:'crop', auto:'format,compress'),
-    data: {'sizes': '100vw',
-      'src': image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress'),
-      'srcset': "#{image.url(w: 480, h: 288, fit:'crop', auto:'format,compress')} 480w,
-      #{image.url(w: 719, h: 432, fit:'crop', auto:'format,compress')} 719w,
-      #{image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress')} 1023w,
-      #{image.url(w: 666, h: 400, fit:'crop', auto:'format,compress')} 1500w"},
-    class: "lazyload",
-    alt: image.alt,
-    title: image.title
+- if image.present?
+  .my-3 class=(block.big.present? ? "" : "col-9")
+    figure.figure
+      = image_tag image.url(w: 10, h: 6, fit:'crop', auto:'format,compress'),
+        data: {'sizes': '100vw',
+          'src': image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress'),
+          'srcset': "#{image.url(w: 480, h: 288, fit:'crop', auto:'format,compress')} 480w,
+          #{image.url(w: 719, h: 432, fit:'crop', auto:'format,compress')} 719w,
+          #{image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress')} 1023w,
+          #{image.url(w: 666, h: 400, fit:'crop', auto:'format,compress')} 1500w"},
+        class: "lazyload figure-img img-fluid",
+        alt: image.alt,
+        title: image.title
