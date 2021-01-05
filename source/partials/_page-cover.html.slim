@@ -1,5 +1,5 @@
 - if page.respond_to?(:image_cover) && page.image_cover.present?
-  figure
+  figure.figure
     = image_tag page.image_cover.url(w: 10, fit: 'crop', auto: "format,compress"),
       data: {'sizes': '100vw',
         'src': page.image_cover.url(w: 1920, h: 550, fit: 'crop', auto:'format,compress'),
@@ -14,5 +14,5 @@
       title: page.image_cover.title
 
     - if page.image_cover_description.present?
-      figcaption
+      figcaption.figure-caption.my-3.text-center
         = page.image_cover_description
