@@ -27,3 +27,7 @@
             - page.attachments.each do |attachment|
               .col-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
+        
+      - if page.credits.present?
+        = partial "partials/credits", locals: {credits: page.credits}
+              
