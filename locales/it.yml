@@ -9,6 +9,7 @@ it:
     project: Progetto
 
   articles_section_title: "Gli articoli"
+  attachments: Allegati
   close: Chiudi
   contacts: Contatti
   credits: Crediti
