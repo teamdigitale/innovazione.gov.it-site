@@ -34,6 +34,15 @@
             = partial "partials/chip",
               locals: {label: tag.name, url: "#"}
 
-
+      / FIXME
       .col-sm-4.text-center
         = link_to t("link_labels.go_to_website"), "#", class: "btn btn-primary"
+
+
+.container
+  .row
+    .col-sm-4
+    .col-sm-8
+        = partial "partials/page-blocks",
+          locals: {page: page}
+
