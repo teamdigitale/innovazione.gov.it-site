@@ -31,6 +31,11 @@
       - if page.credits.present?
         = partial "partials/credits", locals: {credits: page.credits}
               
+      - if page.updated_at.present? && (page.updated_at != page.date_shown)
+        .my-5
+            = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
+            = partial "partials/formatted-date", locals: {date: page.updated_at}
+
   .row.mid-border-lg-top
     - if page.related_items.count > 0
       .col-12.col-lg-8.mt-5
