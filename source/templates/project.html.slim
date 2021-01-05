@@ -57,3 +57,15 @@
             - page.attachments.each do |attachment|
               .col-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
+
+
+      - if page.credits.present?
+        = partial "partials/credits", locals: {credits: page.credits}
+              
+      - if page.updated_at.present?
+        .my-5
+            = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
+            = partial "partials/formatted-date", locals: {date: page.updated_at}
+
+
+
