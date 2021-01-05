@@ -1,7 +1,12 @@
-- size = locals.key?(:chip_size) ? chip_size : ""
-- type = locals.key?(:chip_type) ? chip_type : ""
-- style = locals.key?(:btn_type) ? btn_type : ""
-= link_to chip_link,
-  class: "chip mr-3 mb-2 text-decoration-none #{size} #{type} #{style}"
-  span.chip-label class="#{text_color}"
-    = chip_name
+- size = chip_size ||= "chip-lg"
+- type = chip_type ||= "chip-simple"
+- style = btn_type ||= "btn-outline-primary"
+- text_color ||= "text-primary"
+- label ||= nil
+- url ||= nil
+
+- if label.present? && url.present?
+  = link_to url,
+    class: "chip mr-3 mb-2 text-decoration-none #{size} #{type} #{style}"
+    span.chip-label class="#{text_color}"
+      = label

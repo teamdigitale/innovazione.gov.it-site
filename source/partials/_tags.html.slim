@@ -11,12 +11,9 @@ section.section.section-neutral.bg-dark
         .my-4
           - featured_tags.each do |tag|
             = partial "partials/chip",
-              locals: {chip_name: tag.name,
+              locals: {label: tag.name,
                 text_color: "text-white",
-                chip_link: "#",
-                chip_size: "chip-lg",
-                chip_type: "chip-simple",
-                btn_type: "btn-outline-primary"}
+                url: "#"}
 
       .col-12.col-lg-6.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
         = link_to t("view_more"),

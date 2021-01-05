@@ -21,9 +21,7 @@
           .my-4
             - featured_tags.each do |tag|
               = partial "partials/chip",
-                locals: {chip_name: tag.name,
-                  text_color: "text-primary",
-                  chip_size: "chip-lg",
+                locals: {label: tag.name,
                   btn_type: "btn-outline-secondary",
-                  chip_link: "#"}
+                  url: "#"}
 
