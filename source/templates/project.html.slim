@@ -30,9 +30,9 @@
       .col-sm-4
         p.font-weight-semibold.text-uppercase.text-muted = t("projects.topics")
 
-        - (1..3).each do
-          span.chip.chip-simple.chip-lg.font-weight-semibold.mr-3
-            span.chip-label.text-primary Divario digitale
+        - page.tags.each do |tag|
+            = partial "partials/chip",
+              locals: {label: tag.name, url: "#"}
 
 
       .col-sm-4.text-center
