@@ -66,26 +66,14 @@ main.container.my-5
 
 = partial "partials/doc/title", locals: {title: "Tags"}
 
-= partial "partials/doc/section", locals: {title: "Tags", classes: "section-muted"} do
-  .row
-    .col-12.col-lg-6.container
-      .my-4
-        = link_to "#",
-          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-          span.chip-label
-            = "tag.name"
-        = link_to "#",
-          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-          span.chip-label
-            = "tag.name"
-        = link_to "#",
-          class: "chip chip-simple chip-lg btn-outline-primary mr-3 mb-2 text-decoration-none"
-          span.chip-label
-            = "tag.name"
-    .col-12.col-lg-6.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
-      =link_to t("view_more"),
-        "#",
-        class: "btn btn-outline-primary text-uppercase"
+= partial "partials/doc/section", locals: {title: "Chips", classes: "section-muted"} do
+
+  - visible_tags.each do |tag|
+    = partial "partials/chip",
+              locals: {label: tag.name, url: "#"}
+
+  p.mt-4 <code>chip</code> richiede 2 parametri obbligatori: <code>label</code> e <code>url</code>. Questo è lo stile default di un chip. Gli altri parametri sono opzionali e di stile e sono <code>chip_size, chip_type, btn_type, text_color</code> 
+
 
 = partial "partials/doc/title", locals: {title: "Attachments and Links"}
 
