@@ -1,7 +1,8 @@
 section.section
   .section-content
-    h4 Allegati
+    h4 = I18n.t("attachments")
     .row.mt-lg-2.mx-n4
+      / FIXME use partial
       - dato.attachments.each do |attachment|
         .col-md-6.mt-4.px-4
           = partial "partials/attachment",

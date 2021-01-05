@@ -22,7 +22,7 @@
   
       - if page.attachments.count > 0
         .mt-5.py-3
-          = partial "partials/column-title", locals: {title: "Allegati"}
+          = partial "partials/column-title", locals: {title: I18n.t("attachments")}
           .row
             - page.attachments.each do |attachment|
               .col-6.mt-3
