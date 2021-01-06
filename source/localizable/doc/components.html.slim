@@ -16,7 +16,132 @@ main.container.my-5
 = partial "partials/doc/section", locals: {title: "Header pagina a una colonna"} do
   = partial "partials/headers/header-one-column",
     locals: {title: "title", subtitle: "subtitle", subpages: nil}
+
   p <code>partials/headers/header-one-column</code>: il partial prevede tre parametri <code>title, subtitle, subpages</code> che dovrebbero esser presenti in tutte le index
+
+
+
+
+= partial "partials/doc/section", locals: {title: "Headers"} do
+  p <code>partials/headers/page-header</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
+  p Il partial si aspetta un oggetto <code>page</code> che contenga smepre almeno <code>title e description</code> e opzionalmente <code>summary</code>
+  p Il partial accetta alcuni parametru opzionali: <code>share: true</code> per mostrare il meno di condivisione social,
+  p e <code>classes: "bla bla"</code> per aggiungere classi aggiunve all'header, cambaire colore di sfondo, del testo ecc.
+  p È necessario poi passare un blocco che contenga <code>content_for [:area]</code>. Le aree dispnibili sono: <code>:aside, :col_one, :col_two, :col_three</code>. P
+  p Ogni blocco content_for può avere codice a piacimento
+
+
+= partial "partials/doc/section", locals: {title: "Header Focus"} do
+  - page = dato.minister_page
+
+  = partial "partials/page-header", locals: {page: page, classes: "bg-primary text-white"} do
+    = content_for :aside, flush: true
+      = image_tag "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreepngimages.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fcockerel-transparent-image.png&f=1&nofb=1",
+        class: "img-fluid"
+
+          
+    = content_for :col_one, flush: true
+      = partial "partials/column-title", locals: {title: t("deepen"), classes: "text-white"}
+      
+    = content_for :col_two, flush: true
+      = partial "partials/column-title", locals: {title: t("projects.topics"), classes: "text-white"}
+      = partial "partials/formatted-date", locals: {date: Time.now}
+
+
+
+= partial "partials/doc/section", locals: {title: "Header Ministro"} do
+  - page = dato.minister_page
+  = partial "partials/page-header", locals: {page: page, classes: "bg-light"} do
+    = content_for :aside, flush: true
+      - image = dato.minister_page.photo
+      .text-center
+          / FIX ME : fare partial imamgine
+          figure.figure
+            = image_tag image.url(w: 10, h: 6, fit:'crop', auto:'format,compress'),
+              data: {'sizes': '100vw',
+                'src': image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress'),
+                'srcset': "#{image.url(w: 480, h: 288, fit:'crop', auto:'format,compress')} 480w,
+                #{image.url(w: 719, h: 432, fit:'crop', auto:'format,compress')} 719w,
+                #{image.url(w: 1000, h: 600, fit:'crop', auto:'format,compress')} 1023w,
+                #{image.url(w: 666, h: 400, fit:'crop', auto:'format,compress')} 1500w"},
+              class: "lazyload figure-img img-fluid",
+              alt: image.alt,
+              title: image.title
+          
+    = content_for :col_one, flush: true
+      = partial "partials/column-title", locals: {title: t("deepen")}
+      
+    = content_for :col_two, flush: true
+      = partial "partials/column-title", locals: {title: t("projects.topics")}
+
+
+
+
+
+= partial "partials/doc/section", locals: {title: "Header progetto"} do
+  
+  - page = visible_projects.first
+  = partial "partials/page-header", locals: {page: page} do
+    = content_for :aside, flush: true
+      .text-center
+        .img-responsive-wrapper
+          figure.figure.img-wrapper
+            = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
+                alt: "Logo #{page.image_project_logo}",
+                class: "figure-img img-fluid"
+          
+        / FIXME
+        - if page.link_external_project_website.present?
+          ruby:
+            link  = page.link_external_project_website
+            label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
+
+          = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
+
+    = content_for :col_one, flush: true
+      = partial "partials/column-title", locals: {title: t("projects.category")}
+      = link_to page.category.name,
+                "#{page_path(dato.projects_page)}##{page.category.slug}"
+      
+    = content_for :col_two, flush: true
+      = partial "partials/column-title", locals: {title: t("projects.topics")}
+      - page.tags.each do |tag|
+          = partial "partials/chip",
+            locals: {label: tag.name, url: "#"}
+
+
+= partial "partials/doc/section", locals: {title: "Header articolo"} do
+  - page = visible_articles.first
+  = partial "partials/page-header", locals: {page: page, share: true} do
+    
+    = content_for :aside, flush: true
+      = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+      - page.tags.each do |tag|
+        = partial "partials/chip", locals: {label: tag.name, url: "#"}
+    
+    = content_for :col_one, flush: true
+      = partial "partials/column-title", locals: {title: "Data"}
+      = partial "partials/formatted-date", locals: {date: page.date_shown}
+
+    = content_for :col_two, flush: true
+      = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
+      .post__reading-time
+        => article_reading_time(page)
+        = I18n.t("minutes")
+
+    = content_for :col_three, flush: true
+     p 
+
+
+
+
+
+
+
+
+
+
+
 
 
 = partial "partials/doc/title", locals: {title: "Texts"}
