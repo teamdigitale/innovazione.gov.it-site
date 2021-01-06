@@ -1,10 +1,11 @@
 - page ||= nil
 - share ||= nil
+- classes ||= ""
 
 - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
 
 - if page.present?
-  header.bgcolor-primary
+  header class=(classes)
     .container
       .row.align-items-center
         .col-sm-8
@@ -16,22 +17,23 @@
       .section.border-bottom.p-5
         .section-content
           .row
-            .col-sm-7
+            .col-sm-6
               h1.text-center.text-sm-left.font-weight-semibold.mb-5 = page.title
               p.lead.text-center.text-sm-left = page.subtitle
               - if summary.present?
                 p.text-center.text-sm-left = markdown summary
 
             - yield
-            .col-sm-4
-              = yield_content :aside
+            .col-sm-6
+              .pl-5
+                  = yield_content :aside if content_for?(:aside)
     
           .row.mt-3
             .col-sm-4
-              = yield_content :col_one
+              = yield_content :col_one if content_for?(:col_one)
             
             .col-sm-4
-              = yield_content :col_two
+              = yield_content :col_two if content_for?(:col_two)
             
             .col-sm-4
-              = yield_content :col_three
+              = yield_content :col_three if content_for?(:col_three)
