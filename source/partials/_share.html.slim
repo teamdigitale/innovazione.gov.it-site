@@ -15,12 +15,3 @@
         li
           a.list-item href="#" 
             span Azione 3
-
-
-- if page.tags.count > 0
-  .mt-5
-    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
-
-    - page.tags.each do |tag|
-      span.chip.chip-simple.chip-lg.font-weight-semibold.mr-3
-        span.chip-label.text-primary = tag.name
