@@ -7,9 +7,9 @@
         .card-img.no-after
           .container-fluid.mb-4: .row
             .col-6
-              figure
+              figure.figure
                 = image_tag project.image_project_logo.url(h: 250, auto:'format,compress'),
-                  class: "img-fluid",
+                  class: "figure-img img-fluid",
                   alt: project.image_project_logo.alt,
                   title: project.image_project_logo.title
 
@@ -18,9 +18,8 @@
 
         p.card-text.text-sans-serif = project.subtitle
 
-        ul.list-inline
-          li.list-inline-item
-            = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
-
-          li.list-inline-item
-            = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
+        - if project.links_external_project_card.each.present?
+          ul.list-inline
+            - project.links_external_project_card.each do |link|
+              li.list-inline-item
+                = partial "partials/external-link", locals: {link: link}

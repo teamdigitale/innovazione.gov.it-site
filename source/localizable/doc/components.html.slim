@@ -52,14 +52,14 @@ main.container.my-5
 
 
 
-= partial "partials/doc/section", locals: {title: "Link multipli nelle card"} do
+= partial "partials/doc/section", locals: {title: "Link esterni nelle card"} do
   ul.list-inline
     li.list-inline-item
-      = partial "partials/card-link", locals: {label: t("link_labels.forum"), url: "#"}
+      = partial "partials/external-link", locals: {label: t("link_labels.forum"), url: "#"}
     li.list-inline-item
-      = partial "partials/card-link", locals: {label: t("link_labels.website"), url: "#"}
+      = partial "partials/external-link", locals: {link: dato.link_externals.first}
 
-    p <code>card-link</code> richiede 2 parametri obbligatori: <code>label</code> per il testo che si vuole visualizzare, e <code>url</code> per il link a cui deve puntare. Un terzo parametro <code>icon</code> è opzionale e richiede il nome dell'icona; il defualt è il link esterno.
+    p <code>external-link</code> richiede un oggetto di tipo  <code>link_external</code>. Se l'oggetto non ha una label CTA, il defautl è nello yaml "Sito web".
 
 
 
@@ -68,7 +68,7 @@ main.container.my-5
 
 = partial "partials/doc/section", locals: {title: "Chips", classes: "section-muted"} do
 
-  - visible_tags.each do |tag|
+  - visible_tags.take(6).each do |tag|
     = partial "partials/chip",
               locals: {label: tag.name, url: "#"}
 
@@ -81,7 +81,7 @@ main.container.my-5
   .section-content
     h4 = "Sezione Allegati"
     .row.mt-lg-2.mx-n4
-      - dato.attachments.each do |attachment|
+      - dato.attachments.take(6).each do |attachment|
         .col-md-6.mt-4.px-4
           = partial "partials/attachment", locals: {attachment: attachment}
 
