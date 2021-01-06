@@ -18,14 +18,6 @@
     - page.tags.each do |tag|
       = partial "partials/chip", locals: {label: tag.name, url: "#"}
 
-= partial "partials/breadcrumb",
-  locals: {page: page}
-
-
-
-= partial "partials/article-hero",
-  locals: {page: page}
-
 = partial "partials/page-cover",
   locals: {page: page}
 
