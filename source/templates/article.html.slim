@@ -27,3 +27,15 @@
             - page.attachments.each do |attachment|
               .col-6
                 = partial "partials/attachment", locals: {attachment: attachment}
+
+  .row.mid-border-lg-top
+    - if page.related_items.count > 0
+      .col-12.col-lg-8.mt-5
+        = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
+  .col-12.col-lg-8
+    - page.related_items.each do |item|
+      = partial "partials/card-related-items",
+        locals: {card_link: page_path(item),
+        title: item.title,
+        text: item.subtitle,
+        svg_link: ''}
