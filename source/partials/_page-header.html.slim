@@ -1,0 +1,37 @@
+- page ||= nil
+- share ||= nil
+
+- summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
+
+- if page.present?
+  header.bgcolor-primary
+    .container
+      .row.align-items-center
+        .col-sm-8
+          = partial "partials/breadcrumb", locals: {page: page}
+        - if share.present?
+          .col-sm-4
+            = partial "partials/share"
+
+      .section.border-bottom.p-5
+        .section-content
+          .row
+            .col-sm-7
+              h1.text-center.text-sm-left.font-weight-semibold.mb-5 = page.title
+              p.lead.text-center.text-sm-left = page.subtitle
+              - if summary.present?
+                p.text-center.text-sm-left = markdown summary
+
+            - yield
+            .col-sm-4
+              = yield_content :aside
+    
+          .row.mt-3
+            .col-sm-4
+              = yield_content :col_one
+            
+            .col-sm-4
+              = yield_content :col_two
+            
+            .col-sm-4
+              = yield_content :col_three
