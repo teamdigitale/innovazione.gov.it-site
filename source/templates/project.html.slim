@@ -1,6 +1,28 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+= partial "partials/page-header", locals: {page: page} do
+
+  = content_for :aside
+    .text-center
+      .img-responsive-wrapper
+        figure.figure.img-wrapper
+          = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
+              alt: "Logo #{page.image_project_logo}",
+              class: "figure-img img-fluid"
+
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: t("projects.category")}
+    = link_to page.category.name,
+              "#{page_path(dato.projects_page)}##{page.category.slug}"
+    
+  = content_for :col_two
+    = partial "partials/column-title", locals: {title: t("projects.topics")}
+    - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: "#"}
+
+
 = partial "partials/breadcrumb",
   locals: {page: page}
 
