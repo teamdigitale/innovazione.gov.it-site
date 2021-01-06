@@ -13,6 +13,7 @@ it:
   close: Chiudi
   contacts: Contatti
   credits: Crediti
+  deepen: Approfondisci
   follow_us_on: Seguici su
   formatted_address: "Largo Pietro di Brazzà, 86<br>00187 Roma"
   formatted_site_name: "<strong>Ministro</strong> per l'innovazione tecnologica e la digitalizzazione"
@@ -44,7 +45,6 @@ it:
     website: Sito web
   projects:
     highlights: In evidenza
-    deepen: Approfondisci
     category: Categoria
     topics: Argomenti
   time:

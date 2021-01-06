@@ -13,7 +13,7 @@
           - if subpages.present? && subpages.count > 0
             .link-list-wrapper.text-center.text-sm-left.mt-5
               ul.link-list.text-center.text-sm-left
-                li: h3.text-uppercase.p-0 = t("projects.deepen")
+                li: h3.text-uppercase.p-0 = t("deepen")
                 - subpages.each do |sub|
                   li
                     = link_to page_path(sub), class: "p-0 list-item" do
