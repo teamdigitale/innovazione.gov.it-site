@@ -1,0 +1,15 @@
+/ card_date is optional
+- date = locals.key?(:card_date) ? card_date : ""
+
+/.card-wrapper.card-teaser.card-space
+= link_to card_link,
+  class: "text-decoration-none"
+  .card.w-100
+    .card-body
+      /.top-icon
+        .icon
+          use xlink:href="#{svg_link}"
+      h4.text-primary
+        = title
+      p.text-secondary
+        = text
