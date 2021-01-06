@@ -43,8 +43,4 @@
   .col-12.col-lg-8
     - page.related_items.each do |item|
       = partial "partials/card-related-items",
-        locals: {card_link: page_path(item),
-        title: item.title,
-        card_date: "20 Novembre 2020",
-        text: item.subtitle,
-        svg_link: ''}
+        locals: {item: item}
