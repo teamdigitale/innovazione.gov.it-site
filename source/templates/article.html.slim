@@ -36,11 +36,10 @@
             = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
             = partial "partials/formatted-date", locals: {date: page.updated_at}
 
-  .row.mid-border-lg-top
+  .row.mid-border-lg-top.pt-5
     - if page.related_items.count > 0
-      .col-12.col-lg-8.mt-5
+      .col-12.col-lg-8
         = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
-  .col-12.col-lg-8
-    - page.related_items.each do |item|
-      = partial "partials/card-related-items",
-        locals: {item: item}
+        - page.related_items.each do |item|
+          = partial "partials/card-related-items",
+            locals: {item: item}
