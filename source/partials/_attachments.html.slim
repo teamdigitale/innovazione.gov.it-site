@@ -4,11 +4,8 @@ section.section
     .row.mt-lg-2.mx-n4
       - dato.attachments.each do |attachment|
         .col-md-6.mt-4.px-4
-          = partial "partials/card-teaser",
-            locals: {card_link: attachment.file.url,
-              svg_link: "/images/sprite.svg#it-copy",
-              title: attachment.file_title,
-              text: attachment.file_description}
+          = partial "partials/attachment",
+            locals: {attachment: attachment}
 
   .section-content.mt-5.py-3
     h4 Collegamenti utili
