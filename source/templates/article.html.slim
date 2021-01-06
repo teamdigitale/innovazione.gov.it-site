@@ -19,7 +19,7 @@
     .col-sm-8
       = partial "partials/page-blocks",
         locals: {page: page}
-  
+
       - if page.attachments.count > 0
         .mt-5.py-3
           = partial "partials/column-title", locals: {title: I18n.t("attachments")}
@@ -27,10 +27,10 @@
             - page.attachments.each do |attachment|
               .col-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
-        
+
       - if page.credits.present?
         = partial "partials/credits", locals: {credits: page.credits}
-              
+
       - if page.updated_at.present? && (page.updated_at != page.date_shown)
         .my-5
             = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
@@ -45,5 +45,6 @@
       = partial "partials/card-related-items",
         locals: {card_link: page_path(item),
         title: item.title,
+        card_date: "20 Novembre 2020",
         text: item.subtitle,
         svg_link: ''}
