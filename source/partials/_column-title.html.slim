@@ -1,2 +1,4 @@
+- classes ||= "text-muted"
+
 - if title.present?
-  p.font-weight-semibold.text-uppercase.text-muted = title
+  p.font-weight-semibold.text-uppercase class=(classes) = title
