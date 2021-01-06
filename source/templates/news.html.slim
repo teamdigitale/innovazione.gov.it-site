@@ -12,8 +12,8 @@
   .container.px-4.lightgrey-bg-c1
     .row.mid-border-lg-top.d-lg-flex
       .col-lg-8.mid-border-lg-right.py-lg-5.pr-lg-5
-        h4.mb-4.mb-lg-5
-          = t("articles_section_title")
+        .mb-4.mb-lg-5
+          = partial "partials/section-title", locals: {title: t("articles_section_title")}
         .d-flex.flex-column.justify-content-start
           - visible_articles.each do |article|
             div.my-1.my-lg-3
@@ -30,8 +30,8 @@
               class: "btn btn-primary text-white text-uppercase"
 
       .col-lg-4.pl-lg-4.py-lg-5.mt-5.mb-3.my-lg-0.
-        h4.mb-4.mb-lg-5
-          = t("press_releases_section_title")
+        .mb-4.mb-lg-5
+          = partial "partials/section-title", locals: {title: t("press_releases_section_title")}
         .d-flex.flex-column.justify-content-start
           - visible_press_releases.map do |article|
             div.my-1.my-lg-3

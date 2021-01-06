@@ -1,6 +1,6 @@
 .d-lg-flex
   .mr-lg-auto.p-2
-    h4 = t("medium_articles")
+    = partial "partials/section-title", locals: {title: t("medium_articles")}
   .p-2
     svg.icon
       use xlink:href="/images/sprite.svg#it-external-link"

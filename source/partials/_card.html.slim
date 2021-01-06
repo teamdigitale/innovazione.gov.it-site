@@ -43,5 +43,9 @@
           - if tags.present?
             - tags.each do |tag|
               = partial "partials/chip",
-                locals: {label: tag.name, url: "#", chip_size: "chip-sm"}
+                locals: {label: tag.name,
+                url: "#",
+                chip_type: "",
+                btn_type: "",
+                chip_size: ""}
 

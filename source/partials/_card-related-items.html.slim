@@ -1,0 +1,20 @@
+- item ||= nil
+
+- if item.present?
+  - date = ""
+  - if item.item_type.api_key == "article" || item.item_type.api_key == "press_release"
+    - date = item.date_shown.present? ? I18n.l(item.date_shown, format: "%d, %B, %Y") : ''
+
+  = link_to page_path(item),
+    class: "text-decoration-none"
+    .card.w-100
+      .card-body
+        .category.py-2
+          h6.pr-2.d-inline.text-uppercase.font-weight-semibold.text-muted
+            = item.item_type.api_key
+          span.px-2.text-secondary
+            p.d-inline = date
+        h4.text-primary
+          = item.title
+        p.text-secondary
+          = item.subtitle
