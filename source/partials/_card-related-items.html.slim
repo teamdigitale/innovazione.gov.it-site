@@ -1,7 +1,6 @@
 / card_date is optional
-- date = locals.key?(:card_date) ? card_date : ""
+- date = card_date ||= ""
 
-/.card-wrapper.card-teaser.card-space
 = link_to card_link,
   class: "text-decoration-none"
   .card.w-100
@@ -9,6 +8,11 @@
       /.top-icon
         .icon
           use xlink:href="#{svg_link}"
+      .category.py-2
+        h6.pr-2.d-inline.text-uppercase.font-weight-semibold.text-muted
+          = "article"
+        span.px-2.text-secondary
+          p.d-inline = date
       h4.text-primary
         = title
       p.text-secondary
