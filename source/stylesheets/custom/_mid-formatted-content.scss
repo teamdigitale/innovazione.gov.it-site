@@ -1,6 +1,24 @@
 .mid-formatted-content {
+  blockquote {
     font-weight: 600;
     font-family: "Titillium Web";
     font-size: 1.3em;
+    position: relative;
+
+    &:before {
+      content: "\201C";
+      position: absolute;
+      left: 0;
+      top: -2rem;
+      color: $primary;
+      font-size: 2rem;
+      font-family: $font-family-serif;
+
+      @include media-breakpoint-up(md) {
+        top: -0.8rem;
+        left: -2rem;
+        font-size: 3rem;
+      }
+    }
   }
 }
