@@ -6,3 +6,13 @@
 - elements.each do |element|
   = partial "partials/previews/#{element.item_type.api_key}",
     locals: {element: element}
+
+/ TEMP da cancellare
+.container
+
+  h1 Elenco Articoli pubblicati
+  ul
+    - visible_articles.each do |article|
+      li
+        = link_to article.title, page_path(article)
+/ TEMP da cancellare
