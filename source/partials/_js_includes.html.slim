@@ -1,6 +1,23 @@
 = javascript_include_tag  "application"
 
+script type="text/javascript" src="https://unpkg.com/datocms-search@0.1.8/dist/datocms-search.widget.js"
+
 = yield_content :page_js
+
+javascript:
+  const searchClient = new DatoCmsSearch(
+    "#{data.config.search_token}",
+    "production"
+  );
+
+  const initSearch = () => {
+    if (searchClient === null) {
+      return null;
+    }
+    return searchClient.addWidget("#search-container", {});
+  };
+
+  initSearch();
 
 - if build?
   javascript:
