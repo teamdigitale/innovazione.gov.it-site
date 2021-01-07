@@ -1,34 +1,32 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/page-header", locals: {page: page} do
-
-  = content_for :aside
-    .text-center
-      .img-responsive-wrapper
-        figure.figure.img-wrapper
-          = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
-              alt: "Logo #{page.image_project_logo}",
-              class: "figure-img img-fluid"
-        
-      / FIXME
-      - if page.link_external_project_website.present?
-        ruby:
-          link  = page.link_external_project_website
-          label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
-
-        = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
-
+= partial "partials/page-header", locals: { page: page } do
+  
   = content_for :col_one
     = partial "partials/column-title", locals: {title: t("projects.category")}
-    = link_to page.category.name,
-              "#{page_path(dato.projects_page)}##{page.category.slug}"
-    
+    = link_to page.category.name, "#{page_path(dato.projects_page)}##{page.category.slug}"
+
   = content_for :col_two
     = partial "partials/column-title", locals: {title: t("projects.topics")}
     - page.tags.each do |tag|
         = partial "partials/chip",
           locals: {label: tag.name, url: "#"}
+
+  = content_for :aside
+      .img-responsive-wrapper
+        figure.figure.img-wrapper.w-50
+          = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
+                      alt: "Logo #{page.image_project_logo}",
+                      class: "figure-img img-fluid"
+
+      - if page.link_external_project_website.present?
+        - link  = page.link_external_project_website
+        - label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
+
+        = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
+
+
 
 
 .container
