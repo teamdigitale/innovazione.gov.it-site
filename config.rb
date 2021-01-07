@@ -179,6 +179,8 @@ helpers do
       page.menu_label
     elsif page.respond_to?(:name) && page.name.present?
       page.name
+    elsif page.respond_to?(:title) && page.title.present?
+      HTML_Truncator.truncate(page.title, 5)
     end
   end
 
