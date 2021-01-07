@@ -2,10 +2,10 @@
   .col-9
     - if block.text_title.present?
       h2 = block.text_title
-    
-    .formatted-content
+
+    .mid-formatted-content
       = markdown block.body_text
-  
+
   .col-3
     - if block.text_note.present? || block.image_little.present?
       .mid-notes.pl-3
