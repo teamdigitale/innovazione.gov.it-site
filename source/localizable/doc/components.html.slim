@@ -23,18 +23,24 @@ main.container.my-5
 
 
 = partial "partials/doc/section", locals: {title: "Headers"} do
-  p <code>partials/headers/page-header</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
-  p Il partial si aspetta un oggetto <code>page</code> che contenga smepre almeno <code>title e description</code> e opzionalmente <code>summary</code>
-  p Il partial accetta alcuni parametru opzionali: <code>share: true</code> per mostrare il meno di condivisione social,
-  p e <code>classes: "bla bla"</code> per aggiungere classi aggiunve all'header, cambaire colore di sfondo, del testo ecc.
-  p È necessario poi passare un blocco che contenga <code>content_for [:area]</code>. Le aree dispnibili sono: <code>:aside, :col_one, :col_two, :col_three</code>. P
-  p Ogni blocco content_for può avere codice a piacimento
+  | 
+    <code>partials/headers/page-header</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
+    Il partial si aspetta un oggetto <code>page</code> che contenga smepre almeno <code>title e description</code> e opzionalmente <code>summary</code>
+    Il partial accetta alcuni parametru opzionali:
+  ul
+    li <code>share: true</code> per mostrare il meno di condivisione social,
+    li <code>classes: "bla bla"</code> per aggiungere classi aggiunve all'header, cambaire colore di sfondo, del testo ecc
+    li <code>subs: true</code> per nascondere le tre colonne e mostrare il menu degli approfondimenti
+  
+  | È necessario poi passare un blocco che contenga <code>content_for [:area]</code> o che almeno finisca con un <code>do</code> lasciando il blocco vuoto.
+    Le aree dispnibili sono: <code>:aside, :col_one, :col_two, :col_three</code>.
+    Ogni blocco dentro <code>content_for</code> può avere codice a piacimento
 
 
 = partial "partials/doc/section", locals: {title: "Header Focus"} do
   - page = dato.minister_page
 
-  = partial "partials/page-header", locals: {page: page, classes: "bg-primary text-white"} do
+  = partial "partials/page-header", locals: {page: page, classes: "bg-primary text-white" } do
     = content_for :aside, flush: true
       = image_tag "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreepngimages.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fcockerel-transparent-image.png&f=1&nofb=1",
         class: "img-fluid"
@@ -51,7 +57,9 @@ main.container.my-5
 
 = partial "partials/doc/section", locals: {title: "Header Ministro"} do
   - page = dato.minister_page
+
   = partial "partials/page-header", locals: {page: page, classes: "bg-light", subs: true} do
+
     = content_for :aside, flush: true
       - image = dato.minister_page.photo
       .text-center
@@ -102,32 +110,33 @@ main.container.my-5
             locals: {label: tag.name, url: "#"}
 
 
-= partial "partials/doc/section", locals: {title: "Header articolo"} do
-  - page = visible_articles.first
-  = partial "partials/page-header", locals: {page: page, share: true} do
+- page = visible_articles.first
+= partial "partials/page-header", locals: {page: page, share: true} do
 
-    = content_for :aside, flush: true
-      = partial "partials/column-title", locals: {title: t("ontology.arguments")}
-      - page.tags.each do |tag|
-        = partial "partials/chip", locals: {label: tag.name, url: "#"}
+  = content_for :aside, flush: true
+    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+    - page.tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: "#"}
 
-    = content_for :col_one, flush: true
-      = partial "partials/column-title", locals: {title: "Data"}
-      = partial "partials/formatted-date", locals: {date: page.date_shown}
+  = content_for :col_one, flush: true
+    = partial "partials/column-title", locals: {title: "Data"}
+    = partial "partials/formatted-date", locals: {date: page.date_shown}
 
-    = content_for :col_two, flush: true
-      = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
-      .post__reading-time
-        => article_reading_time(page)
-        = I18n.t("minutes")
+  = content_for :col_two, flush: true
+    = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
+    .post__reading-time
+      => article_reading_time(page)
+      = I18n.t("minutes")
 
-    = content_for :col_three, flush: true
-     p
+  = content_for :col_three, flush: true
+    p
 
 
 = partial "partials/doc/section", locals: {title: "Header basico"} do
   - page = visible_articles.first
   = partial "partials/page-header", locals: {page: page, subs: true} do
+    = content_for :aside, flush: true
+      span
 
 
 
