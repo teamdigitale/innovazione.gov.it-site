@@ -51,7 +51,7 @@ main.container.my-5
 
 = partial "partials/doc/section", locals: {title: "Header Ministro"} do
   - page = dato.minister_page
-  = partial "partials/page-header", locals: {page: page, classes: "bg-light"} do
+  = partial "partials/page-header", locals: {page: page, classes: "bg-light", subs: true} do
     = content_for :aside, flush: true
       - image = dato.minister_page.photo
       .text-center
@@ -68,13 +68,6 @@ main.container.my-5
               alt: image.alt,
               title: image.title
 
-    = content_for :col_one, flush: true
-      = partial "partials/column-title", locals: {title: t("deepen")}
-
-    = content_for :col_two, flush: true
-      = partial "partials/column-title", locals: {title: t("projects.topics")}
-
-
 
 
 
@@ -83,20 +76,19 @@ main.container.my-5
   - page = visible_projects.first
   = partial "partials/page-header", locals: {page: page} do
     = content_for :aside, flush: true
-      .text-center
-        .img-responsive-wrapper
-          figure.figure.img-wrapper
-            = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
-                alt: "Logo #{page.image_project_logo}",
-                class: "figure-img img-fluid"
+      .img-responsive-wrapper
+        figure.figure.img-wrapper.w-50
+          = image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
+              alt: "Logo #{page.image_project_logo}",
+              class: "figure-img img-fluid"
 
-        / FIXME
-        - if page.link_external_project_website.present?
-          ruby:
-            link  = page.link_external_project_website
-            label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
+      / FIXME
+      - if page.link_external_project_website.present?
+        ruby:
+          link  = page.link_external_project_website
+          label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
 
-          = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
+        = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
 
     = content_for :col_one, flush: true
       = partial "partials/column-title", locals: {title: t("projects.category")}
@@ -133,6 +125,9 @@ main.container.my-5
      p
 
 
+= partial "partials/doc/section", locals: {title: "Header basico"} do
+  - page = visible_articles.first
+  = partial "partials/page-header", locals: {page: page, subs: true} do
 
 
 
