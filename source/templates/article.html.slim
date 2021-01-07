@@ -21,11 +21,11 @@
 = partial "partials/page-cover",
   locals: {page: page}
 
-.container
+.container.border-top
   .row
-    .col-sm-4
-
-    .col-sm-8
+    .col-sm-4.p-0
+      = partial "partials/sticky-anchor", locals: {page: page}
+    .col-sm-8.border-left
       = partial "partials/page-blocks",
         locals: {page: page}
 
