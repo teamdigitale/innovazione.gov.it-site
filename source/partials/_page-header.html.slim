@@ -1,11 +1,12 @@
 - page ||= nil
 - share ||= nil
 - classes ||= ""
+- subs ||= nil
 
 - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
 
 - if page.present?
-  header class=(classes)
+  header.border-bottom.pb-5 class=(classes)
     .container
       .row.align-items-center
         .col-sm-8
@@ -14,26 +15,43 @@
           .col-sm-4
             = partial "partials/share"
 
-      .section.border-bottom.p-5
-        .section-content
+      .row.mb-5
+        .col-12.offset-md-1
           .row
-            .col-sm-6
-              h1.text-center.text-sm-left.font-weight-semibold.mb-5 = page.title
-              p.lead.text-center.text-sm-left = page.subtitle
+            .col-sm-7.pr-5
+              h1.text-center.text-sm-left.font-weight-semibold.mb-4 = page.title
+              p.lead = page.subtitle
               - if summary.present?
                 p.text-center.text-sm-left = markdown summary
 
             - yield
-            .col-sm-6
-              .pl-5
-                  = yield_content :aside if content_for?(:aside)
-    
-          .row.mt-3
             .col-sm-4
-              = yield_content :col_one if content_for?(:col_one)
-            
-            .col-sm-4
-              = yield_content :col_two if content_for?(:col_two)
-            
-            .col-sm-4
-              = yield_content :col_three if content_for?(:col_three)
+              = yield_content :aside if content_for?(:aside)
+      
+          - if subs.nil?
+            .row.mt-3
+              - if content_for?(:col_one)
+                .col-sm-4
+                  = yield_content :col_one
+
+              - if content_for?(:col_two)
+                .col-sm-4
+                  = yield_content :col_two 
+              
+              - if content_for?(:col_three) 
+                .col-sm-4
+                  = yield_content :col_three
+          
+          - if subs.present?
+            div.mt-4
+              = partial "partials/column-title", locals: {title: t("deepen")}
+
+              ruby:
+                links = ["pippo", "pluto", "paperino", "qui", "quo", "qua", "paperoga"]
+                col_items = (links.count.to_f/2).ceil()
+              .row
+                - links.each_slice(col_items) do |group|
+                    .col-3
+                      - group.each do |item|
+                        p = link_to item, "#"
+
