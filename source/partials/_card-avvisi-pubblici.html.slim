@@ -1,0 +1,20 @@
+- announcement ||= nil
+
+- if announcement.present?
+
+  - deadline = ''
+  - if announcement.announcement_date_closing.present? && announcement.announcement_status.name == "APERTO"
+    - last_date = partial "partials/formatted-date", locals: {date: announcement.announcement_date_closing}
+    - deadline = "Scade il #{last_date}"
+
+  = link_to page_path(announcement),
+    class: "text-decoration-none"
+    .card.h-100
+      .card-body
+        .category.py-2
+          p.text-uppercase.font-weight-semibold.text-muted
+            = announcement.announcement_status.name
+          h4.text-primary
+            = announcement.title
+          p.text-secondary.font-weight-semibold.text-muted
+            = deadline
