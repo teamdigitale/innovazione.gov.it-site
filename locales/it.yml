@@ -2,7 +2,7 @@ it:
   models:
     announcement: Avviso pubblico
     article: Articolo
-    focus: Focus
+    focus_page: Focus
     interview: Intervista
     participation: Intervento
     press_release: Comunicato stampa
