@@ -23,7 +23,7 @@
         - "di #{owners[0..-2].join(', ')} e #{owners[-1]}"
 
       = partial "partials/card",
-        locals: {card_link: "#",
+        locals: {card_link: article.link_medium.link,
           image: true,
           image_link: article.image_thumbnail.url,
           card_title: article.title,
