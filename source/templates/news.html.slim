@@ -1,17 +1,23 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+- featured_tags = visible_tags & dato.homepage.featured_tags
+
 .lightgrey-bg-c1
-  .d-none.d-lg-block
-    = partial "partials/breadcrumb",
-      locals: {page: dato.news_page}
+  = partial "partials/page-header", locals: {page: page, share: false} do
+    = content_for :col_one, flush: true
+      = partial "partials/column-title", locals: {title: t("deepen")}
+      = link_to t("press_office"),
+        page_path(dato.minister_press_releases_index),
+        class: "text-primary text-decoration-none font-weight-semibold"
+    = content_for :col_two, flush: true
+      = partial "partials/column-title", locals: {title: t("highlighted_topics")}
+      - featured_tags.each do |tag|
+        = partial "partials/chip", locals: {label: tag.name, url: page_path(tag), btn_type: ''}
 
-  = partial "partials/news-hero",
-    locals: {page: page}
-
-  .container.px-4.lightgrey-bg-c1
-    .row.mid-border-lg-top.d-lg-flex
-      .col-lg-8.mid-border-lg-right.py-lg-5.pr-lg-5
+  .container.px-4
+    .row.d-lg-flex
+      .col-lg-8.mid-border-lg-right.pr-lg-5
         .mb-4.mb-lg-5
           = partial "partials/section-title", locals: {title: t("articles_section_title")}
         .d-flex.flex-column.justify-content-start
