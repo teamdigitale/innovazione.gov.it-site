@@ -16,7 +16,7 @@
   = content_for :col_three
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
     - page.tags.each do |tag|
-      = partial "partials/chip", locals: {label: tag.name, url: "#"}
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
 
 = partial "partials/page-cover",
   locals: {page: page}
