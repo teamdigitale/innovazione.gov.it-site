@@ -1,5 +1,29 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+= partial "partials/breadcrumb", locals: {page: page}
+
 .container
-  #search-container
+  header.section.p-0
+    .row.justify-content-between
+      .col-lg-8
+        .mid-search
+          #search-container
+
+      .col-lg-3
+        = partial "partials/column-title",
+          locals: {title: t('search_page.explore_title')}
+
+        .link-list-wrapper.mt-2
+          ul.link-list
+            li
+              = link_to page_path(dato.tags_index),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = t('search_page.explore_tags_title')
+
+            li
+              = link_to page_path(dato.tags_index),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = t('search_page.explore_contents_title')
