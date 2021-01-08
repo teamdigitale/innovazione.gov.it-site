@@ -23,7 +23,10 @@ activate :directory_indexes
 activate :pagination
 activate :inline_svg
 
-activate :dato, token: ENV.fetch("DATO_API_TOKEN"), live_reload: true
+activate :dato,
+  token: ENV.fetch("DATO_API_TOKEN"),
+  live_reload: true,
+  preview: ENV.fetch('BUILD_ENV') != 'production'
 
 webpack_command =
   if build?
