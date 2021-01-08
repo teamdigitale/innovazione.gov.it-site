@@ -9,16 +9,22 @@
   - if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
     - logo_url = item.image_project_logo.url
 
-  - text_color = ''
+  - text_type = 'text-muted'
+  - text_date = 'text-secondary'
+  - text_title = 'text-primary'
+  - text_subtitle = 'text-secondary'
   - bg_color = ''
-  - if item.item_type.api_key == "project"
-    - text_color = "text-primary"
+  - if item.item_type.api_key == "focus_page"
+    - text_type = 'text-white'
+    - text_date = 'text-white'
+    - text_title = 'text-white'
+    - text_subtitle = 'text-white'
     - bg_color = "bg-primary"
 
   = link_to page_path(item),
     class: "text-decoration-none"
-    .card class="#{text_color} #{bg_color}"
-      .card-body.d-flex
+    .card
+      .card-body.d-flex class="#{bg_color}"
         - if logo_url.present?
           .mr-3
             = image_tag logo_url,
@@ -26,11 +32,11 @@
               class: "mh-75 d-block"
         .div
           .category.py-2
-            span.pr-2.text-uppercase.font-weight-semibold.text-muted
+            span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
               = t("models.#{item.item_type.api_key}")
-            span.px-2.text-secondary
+            span.px-2 class="#{text_date}"
               = date
-          h4.text-primary
+          h4 class="#{text_title}"
             = item.title
-          p.text-secondary
+          p class="#{text_subtitle}"
             = item.subtitle
