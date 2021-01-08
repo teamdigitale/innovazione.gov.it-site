@@ -44,7 +44,7 @@
             - tags.each do |tag|
               = partial "partials/chip",
                 locals: {label: tag.name,
-                url: "#",
+                url: page_path(tag),
                 chip_type: "",
                 btn_type: "",
                 chip_size: ""}
