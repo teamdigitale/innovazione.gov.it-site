@@ -1,0 +1,41 @@
+- article ||= nil
+- subtitle ||= ''
+- tags ||= ''
+
+- if article.present?
+
+  - owners = []
+  - article.owners.each {|owner| owners << owner.title if owner.title.present?}
+  - authors = case owners.length
+  - when 0
+    - ''
+  - when 1
+    - "di #{owners[0]}"
+  - else
+    - "di #{owners[0..-2].join(', ')} e #{owners[-1]}"
+
+  .card-wrapper
+    = link_to article.link_medium.link,
+      class: "text-decoration-none"
+      .card.card-img.no-after.rounded.shadow
+        .img-responsive-wrapper
+          .img-responsive
+            figure.img-wrapper.h-75
+              = image_tag article.image_thumbnail.url
+        .card-body.mb-4.d-flex.flex-column.justify-content-between.mt-n5
+          .px-4
+            h4.text-primary.card-title
+              = article.title
+            h6.text-black.mt-2
+              = authors
+          .my-5
+          .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+            - if article.tags.present?
+              - article.tags.each do |tag|
+                = partial "partials/chip",
+                  locals: {label: tag.name,
+                  url: page_path(tag),
+                  chip_type: "",
+                  btn_type: "",
+                  chip_size: ""}
+
