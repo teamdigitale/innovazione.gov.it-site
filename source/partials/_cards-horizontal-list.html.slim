@@ -1,0 +1,23 @@
+/ Pass section title, items array, and button url
+
+- items ||= nil
+
+= partial "partials/section-title", locals: {title: title}
+.row.mt-4.mt-lg-5.mx-n4
+  - items.each do |item|
+    .col-md-4.px-4.mb-2
+      - card_partial = ''
+      - if item.item_type.api_key == "announcement"
+        - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+      - elsif item.item_type.api_key == "article" || item.item_type.api_key == "press_release"
+        - card_partial = partial "partials/card", locals: {article: article}
+
+      - if item.present? && card_partial.present?
+        = card_partial
+
+.row
+  .col-12.my-3.mt-lg-5.text-center
+    button.btn.btn-primary.text-uppercase.text-white
+      = link_to t("view_more"),
+        page_path(btn_url),
+        class: "btn btn-primary text-white text-uppercase"
