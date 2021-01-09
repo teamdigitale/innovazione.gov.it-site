@@ -21,7 +21,7 @@
         .mb-4.mb-lg-5
           = partial "partials/section-title", locals: {title: t("articles_section_title")}
         .d-flex.flex-column.justify-content-start
-          - visible_articles.each do |article|
+          - visible_articles.take(3).each do |article|
             div.my-1.my-lg-3
             = partial "partials/card",
               locals: {card_link: page_path(article),
@@ -39,7 +39,7 @@
         .mb-4.mb-lg-5
           = partial "partials/section-title", locals: {title: t("press_releases_section_title")}
         .d-flex.flex-column.justify-content-start
-          - visible_press_releases.map do |article|
+          - visible_press_releases.take(5).map do |article|
             div.my-1.my-lg-3
             = partial "partials/card",
               locals: {card_link: page_path(article),
