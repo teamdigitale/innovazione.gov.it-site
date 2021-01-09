@@ -40,7 +40,7 @@
     = partial "partials/section-title", locals: {title: t("public_announcements_title")}
     .row.mt-4.mt-lg-5.mx-n4
       - dato.announcements.take(3).each do |announcement|
-        .col-lg-4.px-4
+        .col-md-4.px-4.mb-2
           = partial "partials/card-avvisi-pubblici", locals: {announcement: announcement}
 
     .row
