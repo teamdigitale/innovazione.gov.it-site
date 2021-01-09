@@ -46,7 +46,7 @@
             = partial "partials/formatted-date", locals: {date: page.updated_at}
 
   - if page.related_items.count > 0
-    .row.mid-border-lg-top.pt-5
+    .row.mid-border-lg-top.py-5
       .col-sm-8
         = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
         - page.related_items.each do |item|
