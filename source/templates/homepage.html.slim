@@ -37,15 +37,8 @@
 
 .py-5.lightgrey-bg-c1
   .container
-    = partial "partials/section-title", locals: {title: t("public_announcements_title")}
-    .row.mt-4.mt-lg-5.mx-n4
-      - dato.announcements.take(3).each do |announcement|
-        .col-md-4.px-4.mb-2
-          = partial "partials/card-avvisi-pubblici", locals: {announcement: announcement}
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: dato.announcements.take(3),
+      btn_url: dato.announcements_index}
 
-    .row
-      .col-12.my-3.mt-lg-5.text-center
-        button.btn.btn-primary.text-uppercase.text-white
-          = link_to t("view_more"),
-            page_path(dato.announcements_index),
-            class: "btn btn-primary text-white text-uppercase"
