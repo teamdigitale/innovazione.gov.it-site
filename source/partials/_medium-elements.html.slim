@@ -12,25 +12,7 @@
 .row.mt-4.mt-lg-5.mx-n4
   - dato.medium_articles[0..2].map do |article|
     .col-lg-4.px-4
-      - owners = []
-      - article.owners.each {|owner| owners << owner.title if owner.title.present?}
-      - authors = case owners.length
-      - when 0
-        - ''
-      - when 1
-        - "di #{owners[0]}"
-      - else
-        - "di #{owners[0..-2].join(', ')} e #{owners[-1]}"
-
-      = partial "partials/card",
-        locals: {card_link: article.link_medium.link,
-          image: true,
-          image_link: article.image_thumbnail.url,
-          card_title: article.title,
-          card_subtitle: authors,
-          adjust_margin_top: "mt-n5",
-          tall_small_img: true,
-          card_tags: article.tags}
+      = partial "partials/card-medium-elements", locals: {article: article}
 
 .row.pb-5
   .col-12.my-3.mt-lg-5.text-center
