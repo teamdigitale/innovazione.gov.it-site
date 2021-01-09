@@ -34,7 +34,7 @@
           = partial "partials/column-title", locals: {title: I18n.t("attachments")}
           .row
             - page.attachments.each do |attachment|
-              .col-6.mt-3
+              .col-12.col-md-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
         
       - if page.credits.present?
