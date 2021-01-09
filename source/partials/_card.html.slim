@@ -1,51 +1,41 @@
-/ set image to true if there is an image in the card
-- image = locals.key?(:image) ? "card-img no-after rounded shadow" : ""
+- article ||= nil
+- if article.present?
+  - date ||= ''
+  - text ||= ''
+  - subtitle ||= ''
+  - tags ||= ''
 
-/ card_date, card_text and card_subtitle are optional, set with card_date and card_text if needed
+  - image = ""
+  - image_link = ''
+  - if article.respond_to?(:image_cover) && article.image_cover.present?
+    - image = "card-img no-after rounded shadow"
+    - image_link = article.image_cover.url
 
-- date = locals.key?(:card_date) ? card_date : ""
-- text = locals.key?(:card_text) ? card_text : ""
-- subtitle = locals.key?(:card_subtitle) ? card_subtitle : ""
-- tags = locals.key?(:card_tags) ? card_tags : ""
-
-/ for longer cards with smaller image, set tall_small_img to true
-
-- shorter_image = locals.key?(:tall_small_img) ? "h-75" : ""
-- longer_card_body = locals.key?(:tall_small_img) ? "mb-4 d-flex flex-column justify-content-between mt-n5" : ""
-- longer_text_box = locals.key?(:tall_small_img) ? "row px-4" : ""
-- date_style = locals.key(:tall_small_img) ? "small mt-n3" : "data"
-- title_style = locals.key(:tall_small_img) ? "card-title" : ""
-- text_style = locals.key(:tall_small_img) ? "text-black mt-2" : "card-text"
-- white_space = locals.key?(:tall_small_img) ? "my-5": "my-4"
-
-.card-wrapper
-  = link_to card_link,
-    class: "text-decoration-none"
-    .card class="#{image}"
-      - if image_link.present?
-        .img-responsive-wrapper
-          .img-responsive
-            figure.img-wrapper class="#{shorter_image}"
-              = image_tag image_link
-      .card-body class="#{longer_card_body}"
-        div class="#{longer_text_box}"
-          p.text-secondary class="#{date_style}"
-            = partial "partials/formatted-date", locals: {date: date}
-
-          h4.text-primary class="#{title_style}"
-            = card_title
-          h6.text-black.mt-2
-            = subtitle
-          p class="#{text_style}"
-            = text
-        div class="#{white_space}"
-        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-          - if tags.present?
-            - tags.each do |tag|
-              = partial "partials/chip",
-                locals: {label: tag.name,
-                url: page_path(tag),
-                chip_type: "",
-                btn_type: "",
-                chip_size: ""}
+  .card-wrapper
+    = link_to page_path(article),
+      class: "text-decoration-none"
+      .card class="#{image}"
+        - if image_link.present?
+          .img-responsive-wrapper
+            .img-responsive
+              figure.img-wrapper
+                = image_tag image_link
+        .card-body
+          div
+            p.text-secondary.data
+              = partial "partials/formatted-date", locals: {date: article.date_shown}
+            h4.text-primary
+              = article.title
+            p.card-text
+              = article.subtitle
+          .my-4
+          .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+            - if article.item_type.api_key == "article" && article.tags.present?
+              - article.tags.each do |tag|
+                = partial "partials/chip",
+                  locals: {label: tag.name,
+                  url: page_path(tag),
+                  chip_type: "",
+                  btn_type: "",
+                  chip_size: ""}
 
