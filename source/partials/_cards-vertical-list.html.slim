@@ -1,0 +1,22 @@
+/ need to pass section title, articles array and button url
+
+- articles ||= nil
+
+.mb-4.mb-lg-5
+  = partial "partials/section-title", locals: {title: title}
+.d-flex.flex-column.justify-content-start
+  - articles.each do |article|
+    div.my-1.my-lg-3
+      - card_partial = ''
+      - if article.item_type.api_key == "announcement"
+        - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+      - elsif article.item_type.api_key == "article" || article.item_type.api_key == "press_release"
+        - card_partial = partial "partials/card", locals: {article: article}
+
+      - if article.present? && card_partial.present?
+        = card_partial
+
+  .d-flex.flex-row.justify-content-center.my-4
+    = link_to t("view_more"),
+      page_path(btn_url),
+      class: "btn btn-primary text-white text-uppercase"

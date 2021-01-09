@@ -18,39 +18,16 @@
   .container.px-4
     .row.d-lg-flex
       .col-lg-8.mid-border-lg-right.pr-lg-5
-        .mb-4.mb-lg-5
-          = partial "partials/section-title", locals: {title: t("articles_section_title")}
-        .d-flex.flex-column.justify-content-start
-          - visible_articles.take(3).each do |article|
-            div.my-1.my-lg-3
-            = partial "partials/card",
-              locals: {card_link: page_path(article),
-              card_date: article.date_shown,
-              image_link: article.image_cover.present? ? article.image_cover.url : '',
-              card_title: article.title,
-              card_text: article.subtitle,
-              card_tags: article.tags}
-          .d-flex.flex-row.justify-content-center.my-4
-            = link_to t("view_more"),
-              page_path(dato.articles_index),
-              class: "btn btn-primary text-white text-uppercase"
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("articles_section_title"),
+          articles: visible_articles.take(3),
+          btn_url: dato.articles_index}
 
-      .col-lg-4.pl-lg-4.py-lg-5.mt-5.mb-3.my-lg-0.
-        .mb-4.mb-lg-5
-          = partial "partials/section-title", locals: {title: t("press_releases_section_title")}
-        .d-flex.flex-column.justify-content-start
-          - visible_press_releases.take(5).map do |article|
-            div.my-1.my-lg-3
-            = partial "partials/card",
-              locals: {card_link: page_path(article),
-              card_date: article.date_shown,
-              card_title: article.title,
-              card_text: article.subtitle,
-              image_link: ''}
-          .d-flex.flex-row.justify-content-center.my-4
-            = link_to t("view_more"),
-              page_path(dato.press_releases_index),
-              class: "btn btn-primary text-white text-uppercase"
+      .col-lg-4.pl-lg-4.mt-5.mb-3.my-lg-0.
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("press_releases_section_title"),
+          articles: visible_press_releases.take(6),
+          btn_url: dato.press_releases_index}
 
     .py-5
       = partial "partials/medium-elements"
