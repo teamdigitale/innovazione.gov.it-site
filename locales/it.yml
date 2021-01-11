@@ -64,7 +64,7 @@ it:
       - Novembre
       - Dicembre
 
-  search_page:
-    explore_title: "Oppure"
-    explore_tags_title: "Esplora per argomento"
-    explore_contents_title: "Explora per tipologia di contenuto"
+  explore_aside:
+    title: "Oppure"
+    tags_title: "Esplora per argomento"
+    search_title: "Cerca nel sito"

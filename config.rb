@@ -191,6 +191,17 @@ helpers do
     item.cta_label.present? ? item.cta_label : item.title
   end
 
+  def all_index_pages
+    [dato.articles_index,
+      dato.announcements_index,
+      dato.interviews_index,
+      dato.participations_index,
+      dato.press_releases_index,
+      dato.focus_index,
+      dato.projects_page
+    ]
+  end
+
 end
 
 dato.tap do |dato|
@@ -206,6 +217,11 @@ dato.tap do |dato|
     proxy "#{prefix}/#{dato.search_page.slug}/index.html",
       "/templates/search.html",
       locals: { page: dato.search_page },
+      locale: locale
+
+    proxy "#{prefix}/#{dato.explore_page.slug}/index.html",
+      "/templates/explore.html",
+      locals: { page: dato.explore_page },
       locale: locale
 
     dato.general_pages.each do |general_page|

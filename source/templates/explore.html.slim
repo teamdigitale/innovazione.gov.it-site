@@ -8,6 +8,14 @@
     .row.justify-content-center.py-lg-4
       .col-lg-7
         h1.mb-sm-5 = page.title
+        .link-list-wrapper
+          ul.link-list.row
+            - all_index_pages.each do |page|
+              li.col-sm-6
+                = link_to page_path(page),
+                  class: "p-0 list-item d-inline-block"
+                    span.font-weight-semibold
+                      = page.menu_label
 
       .col-lg-3.ml-lg-5.pl-lg-5
         = partial "partials/column-title",
@@ -21,22 +29,7 @@
                   span.font-weight-semibold
                     = t('explore_aside.search_title')
             li
-              = link_to page_path(dato.explore_page),
+              = link_to page_path(dato.tags_index),
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold
-                    = dato.explore_page.title
-
-  hr.border-bottom
-  - letters = visible_tags.map{|tag| tag.name[0].downcase}.uniq
-  .row.py-lg-5
-    - letters.each do |letter|
-      .col-lg-3
-        h2.display-1.font-weight-semibold.text-uppercase= letter
-        .link-list-wrapper
-          ul.link-list
-            - visible_tags.select{|t| t.name[0].downcase == letter}.each do |tag|
-              li
-                = link_to page_path(tag),
-                  class: "p-0 list-item d-inline-block"
-                    span.font-weight-semibold
-                      = tag.name
+                    = t('explore_aside.tags_title')
