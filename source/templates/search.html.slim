@@ -12,7 +12,7 @@
 
       .col-lg-3
         = partial "partials/column-title",
-          locals: {title: t('search_page.explore_title')}
+          locals: {title: t('explore_aside.title')}
 
         .link-list-wrapper.mt-2
           ul.link-list
@@ -20,10 +20,10 @@
               = link_to page_path(dato.tags_index),
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold
-                    = t('search_page.explore_tags_title')
+                    = t('explore_aside.tags_title')
 
             li
-              = link_to page_path(dato.tags_index),
+              = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold
-                    = t('search_page.explore_contents_title')
+                    = dato.explore_page.title
