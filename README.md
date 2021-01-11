@@ -36,7 +36,7 @@ In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
 
 # Deployment
 
-Bisogna settare le seguenti variabili d'ambiente:
+Per l'ambiente di produzione, è necessario settare le seguenti variabili d'ambiente:
 
 * BASE_URL=https://innovazione.gov.it/
 * DATO_API_TOKEN
