@@ -1,7 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/page-header", locals: {page: page, share: true} do
+= partial "partials/headers/header-basic", locals: { page: page, share: true } do
   
   = content_for :col_one
     = partial "partials/column-title", locals: {title: "Data"}
@@ -13,7 +13,7 @@
       => article_reading_time(page)
       = I18n.t("minutes")
 
-  = content_for :col_three
+  = content_for :aside
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
     - page.tags.each do |tag|
       = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
