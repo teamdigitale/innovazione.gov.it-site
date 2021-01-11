@@ -36,12 +36,14 @@
       "#{page_path(dato.projects_page)}##{projects_category.slug}"
 
 .py-5.lightgrey-bg-c1
-  / blocco piccole notizie
-  /.container
+  .container
     = partial "partials/cards-horizontal-list",
       locals: {title: "",
-      items: dato.announcements.take(3),
-      btn_url: dato.announcements_index}
+      items: dato.homepage.news.take(3),
+      hide_image: true,
+      hide_tags: true,
+      show_item_type: true,
+      btn_url: dato.news_page}
 
   .container
     = partial "partials/cards-horizontal-list",

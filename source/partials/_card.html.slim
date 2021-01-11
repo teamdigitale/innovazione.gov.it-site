@@ -1,4 +1,8 @@
 - article ||= nil
+- hide_image ||= nil
+- hide_tags ||= nil
+- show_item_type ||= nil
+
 - if article.present?
   - date ||= ''
   - text ||= ''
@@ -7,35 +11,41 @@
 
   - image = ""
   - image_link = ''
-  - if article.respond_to?(:image_cover) && article.image_cover.present?
+  - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
     - image = "card-img no-after rounded shadow"
     - image_link = article.image_cover.url
 
-  .card-wrapper
-    = link_to page_path(article),
-      class: "text-decoration-none"
-      .card class="#{image}"
-        - if image_link.present?
-          .img-responsive-wrapper
-            .img-responsive
-              figure.img-wrapper
-                = image_tag image_link
-        .card-body
-          div
+  = link_to page_path(article),
+    class: "text-decoration-none"
+    .card.h-100 class="#{image}"
+      - if image_link.present?
+        .img-responsive-wrapper
+          .img-responsive
+            figure.img-wrapper
+              = image_tag image_link
+      .card-body
+        div
+          - if show_item_type
+            .category.py-2
+              span.pr-2.text-uppercase.font-weight-semibold.text-muted
+                = t("models.#{article.item_type.api_key}")
+              span.px-2.text-secondary
+                = partial "partials/formatted-date", locals: {date: article.date_shown}
+          - else
             p.text-secondary.data
               = partial "partials/formatted-date", locals: {date: article.date_shown}
-            h4.text-primary
-              = article.title
-            p.card-text
-              = article.subtitle
-          .my-4
-          .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-            - if article.item_type.api_key == "article" && article.tags.present?
-              - article.tags.each do |tag|
-                = partial "partials/chip",
-                  locals: {label: tag.name,
-                  url: page_path(tag),
-                  chip_type: "",
-                  btn_type: "",
-                  chip_size: ""}
+          h4.text-primary
+            = article.title
+          p.card-text
+            = article.subtitle
+        .my-4
+        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+          - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
+            - article.tags.each do |tag|
+              = partial "partials/chip",
+                locals: {label: tag.name,
+                url: page_path(tag),
+                chip_type: "",
+                btn_type: "",
+                chip_size: ""}
 
