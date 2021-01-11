@@ -191,6 +191,17 @@ helpers do
     item.cta_label.present? ? item.cta_label : item.title
   end
 
+  def all_index_pages
+    [dato.articles_index,
+      dato.announcements_index,
+      dato.interviews_index,
+      dato.participations_index,
+      dato.press_releases_index,
+      dato.focus_index,
+      dato.projects_page
+    ]
+  end
+
 end
 
 dato.tap do |dato|
