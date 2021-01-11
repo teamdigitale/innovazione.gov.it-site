@@ -1,2 +1,14 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+
+= partial "partials/headers/header-basic", locals: { page: page, share: true } do
+  
+  = content_for :aside
+    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+    - page.tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
+
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: "Data"}
+    = partial "partials/formatted-date", locals: {date: page.date_shown}
