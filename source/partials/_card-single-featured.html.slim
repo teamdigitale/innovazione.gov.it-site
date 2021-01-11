@@ -1,0 +1,43 @@
+- article ||= nil
+- show_item_type ||= nil
+
+- if article.present?
+  - date ||= ''
+  - subtitle ||= ''
+  - image = ""
+  - image_link = ''
+  - if article.respond_to?(:image_cover) && article.image_cover.present?
+    - image = "card-img no-after rounded shadow"
+    - image_link = article.image_cover.url
+
+  = link_to page_path(article),
+    class: "text-decoration-none"
+    .card.d-flex.flex-column-reverse.flex-lg-row-reverse
+      .col-lg
+        .card-body
+          div
+            .category.py-2
+              span.pr-2.text-uppercase.font-weight-semibold.text-muted
+                = t("models.#{article.item_type.api_key}")
+              span.px-2.text-secondary
+                = partial "partials/formatted-date", locals: {date: article.date_shown}
+            h4.text-primary
+              = article.title
+            p.card-text
+              = article.subtitle
+          .my-4
+          .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+            - if article.item_type.api_key == "article" && article.tags.present?
+              - article.tags.each do |tag|
+                = partial "partials/chip",
+                  locals: {label: tag.name,
+                  url: page_path(tag),
+                  chip_type: "",
+                  btn_type: "",
+                  chip_size: ""}
+      - if image_link.present?
+        .col-lg.img-responsive-wrapper.p-0
+          .img-responsive.img-responsive-panoramic
+            figure.img-wrapper.p-0
+              =image_tag image_link
+

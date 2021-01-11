@@ -37,6 +37,7 @@
 
 .py-5.lightgrey-bg-c1
   .container
+    = partial "partials/featured-news"
     = partial "partials/cards-horizontal-list",
       locals: {title: "",
       items: dato.homepage.news.take(3),

@@ -1,0 +1,12 @@
+- featured_news = dato.homepage.featured_news
+
+- if featured_news.length == 1
+  = partial "partials/card-single-featured", locals: {article: dato.homepage.featured_news.first}
+
+- elsif featured_news.length == 2 && featured_news.first.respond_to?(:image_cover)
+  .row
+    .col-8.mr-3.ml-n3
+      = partial "partials/card-single-featured", locals: {article: dato.homepage.featured_news.first, larger_of_two: true}
+    .col-4.ml-3.mr-n3
+      = partial"partials/card", locals: {article: featured_news[1], hide_image: true}
+
