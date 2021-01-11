@@ -1,11 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/breadcrumb",
-  locals: {page: dato.projects_page}
-
-= partial "partials/headers/header-one-column",
-  locals: {title: page.title, subtitle: page.subtitle, subpages: visible_projects_subpages}
+= partial "partials/headers/header-basic", locals: { page: page, subs: visible_projects_subpages } do
 
 
 .container.py-5: .row
