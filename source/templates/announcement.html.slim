@@ -1,2 +1,17 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: { page: page } do
+  
+  = content_for :aside
+    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+    - page.tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
+
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: "Categoria"}
+    = partial "partials/column-title", locals: {title: "Data di apertura"}
+
+  = content_for :col_two
+    = partial "partials/column-title", locals: {title: "Stato"}
+    = partial "partials/column-title", locals: {title: "Data di chiusura"}
