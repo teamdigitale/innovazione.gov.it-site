@@ -208,6 +208,11 @@ dato.tap do |dato|
       locals: { page: dato.search_page },
       locale: locale
 
+    proxy "#{prefix}/#{dato.explore_page.slug}/index.html",
+      "/templates/explore.html",
+      locals: { page: dato.explore_page },
+      locale: locale
+
     dato.general_pages.each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
       proxy "#{prefix}/#{parent_path}/#{general_page.slug}/index.html",
