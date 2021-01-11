@@ -4,11 +4,13 @@
 - hide_image ||= nil
 - hide_tags ||= nil
 - show_item_type ||= nil
+- title ||= ''
+- self_standing_section = title.present? ? 'mt-4 mt-lg-5' : ''
 
 = partial "partials/section-title", locals: {title: title}
-.row.mt-4.mt-lg-5.mx-n4
+.row.row-cols-md-3.g-3 class="#{self_standing_section}"
   - items.each do |item|
-    .col-md-4.px-4.mb-2
+    .col-md-4.p-3
       - card_partial = ''
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
@@ -18,9 +20,9 @@
       - if item.present? && card_partial.present?
         = card_partial
 
-.row
-  .col-12.my-3.mt-lg-5.text-center
-    button.btn.btn-primary.text-uppercase.text-white
+  .col-md-12
+    .my-3.mt-lg-5.text-center
       = link_to t("view_more"),
         page_path(btn_url),
         class: "btn btn-primary text-white text-uppercase"
+

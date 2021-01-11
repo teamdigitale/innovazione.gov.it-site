@@ -39,8 +39,7 @@
   .container
     = partial "partials/featured-news"
     = partial "partials/cards-horizontal-list",
-      locals: {title: "",
-      items: dato.homepage.news.take(3),
+      locals: {items: dato.homepage.news.take(3),
       hide_image: true,
       hide_tags: true,
       show_item_type: true,
