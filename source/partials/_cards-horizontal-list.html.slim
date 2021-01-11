@@ -9,7 +9,7 @@
       - card_partial = ''
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
-      - elsif item.item_type.api_key == "article" || item.item_type.api_key == "press_release"
+      - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
         - card_partial = partial "partials/card", locals: {article: article}
 
       - if item.present? && card_partial.present?
