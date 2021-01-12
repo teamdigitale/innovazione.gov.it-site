@@ -22,26 +22,7 @@
                 page_path(dato.minister_page),
                 class: "btn btn-primary text-white text-uppercase"
 
-  /.col-lg-7
-    = link_to "#",
-      class: "text-decoration-none"
-      .card.d-flex.flex-column-reverse.flex-lg-row-reverse
-        .col-lg-9.p-0
-          .card-body.neutral-2-bg-a1
-            div
-              .category.py-2
-                span.pr-2.text-uppercase.font-weight-semibold.text-muted
-                  = dato.homepage.minister_pre_title
-              h1.text-primary
-                = dato.homepage.minister_title
-              p.card-text
-                = dato.homepage.minister_text
-        .img-responsive-wrapper.p-0.col-lg-3.neutral-2-bg-a1
-          .img-responsive.img-responsive-panoramic
-            figure.img-wrapper.p-0
-              =image_tag dato.minister_page.photo
-
-  .col-lg-4.p-0.mb-2.mb-lg-0
+  .col-lg-4.px-4.p-lg-0.mb-2.mb-lg-0
     = partial "partials/text_gallery",
       locals: {slides: page.minister_featured_news}
   .col-lg-1
