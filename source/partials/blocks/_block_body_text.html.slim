@@ -1,27 +1,28 @@
-.container.my-5: .row
+.container.my-5
   - if block.text_title.present?
-    .col-12.offset-1
-      h4 = block.text_title
-  
-  .col-8.offset-1
-    .mid-formatted-content
-      - if block.image_little.present?
-        figure.figure.block-body__small-image.d-inline
-          = image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),
-            data: {'sizes': '100vw',
-              'src': block.image_little.url(w: 1000, h: 600, fit:'crop', auto:'format,compress'),
-              'srcset': "#{block.image_little.url(w: 480, h: 288, fit:'crop', auto:'format,compress')} 480w,
-              #{block.image_little.url(w: 719, h: 432, fit:'crop', auto:'format,compress')} 719w,
-              #{block.image_little.url(w: 1000, h: 600, fit:'crop', auto:'format,compress')} 1023w,
-              #{block.image_little.url(w: 666, h: 400, fit:'crop', auto:'format,compress')} 1500w"},
-            class: "figure-image lazyload img-fluid",
-            alt: block.image_little.alt,
-            title: block.image_little.title
+      h4.mb-4 = block.text_title
 
-      = markdown block.body_text
+  .row
+    .col-12.col-lg-9
 
-  .col-3
-    - if block.text_note.present? || block.image_little.present?
-      .mid-notes.pl-3
-        - if block.text_note.present?
-          = markdown block.text_note
+      .mid-formatted-content
+        - if block.image_little.present?
+          figure.figure.block-body__small-image
+            = image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),
+              data: {'sizes': '100vw',
+                'src': block.image_little.url(w: 1000, h: 600, fit:'crop', auto:'format,compress'),
+                'srcset': "#{block.image_little.url(w: 480, h: 288, fit:'crop', auto:'format,compress')} 480w,
+                #{block.image_little.url(w: 719, h: 432, fit:'crop', auto:'format,compress')} 719w,
+                #{block.image_little.url(w: 1000, h: 600, fit:'crop', auto:'format,compress')} 1023w,
+                #{block.image_little.url(w: 666, h: 400, fit:'crop', auto:'format,compress')} 1500w"},
+              class: "figure-img lazyload img-fluid",
+              alt: block.image_little.alt,
+              title: block.image_little.title
+
+        = markdown block.body_text
+
+    .col-8.offset-4.col-lg-3.offset-lg-0
+      - if block.text_note.present? || block.image_little.present?
+        .mid-notes.pl-3
+          - if block.text_note.present?
+            = markdown block.text_note
