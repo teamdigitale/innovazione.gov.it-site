@@ -11,8 +11,8 @@
         - visible_projects_categories.each do |cat|
           li = link_to cat.name, "#{page_path(dato.projects_page)}##{cat.slug}"
                     
-    .col-12.col-lg-8.offset-lg-1
-      h2.font-weight-light.font-weight-semibold = t("projects.highlights")
+    .col-12.col-lg-8.offset-lg-1.py-5
+      h3.font-weight-semibold.mb-3 = t("projects.highlights")
 
       - visible_projects.select{|p| p.highlight == true}.each do |prj|
         .col-sm-6
@@ -24,16 +24,14 @@
       .container
         .row
           .col-lg-3.border-right.hidden.d-none.d-lg-block
-                  
-          .col-12.col-lg-8.offset-lg-1.py-5
+          
+          .col-10.col-lg-8.offset-lg-1.py-5
             .row.py-5
-              .col-md-9.mb-4
+              .col-md-9.mb-4.px-2.px-md-0
                 a name=cat.slug
                 h3.font-weight-semibold.mb-3 = cat.name
-                p.lead
-                  strong = cat.description
+                p.lead.font-weight-semibold = cat.description
               
-              .row
-                - visible_projects.select{|p| p.category == cat}.each do |p|
-                  .col-sm-6
-                    = partial "partials/project_card", locals: {project: p}
+              - visible_projects.select{|p| p.category == cat}.each do |p|
+                .col-sm-6
+                  = partial "partials/project_card", locals: {project: p}
