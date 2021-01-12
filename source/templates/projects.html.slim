@@ -18,16 +18,17 @@
         = partial "partials/project_card", locals: {project: prj}
 
 - visible_projects_categories.each_with_index do |cat, i|
-  .section.px-0.py-7 class=(i.even? ? "section-muted" : "")
-    .section-container
+  - if visible_projects.select{|p| p.category == cat}.count > 0
+    section.section.p-0 class=(i.even? ? "section-muted" : "")
       .container
         .row
-          .col-sm-4
+          .col-lg-3.border-right.hidden.d-none.d-lg-block
                   
-          .col-sm-8
-            .col-sm-10
+          .col-12.col-lg-8.offset-lg-1.py-5
+            .row.py-5
+              .col-md-9.mb-4
               a name=cat.slug
-              h2.font-weight-semibold.mb-3 = cat.name
+                h3.font-weight-semibold.mb-3 = cat.name
               p.lead
                 strong = cat.description
               
