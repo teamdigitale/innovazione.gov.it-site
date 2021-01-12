@@ -2,12 +2,13 @@
 - hide_image ||= nil
 - hide_tags ||= nil
 - show_item_type ||= nil
+- large_title ||= nil
+- medium_title ||= nil
 
 - if article.present?
   - date ||= ''
   - subtitle ||= ''
   - tags ||= ''
-
   - image = ""
   - image_link = ''
   - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
@@ -33,8 +34,15 @@
           - else
             p.text-secondary.data
               = partial "partials/formatted-date", locals: {date: article.date_shown}
-          h4.text-primary
-            = article.title
+          - if large_title
+            h2.text-primary
+              = article.title
+          - elsif medium_title
+            h4.text-primary.font-weight-bold
+              = article.title
+          - else
+            h5.text-primary.font-weight-bold
+              = article.title
           p.card-text
             = article.subtitle
         .my-4

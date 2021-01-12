@@ -1,6 +1,8 @@
 / Pass section title, items array and button url
 
 - items ||= nil
+- large_title ||= nil
+- medium_title ||= nil
 - hide_image ||= nil
 - hide_tags ||= nil
 - show_item_type ||= nil
@@ -15,7 +17,7 @@
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
       - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-        - card_partial = partial "partials/card", locals: {article: item, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
+        - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
 
       - if item.present? && card_partial.present?
         = card_partial

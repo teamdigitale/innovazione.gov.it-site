@@ -11,15 +11,15 @@
   .row.row-cols-3.g-3
     - if featured_news.length == 1
       .col-12
-        = partial "partials/card-single-featured", locals: {article: dato.homepage.featured_news.first}
+        = partial "partials/card-featured", locals: {article: dato.homepage.featured_news.first}
     - elsif featured_news.length == 2 && featured_news.first.respond_to?(:image_cover)
       .col-8.p-3
         = partial "partials/card-featured", locals: {article: dato.homepage.featured_news.first, larger_of_two: true}
       .col-4.p-3
-        = partial"partials/card", locals: {article: featured_news[1], hide_image: true}
+        = partial"partials/card", locals: {article: featured_news[1], medium_title: true, hide_image: true}
     - else
       .col-6.p-3
-        = partial"partials/card", locals: {article: featured_news[0], hide_image: true}
+        = partial"partials/card", locals: {article: featured_news[0], medium_title: true, hide_image: true}
       .col-6.p-3
-        = partial"partials/card", locals: {article: featured_news[1], hide_image: true}
+        = partial"partials/card", locals: {article: featured_news[1], medium_title: true, hide_image: true}
 
