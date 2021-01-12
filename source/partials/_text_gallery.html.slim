@@ -1,9 +1,19 @@
+- slides ||= nil
+- large_title ||= nil
+- medium_title ||= nil
+- hide_image ||= nil
+- hide_tags ||= nil
+- show_item_type ||= nil
+- title ||= ''
+
 .swiper.swiper--text
   .swiper-container
     .swiper-wrapper
       - slides.each do |slide|
         .swiper-slide
           .swiper-slide__text
+            .h4
+              =slide.announcement_status
             - if slide.title
               .swiper-slide__text__title = slide.title
             - slide.content_blocks.each do |block|
