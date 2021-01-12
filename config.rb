@@ -449,11 +449,22 @@ dato.tap do |dato|
       locals: { page: dato.tags_index },
       locale: locale
 
+    news_contents = PresentationHelper.published_announcements(dato.announcements) +
+    PresentationHelper.published_articles(dato.articles) +
+    PresentationHelper.published_interviews(dato.interviews) +
+    PresentationHelper.published_participations(dato.participations) +
+    PresentationHelper.published_press_releases(dato.press_releases)
+
     PresentationHelper.published_tags(dato.tags).each do |tag|
-      proxy "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}/index.html",
+      tag_news_contents = news_contents.select{|n| n.tags.include?(tag)}.sort_by(&:date_shown).reverse
+
+      paginate tag_news_contents,
+        "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
         "/templates/tag.html",
+        suffix: "/page/:num/index",
         locals: { page: tag },
-        locale: locale
+        per_page: 10
+
     end
   end
 end
