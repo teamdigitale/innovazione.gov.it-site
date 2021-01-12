@@ -68,3 +68,8 @@ it:
     title: "Oppure"
     tags_title: "Esplora per argomento"
     search_title: "Cerca nel sito"
+
+  pager:
+    label: Navigazione delle pagine
+    prev: Pagina precedente
+    next: Pagina successiva
