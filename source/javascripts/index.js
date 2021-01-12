@@ -41,9 +41,6 @@ if ($(".swiper-container").length > 0) {
     });
   });
 
-  // Now you can call the update on a specific instance in the "swiperInstances" object
-  // e.g.
-  swiperInstances[3].update();
   //or all of them
   setTimeout(function () {
     for (const slider of swiperInstances) {
