@@ -1,20 +1,23 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= page.title
 .container
   = partial "partials/breadcrumb", locals: {page: page}
 
-- elements.each do |element|
-  = partial "partials/previews/#{element.item_type.api_key}",
-    locals: {element: element}
+.container.mid-container
+  header.py-lg-4
+    h1.mb-sm-5 = page.title
 
-/ TEMP da cancellare
 .container
+  hr.border-bottom
 
-  h1 Elenco Articoli pubblicati
-  ul
-    - visible_articles.each do |article|
-      li
-        = link_to article.title, page_path(article)
-/ TEMP da cancellare
+.py-lg-5
+  .container.mid-container
+    - items.each do |n|
+      div= partial "partials/card-related-items",
+        locals: {item: n}
+
+
+    .py-lg-4
+      = partial "partials/pagination",
+        locals: {pager: pager}
