@@ -4,3 +4,68 @@
 .container
   = partial "partials/breadcrumb", locals: {page: page}
 
+.container.mid-container
+  header
+    .row.py-lg-4
+      .col-lg-6
+        h1.mb-sm-5 = page.name
+
+      .col-lg-4
+        = partial "partials/column-title",
+          locals: {title: t('explore_aside.title')}
+
+        .link-list-wrapper.mt-2
+          ul.link-list
+            li
+              = link_to page_path(dato.search_page),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = t('explore_aside.search_title')
+            li
+              = link_to page_path(dato.explore_page),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = dato.explore_page.title
+
+.container
+  hr.border-bottom
+
+.py-lg-5
+  - if !pager.previous_page
+    - focus_pages = visible_focus_pages.select{|f| f.tags.include?(page)}
+
+    - if focus_pages.any?
+      section
+        header.container
+          h2.display-3.font-weight-semibold= t('focus.title')
+
+        .container.mid-container
+          - focus_pages.each do |f|
+            = partial "partials/card-related-items",
+              locals: {item: f}
+
+    - projects = visible_projects.select{|f| f.tags.include?(page)}
+
+    - if projects.any?
+      section
+        header.container
+          h2.display-3.font-weight-semibold= t('projects.title')
+
+        .container.mid-container
+          - projects.each do |p|
+            div= partial "partials/card-related-items",
+              locals: {item: p}
+
+    - if items.any?
+      section
+        header.container
+          h2.display-3.font-weight-semibold= t('contents.title')
+
+        .container.mid-container
+          - items.each do |n|
+            div= partial "partials/card-related-items",
+              locals: {item: n}
+
+  .py-lg-4
+    = partial "partials/pagination",
+      locals: {pager: pager}
