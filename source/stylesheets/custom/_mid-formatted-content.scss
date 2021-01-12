@@ -21,4 +21,13 @@
       }
     }
   }
+  
+  .block-body__small-image{
+    @include media-breakpoint-up(md) {
+      float: left;
+      margin-left: -48px;
+      max-width: 50%;
+      margin-right: 32px;
+    }
+  }
 }
