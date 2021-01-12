@@ -19,7 +19,7 @@
 
   = link_to page_path(article),
     class: "text-decoration-none"
-    .card.d-flex.flex-column-reverse.flex-lg-row-reverse
+    .card.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
       div class="#{length_card}"
         .card-body
           div
@@ -44,7 +44,14 @@
                   chip_size: ""}
       - if image_link.present?
         .img-responsive-wrapper.p-0 class="#{length_image}"
-          .img-responsive.img-responsive-panoramic
-            figure.img-wrapper.p-0
-              =image_tag image_link
+          .d-lg-none
+            .img-responsive.img-responsive-panoramic
+              figure.img-wrapper.p-0
+                =image_tag image_link
+          .d-none.d-lg-block
+            .img-responsive-panoramic
+              figure.position-absolute.w-100.h-100
+                =image_tag image_link,
+                  style: "object-fit: cover",
+                  class: "w-100 h-100 d-block"
 
