@@ -41,14 +41,24 @@ it:
 
   ontology:
     arguments: Argomenti
+
   link_labels:
     forum: Forum Italia
     go_to_website: Vai al sito
     website: Sito web
+
   projects:
+    title: Progetti
     highlights: In evidenza
     category: Categoria
     topics: Argomenti
+
+  focus:
+    title: Focus
+
+  contents:
+    title: Contenuti
+
   time:
     month_names:
       - Gennaio
