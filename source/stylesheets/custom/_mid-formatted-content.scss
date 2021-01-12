@@ -19,11 +19,17 @@
         left: -2rem;
         font-size: 3rem;
       }
-    }
+    }<z
   }
   
   .block-body__small-image{
-    @include media-breakpoint-up(md) {
+    display: block;
+    img{
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
       float: left;
       margin-left: -48px;
       max-width: 50%;
