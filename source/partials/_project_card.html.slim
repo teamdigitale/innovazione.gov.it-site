@@ -1,25 +1,21 @@
 - project ||= nil
 
 - if project.present?
-  .card-wrapper
-    .card.bg-transparent
-      .card-body.pl-0
-        .card-img.no-after
-          .container-fluid.mb-4: .row
-            .col-6
-              figure.figure
-                = image_tag project.image_project_logo.url(h: 250, auto:'format,compress'),
-                  class: "figure-img img-fluid",
-                  alt: project.image_project_logo.alt,
-                  title: project.image_project_logo.title
+  .card.bg-transparent.h-100
+    .card-body.pl-0
+      .card-img.no-after
+        figure.figure
+          = image_tag project.image_project_logo.url(h: 250, auto:'format,compress'),
+            class: "figure-img w-50 h-50",
+            alt: project.image_project_logo.alt,
+            title: project.image_project_logo.title
 
-        h5.card-title
-          = link_to project.title, page_path(project), class: "text-decoration-none"
+      h4.card-title.font-weight-bold = link_to project.title, page_path(project), class: "text-decoration-none"
 
-        p.card-text.text-sans-serif = project.subtitle
+      p.text-sans-serif = project.subtitle
 
-        - if project.links_external_project_card.each.present?
-          ul.list-inline
-            - project.links_external_project_card.each do |link|
-              li.list-inline-item
-                = partial "partials/external-link", locals: {link: link}
+      - if project.links_external_project_card.each.present?
+        ul.list-inline
+          - project.links_external_project_card.each do |link|
+            li.list-inline-item
+              = partial "partials/external-link", locals: {link: link}
