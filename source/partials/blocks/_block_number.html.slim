@@ -1,8 +1,7 @@
-.container.my-5: .row
-  .col-sm-8
+.my-5: .row
+  .col-12
     p = partial "partials/column-title", locals: {title: block.block_number_title}
-    .row
-      - block.numbers.each do |num|
-        .col-6
-          p.display-1.font-weight-semibold = num.number
-          p.font-weight-semibold = num.text
+  - block.numbers.each do |num|
+    .col-6
+      p.display-1.font-weight-semibold = num.number
+      p.font-weight-semibold = num.text
