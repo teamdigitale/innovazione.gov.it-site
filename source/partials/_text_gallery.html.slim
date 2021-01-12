@@ -6,6 +6,7 @@
           .swiper-slide__text
             - if slide.title
               .swiper-slide__text__title = slide.title
-            / - if slide.body_text
-            /   .swiper-slide__text__subtitle = slide.body_text
+            - slide.content_blocks.each do |block|
+              - if block.item_type.api_key == 'block_body_text'
+                .swiper-slide__text__subtitle = HTML_Truncator.truncate(block.body_text, 20)
   .swiper-pagination
