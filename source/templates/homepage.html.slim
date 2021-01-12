@@ -5,6 +5,13 @@
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block}
 
+.container.my-5
+  .row
+    .col-lg-4.mb-2.mb-lg-0
+      .wrap
+        = partial "partials/image_text_gallery",
+          locals: {slides: page.featured_projects}
+
 .container
   .row
     .col-12.col-lg-4
