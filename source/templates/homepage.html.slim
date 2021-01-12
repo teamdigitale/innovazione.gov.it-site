@@ -18,15 +18,6 @@
 .py-5.neutral-2-bg-a1
   = partial "partials/card-feature-carousel"
 
-/.container.my-5
-  .row
-    .col-lg-4.mb-2.mb-lg-0
-      = partial "partials/image_text_gallery",
-        locals: {slides: page.featured_projects}
-    .col-lg-4.mb-2.mb-lg-0
-      = partial "partials/text_gallery",
-        locals: {slides: page.minister_featured_news}
-
 .py-5.lightgrey-bg-c1
   .container
     = partial "partials/cards-horizontal-list",
@@ -34,3 +25,8 @@
       items: dato.announcements.take(3),
       btn_url: dato.announcements_index}
 
+.container.my-5
+  .row
+    .col-lg-4.mb-2.mb-lg-0
+      = partial "partials/image_text_gallery",
+        locals: {slides: page.featured_projects}
