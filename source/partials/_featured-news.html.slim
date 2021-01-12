@@ -1,5 +1,4 @@
-- featured_news = dato.homepage.featured_news
-- small_news = dato.homepage.news
+- featured_items ||= nil
 - items ||= nil
 - hide_image ||= nil
 - hide_tags ||= nil
@@ -9,17 +8,17 @@
 
 .container
   .row.row-cols-3.g-3
-    - if featured_news.length == 1
+    - if featured_items.length == 1
       .col-12
-        = partial "partials/card-featured", locals: {article: dato.homepage.featured_news.first}
-    - elsif featured_news.length == 2 && featured_news.first.respond_to?(:image_cover)
+        = partial "partials/card-featured", locals: {article: featured_items.first}
+    - elsif featured_items.length == 2 && featured_items.first.respond_to?(:image_cover)
       .col-8.p-3
-        = partial "partials/card-featured", locals: {article: dato.homepage.featured_news.first, larger_of_two: true}
+        = partial "partials/card-featured", locals: {article: featured_items.first, larger_of_two: true}
       .col-4.p-3
-        = partial"partials/card", locals: {article: featured_news[1], medium_title: true, hide_image: true}
+        = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
     - else
       .col-6.p-3
-        = partial"partials/card", locals: {article: featured_news[0], medium_title: true, hide_image: true}
+        = partial"partials/card", locals: {article: featured_items[0], medium_title: true, hide_image: true}
       .col-6.p-3
-        = partial"partials/card", locals: {article: featured_news[1], medium_title: true, hide_image: true}
+        = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
 

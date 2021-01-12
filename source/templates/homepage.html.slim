@@ -46,7 +46,7 @@
 
 .py-5.lightgrey-bg-c1
   .container
-    = partial "partials/featured-news"
+    = partial "partials/featured-news", locals: {featured_items: dato.homepage.featured_news}
     = partial "partials/cards-horizontal-list",
       locals: {items: dato.homepage.news.take(3),
       hide_image: true,
