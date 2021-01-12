@@ -38,5 +38,7 @@
               = date
           h4 class="#{text_title}"
             = item.title
-          p class="#{text_subtitle}"
-            = item.subtitle
+
+          - if item.respond_to?(:subtitle) && item.subtitle.present?
+            p class="#{text_subtitle}"
+              = item.subtitle
