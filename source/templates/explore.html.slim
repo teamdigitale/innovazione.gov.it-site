@@ -1,7 +1,8 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/breadcrumb", locals: {page: page}
+.container
+  = partial "partials/breadcrumb", locals: {page: page}
 
 .container
   header

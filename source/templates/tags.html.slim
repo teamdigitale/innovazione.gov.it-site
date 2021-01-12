@@ -1,9 +1,9 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/breadcrumb", locals: {page: page}
-
 .container
+  = partial "partials/breadcrumb", locals: {page: page}
+
   header
     .row.justify-content-center.py-lg-4
       .col-lg-7

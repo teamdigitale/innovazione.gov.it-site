@@ -2,6 +2,8 @@
   == dato_meta_tags(page)
 
 = page.title
+.container
+  = partial "partials/breadcrumb", locals: {page: page}
 
 - elements.each do |element|
   = partial "partials/previews/#{element.item_type.api_key}",
