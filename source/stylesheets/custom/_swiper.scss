@@ -22,6 +22,43 @@
   }
 }
 
+.swiper-slide__image {
+  background-color: grey;
+  height: 50%;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.swiper-slide__text {
+  background-color: white;
+  color: #33485C;
+  font-size: 16px;
+  height: 100%;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding: 25px 40px;
+}
+
+.swiper-slide__text__title {
+  color: #0066CC;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 33px;
+}
+
 .swiper-pagination {
   margin-top: 10px;
   position: relative;
