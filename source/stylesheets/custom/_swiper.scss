@@ -46,10 +46,17 @@
   background-color: white;
   color: #33485C;
   font-size: 16px;
-  height: 100%;
+  height: 50%;
   letter-spacing: 0;
   line-height: 24px;
   padding: 25px 40px;
+}
+
+.swiper--text {
+  .swiper-slide__text {
+    border-bottom: 3px solid #0066CC;
+    height: 100%;
+  }
 }
 
 .swiper-slide__text__title {
@@ -60,7 +67,7 @@
 }
 
 .swiper-pagination {
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
 }
 

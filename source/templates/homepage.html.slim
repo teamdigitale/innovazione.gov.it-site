@@ -8,9 +8,11 @@
 .container.my-5
   .row
     .col-lg-4.mb-2.mb-lg-0
-      .wrap
-        = partial "partials/image_text_gallery",
-          locals: {slides: page.featured_projects}
+      = partial "partials/image_text_gallery",
+        locals: {slides: page.featured_projects}
+    .col-lg-4.mb-2.mb-lg-0
+      = partial "partials/text_gallery",
+        locals: {slides: page.minister_featured_news}
 
 .container
   .row
