@@ -249,29 +249,41 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}/index.html",
-      "/templates/index_page.html",
-      locals: { page: dato.minister_articles_index,
-        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.minister_page)}},
-      locale: locale
+    minister_articles = PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.minister_page)}
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}/index.html",
+    paginate minister_articles,
+      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.minister_interviews_index,
-        elements: PresentationHelper.published_interviews(dato.interviews).select{|i| i.owners.include?(dato.minister_page)}},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.minister_articles_index },
+      per_page: 10
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}/index.html",
-      "/templates/index_page.html",
-      locals: { page: dato.minister_participations_index,
-        elements: PresentationHelper.published_participations(dato.participations).select{|p| p.owners.include?(dato.minister_page)}},
-      locale: locale
+    minister_interviews = PresentationHelper.published_interviews(dato.interviews).select{|i| i.owners.include?(dato.minister_page)}
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}/index.html",
+    paginate minister_interviews,
+      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.minister_press_releases_index,
-        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owners.include?(dato.minister_page)}},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.minister_interviews_index },
+      per_page: 10
+
+    minister_participations = PresentationHelper.published_participations(dato.participations).select{|i| i.owners.include?(dato.minister_page)}
+
+    paginate minister_participations,
+      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}",
+      "/templates/index_page.html",
+      suffix: "/page/:num/index",
+      locals: { page: dato.minister_participations_index },
+      per_page: 10
+
+    minister_press_releases = PresentationHelper.published_press_releases(dato.press_releases).select{|i| i.owners.include?(dato.minister_page)}
+
+    paginate minister_press_releases,
+      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}",
+      "/templates/index_page.html",
+      suffix: "/page/:num/index",
+      locals: { page: dato.minister_press_releases_index },
+      per_page: 10
 
     PresentationHelper.published_minister_subpages(dato.minister_subpages).each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
@@ -286,11 +298,12 @@ dato.tap do |dato|
       locals: { page: dato.department_page },
       locale: locale
 
-    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/index.html",
+    paginate PresentationHelper.published_focus_pages(dato.focus_pages),
+      "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.focus_index,
-        elements: PresentationHelper.published_focus_pages(dato.focus_pages)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.focus_index },
+      per_page: 10
 
     PresentationHelper.published_focus_pages(dato.focus_pages).each do |focus_page|
       proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
@@ -299,23 +312,26 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_announcements_index.slug}/index.html",
+    paginate PresentationHelper.published_announcements(dato.announcements),
+      "#{prefix}/#{dato.department_page.slug}/#{dato.department_announcements_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.department_announcements_index,
-        elements: PresentationHelper.published_announcements(dato.announcements).select{|a| a.owners.include?(dato.department_page)}},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.department_announcements_index },
+      per_page: 10
 
-    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_articles_index.slug}/index.html",
+    paginate PresentationHelper.published_articles(dato.articles),
+      "#{prefix}/#{dato.department_page.slug}/#{dato.department_articles_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.department_articles_index,
-        elements: PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.department_page)}},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.department_articles_index },
+      per_page: 10
 
-    proxy "#{prefix}/#{dato.department_page.slug}/#{dato.department_press_releases_index.slug}/index.html",
+    paginate PresentationHelper.published_press_releases(dato.press_releases),
+      "#{prefix}/#{dato.department_page.slug}/#{dato.department_press_releases_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.department_press_releases_index,
-        elements: PresentationHelper.published_press_releases(dato.press_releases).select{|p| p.owners.include?(dato.department_page)}},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.department_press_releases_index },
+      per_page: 10
 
     PresentationHelper.published_department_subpages(dato.department_subpages).each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
@@ -350,11 +366,12 @@ dato.tap do |dato|
       locals: { page: dato.news_page },
       locale: locale
 
-    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/index.html",
+    paginate PresentationHelper.published_announcements(dato.announcements),
+      "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.announcements_index,
-        elements: PresentationHelper.published_announcements(dato.announcements)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.announcements_index },
+      per_page: 10
 
     PresentationHelper.published_announcements(dato.announcements).each do |announcement|
       proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
@@ -363,11 +380,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/index.html",
+    paginate PresentationHelper.published_articles(dato.articles),
+      "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.articles_index,
-        elements: PresentationHelper.published_articles(dato.articles)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.articles_index },
+      per_page: 10
 
     PresentationHelper.published_articles(dato.articles).each do |article|
       proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
@@ -376,11 +394,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/index.html",
+    paginate PresentationHelper.published_interviews(dato.interviews),
+      "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.interviews_index,
-        elements: PresentationHelper.published_interviews(dato.interviews)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.interviews_index },
+      per_page: 10
 
     PresentationHelper.published_interviews(dato.interviews).each do |interview|
       proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
@@ -389,11 +408,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/index.html",
+    paginate PresentationHelper.published_participations(dato.participations),
+      "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.participations_index,
-        elements: PresentationHelper.published_participations(dato.participations)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.participations_index },
+      per_page: 10
 
     PresentationHelper.published_participations(dato.participations).each do |participation|
       proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
@@ -402,11 +422,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/index.html",
+    paginate PresentationHelper.published_press_releases(dato.press_releases),
+      "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}",
       "/templates/index_page.html",
-      locals: { page: dato.press_releases_index,
-        elements: PresentationHelper.published_press_releases(dato.press_releases)},
-      locale: locale
+      suffix: "/page/:num/index",
+      locals: { page: dato.press_releases_index },
+      per_page: 10
 
     PresentationHelper.published_press_releases(dato.press_releases).each do |press_release|
       proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
