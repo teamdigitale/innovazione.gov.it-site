@@ -5,45 +5,6 @@
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block}
 
-.container.my-5
-  .row
-    .col-lg-4.mb-2.mb-lg-0
-      = partial "partials/image_text_gallery",
-        locals: {slides: page.featured_projects}
-    .col-lg-4.mb-2.mb-lg-0
-      = partial "partials/text_gallery",
-        locals: {slides: page.minister_featured_news}
-
-.container
-  .row
-    .col-12.col-lg-4
-      .card-wrapper.card-space
-        .card.card-bg
-          .card-body
-            h5.card-title
-              = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-
-            .card-text
-              = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-
-.container
-  = link_to "Link a indice articoli",
-    page_path(dato.articles_index)
-
-.container
-  = link_to "Link a indice articoli ministro",
-    page_path(dato.minister_articles_index)
-
-.container
-  - visible_projects.each do |project|
-    = link_to "Link a progetto",
-      page_path(project)
-
-.container
-  - visible_projects_categories.each do |projects_category|
-    = link_to "Ancora a categoria progetto #{projects_category.name}",
-      "#{page_path(dato.projects_page)}##{projects_category.slug}"
-
 .py-5.lightgrey-bg-c1
   .container
     = partial "partials/featured-news", locals: {featured_items: dato.homepage.featured_news}
@@ -54,6 +15,19 @@
       show_item_type: true,
       btn_url: dato.news_page}
 
+.py-5.neutral-2-bg-a1
+  = partial "partials/card-feature-carousel"
+
+/.container.my-5
+  .row
+    .col-lg-4.mb-2.mb-lg-0
+      = partial "partials/image_text_gallery",
+        locals: {slides: page.featured_projects}
+    .col-lg-4.mb-2.mb-lg-0
+      = partial "partials/text_gallery",
+        locals: {slides: page.minister_featured_news}
+
+.py-5.lightgrey-bg-c1
   .container
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
