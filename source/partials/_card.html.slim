@@ -32,28 +32,28 @@
       .card-body
         div
           - if show_item_type
-            .category.py-3
+            .category.py-3.card-text
               span.pr-2.text-uppercase.font-weight-semibold.text-muted
                 = t("models.#{article.item_type.api_key}")
               span.px-2.text-secondary
                 = partial "partials/formatted-date", locals: {date: article.date_shown}
           - else
-            p.text-secondary.data
+            p.card-text.text-secondary
               = partial "partials/formatted-date", locals: {date: article.date_shown}
           - if large_title
-            h2.text-primary
+            .h2.text-primary
               = article.title
           - elsif medium_title
-            h4.text-primary.font-weight-bold
+            .h4.text-primary.font-weight-bold
               = article.title
           - else
-            h5.text-primary.font-weight-bold
+            .body-text.text-primary.font-weight-bold
               = article.title
           - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
             .h6.text-muted.pt-3
               = article.source
           - else
-            p.card-text.pt-3
+            .small.text-muted.pt-3
               = article.subtitle
         .my-4
         .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end

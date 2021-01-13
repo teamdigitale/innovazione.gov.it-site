@@ -1,28 +1,28 @@
 .row
-  .text-center.col-lg-2.pt-5.d-lg-flex.justify-content-lg-around
-    .avatar.size-xxl.ml-lg-4
+  .text-center.col-md-2.pt-5.d-md-flex.justify-content-lg-around
+    .avatar.size-xxl.ml-md-4
       = image_tag dato.minister_page.photo.url,
         class: "bg-primary"
-  .col-lg-5
+  .col-md-5
     .card-wrapper
       = link_to "#",
         class: "text-decoration-none"
         .card
           .card-body.neutral-2-bg-a1
             div
-              .category.py-2
-                span.pr-2.text-uppercase.font-weight-semibold.text-muted
+              .py-2
+                span.pr-2.small.text-uppercase.font-weight-semibold.text-muted
                   = page.minister_pre_title
               h1.text-primary
                 = page.minister_title
               p.h5.text-black
                 = page.minister_text
-            .my-3.mt-lg-5.text-center
+            .my-3.mt-lg-5.text-center.text-md-left
               = link_to t("view_more"),
                 page_path(dato.minister_page),
                 class: "btn btn-primary text-white text-uppercase"
 
-  .col-lg-4.px-4.p-lg-0.mb-2.mb-lg-0
+  .col-md-4.px-4.p-md-0.mb-2.mb-md-0
     = partial "partials/text_gallery",
       locals: {slides: page.minister_featured_news}
   .col-lg-1

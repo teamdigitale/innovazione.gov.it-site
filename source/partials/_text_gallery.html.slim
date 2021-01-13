@@ -8,12 +8,12 @@
           .swiper-slide
             .swiper-slide__text
               div
-                .text-uppercase.font-weight-semibold.text-muted
+                .card-text.text-uppercase.font-weight-semibold.text-muted
                   = t("models.#{slide.item_type.api_key}")
                 - if slide.title
-                  .h3.py-3.text-primary.font-weight-bold
+                  .h4.py-3.text-primary.font-weight-bold
                     = slide.title
-                  .card-text
+                  .body-text
                     = slide.subtitle
               .my-5
               .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end

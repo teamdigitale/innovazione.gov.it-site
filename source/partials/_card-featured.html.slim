@@ -23,14 +23,14 @@
       div class="#{length_card}"
         .card-body
           div
-            .category.py-2
+            .category.py-2.card-text
               span.pr-2.text-uppercase.font-weight-semibold.text-muted
                 = t("models.#{article.item_type.api_key}")
               span.px-2.text-secondary
                 = partial "partials/formatted-date", locals: {date: article.date_shown}
-            h3.text-primary
+            .h3.text-primary
               = article.title
-            p.card-text
+            p.body-text.text-muted
               = article.subtitle
           .my-4
           .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end

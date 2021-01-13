@@ -11,10 +11,9 @@
     class: "text-decoration-none"
     .card.h-100
       .card-body
-        .category.py-2
-          p.text-uppercase.font-weight-semibold.text-muted
-            = announcement.announcement_status.name
-          h5.text-primary.font-weight-bold
-            = announcement.title
-          p.text-secondary.font-weight-semibold.text-muted
-            = deadline
+        .card-text.small.text-uppercase.font-weight-semibold.text-muted
+          = announcement.announcement_status.name
+        .body-text.text-primary.font-weight-bold
+          = announcement.title
+        p.text-secondary.font-weight-semibold.text-muted
+          = deadline
