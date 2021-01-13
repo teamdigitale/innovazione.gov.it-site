@@ -7,6 +7,8 @@
 - hide_tags ||= nil
 - show_item_type ||= nil
 - title ||= ''
+- special_subtitle ||= nil
+- unequal_height ||= nil
 
 .mb-4.mb-lg-5
   = partial "partials/section-title", locals: {title: title}
@@ -18,7 +20,7 @@
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
       - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-        - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
+        - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
 
       - if item.present? && card_partial.present?
         = card_partial

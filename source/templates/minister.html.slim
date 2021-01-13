@@ -55,3 +55,10 @@
       items: dato.minister_page.participations.take(3),
       hide_tags:true,
       btn_url: dato.minister_participations_index}
+
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("interviews_section_title"),
+      items: dato.minister_page.interviews,
+      special_subtitle: true,
+      unequal_height: true,
+      btn_url: dato.minister_interviews_index}

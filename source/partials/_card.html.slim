@@ -4,20 +4,26 @@
 - show_item_type ||= nil
 - large_title ||= nil
 - medium_title ||= nil
+- special_subtitle ||= nil
+- unequal_height ||= nil
 
 - if article.present?
   - date ||= ''
   - subtitle ||= ''
   - tags ||= ''
-  - image = ""
+  - image = ''
   - image_link = ''
   - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
     - image = "card-img no-after rounded shadow"
     - image_link = article.image_cover.url
+  - if !hide_image && (article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?)
+    - image = "card-img no-after rounded shadow"
+    - image_link = article.image_thumbnail.url
+  - height = unequal_height ? '' : 'h-100'
 
   = link_to page_path(article),
     class: "text-decoration-none"
-    .card.h-100 class="#{image}"
+    .card class="#{image} #{height}"
       - if image_link.present?
         .img-responsive-wrapper
           .img-responsive
@@ -26,7 +32,7 @@
       .card-body
         div
           - if show_item_type
-            .category.py-2
+            .category.py-3
               span.pr-2.text-uppercase.font-weight-semibold.text-muted
                 = t("models.#{article.item_type.api_key}")
               span.px-2.text-secondary
@@ -43,8 +49,12 @@
           - else
             h5.text-primary.font-weight-bold
               = article.title
-          p.card-text
-            = article.subtitle
+          - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
+            .h6.text-muted.pt-3
+              = article.source
+          - else
+            p.card-text.pt-3
+              = article.subtitle
         .my-4
         .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
           - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
