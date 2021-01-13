@@ -1,0 +1,16 @@
+- subs ||= nil
+
+- if subs.present? && subs.count > 0
+  - col_items = (subs.count.to_f/2).ceil()
+  - i = 1
+
+  div = partial "partials/column-title", locals: {title: t("deepen")}
+
+  .row                
+    - subs.each_slice(col_items) do |group|
+      .col-6.col-sm-5 class=("mr-sm-5" if i == 1)
+        - i += 1
+        - group.each do |item|
+          = link_to item.title,
+            page_path(item),
+            class: "text-decoration-none font-weight-semibold"
