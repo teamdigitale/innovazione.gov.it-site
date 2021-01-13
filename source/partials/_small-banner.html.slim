@@ -1,7 +1,12 @@
-- if banner.title.present?
-  = banner.title
+.border-bottom.py-2.py-lg-1
+  .container
+    section.d-flex.flex-row.align-items-start.align-items-lg-center.justify-content-between.justify-content-lg-start
+      .d-lg-flex.align-items-lg-center
+        - if banner.title.present?
+          h2.h4.text-primary.mid-underline
+            = banner.title
 
-= banner.text
+        .px-lg-3= banner.text
 
-= partial "partials/#{banner.link.item_type.api_key}",
-  locals: {item: banner.link}
+      = partial "partials/links/#{banner.link.item_type.api_key}",
+        locals: {item: banner.link, html_class: "btn text-primary text-uppercase px-0 text-nowrap"}
