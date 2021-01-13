@@ -42,3 +42,6 @@
           - if item.respond_to?(:subtitle) && item.subtitle.present?
             p class="#{text_subtitle}"
               = item.subtitle
+
+          - if item.respond_to?(:source) && item.source.present?
+            .h6 = item.source
