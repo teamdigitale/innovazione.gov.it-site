@@ -23,3 +23,11 @@
 
       - if page.credits.present?
         = partial "partials/credits", locals: {credits: page.credits}
+
+  - if page.related_items.count > 0
+    .row.mid-border-lg-top.py-5
+      .col-sm-8
+        = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
+        - page.related_items.each do |item|
+          = partial "partials/card-related-items",
+            locals: {item: item}
