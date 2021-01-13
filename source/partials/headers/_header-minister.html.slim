@@ -33,22 +33,7 @@
               .col-sm-6
                 = yield_content :col_two
 
-          - if subs.present? && subs.count > 0
-            div = partial "partials/column-title", locals: {title: t("deepen")}
-
-            ruby:
-              links = ["pippo", "Eventuale figlia di uno", "E anche la sorella potrebbe essere molto lunga", "qui", "quo", "qua", "Per non parlare di questo titolo che è lunghissimo"]
-              col_items = (subs.count.to_f/2).ceil()
-              i = 1
-              
-            .row                
-              - subs.each_slice(col_items) do |group|
-                .col-6.col-sm-5 class=("mr-sm-5" if i == 1)
-                  - i += 1
-                  - group.each do |item|
-                    = link_to item.title,
-                      page_path(item),
-                      class: "text-decoration-none font-weight-semibold"
+          = partial "partials/headers/subpages-menu", locals: {subs: subs}
           
         - if content_for?(:aside)
           .col-md-4.order-2.order-md-3.mb-5.mb-md-0
