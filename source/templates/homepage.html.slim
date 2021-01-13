@@ -28,3 +28,12 @@
 .py-5.lightgrey-bg-c1
   .container
     = partial "partials/card-featured-projects"
+
+.neutral-2-bg-a1
+  = partial "partials/flag", locals: {flags: dato.homepage.sections}
+
+.container.my-5
+  .row
+    .col-lg-4.mb-2.mb-lg-0
+      = partial "partials/image_text_gallery",
+        locals: {slides: page.featured_projects}

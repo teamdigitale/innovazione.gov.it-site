@@ -1,0 +1,19 @@
+- flags ||= nil
+
+- flags.each do |flag|
+  .row.align-items-center
+    .col-lg-6.p-0.order-lg-1
+      figure
+        = image_tag flag.image.url,
+          class: "img-fluid"
+
+    .col-lg-6.order-lg-2
+      .col-8.offset-2
+        div
+          h4 = flag.pre_title
+          h2 = flag.title
+          .my-3.mt-lg-5.text-center.text-lg-left
+            = link_to t("view_more"),
+              page_path(flag.link.link),
+              class: "btn btn-primary text-white text-uppercase"
+
