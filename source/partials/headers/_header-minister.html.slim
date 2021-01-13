@@ -1,0 +1,61 @@
+- page ||= nil
+- share ||= nil
+- classes ||= ""
+- subs ||= nil
+
+- subtitle = page.respond_to?(:subtitle) && page.subtitle.present? ? page.subtitle : nil
+- summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
+
+- if page.present?
+  header.pb-5 class=(classes)
+    .container.pb-5.text-center.text-sm-left
+      .row
+        .col-12.order-1
+          = partial "partials/breadcrumb", locals: {page: page}
+
+        .offset-lg-1.col-lg-6.col-md-8.order-3.order-md-2
+          .row
+            .col-md-9
+              .text-center.text-sm-left.pb-4
+                h1.font-weight-semibold = page.title
+                - if subtitle.present?
+                  p.lead = subtitle
+                - if summary.present?
+                  p.text-center.text-sm-left = markdown summary
+
+          - yield
+          .row.mb-5
+            - if content_for?(:col_one)
+              .col-sm-6.pb-5.pb-sm-0
+                = yield_content :col_one
+
+            - if content_for?(:col_two)
+              .col-sm-6
+                = yield_content :col_two
+
+          - if subs.present? && subs.count > 0
+            div = partial "partials/column-title", locals: {title: t("deepen")}
+
+            ruby:
+              links = ["pippo", "Eventuale figlia di uno", "E anche la sorella potrebbe essere molto lunga", "qui", "quo", "qua", "Per non parlare di questo titolo che è lunghissimo"]
+              col_items = (subs.count.to_f/2).ceil()
+              i = 1
+              
+            .row                
+              - subs.each_slice(col_items) do |group|
+                .col-6.col-sm-5 class=("mr-sm-5" if i == 1)
+                  - i += 1
+                  - group.each do |item|
+                    = link_to item.title,
+                      page_path(item),
+                      class: "text-decoration-none font-weight-semibold"
+          
+        - if content_for?(:aside)
+          .col-md-4.order-2.order-md-3.mb-5.mb-md-0
+            .px-5.px-md-0
+              - if share.present?
+                .mb-5 = partial "partials/share"
+              - if content_for?(:aside)
+                = yield_content :aside 
+
+

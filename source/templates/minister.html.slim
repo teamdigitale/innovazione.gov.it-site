@@ -1,23 +1,20 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/page-header", locals: {page: page, classes: "bg-light"} do
+= partial "partials/headers/header-minister", locals: { page: page, classes: "bg-light", subs: visible_minister_subpages } do
     = content_for :aside
       - image = page.photo
       .text-center
         figure.figure
           = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
             data: {'sizes': '100vw',
-              'src': image.url(w: 1000, h: 600, fit:'crop', auto:'compress'),
-              'srcset': "#{image.url(w: 480, h: 288, fit:'crop', auto:'compress')} 480w,
-              #{image.url(w: 719, h: 432, fit:'crop', auto:'compress')} 719w,
-              #{image.url(w: 1000, h: 600, fit:'crop', auto:'compress')} 1023w"},
-            class: "lazyload figure-img img-fluid",
+              'src': image.url(w: 600, h: 600, fit:'crop', auto:'compress'),
+              'srcset': "#{image.url(w: 300, h: 300, fit:'crop', auto:'compress')} 480w,
+              #{image.url(w: 750, h: 750, fit:'crop', auto:'compress')} 719w,
+              #{image.url(w: 1000, h: 1000, fit:'crop', auto:'compress')} 1023w"},
+            class: "lazyload figure-img img-fluid rounded-circle",
             alt: image.alt,
             title: image.title
-
-    = content_for :col_one
-      = partial "partials/column-title", locals: {title: t("deepen")}
 
 .py-5.lightgrey-bg-c1
   .container
