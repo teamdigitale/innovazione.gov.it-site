@@ -12,3 +12,12 @@
   = content_for :col_one
     = partial "partials/column-title", locals: {title: "Data"}
     = partial "partials/formatted-date", locals: {date: page.date_shown}
+
+
+.container.border-top
+  .row
+    .col-12.col-lg-8.offset-lg-1.m-auto
+      article
+        = partial "partials/page-blocks",
+          locals: {page: page}
+
