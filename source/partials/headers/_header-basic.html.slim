@@ -3,9 +3,6 @@
 - classes ||= ""
 - subs ||= nil
 
-- subtitle = page.respond_to?(:subtitle) && page.subtitle.present? ? page.subtitle : nil
-- summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
-
 - if page.present?
   header.mb-5 class=(classes)
     .container.pb-5.text-center.text-sm-left
@@ -14,12 +11,7 @@
           = partial "partials/breadcrumb", locals: {page: page}
 
         .offset-lg-1.col-lg-6.col-md-8
-          .text-center.text-sm-left.pb-4
-            h1.font-weight-semibold = page.title
-            - if subtitle.present?
-              p.lead = subtitle
-            - if summary.present?
-              p.text-center.text-sm-left = markdown summary
+          = partial "partials/headers/main-titles", locals: {page: page}
 
           - yield
           .row.mb-5
