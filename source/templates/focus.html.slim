@@ -3,3 +3,12 @@
 
 = partial "partials/headers/header-basic", locals: { page: page, share: true } do
 
+.container.border-top
+  .row
+    .col-lg-3.border-right.hidden.d-none.d-lg-block
+      = partial "partials/sticky-anchor", locals: {page: page}
+
+    .col-12.col-lg-8.offset-lg-1
+      article
+        = partial "partials/page-blocks",
+          locals: {page: page}
