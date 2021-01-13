@@ -20,3 +20,6 @@
             - page.attachments.each do |attachment|
               .col-12.col-md-6.mt-3
                 = partial "partials/attachment", locals: {attachment: attachment}
+
+      - if page.credits.present?
+        = partial "partials/credits", locals: {credits: page.credits}
