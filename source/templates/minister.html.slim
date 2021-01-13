@@ -1,20 +1,35 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-= partial "partials/headers/header-minister", locals: { page: page, classes: "bg-light", subs: visible_minister_subpages } do
-    = content_for :aside
-      - image = page.photo
-      .text-center
-        figure.figure
-          = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
-            data: {'sizes': '100vw',
-              'src': image.url(w: 600, h: 600, fit:'crop', auto:'compress'),
-              'srcset': "#{image.url(w: 300, h: 300, fit:'crop', auto:'compress')} 480w,
-              #{image.url(w: 750, h: 750, fit:'crop', auto:'compress')} 719w,
-              #{image.url(w: 1000, h: 1000, fit:'crop', auto:'compress')} 1023w"},
-            class: "lazyload figure-img img-fluid rounded-circle",
-            alt: image.alt,
-            title: image.title
+- if page.present?
+  header.pb-5.bg-light
+    .container.pb-5.text-center.text-sm-left
+      .row
+        .col-12.order-1
+          = partial "partials/breadcrumb", locals: {page: page}
+
+        .offset-lg-1.col-lg-6.col-md-8.order-3.order-md-2
+          .row
+            .col-md-9
+              = partial "partials/headers/main-titles", locals: {page: page}
+          
+          = partial "partials/headers/subpages-menu", locals: {subs: visible_minister_subpages}
+          
+        .col-md-4.order-2.order-md-3.mb-5.mb-md-0
+          .px-5.px-md-0
+            - image = page.photo
+            .text-center
+              figure.figure
+                = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
+                  data: {'sizes': '100vw',
+                    'src': image.url(w: 600, h: 600, fit:'crop', auto:'compress'),
+                    'srcset': "#{image.url(w: 300, h: 300, fit:'crop', auto:'compress')} 480w,
+                    #{image.url(w: 750, h: 750, fit:'crop', auto:'compress')} 719w,
+                    #{image.url(w: 1000, h: 1000, fit:'crop', auto:'compress')} 1023w"},
+                  class: "lazyload figure-img img-fluid rounded-circle",
+                  alt: image.alt,
+                  title: image.title
+
 
 .py-5.lightgrey-bg-c1
   .container
