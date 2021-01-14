@@ -3,9 +3,10 @@
 
 .py-5.lightgrey-bg-c1
   .container
+    .d-none.d-lg-block.mt-lg-3
+      = partial "partials/section-title", locals: {title: t("articles_section_title")}
     = partial "partials/cards-horizontal-list",
       locals: {items: page.articles.take(3),
-      title: t("articles_section_title"),
       hide_image: true,
       hide_tags: true,
       btn_url: dato.department_articles_index}
