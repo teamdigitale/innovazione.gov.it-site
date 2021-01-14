@@ -1,19 +1,18 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container
-  = partial "partials/breadcrumb", locals: {page: page}
+header.mb-5
+  .container.pb-5.text-center.text-sm-left
+    .row
+      .col-12
+        = partial "partials/breadcrumb", locals: {page: page}
 
-.container.mid-container
-  header
-    .row.py-lg-4
-      .col-lg-6
-        h1.mb-sm-5 = page.name
+      .col-md-7
+        h1.font-weight-bold = page.name
 
-      .col-lg-4
+      .offset-lg-1.col-md-4
         = partial "partials/column-title",
           locals: {title: t('explore_aside.title')}
-
         .link-list-wrapper.mt-2
           ul.link-list
             li
