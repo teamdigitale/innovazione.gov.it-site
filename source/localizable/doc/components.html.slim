@@ -14,7 +14,7 @@ main.container.my-5
 
 = partial "partials/doc/section", locals: {title: "Heroes"} do
   | 
-    <code>partials/headers/page-header</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
+    <code>partials/headers/header-basic</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
     Il partial si aspetta un oggetto <code>page</code> che contenga smepre almeno <code>title e description</code> e opzionalmente <code>summary</code>
     Il partial accetta alcuni parametru opzionali:
   ul
@@ -23,13 +23,20 @@ main.container.my-5
     li <code>subs: [collection]</code> per mostrare il menu degli approfondimenti (subpages)
   
   | È necessario poi passare un blocco che contenga <code>content_for [:area]</code> o che almeno finisca con un <code>do</code> lasciando il blocco vuoto.
-    Le aree dispnibili sono: <code>:aside, :col_one, :col_two, :col_three</code>.
+    Le aree dispnibili sono: <code>:aside, :col_one, :col_two</code>.
     Ogni blocco dentro <code>content_for</code> può avere codice a piacimento
 
+- page = visible_articles.first
+= partial "partials/headers/header-basic", locals: {page: page, share: nil, subs: visible_projects_subpages} do
+
+  = content_for :aside, flush: true
+    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+    - page.tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: "#"}
 
 
 - page = visible_articles.first
-= partial "partials/headers/header-basic", locals: {page: page, share: true, subs: visible_projects_subpages} do
+= partial "partials/headers/header-basic", locals: {page: page, share: true} do
 
   = content_for :aside, flush: true
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
@@ -45,60 +52,6 @@ main.container.my-5
     .post__reading-time
       => article_reading_time(page)
       = I18n.t("minutes")
-
-
-
-
-
-= partial "partials/doc/section", locals: {title: "Header Focus"} do
-  - page = dato.minister_page
-
-  = partial "partials/page-header", locals: {page: page, classes: "bg-primary text-white" } do
-    = content_for :aside, flush: true
-      = image_tag "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreepngimages.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fcockerel-transparent-image.png&f=1&nofb=1",
-        class: "img-fluid"
-
-
-    = content_for :col_one, flush: true
-      = partial "partials/column-title", locals: {title: t("deepen"), classes: "text-white"}
-
-    = content_for :col_two, flush: true
-      = partial "partials/column-title", locals: {title: t("projects.topics"), classes: "text-white"}
-      = partial "partials/formatted-date", locals: {date: Time.now}
-
-
-
-= partial "partials/doc/section", locals: {title: "Header Ministro"} do
-  - page = dato.minister_page
-
-  = partial "partials/page-header", locals: {page: page, classes: "bg-light", subs: visible_projects_subpages} do
-
-    = content_for :aside, flush: true
-      - image = dato.minister_page.photo
-      .text-center
-          / FIX ME : fare partial imamgine
-          figure.figure
-            = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
-              data: {'sizes': '100vw',
-                'src': image.url(w: 1000, h: 600, fit:'crop', auto:'compress'),
-                'srcset': "#{image.url(w: 480, h: 288, fit:'crop', auto:'compress')} 480w,
-                #{image.url(w: 719, h: 432, fit:'crop', auto:'compress')} 719w,
-                #{image.url(w: 1000, h: 600, fit:'crop', auto:'compress')} 1023w,
-                #{image.url(w: 666, h: 400, fit:'crop', auto:'compress')} 1500w"},
-              class: "lazyload figure-img img-fluid",
-              alt: image.alt,
-              title: image.title
-
-
-= partial "partials/doc/section", locals: {title: "Header basico"} do
-  - page = visible_articles.first
-  = partial "partials/page-header", locals: {page: page, subs: visible_projects_subpages} do
-    = content_for :aside, flush: true
-      span
-
-
-
-
 
 
 
