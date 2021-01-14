@@ -4,7 +4,7 @@
   .container
     .row.my-3
       div class=(block.big.present? ? "col-12" : "col-lg-9")
-        figure.figure
+        figure.figure.m-0
           = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
             data: {'sizes': '100vw',
               'src': image.url(w: 1000, h: 600, fit:'crop', auto:'compress'),
@@ -12,6 +12,6 @@
               #{image.url(w: 719, h: 432, fit:'crop', auto:'compress')} 719w,
               #{image.url(w: 1000, h: 1000, fit:'crop', auto:'compress')} 1023w,
               #{image.url(w: 1666, h: 1400, fit:'crop', auto:'compress')} 1500w"},
-            class: "lazyload figure-img img-fluid",
+            class: "lazyload figure-img img-fluid m-0",
             alt: image.alt,
             title: image.title
