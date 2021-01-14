@@ -11,6 +11,14 @@ const mode = (process.env.NODE_ENV === 'production') ? 'production' : 'developme
 const assetHash = (mode === 'production')? '-[fullhash:8]' : ''
 const jsFilenameTemplate = `javascripts/[name]${assetHash}.js`
 const cssFilenameTemplate = `stylesheets/[name]${assetHash}.css`
+const isProduction = mode === 'production'
+
+const extraPlugins = []
+if (isProduction) {
+  extraPlugins.push(new CompressionPlugin({
+    compressionOptions: {cache: true}
+  }))
+}
 
 const extractMiniCss = new MiniCssExtractPlugin({
   filename: cssFilenameTemplate
@@ -152,12 +160,10 @@ module.exports = {
       }
     ),
     extractMiniCss,
-    new CompressionPlugin({
-      compressionOptions: {cache: true}
-    })
+    ...extraPlugins
   ],
   optimization: {
-    minimize: true,
+    minimize: isProduction,
     minimizer: [new TerserPlugin()]
   }
 }
