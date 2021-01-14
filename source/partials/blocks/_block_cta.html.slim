@@ -1,5 +1,5 @@
-= "CTA block"
-
-- block.cta_items.each do |item|
-  = partial "partials/links/#{item.item_type.api_key}",
-    locals: {item: item}
+.container.d-flex.flex-column.align-items-center.flex-sm-row.my-3.my-sm-4
+  - block.cta_items.each.with_index do |item, i|
+    - html_class = i == 0 ? "btn-outline-primary mr-sm-4" : "btn-primary"
+    = partial "partials/links/#{item.item_type.api_key}",
+      locals: {item: item, html_class: "btn my-3 #{html_class}"}
