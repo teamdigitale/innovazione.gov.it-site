@@ -2,7 +2,7 @@
   == dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: { page: page } do
-  
+
   = content_for :aside
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
     - page.tags.each do |tag|
@@ -15,3 +15,6 @@
   = content_for :col_two
     = partial "partials/column-title", locals: {title: "Stato"}
     = partial "partials/column-title", locals: {title: "Data di chiusura"}
+
+= partial "partials/layouts/one-column",
+  locals: {page: page}

@@ -3,38 +3,5 @@
 
 = partial "partials/headers/header-basic", locals: { page: page, share: true } do
 
-.container.border-top
-  .row
-    .col-lg-3.border-right.hidden.d-none.d-lg-block
-      = partial "partials/sticky-anchor", locals: {page: page}
-
-    .col-12.col-lg-8.offset-lg-1
-      article
-        = partial "partials/page-blocks",
-          locals: {page: page}
-
-      - if page.attachments.count > 0
-        .mt-5.py-3
-          = partial "partials/column-title", locals: {title: I18n.t("attachments")}
-          .row
-            - page.attachments.each do |attachment|
-              .col-12.col-md-6.mt-3
-                = partial "partials/attachment", locals: {attachment: attachment}
-
-      - if page.credits.present?
-        = partial "partials/credits", locals: {credits: page.credits}
-
-      - if page.updated_at.present?
-        .my-5
-          = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
-          = partial "partials/formatted-date", locals: {date: page.updated_at}
-
-
-
-  - if page.related_items.count > 0
-    .row.mid-border-lg-top.py-5
-      .col-sm-8
-        = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
-        - page.related_items.each do |item|
-          = partial "partials/card-related-items",
-            locals: {item: item}
+= partial "partials/layouts/two-columns",
+  locals: {page: page}
