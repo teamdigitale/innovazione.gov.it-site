@@ -1,0 +1,10 @@
+- page ||= nil
+
+- if page.present?
+  - mins = article_reading_time(page)
+
+  - if mins.present? && mins.to_i >= 2
+    = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
+    .post__reading-time
+      => mins
+      = I18n.t("minutes")
