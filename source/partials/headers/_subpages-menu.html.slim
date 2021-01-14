@@ -1,10 +1,12 @@
 - subs ||= nil
+- hide_caption ||= nil
 
 - if subs.present? && subs.count > 0
   - col_items = (subs.count.to_f/2).ceil()
   - i = 1
 
-  div = partial "partials/column-title", locals: {title: t("deepen")}
+  - if hide_caption != true
+    div = partial "partials/column-title", locals: {title: t("deepen")}
 
   .row                
     - subs.each_slice(col_items) do |group|

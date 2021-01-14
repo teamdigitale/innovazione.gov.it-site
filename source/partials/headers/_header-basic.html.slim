@@ -2,6 +2,7 @@
 - share ||= nil
 - classes ||= ""
 - subs ||= nil
+- hide_caption ||= nil
 
 - if page.present?
   header.mb-5 class=(classes)
@@ -23,7 +24,7 @@
               .col-sm-6
                 = yield_content :col_two
 
-          = partial "partials/headers/subpages-menu", locals: {subs: subs}
+          = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
           
         - if content_for?(:aside)
           .offset-lg-1.col-md-4
