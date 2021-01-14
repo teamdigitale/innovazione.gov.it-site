@@ -24,10 +24,8 @@
   - letters = visible_tags.map{|tag| tag.name[0].downcase}.uniq
   .row.py-lg-5
     - letters.each do |letter|
-      .col-lg-3
+      .col-lg-3.mb-5
         h2.display-1.font-weight-semibold.text-uppercase= letter
-        .link-list-wrapper
-          ul.link-list
             - visible_tags.select{|t| t.name[0].downcase == letter}.each do |tag|
               li
                 = link_to page_path(tag),
