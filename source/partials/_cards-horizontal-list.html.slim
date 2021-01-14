@@ -9,9 +9,10 @@
 - title ||= ''
 - special_subtitle ||= nil
 - unequal_height ||= nil
-- self_standing_section = title.present? ? 'mt-4 mt-lg-5' : ''
+- self_standing_section = title.present? ? 'mt-3 mt-lg-4' : ''
 
 = partial "partials/section-title", locals: {title: title}
+
 .row.row-cols-md-3.g-3 class="#{self_standing_section}"
   - items.each do |item|
     .col-md-4.p-3
@@ -25,7 +26,7 @@
         = card_partial
 
   .col-md-12
-    .my-3.mt-lg-5.text-center
+    .my-4.pb-4.text-center
       = link_to t("view_more"),
         page_path(btn_url),
         class: "btn btn-primary text-white text-uppercase"
