@@ -1,17 +1,16 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container
-  = partial "partials/breadcrumb", locals: {page: page}
+header.mb-5
+  .container.pb-5.text-center.text-sm-left
+    .row
+      .col-12
+        = partial "partials/breadcrumb", locals: {page: page}
 
-.container
-  header.section.p-0
-    .row.justify-content-between
-      .col-lg-8
-        .mid-search
-          #search-container
+      .col-md-7
+        #search-container
 
-      .col-lg-3
+      .offset-lg-1.col-md-4
         = partial "partials/column-title",
           locals: {title: t('explore_aside.title')}
 
@@ -28,3 +27,4 @@
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold
                     = dato.explore_page.title
+                    
