@@ -16,7 +16,8 @@
       btn_url: dato.news_page}
 
 .py-5.neutral-2-bg-a1
-  = partial "partials/card-feature-carousel"
+  .container
+    = partial "partials/card-feature-carousel"
 
 .py-5.lightgrey-bg-c1
   .container
@@ -29,8 +30,9 @@
   .container
     = partial "partials/card-featured-projects"
 
-.neutral-2-bg-a1
-  = partial "partials/flag", locals: {flags: dato.homepage.sections}
+.py-5.neutral-2-bg-a1
+  .container
+    = partial "partials/flag", locals: {flags: dato.homepage.sections, image: 2}
 
 .container.my-5
   .row
