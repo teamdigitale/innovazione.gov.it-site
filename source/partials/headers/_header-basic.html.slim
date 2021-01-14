@@ -15,14 +15,15 @@
           = partial "partials/headers/main-titles", locals: {page: page}
 
           - yield
-          .row.mb-5
-            - if content_for?(:col_one)
-              .col-sm-6.pb-5.pb-sm-0
-                = yield_content :col_one
+          - if content_for?(:col_one) || content_for?(:col_two)
+            .row.mb-5
+              - if content_for?(:col_one)
+                .col-sm-6.pb-5.pb-sm-0
+                  = yield_content :col_one
 
-            - if content_for?(:col_two)
-              .col-sm-6
-                = yield_content :col_two
+              - if content_for?(:col_two)
+                .col-sm-6
+                  = yield_content :col_two
 
           = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
           
