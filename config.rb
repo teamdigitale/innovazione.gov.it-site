@@ -248,7 +248,7 @@ dato.tap do |dato|
 
     PresentationHelper.published_general_pages(dato.general_pages).each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
-      proxy "#{prefix}/#{parent_path}/#{general_page.slug}/index.html",
+      proxy "#{prefix}#{parent_path}/#{general_page.slug}/index.html",
         "/templates/page.html",
         locals: { page: general_page },
         locale: locale
