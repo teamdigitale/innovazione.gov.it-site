@@ -26,16 +26,14 @@
       items: dato.announcements.take(3),
       btn_url: dato.announcements_index}
 
+.py-5.neutral-2-bg-a1
+  .container
+    = partial "partials/card-feature-carousel"
+
 .py-5.lightgrey-bg-c1
   .container
-    = partial "partials/card-featured-projects"
+    = partial "partials/card-featured-projects", locals: {page: page}
 
 .lightgrey-bg-a2
   .container
     = partial "partials/flag", locals: {flags: page.sections, image_right: true}
-
-.container.my-5
-  .row
-    .col-lg-4.mb-2.mb-lg-0
-      = partial "partials/image_text_gallery",
-        locals: {slides: page.featured_projects}

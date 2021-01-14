@@ -1,11 +1,18 @@
-.row
-  / .col-lg-2.pt-5.d-lg-flex.justify-content-lg-around
-  .col-lg-1
-  .col-lg-4.px-4.p-lg-0.mb-2.mb-lg-0.justify-content-center
+.row.align-items-center
+  .col-lg-6
+    .col-lg-8.offset-lg-2
       = partial "partials/image_text_gallery",
         locals: {slides: page.featured_projects}
-  .col-lg-1
-  .col-lg-1
-
   .col-lg-5
+    div.py-5.px-2.p-md-0
+      .small.text-uppercase.font-weight-semibold.text-muted.pt-5.p-md-0.text-center.text-md-left
+        = page.projects_pre_title
+      .d-none.d-lg-block.h1.pt-2 = page.projects_title
+      .d-none.d-md-block.d-lg-none.h4.pt-2 = page.projects_title
+      .d-md-none.h4.pt-2.text-center = page.projects_title
+      .my-3.mt-md-5.text-center.text-md-left.pb-5.p-md-0
+        = link_to t("view_more"),
+          page_path(dato.projects_page),
+          class: "btn btn-primary text-white text-uppercase"
+  .col-lg-1
 
