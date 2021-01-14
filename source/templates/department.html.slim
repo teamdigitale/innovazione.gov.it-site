@@ -4,7 +4,7 @@
 .py-5.lightgrey-bg-c1
   .container
     = partial "partials/cards-horizontal-list",
-      locals: {items: dato.department_page.articles.take(3),
+      locals: {items: page.articles.take(3),
       title: t("articles_section_title"),
       hide_image: true,
       hide_tags: true,
@@ -13,13 +13,16 @@
   .container
     = partial "partials/cards-horizontal-list",
       locals: {title: t("press_releases_section_title"),
-      items: dato.department_page.press_releases.take(3),
+      items: page.press_releases.take(3),
       hide_tags:true,
       btn_url: dato.department_press_releases_index}
 
   .container
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
-      items: dato.announcements.take(3),
+      items: page.announcements.take(3),
       btn_url: dato.department_announcements_index}
 
+.neutral-2-bg-a1
+  .container
+    = partial "partials/flag", locals: {flags: page.sections}
