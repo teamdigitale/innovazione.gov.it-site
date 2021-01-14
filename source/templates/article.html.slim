@@ -8,10 +8,7 @@
     = partial "partials/formatted-date", locals: {date: page.date_shown}
 
   = content_for :col_two
-    = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
-    .post__reading-time
-      => article_reading_time(page)
-      = I18n.t("minutes")
+    = partial "partials/reading-time", locals: {page: page}
 
   = content_for :aside
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}

@@ -26,7 +26,7 @@
         = partial "partials/headers/subpages-menu", locals: {subs: subs}
           
         - if content_for?(:aside)
-          .offset-lg-1.col-lg-3.col-md-4
+          .offset-lg-1.col-md-4
             - if share.present?
               .mb-5 = partial "partials/share"
             - if content_for?(:aside)

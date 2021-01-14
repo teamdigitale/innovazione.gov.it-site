@@ -11,11 +11,8 @@
               = partial "partials/formatted-date", locals: {date: page.date_shown}
 
             .col-sm-4
-                = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
+              = partial "partials/reading-time", locals: {page: page}
 
-                .post__reading-time
-                  => article_reading_time(page)
-                  = I18n.t("minutes")
 
         .col-sm-4.pl-5
 
