@@ -1,4 +1,10 @@
-- classes ||= "text-muted"
+- title ||= nil
 
 - if title.present?
-  span.mid-caption class=(classes) = title
+  - default_classes = "text-muted mid-caption text-uppercase font-weight-semibold mb-4 text-muted"
+  - classes ||= ""
+  - large = large.nil? ? "" : "mid-caption--large"
+  - inline = inline.nil? ? "d-block" : "d-inline-block"
+  - merged_classes = [default_classes, inline, large, classes].join(" ")
+
+  span> class=(merged_classes) = title
