@@ -1,36 +1,21 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container
-  = partial "partials/breadcrumb", locals: {page: page}
+= partial "partials/headers/header-basic", locals: { page: page, subs: all_index_pages, hide_caption: true } do
+  = content_for :aside
+    = partial "partials/column-title",
+      locals: {title: t('explore_aside.title')}
 
-.container
-  header
-    .row.justify-content-center.py-lg-4
-      .col-lg-7
-        h1.mb-sm-5 = page.title
-        .link-list-wrapper
-          ul.link-list.row
-            - all_index_pages.each do |page|
-              li.col-sm-6
-                = link_to page_path(page),
-                  class: "p-0 list-item d-inline-block"
-                    span.font-weight-semibold
-                      = page.menu_label
+    .link-list-wrapper.mt-2
+      ul.link-list
+        li
+          = link_to page_path(dato.search_page),
+            class: "p-0 list-item d-inline-block"
+              span.font-weight-semibold
+                = t('explore_aside.search_title')
+        li
+          = link_to page_path(dato.tags_index),
+            class: "p-0 list-item d-inline-block"
+              span.font-weight-semibold
+                = t('explore_aside.tags_title')
 
-      .col-lg-3.ml-lg-5.pl-lg-5
-        = partial "partials/column-title",
-          locals: {title: t('explore_aside.title')}
-
-        .link-list-wrapper.mt-2
-          ul.link-list
-            li
-              = link_to page_path(dato.search_page),
-                class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
-                    = t('explore_aside.search_title')
-            li
-              = link_to page_path(dato.tags_index),
-                class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
-                    = t('explore_aside.tags_title')
