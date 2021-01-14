@@ -9,4 +9,5 @@
     - if subtitle.present?
       p.lead = subtitle
     - if summary.present?
-      p.text-center.text-sm-left = markdown summary
+      .text-center.text-sm-left
+        = markdown summary
