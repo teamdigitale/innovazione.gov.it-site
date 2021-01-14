@@ -8,8 +8,13 @@ it:
     press_release: Comunicato stampa
     project: Progetto
 
-  articles_section_title: "Gli articoli"
+  announcement_date_closing: Data di chiusura
+  announcement_date_opening: Data di apertura
+  announcement_owner: Struttura di riferimento
+  announcement_status: Stato
+  articles_section_title: Gli articoli
   attachments: Allegati
+  category: Categoria
   close: Chiudi
   contacts: Contatti
   credits: Crediti

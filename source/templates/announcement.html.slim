@@ -9,12 +9,27 @@
       = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
 
   = content_for :col_one
-    = partial "partials/column-title", locals: {title: "Categoria"}
-    = partial "partials/column-title", locals: {title: "Data di apertura"}
+
+    - if page.announcement_category.present?
+      = partial "partials/column-title", locals: {title: t("Categoria")}
+      p = page.announcement_category.name
+
+
+    - if page.date_shown.present?
+      = partial "partials/column-title", locals: {title: t("announcement_date_opening")}
+      = partial "partials/formatted-date", locals: {date: page.date_shown}
+
 
   = content_for :col_two
-    = partial "partials/column-title", locals: {title: "Stato"}
-    = partial "partials/column-title", locals: {title: "Data di chiusura"}
+
+    - if page.announcement_status.present?
+      = partial "partials/column-title", locals: {title: t("announcement_status")}
+      p = page.announcement_status.name
+
+    = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
+
+    = partial "partials/column-title", locals: {title: t("announcement_owner")}
+
 
 = partial "partials/layouts/one-column",
   locals: {page: page}
