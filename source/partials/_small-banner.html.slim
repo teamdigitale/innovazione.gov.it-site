@@ -3,10 +3,10 @@
     section.d-flex.flex-row.align-items-start.align-items-lg-center.justify-content-between.justify-content-lg-start
       .d-lg-flex.align-items-lg-center
         - if banner.title.present?
-          h2.h4.text-primary.mid-underline
+          h2.h5.text-primary.mid-underline.font-weight-bold.pr-lg-3
             = banner.title
 
-        .px-lg-3= banner.text
+        .pr-lg-4= banner.text
 
       = partial "partials/links/#{banner.link.item_type.api_key}",
         locals: {item: banner.link, html_class: "btn text-primary text-uppercase px-0 text-nowrap"}

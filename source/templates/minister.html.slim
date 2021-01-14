@@ -2,7 +2,7 @@
   == dato_meta_tags(page)
 
 - if page.present?
-  header.pb-5.bg-light
+  header.pb-5.lightgrey-bg-a2
     .container.pb-5.text-center.text-sm-left
       .row
         .col-12.order-1
@@ -12,9 +12,9 @@
           .row
             .col-md-9
               = partial "partials/headers/main-titles", locals: {page: page}
-          
+
           = partial "partials/headers/subpages-menu", locals: {subs: visible_minister_subpages}
-          
+
         .col-md-4.order-2.order-md-3.mb-5.mb-md-0
           .px-5.px-md-0
             - image = page.photo
