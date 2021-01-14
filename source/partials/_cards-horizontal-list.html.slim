@@ -13,9 +13,9 @@
 
 = partial "partials/section-title", locals: {title: title}
 
-.row.row-cols-md-3.g-3 class="#{self_standing_section}"
+.row.row-cols-lg-3.g-3 class="#{self_standing_section}"
   - items.each do |item|
-    .col-md-4.p-3
+    .col-lg-4.p-3
       - card_partial = ''
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
@@ -25,7 +25,7 @@
       - if item.present? && card_partial.present?
         = card_partial
 
-  .col-md-12
+  .col-lg-12
     .my-4.pb-4.text-center
       = link_to t("view_more"),
         page_path(btn_url),
