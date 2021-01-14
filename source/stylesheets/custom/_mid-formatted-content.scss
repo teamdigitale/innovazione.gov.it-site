@@ -4,6 +4,7 @@
     font-family: "Titillium Web";
     font-size: 1.3em;
     position: relative;
+    padding-top: 48px;
 
     &:before {
       content: "\201C";
@@ -12,7 +13,7 @@
       top: -2rem;
       color: $primary;
       font-size: 2rem;
-      font-family: $font-family-serif;
+      font-family: "Lora";
 
       @include media-breakpoint-up(md) {
         top: -0.8rem;
@@ -21,14 +22,14 @@
       }
     }
   }
-  
-  iframe{
+
+  iframe {
     width: 100%;
   }
 
-  .block-body__small-image{
+  .block-body__small-image {
     display: block;
-    
+
     img {
       width: 100%;
     }
