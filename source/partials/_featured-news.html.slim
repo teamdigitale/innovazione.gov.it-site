@@ -6,19 +6,18 @@
 
 
 
-.container
-  .row.row-cols-3.g-3
-    - if featured_items.length == 1
-      .col-12
-        = partial "partials/card-featured", locals: {article: featured_items.first}
-    - elsif featured_items.length == 2 && featured_items.first.respond_to?(:image_cover)
-      .col-8.p-3
-        = partial "partials/card-featured", locals: {article: featured_items.first, larger_of_two: true}
-      .col-4.p-3
-        = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
-    - else
-      .col-6.p-3
-        = partial"partials/card", locals: {article: featured_items[0], medium_title: true, hide_image: true}
-      .col-6.p-3
-        = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
+.row.row-cols-3.g-3
+  - if featured_items.length == 1
+    .col-12
+      = partial "partials/card-featured", locals: {article: featured_items.first}
+  - elsif featured_items.length == 2 && featured_items.first.respond_to?(:image_cover)
+    .col-8.p-3
+      = partial "partials/card-featured", locals: {article: featured_items.first, larger_of_two: true}
+    .col-4.p-3
+      = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
+  - else
+    .col-6.p-3
+      = partial"partials/card", locals: {article: featured_items[0], medium_title: true, hide_image: true}
+    .col-6.p-3
+      = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
 
