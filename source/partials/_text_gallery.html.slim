@@ -7,23 +7,22 @@
         - slides.each do |slide|
           .swiper-slide
             .swiper-slide__text
-              div
-                .card-text.text-uppercase.font-weight-semibold.text-muted
-                  = t("models.#{slide.item_type.api_key}")
-                - if slide.title
-                  .h4.py-3.text-primary.font-weight-bold
-                    = slide.title
-                  .body-text
-                    = slide.subtitle
-              .my-5
-              .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                - if slide.tags.present?
-                  - slide.tags.each do |tag|
-                    = partial "partials/chip",
-                      locals: {label: tag.name,
-                      url: page_path(tag),
-                      chip_type: "",
-                      btn_type: "",
-                      chip_size: ""}
+              .h-100.d-flex.flex-column.justify-content-around
+                div
+                  .card-text.text-uppercase.font-weight-semibold.text-muted style="font-size: 14px"
+                    = t("models.#{slide.item_type.api_key}")
+                  - if slide.title
+                    .h4.pt-1.text-primary.font-weight-bold
+                      = slide.title
+                    .body-text
+                      = slide.subtitle
+                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                  - if slide.tags.present?
+                    - slide.tags.each do |tag|
+                      = partial "partials/chip",
+                        locals: {label: tag.name,
+                        url: page_path(tag),
+                        chip_type: "",
+                        btn_type: "",
+                        chip_size: ""}
     .swiper-pagination
-
