@@ -26,9 +26,5 @@
     - letters.each do |letter|
       .col-lg-3.mb-5
         h2.display-1.font-weight-semibold.text-uppercase= letter
-            - visible_tags.select{|t| t.name[0].downcase == letter}.each do |tag|
-              li
-                = link_to page_path(tag),
-                  class: "p-0 list-item d-inline-block"
-                    span.font-weight-semibold
-                      = tag.name
+        - visible_tags.select{|t| t.name[0].downcase == letter}.each do |tag|
+          = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
