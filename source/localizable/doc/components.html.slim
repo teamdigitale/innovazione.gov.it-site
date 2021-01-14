@@ -122,9 +122,19 @@ main.container.my-5
 
 
 = partial "partials/doc/section", locals: {title: "Titoli sezioni colonne"} do
-  = partial "partials/column-title", locals: {title: "Approfondisci"}
-  = partial "partials/column-title", locals: {title: "Data"}
-  = partial "partials/column-title", locals: {title: "Tempo di lettura"}
+  p <code>partials/column-title</code>: prevede un parametro obbligatorio <code>title</code> con una stringa
+  p Si possono passare parametri opzionali:
+  p: ul
+    li <code>large: true</code> per avere la font a 16px
+    li <code>inline: true</code> per avere la string ain display-inline-block
+    li <code>classes: "classi aggiuntive"</code> per aggiungere classi a piacimento
+
+    
+
+  = partial "partials/column-title", locals: {title: "Nomale"}
+  = partial "partials/column-title", locals: {title: "Large", large: true}
+  = partial "partials/column-title", locals: {title: "Inline", inline: true}
+  small altro testo
 
 
 = partial "partials/doc/title", locals: {title: "Cards"}
