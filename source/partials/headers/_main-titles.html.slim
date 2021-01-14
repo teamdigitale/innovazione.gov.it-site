@@ -5,7 +5,7 @@
   - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
 
   .text-center.text-sm-left.pb-4
-    h1.font-weight-semibold = page.title
+    h1.font-weight-bold = page.title
     - if subtitle.present?
       p.lead = subtitle
     - if summary.present?
