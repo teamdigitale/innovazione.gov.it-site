@@ -1,12 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container
-  = partial "partials/breadcrumb", locals: {page: page}
-
-.container.mid-container
-  header.py-lg-4
-    h1.mb-sm-5 = page.title
+= partial "partials/headers/header-basic", locals: { page: page } do
 
 .container
   hr.border-bottom
