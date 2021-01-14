@@ -4,7 +4,7 @@
 = partial "partials/headers/header-basic", locals: { page: page, share: true } do
 
   = content_for :col_one
-    = partial "partials/column-title", locals: {title: "Data"}
+    = partial "partials/column-title", locals: {title: t("date_shown")}
     = partial "partials/formatted-date", locals: {date: page.date_shown}
 
   = content_for :col_two
