@@ -47,7 +47,7 @@ retry_on_error(limit: 10) do
   activate :dato,
     token: ENV.fetch("DATO_API_TOKEN"),
     live_reload: true,
-    preview: ENV.fetch('BUILD_ENV') != 'production'
+    preview: ENV.fetch("BUILD_ENV") != "production"
 end
 
 webpack_command =
