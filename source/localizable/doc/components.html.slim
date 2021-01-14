@@ -49,9 +49,7 @@ main.container.my-5
 
   = content_for :col_two, flush: true
     = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
-    .post__reading-time
-      => article_reading_time(page)
-      = I18n.t("minutes")
+    = partial "partials/reading-time", locals: {page: page}
 
 
 
