@@ -25,6 +25,7 @@ const extractMiniCss = new MiniCssExtractPlugin({
 })
 
 module.exports = {
+  mode,
   entry: {
     application: './source/javascripts/index.js',
     styles: './source/stylesheets/_application.scss'
