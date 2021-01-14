@@ -18,7 +18,6 @@ ignore "/templates/*"
 LOCALES = ["it"]
 activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 
-activate :asset_hash
 activate :directory_indexes
 activate :pagination
 activate :inline_svg

@@ -7,8 +7,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
+const mode = (process.env.NODE_ENV === 'production') ? 'production' : 'development'
+const assetHash = (mode === 'production')? '-[fullhash:8]' : ''
+const jsFilenameTemplate = `javascripts/[name]${assetHash}.js`
+const cssFilenameTemplate = `stylesheets/[name]${assetHash}.css`
+
 const extractMiniCss = new MiniCssExtractPlugin({
-  filename: 'stylesheets/[name].css'
+  filename: cssFilenameTemplate
 })
 
 module.exports = {
@@ -31,7 +36,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '.tmp/dist'),
-    filename: 'javascripts/[name].js',
+    filename: jsFilenameTemplate,
     publicPath: ''
   },
   module: {
