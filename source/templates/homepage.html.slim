@@ -7,9 +7,9 @@
 
 .py-5.lightgrey-bg-c1
   .container
-    = partial "partials/featured-news", locals: {featured_items: dato.homepage.featured_news}
+    = partial "partials/featured-news", locals: {featured_items: page.featured_news}
     = partial "partials/cards-horizontal-list",
-      locals: {items: dato.homepage.news.take(3),
+      locals: {items: page.news.take(3),
       hide_image: true,
       hide_tags: true,
       show_item_type: true,
@@ -32,7 +32,7 @@
 
 .lightgrey-bg-a2
   .container
-    = partial "partials/flag", locals: {flags: dato.homepage.sections}
+    = partial "partials/flag", locals: {flags: page.sections, image_right: true}
 
 .container.my-5
   .row

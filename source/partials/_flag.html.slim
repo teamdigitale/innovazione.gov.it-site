@@ -1,15 +1,15 @@
-/ default with image on the left, pass {image_left: false} for image on the right
+/ default with image on the left, pass {image_right: true} for image on the right
 
 - flags ||= nil
-- image_left ||= true
+- image_right ||= nil
 
 
 - if flags.present?
 
   - flags.each do |flag|
-    - image_position = image_left == true ? 'order-md-1' : 'order-md-2'
-    - text_position = image_left == true ? 'order-md-2' : 'order-md-1'
-    - image_left = !image_left
+    - image_right = !image_right
+    - image_position = image_right == true ? 'order-md-1' : 'order-md-2'
+    - text_position = image_right == true ? 'order-md-2' : 'order-md-1'
     .row.align-items-center
       .d-none.d-lg-block.col-lg-6.p-0 class="#{image_position}" style="height: 500px"
         figure.m-0
