@@ -1,6 +1,12 @@
 - slides ||= nil
+- hide_tags ||= nil
+- hide_date ||= nil
 
 - if slides.present?
+  - date ||= ''
+  - tags ||= ''
+
+
   .swiper.swiper--text
     .swiper-container
       .swiper-wrapper
@@ -9,15 +15,19 @@
             .swiper-slide__text
               .h-100.d-flex.flex-column.justify-content-around
                 div
-                  .card-text.text-uppercase.font-weight-semibold.text-muted
+                  span.pr-2.text-uppercase.font-weight-semibold.text-muted
                     = t("models.#{slide.item_type.api_key}")
+                  - if !hide_date && (slide.respond_to?(:date_shown) && slide.date_shown.present?)
+                    span.px-2.text-secondary
+                      = partial "partials/formatted-date", locals: {date: slide.date_shown}
+
                   - if slide.title
                     .h4.pt-1.text-primary.font-weight-bold
                       = slide.title
                     .body-text style="font-size:18px"
                       = slide.subtitle
                 .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                  - if slide.tags.present?
+                  - if !hide_tags && (slide.respond_to?(:tags) && slide.tags.present?)
                     - slide.tags.each do |tag|
                       = partial "partials/chip",
                         locals: {label: tag.name,
