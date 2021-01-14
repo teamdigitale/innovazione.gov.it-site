@@ -1,9 +1,11 @@
-.swiper
-  .swiper-container
-    .swiper-wrapper
-      - block.images_logo.each do |image|
-        .swiper-slide
-          = image_tag image.file.width(860).format('pjpg').to_url, title:  "#{image.title}"
-    .swiper-button-prev
-    .swiper-button-next
-  .swiper-pagination
+- rows = block.images_logo.to_a.each_slice(4).to_a
+
+.gallery
+  - rows.each do |row|
+    .gallery__row
+      - row.each do |item|
+        .gallery__item
+          .gallery__image
+            = image_tag item.file.width(860).format('pjpg').to_url, title:  "#{item.title}"
+          .gallery__text
+            = item.title
