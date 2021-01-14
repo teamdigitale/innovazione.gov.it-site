@@ -23,10 +23,32 @@ activate :directory_indexes
 activate :pagination
 activate :inline_svg
 
-activate :dato,
-  token: ENV.fetch("DATO_API_TOKEN"),
-  live_reload: true,
-  preview: ENV.fetch('BUILD_ENV') != 'production'
+RETRY_CLASSES = [
+  Faraday::ClientError,
+  Faraday::ConnectionFailed,
+  Net::OpenTimeout,
+  NoMethodError,
+  SocketError
+]
+
+def retry_on_error(limit: 5)
+  tries ||= 1
+  yield
+rescue *RETRY_CLASSES => e
+  if tries < limit
+    warn "#### Error: #{e}, tried #{tries} times"
+    tries += 1
+    retry
+  end
+  raise e
+end
+
+retry_on_error(limit: 10) do
+  activate :dato,
+    token: ENV.fetch("DATO_API_TOKEN"),
+    live_reload: true,
+    preview: ENV.fetch('BUILD_ENV') != 'production'
+end
 
 webpack_command =
   if build?
