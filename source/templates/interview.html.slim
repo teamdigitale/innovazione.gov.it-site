@@ -13,8 +13,10 @@
     = partial "partials/formatted-date", locals: {date: page.date_shown}
 
   = content_for :col_two
-    = partial "partials/column-title", locals: {title: "Fonte"}
-    p Wired
+    - if page.source.present?
+      .mb-4
+        = partial "partials/column-title", locals: {title: I18n.t("source")}
+        p = page.source
 
     = partial "partials/column-title", locals: {title: I18n.t("reading-time")}
     .post__reading-time
