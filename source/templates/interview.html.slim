@@ -2,7 +2,7 @@
   == dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: { page: page, share: true } do
-  
+
   = content_for :aside
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
     - page.tags.each do |tag|
@@ -20,3 +20,6 @@
     .post__reading-time
       => article_reading_time(page)
       = I18n.t("minutes")
+
+= partial "partials/layouts/one-column",
+  locals: {page: page}

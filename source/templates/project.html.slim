@@ -15,7 +15,7 @@
       - label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
 
       = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
-  
+
   = content_for :col_one
     = partial "partials/column-title", locals: {title: t("projects.category")}
     = link_to page.category.name, "#{page_path(dato.projects_page)}##{page.category.slug}"
@@ -26,41 +26,5 @@
       = partial "partials/chip",
         locals: {label: tag.name, url: "#"}
 
-
-
-.container
-  .row
-    .col-sm-3.border-right
-
-    .col-sm-8.offset-1
-      = partial "partials/page-blocks",
-        locals: {page: page}
-
-      - if page.embed_dashboard.present?
-        .container.my-5
-          = page.embed_dashboard
-
-      - if page.attachments.count > 0
-        .mt-5.py-3
-          = partial "partials/column-title", locals: {title: I18n.t("attachments")}
-          .row
-            - page.attachments.each do |attachment|
-              .col-6.mt-3
-                = partial "partials/attachment", locals: {attachment: attachment}
-
-
-      - if page.credits.present?
-        = partial "partials/credits", locals: {credits: page.credits}
-              
-      - if page.updated_at.present?
-        .my-5
-            = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
-            = partial "partials/formatted-date", locals: {date: page.updated_at}
-
-  - if page.related_items.count > 0
-    .row.mid-border-lg-top.pt-5
-      .col-sm-8
-        = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
-        - page.related_items.each do |item|
-          = partial "partials/card-related-items",
-            locals: {item: item}
+= partial "partials/layouts/two-columns",
+  locals: {page: page}

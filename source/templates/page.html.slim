@@ -1,2 +1,5 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+= partial "partials/layouts/two-columns",
+  locals: {page: page}
