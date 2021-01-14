@@ -3,19 +3,19 @@
 
 - featured_tags = visible_tags & dato.homepage.featured_tags
 
-.lightgrey-bg-c1
-  = partial "partials/headers/header-basic", locals: {page: page, share: false} do
-    = content_for :col_one
-      = partial "partials/column-title", locals: {title: t("deepen")}
-      = link_to t("press_office"),
-        page_path(dato.minister_press_releases_index),
-        class: "text-primary text-decoration-none font-weight-semibold"
-    
-    = content_for :aside
-      = partial "partials/column-title", locals: {title: t("highlighted_topics")}
-      - featured_tags.each do |tag|
-        = partial "partials/chip", locals: {label: tag.name, url: page_path(tag), btn_type: ''}
+= partial "partials/headers/header-basic", locals: {page: page, classes: "lightgrey-bg-c1" } do
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: t("deepen")}
+    = link_to t("press_office"),
+      page_path(dato.minister_press_releases_index),
+      class: "text-primary text-decoration-none font-weight-semibold"
+  
+  = content_for :aside
+    = partial "partials/column-title", locals: {title: t("highlighted_topics")}
+    - featured_tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag), btn_type: ''}
 
+.lightgrey-bg-c1
   .container.px-4
     .row.d-lg-flex
       .col-lg-7
