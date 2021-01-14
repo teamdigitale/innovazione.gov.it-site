@@ -1,6 +1,17 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+= partial "partials/headers/header-basic", locals: { page: page, subs: visible_department_subpages } do
+  = content_for :aside
+    .img-responsive-wrapper
+      figure.figure
+        = image_tag page.logo.file.width(800).format('pjpg').to_url,
+                    alt: "Logo #{page.logo}",
+                    class: "figure-img img-fluid w-50"
+
+
+
+
 .py-5.lightgrey-bg-c1
   .container
     .d-none.d-lg-block.mt-lg-3
