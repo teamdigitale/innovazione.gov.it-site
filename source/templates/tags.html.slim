@@ -1,31 +1,25 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-.container
-  = partial "partials/breadcrumb", locals: {page: page}
+= partial "partials/headers/header-basic", locals: { page: page } do
+  = content_for :aside
+    = partial "partials/column-title",
+      locals: {title: t('explore_aside.title')}
 
-  header
-    .row.justify-content-center.py-lg-4
-      .col-lg-7
-        h1.mb-sm-5 = page.title
+    .link-list-wrapper.mt-2
+      ul.link-list
+        li
+          = link_to page_path(dato.search_page),
+            class: "p-0 list-item d-inline-block"
+              span.font-weight-semibold
+                = t('explore_aside.search_title')
+        li
+          = link_to page_path(dato.explore_page),
+            class: "p-0 list-item d-inline-block"
+              span.font-weight-semibold
+                = dato.explore_page.title
 
-      .col-lg-4.ml-lg-5.pl-lg-5
-        = partial "partials/column-title",
-          locals: {title: t('explore_aside.title')}
-
-        .link-list-wrapper.mt-2
-          ul.link-list
-            li
-              = link_to page_path(dato.search_page),
-                class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
-                    = t('explore_aside.search_title')
-            li
-              = link_to page_path(dato.explore_page),
-                class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
-                    = dato.explore_page.title
-
+.container.pb-5.mb-5
   hr.border-bottom
   - letters = visible_tags.map{|tag| tag.name[0].downcase}.uniq
   .row.py-lg-5
