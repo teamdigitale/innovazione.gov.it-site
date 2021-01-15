@@ -16,7 +16,7 @@
 
           - yield
           - if content_for?(:col_one) || content_for?(:col_two)
-            .row.mb-5
+            .row.mb-5.pt-3
               - if content_for?(:col_one)
                 .col-sm-6.pb-5.pb-sm-0
                   = yield_content :col_one
