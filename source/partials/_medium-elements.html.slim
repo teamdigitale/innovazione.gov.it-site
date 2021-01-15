@@ -10,14 +10,14 @@
     = "Link esterni"
 
 .row.mt-4.mt-lg-5.mx-n4
-  - dato.medium_articles[0..2].map do |article|
+  - dato.news_page.medium_articles[0..2].map do |article|
     .col-lg-4.px-4
       = partial "partials/card-medium-elements", locals: {article: article}
 
 .row.pb-5
   .col-12.my-3.mt-lg-5.text-center
     button.btn.btn-sm.btn-outline-primary.btn-icon.text-uppercase
-      = link_to "#",
+      = link_to dato.company.medium_url,
         class: "text-decoration-none align-middle"
         .d-inline-block.pr-3
           h6.font-weight-bold = t("medium")
