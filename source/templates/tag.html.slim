@@ -18,12 +18,12 @@ header.mb-5
             li
               = link_to page_path(dato.search_page),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
+                  span.font-weight-semibold.mr-0
                     = t('explore_aside.search_title')
             li
               = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold
+                  span.font-weight-semibold.mr-0
                     = dato.explore_page.title
 
 .container
@@ -34,7 +34,7 @@ header.mb-5
     - focus_pages = visible_focus_pages.select{|f| f.tags.include?(page)}
 
     - if focus_pages.any?
-      section
+      section.py-4
         header.container
           h2.display-3.font-weight-semibold= t('focus.title')
 
@@ -46,7 +46,7 @@ header.mb-5
     - projects = visible_projects.select{|f| f.tags.include?(page)}
 
     - if projects.any?
-      section
+      section.py-4
         header.container
           h2.display-3.font-weight-semibold= t('projects.title')
 
@@ -56,14 +56,16 @@ header.mb-5
               locals: {item: p}
 
     - if items.any?
-      section
+      section.pt-4
         header.container
           h2.display-3.font-weight-semibold= t('contents.title')
 
         .container.mid-container
-          - items.each do |n|
-            div= partial "partials/card-related-items",
-              locals: {item: n}
+          .row
+            - items.each do |n|
+              .col-lg-8
+                = partial "partials/card-related-items",
+                  locals: {item: n}
 
   .py-lg-4
     = partial "partials/pagination",
