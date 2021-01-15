@@ -1,9 +1,9 @@
 .row
-  .text-center.col-md-2.pt-5.d-md-flex.justify-content-lg-around
+  .text-center.col-lg-2.pt-5.d-md-flex.justify-content-lg-around
     .avatar.size-xxl.ml-md-4
       = image_tag dato.minister_page.photo.url,
         class: "bg-primary"
-  .col-md-5
+  .col-lg-5
     .card-wrapper
       = link_to "#",
         class: "text-decoration-none"
@@ -22,7 +22,7 @@
                 page_path(dato.minister_page),
                 class: "btn btn-primary text-white text-uppercase"
 
-  .col-md-4.px-4.p-md-0.mb-2.mb-md-0
+  .col-lg-4.px-4.p-md-0.mb-2.mb-md-0
     = partial "partials/text_gallery",
       locals: {slides: page.minister_featured_news, hide_date: true}
   .col-lg-1
