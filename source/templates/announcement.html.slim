@@ -15,9 +15,9 @@
       p = page.announcement_category.name
 
 
-    - if page.date_shown.present?
+    - if page.announcement_date_opening.present?
       = partial "partials/column-title", locals: {title: t("announcement_date_opening")}
-      = partial "partials/formatted-date", locals: {date: page.date_shown}
+      = partial "partials/formatted-date", locals: {date: page.announcement_date_opening, show_time: true}
 
 
   = content_for :col_two
@@ -26,10 +26,18 @@
       = partial "partials/column-title", locals: {title: t("announcement_status")}
       p = page.announcement_status.name
 
-    = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
+    - if page.announcement_date_closing.present?
+      = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
+      = partial "partials/formatted-date", locals: {date: page.announcement_date_closing, show_time: true}
 
-    = partial "partials/column-title", locals: {title: t("announcement_owner")}
+    - if page.announcement_owner.present?
+      = partial "partials/column-title", locals: {title: t("announcement_owner")}
+
+      - if page.announcement_owner_link.present?
+        = link_to page.announcement_owner, page.announcement_owner_link, target: "_blank"
+      - else
+        p = page.announcement_owner
 
 
-= partial "partials/layouts/one-column",
+= partial "partials/layouts/two-columns",
   locals: {page: page}
