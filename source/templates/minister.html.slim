@@ -19,17 +19,17 @@
           .px-5.px-md-0
             - image = page.photo
             .text-center
-              figure.figure
-                = image_tag image.lqip_data_url(w: 10, h: 6, fit:'crop'),
+              figure
+                = image_tag image.lqip_data_url(w: 10, h: 10, fit:'crop'),
                   data: {'sizes': '100vw',
-                    'src': image.url(w: 600, h: 600, fit:'crop', auto:'compress'),
-                    'srcset': "#{image.url(w: 300, h: 300, fit:'crop', auto:'compress')} 480w,
-                    #{image.url(w: 750, h: 750, fit:'crop', auto:'compress')} 719w,
-                    #{image.url(w: 1000, h: 1000, fit:'crop', auto:'compress')} 1023w"},
-                  class: "lazyload figure-img img-fluid rounded-circle",
+                    'src': image.url(w: 460, h: 460, fit:'crop', auto:'compress'),
+                    'srcset': "#{image.url(w: 330, h: 330, fit:'crop', auto:'compress')} 480w,
+                    #{image.url(w: 460, h: 460, fit:'crop', auto:'compress')} 844w,
+                    #{image.url(w: 222, h: 222, fit:'crop', auto:'compress')} 1090w,
+                    #{image.url(w: 410, h: 410, fit:'crop', auto:'compress')} 1091w"},
+                  class: "lazyload rounded-circle d-block w-100 h-100",
                   alt: image.alt,
                   title: image.title
-
 
 .py-5.lightgrey-bg-c1
   .container.pb-5
