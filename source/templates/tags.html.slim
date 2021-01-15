@@ -24,7 +24,7 @@
   - letters = visible_tags.map{|tag| tag.name[0].downcase}.uniq
   .row.py-lg-5
     - letters.each do |letter|
-      .col-lg-4.mb-5
+      .col-lg-4.col-xl-3.mb-5
         h2.display-1.font-weight-normal.text-uppercase= letter
         - visible_tags.select{|t| t.name[0].downcase == letter}.each do |tag|
           = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
