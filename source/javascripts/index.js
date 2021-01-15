@@ -29,6 +29,8 @@ if ($(".swiper-container").length > 0) {
     swiperInstances[index] = new Swiper(".instance-" + index, {
       //instance need to be unique (ex: some-slider)
       // your settings ...
+      preloadImages: false,
+      lazy: true,
       navigation: {
         prevEl: ".prev-" + index, //prev must be unique (ex: some-slider-prev)
         nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
