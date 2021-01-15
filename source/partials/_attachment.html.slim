@@ -1,7 +1,7 @@
 - attachment ||= nil
 
 - if attachment.present?
-  = link_to attachment.file.url,
+  = proxy_link_to attachment.file.url,
     class: "text-decoration-none"
     .card.h-100.card-teaser.rounded.shadow
       svg.icon.icon-primary

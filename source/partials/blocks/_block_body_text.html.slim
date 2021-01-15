@@ -6,7 +6,7 @@
     div class="#{'col-12 col-lg-9' unless compact_columns}"
       - if block.image_little.present?
         figure.block-body__small-image
-          = image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),
+          = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),
               data: {'sizes': '100vw',
                 'src': block.image_little.url(w: 700, h: 400, fit:'crop', auto:'compress'),
                 'srcset': "#{block.image_little.url(w: 450, h: 330, fit:'crop', auto:'compress')} 480w,

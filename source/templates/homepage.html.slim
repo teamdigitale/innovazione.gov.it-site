@@ -1,5 +1,5 @@
 - content_for(:head)
-  == dato_meta_tags(page)
+  == proxy_dato_meta_tags(page)
 
 - page.banners.each do |block|
   = partial "partials/blocks/#{block.item_type.api_key}",

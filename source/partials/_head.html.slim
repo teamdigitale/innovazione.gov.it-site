@@ -4,8 +4,9 @@ meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=5
 meta name="mobile-web-app-capable" content="yes"
 meta name="apple-mobile-web-app-capable" content="yes"
 meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"
-link rel="dns-prefetch" href="//www.datocms-assets.com"
-link rel="prefetch" href="//www.datocms-assets.com"
+- if ENV["ASSET_PROXY_BASE"]
+  link rel="dns-prefetch" href=ENV["ASSET_PROXY_BASE"]
+  link rel="prefetch" href=ENV["ASSET_PROXY_BASE"]
 link href="//www.google-analytics.com" rel="dns-prefetch"
 - if ENV['BUILD_ENV'] == "staging"
   meta name="robots" content="noindex, nofollow"

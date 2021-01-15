@@ -1,7 +1,7 @@
 .row
   .text-center.col-lg-2.pt-5.d-md-flex.justify-content-lg-around
     .avatar.size-xxl.ml-md-4
-      = image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10, fit:'crop'),
+      = proxy_image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10, fit:'crop'),
         data: {'sizes': '100vw',
           'src': dato.minister_page.photo.url(w: 128, h: 128, fit:'crop', auto:'compress'),
           'srcset': "#{dato.minister_page.photo.url(w: 128, h: 128, fit:'crop', auto:'compress')} 480w"},

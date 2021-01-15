@@ -16,11 +16,11 @@ header.it-header-wrapper data-datocms-noindex=true
           .it-header-center-content-wrapper.px-2.px-sm-0
             .it-brand-wrapper
               = link_to locale_path("/")
-                = image_tag "logo-repubblica-italiana.svg",
+                = proxy_image_tag "logo-repubblica-italiana.svg",
                   alt: "Logo #{t("state_name")}",
                   class: "icon"
 
-                = image_tag "logo-mid-white.svg",
+                = proxy_image_tag "logo-mid-white.svg",
                   alt: "Logo #{dato.company.name}",
                   style: "width: 120px",
                   class: "icon"

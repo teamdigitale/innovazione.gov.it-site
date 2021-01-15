@@ -6,11 +6,11 @@ footer.it-footer data-datocms-noindex=true
           .it-brand-wrapper.d-flex.justify-content-center.justify-content-sm-start
             = link_to locale_path("/"),
               title: "Vai alla Pagina Iniziale"
-              = image_tag "logo-repubblica-italiana.svg",
+              = proxy_image_tag "logo-repubblica-italiana.svg",
                 alt: "Logo Repubblica Italiana",
                 class: "icon"
 
-              = image_tag "logo-mid-white.svg",
+              = proxy_image_tag "logo-mid-white.svg",
                 alt: "Logo #{dato.company.name}",
                 style: "width: 120px",
                 class: "icon"

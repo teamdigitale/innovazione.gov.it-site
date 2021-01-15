@@ -1,5 +1,5 @@
 - content_for(:head)
-  == dato_meta_tags(page)
+  == proxy_dato_meta_tags(page)
 
 - if page.present?
   header.pb-5.lightgrey-bg-a2
@@ -20,7 +20,7 @@
             - image = page.photo
             .text-center
               figure
-                = image_tag image.lqip_data_url(w: 10, h: 10, fit:'crop'),
+                = proxy_image_tag image.lqip_data_url(w: 10, h: 10, fit:'crop'),
                   data: {'sizes': '100vw',
                     'src': image.url(w: 460, h: 460, fit:'crop', auto:'compress'),
                     'srcset': "#{image.url(w: 330, h: 330, fit:'crop', auto:'compress')} 480w,
