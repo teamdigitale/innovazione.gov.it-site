@@ -4,20 +4,18 @@
     font-family: "Titillium Web";
     font-size: 1.3em;
     position: relative;
-    padding-top: 48px;
+    padding-left: 36px;
 
     &:before {
       content: "\201C";
       position: absolute;
       left: 0;
-      top: -2rem;
+      top: -0.5rem;
       color: $primary;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-family: "Lora";
 
       @include media-breakpoint-up(md) {
-        top: -0.8rem;
-        left: -2rem;
         font-size: 3rem;
       }
     }
