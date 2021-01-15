@@ -13,14 +13,25 @@
     .row.align-items-center
       .d-none.d-lg-block.col-lg-6.p-0 class="#{image_position}" style="height: 500px"
         figure.m-0
-          = image_tag flag.image.url,
-            style: "height: 500px; max-width: 100%; object-fit: cover",
-            class: "m-0"
+          = image_tag flag.image.lqip_data_url(w: 10, h: 8, fit: 'crop'),
+              data: {'sizes': '100vw',
+                'src': flag.image.url(w: 650, h: 550, fit: 'crop', auto:'compress'),
+                'srcset': "#{flag.image.url(w: 650, h: 550, fit: 'crop', auto:'compress')} 480w"},
+              class: "lazyload d-block w-100 m-0",
+              style: "height: 500px; max-width: 100%; object-fit: cover",
+              alt: flag.image.alt,
+              title: flag.image.title
+
       .d-none.d-md-block.d-lg-none.col-md-6.p-0 class="#{image_position}" style="height: 400px"
         figure.m-0
-          = image_tag flag.image.url,
-            style: "height: 400px; max-width: 100%; object-fit: cover",
-            class: "m-0"
+          = image_tag flag.image.lqip_data_url(w: 10, h: 8, fit: 'crop'),
+              data: {'sizes': '100vw',
+                'src': flag.image.url(w: 370, h: 440, fit: 'crop', auto:'compress'),
+                'srcset': "#{flag.image.url(w: 370, h: 440, fit: 'crop', auto:'compress')} 480w"},
+              class: "lazyload d-block w-100 m-0",
+              style: "height: 400px; max-width: 100%; object-fit: cover",
+              alt: flag.image.alt,
+              title: flag.image.title
 
       .col-12.col-md-6 class="#{text_position}"
         .col-md-8.offset-md-2
@@ -40,5 +51,11 @@
           .img-responsive
             .img-wrapper
               figure
-                = image_tag flag.image.url
-
+                = image_tag flag.image.lqip_data_url(w: 10, h: 6, fit: 'crop'),
+                   data: {'sizes': '100vw',
+                     'src': flag.image.url(w: 560, h: 320, fit: 'crop', auto:'compress'),
+                     'srcset': "#{flag.image.url(w: 560, h: 320, fit: 'crop', auto:'compress')} 480w"},
+                   class: "lazyload d-block w-100 m-0",
+                   style: "height: 400px; max-width: 100%; object-fit: cover",
+                   alt: flag.image.alt,
+                   title: flag.image.title
