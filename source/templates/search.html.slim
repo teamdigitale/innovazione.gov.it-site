@@ -8,7 +8,8 @@ header.mb-5
         = partial "partials/breadcrumb", locals: {page: page}
 
       .col-md-7
-        #search-container
+        h2.sr-only=t('search')
+        #search-container.mid-search
 
       .offset-lg-1.col-md-4
         = partial "partials/column-title",
@@ -27,4 +28,3 @@ header.mb-5
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold
                     = dato.explore_page.title
-                    

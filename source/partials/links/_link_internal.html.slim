@@ -1,5 +1,6 @@
 - html_class ||= "btn btn-primary mr-2"
+- label ||= cta_label(item)
 
-= link_to cta_label(item),
+= link_to label,
   page_path(item.link),
   class: html_class

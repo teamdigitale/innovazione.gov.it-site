@@ -2,15 +2,20 @@
   == dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: { page: page } do
+  = content_for :aside
+    = partial "partials/explore-aside",
+      locals: {page: page}
 
 .container
   hr.border-bottom
 
 .pb-5.mb-5
   .container.mid-container
-    - items.each do |n|
-      div= partial "partials/card-related-items",
-        locals: {item: n}
+    .row
+      - items.each do |n|
+        .col-lg-8
+          = partial "partials/card-related-items",
+            locals: {item: n}
 
     .pt-lg-4
       = partial "partials/pagination",
