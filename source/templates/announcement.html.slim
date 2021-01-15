@@ -11,7 +11,7 @@
   = content_for :col_one
 
     - if page.announcement_category.present?
-      = partial "partials/column-title", locals: {title: t("Categoria")}
+      = partial "partials/column-title", locals: {title: t("category")}
       p = page.announcement_category.name
 
 
