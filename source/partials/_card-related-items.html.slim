@@ -13,31 +13,38 @@
   - text_date = 'text-secondary'
   - text_title = 'text-primary'
   - text_subtitle = 'text-secondary'
-  - bg_color = ''
+  - card_classes = 'p-0'
+
   - if item.item_type.api_key == "focus_page"
     - text_type = 'text-white'
     - text_date = 'text-white'
     - text_title = 'text-white'
     - text_subtitle = 'text-white'
-    - bg_color = "bg-primary"
+    - bg_color = ""
+    - card_classes = 'bg-primary'
 
-  = link_to page_path(item),
-    class: "text-decoration-none"
-    .card.mb-2
-      .card-body.d-sm-flex class="#{bg_color}"
-        - if logo_url.present?
-          .mr-3
-            = image_tag logo_url,
-              style: "height: 120px",
-              class: "mh-75 d-block"
-        div
-          .category.py-2
-            span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
-              = t("models.#{item.item_type.api_key}")
-            span.px-2 class="#{text_date}"
-              = date
-          h4 class="#{text_title}"
+  .card.mb-2.mb-lg-4
+    .card-body.d-sm-flex class=card_classes
+      - if logo_url.present?
+        .mr-3
+          = image_tag logo_url,
+            style: "height: 120px",
+            class: "mh-75 d-block"
+
+      div
+        .category.py-2.card-text
+          span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
+            = t("models.#{item.item_type.api_key}")
+
+          span.px-2 class="#{text_date}"
+            = date
+
+        h4 class="h6"
+          = link_to page_path(item),
+            class: "#{text_title} text-decoration-none"
             = item.title
+
+        .card-text
 
           - if item.respond_to?(:subtitle) && item.subtitle.present?
             p class="#{text_subtitle}"
