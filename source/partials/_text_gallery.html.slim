@@ -19,11 +19,10 @@
                   - if !hide_date && (slide.respond_to?(:date_shown) && slide.date_shown.present?)
                     span.px-2.text-secondary
                       = partial "partials/formatted-date", locals: {date: slide.date_shown}
-
                   - if slide.title
                     .h4.pt-1.text-primary.font-weight-bold
                       = slide.title
-                    .body-text style="font-size:18px"
+                    .mid-caption--xlarge
                       = slide.subtitle
                 .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
                   - if !hide_tags && (slide.respond_to?(:tags) && slide.tags.present?)
