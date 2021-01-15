@@ -3,9 +3,17 @@
     = page.embed_dashboard
 
 - if page.respond_to?(:attachments) && page.attachments.any?
-  .mt-5.py-3
+  .mt-3.py-3
     = partial "partials/column-title", locals: {title: t("attachments")}
     .row
       - page.attachments.each do |attachment|
         .col-12.col-md-6.mt-3
           = partial "partials/attachment", locals: {attachment: attachment}
+
+- if page.respond_to?(:links) && page.links.any?
+  .mt-3.py-3
+    = partial "partials/column-title", locals: {title: t("useful_links")}
+    .row
+      - page.links.each do |link|
+        .col-12.col-md-6.mt-3
+          = partial "partials/card-link", locals: {link: link}
