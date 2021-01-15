@@ -13,9 +13,10 @@
     - length_image = "col-lg-3"
     - length_card = "col-lg-9"
 
-  - if article.respond_to?(:image_cover) && article.image_cover.present?
+  - if article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?
     - image = "card-img no-after rounded shadow"
-    - image_link = article.image_cover.url
+    - image_link = article.image_thumbnail.url
+    - card_image = article.image_thumbnail
 
   = link_to page_path(article),
     class: "text-decoration-none"
@@ -42,16 +43,30 @@
                   chip_type: "",
                   btn_type: "",
                   chip_size: ""}
+
       - if image_link.present?
         .img-responsive-wrapper.p-0 class="#{length_image}"
           .d-lg-none
             .img-responsive.img-responsive-panoramic
               figure.img-wrapper.p-0
-                =image_tag image_link
+                = image_tag card_image.lqip_data_url(w: 10, h: 6, fit: 'crop'),
+                  data: {'sizes': '100vw',
+                    'src': card_image.url(w: 700, h: 400, fit: 'crop', auto:'compress'),
+                    'srcset': "#{card_image.url(w: 445, h: 255, fit: 'crop', auto:'compress')} 480w,
+                    #{card_image.url(w: 700, h: 400, fit: 'crop', auto:'compress')} 719w"},
+                  class: "lazyload d-block w-100 m-0",
+                  alt: card_image.alt,
+                  title: card_image.title
+
           .d-none.d-lg-block
             .img-responsive-panoramic
               figure.position-absolute.w-100.h-100
-                =image_tag image_link,
+                = image_tag card_image.lqip_data_url(w: 5, h: 10, fit: 'crop'),
+                  data: {'sizes': '100vw',
+                    'src': card_image.url(w: 220, h: 420, fit: 'crop', auto:'compress'),
+                    'srcset': "#{card_image.url(w: 180, h: 370, fit: 'crop', auto:'compress')} 1090w,
+                    #{card_image.url(w: 220, h: 420, fit: 'crop', auto:'compress')} 1320w"},
+                  class: "lazyload d-block w-100 h-100 m-0",
                   style: "object-fit: cover",
-                  class: "w-100 h-100 d-block"
-
+                  alt: card_image.alt,
+                  title: card_image.title
