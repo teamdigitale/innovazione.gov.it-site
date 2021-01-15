@@ -1,11 +1,13 @@
 - page ||= nil
 - if page.present?
+  
+  - big_title = page_parent(page).present? ? "h2" : "h1"
 
   - subtitle = page.respond_to?(:subtitle) && page.subtitle.present? ? page.subtitle : nil
   - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
 
   .text-center.text-sm-left.pb-4
-    h1.font-weight-bold = page.title
+    h2 class=big_title = page.title
     - if subtitle.present?
       p.lead = subtitle
     - if summary.present?
