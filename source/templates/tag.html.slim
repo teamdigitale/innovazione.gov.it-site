@@ -36,7 +36,8 @@ header.mb-5
     - if focus_pages.any?
       section.py-4
         header.container
-          h2.display-3.font-weight-semibold= t('focus.title')
+          h2.display-3.font-weight-semibold.mb-4
+            = t('focus.title')
 
         .container.mid-container
           - focus_pages.each do |f|
@@ -48,7 +49,8 @@ header.mb-5
     - if projects.any?
       section.py-4
         header.container
-          h2.display-3.font-weight-semibold= t('projects.title')
+          h2.display-3.font-weight-semibold.mb-4
+            = t('projects.title')
 
         .container.mid-container
           - projects.each do |p|
@@ -58,7 +60,8 @@ header.mb-5
     - if items.any?
       section.pt-4
         header.container
-          h2.display-3.font-weight-semibold= t('contents.title')
+          h2.display-3.font-weight-semibold.mb-4
+            = t('contents.title')
 
         .container.mid-container
           .row
