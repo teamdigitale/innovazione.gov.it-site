@@ -59,6 +59,12 @@
   }
 }
 
+.swiper--text-card {
+  .swiper-slide__text {
+    height: 100%;
+  }
+}
+
 .swiper-slide__text__title {
   color: #0066CC;
   font-size: 28px;
