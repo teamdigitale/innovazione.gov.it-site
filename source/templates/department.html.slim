@@ -4,10 +4,15 @@
 = partial "partials/headers/header-basic", locals: { page: page, subs: visible_department_subpages } do
   = content_for :aside
     .img-responsive-wrapper
-      figure.figure
-        = image_tag page.logo.file.width(800).format('pjpg').to_url,
-                    alt: "Logo #{page.logo}",
-                    class: "figure-img img-fluid w-50"
+      figure
+        = image_tag page.logo.lqip_data_url(w: 10, h: 10, fit:'max'),
+          data: {'sizes': '100vw',
+            'src': page.logo.url(w: 230, h: 460, fit:'max', auto:'compress'),
+            'srcset': "#{page.logo.url(w: 230, h: 460, fit:'max', auto:'compress')} 480w,
+            #{page.logo.url(w: 230, h: 460, fit:'max', auto:'compress')} 844w"},
+          class: "lazyload d-block w-50",
+          alt: page.logo.alt,
+          title: page.logo.title
 
 .py-5.lightgrey-bg-c1
   .container
