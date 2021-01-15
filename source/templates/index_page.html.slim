@@ -2,6 +2,9 @@
   == dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: { page: page } do
+  = content_for :aside
+    = partial "partials/explore-aside",
+      locals: {page: page}
 
 .container
   hr.border-bottom
