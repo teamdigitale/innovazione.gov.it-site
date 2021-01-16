@@ -12,13 +12,12 @@
   - date ||= ''
   - tags ||= ''
 
-  .swiper.swiper--text-card
+  .swiper
     .swiper-container
       .swiper-wrapper
         - items.each do |item|
           .swiper-slide
             .swiper-slide__text
-
               - card_partial = ''
               - if item.item_type.api_key == "announcement"
                 - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
@@ -28,3 +27,4 @@
                 = card_partial
 
     .swiper-pagination
+

@@ -1,10 +1,12 @@
 .swiper-container {
+}
+
+.fixed-height {
   height: 400px;
   z-index: 3;
 }
 
 .swiper-wrapper {
-  height: 100%;
 }
 
 .swiper-slide {
@@ -43,24 +45,16 @@
 }
 
 .swiper-slide__text {
-  background-color: white;
   color: #33485C;
   font-size: 16px;
-  height: 50%;
   letter-spacing: 0;
   line-height: 24px;
-  padding: 25px 40px;
+  padding: 25px 0;
 }
 
 .swiper--text {
   .swiper-slide__text {
     border-bottom: 3px solid #0066CC;
-    height: 100%;
-  }
-}
-
-.swiper--text-card {
-  .swiper-slide__text {
     height: 100%;
   }
 }
@@ -73,13 +67,12 @@
 }
 
 .swiper-pagination {
-  margin-top: 48px;
   position: relative;
 }
 
 .swiper-pagination-bullet {
   height: 16px;
-  margin-right: 32px;
+  margin: 0 16px;
   width: 16px;
 
   &:last-child {
