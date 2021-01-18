@@ -37,7 +37,10 @@
       items: page.announcements.take(3),
       btn_url: dato.department_announcements_index}
 
-.mb-5.pb-5
-  .neutral-2-bg-a1
-    .container
-      = partial "partials/flag", locals: {flags: page.sections}
+= partial "partials/focus-flag", locals: {items: page.focus_elements}
+
+.neutral-2-bg-a1
+  .container
+    = partial "partials/flag", locals: {flags: page.sections}
+
+= partial "partials/numbers", locals: {numbers: page.numbers}
