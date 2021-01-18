@@ -1,8 +1,6 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-- featured_tags = visible_tags & dato.homepage.featured_tags
-
 = partial "partials/headers/header-basic", locals: {page: page, classes: "lightgrey-bg-c1" } do
   = content_for :col_one
     = partial "partials/column-title", locals: {title: t("deepen")}
