@@ -2,7 +2,7 @@
   .collapse-div role="tablist" id="accordionDiv-#{index}"
     .collapse-header id='headingA-#{index}'
       button aria-controls="accordion-#{index}" aria-expanded="false" data-target="#accordion-#{index}" data-toggle="collapse" 
-        = accordion.accordion_item_title
+        .text-uppercase.text-muted = accordion.accordion_item_title
     .collapse aria-labelledby="headingA-#{index}" id="accordion-#{index}" data-parent="#accordionDiv-#{index}" role="tabpanel" 
       .collapse-body
         = markdown accordion.accordion_item_body_text
