@@ -5,7 +5,7 @@ Il progetto è costruito sul generatore di siti statici [Middleman](https://midd
 Per installare l’ambiente necessario allo sviluppo è necessario avere installato
 sul proprio sistema i seguenti pacchetti:
 
-* [asdf](https://asdf-vm.com/#/),
+* [asdf](https://asdf-vm.com/#/), (opzionale)
 * [bundler](https://bundler/),
 * [direnv](https://direnv.net/),
 * [Yarn](https://yarnpkg.com/).
@@ -13,7 +13,7 @@ sul proprio sistema i seguenti pacchetti:
 Successivamente, bisogna lanciare i comandi seguenti:
 
 ```sh
-asdf install
+asdf install (opzionale)
 bundle
 yarn
 ```
