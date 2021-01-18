@@ -199,6 +199,10 @@ helpers do
     PresentationHelper.published_tags(dato.tags)
   end
 
+  def featured_tags
+    PresentationHelper.published_tags(dato.tags) & dato.company.featured_tags
+  end
+
   def menu_label_with_fallback(page)
     if page.respond_to?(:menu_label) && page.menu_label.present?
       page.menu_label
