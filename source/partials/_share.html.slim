@@ -1,6 +1,6 @@
-.dropdown.text-right.d-none.d-lg-block
-  button#dropdownMenuButton.btn.btn-dropdown.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
-    | Apri dropdown
+.dropdown.d-none.d-lg-block
+  button#dropdownMenuLink.p-0.text-capitalize.btn.btn-dropdown.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
+    = t("share")
     svg.icon-expand.icon.icon-sm.icon-primary
       use xlink:href="/images/sprite.svg#it-share"
   .dropdown-menu aria-labelledby="dropdownMenuButton" 
@@ -8,10 +8,10 @@
       ul.link-list
         li
           a.list-item href="#" 
-            span Azione 1
+            span Facebook
         li
           a.list-item href="#" 
-            span Azione 2
+            span Twitter
         li
           a.list-item href="#" 
-            span Azione 3
+            span Linkedin
