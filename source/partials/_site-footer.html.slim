@@ -3,8 +3,9 @@ footer.it-footer data-datocms-noindex=true
     .container
       .row.clearfix
         .col-sm-12
-          .it-brand-wrapper.d-flex.justify-content-center.justify-content-sm-start
+          .it-brand-wrapper
             = link_to locale_path("/"),
+              class: "flex-wrap flex-md-nowrap justify-content-center justify-content-md-start",
               title: "Vai alla Pagina Iniziale"
               = proxy_image_tag "logo-repubblica-italiana.svg",
                 alt: "Logo Repubblica Italiana",
@@ -15,8 +16,8 @@ footer.it-footer data-datocms-noindex=true
                 style: "width: 120px",
                 class: "icon"
 
-              .it-brand-text
-                h2.d-none.d-sm-block
+              .it-brand-text.pr-0.pr-md-2
+                h2.mt-4.mt-md-0.text-center.text-md-left style="max-with: 400px;"
                   = t("formatted_site_name")
 
     .py-4
@@ -57,7 +58,7 @@ footer.it-footer data-datocms-noindex=true
                           class: "list-item mid-footer-link",
                           target: "_blank",
                           rel: "noopener"
-                          span= dato.company.secretariat_email
+                          = dato.company.secretariat_email
 
                   - if dato.company.media_email.present?
                     ul.link-list
@@ -69,7 +70,7 @@ footer.it-footer data-datocms-noindex=true
                           class: "list-item mid-footer-link",
                           target: "_blank",
                           rel: "noopener"
-                          span= dato.company.media_email
+                          = dato.company.media_email
 
           .col-md-6.col-xl-3.mb-5
             h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
@@ -85,13 +86,13 @@ footer.it-footer data-datocms-noindex=true
             .text-center.text-md-left
               .link-list-wrapper
                 ul.link-list
-                  - ["Designers Italia", "Developers Italia", "PagoPA", "Piano Triennale"].each do |item|
+                  - dato.company.footer_external_links.each do |item|
                     li
-                      = link_to "#",
+                      = link_to item.link,
                         class: "list-item mid-footer-link",
                         target: "_blank",
                         rel: "noopener"
-                        span= item
+                        = cta_label(item)
 
           .col-md-6.col-xl-3.mb-3
             h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
@@ -100,19 +101,17 @@ footer.it-footer data-datocms-noindex=true
             .text-center.text-md-left
               .link-list-wrapper
                 ul.link-list
-                  - ["Amministrazione trasparente", "Dipartimento per la Trasformazione Digitale", "Lavora con noi"].each do |item|
+                  - dato.company.footer_transparency_pages.each do |item|
                     li
-                      = link_to "#",
-                        class: "list-item mid-footer-link",
-                        target: "_blank",
-                        rel: "noopener"
-                        span= item
+                      = link_to page_path(item),
+                        class: "list-item mid-footer-link"
+                          = item.title
 
   .it-footer-small-prints.py-4
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - ["Dichiarazione di Accessibilità", "Informativa privacy", "Note legali", "Mappa del sito"].each do |item|
+        - dato.company.subfooter_pages.each do |item|
           li.list-inline-item
-            = link_to "#",
+            = link_to page_path(item),
               class: "list-item mid-footer-link"
-              span= item
+                span= item.title
