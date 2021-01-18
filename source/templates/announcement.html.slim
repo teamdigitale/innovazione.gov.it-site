@@ -1,0 +1,43 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: { page: page } do
+
+  = content_for :aside
+    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+    - page.tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
+
+  = content_for :col_one
+
+    - if page.announcement_category.present?
+      = partial "partials/column-title", locals: {title: t("category")}
+      p = page.announcement_category.name
+
+
+    - if page.announcement_date_opening.present?
+      = partial "partials/column-title", locals: {title: t("announcement_date_opening")}
+      = partial "partials/formatted-date", locals: {date: page.announcement_date_opening, show_time: true}
+
+
+  = content_for :col_two
+
+    - if page.announcement_status.present?
+      = partial "partials/column-title", locals: {title: t("announcement_status")}
+      p = page.announcement_status.name
+
+    - if page.announcement_date_closing.present?
+      = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
+      = partial "partials/formatted-date", locals: {date: page.announcement_date_closing, show_time: true}
+
+    - if page.announcement_owner.present?
+      = partial "partials/column-title", locals: {title: t("announcement_owner")}
+
+      - if page.announcement_owner_link.present?
+        = link_to page.announcement_owner, page.announcement_owner_link, target: "_blank"
+      - else
+        p = page.announcement_owner
+
+
+= partial "partials/layouts/two-columns",
+  locals: {page: page}

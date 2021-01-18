@@ -1,0 +1,35 @@
+.mid-search {
+  .datocms-widget__header__inner {
+    box-shadow: none;
+    border-left: none;
+  }
+  .datocms-widget__search__input {
+    height: auto;
+    box-shadow: none;
+    margin-right: 24px;
+  }
+  .datocms-widget__header__label {
+    display: none;
+  }
+  .datocms-widget__search__button {
+    background-color: $primary-a6;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &:hover {
+      color: #cccccc;
+      background-color: #0053a6;
+    }
+  }
+  .datocms-widget__result__title,
+  .datocms-widget__pagination__page {
+    color: $primary;
+  }
+  .datocms-widget__result:hover {
+    border-left-color: $primary;
+  }
+}

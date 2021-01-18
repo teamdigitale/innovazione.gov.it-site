@@ -1,0 +1,30 @@
+- items ||= nil
+- large_title ||= nil
+- medium_title ||= nil
+- hide_image ||= true
+- hide_tags ||= nil
+- show_item_type ||= nil
+- title ||= ''
+- special_subtitle ||= nil
+- unequal_height ||= nil
+
+- if items.present?
+  - date ||= ''
+  - tags ||= ''
+
+  .swiper
+    .swiper-container
+      .swiper-wrapper
+        - items.each do |item|
+          .swiper-slide
+            .swiper-slide__text
+              - card_partial = ''
+              - if item.item_type.api_key == "announcement"
+                - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+              - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
+                - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, hide_image: hide_image, unequal_height: unequal_height, show_item_type: show_item_type, hide_tags: hide_tags}
+              - if item.present? && card_partial.present?
+                = card_partial
+
+    .swiper-pagination
+

@@ -1,0 +1,16 @@
+.border-bottom.py-2.py-lg-1
+  .container
+    section.d-flex.flex-row.align-items-start.align-items-lg-baseline.justify-content-between.justify-content-lg-start
+      .d-lg-flex.align-items-lg-center
+        - if banner.title.present?
+          h2.h5.text-primary.mid-underline.font-weight-bold.pr-lg-3
+            = partial "partials/links/#{banner.link.item_type.api_key}",
+              locals: {item: banner.link,
+                label: banner.title,
+                html_class: ""}
+
+        .pr-lg-4= banner.text
+
+      = partial "partials/links/#{banner.link.item_type.api_key}",
+        locals: {item: banner.link,
+          html_class: "btn text-primary text-uppercase px-0 text-nowrap"}

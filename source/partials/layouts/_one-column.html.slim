@@ -1,0 +1,15 @@
+.container.border-top.pb-5
+  .row.justify-content-center
+    .col-lg-6
+      = partial "partials/page-blocks",
+        locals: {page: page,
+          compact_columns: true}
+
+      = partial "partials/page-attachments-links",
+        locals: {page: page}
+
+      = partial "partials/page-other-contents",
+        locals: {page: page}
+
+  = partial "partials/page-related",
+    locals: {page: page}

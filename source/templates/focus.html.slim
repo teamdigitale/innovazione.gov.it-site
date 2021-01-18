@@ -1,0 +1,11 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: { page: page, share: true } do
+
+= partial "partials/layouts/two-columns",
+  locals: {page: page}
+
+.lightgrey-bg-a2
+  .container
+    = partial "partials/flag", locals: {flags: page.sections, image_right: true}

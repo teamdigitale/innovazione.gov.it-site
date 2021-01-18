@@ -1,0 +1,8 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: {page: page } do
+
+
+= partial "partials/layouts/two-columns",
+  locals: {page: page}

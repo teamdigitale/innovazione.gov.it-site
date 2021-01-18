@@ -1,0 +1,27 @@
+- featured_tags = visible_tags & dato.homepage.featured_tags
+
+.container
+  header.section.p-5.mt-0
+    .section-content
+      .row.mb-5
+        .col-lg-6
+          h1.text-center.text-sm-left.font-weight-semibold = page.title
+          p.lead.text-center.text-sm-left = page.subtitle
+      .row
+        .col-lg-4.text-center.text-sm-left
+          = partial "partials/column-title", locals: {title: "Approfondisci"}
+          h6.text-center.text-sm-left
+            = link_to t("press_office"),
+              page_path(dato.minister_press_releases_index),
+              class: "text-primary text-decoration-none"
+
+        .col-lg-8.my-5.my-lg-0.text-center.text-sm-left
+          = partial "partials/column-title", locals: {title: "Argomenti in evidenza"}
+
+          .my-4
+            - featured_tags.each do |tag|
+              = partial "partials/chip",
+                locals: {label: tag.name,
+                  btn_type: "btn-outline-secondary",
+                  url: "#"}
+

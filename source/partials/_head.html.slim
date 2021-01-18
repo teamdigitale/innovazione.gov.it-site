@@ -1,0 +1,23 @@
+meta charset="utf-8"
+meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=5"
+meta name="mobile-web-app-capable" content="yes"
+meta name="apple-mobile-web-app-capable" content="yes"
+meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"
+- if ENV["ASSET_PROXY_BASE"]
+  link rel="dns-prefetch" href=ENV["ASSET_PROXY_BASE"]
+  link rel="prefetch" href=ENV["ASSET_PROXY_BASE"]
+link href="//www.google-analytics.com" rel="dns-prefetch"
+- if ENV['BUILD_ENV'] == "staging"
+  meta name="robots" content="noindex, nofollow"
+
+= yield_content :head
+= stylesheet_link_tag "styles"
+
+link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"
+link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+link rel="manifest" href="/site.webmanifest"
+link rel="mask-icon" href="/safari-pinned-tab.svg" color="#{data.config.safari_pinned}"
+meta name="msapplication-TileColor" content="#{data.config.msapplication_tilecolor}"
+meta name="theme-color" content="#{data.config.theme_color}"

@@ -1,0 +1,25 @@
+- image = block.image
+
+section.lightgrey-bg-b2.py-4
+  .container
+    .row
+      .col-lg-6
+        = proxy_image_tag image.lqip_data_url(w: 10, h: 6, fit:'max'),
+          data: {'sizes': '100vw',
+            'src': image.url(w: 500, h: 320, fit:'max', auto:'compress'),
+            'srcset': "#{image.url(w: 500, h: 320, fit:'max', auto:'compress')} 480w,
+            #{image.url(w: 650, h: 350, fit:'max', auto:'compress')} 719w,
+            #{image.url(w: 500, h: 320, fit:'max', auto:'compress')} 1023w"},
+          class: "lazyload d-block w-100",
+          alt: image.alt,
+          title: image.title
+
+      .col-lg-6.d-lg-flex.flex-lg-column.justify-content-lg-center.my-5.my-lg-0
+        .ml-lg-5
+          h2.font-weight-normal= block.title
+
+          .mt-3.mt-lg-4
+            - block.links.each.with_index do |item, i|
+              - html_class = "btn btn-outline-primary mr-4" if i == 0
+              = partial "partials/links/#{item.item_type.api_key}",
+                locals: {item: item, html_class: html_class}

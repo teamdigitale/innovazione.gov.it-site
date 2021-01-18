@@ -1,0 +1,9 @@
+.sticky-top.menu-wrapper
+  .it-list-wrapper.menu-link-list
+    p.h3.pt-4.pb-1.text-uppercase.mid-caption--small Indice della pagina
+    .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+      #progress-indicator.progress-indicator.primary-bg-b1
+    ul.it-list.small.pt-3 
+      -page.content_blocks.each do |block|
+        li.nav-item 
+          = block.respond_to?(:text_title) ? link_to("<span>#{block.text_title}</span>", "##{block.text_title.downcase.gsub(' ', '-')}", class: 'nav-link pr-4') : ''

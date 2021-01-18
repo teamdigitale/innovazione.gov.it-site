@@ -1,0 +1,43 @@
+.mid-formatted-content {
+  blockquote {
+    font-weight: 600;
+    font-family: "Titillium Web";
+    font-size: 1.3em;
+    position: relative;
+    padding-left: 36px;
+
+    &:before {
+      content: "\201C";
+      position: absolute;
+      left: 0;
+      top: -0.5rem;
+      color: $primary;
+      font-size: 2.5rem;
+      font-family: "Lora";
+
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .block-body__small-image {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+      float: left;
+      margin-left: -48px;
+      max-width: 50%;
+      margin-right: 32px;
+    }
+  }
+}

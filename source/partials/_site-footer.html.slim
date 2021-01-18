@@ -1,0 +1,118 @@
+footer.it-footer data-datocms-noindex=true
+  .it-footer-main
+    .container
+      .row.clearfix
+        .col-sm-12
+          .it-brand-wrapper.d-flex.justify-content-center.justify-content-sm-start
+            = link_to locale_path("/"),
+              title: "Vai alla Pagina Iniziale"
+              = proxy_image_tag "logo-repubblica-italiana.svg",
+                alt: "Logo Repubblica Italiana",
+                class: "icon"
+
+              = proxy_image_tag "logo-mid-white.svg",
+                alt: "Logo #{dato.company.name}",
+                style: "width: 120px",
+                class: "icon"
+
+              .it-brand-text
+                h2.d-none.d-sm-block
+                  = t("formatted_site_name")
+
+    .py-4
+      .container
+        .row
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("contacts")
+
+            .mb-2
+              - if dato.company.google_maps_url.present?
+                .text-center.text-md-left
+                  svg.mb-3.align-top.icon.icon-sm.icon-white
+                    use xlink:href="/images/sprite.svg#it-pa"
+
+                  .link-list-wrapper
+                    ul.link-list
+                      li
+                        = link_to dato.company.google_maps_url,
+                          class: "list-item font-weight-semibold",
+                          target: "_blank",
+                          rel: "noopener"
+                          = t('formatted_address')
+
+            .mb-2
+              .text-center.text-md-left
+                svg.mb-3.align-top.icon.icon-sm.icon-white
+                  use xlink:href="/images/sprite.svg#it-mail"
+
+                .link-list-wrapper
+                  - if dato.company.secretariat_email.present?
+                    ul.link-list
+                      li
+                        = t("ministry_secretariat")
+
+                      li
+                        = link_to "mailto:#{dato.company.secretariat_email}",
+                          class: "list-item mid-footer-link",
+                          target: "_blank",
+                          rel: "noopener"
+                          span= dato.company.secretariat_email
+
+                  - if dato.company.media_email.present?
+                    ul.link-list
+                      li
+                        = t("media_comunication")
+
+                      li
+                        = link_to "mailto:#{dato.company.media_email}",
+                          class: "list-item mid-footer-link",
+                          target: "_blank",
+                          rel: "noopener"
+                          span= dato.company.media_email
+
+          .col-md-6.col-xl-3.mb-5
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("follow_us_on")
+
+            .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
+              = partial "partials/socials"
+
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("other_links")
+
+            .text-center.text-md-left
+              .link-list-wrapper
+                ul.link-list
+                  - ["Designers Italia", "Developers Italia", "PagoPA", "Piano Triennale"].each do |item|
+                    li
+                      = link_to "#",
+                        class: "list-item mid-footer-link",
+                        target: "_blank",
+                        rel: "noopener"
+                        span= item
+
+          .col-md-6.col-xl-3.mb-3
+            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+              = t("transparency")
+
+            .text-center.text-md-left
+              .link-list-wrapper
+                ul.link-list
+                  - ["Amministrazione trasparente", "Dipartimento per la Trasformazione Digitale", "Lavora con noi"].each do |item|
+                    li
+                      = link_to "#",
+                        class: "list-item mid-footer-link",
+                        target: "_blank",
+                        rel: "noopener"
+                        span= item
+
+  .it-footer-small-prints.py-4
+    .container
+      ul.list-inline.link-list.mb-0.text-center.text-md-left
+        - ["Dichiarazione di Accessibilità", "Informativa privacy", "Note legali", "Mappa del sito"].each do |item|
+          li.list-inline-item
+            = link_to "#",
+              class: "list-item mid-footer-link"
+              span= item

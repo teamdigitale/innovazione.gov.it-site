@@ -1,0 +1,7 @@
+- classes ||= ""
+
+- if title.present?
+  .section.py-5 class=(classes)
+    .section-container
+      h6.text-uppercase.text-center.text-lg-left = title
+      = yield

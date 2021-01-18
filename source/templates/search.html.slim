@@ -1,0 +1,30 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+header.mb-5
+  .container.pb-5.text-center.text-sm-left
+    .row
+      .col-12
+        = partial "partials/breadcrumb", locals: {page: page}
+
+      .col-md-7
+        h2.sr-only=t('search')
+        #search-container.mid-search
+
+      .offset-lg-1.col-md-4
+        = partial "partials/column-title",
+          locals: {title: t('explore_aside.title')}
+
+        .link-list-wrapper.mt-2
+          ul.link-list
+            li
+              = link_to page_path(dato.tags_index),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = t('explore_aside.tags_title')
+
+            li
+              = link_to page_path(dato.explore_page),
+                class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold
+                    = dato.explore_page.title

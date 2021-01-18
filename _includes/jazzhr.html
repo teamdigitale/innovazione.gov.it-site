@@ -1,7 +1,0 @@
-{% assign iframeheight = page.iframeheight | default: 2000 %}
-
-{% if page.jazz_url %}
-<h3>{{ site.data.t.jazz-apply[page.lang] }}</h3>
-<p class="privacy-disclaimer">{{ site.data.t.jazz-privacy-disclaimer[page.lang] }}</p>
-<iframe id="recruitform" src="{{page.jazz_url}}" width="100%" height="{{iframeheight}}px"></iframe>
-{% endif %}

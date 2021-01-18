@@ -1,0 +1,37 @@
+- page ||= nil
+- share ||= nil
+- classes ||= ""
+- subs ||= nil
+- hide_caption ||= nil
+
+- if page.present?
+  header class=(classes)
+    .container.pb-5.text-center.text-sm-left
+      .row
+        .col-12
+          = partial "partials/breadcrumb", locals: {page: page}
+
+        .offset-lg-1.col-lg-6.col-md-8
+          = partial "partials/headers/main-titles", locals: {page: page}
+
+          - yield
+          - if content_for?(:col_one) || content_for?(:col_two)
+            .row.mb-5.pt-3
+              - if content_for?(:col_one)
+                .col-sm-6.pb-5.pb-sm-0
+                  = yield_content :col_one
+
+              - if content_for?(:col_two)
+                .col-sm-6
+                  = yield_content :col_two
+
+          = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
+          
+        - if content_for?(:aside)
+          .offset-lg-1.col-md-4
+            - if share.present?
+              .mb-5 = partial "partials/share"
+            - if content_for?(:aside)
+              = yield_content :aside 
+
+

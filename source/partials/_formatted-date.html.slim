@@ -1,0 +1,7 @@
+- date ||= nil
+- show_time ||= nil
+
+- format = show_time.present? ? "%d %B %Y %H:%M" : "%d %B %Y"
+
+- if date.present?
+  span = I18n.l(date, format: format)

@@ -1,0 +1,12 @@
+doctype 5
+html lang=I18n.locale
+  head = partial "partials/head"
+  body
+    = partial "partials/site-nav"
+
+    main#content
+      = yield
+
+    = partial "partials/tags"
+    = partial "partials/site-footer"
+    = partial "partials/js_includes"

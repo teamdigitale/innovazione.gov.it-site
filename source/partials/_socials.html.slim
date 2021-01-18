@@ -1,0 +1,44 @@
+- group_classes = "d-flex align-items-center"
+- element_classes = "d-block mr-3"
+- icon_classes = "icon-sm icon-white"
+
+div class=group_classes
+  - if dato.company.twitter_url.present?
+    = link_to dato.company.twitter_url,
+      class: element_classes,
+      title: "Twitter",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Twitter"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-twitter"
+
+  - if dato.company.linkedin_url.present?
+    = link_to dato.company.linkedin_url,
+      class: element_classes,
+      title: "LinkedIn",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Linkedin"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-linkedin"
+
+  - if dato.company.facebook_url.present?
+    = link_to dato.company.facebook_url,
+      class: element_classes,
+      title: "Facebook",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Facebook"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-facebook"
+
+  - if dato.company.medium_url.present?
+    = link_to dato.company.medium_url,
+      class: element_classes,
+      title: "Medium",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Medium"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-medium"

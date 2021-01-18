@@ -1,0 +1,95 @@
+it:
+  models:
+    announcement: Avviso pubblico
+    article: Articolo
+    focus_page: Focus
+    interview: Intervista
+    participation: Intervento
+    press_release: Comunicato stampa
+    project: Progetto
+
+  announcement_date_closing: Data di chiusura
+  announcement_date_opening: Data di apertura
+  announcement_owner: Struttura di riferimento
+  announcement_status: Stato
+  articles_section_title: Gli articoli
+  attachments: Allegati
+  category: Categoria
+  close: Chiudi
+  contacts: Contatti
+  credits: Crediti
+  deepen: Approfondisci
+  date_shown: Data
+  follow_us_on: Seguici su
+  formatted_address: "Largo Pietro di Brazzà, 86<br>00187 Roma"
+  formatted_site_name: "Ministro per l'innovazione tecnologica e la digitalizzazione"
+  highlighted_topics: "Argomenti in evidenza"
+  interviews_section_title: "Le interviste"
+  home_label: Home
+  main_nav_label: Mostra/Nascondi la navigazione
+  media_comunication: Media e comunicazione
+  medium_articles: "Gli approfondimenti su Medium"
+  medium: "Vai su Medium"
+  ministry_secretariat: Segreteria del Ministro
+  minutes: minuti
+  other_links: Altri siti web
+  owner_name: Governo Italiano
+  participations_section_title: "Gli interventi"
+  permalink_label: Permalink
+  press_office: "Ufficio stampa"
+  press_releases_section_title: "I comunicati stampa"
+  public_announcements_title: "Gli avvisi pubblici"
+  reading-time: "Tempo di lettura"
+  source: Fonte
+  search: Cerca
+  state_name: Repubblica Italiana
+  tags_title: "Gli argomenti dell'innovazione"
+  transparency: Trasparenza
+  updated_at: Data ultimo aggiornamento
+  useful_links: "Collegamenti utili"
+  view_more: Vedi di più
+
+  ontology:
+    arguments: Argomenti
+
+  link_labels:
+    forum: Forum Italia
+    go_to_website: Vai al sito
+    website: Sito web
+
+  projects:
+    title: Progetti
+    highlights: In evidenza
+    category: Categoria
+    topics: Argomenti
+
+  focus:
+    title: Focus
+
+  contents:
+    title: Contenuti
+
+  time:
+    month_names:
+      - Gennaio
+      - Febbraio
+      - Marzo
+      - Aprile
+      - Maggio
+      - Giugno
+      - Luglio
+      - Agosto
+      - Settembre
+      - Ottobre
+      - Novembre
+      - Dicembre
+
+  explore_aside:
+    title: "Oppure"
+    tags_title: "Esplora per argomento"
+    search_title: "Cerca nel sito"
+
+  pager:
+    label: Navigazione delle pagine
+    prev: Pagina precedente
+    next: Pagina successiva

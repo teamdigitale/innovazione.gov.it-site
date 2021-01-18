@@ -1,0 +1,35 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+- featured_tags = visible_tags & dato.homepage.featured_tags
+
+= partial "partials/headers/header-basic", locals: {page: page, classes: "lightgrey-bg-c1" } do
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: t("deepen")}
+    = link_to t("press_office"),
+      page_path(dato.minister_press_releases_index),
+      class: "text-primary text-decoration-none font-weight-semibold"
+  
+  = content_for :aside
+    = partial "partials/column-title", locals: {title: t("highlighted_topics")}
+    - featured_tags.each do |tag|
+      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag), btn_type: ''}
+
+.lightgrey-bg-c1
+  .container.px-4
+    .row.d-lg-flex
+      .col-lg-7
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("articles_section_title"),
+          items: visible_articles.take(3),
+          large_title: true,
+          btn_url: dato.articles_index}
+
+      .col-lg-4.offset-1.pl-lg-4.mt-5.mb-3.my-lg-0.mid-border-lg-left
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("press_releases_section_title"),
+          items: visible_press_releases.take(6),
+          btn_url: dato.press_releases_index}
+
+    .py-5
+      = partial "partials/medium-elements"
