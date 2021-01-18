@@ -1,7 +1,7 @@
 - if page.respond_to?(:related_items) && page.related_items.any?
-  .row.mid-border-lg-top.mb-5
+  .row.mid-border-lg-top.pt-lg-5.mb-5
     .col-sm-8
-      = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
+      .mb-4 = partial "partials/section-title", locals: {title: t("related_content")}
       - page.related_items.each do |item|
         = partial "partials/card-related-items",
           locals: {item: item}
