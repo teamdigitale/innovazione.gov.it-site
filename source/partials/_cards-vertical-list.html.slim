@@ -15,7 +15,7 @@
 .d-flex.flex-column.justify-content-start
 
   - items.each do |item|
-    div.my-1.my-lg-3
+    div.my-2.my-lg-3
       - card_partial = ''
       - if item.item_type.api_key == "announcement"
         - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
