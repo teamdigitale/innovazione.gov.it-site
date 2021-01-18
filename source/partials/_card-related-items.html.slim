@@ -1,7 +1,9 @@
 - item ||= nil
+- horizontal_padding = ''
+- text_length = 'col-12'
+- logo_length = ''
 
 - if item.present?
-  - text_format = 'px-0'
   - date = ''
   - if item.respond_to?(:date_shown) && item.date_shown.present?
     - date = partial "partials/formatted-date", locals: {date: item.date_shown}
@@ -9,7 +11,8 @@
   - logo_url = ''
   - if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
     - logo_url = item.image_project_logo
-    - text_format = "col-9"
+    - text_length = 'col-10'
+    - logo_length = 'col-2'
 
   - text_type = 'text-muted'
   - text_date = 'text-secondary'
@@ -24,13 +27,13 @@
     - text_subtitle = 'text-white'
     - bg_color = ""
     - card_classes = 'bg-primary'
-    - text_format = 'px-3'
+    - horizontal_padding = 'px-3 py-0'
 
   .card.mb-2.mb-lg-3.mx-0.p-0
-    .card-body class=card_classes
+    .card-body.p-0 class=card_classes
       .d-flex.flex-row-reverse
 
-        .py-0 class=text_format
+        .py-0 class="#{horizontal_padding} #{text_length}"
           .category.py-2.card-text
             span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
               = t("models.#{item.item_type.api_key}")
@@ -50,12 +53,15 @@
             .h6 = item.source
 
         - if logo_url.present?
-          .col-3.px-0
-            = proxy_image_tag logo_url.lqip_data_url(w: 10, h: 10, fit:'max'),
-              data: {'sizes': '100vw',
-                'src': logo_url.url(w: 120, h: 120, fit:'max', auto:'compress'),
-                'srcset': "#{logo_url.url(w: 120, h: 120, fit:'max', auto:'compress')} 480w,
-                #{logo_url.url(w: 155, h: 250, fit:'max', auto:'compress')} 632w"},
-              class: "lazyload d-block w-100 mh-75",
-              alt: logo_url.alt,
-              title: logo_url.title
+          div class="#{logo_length}"
+            .img-responsive-wrapper.p-0.m-0
+              figure.position-absolute.h-100.w-100
+                = proxy_image_tag logo_url.lqip_data_url(w: 10, h: 10, fit:'max'),
+                  data: {'sizes': '100vw',
+                    'src': logo_url.url(w: 120, h: 120, fit:'max', auto:'compress'),
+                    'srcset': "#{logo_url.url(w: 120, h: 120, fit:'max', auto:'compress')} 480w,
+                    #{logo_url.url(w: 155, h: 250, fit:'max', auto:'compress')} 632w"},
+                  style: "height: 100%; object-fit: cover; width: auto",
+                  class: "lazyload d-block h-100",
+                  alt: logo_url.alt,
+                  title: logo_url.title
