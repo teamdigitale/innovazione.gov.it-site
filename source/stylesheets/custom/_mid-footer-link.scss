@@ -1,10 +1,10 @@
-.mid-footer-link:not(.disabled) span {
-  color: $analogue-2;
+.mid-footer-link:not(.disabled) {
+  color: $analogue-2 !important;
+  font-weight: 600;
   text-decoration: underline;
 }
 
-.mid-footer-link:not(.disabled):hover span {
-  color: $analogue-2;
+.mid-footer-link:not(.disabled):hover {
+  color: white !important;
   text-decoration: underline;
-  opacity: 0.8;
 }
