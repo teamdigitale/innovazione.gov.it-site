@@ -10,21 +10,22 @@
 - special_subtitle ||= nil
 - unequal_height ||= nil
 
-.mb-4.mb-lg-5
-  = partial "partials/section-title", locals: {title: title}
-.d-flex.flex-column.justify-content-start
+- if items.present?
+  .mb-4.mb-lg-5
+    = partial "partials/section-title", locals: {title: title}
+  .d-flex.flex-column.justify-content-start
 
-  - items.each do |item|
-    div.my-2.my-lg-3
-      - card_partial = ''
-      - if item.item_type.api_key == "announcement"
-        - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
-      - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-        - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
+    - items.each do |item|
+      div.my-2.my-lg-3
+        - card_partial = ''
+        - if item.item_type.api_key == "announcement"
+          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+        - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
+          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
 
-      - if item.present? && card_partial.present?
-        = card_partial
-  .d-flex.flex-row.justify-content-center.my-4
-    = link_to t("view_more"),
-      page_path(btn_url),
-      class: "btn btn-primary text-white text-uppercase"
+        - if item.present? && card_partial.present?
+          = card_partial
+    .d-flex.flex-row.justify-content-center.my-4
+      = link_to t("view_more"),
+        page_path(btn_url),
+        class: "btn btn-primary text-white text-uppercase"
