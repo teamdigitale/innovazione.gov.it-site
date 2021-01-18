@@ -14,11 +14,11 @@
     - length_card = "col-lg-9"
 
   - if article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?
-    - image = "card-img no-after rounded shadow"
+    - image = "card-img no-after"
     - image_link = article.image_thumbnail.url
     - card_image = article.image_thumbnail
 
-  .card.round.shadow.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
+  .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
     div class="#{length_card}"
       .card-body
         div

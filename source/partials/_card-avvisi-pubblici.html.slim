@@ -7,7 +7,7 @@
     - last_date = partial "partials/formatted-date", locals: {date: announcement.announcement_date_closing}
     - deadline = "Scade il #{last_date}"
 
-  .card.shadow.round.h-100
+  .card.shadow-lg.rounded.h-100
     .card-body
       .card-text.small.text-uppercase.font-weight-semibold.text-muted
         = announcement.announcement_status.name
