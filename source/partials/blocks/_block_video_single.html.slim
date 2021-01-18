@@ -8,5 +8,5 @@
   - nocookie_url = block.video.url.gsub("youtube.com/watch?v=", "youtube-nocookie.com/embed/")
   - minheight = block.video.height < 400 ? 400 : block.video.height
 
-  .my-5 class=(block.big.present? ? "col-12" : "col-lg-9")
+  .mb-5 class=(block.big.present? ? "col-12" : "col-lg-9")
     iframe width="100%" height=minheight src=nocookie_url frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"

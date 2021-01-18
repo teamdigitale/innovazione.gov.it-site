@@ -1,5 +1,5 @@
 - if page.respond_to?(:related_items) && page.related_items.any?
-  .row.mid-border-lg-top.py-5
+  .row.mid-border-lg-top.mb-5
     .col-sm-8
       = partial "partials/section-title", locals: {title: "Potrebbero interessarti"}
       - page.related_items.each do |item|

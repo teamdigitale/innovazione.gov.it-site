@@ -1,8 +1,10 @@
-- block.accordion_items.each_with_index do |accordion, index|
-  .collapse-div role="tablist" id="accordionDiv-#{index}"
-    .collapse-header id='headingA-#{index}'
-      button aria-controls="accordion-#{index}" aria-expanded="false" data-target="#accordion-#{index}" data-toggle="collapse" 
-        .text-uppercase.text-muted = accordion.accordion_item_title
-    .collapse aria-labelledby="headingA-#{index}" id="accordion-#{index}" data-parent="#accordionDiv-#{index}" role="tabpanel" 
-      .collapse-body
-        = markdown accordion.accordion_item_body_text
+.container
+  .row.mb-5: .col-12
+    - block.accordion_items.each_with_index do |accordion, index|
+      .collapse-div role="tablist" id="accordionDiv-#{index}"
+        .collapse-header id='headingA-#{index}'
+          button aria-controls="accordion-#{index}" aria-expanded="false" data-target="#accordion-#{index}" data-toggle="collapse" 
+            .text-uppercase.text-muted = accordion.accordion_item_title
+        .collapse aria-labelledby="headingA-#{index}" id="accordion-#{index}" data-parent="#accordionDiv-#{index}" role="tabpanel" 
+          .collapse-body
+            = markdown accordion.accordion_item_body_text
