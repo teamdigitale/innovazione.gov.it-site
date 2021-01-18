@@ -3,7 +3,7 @@
     .col-sm-8
       h3.mb-3
         = partial "partials/section-title", locals: {title: t("related_content")}
-      .col-lg-12.offset-lg-1
+      .col-lg-12.offset-lg-1.my-0.p-0
         - page.related_items.each do |item|
           = partial "partials/card-related-items",
             locals: {item: item}
