@@ -5,8 +5,10 @@
     .card-body.primary-bg.text-center.text-lg-left
       .mid-caption--large.text-uppercase.text-white.font-weight-semibold
         = "Focus"
-      h4.my-3 class="mid-caption--xxlarge body-text text-white font-weight-bold"
-        = item.title
+      h4.my-3
+        = proxy_link_to item.title,
+          page_path(item),
+          class: "text-decoration-none mid-caption--xxlarge text-white font-weight-bold"
       p.d-none.d-lg-block.h5.text-white.
         = item.subtitle
       p.d-lg-none.text-white.
