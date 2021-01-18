@@ -19,16 +19,7 @@
   .container
     = partial "partials/card-feature-carousel"
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("public_announcements_title"),
-      items: dato.announcements.take(3),
-      btn_url: dato.announcements_index}
-
-.py-5.neutral-2-bg-a1
-  .container
-    = partial "partials/card-feature-carousel"
+= partial "partials/focus-flag", locals: {items: page.focus_elements}
 
 .py-5.lightgrey-bg-c1
   .container
