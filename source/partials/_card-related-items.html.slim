@@ -38,7 +38,7 @@
                 alt: logo_url.alt,
                 title: logo_url.title
 
-        .col-9
+        div class="#{logo_url.present? ? 'col-9' : 'col-12'}"
           .category.py-2.card-text
             span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
               = t("models.#{item.item_type.api_key}")
