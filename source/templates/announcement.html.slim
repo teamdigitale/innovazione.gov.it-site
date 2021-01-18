@@ -11,8 +11,9 @@
   = content_for :col_one
 
     - if page.announcement_category.present?
-      = partial "partials/column-title", locals: {title: t("category")}
-      p = page.announcement_category.name
+      .mb-5
+        = partial "partials/column-title", locals: {title: t("category")}
+        p = page.announcement_category.name
 
 
     - if page.announcement_date_opening.present?
@@ -23,12 +24,14 @@
   = content_for :col_two
 
     - if page.announcement_status.present?
-      = partial "partials/column-title", locals: {title: t("announcement_status")}
-      p = page.announcement_status.name
+      .mb-5
+        = partial "partials/column-title", locals: {title: t("announcement_status")}
+        p = page.announcement_status.name
 
     - if page.announcement_date_closing.present?
-      = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
-      = partial "partials/formatted-date", locals: {date: page.announcement_date_closing, show_time: true}
+      .mb-5
+        = partial "partials/column-title", locals: {title: t("announcement_date_closing")}
+        = partial "partials/formatted-date", locals: {date: page.announcement_date_closing, show_time: true}
 
     - if page.announcement_owner.present?
       = partial "partials/column-title", locals: {title: t("announcement_owner")}
