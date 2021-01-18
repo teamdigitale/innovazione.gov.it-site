@@ -28,3 +28,11 @@
 .lightgrey-bg-a2
   .container
     = partial "partials/flag", locals: {flags: page.sections, image_right: true}
+
+.py-5.lightgrey-bg-c1
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: dato.announcements.take(3),
+      btn_url: dato.announcements_index}
+
