@@ -6,19 +6,11 @@
   z-index: 3;
 }
 
-.mid-fixed-height--300 {
-  height: 300px;
-}
-
-.swiper-wrapper {
-}
-
 .swiper-slide {
   height: 100%;
   position: relative;
 
   img {
-    position: absolute;
     width: 90%;
     height: 90%;
     top: 5%;
