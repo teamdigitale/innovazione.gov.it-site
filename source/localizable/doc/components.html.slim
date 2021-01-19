@@ -1,4 +1,8 @@
-main.container.my-5
+---
+hide_from_sitemap: true
+---
+
+.container.my-5
   h1 Documentazione
   p.lead Qui sviluppiamo nuovi componenti da usare/copiare all'interno delle varie pagine. Allo stesso tempo una documentazione live per l'uso di eventuali partials.
 
@@ -13,7 +17,7 @@ main.container.my-5
 
 
 = partial "partials/doc/section", locals: {title: "Heroes"} do
-  | 
+  |
     <code>partials/headers/header-basic</code>: un tentativo di poter gestire tutte le tipologie di header scrivendo meno codice possibile.
     Il partial si aspetta un oggetto <code>page</code> che contenga smepre almeno <code>title e description</code> e opzionalmente <code>summary</code>
     Il partial accetta alcuni parametru opzionali:
@@ -21,7 +25,7 @@ main.container.my-5
     li <code>share: true</code> per mostrare il meno di condivisione social,
     li <code>classes: "bla bla"</code> per aggiungere classi aggiuntive all'header, cambaire colore di sfondo, del testo ecc
     li <code>subs: [collection]</code> per mostrare il menu degli approfondimenti (subpages)
-  
+
   | È necessario poi passare un blocco che contenga <code>content_for [:area]</code> o che almeno finisca con un <code>do</code> lasciando il blocco vuoto.
     Le aree dispnibili sono: <code>:aside, :col_one, :col_two</code>.
     Ogni blocco dentro <code>content_for</code> può avere codice a piacimento
@@ -80,7 +84,7 @@ main.container.my-5
     li <code>inline: true</code> per avere la string ain display-inline-block
     li <code>classes: "classi aggiuntive"</code> per aggiungere classi a piacimento
 
-    
+
 
   = partial "partials/column-title", locals: {title: "Nomale"}
   = partial "partials/column-title", locals: {title: "Large", large: true}
