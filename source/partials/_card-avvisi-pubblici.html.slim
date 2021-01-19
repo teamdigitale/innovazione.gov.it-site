@@ -1,13 +1,15 @@
 - announcement ||= nil
+- hide_shadow ||= nil
 
 - if announcement.present?
 
   - deadline = ''
+  - shadow = hide_shadow ? '' : 'shadow-lg'
   - if announcement.announcement_date_closing.present? && announcement.announcement_status.name == "APERTO"
     - last_date = partial "partials/formatted-date", locals: {date: announcement.announcement_date_closing}
     - deadline = "Scade il #{last_date}"
 
-  .card.shadow-lg.rounded.h-100
+  .card.rounded.h-100 class="#{shadow}"
     .card-body
       .card-text.small.text-uppercase.font-weight-semibold.text-muted
         = announcement.announcement_status.name

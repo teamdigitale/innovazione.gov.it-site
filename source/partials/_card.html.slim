@@ -6,6 +6,7 @@
 - medium_title ||= nil
 - special_subtitle ||= nil
 - unequal_height ||= nil
+- hide_shadow ||= nil
 
 - if article.present?
   - date ||= ''
@@ -13,6 +14,7 @@
   - tags ||= ''
   - image = ''
   - image_link = ''
+  - shadow = hide_shadow ? '' : 'shadow-lg'
   - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
     - image = "card-img no-after rounded shadow"
     - image_link = article.image_cover
@@ -21,7 +23,7 @@
     - image_link = article.image_thumbnail
   - height = unequal_height ? '' : 'h-100'
 
-  .card.rounded.shadow-lg class="#{image} #{height}"
+  .card.rounded class="#{image} #{height} #{shadow}"
     - if image_link.present?
       .img-responsive-wrapper
         .img-responsive

@@ -9,6 +9,7 @@
 - title ||= ''
 - special_subtitle ||= nil
 - unequal_height ||= nil
+- hide_shadow ||= nil
 
 - if items.present?
   .mb-4.mb-lg-5
@@ -19,9 +20,9 @@
       div.my-2.my-lg-3
         - card_partial = ''
         - if item.item_type.api_key == "announcement"
-          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
         - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_tags: hide_tags}
+          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_shadow: hide_shadow, hide_tags: hide_tags}
 
         - if item.present? && card_partial.present?
           = card_partial

@@ -10,19 +10,20 @@
 - special_subtitle ||= nil
 - unequal_height ||= nil
 - self_standing_section = title.present? ? 'mt-3 mt-lg-4' : ''
+- hide_shadow ||= nil
 
 - if items.present?
 
   = partial "partials/section-title", locals: {title: title}
 
-  .row.row-cols-lg-3.g-3 class="#{self_standing_section}"
+  .row.row-cols-lg-3.mt-3
     - items.each do |item|
-      .d-none.d-lg-block.col-lg-4.p-3
+      .d-none.d-lg-block.col-lg-4.mt-3
         - card_partial = ''
         - if item.item_type.api_key == "announcement"
-          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item}
+          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
         - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, hide_image: hide_image, unequal_height: unequal_height, show_item_type: show_item_type, hide_tags: hide_tags}
+          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, hide_image: hide_image, unequal_height: unequal_height, show_item_type: show_item_type, hide_shadow: hide_shadow, hide_tags: hide_tags}
         - if item.present? && card_partial.present?
           = card_partial
     .col-12.d-lg-none
@@ -30,7 +31,7 @@
         locals: {items: items}
 
     .col-lg-12
-      .my-4.pb-4.text-center
+      .my-5.pb-4.text-center
         = link_to t("view_more"),
           page_path(btn_url),
           class: "btn btn-primary text-white text-uppercase"
