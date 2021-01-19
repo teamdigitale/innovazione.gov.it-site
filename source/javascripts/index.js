@@ -82,3 +82,11 @@ function clearAllActives() {
     $(obj).children().removeClass('active')
   })
 }
+
+function setActive(id) {
+  $('#_top-menu .nav-item').each(function(i, obj) {
+    if ($(obj).children().attr('href') === `#${id}` && !$(obj).children().hasClass('active')) {
+      $(obj).children().addClass('active')
+    }
+  })
+}
