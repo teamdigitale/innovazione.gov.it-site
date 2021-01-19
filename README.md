@@ -33,6 +33,14 @@ il seguente comando:
 
 In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
 
+# Lint
+
+Per eseguire il controllo linting dei file .slim, esegui questo comando:
+
+```sh
+$ slim-lint source/**/*.slim
+```
+
 # Custom Asset Host
 
 Di default, gli URL degli asset puntano a un URL di DatoCMS.
