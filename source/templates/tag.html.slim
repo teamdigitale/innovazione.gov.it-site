@@ -30,8 +30,8 @@ header.mb-5
   hr.border-bottom
 
 .py-lg-5
-  - if !pager.previous_page
-    - focus_pages = visible_focus_pages.select{|f| f.tags.include?(page)}
+  - unless pager.previous_page
+    - focus_pages = visible_focus_pages.select { |f| f.tags.include?(page) }
 
     - if focus_pages.any?
       section.py-4
@@ -44,7 +44,7 @@ header.mb-5
             = partial "partials/card-related-items",
               locals: {item: f}
 
-    - projects = visible_projects.select{|f| f.tags.include?(page)}
+    - projects = visible_projects.select { |f| f.tags.include?(page) }
 
     - if projects.any?
       section.py-4
@@ -54,7 +54,7 @@ header.mb-5
 
         .container.mid-container
           - projects.each do |p|
-            div= partial "partials/card-related-items",
+            div = partial "partials/card-related-items",
               locals: {item: p}
 
     - if items.any?
