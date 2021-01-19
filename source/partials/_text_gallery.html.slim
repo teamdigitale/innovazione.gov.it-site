@@ -21,7 +21,9 @@
                       = partial "partials/formatted-date", locals: {date: slide.date_shown}
                   - if slide.title
                     .h4.pt-1.text-primary.font-weight-bold
-                      = slide.title
+                      = proxy_link_to slide.title,
+                        page_path(slide),
+                        class: "text-decoration-none"
                     .mid-caption--xlarge
                       = slide.subtitle
                 .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
