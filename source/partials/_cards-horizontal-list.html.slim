@@ -16,9 +16,9 @@
 
   = partial "partials/section-title", locals: {title: title}
 
-  .row.row-cols-lg-3.mt-3
+  .row.row-cols-lg-3.mt-lg-3
     - items.each do |item|
-      .d-none.d-lg-block.col-lg-4.mt-3
+      .d-none.d-lg-block.col-lg-4.mt-lg-3
         - card_partial = ''
         - if item.item_type.api_key == "announcement"
           - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
@@ -26,6 +26,7 @@
           - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, hide_image: hide_image, unequal_height: unequal_height, show_item_type: show_item_type, hide_shadow: hide_shadow, hide_tags: hide_tags}
         - if item.present? && card_partial.present?
           = card_partial
+
     .col-12.d-lg-none
       = partial "partials/text-gallery-card",
         locals: {items: items}
