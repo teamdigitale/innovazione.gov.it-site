@@ -6,7 +6,7 @@ Per installare l’ambiente necessario allo sviluppo è necessario avere install
 sul proprio sistema i seguenti pacchetti:
 
 * [asdf](https://asdf-vm.com/#/), (opzionale)
-* [bundler](https://bundler/),
+* [bundler](https://bundler.io/),
 * [direnv](https://direnv.net/),
 * [Yarn](https://yarnpkg.com/).
 
