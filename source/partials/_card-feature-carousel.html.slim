@@ -1,4 +1,4 @@
-.row
+.row.my-lg-5
   .text-center.col-lg-2.pt-5.d-ml-flex.justify-content-lg-around
     .avatar.size-xxl style="width: 180px; height: fit-content"
       = proxy_image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10, fit:'crop'),
@@ -21,12 +21,12 @@
               = page.minister_title
             p.h5.text-black.text-center.text-lg-left
               = page.minister_text
-          .my-3.mt-lg-5.text-center.text-md-left
+          .my-3.mt-lg-5.text-center.text-lg-left
             = link_to t("view_more"),
               page_path(dato.minister_page),
               class: "btn btn-primary text-white text-uppercase"
 
-  .col-lg-4.px-4.p-md-0.mb-2.mb-md-0
+  .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
     = partial "partials/text_gallery",
       locals: {slides: page.minister_featured_news, hide_date: true}
   .col-lg-1
