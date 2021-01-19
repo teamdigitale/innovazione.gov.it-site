@@ -33,7 +33,8 @@
 
 .py-5.lightgrey-bg-c1
   .container.pb-5
-    = partial "partials/section-title", locals: {title: t("articles_section_title")}
+    .my-2.pb-3
+      = partial "partials/section-title", locals: {title: t("articles_section_title")}
 
     = partial "partials/featured-news", locals: {featured_items: dato.minister_page.featured_articles}
 
