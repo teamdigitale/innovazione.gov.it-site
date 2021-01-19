@@ -76,3 +76,9 @@ function progressIndicator() {
   var progressBar = document.getElementById("progress-indicator")
   if (progressBar) {progressBar.style.width = scrolled + "%";}
 }
+
+function clearAllActives() {
+  $('.nav-item').each(function(i, obj) {
+    $(obj).children().removeClass('active')
+  })
+}
