@@ -1,0 +1,26 @@
+- items ||= nil
+
+- if items.present?
+  .primary-bg.py-5
+    .container.white-color
+      .row
+        - if items.length == 1
+          .col-12
+            = partial "partials/focus-card", locals: {item: items.first}
+
+        - if items.length == 2
+          .col-lg-1
+          .col-12.col-lg-4
+            = partial "partials/focus-card", locals: {item: items.first}
+
+          .col-lg-2
+          .col-12.col-lg-4
+            = partial "partials/focus-card", locals: {item: items[1]}
+          .col-lg-1
+
+      .row.mt-2.mb-5
+        .col-12.text-center
+          button.btn.btn-outline-primary style="box-shadow: inset 0 0 0 2px white"
+            = proxy_link_to t("view_more"),
+              page_path(dato.focus_index),
+              class: "text-decoration-none text-uppercase text-white"

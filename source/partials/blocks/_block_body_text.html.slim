@@ -1,9 +1,9 @@
-.container.my-5
+.container.mb-5
   - if block.text_title.present?
       h3.h4.mb-4 = block.text_title
 
   .row
-    div class="#{'col-12 col-lg-9' unless compact_columns}"
+    div class=(compact_columns.present? ? 'col-12' : 'col-12 col-lg-9')
       - if block.image_little.present?
         figure.block-body__small-image
           = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),

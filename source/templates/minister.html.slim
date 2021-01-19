@@ -13,7 +13,7 @@
             .col-md-9
               = partial "partials/headers/main-titles", locals: {page: page}
 
-          = partial "partials/headers/subpages-menu", locals: {subs: visible_minister_subpages}
+          = partial "partials/headers/subpages-menu", locals: {subs: visible_fl_pages(dato.minister_subpages)}
 
         .col-md-4.order-2.order-md-3.mb-5.mb-md-0
           .px-5.px-md-0
@@ -33,7 +33,8 @@
 
 .py-5.lightgrey-bg-c1
   .container.pb-5
-    = partial "partials/section-title", locals: {title: t("articles_section_title")}
+    .my-2.pb-3
+      = partial "partials/section-title", locals: {title: t("articles_section_title")}
 
     = partial "partials/featured-news", locals: {featured_items: dato.minister_page.featured_articles}
 

@@ -6,6 +6,7 @@
 - medium_title ||= nil
 - special_subtitle ||= nil
 - unequal_height ||= nil
+- hide_shadow ||= nil
 
 - if article.present?
   - date ||= ''
@@ -13,67 +14,72 @@
   - tags ||= ''
   - image = ''
   - image_link = ''
+  - shadow = hide_shadow ? '' : 'shadow-lg'
   - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
     - image = "card-img no-after rounded shadow"
     - image_link = article.image_cover
   - if !hide_image && (article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?)
-    - image = "card-img no-after rounded shadow"
+    - image = "card-img no-after"
     - image_link = article.image_thumbnail
   - height = unequal_height ? '' : 'h-100'
 
-  = link_to page_path(article),
-    class: "text-decoration-none"
-    .card class="#{image} #{height}"
-      - if image_link.present?
-        .img-responsive-wrapper
-          .img-responsive
-            figure.img-wrapper
-              = proxy_image_tag image_link.lqip_data_url(w: 10, h: 6, fit:'crop'),
-                data: {'sizes': '100vw',
-                  'src': image_link.url(w: 700, h: 400, fit:'crop', auto:'compress'),
-                  'srcset': "#{image_link.url(w: 450, h: 330, fit:'crop', auto:'compress')} 480w,
-                  #{image_link.url(w: 600, h: 333, fit:'crop', auto:'compress')} 632w,
-                  #{image_link.url(w: 560, h: 333, fit:'crop', auto:'compress')} 844w,
-                  #{image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')} 1091w,
-                  #{image_link.url(w: 320, h: 200, fit:'crop', auto:'compress')} 1320w,
-                  #{image_link.url(w: 400, h: 245, fit:'crop', auto:'compress')} 1400w"},
-                class: "lazyload d-block w-100",
-                alt: image_link.alt,
-                title: image_link.title
+  .card.rounded class="#{image} #{height} #{shadow}"
+    - if image_link.present?
+      .img-responsive-wrapper
+        .img-responsive
+          figure.img-wrapper
+            = proxy_image_tag image_link.lqip_data_url(w: 10, h: 6, fit:'crop'),
+              data: {'sizes': '100vw',
+                'src': image_link.url(w: 700, h: 400, fit:'crop', auto:'compress'),
+                'srcset': "#{image_link.url(w: 450, h: 330, fit:'crop', auto:'compress')} 480w,
+                #{image_link.url(w: 600, h: 333, fit:'crop', auto:'compress')} 632w,
+                #{image_link.url(w: 560, h: 333, fit:'crop', auto:'compress')} 844w,
+                #{image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')} 1091w,
+                #{image_link.url(w: 320, h: 200, fit:'crop', auto:'compress')} 1320w,
+                #{image_link.url(w: 400, h: 245, fit:'crop', auto:'compress')} 1400w"},
+              class: "lazyload d-block w-100",
+              alt: image_link.alt,
+              title: image_link.title
 
-      .card-body
-        div
-          - if show_item_type
-            .category.py-3.card-text
-              span.pr-2.text-uppercase.font-weight-semibold.text-muted
-                = t("models.#{article.item_type.api_key}")
-              span.px-2.text-secondary
-                = partial "partials/formatted-date", locals: {date: article.date_shown}
-          - else
-            p.card-text.text-secondary
+    .card-body
+      div
+        - if show_item_type
+          .category.py-3.card-text
+            span.pr-2.text-uppercase.font-weight-semibold.text-muted
+              = t("models.#{article.item_type.api_key}")
+            span.px-2.text-secondary
               = partial "partials/formatted-date", locals: {date: article.date_shown}
-          - if large_title
-            .h2.text-primary
+        - else
+          p.card-text.text-secondary
+            = partial "partials/formatted-date", locals: {date: article.date_shown}
+        - if large_title
+          h4 class="h2 text-primary"
+            = proxy_link_to page_path(article),
+              class: "text-decoration-none"
               = article.title
-          - elsif medium_title
-            .h4.text-primary.font-weight-bold
+        - elsif medium_title
+          h4.text-primary.font-weight-bold
+            = proxy_link_to page_path(article),
+              class: "text-decoration-none"
               = article.title
-          - else
-            .body-text.text-primary.font-weight-bold
+        - else
+          .body-text.text-primary.font-weight-bold
+            = proxy_link_to page_path(article),
+              class: "text-decoration-none"
               = article.title
-          - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
-            .h6.text-muted.pt-3
-              = article.source
-          - else
-            .small.text-muted.pt-3
-              = article.subtitle
-        .my-4
-        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-          - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
-            - article.tags.each do |tag|
-              = partial "partials/chip",
-                locals: {label: tag.name,
-                url: page_path(tag),
-                chip_type: "",
-                btn_type: "",
-                chip_size: ""}
+        - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
+          .h6.text-muted.pt-3
+            = article.source
+        - else
+          .small.text-muted.pt-3
+            = article.subtitle
+      .my-4
+      .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+        - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
+          - article.tags.each do |tag|
+            = partial "partials/chip",
+              locals: {label: tag.name,
+              url: page_path(tag),
+              chip_type: "",
+              btn_type: "",
+              chip_size: ""}

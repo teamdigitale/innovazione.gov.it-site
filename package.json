@@ -11,6 +11,7 @@
     "build:lambda": "netlify-lambda build -c netlify.config.js functions/source",
     "lint": "yarn run eslint source/javascripts/*",
     "lint:autocorrect": "eslint source/javascripts/* --fix",
+    "lint:styles": "stylelint source/stylesheets/**/*.scss",
     "start": "concurrently \"npm run start:proxy\" \"npm run start:lambda\" \"npm run start:webpack\""
   },
   "author": "Cantiere Creativo s.r.l.",
@@ -37,6 +38,8 @@
     "sass": ">= 0.0.0",
     "sass-loader": ">= 10.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
     "svg-spritemap-webpack-plugin": ">= 3.7.1",
     "terser-webpack-plugin": "^5.0.3",
     "webpack": "^5.10.0",

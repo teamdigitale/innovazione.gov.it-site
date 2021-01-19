@@ -5,9 +5,8 @@ Il progetto è costruito sul generatore di siti statici [Middleman](https://midd
 Per installare l’ambiente necessario allo sviluppo è necessario avere installato
 sul proprio sistema i seguenti pacchetti:
 
-* [asdf](https://asdf-vm.com/#/), (opzionale)
-* [bundler](https://bundler.io/),
-* [direnv](https://direnv.net/),
+* [asdf](https://asdf-vm.com/#/),
+* [bundler](https://bundler/),
 * [Yarn](https://yarnpkg.com/).
 
 Successivamente, bisogna lanciare i comandi seguenti:
@@ -33,6 +32,30 @@ il seguente comando:
 `bundle exec middleman`
 
 In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
+
+# Lint
+
+## Template SLIM e il suo codice Ruby
+
+Per eseguire il controllo linting dei file .slim, esegui questo comando:
+
+```sh
+$ slim-lint source/**/*.slim
+```
+
+slim-lint ha due livelli di regole:
+
+* quelle specifiche sulla struttura SLIM nel file `slim-lint.yml`,
+* quelle Rubocop che riguardano il codice Ruby contenuto nel file
+  `.rubocop.yml`.
+
+## SCSS
+
+Per eseguire il controllo del SCSS, esegui questo comando:
+
+```sh
+$ yarn lint:styles
+```
 
 # Custom Asset Host
 

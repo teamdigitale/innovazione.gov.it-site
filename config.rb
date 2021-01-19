@@ -85,28 +85,20 @@ module PresentationHelper
     articles.sort_by(&:date_shown).reverse
   end
 
-  def self.published_department_subpages(department_subpages)
-    department_subpages.sort_by(&:position)
+  def self.published_pages(pages)
+    pages.sort_by(&:position)
+  end
+
+  def self.published_children_pages(page)
+    page.children.sort_by(&:position)
   end
 
   def self.published_focus_pages(focus_pages)
     focus_pages.sort_by(&:position)
   end
 
-  def self.published_general_pages(general_pages)
-    general_pages.sort_by(&:position)
-  end
-
   def self.published_interviews(interviews)
     interviews.sort_by(&:date_shown).reverse
-  end
-
-  def self.published_minister_subpages(minister_subpages)
-    minister_subpages.sort_by(&:position)
-  end
-
-  def self.published_news_subpages(news_subpages)
-    news_subpages.sort_by(&:position)
   end
 
   def self.published_participations(participations)
@@ -123,10 +115,6 @@ module PresentationHelper
 
   def self.published_projects(projects)
     projects.sort_by(&:position)
-  end
-
-  def self.published_projects_subpages(projects_subpages)
-    projects_subpages.sort_by(&:position)
   end
 
   def self.published_schedule_events(schedule_events)
@@ -151,24 +139,12 @@ helpers do
     PresentationHelper.published_articles(dato.articles)
   end
 
-  def visible_department_subpages
-    PresentationHelper.published_department_subpages(dato.department_subpages)
-  end
-
   def visible_focus_pages
     PresentationHelper.published_focus_pages(dato.focus_pages)
   end
 
   def visible_interviews
     PresentationHelper.published_interviews(dato.interviews)
-  end
-
-  def visible_minister_subpages
-    PresentationHelper.published_minister_subpages(dato.minister_subpages)
-  end
-
-  def visible_news_subpages
-    PresentationHelper.published_news_subpages(dato.news_subpages)
   end
 
   def visible_participations
@@ -187,16 +163,24 @@ helpers do
     PresentationHelper.published_projects(dato.projects)
   end
 
-  def visible_projects_subpages
-    PresentationHelper.published_projects_subpages(dato.projects_subpages)
-  end
-
   def visible_schedule_events
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
   def visible_tags
     PresentationHelper.published_tags(dato.tags)
+  end
+
+  def featured_tags
+    PresentationHelper.published_tags(dato.tags) & dato.company.featured_tags
+  end
+
+  def visible_pages(pages)
+    PresentationHelper.published_pages(pages)
+  end
+
+  def visible_fl_pages(pages)
+    PresentationHelper.published_pages(pages).select{|p| !p.parent}
   end
 
   def menu_label_with_fallback(page)
@@ -246,11 +230,12 @@ dato.tap do |dato|
       locals: { page: dato.explore_page },
       locale: locale
 
-    PresentationHelper.published_general_pages(dato.general_pages).each do |general_page|
+    PresentationHelper.published_pages(dato.general_pages).each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
       proxy "#{prefix}#{parent_path}/#{general_page.slug}/index.html",
         "/templates/page.html",
-        locals: { page: general_page },
+        locals: { page: general_page,
+          children: PresentationHelper.published_children_pages(general_page)},
         locale: locale
     end
 
@@ -307,11 +292,12 @@ dato.tap do |dato|
       locals: { page: dato.minister_press_releases_index },
       per_page: 10
 
-    PresentationHelper.published_minister_subpages(dato.minister_subpages).each do |minister_subpage|
+    PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
       proxy "#{prefix}/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
         "/templates/page.html",
-        locals: { page: minister_subpage },
+        locals: { page: minister_subpage,
+          children: PresentationHelper.published_children_pages(minister_subpage)},
         locale: locale
     end
 
@@ -355,11 +341,12 @@ dato.tap do |dato|
       locals: { page: dato.department_press_releases_index },
       per_page: 10
 
-    PresentationHelper.published_department_subpages(dato.department_subpages).each do |department_subpage|
+    PresentationHelper.published_pages(dato.department_subpages).each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
       proxy "#{prefix}/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
         "/templates/page.html",
-        locals: { page: department_subpage },
+        locals: { page: department_subpage,
+          children: PresentationHelper.published_children_pages(department_subpage)},
         locale: locale
     end
 
@@ -375,11 +362,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    PresentationHelper.published_projects_subpages(dato.projects_subpages).each do |projects_subpage|
+    PresentationHelper.published_pages(dato.projects_subpages).each do |projects_subpage|
       parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
       proxy "#{prefix}/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
         "/templates/page.html",
-        locals: { page: projects_subpage },
+        locals: { page: projects_subpage,
+          children: PresentationHelper.published_children_pages(projects_subpage)},
         locale: locale
     end
 
@@ -458,11 +446,12 @@ dato.tap do |dato|
         locale: locale
     end
 
-    PresentationHelper.published_news_subpages(dato.news_subpages).each do |news_subpage|
+    PresentationHelper.published_pages(dato.news_subpages).each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
       proxy "#{prefix}/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
         "/templates/page.html",
-        locals: { page: news_subpage },
+        locals: { page: news_subpage,
+          children: PresentationHelper.published_children_pages(news_subpage)},
         locale: locale
     end
 

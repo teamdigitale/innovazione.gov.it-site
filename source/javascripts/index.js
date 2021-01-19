@@ -5,6 +5,7 @@ import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
 import "lazysizes";
 
+const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
 
 if ($(".swiper-container").length > 0) {
@@ -66,13 +67,5 @@ const initSearch = () => {
 };
 
 initSearch();
-
-window.onscroll = function() {progressIndicator()};
-
-function progressIndicator() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  var progressBar = document.getElementById("progress-indicator")
-  if (progressBar) {progressBar.style.width = scrolled + "%";}
-}
+progressIndicator.updateProgress()
+window.onscroll = function() {progressIndicator.updateProgress()};

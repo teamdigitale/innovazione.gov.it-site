@@ -3,5 +3,5 @@
 
 - if page.respond_to?(:updated_at) && page.updated_at.present?
   .my-5
-    = partial "partials/column-title", locals: {title: I18n.t("updated_at")}
+    = partial "partials/column-title", locals: {title: I18n.t("updated_at"), large: true}
     = partial "partials/formatted-date", locals: {date: page.updated_at}
