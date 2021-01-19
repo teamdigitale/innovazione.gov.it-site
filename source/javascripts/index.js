@@ -80,7 +80,7 @@ function progressIndicator() {
 
 function setActiveSection() {
   $('.mid-formatted-content').each(function(i, obj) {
-    if (obj.getBoundingClientRect().top <= 0 ) {
+    if (obj.getBoundingClientRect().top <= 10 ) {
       clearAllActives()
       setActive($(obj).children().attr('id'))
     }
