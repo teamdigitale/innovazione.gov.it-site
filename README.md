@@ -35,10 +35,26 @@ In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
 
 # Lint
 
+## Template SLIM e il suo codice Ruby
+
 Per eseguire il controllo linting dei file .slim, esegui questo comando:
 
 ```sh
 $ slim-lint source/**/*.slim
+```
+
+slim-lint ha due livelli di regole:
+
+* quelle specifiche sulla struttura SLIM nel file `slim-lint.yml`,
+* quelle Rubocop che riguardano il codice Ruby contenuto nel file
+  `.rubocop.yml`.
+
+## SCSS
+
+Per eseguire il controllo del SCSS, esegui questo comando:
+
+```sh
+$ yarn lint:styles
 ```
 
 # Custom Asset Host
