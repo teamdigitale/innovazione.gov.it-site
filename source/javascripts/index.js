@@ -75,6 +75,16 @@ function progressIndicator() {
   var scrolled = (winScroll / height) * 100;
   var progressBar = document.getElementById("progress-indicator")
   if (progressBar) {progressBar.style.width = scrolled + "%";}
+  setActiveSection()
+}
+
+function setActiveSection() {
+  $('.mid-formatted-content').each(function(i, obj) {
+    if (obj.getBoundingClientRect().top <= 0 ) {
+      clearAllActives()
+      setActive($(obj).children().attr('id'))
+    }
+  });
 }
 
 function clearAllActives() {
