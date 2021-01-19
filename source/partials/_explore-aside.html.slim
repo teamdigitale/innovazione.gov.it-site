@@ -1,5 +1,5 @@
 = partial "partials/column-title",
-  locals: {title: t('explore_aside.title')}
+  locals: {title: t("explore_aside.title")}
 
 .link-list-wrapper.mt-2
   ul.link-list
@@ -7,9 +7,9 @@
       = link_to page_path(dato.search_page),
         class: "p-0 list-item d-inline-block"
           span.font-weight-semibold.mr-0
-            = t('explore_aside.search_title')
+            = t("explore_aside.search_title")
     li
       = link_to page_path(dato.tags_index),
         class: "p-0 list-item d-inline-block"
           span.font-weight-semibold.mr-0
-            = t('explore_aside.tags_title')
+            = t("explore_aside.tags_title")

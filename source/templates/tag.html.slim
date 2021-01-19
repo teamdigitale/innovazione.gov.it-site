@@ -12,14 +12,14 @@ header.mb-5
 
       .offset-lg-1.col-md-4
         = partial "partials/column-title",
-          locals: {title: t('explore_aside.title')}
+          locals: {title: t("explore_aside.title")}
         .link-list-wrapper.mt-2
           ul.link-list
             li
               = link_to page_path(dato.search_page),
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold.mr-0
-                    = t('explore_aside.search_title')
+                    = t("explore_aside.search_title")
             li
               = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
@@ -37,7 +37,7 @@ header.mb-5
       section.py-4
         header.container
           h2.display-3.font-weight-semibold.mb-4
-            = t('focus.title')
+            = t("focus.title")
 
         .container.mid-container
           - focus_pages.each do |f|
@@ -50,7 +50,7 @@ header.mb-5
       section.py-4
         header.container
           h2.display-3.font-weight-semibold.mb-4
-            = t('projects.title')
+            = t("projects.title")
 
         .container.mid-container
           - projects.each do |p|
@@ -61,7 +61,7 @@ header.mb-5
       section.pt-4
         header.container
           h2.display-3.font-weight-semibold.mb-4
-            = t('contents.title')
+            = t("contents.title")
 
         .container.mid-container
           .row

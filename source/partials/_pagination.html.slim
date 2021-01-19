@@ -1,10 +1,10 @@
-nav.pagination-wrapper aria-label=t('pager.label')
+nav.pagination-wrapper aria-label=t("pager.label")
   ul.pagination
     - if pager.previous_page
       li.page-item
         = link_to pager.page_path(pager.previous_page),
           class: "page-link",
-          aria: {"label": t('pager.prev')}
+          aria: {"label": t("pager.prev")}
 
           svg.icon.icon-primary
             use xlink:href="/images/sprite.svg#it-chevron-left"
@@ -23,7 +23,7 @@ nav.pagination-wrapper aria-label=t('pager.label')
       li.page-item
         = link_to pager.page_path(pager.next_page),
           class: "page-link",
-          aria: {"label": t('pager.next')}
+          aria: {"label": t("pager.next")}
 
           svg.icon.icon-primary
             use xlink:href="/images/sprite.svg#it-chevron-right"

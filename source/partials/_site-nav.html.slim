@@ -3,7 +3,7 @@ header.it-header-wrapper data-datocms-noindex=true
     .container
       .row
         .it-header-slim-wrapper-content.px-2
-          = link_to t('owner_name'),
+          = link_to t("owner_name"),
             "//www.governo.it/",
             target: "_blank",
             rel: "noopener",
@@ -37,10 +37,10 @@ header.it-header-wrapper data-datocms-noindex=true
                   = partial "partials/socials"
 
               .it-search-wrapper
-                span.d-none.d-md-block= t('search')
+                span.d-none.d-md-block= t("search")
                 = link_to page_path(dato.search_page),
                   class: "search-link rounded-icon",
-                  aria: {"label": t('search')}
+                  aria: {"label": t("search")}
                   svg.icon
                     use xlink:href="/images/sprite.svg#it-search"
 
@@ -49,7 +49,7 @@ header.it-header-wrapper data-datocms-noindex=true
         .row
           /! start nav
           nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
-            button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t('main_nav_label') data-target="#nav02" type="button"
+            button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t("main_nav_label") data-target="#nav02" type="button"
               svg.icon
                 use xlink:href="/images/sprite.svg#it-burger"
 
@@ -58,7 +58,7 @@ header.it-header-wrapper data-datocms-noindex=true
               .close-div.sr-only
                 button.btn.close-menu type="button"
                   span.it-close
-                    = t('close')
+                    = t("close")
 
               .menu-wrapper
                 ul.navbar-nav
