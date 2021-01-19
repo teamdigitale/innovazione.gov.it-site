@@ -1,7 +1,7 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page, subs: visible_department_subpages } do
+= partial "partials/headers/header-basic", locals: { page: page, subs: visible_fl_pages(dato.department_subpages) } do
   = content_for :aside
     .img-responsive-wrapper
       figure
