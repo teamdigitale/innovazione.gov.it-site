@@ -31,7 +31,7 @@ hide_from_sitemap: true
     Ogni blocco dentro <code>content_for</code> può avere codice a piacimento
 
 - page = visible_articles.first
-= partial "partials/headers/header-basic", locals: {page: page, share: nil, subs: visible_projects_subpages} do
+= partial "partials/headers/header-basic", locals: {page: page, share: nil, subs: visible_fl_pages(dato.general_pages)} do
 
   = content_for :aside, flush: true
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
