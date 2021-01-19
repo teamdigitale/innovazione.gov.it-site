@@ -8,10 +8,10 @@
 
   - flags.each do |flag|
     - image_right = !image_right
-    - image_position = image_right == true ? 'order-md-1' : 'order-md-2'
-    - text_position = image_right == true ? 'order-md-2' : 'order-md-1'
-    .row.align-items-center
-      .d-none.d-lg-block.col-lg-6.p-0 class="#{image_position}" style="height: 500px"
+    - image_position = image_right == true ? 'order-lg-1' : 'order-lg-2'
+    - text_position = image_right == true ? 'order-lg-2' : 'order-lg-1'
+    .row
+      .d-none.d-lg-block.col-lg-6.p-0 class="#{image_position}"
         figure.m-0
           = proxy_image_tag flag.image.lqip_data_url(w: 10, h: 8, fit: 'crop'),
               data: {'sizes': '100vw',
@@ -22,40 +22,27 @@
               alt: flag.image.alt,
               title: flag.image.title
 
-      .d-none.d-md-block.d-lg-none.col-md-6.p-0 class="#{image_position}" style="height: 400px"
-        figure.m-0
-          = proxy_image_tag flag.image.lqip_data_url(w: 10, h: 8, fit: 'crop'),
-              data: {'sizes': '100vw',
-                'src': flag.image.url(w: 370, h: 440, fit: 'crop', auto:'compress'),
-                'srcset': "#{flag.image.url(w: 370, h: 440, fit: 'crop', auto:'compress')} 480w"},
-              class: "lazyload d-block w-100 m-0",
-              style: "height: 400px; max-width: 100%; object-fit: cover",
-              alt: flag.image.alt,
-              title: flag.image.title
-
-      .col-12.col-md-6 class="#{text_position}"
-        .col-md-8.offset-md-2
-          div.py-5.px-2.p-md-0
-            .small.text-uppercase.font-weight-semibold.text-muted.pt-5.p-md-0.text-center.text-md-left
+      .col-12.col-lg-6.px-0 class="#{text_position}"
+        .col-lg-8.offset-lg-2
+          .mt-lg-5.pt-5.px-2.px-lg-0
+            .mid-text--large.text-uppercase.font-weight-semibold.pt-5.p-lg-0.text-center.text-lg-left
               = flag.pre_title
-            .d-none.d-lg-block.h1.pt-2 = flag.title
-            .d-none.d-md-block.d-lg-none.h4.pt-2 = flag.title
-            .d-md-none.h4.pt-2.text-center = flag.title
-            .my-3.mt-md-5.text-center.text-md-left.pb-5.p-md-0
+            h3.d-none.d-lg-block.h1.pt-2.pb-3.text-center.text-lg-left = flag.title
+            h3.d-lg-none.mid-heading--largest.pt-2.pb-3.text-center.text-lg-left = flag.title
+            .mt-3.mt-lg-4.text-center.text-lg-left.pb-5.mb-3.mb-lg-0
               = link_to t("view_more"),
                 page_path(flag.link.link),
                 class: "btn btn-primary text-white text-uppercase"
 
-      .col-12.d-md-none
+      .col-12.d-lg-none.px-0
         .img-responsive-wrapper.p-0
           .img-responsive
             .img-wrapper
-              figure
+              figure.m-0
                 = proxy_image_tag flag.image.lqip_data_url(w: 10, h: 6, fit: 'crop'),
                    data: {'sizes': '100vw',
                      'src': flag.image.url(w: 560, h: 320, fit: 'crop', auto:'compress'),
                      'srcset': "#{flag.image.url(w: 560, h: 320, fit: 'crop', auto:'compress')} 480w"},
-                   class: "lazyload d-block w-100 m-0",
-                   style: "height: 400px; max-width: 100%; object-fit: cover",
+                   class: "lazyload",
                    alt: flag.image.alt,
                    title: flag.image.title
