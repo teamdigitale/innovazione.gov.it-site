@@ -7,7 +7,6 @@ sul proprio sistema i seguenti pacchetti:
 
 * [asdf](https://asdf-vm.com/#/),
 * [bundler](https://bundler/),
-* [direnv](https://direnv.net/),
 * [Yarn](https://yarnpkg.com/).
 
 Successivamente, bisogna lanciare i comandi seguenti:
