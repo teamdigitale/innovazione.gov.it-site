@@ -12,7 +12,7 @@ sul proprio sistema i seguenti pacchetti:
 Successivamente, bisogna lanciare i comandi seguenti:
 
 ```sh
-asdf install
+asdf install (opzionale)
 bundle
 yarn
 ```
