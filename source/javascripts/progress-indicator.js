@@ -8,7 +8,7 @@ export function updateProgress() {
 }
 
 function setActiveSection() {
-  $('.mid-formatted-content').each(function(i, obj) {
+  $('._anchor').each(function(i, obj) {
     if (obj.getBoundingClientRect().top <= 10 ) {
       clearAllActives()
       setActive($(obj).children().attr('id'))

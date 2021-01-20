@@ -25,8 +25,8 @@
           section.section.p-0 class=(i.even? ? "section-muted" : "")
             .container
               .row.py-5.pl-5
-                .col-md-9.mb-4.px-2.px-md-0
-                  a name=cat.slug
+                .col-md-9.mb-4.px-2.px-md-0._anchor
+                  a id="#{cat.slug.downcase.gsub(' ', '-')}"
                   h3.font-weight-semibold.mb-3 = cat.name
                   p.lead.font-weight-semibold = cat.description
 

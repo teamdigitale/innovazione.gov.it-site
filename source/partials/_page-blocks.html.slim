@@ -1,7 +1,7 @@
 - compact_columns ||= false
 
 - page.content_blocks.each do |block|
-  .mid-formatted-content
+  .mid-formatted-content._anchor
     div id="#{block.respond_to?(:text_title) ? block.text_title.downcase.gsub(' ', '-') : ''}"
       = partial "partials/blocks/#{block.item_type.api_key}",
         locals: {block: block,

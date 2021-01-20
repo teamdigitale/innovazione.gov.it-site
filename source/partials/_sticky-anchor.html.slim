@@ -11,7 +11,7 @@
         - if categories.present?
           - categories.each do |cat|
             li.nav-item
-              = link_to cat.name, "#{page_path(dato.projects_page)}##{cat.slug}"
+              = link_to cat.name, "##{cat.slug.downcase.gsub(' ', '-')}", class: 'nav-link pr-4'
         - else
           - page.content_blocks.each do |block|
             li.nav-item 
