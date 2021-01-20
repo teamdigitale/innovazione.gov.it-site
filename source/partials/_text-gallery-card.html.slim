@@ -17,7 +17,7 @@
       .swiper-wrapper
         - items.each do |item|
           .swiper-slide
-            .swiper-slide__text
+            .swiper-slide__text.py-0
               - card_partial = ''
               - if item.item_type.api_key == "announcement"
                 - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: true}
