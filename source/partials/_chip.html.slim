@@ -1,15 +1,17 @@
-- size = chip_size ||= "chip-lg"
-- type = chip_type ||= "chip-primary"
-- style = btn_type ||= "btn-outline-primary"
-- text_color ||= ""
-- default_classes = "chip mr-3 mb-2 text-decoration-none"
-- classes = [default_classes, size, type, style].join(" ")
+ruby:
+  size = chip_size ||= "chip-lg"
+  type = chip_type ||= "chip-primary"
+  style = btn_type ||= "btn-outline-primary"
+  text_color ||= ""
+  default_classes = "chip mr-3 mb-2 text-decoration-none"
+  border = text_color == "text-white" ? "border-white" : ""
+  classes = [default_classes, size, type, style, border].join(" ")
 
-- label ||= nil
-- url ||= nil
+  label ||= nil
+  url ||= nil
 
 - if label.present? && url.present?
   = link_to url,
     class: classes
-    span.chip-label class="#{text_color}"
+    span.chip-label class=(text_color)
       = label

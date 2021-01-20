@@ -33,7 +33,7 @@
     = partial "partials/column-title", locals: {title: t("projects.topics")}
     - page.tags.each do |tag|
       = partial "partials/chip",
-        locals: {label: tag.name, url: "#"}
+        locals: {label: tag.name, url: page_path(tag)}
 
 = partial "partials/page-content",
   locals: {page: page}

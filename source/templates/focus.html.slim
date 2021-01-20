@@ -1,7 +1,26 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page, share: true } do
+.bg-dark
+  header.bg-primary.text-white
+    .container.pb-5.text-center.text-sm-left
+      .row
+        .col-12.col-md-7
+          = partial "partials/breadcrumb", locals: {page: page}
+
+          .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
+            = partial "partials/headers/main-titles", locals: {page: page}
+
+            = partial "partials/column-title", locals: {title: "Argomenti"}
+            - page.tags.each do |tag|
+              = partial "partials/chip",
+                locals: {label: tag.name,
+                        url: page_path(tag),
+                        text_color: "text-white"}
+
+        .col-5
+          p aside
+
 
 = partial "partials/page-content",
   locals: {page: page}
