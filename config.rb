@@ -179,11 +179,8 @@ helpers do
   end
 
   def visible_tags
-    PresentationHelper.published_tags(dato.tags)
-  end
-
-  def tags_with_contents
-    visible_tags & visible_news_contents.map!{|n| n.tags}
+    PresentationHelper.published_tags(dato.tags) &
+    visible_news_contents.collect{|n| n.tags}.flatten
   end
 
   def featured_tags
