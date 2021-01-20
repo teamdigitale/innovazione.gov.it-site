@@ -3,22 +3,26 @@
 - if items.present?
   .primary-bg.py-5
     .container.white-color
-      .row
-        - if items.length == 1
-          .col-12
+      - if items.length == 1
+        .row
+          .col-4
+          .col-4
             = partial "partials/focus-card", locals: {item: items.first}
+          .col-4
+        .row.mt-2.mb-5
+          .col-12.text-center.mt-5
+            = partial "partials/button", locals: {btn_url: dato.focus_index, white_outline: true}
 
-        - if items.length == 2
+      - elsif items.length == 2
+        .row
           .col-lg-1
           .col-12.col-lg-4
-            = partial "partials/focus-card", locals: {item: items.first}
-
+            = partial "partials/focus-card", locals: {item: items.first, text_left: true}
           .col-lg-2
           .col-12.col-lg-4
-            = partial "partials/focus-card", locals: {item: items[1]}
+            = partial "partials/focus-card", locals: {item: items[1], text_left: true}
           .col-lg-1
-
-      .row.mt-2.mb-5
-        .col-12.text-center
-          = partial "partials/button", locals: {btn_url: dato.focus_index, white_outline: true}
+        .row.mt-2.mb-5
+          .col-12.text-center
+            = partial "partials/button", locals: {btn_url: dato.focus_index, white_outline: true}
 
