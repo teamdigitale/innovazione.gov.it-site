@@ -14,8 +14,6 @@
       p.d-lg-none.font-weight-normal.text-center.text-lg-left 
         = page.projects_text
       .my-5.mt-md-5.text-center.text-lg-left
-        = link_to t("view_more"),
-          page_path(dato.projects_page),
-          class: "btn btn-primary text-white text-uppercase"
+        = partial "partials/button", locals: {btn_url: dato.projects_page}
   .col-lg-1
 
