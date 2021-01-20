@@ -15,11 +15,11 @@
 
   .card.rounded.h-100 class="#{shadow}"
     .card-body
-      .card-text.small.text-uppercase.font-weight-semibold
+      .mid-caption.text-uppercase.font-weight-semibold.pb-3
         = announcement.announcement_status.name
-      h4 class="body-text text-primary font-weight-bold"
+      h3.mid-caption--xlarge.text-primary.font-weight-bold.pb-2
         = proxy_link_to page_path(announcement),
           class: "text-decoration-none"
           = announcement.title
-      p.small.text-secondary.font-weight-semibold
+      p.mid-caption--large.text-secondary.font-weight-semibold
         = deadline
