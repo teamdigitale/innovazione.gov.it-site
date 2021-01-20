@@ -18,7 +18,7 @@
 
   .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
     div class="#{length_card}"
-      .card-body
+      .card-body.d-flex.flex-column
         div
           .category.py-2.card-text
             span.pr-2.text-uppercase.font-weight-semibold
@@ -32,8 +32,7 @@
               = article.title
           p.body-text
             = article.subtitle
-        .my-4
-        .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+        .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
           - if article.item_type.api_key == "article" && article.tags.present?
             - article.tags.each do |tag|
               = partial "partials/chip",

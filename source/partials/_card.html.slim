@@ -41,7 +41,7 @@
               alt: image_link.alt,
               title: image_link.title
 
-    .card-body
+    .card-body.d-flex.flex-column
       div
         - if show_item_type
           .category.py-3.card-text
@@ -68,13 +68,12 @@
               class: "text-decoration-none"
               = article.title
         - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
-          .h6.pt-3
+          p.h6.pt-3
             = article.source
         - else
-          .small.pt-3
+          p.mid-caption--large.pt-2
             = article.subtitle
-      .my-4
-      .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+      .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
         - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
           - article.tags.each do |tag|
             = partial "partials/chip",
