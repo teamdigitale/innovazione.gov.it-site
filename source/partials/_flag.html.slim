@@ -30,9 +30,7 @@
             h3.d-none.d-lg-block.h1.pt-2.pb-3.text-center.text-lg-left = flag.title
             h3.d-lg-none.mid-heading--largest.pt-2.pb-3.text-center.text-lg-left = flag.title
             .mt-3.mt-lg-4.text-center.text-lg-left.pb-5.mb-3.mb-lg-0
-              = link_to t("view_more"),
-                page_path(flag.link.link),
-                class: "btn btn-primary text-white text-uppercase"
+              = partial "partials/button", locals: {btn_url: flag.link.link}
 
       .col-12.d-lg-none.px-0
         .img-responsive-wrapper.p-0
@@ -46,3 +44,4 @@
                    class: "lazyload",
                    alt: flag.image.alt,
                    title: flag.image.title
+
