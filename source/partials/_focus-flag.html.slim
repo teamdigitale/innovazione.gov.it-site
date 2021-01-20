@@ -5,12 +5,12 @@
     .container.white-color
       - if items.length == 1
         .row
-          .col-4
-          .col-4
+          .col-lg-4
+          .col-lg-4
             = partial "partials/focus-card", locals: {item: items.first}
-          .col-4
+          .col-lg-4
         .row.mt-2.mb-5
-          .col-12.text-center.mt-5
+          .col-12.text-center.mt-lg-5
             = partial "partials/button", locals: {btn_url: dato.focus_index, white_outline: true}
 
       - elsif items.length == 2
