@@ -27,9 +27,10 @@
               .row.py-5.pl-5
                 .col-md-9.mb-4.px-2.px-md-0._anchor
                   a id="#{cat.slug.downcase.gsub(' ', '-')}"
-                  h3.font-weight-semibold.mb-3 = cat.name
-                  p.lead.font-weight-semibold = cat.description
+                  h3.h2.font-weight-semibold.mb-3 = cat.name
+                  p.h4.lead.font-weight-semibold = cat.description
 
                 - visible_projects.select { |p| p.category == cat }.each do |p|
                   .col-sm-6
                     = partial "partials/project_card", locals: {project: p}
+
