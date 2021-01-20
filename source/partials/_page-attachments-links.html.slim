@@ -3,16 +3,16 @@
     = page.embed_dashboard
 
 - if page.respond_to?(:attachments) && page.attachments.any?
-  .mt-5.py-3
-    h3.h5 = t("attachments")
+  .container.mt-5.py-3
+    h3.h5.font-weight-semibold = t("attachments")
     .row
       - page.attachments.each do |attachment|
         .col-12.col-md-6.mt-3
           = partial "partials/attachment", locals: {attachment: attachment}
 
 - if page.respond_to?(:links) && page.links.any?
-  .mt-5.py-3
-    h3.h5 = t("useful_links")
+  .container.mt-5.py-3
+    h3.h5.font-weight-semibold = t("useful_links")
     .row
       - page.links.each do |link|
         .col-12.col-md-6.mt-3
