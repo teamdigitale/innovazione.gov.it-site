@@ -6,8 +6,9 @@
     locals: {block: block}
 
 .lightgrey-bg-c1
-  .container
-    = partial "partials/featured-news", locals: {featured_items: page.featured_news}
+  .container.pt-3
+    .pt-5.mb-4.mb-lg-3
+      = partial "partials/featured-news", locals: {featured_items: page.featured_news}
     = partial "partials/cards-horizontal-list",
       locals: {items: page.news.take(3),
       hide_image: true,

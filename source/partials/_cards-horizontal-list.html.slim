@@ -9,13 +9,13 @@
 - title ||= ''
 - special_subtitle ||= nil
 - unequal_height ||= nil
-- self_standing_section = title.present? ? 'mt-3 mt-lg-4' : ''
+- self_standing_section = title.present? ? 'mt-lg-3' : ''
 - hide_shadow ||= nil
 
 - if items.present?
-
-  .pt-5.pb-4.pb-lg-0
-    = partial "partials/section-title", locals: {title: title}
+  - if title.present?
+    .pt-5.pb-4.pb-lg-0
+      = partial "partials/section-title", locals: {title: title}
 
   .row.row-cols-lg-3.mt-lg-3
     - items.each do |item|

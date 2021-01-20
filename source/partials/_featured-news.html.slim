@@ -5,7 +5,7 @@
 - show_item_type ||= nil
 
 - if featured_items.present?
-  .row.row-cols-3.pt-5.mb-4.mb-lg-3
+  .row.row-cols-3
     - if featured_items.length == 1
       .col-12
         = partial "partials/card-featured", locals: {article: featured_items.first}
