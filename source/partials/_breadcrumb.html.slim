@@ -2,12 +2,14 @@
 - parent = page_parent(page)
 
 - page_api_key = page.item_type.api_key
+- html_class ||= ""
 
 nav.breadcrumb-container aria-label="breadcrumb"
   ol.breadcrumb.mt-4.mb-5
     li.breadcrumb-item
       = link_to t("home_label"),
-        locale_path("/")
+        locale_path("/"),
+        class: html_class
 
       span.separator= "/"
 
@@ -19,15 +21,18 @@ nav.breadcrumb-container aria-label="breadcrumb"
     - if ancestor
       li.breadcrumb-item
         = link_to menu_label_with_fallback(ancestor),
-          page_path(ancestor)
+          page_path(ancestor),
+          class: html_class
         span.separator= "/"
 
     - if parent
       li.breadcrumb-item
         = link_to menu_label_with_fallback(parent),
-          page_path(parent)
+          page_path(parent),
+          class: html_class
         span.separator= "/"
 
     li.breadcrumb-item.active aria-current="page"
       = link_to breadcrumb_current_label(page),
-        page_path(page)
+        page_path(page),
+        class: html_class

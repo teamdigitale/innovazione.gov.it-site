@@ -6,7 +6,9 @@
     .container.pb-5.text-center.text-sm-left
       .row
         .col-12.col-md-7
-          = partial "partials/breadcrumb", locals: {page: page}
+          = partial "partials/breadcrumb",
+            locals: {page: page,
+              html_class: "text-white"}
 
           .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
             = partial "partials/headers/main-titles", locals: {page: page}
