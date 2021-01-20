@@ -189,7 +189,9 @@ helpers do
     elsif page.respond_to?(:name) && page.name.present?
       page.name
     elsif page.respond_to?(:title) && page.title.present?
-      HTML_Truncator.truncate(page.title, 5)
+      content_tag :a, href: page_path(page) do
+        I18n.t('permalink_label')
+      end
     end
   end
 
