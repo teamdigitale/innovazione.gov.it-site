@@ -170,12 +170,21 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
+  def visible_news_contents
+    (visible_announcements +
+    visible_articles +
+    visible_interviews +
+    visible_participations +
+    visible_press_releases).sort_by(&:date_shown).reverse
+  end
+
   def visible_tags
-    PresentationHelper.published_tags(dato.tags)
+    PresentationHelper.published_tags(dato.tags) &
+    visible_news_contents.collect{|n| n.tags}.flatten
   end
 
   def featured_tags
-    PresentationHelper.published_tags(dato.tags) & dato.company.featured_tags
+    visible_tags & dato.company.featured_tags
   end
 
   def visible_pages(pages)
@@ -473,14 +482,14 @@ dato.tap do |dato|
 
     PresentationHelper.published_tags(dato.tags).each do |tag|
       tag_news_contents = news_contents.select{|n| n.tags.include?(tag)}.sort_by(&:date_shown).reverse
-
-      paginate tag_news_contents,
-        "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
-        "/templates/tag.html",
-        suffix: "/page/:num/index",
-        locals: { page: tag },
-        per_page: 10
-
+      if tag_news_contents.any?
+        paginate tag_news_contents,
+          "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
+          "/templates/tag.html",
+          suffix: "/page/:num/index",
+          locals: { page: tag },
+          per_page: 10
+      end
     end
   end
 end
