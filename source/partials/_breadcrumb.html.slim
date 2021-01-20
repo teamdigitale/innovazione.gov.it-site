@@ -1,6 +1,8 @@
 - ancestor = page_ancestor(page)
 - parent = page_parent(page)
 
+- page_key = page.item_type.api_key
+
 nav.breadcrumb-container aria-label="breadcrumb"
   ol.breadcrumb.mt-4.mb-5
     li.breadcrumb-item
@@ -8,6 +10,11 @@ nav.breadcrumb-container aria-label="breadcrumb"
         locale_path("/")
 
       span.separator= "/"
+
+    - if page_key == "tags_index" || page_key == "explore_page"
+      li.breadcrumb-item
+        = t('explore_breadcrumb_prefix')
+        span.separator= "/"
 
     - if ancestor
       li.breadcrumb-item

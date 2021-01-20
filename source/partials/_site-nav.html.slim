@@ -14,19 +14,20 @@ header.it-header-wrapper data-datocms-noindex=true
       .container
         .row
           .it-header-center-content-wrapper.px-2.px-sm-0
-            .it-brand-wrapper
+            .it-brand-wrapper.pr-5
               = link_to locale_path("/")
                 = proxy_image_tag "logo-repubblica-italiana.svg",
                   alt: "Logo #{t("state_name")}",
+                  style: "max-height: 72px;",
                   class: "icon"
 
                 = proxy_image_tag "logo-mid-white.svg",
                   alt: "Logo #{dato.company.name}",
-                  style: "width: 120px",
+                  style: "width: 120px; max-height: 72px;",
                   class: "icon"
 
                 .it-brand-text
-                  h1.h3.no_toc.d-none.d-xl-inline-block
+                  h1.h4.no_toc.d-none.d-xl-inline-block.font-weight-normal.mb-0.ml-1
                     = t("formatted_site_name")
 
             .it-right-zone

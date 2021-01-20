@@ -29,5 +29,6 @@
           items: visible_press_releases.take(6),
           btn_url: dato.press_releases_index}
 
-    .py-5
-      = partial "partials/medium-elements"
+    - if dato.news_page.medium_articles.any?
+      .py-5
+        = partial "partials/medium-elements"
