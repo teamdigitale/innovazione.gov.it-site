@@ -1,0 +1,13 @@
+- btn_url ||= nil
+- color_class ||= "btn-primary"
+- label ||= t("view_more")
+- white_outline ||= nil
+
+- border = white_outline ? "box-shadow: inset 0 0 0 2px white" : ""
+
+- if btn_url.present?
+  = proxy_link_to label,
+    page_path(btn_url),
+    class: "btn text-uppercase #{color_class}",
+    style: border
+
