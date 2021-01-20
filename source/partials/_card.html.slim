@@ -45,7 +45,7 @@
       div
         - if show_item_type
           .category.py-3.card-text
-            span.pr-2.text-uppercase.font-weight-semibold.text-muted
+            span.pr-2.text-uppercase.font-weight-semibold
               = t("models.#{article.item_type.api_key}")
             span.px-2.text-secondary
               = partial "partials/formatted-date", locals: {date: article.date_shown}
@@ -68,10 +68,10 @@
               class: "text-decoration-none"
               = article.title
         - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
-          .h6.text-muted.pt-3
+          .h6.pt-3
             = article.source
         - else
-          .small.text-muted.pt-3
+          .small.pt-3
             = article.subtitle
       .my-4
       .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end

@@ -2,36 +2,35 @@
 - larger_of_two ||= nil
 
 - if article.present?
-  - date ||= ''
-  - subtitle ||= ''
-  - image = ''
-  - image_link = ''
-  - length_image = 'col-lg'
-  - length_card = 'col-lg'
+  ruby:
+    length_image = "col-lg"
+    length_card = "col-lg"
 
-  - if larger_of_two
-    - length_image = "col-lg-3"
-    - length_card = "col-lg-9"
+    if larger_of_two
+      length_image = "col-lg-3"
+      length_card = "col-lg-9"
+    end
 
-  - if article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?
-    - image = "card-img no-after"
-    - image_link = article.image_thumbnail.url
-    - card_image = article.image_thumbnail
+    if article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?
+      image_link = article.image_thumbnail.url
+      card_image = article.image_thumbnail
+    end
 
   .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
     div class="#{length_card}"
       .card-body
         div
           .category.py-2.card-text
-            span.pr-2.text-uppercase.font-weight-semibold.text-muted
+            span.pr-2.text-uppercase.font-weight-semibold
               = t("models.#{article.item_type.api_key}")
             span.px-2.text-secondary
-              = partial "partials/formatted-date", locals: {date: article.date_shown}
+              = partial "partials/formatted-date",
+                locals: {date: article.date_shown}
           h4 class="h3 text-primary"
             = proxy_link_to page_path(article),
               class: "text-decoration-none"
               = article.title
-          p.body-text.text-muted
+          p.body-text
             = article.subtitle
         .my-4
         .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
@@ -49,11 +48,14 @@
         .d-lg-none
           .img-responsive.img-responsive-panoramic
             figure.img-wrapper.p-0
-              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6, fit: 'crop'),
-                data: {'sizes': '100vw',
-                  'src': card_image.url(w: 700, h: 400, fit: 'crop', auto:'compress'),
-                  'srcset': "#{card_image.url(w: 445, h: 255, fit: 'crop', auto:'compress')} 480w,
-                  #{card_image.url(w: 700, h: 400, fit: 'crop', auto:'compress')} 719w"},
+              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
+                fit: "crop"), data: {"sizes": "100vw",
+                  "src": card_image.url(w: 700, h: 400,
+                  fit: "crop", auto: "compress"),
+                  "srcset": "#{card_image.url(w: 445, h: 255,
+                  fit: 'crop', auto: 'compress')} 480w,
+                  #{card_image.url(w: 700, h: 400,
+                  fit: 'crop', auto: 'compress')} 719w"},
                 class: "lazyload d-block w-100 m-0",
                 alt: card_image.alt,
                 title: card_image.title
@@ -61,11 +63,14 @@
         .d-none.d-lg-block
           .img-responsive-panoramic
             figure.position-absolute.w-100.h-100
-              = proxy_image_tag card_image.lqip_data_url(w: 5, h: 10, fit: 'crop'),
-                data: {'sizes': '100vw',
-                  'src': card_image.url(w: 220, h: 420, fit: 'crop', auto:'compress'),
-                  'srcset': "#{card_image.url(w: 180, h: 370, fit: 'crop', auto:'compress')} 1090w,
-                  #{card_image.url(w: 220, h: 420, fit: 'crop', auto:'compress')} 1320w"},
+              = proxy_image_tag card_image.lqip_data_url(w: 5, h: 10,
+                fit: "crop"), data: {"sizes": "100vw",
+                  "src": card_image.url(w: 220, h: 420,
+                  fit: "crop", auto: "compress"),
+                  "srcset": "#{card_image.url(w: 180, h: 370,
+                  fit: 'crop', auto: 'compress')} 1090w,
+                  #{card_image.url(w: 220, h: 420,
+                  fit: 'crop', auto: 'compress')} 1320w"},
                 class: "lazyload d-block w-100 h-100 m-0",
                 style: "object-fit: cover",
                 alt: card_image.alt,

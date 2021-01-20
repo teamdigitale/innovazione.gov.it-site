@@ -1,21 +1,25 @@
 - announcement ||= nil
 - hide_shadow ||= nil
+- deadline ||= ""
 
 - if announcement.present?
 
-  - deadline = ''
-  - shadow = hide_shadow ? '' : 'shadow-lg'
-  - if announcement.announcement_date_closing.present? && announcement.announcement_status.name == "APERTO"
-    - last_date = partial "partials/formatted-date", locals: {date: announcement.announcement_date_closing}
+  - shadow = hide_shadow ? "" : "shadow-lg"
+  - ann_closing_date = announcement.announcement_date_closing.present?
+  - ann_status = announcement.announcement_status.name
+
+  - if ann_closing_date && ann_status == "APERTO"
+    - last_date = partial "partials/formatted-date",
+      locals: {date: announcement.announcement_date_closing}
     - deadline = "Scade il #{last_date}"
 
   .card.rounded.h-100 class="#{shadow}"
     .card-body
-      .card-text.small.text-uppercase.font-weight-semibold.text-muted
+      .card-text.small.text-uppercase.font-weight-semibold
         = announcement.announcement_status.name
       h4 class="body-text text-primary font-weight-bold"
         = proxy_link_to page_path(announcement),
           class: "text-decoration-none"
           = announcement.title
-      p.small.text-secondary.font-weight-semibold.text-muted
+      p.small.text-secondary.font-weight-semibold
         = deadline

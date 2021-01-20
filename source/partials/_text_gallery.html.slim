@@ -14,7 +14,7 @@
             .swiper-slide__text.px-3.bg-white.px-md-5
               .h-100.d-flex.flex-column.justify-content-around
                 div
-                  span.pr-2.text-uppercase.font-weight-semibold.text-muted
+                  span.pr-2.text-uppercase.font-weight-semibold
                     = t("models.#{slide.item_type.api_key}")
                   - if !hide_date && (slide.respond_to?(:date_shown) && slide.date_shown.present?)
                     span.px-2.text-secondary

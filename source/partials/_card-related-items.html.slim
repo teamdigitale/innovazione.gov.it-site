@@ -1,33 +1,38 @@
-- item ||= nil
-- padding = 'p-0'
-- text_length = 'col-12'
-- logo_length = ''
+ruby:
+  item ||= nil
+  padding = "p-0"
+  text_length = "col-12"
+  logo_length = ""
 
 - if item.present?
-  - date = ''
-  - if item.respond_to?(:date_shown) && item.date_shown.present?
-    - date = partial "partials/formatted-date", locals: {date: item.date_shown}
+  ruby:
+    date = ""
+    if item.respond_to?(:date_shown) && item.date_shown.present?
+      date = partial "partials/formatted-date", locals: {date: item.date_shown}
+    end
 
-  - logo_url = ''
-  - if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
-    - logo_url = item.image_project_logo
-    - text_length = 'col-12 col-lg-10'
-    - logo_length = 'col-4 col-lg-2'
+    logo_url = ""
+    if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
+      logo_url = item.image_project_logo
+      text_length = "col-12 col-lg-10"
+      logo_length = "col-4 col-lg-2"
+    end
 
-  - text_type = 'text-muted'
-  - text_date = 'text-secondary'
-  - text_title = 'text-primary'
-  - text_subtitle = 'text-secondary'
-  - card_classes = 'p-0'
+    text_type = ""
+    text_date = "text-secondary"
+    text_title = "text-primary"
+    text_subtitle = "text-secondary"
+    card_classes = "p-0"
 
-  - if item.item_type.api_key == "focus_page"
-    - text_type = 'text-white'
-    - text_date = 'text-white'
-    - text_title = 'text-white'
-    - text_subtitle = 'text-white'
-    - bg_color = ""
-    - card_classes = 'bg-primary rounded'
-    - padding = 'p-3'
+    if item.item_type.api_key == "focus_page"
+      text_type = "text-white"
+      text_date = "text-white"
+      text_title = "text-white"
+      text_subtitle = "text-white"
+      bg_color = ""
+      card_classes = "bg-primary rounded"
+      padding = "p-3"
+    end
 
   - if logo_url.present?
     .d-lg-none.p-0
