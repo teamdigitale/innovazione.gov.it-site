@@ -1,0 +1,19 @@
+{
+    "name": "Ministro per l'innovazione tecnologica e la digitalizzazione",
+    "short_name": "Ministro per l'innovazione tecnologica e la digitalizzazione",
+    "icons": [
+        {
+            "src": "\/android-chrome-192x192-bd7fcdb0.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "\/android-chrome-512x512-6f882ffa.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0063ca",
+    "background_color": "#0063ca",
+    "display": "standalone"
+}
