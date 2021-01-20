@@ -6,9 +6,9 @@
   - icon ||= "it-external-link"
 
   = link_to url,
-    class: "btn btn-link pl-0 font-weight-semibold",
+    class: "btn-link pl-0 font-weight-semibold text-decoration-none",
     title: label,
     aria: {"label": label} do
-      span.text = label
-      svg.icon.icon.icon-xs.icon-primary.ml-1
-        use xlink:href="/images/sprite.svg##{icon}"    
+      span.mid-caption--xlarge = label
+      svg.icon.icon.icon-sm.icon-primary.ml-2.align-bottom.mb-1
+        use xlink:href="/images/sprite.svg##{icon}"
