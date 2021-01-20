@@ -5,15 +5,19 @@
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block}
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/featured-news", locals: {featured_items: page.featured_news}
-    = partial "partials/cards-horizontal-list",
-      locals: {items: page.news.take(3),
-      hide_image: true,
-      hide_tags: true,
-      show_item_type: true,
-      btn_url: dato.news_page}
+- if page.featured_news.any? || page.news.any?
+  .py-5.lightgrey-bg-c1
+    .container
+      - if page.featured_news.any?
+        = partial "partials/featured-news", locals: {featured_items: page.featured_news}
+
+      - if page.news.any?
+        = partial "partials/cards-horizontal-list",
+          locals: {items: page.news,
+          hide_image: true,
+          hide_tags: true,
+          show_item_type: true,
+          btn_url: dato.news_page}
 
 .py-5.lightgrey-bg-a2
   .container
@@ -25,16 +29,17 @@
   .container
     = partial "partials/card-featured-projects", locals: {page: page}
 
-.lightgrey-bg-a2
-  .container
-    = partial "partials/flag", locals: {flags: page.sections, image_right: true}
+- if page.sections.any?
+  .lightgrey-bg-a2
+    .container
+      = partial "partials/flag", locals: {flags: page.sections, image_right: true}
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("public_announcements_title"),
-      items: dato.announcements.take(3),
-      btn_url: dato.announcements_index}
+- if page.announcements.any?
+  .py-5.lightgrey-bg-c1
+    .container
+      = partial "partials/cards-horizontal-list",
+        locals: {title: t("public_announcements_title"),
+        items: page.announcements,
+        btn_url: dato.announcements_index}
 
 = partial "partials/numbers", locals: {numbers: page.numbers}
-
