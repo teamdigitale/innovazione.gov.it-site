@@ -201,9 +201,30 @@ helpers do
     elsif page.respond_to?(:name) && page.name.present?
       page.name
     elsif page.respond_to?(:title) && page.title.present?
-      content_tag :a, href: page_path(page) do
-        I18n.t('permalink_label')
-      end
+      page.title
+    end
+  end
+
+  def editorial_models_api_keys
+    ["announcement",
+    "article",
+    "interview",
+    "participation",
+    "press_release",
+    "focus",
+    "project",
+    "general_page",
+    "minister_subpage",
+    "department_subpage",
+    "projects_subpage",
+    "news_subpage"]
+  end
+
+  def breadcrumb_current_label(page)
+    if editorial_models_api_keys.include?(page.item_type.api_key)
+      t('permalink_label')
+    else
+      menu_label_with_fallback(page)
     end
   end
 

@@ -1,7 +1,7 @@
 - ancestor = page_ancestor(page)
 - parent = page_parent(page)
 
-- page_key = page.item_type.api_key
+- page_api_key = page.item_type.api_key
 
 nav.breadcrumb-container aria-label="breadcrumb"
   ol.breadcrumb.mt-4.mb-5
@@ -11,7 +11,7 @@ nav.breadcrumb-container aria-label="breadcrumb"
 
       span.separator= "/"
 
-    - if page_key == "tags_index" || page_key == "explore_page"
+    - if page_api_key == "tags_index" || page_api_key == "explore_page"
       li.breadcrumb-item
         = t('explore_breadcrumb_prefix')
         span.separator= "/"
@@ -29,4 +29,5 @@ nav.breadcrumb-container aria-label="breadcrumb"
         span.separator= "/"
 
     li.breadcrumb-item.active aria-current="page"
-      = menu_label_with_fallback(page)
+      = link_to breadcrumb_current_label(page),
+        page_path(page)
