@@ -70,6 +70,7 @@ header.mb-5
                 = partial "partials/card-related-items",
                   locals: {item: n}
 
-  .py-lg-4
-    = partial "partials/pagination",
-      locals: {pager: pager}
+  .container
+    .py-lg-4
+      = partial "partials/pagination",
+        locals: {pager: pager}
