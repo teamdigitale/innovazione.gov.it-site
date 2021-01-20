@@ -1,7 +1,10 @@
+- compact_columns ||= true
+- col_lg_layout = compact_columns ? "col-lg-6" : "col-lg-3"
+
 .container.mb-5
   .row
     - block.images_logo.each do |item|
-      .col-6.col-md-4.col-lg-3
+      .col-6.col-md-4 class="#{col_lg_layout}"
         .mb-5
           .mid-fixed-height--300.d-flex.justify-content-center.flex-column
             figure.figure.m-0.mh-100
