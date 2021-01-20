@@ -1,0 +1,34 @@
+- group_classes = "d-inline-flex align-items-center"
+- element_classes = "d-block mx-2"
+- icon_classes = "icon-sm icon-primary"
+
+div class=group_classes
+  - if page.twitter_url.present?
+    = link_to page.twitter_url,
+      class: element_classes,
+      title: "Twitter",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Twitter"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-twitter"
+
+  - if page.facebook_url.present?
+    = link_to page.facebook_url,
+      class: element_classes,
+      title: "Facebook",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Facebook"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-facebook"
+
+  - if page.instagram_url.present?
+    = link_to page.instagram_url,
+      class: element_classes,
+      title: "Instagram",
+      target: "_blank",
+      rel: "noopener",
+      aria: {"label": "Instagram"}
+      svg.icon class=icon_classes
+        use xlink:href="/images/sprite.svg#it-instagram"
