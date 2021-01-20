@@ -34,7 +34,5 @@
 
     .col-lg-12
       .my-5.pb-4.pb-lg-4.text-center
-        = link_to t("view_more"),
-          page_path(btn_url),
-          class: "btn btn-primary text-white text-uppercase"
+        = partial "partials/button", locals: {btn_url: btn_url}
 
