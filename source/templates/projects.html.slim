@@ -4,33 +4,32 @@
 - vflp = visible_fl_pages(dato.projects_subpages)
 = partial "partials/headers/header-basic", locals: {page: page, subs: vflp} do
 
-.container.border-top
+.container
   .row
-    .col-lg-3.border-right.hidden.d-none.d-lg-block
+    .col-lg-3.border-right.hidden.d-none.d-lg-block.border-top
       = partial "partials/sticky-anchor",
-                locals: {categories: visible_projects_categories}
-
-    .col-12.col-lg-8.offset-lg-1.py-5
-      h3.font-weight-semibold.mb-3 = t("projects.highlights")
-
-      - visible_projects.select { |p| p.highlight == true }.each do |prj|
-        .col-sm-6
-          = partial "partials/project_card", locals: {project: prj}
-
-- visible_projects_categories.each_with_index do |cat, i|
-  - if visible_projects.select { |p| p.category == cat }.count.positive?
-    section.section.p-0 class=(i.even? ? "section-muted" : "")
+        locals: {categories: visible_projects_categories}
+    .col-12.col-lg-9.px-0.py-5.border-top
       .container
         .row
-          .col-lg-3.border-right.hidden.d-none.d-lg-block
+          .col-12.col-lg-8.py-5.pl-5
+            h3.font-weight-semibold.mb-3 = t("projects.highlights")
+          
+          .pl-5.row
+            - visible_projects.select { |p| p.highlight == true }.each do |prj|
+              .col-sm-6
+                = partial "partials/project_card", locals: {project: prj}
 
-          .col-10.col-lg-8.offset-lg-1.py-5
-            .row.py-5
-              .col-md-9.mb-4.px-2.px-md-0
-                a name=cat.slug
-                h3.font-weight-semibold.mb-3 = cat.name
-                p.lead.font-weight-semibold = cat.description
+      - visible_projects_categories.each_with_index do |cat, i|
+        - if visible_projects.select { |p| p.category == cat }.count.positive?
+          section.section.p-0 class=(i.even? ? "section-muted" : "")
+            .container
+              .row.py-5.pl-5
+                .col-md-9.mb-4.px-2.px-md-0
+                  a name=cat.slug
+                  h3.font-weight-semibold.mb-3 = cat.name
+                  p.lead.font-weight-semibold = cat.description
 
-              - visible_projects.select { |p| p.category == cat }.each do |p|
-                .col-sm-6
-                  = partial "partials/project_card", locals: {project: p}
+                - visible_projects.select { |p| p.category == cat }.each do |p|
+                  .col-sm-6
+                    = partial "partials/project_card", locals: {project: p}
