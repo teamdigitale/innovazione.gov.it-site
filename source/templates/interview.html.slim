@@ -18,8 +18,8 @@
         = partial "partials/column-title", locals: {title: I18n.t("source")}
         p = page.source
 
-    
+
     = partial "partials/reading-time", locals: {page: page}
 
-= partial "partials/layouts/one-column",
+= partial "partials/page-content",
   locals: {page: page}

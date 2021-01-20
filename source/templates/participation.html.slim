@@ -14,5 +14,5 @@
     - page.tags.each do |tag|
       = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
 
-= partial "partials/layouts/one-column",
-  locals: {page: page }
+= partial "partials/page-content",
+  locals: {page: page}
