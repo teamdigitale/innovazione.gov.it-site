@@ -17,7 +17,7 @@
 
       h4.card-title.font-weight-bold = link_to project.title, page_path(project), class: "text-decoration-none"
 
-      p.text-sans-serif = project.subtitle
+      p.mid-caption--large.text-sans-serif = project.subtitle
 
       - if project.links_external_project_card.each.present?
         ul.list-inline
