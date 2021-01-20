@@ -20,7 +20,5 @@
 
       .row.mt-2.mb-5
         .col-12.text-center
-          button.btn.btn-outline-primary style="box-shadow: inset 0 0 0 2px white"
-            = proxy_link_to t("view_more"),
-              page_path(dato.focus_index),
-              class: "text-decoration-none text-uppercase text-white"
+          = partial "partials/button", locals: {btn_url: dato.focus_index, white_outline: true}
+
