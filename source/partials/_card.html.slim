@@ -38,10 +38,18 @@
     else
       title_style = 'mid-caption--xlarge font-weight-bold'
       subtitle_style = 'mid-caption--large'
+
     end
 
   .card.rounded class="#{image} #{height} #{shadow}"
     - if image_link.present?
+      - if large_title
+        - lg_image_url = image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')
+        - xl_image_url = image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')
+      - else
+        - lg_image_url = image_link.url(w: 320, h: 200, fit:'crop', auto:'compress')
+        - xl_image_url = image_link.url(w: 400, h: 245, fit:'crop', auto:'compress')
+        
       .img-responsive-wrapper
         .img-responsive
           figure.img-wrapper
@@ -52,8 +60,8 @@
                 #{image_link.url(w: 600, h: 333, fit:'crop', auto:'compress')} 632w,
                 #{image_link.url(w: 560, h: 333, fit:'crop', auto:'compress')} 844w,
                 #{image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')} 1091w,
-                #{image_link.url(w: 320, h: 200, fit:'crop', auto:'compress')} 1320w,
-                #{image_link.url(w: 400, h: 245, fit:'crop', auto:'compress')} 1400w"},
+                #{lg_image_url} 1320w,
+                #{xl_image_url} 1400w"},
               class: "lazyload d-block w-100",
               alt: image_link.alt,
               title: image_link.title
