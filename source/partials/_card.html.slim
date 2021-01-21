@@ -9,30 +9,36 @@
 - hide_shadow ||= nil
 
 - if article.present?
-  - date ||= ''
-  - subtitle ||= ''
-  - tags ||= ''
-  - image = ''
-  - image_link = ''
-  - title_style = ''
-  - subtitle_style = ''
-  - shadow = hide_shadow ? '' : 'shadow-lg'
-  - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
-    - image = "card-img no-after rounded shadow"
-    - image_link = article.image_cover
-  - if !hide_image && (article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?)
-    - image = "card-img no-after"
-    - image_link = article.image_thumbnail
-  - height = unequal_height ? '' : 'h-100'
+  ruby:
+    date ||= ''
+    subtitle ||= ''
+    tags ||= ''
+    image = ''
+    image_link = ''
+    title_style = ''
+    subtitle_style = ''
+    shadow = hide_shadow ? '' : 'shadow-lg'
+    height = unequal_height ? '' : 'h-100'
 
-  - if large_title
-      - title_style = 'h2'
-  - elsif medium_title
-      - title_style = 'h5 font-weight-bold'
-      - subtitle_style = 'mid-caption--large'
-  - else
-      - title_style = 'mid-caption--xlarge font-weight-bold'
-      - subtitle_style = 'mid-caption--large'
+    if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
+      image = "card-img no-after"
+      image_link = article.image_cover
+    end
+
+    if !hide_image && (article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?)
+      image = "card-img no-after"
+      image_link = article.image_thumbnail
+    end
+
+    if large_title
+      title_style = 'h2'
+    elsif medium_title
+      title_style = 'h5 font-weight-bold'
+      subtitle_style = 'mid-caption--large'
+    else
+      title_style = 'mid-caption--xlarge font-weight-bold'
+      subtitle_style = 'mid-caption--large'
+    end
 
   .card.rounded class="#{image} #{height} #{shadow}"
     - if image_link.present?
