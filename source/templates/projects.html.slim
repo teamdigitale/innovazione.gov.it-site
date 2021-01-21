@@ -8,24 +8,25 @@
   .row
     .col-lg-3.border-right.hidden.d-none.d-lg-block.border-top
       = partial "partials/sticky-anchor",
-        locals: {categories: visible_projects_categories}
-    .col-12.col-lg-9.px-0.py-5.border-top
-      .container
-        .row
-          .col-12.col-lg-8.py-5.pl-5
-            h3.font-weight-semibold.mb-3 = t("projects.highlights")
-          
-          .pl-5.row
-            - visible_projects.select { |p| p.highlight == true }.each do |prj|
-              .col-sm-6
-                = partial "partials/project_card", locals: {project: prj}
+        locals: {categories: visible_projects_categories, title: "Categorie progetti"}
+    .col-12.col-lg-9.px-0.border-top
+      section.section.p-0
+        .container
+          .row.py-5.pl-lg-5
+            .col-12.col-md-9.mb-4.px-md-0.offset-lg-1
+              h3.font-weight-semibold.mb-3 = t("projects.highlights")
 
+              .row
+                - visible_projects.select { |p| p.highlight == true }.each do |prj|
+                  .col-12.col-lg-6
+                    = partial "partials/project_card", locals: {project: prj}
+      
       - visible_projects_categories.each_with_index do |cat, i|
         - if visible_projects.select { |p| p.category == cat }.count.positive?
-          section.section.p-0 class=(i.even? ? "section-muted" : "")
+          section.section.p-0 class=(i.even? ? "section-muted" : "")      
             .container
-              .row.py-5.pl-5
-                .col-md-9.mb-4.px-2.px-md-0._anchor
+              .row.py-5.pl-lg-5.offset-lg-1
+                .col-12.col-md-9.mb-4.px-md-0._anchor
                   a id="#{cat.slug.downcase.gsub(' ', '-')}"
                   h3.h2.font-weight-semibold.mb-3 = cat.name
                   p.h4.lead.font-weight-semibold = cat.description
