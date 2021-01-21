@@ -6,20 +6,19 @@
     locals: {block: block}
 
 - if page.featured_news.any? || page.news.any?
-  .lightgrey-bg-c1
-    .container.pt-3
-      - if page.featured_news.any?
-        .pt-5.mb-4.mb-lg-3
-          = partial "partials/featured-news",
-            locals: {featured_items: page.featured_news}
+  .container.pt-3
+    - if page.featured_news.any?
+      .pt-5.mb-4.mb-lg-3
+        = partial "partials/featured-news",
+          locals: {featured_items: page.featured_news}
 
-      - if page.news.any?
-        = partial "partials/cards-horizontal-list",
-          locals: {items: page.news,
-          hide_image: true,
-          hide_tags: true,
-          show_item_type: true,
-          btn_url: dato.news_page}
+    - if page.news.any?
+      = partial "partials/cards-horizontal-list",
+        locals: {items: page.news,
+        hide_image: true,
+        hide_tags: true,
+        show_item_type: true,
+        btn_url: dato.news_page}
 
 .py-5.lightgrey-bg-a2
   .container

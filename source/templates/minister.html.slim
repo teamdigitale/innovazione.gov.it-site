@@ -34,35 +34,35 @@
               = partial "partials/minister-socials",
                 locals: {page: page}
 
-.lightgrey-bg-c1
-  .container.pt-3
-    .pt-5.pb-4
-      = partial "partials/section-title", locals: {title: t("articles_section_title")}
 
-    = partial "partials/featured-news", locals: {featured_items: dato.minister_page.featured_articles}
+.container.pt-3
+  .pt-5.pb-4
+    = partial "partials/section-title", locals: {title: t("articles_section_title")}
 
-    = partial "partials/cards-horizontal-list",
-      locals: {items: dato.minister_page.articles.take(3),
-      hide_image: true,
-      hide_tags: true,
-      show_item_type: true,
-      btn_url: dato.minister_articles_index}
+  = partial "partials/featured-news", locals: {featured_items: dato.minister_page.featured_articles}
 
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("press_releases_section_title"),
-      items: dato.minister_page.press_releases.take(3),
-      hide_tags:true,
-      btn_url: dato.minister_press_releases_index}
+  = partial "partials/cards-horizontal-list",
+    locals: {items: dato.minister_page.articles.take(3),
+    hide_image: true,
+    hide_tags: true,
+    show_item_type: true,
+    btn_url: dato.minister_articles_index}
 
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("participations_section_title"),
-      items: dato.minister_page.participations.take(3),
-      hide_tags:true,
-      btn_url: dato.minister_participations_index}
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("press_releases_section_title"),
+    items: dato.minister_page.press_releases.take(3),
+    hide_tags:true,
+    btn_url: dato.minister_press_releases_index}
 
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("interviews_section_title"),
-      items: dato.minister_page.interviews,
-      special_subtitle: true,
-      unequal_height: true,
-      btn_url: dato.minister_interviews_index}
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("participations_section_title"),
+    items: dato.minister_page.participations.take(3),
+    hide_tags:true,
+    btn_url: dato.minister_participations_index}
+
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("interviews_section_title"),
+    items: dato.minister_page.interviews,
+    special_subtitle: true,
+    unequal_height: true,
+    btn_url: dato.minister_interviews_index}
