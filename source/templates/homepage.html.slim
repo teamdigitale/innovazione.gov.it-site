@@ -26,9 +26,8 @@
 
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/card-featured-projects", locals: {page: page}
+.container
+  = partial "partials/card-featured-projects", locals: {page: page}
 
 - if page.sections.any?
   .lightgrey-bg-a2
@@ -36,11 +35,10 @@
       = partial "partials/flag", locals: {flags: page.sections, image_right: true}
 
 - if page.announcements.any?
-  .pt-4.lightgrey-bg-c1
-    .container
-      = partial "partials/cards-horizontal-list",
-        locals: {title: t("public_announcements_title"),
-        items: page.announcements,
-        btn_url: dato.announcements_index}
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: page.announcements,
+      btn_url: dato.announcements_index}
 
 = partial "partials/numbers", locals: {numbers: page.numbers}

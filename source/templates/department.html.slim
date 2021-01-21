@@ -3,6 +3,7 @@
 
 - department_nav_pages = visible_fl_pages(dato.department_subpages).unshift(dato.focus_index)
 
+<<<<<<< HEAD
 = partial "partials/headers/header-basic",
   locals: { page: page,
     classes: "lightgrey-bg-a2",
@@ -41,10 +42,47 @@
       locals: {title: t("public_announcements_title"),
       items: page.announcements.take(3),
       btn_url: dato.department_announcements_index}
+=======
+.py-5.lightgrey-bg-a2
+  = partial "partials/headers/header-basic", locals: { page: page, subs: department_nav_pages } do
+    = content_for :aside
+      .img-responsive-wrapper
+        figure
+          = proxy_image_tag page.logo.lqip_data_url(w: 10, h: 10, fit:'max'),
+            data: {'sizes': '100vw',
+              'src': page.logo.url(w: 230, h: 460, fit:'max', auto:'compress'),
+              'srcset': "#{page.logo.url(w: 230, h: 460, fit:'max', auto:'compress')} 480w,
+              #{page.logo.url(w: 230, h: 460, fit:'max', auto:'compress')} 844w"},
+            class: "lazyload d-block w-50",
+            alt: page.logo.alt,
+            title: page.logo.title
+
+.container
+  .d-none.d-lg-block.mt-lg-5
+    = partial "partials/section-title", locals: {title: t("articles_section_title")}
+  = partial "partials/cards-horizontal-list",
+    locals: {items: page.articles.take(3),
+    hide_image: true,
+    hide_tags: true,
+    btn_url: dato.department_articles_index}
+
+.container
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("press_releases_section_title"),
+    items: page.press_releases.take(3),
+    hide_tags:true,
+    btn_url: dato.department_press_releases_index}
+
+.container
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("public_announcements_title"),
+    items: page.announcements.take(3),
+    btn_url: dato.department_announcements_index}
+>>>>>>> Remove light grey bg and use same light blue bg throughout
 
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
 
-.neutral-2-bg-a1
+.lightgrey-bg-a2
   .container
     = partial "partials/flag", locals: {flags: page.sections}
 
