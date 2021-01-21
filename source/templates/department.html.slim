@@ -1,7 +1,7 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-- department_nav_pages = visible_fl_pages(dato.department_subpages).unshift(dato.focus_index)
+- department_nav_pages = visible_fl_pages(dato.department_subpages).push(dato.focus_index)
 
 = partial "partials/headers/header-basic",
   locals: { page: page,
