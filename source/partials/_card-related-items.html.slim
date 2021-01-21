@@ -7,7 +7,7 @@ ruby:
 - if item.present?
   ruby:
     date = ""
-    if item.respond_to?(:date_shown) && item.date_shown.present?
+    if (item.item_type.api_key != "focus_page" && item.item_type.api_key != "project") && (item.respond_to?(:date_shown) && item.date_shown.present?)
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
 
