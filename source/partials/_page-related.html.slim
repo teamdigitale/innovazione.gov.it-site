@@ -1,8 +1,6 @@
 - if page.respond_to?(:related_items) && page.related_items.any?
   ruby:
-    elements_top = page.related_items.select { |item| item.item_type.api_key == "focus_page" || item.item_type.api_key == "project"}
-    elements_bottom = page.related_items.reject {|item| elements_top.include?(item)}
-    elements_ordered = elements_top.concat(elements_bottom).flatten
+    elements_ordered = page.related_items.partition { |item| item.item_type.api_key == "focus_page" || item.item_type.api_key == "project" }.flatten
 
   .row.mid-border-lg-top.pt-5.mb-5
     .col-sm-8
