@@ -8,7 +8,7 @@
 - if page.featured_news.any? || page.news.any?
   .container.pt-3
     - if page.featured_news.any?
-      .pt-5.mb-4.mb-lg-3
+      .pt-5
         = partial "partials/featured-news",
           locals: {featured_items: page.featured_news}
 
