@@ -14,6 +14,8 @@
   - tags ||= ''
   - image = ''
   - image_link = ''
+  - title_style = ''
+  - subtitle_style = ''
   - shadow = hide_shadow ? '' : 'shadow-lg'
   - if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
     - image = "card-img no-after rounded shadow"
@@ -22,6 +24,15 @@
     - image = "card-img no-after"
     - image_link = article.image_thumbnail
   - height = unequal_height ? '' : 'h-100'
+
+  - if large_title
+      - title_style = 'h2'
+  - elsif medium_title
+      - title_style = 'h5 font-weight-bold'
+      - subtitle_style = 'mid-caption--large'
+  - else
+      - title_style = 'mid-caption--xlarge font-weight-bold'
+      - subtitle_style = 'mid-caption--large'
 
   .card.rounded class="#{image} #{height} #{shadow}"
     - if image_link.present?
@@ -52,26 +63,15 @@
         - else
           p.card-text.text-secondary
             = partial "partials/formatted-date", locals: {date: article.date_shown}
-        - if large_title
-          h4 class="h2 text-primary"
-            = proxy_link_to page_path(article),
-              class: "text-decoration-none"
-              = article.title
-        - elsif medium_title
-          h4.text-primary.font-weight-bold
-            = proxy_link_to page_path(article),
-              class: "text-decoration-none"
-              = article.title
-        - else
-          .body-text.text-primary.font-weight-bold
-            = proxy_link_to page_path(article),
-              class: "text-decoration-none"
-              = article.title
+        h4.text-primary class="#{title_style}"
+          = proxy_link_to page_path(article),
+            class: "text-decoration-none"
+            = article.title
         - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
           p.h6.pt-3
             = article.source
         - else
-          p.mid-caption--large.pt-2
+          p.pt-2 class="#{subtitle_style}"
             = article.subtitle
       .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
         - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
