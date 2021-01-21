@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
+import "bootstrap-italia/src/js/plugins/sticky-header";
 import "lazysizes";
 
 const progressIndicator = require("progress-indicator.js");
