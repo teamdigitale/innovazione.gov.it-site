@@ -7,7 +7,6 @@
 
 - if page.present?
   - col_style = single_col_mobile ? "col-12" : "col-6"
-  - mobile_spacing = single_col_mobile ? "pt-5 pt-lg-0" : ""
 
   header class=(classes)
     .container.pb-5.text-center.text-sm-left
@@ -26,7 +25,7 @@
                   = yield_content :col_one
 
               - if content_for?(:col_two)
-                div class="#{col_style} #{mobile_spacing}"
+                .pt-5 class="#{col_style}"
                   = yield_content :col_two
 
           = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
