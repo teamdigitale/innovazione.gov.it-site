@@ -2,12 +2,6 @@
   == proxy_dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: {page: page} do
-  = content_for :col_one
-    = partial "partials/column-title", locals: {title: t("deepen")}
-    = link_to t("press_office"),
-      page_path(dato.minister_press_releases_index),
-      class: "text-primary text-decoration-none font-weight-semibold"
-
   = content_for :aside
     = partial "partials/column-title", locals: {title: t("highlighted_topics")}
     - featured_tags.each do |tag|
