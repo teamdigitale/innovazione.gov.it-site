@@ -45,13 +45,15 @@ it:
   search: Cerca
   share: Condividi
   state_name: Repubblica Italiana
-  tags_title: "Gli argomenti dell'innovazione"
+  tags_title: Gli argomenti dell'innovazione
   transparency: Trasparenza
   updated_at: Data ultimo aggiornamento
   useful_links: Collegamenti utili
   view_more: Vedi di più
   explore_breadcrumb_prefix: Esplora
 
+  home:
+    highlights: In copertina
   ontology:
     arguments: Argomenti
 
@@ -90,7 +92,7 @@ it:
   explore_aside:
     title: Oppure
     tags_title: Esplora per argomento
-    search_title: "Cerca nel sito"
+    search_title: Cerca nel sito
 
   pager:
     label: Navigazione delle pagine
