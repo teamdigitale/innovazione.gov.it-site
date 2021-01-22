@@ -13,7 +13,7 @@
           .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
             = partial "partials/headers/main-titles", locals: {page: page}
 
-            = partial "partials/column-title", locals: {title: "Argomenti"}
+            = partial "partials/column-title", locals: {title: t("ontology.arguments")}
             - page.tags.each do |tag|
               = partial "partials/chip",
                 locals: {label: tag.name,
@@ -28,15 +28,14 @@
                 fit: "crop", auto: "compress"),
                 "srcset": "#{page.image_cover.url(w: 480, h: 350,
                 fit: 'crop', auto: 'compress')} 480w,
-                #{page.image_cover.url(w: 800, h: 800,
+                #{page.image_cover.url(w: 1090, h: 1090,
                 fit: 'crop', auto: 'compress')} 1090w,
-                #{page.image_cover.url(w: 800, h: 800,
+                #{page.image_cover.url(w: 1300, h: 1300,
                 fit: 'crop', auto: 'compress')} 1320w"},
               class: "lazyload w-100 h-100 m-0",
               style: "object-fit: cover",
               alt: page.image_cover.alt,
               title: page.image_cover.title
-
 
 = partial "partials/page-content",
   locals: {page: page}
