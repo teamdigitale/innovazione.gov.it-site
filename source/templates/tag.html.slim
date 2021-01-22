@@ -39,10 +39,11 @@ header.mb-5
           h2.display-3.font-weight-semibold.mb-4
             = t("focus.title")
 
-        .container.mid-container
+        .container.mid-container.px-0
           - focus_pages.each do |f|
-            = partial "partials/card-related-items",
-              locals: {item: f}
+            .col-lg-8.px-0
+              = partial "partials/card-related-items",
+                locals: {item: f}
 
     - projects = visible_projects.select { |f| f.tags.include?(page) }
 
@@ -52,10 +53,11 @@ header.mb-5
           h2.display-3.font-weight-semibold.mb-4
             = t("projects.title")
 
-        .container.mid-container
+        .container.mid-container.px-0
           - projects.each do |p|
-            div = partial "partials/card-related-items",
-              locals: {item: p}
+            .col-lg-8.px-0
+              = partial "partials/card-related-items",
+                locals: {item: p}
 
     - if items.any?
       section.pt-4
@@ -63,12 +65,11 @@ header.mb-5
           h2.display-3.font-weight-semibold.mb-4
             = t("contents.title")
 
-        .container.mid-container
-          .row
-            - items.each do |n|
-              .col-lg-8
-                = partial "partials/card-related-items",
-                  locals: {item: n}
+        .container.mid-container.px-0
+          - items.each do |n|
+            .col-lg-8.px-0
+              = partial "partials/card-related-items",
+                locals: {item: n}
 
   .container
     .py-lg-4
