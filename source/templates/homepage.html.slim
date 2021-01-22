@@ -32,7 +32,8 @@
 - if page.sections.any?
   .lightgrey-bg-a2
     .container
-      = partial "partials/flag", locals: {flags: page.sections, image_right: true}
+      = partial "partials/flag",
+        locals: {flags: page.sections, image_right: true}
 
 - if page.announcements.any?
   .container
