@@ -3,24 +3,30 @@
       h3.h4.mb-4 = block.text_title
 
   .row
-    div class=(compact_columns.present? ? 'col-12' : 'col-12 col-lg-9')
+    div class=(compact_columns.present? ? "col-12" : "col-12 col-lg-9")
       - if block.image_little.present?
         figure.block-body__small-image
-          = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6, fit:'crop'),
-              data: {'sizes': '100vw',
-                'src': block.image_little.url(w: 700, h: 400, fit:'crop', auto:'compress'),
-                'srcset': "#{block.image_little.url(w: 450, h: 330, fit:'crop', auto:'compress')} 480w,
-                #{block.image_little.url(w: 600, h: 333, fit:'crop', auto:'compress')} 632w,
-                #{block.image_little.url(w: 560, h: 333, fit:'crop', auto:'compress')} 844w,
-                #{block.image_little.url(w: 700, h: 400, fit:'crop', auto:'compress')} 1091w,
-                #{block.image_little.url(w: 300, h: 180, fit:'crop', auto:'compress')} 1320w"},
-              class: "lazyload d-block w-100",
-              alt: block.image_little.alt,
-              title: block.image_little.title
+          = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6,
+            fit: "crop"), data: {"sizes": "100vw",
+            "src": block.image_little.url(w: 700, h: 400,
+            fit: "crop", auto: "compress"),
+            "srcset": "#{block.image_little.url(w: 450, h: 330,
+              fit: 'crop', auto: 'compress')} 480w,
+              #{block.image_little.url(w: 600, h: 333,
+              fit: 'crop', auto: 'compress')} 632w,
+              #{block.image_little.url(w: 560, h: 333,
+              fit: 'crop', auto: 'compress')} 844w,
+              #{block.image_little.url(w: 700, h: 400,
+              fit: 'crop', auto: 'compress')} 1091w,
+              #{block.image_little.url(w: 300, h: 180,
+              fit: 'crop', auto: 'compress')} 1320w"},
+            class: "lazyload d-block w-100",
+            alt: block.image_little.alt,
+            title: block.image_little.title
 
       = markdown block.body_text
 
-    div class="#{'.col-8 offset-4 col-lg-3 offset-lg-0 ' unless compact_columns}"
+    div class=(".col-8 offset-4 col-lg-3 offset-lg-0" unless compact_columns)
       - if block.text_note.present? || block.image_little.present?
         .mid-notes.pl-3
           - if block.text_note.present?
