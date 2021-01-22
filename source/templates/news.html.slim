@@ -5,14 +5,13 @@
   = content_for :col_one
     = partial "partials/headers/subpages-menu",
       locals: {subs: visible_fl_pages(dato.news_subpages)}
-
   = content_for :aside
     = partial "partials/column-title",
       locals: {title: t("highlighted_topics")}
 
     - featured_tags.each do |tag|
       = partial "partials/chip",
-        locals: {label: tag.name, url: page_path(tag), btn_type: ''}
+        locals: {label: tag.name, url: page_path(tag), btn_type: ""}
 
 .container.px-4.mid-border-lg-top
   .row.d-lg-flex
