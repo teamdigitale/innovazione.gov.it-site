@@ -1,10 +1,20 @@
 - title ||= nil
+- large ||= ""
+- inline ||= "d-block"
 
 - if title.present?
-  - default_classes = "mid-caption text-uppercase font-weight-semibold mb-2"
-  - classes ||= ""
-  - large = large.nil? ? "" : "mid-caption--large"
-  - inline = inline.nil? ? "d-block" : "d-inline-block"
-  - merged_classes = [default_classes, inline, large, classes].join(" ")
+  ruby:
+    default_classes = "mid-caption text-uppercase font-weight-semibold mb-2"
+    classes ||= ""
 
-  span> class=(merged_classes) = title
+    if large.nil?
+      large = "mid-caption--large"
+    end
+
+    if inline.nil?
+      inline = "d-inline-block"
+    end
+
+    merged_classes = [default_classes, inline, large, classes].join(" ")
+
+  span> class=merged_classes = title
