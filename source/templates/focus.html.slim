@@ -13,7 +13,8 @@
           .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
             = partial "partials/headers/main-titles", locals: {page: page}
 
-            = partial "partials/column-title", locals: {title: t("ontology.arguments")}
+            = partial "partials/column-title",
+                locals: {title: t("ontology.arguments")}
             - page.tags.each do |tag|
               = partial "partials/chip",
                 locals: {label: tag.name,
