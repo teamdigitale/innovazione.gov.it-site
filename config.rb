@@ -201,7 +201,7 @@ helpers do
     elsif page.respond_to?(:name) && page.name.present?
       page.name
     elsif page.respond_to?(:title) && page.title.present?
-      page.title
+      HTML_Truncator.truncate(page.title, 5)
     end
   end
 
@@ -220,12 +220,8 @@ helpers do
     "news_subpage"]
   end
 
-  def breadcrumb_current_label(page)
-    if editorial_models_api_keys.include?(page.item_type.api_key)
-      t('permalink_label')
-    else
-      menu_label_with_fallback(page)
-    end
+  def page_is_editorial(page)
+    editorial_models_api_keys.include?(page.item_type.api_key)
   end
 
   def cta_label(item)

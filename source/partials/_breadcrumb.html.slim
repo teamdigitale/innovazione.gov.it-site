@@ -33,6 +33,5 @@ nav.breadcrumb-container aria-label="breadcrumb"
         span.separator= "/"
 
     li.breadcrumb-item.active aria-current="page"
-      = link_to breadcrumb_current_label(page),
-        page_path(page),
-        class: html_class
+      div class="#{'d-none d-sm-block' if page_is_editorial(page)}"
+        = menu_label_with_fallback(page)
