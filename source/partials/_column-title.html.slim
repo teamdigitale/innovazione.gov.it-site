@@ -1,11 +1,11 @@
 - title ||= nil
 - large ||= ""
 - inline ||= "d-block"
+- classes ||= ""
 
 - if title.present?
   ruby:
     default_classes = "mid-caption text-uppercase font-weight-semibold mb-2"
-    classes ||= ""
 
     if large.nil?
       large = "mid-caption--large"
