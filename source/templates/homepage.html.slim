@@ -5,20 +5,22 @@
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block}
 
-- if page.featured_news.any? || page.news.any?
-  .container.pt-3
-    - if page.featured_news.any?
-      .pt-5
-        = partial "partials/featured-news",
-          locals: {featured_items: page.featured_news}
+.container.pt-5
+  h2.sr-only Homepage
+  h3.h4.mb-4 = t("home.highlights")
 
-    - if page.news.any?
-      = partial "partials/cards-horizontal-list",
-        locals: {items: page.news,
-        hide_image: true,
-        hide_tags: true,
-        show_item_type: true,
-        btn_url: dato.news_page}
+  - if page.featured_news.any? || page.news.any?
+      - if page.featured_news.any?
+          = partial "partials/featured-news",
+            locals: {featured_items: page.featured_news}
+
+      - if page.news.any?
+        = partial "partials/cards-horizontal-list",
+          locals: {items: page.news,
+          hide_image: true,
+          hide_tags: true,
+          show_item_type: true,
+          btn_url: dato.news_page}
 
 .py-5.lightgrey-bg-a2
   .container
