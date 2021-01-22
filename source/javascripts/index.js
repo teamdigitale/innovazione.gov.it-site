@@ -5,6 +5,7 @@ import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
 import "bootstrap-italia/src/js/plugins/sticky-header";
 import "lazysizes";
+import "focus-visible/src/focus-visible.js"
 
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
@@ -68,5 +69,6 @@ const initSearch = () => {
 };
 
 initSearch();
+unfocus();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};
