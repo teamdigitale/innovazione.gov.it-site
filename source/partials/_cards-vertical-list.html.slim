@@ -12,12 +12,12 @@
 - hide_shadow ||= nil
 
 - if items.present?
-  .mb-4.mb-lg-5
+  .pb-4.pb-lg-0
     = partial "partials/section-title", locals: {title: title}
-  .d-flex.flex-column.justify-content-start
 
+  .d-flex.flex-column.justify-content-start
     - items.each do |item|
-      div.my-2.my-lg-3
+      .py-2.py-lg-3
         - card_partial = ''
         - if item.item_type.api_key == "announcement"
           - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
@@ -26,6 +26,6 @@
 
         - if item.present? && card_partial.present?
           = card_partial
-    .d-flex.flex-row.justify-content-center.mt-5.mt-lg-4.mb-4
+    .d-flex.flex-row.justify-content-center.mt-5.mt-lg-4.mb-5.pb-5
         = partial "partials/button", locals: {btn_url: btn_url}
 
