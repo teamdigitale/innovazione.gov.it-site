@@ -13,20 +13,26 @@
             .col-md-9
               = partial "partials/headers/main-titles", locals: {page: page}
 
-          = partial "partials/headers/subpages-menu", locals: {subs: visible_fl_pages(dato.minister_subpages)}
+          = partial "partials/headers/subpages-menu",
+            locals: {subs: visible_fl_pages(dato.minister_subpages)}
 
         .col-md-4.order-2.order-md-3.mb-5.mb-md-0
           .px-5.px-md-0
             - image = page.photo
             .text-center
               figure
-                = proxy_image_tag image.lqip_data_url(w: 10, h: 10, fit:'crop'),
-                  data: {'sizes': '100vw',
-                    'src': image.url(w: 460, h: 460, fit:'crop', auto:'compress'),
-                    'srcset': "#{image.url(w: 330, h: 330, fit:'crop', auto:'compress')} 480w,
-                    #{image.url(w: 460, h: 460, fit:'crop', auto:'compress')} 844w,
-                    #{image.url(w: 222, h: 222, fit:'crop', auto:'compress')} 1090w,
-                    #{image.url(w: 410, h: 410, fit:'crop', auto:'compress')} 1091w"},
+                = proxy_image_tag image.lqip_data_url(w: 10, h: 10,
+                  fit: "crop"), data: {"sizes": "100vw",
+                    "src": image.url(w: 460, h: 460,
+                    fit: "crop", auto: "compress"),
+                    "srcset": "#{image.url(w: 330, h: 330,
+                      fit: 'crop', auto: 'compress')} 480w,
+                      #{image.url(w: 460, h: 460,
+                      fit: 'crop', auto: 'compress')} 844w,
+                      #{image.url(w: 222, h: 222,
+                      fit: 'crop', auto: 'compress')} 1090w,
+                      #{image.url(w: 410, h: 410,
+                      fit: 'crop', auto: 'compress')} 1091w"},
                   class: "lazyload rounded-circle d-block w-100 h-100",
                   alt: image.alt,
                   title: image.title
@@ -36,9 +42,11 @@
 
 .container.pt-3
   .pt-5.pb-4
-    = partial "partials/section-title", locals: {title: t("articles_section_title")}
+    = partial "partials/section-title",
+      locals: {title: t("articles_section_title")}
 
-  = partial "partials/featured-news", locals: {featured_items: dato.minister_page.featured_articles}
+  = partial "partials/featured-news",
+    locals: {featured_items: dato.minister_page.featured_articles}
 
   = partial "partials/cards-horizontal-list",
     locals: {items: dato.minister_page.articles.take(3),
@@ -65,4 +73,3 @@
     special_subtitle: true,
     unequal_height: true,
     btn_url: dato.minister_interviews_index}
-
