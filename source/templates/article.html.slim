@@ -1,7 +1,8 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page, share: true } do
+= partial "partials/headers/header-basic",
+  locals: { page: page, share: true } do
 
   = content_for :col_one
     = partial "partials/column-title", locals: {title: t("date_shown")}

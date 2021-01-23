@@ -1,7 +1,7 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page } do
+= partial "partials/headers/header-basic", locals: {page: page} do
   = content_for :aside
     = partial "partials/explore-aside",
       locals: {page: page}
