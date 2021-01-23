@@ -17,14 +17,14 @@ footer.it-footer data-datocms-noindex=true
                 class: "icon"
 
               .it-brand-text.pr-0.pr-md-2
-                h2.mt-4.mt-md-0.text-center.text-md-left style="max-with: 400px;"
-                  = t("formatted_site_name")
+                h2.mt-4.mt-md-0.text-center.text-md-left [
+                  style="max-with: 400px;"] = t("formatted_site_name")
 
     .py-4
       .container
         .row
           .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("contacts")
 
             .mb-2
@@ -73,14 +73,14 @@ footer.it-footer data-datocms-noindex=true
                           = dato.company.media_email
 
           .col-md-6.col-xl-3.mb-5
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("follow_us_on")
 
             .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
               = partial "partials/socials"
 
           .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("other_links")
 
             .text-center.text-md-left
@@ -95,7 +95,7 @@ footer.it-footer data-datocms-noindex=true
                         = cta_label(item)
 
           .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("transparency")
 
             .text-center.text-md-left
