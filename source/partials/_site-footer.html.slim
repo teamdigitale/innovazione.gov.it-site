@@ -5,8 +5,10 @@ footer.it-footer data-datocms-noindex=true
         .col-sm-12
           .it-brand-wrapper
             = link_to locale_path("/"),
-              class: "flex-wrap flex-md-nowrap justify-content-center justify-content-md-start",
-              title: "Vai alla Pagina Iniziale"
+              class: ["flex-wrap", "flex-md-nowrap",
+              "justify-content-center",
+               "justify-content-md-start"].join(" "),
+               title: "Vai alla Pagina Iniziale"
               = proxy_image_tag "logo-repubblica-italiana.svg",
                 alt: "Logo Repubblica Italiana",
                 class: "icon"
@@ -114,4 +116,4 @@ footer.it-footer data-datocms-noindex=true
           li.list-inline-item
             = link_to page_path(item),
               class: "list-item mid-footer-link"
-                span= item.title
+                span = item.title
