@@ -236,6 +236,11 @@ helpers do
     item.cta_label.present? ? item.cta_label : item.title
   end
 
+  def anchor_id(title)
+    return "" unless title
+    title.parameterize
+  end
+
   def all_index_pages
     [dato.articles_index,
       dato.announcements_index,
