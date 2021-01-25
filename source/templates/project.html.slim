@@ -10,7 +10,7 @@
           figure.figure
             - i_url = page.image_project_logo.file.width(800).format("pjpg").to_url
             = proxy_image_tag i_url,
-                        alt: "Logo #{page.image_project_logo}",
+                        alt: page.image_project_logo.alt,
                         class: "figure-img img-fluid"
 
     - if page.link_external_project_website.present?
