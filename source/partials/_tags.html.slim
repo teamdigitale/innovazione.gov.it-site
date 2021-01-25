@@ -1,4 +1,6 @@
-- if page && page.item_type.api_key != "tags_index"
+- hide_tags_section ||= false
+
+- if !hide_tags_section
   section.section.section-neutral.bg-dark data-datocms-noindex=true
     .container
       .row

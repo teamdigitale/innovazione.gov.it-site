@@ -515,7 +515,7 @@ dato.tap do |dato|
 
     proxy "#{prefix}/#{dato.tags_index.slug}/index.html",
       "/templates/tags.html",
-      locals: { page: dato.tags_index },
+      locals: { page: dato.tags_index, hide_tags_section: true},
       locale: locale
 
     news_contents = PresentationHelper.published_announcements(dato.announcements) +
