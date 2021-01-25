@@ -1,7 +1,8 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page, share: true } do
+= partial "partials/headers/header-basic",
+  locals: {page: page, share: true} do
 
   = content_for :aside
     = partial "partials/column-title", locals: {title: t("ontology.arguments")}
@@ -17,7 +18,6 @@
       .mb-4
         = partial "partials/column-title", locals: {title: I18n.t("source")}
         p = page.source
-
 
     = partial "partials/reading-time", locals: {page: page}
 
