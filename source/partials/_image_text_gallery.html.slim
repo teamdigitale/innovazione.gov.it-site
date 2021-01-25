@@ -27,7 +27,11 @@
 
           .swiper-slide__text.h-50.px-3.bg-white
             - if slide.title
-              .swiper-slide__text__title.pb-2 = slide.title
+              .swiper-slide__text__title.pb-2
+                = proxy_link_to slide.title,
+                  page_path(slide),
+                  class: "text-decoration-none"
+
             - if slide.subtitle
               .swiper-slide__text__subtitle = slide.subtitle
   .swiper-pagination.mt-4
