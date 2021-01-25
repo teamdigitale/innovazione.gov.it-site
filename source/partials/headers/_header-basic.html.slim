@@ -1,9 +1,9 @@
-- page ||= nil
-- share ||= nil
-- classes ||= ""
-- subs ||= nil
-- hide_caption ||= nil
-- single_col_mobile ||= nil
+ruby:
+  page ||= nil
+  share ||= nil
+  classes ||= ""
+  subs ||= nil
+  hide_caption ||= nil
 
 - if page.present?
   - col_style = single_col_mobile ? "col-12" : "col-6"
@@ -36,4 +36,3 @@
               = partial "partials/share"
             - if content_for?(:aside)
               = yield_content :aside
-

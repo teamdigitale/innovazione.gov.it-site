@@ -1,17 +1,20 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: {page: page, single_col_mobile: true} do
+- logo = page.image_project_logo
+- image_url = logo.file.width(800).format("pjpg").to_url
+
+= partial "partials/headers/header-basic",
+    locals: {page: page} do
 
   = content_for :aside
     .d-flex.justify-content-center.d-lg-block
       .col-4.col-md-6.px-0
         .img-responsive-wrapper
           figure.figure
-            - i_url = page.image_project_logo.file.width(800).format("pjpg").to_url
-            = proxy_image_tag i_url,
-                        alt: page.image_project_logo.alt,
-                        class: "figure-img img-fluid"
+            = proxy_image_tag image_url,
+                alt: logo.alt,
+                class: "figure-img img-fluid"
 
     - if page.link_external_project_website.present?
       ruby:
@@ -32,9 +35,10 @@
             target: "_blank"
 
   = content_for :col_one
-    = partial "partials/column-title", locals: {title: t("projects.category")}
-    = link_to page.category.name,
-              "#{page_path(dato.projects_page)}##{page.category.slug}"
+    .mb-4
+      = partial "partials/column-title", locals: {title: t("projects.category")}
+      = link_to page.category.name,
+                "#{page_path(dato.projects_page)}##{page.category.slug}"
 
   = content_for :col_two
     = partial "partials/column-title", locals: {title: t("projects.topics")}
