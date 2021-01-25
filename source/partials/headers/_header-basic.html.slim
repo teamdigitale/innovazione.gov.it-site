@@ -25,7 +25,7 @@
                   = yield_content :col_one
 
               - if content_for?(:col_two)
-                .pt-5 class="#{col_style}"
+                div class="#{col_style}"
                   = yield_content :col_two
 
           = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
