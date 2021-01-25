@@ -3,9 +3,10 @@
     .col-lg-3.border-right.hidden.d-none.d-lg-block.px-0
       = partial "partials/sticky-anchor", locals: {page: page}
 
-    .col-12.col-lg-8.offset-lg-1.pt-5.px-0
-      .col-12.d-lg-none.px-0
-        = partial "partials/sticky-anchor-mobile", locals: {page: page}
+    .col-12.col-lg-8.offset-lg-1.pt-lg-5.px-0
+      
+      = partial "partials/sticky-anchor-mobile", locals: {page: page}
+      .pt-5.pt-lg-0
       = partial "partials/page-blocks",
         locals: {page: page}
 
