@@ -8,7 +8,8 @@
   .row
     .col-lg-3.border-right.hidden.d-none.d-lg-block.border-top
       = partial "partials/sticky-anchor",
-        locals: {categories: visible_projects_categories, title: "Categorie progetti"}
+        locals: {categories: visible_projects_categories,
+          title: "Categorie progetti"}
     .col-12.col-lg-9.px-0.border-top
       section.section.p-0
         .container
@@ -18,12 +19,12 @@
 
               .row
                 - visible_projects.select { |p| p.highlight == true }.each do |prj|
-                  .col-12.col-lg-6
+                  .col-12.col-md-6
                     = partial "partials/project_card", locals: {project: prj}
-      
+
       - visible_projects_categories.each_with_index do |cat, i|
         - if visible_projects.select { |p| p.category == cat }.count.positive?
-          section.section.p-0 class=(i.even? ? "section-muted" : "")      
+          section.section.p-0 class=(i.even? ? "section-muted" : "")
             .container
               .row.py-5.pl-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
@@ -34,4 +35,3 @@
                 - visible_projects.select { |p| p.category == cat }.each do |p|
                   .col-sm-6
                     = partial "partials/project_card", locals: {project: p}
-
