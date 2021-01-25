@@ -1,3 +1,5 @@
+- items ||= []
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
@@ -11,13 +13,14 @@
 
 .py-3.my-lg-5
   .container.mid-container
-    .row
-      h3.sr-only Elenco degli elementi
-      - items.each do |n|
-        .col-lg-8
-          = partial "partials/card-related-items",
-            locals: {item: n}
+    - if items.any?
+      .row
+        h3.sr-only Elenco degli elementi
+        - items.each do |n|
+          .col-lg-8
+            = partial "partials/card-related-items",
+              locals: {item: n}
 
-    .pt-lg-4
-      = partial "partials/pagination",
-        locals: {pager: pager}
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
