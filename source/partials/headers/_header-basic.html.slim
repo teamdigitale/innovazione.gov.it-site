@@ -6,9 +6,7 @@ ruby:
   hide_caption ||= nil
 
 - if page.present?
-  - col_style = single_col_mobile ? "col-12" : "col-6"
-
-  header class=(classes)
+  header class=classes
     .container.pb-5.text-center.text-sm-left
       .row
         .col-12
@@ -21,14 +19,15 @@ ruby:
           - if content_for?(:col_one) || content_for?(:col_two)
             .row.mb-5
               - if content_for?(:col_one)
-                .pb-sm-0 class="#{col_style}"
+                .col-md-6
                   = yield_content :col_one
 
               - if content_for?(:col_two)
-                div class="#{col_style}"
+                .col-md-6
                   = yield_content :col_two
 
-          = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
+          = partial "partials/headers/subpages-menu",
+            locals: {subs: subs, hide_caption: hide_caption}
 
         - if content_for?(:aside)
           .offset-lg-1.col-md-4
