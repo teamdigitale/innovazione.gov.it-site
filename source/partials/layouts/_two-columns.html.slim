@@ -4,6 +4,8 @@
       = partial "partials/sticky-anchor", locals: {page: page}
 
     .col-12.col-lg-8.offset-lg-1.pt-5.px-0
+      .col-12.d-lg-none.px-0
+        = partial "partials/sticky-anchor-mobile", locals: {page: page}
       = partial "partials/page-blocks",
         locals: {page: page}
 
