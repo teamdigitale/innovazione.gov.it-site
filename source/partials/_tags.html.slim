@@ -1,20 +1,27 @@
-section.section.section-neutral.bg-dark data-datocms-noindex=true
-  .container
-    .row
-      .col-12.col-lg-7.container.white-color
+- if page && page.item_type.api_key != "tags_index"
+  section.section.section-neutral.bg-dark data-datocms-noindex=true
+    .container
+      .row
+        .col-12.col-lg-7.container.white-color
 
-        .h6.text-uppercase.text-center.text-lg-left
-          = t("tags_title")
+          .h6.text-uppercase.text-center.text-lg-left
+            = t("tags_title")
 
-        .my-4
-          - featured_tags.each do |tag|
-            = partial "partials/chip",
-              locals: {label: tag.name,
-                text_color: "text-white",
-                url: page_path(tag)}
+          .my-4
+            - featured_tags.each do |tag|
+              = partial "partials/chip",
+                locals: {label: tag.name,
+                  text_color: "text-white",
+                  url: page_path(tag)}
 
-      .col-12.col-lg-4.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
-        = proxy_link_to t("view_more"),
-          page_path(dato.tags_index),
-          class: "btn btn-outline-primary text-uppercase"
-      .col-lg-1
+        .col-12.col-lg-4.pt-3
+          div class=["d-flex",
+            "justify-content-center",
+            "align-items-center",
+            "justify-content-lg-end"]
+
+            = proxy_link_to t("view_more"),
+              page_path(dato.tags_index),
+              class: "btn btn-outline-primary text-uppercase"
+
+        .col-lg-1
