@@ -241,6 +241,20 @@ helpers do
     title.parameterize
   end
 
+  def show_update_date_api_keys
+    ["focus_page",
+    "project",
+    "general_page",
+    "minister_subpage",
+    "department_subpage",
+    "projects_subpage",
+    "news_subpage"]
+  end
+
+  def page_show_update_date?(page)
+    show_update_date_api_keys.include?(page.item_type.api_key)
+  end
+
   def all_index_pages
     [dato.articles_index,
       dato.announcements_index,
