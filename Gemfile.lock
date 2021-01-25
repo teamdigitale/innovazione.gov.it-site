@@ -196,6 +196,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   html_truncator
   middleman (~> 4.2)
   middleman-dato
