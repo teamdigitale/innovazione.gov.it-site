@@ -8,11 +8,15 @@
       p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold= title
       .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
         #progress-indicator.progress-indicator.primary-bg-b1
+
       ul.it-list.small.pt-3 id='_top-menu'
         - if categories.present?
           - categories.each do |cat|
             li.nav-item
-              = link_to cat.name, "##{cat.slug.downcase.gsub(' ', '-')}", class: 'nav-link pr-4'
+              = link_to cat.name,
+                "##{cat.slug}",
+                class: "nav-link pr-4"
+
         - else
           - page.content_blocks.each do |block|
             - if block.respond_to?(:text_title)
