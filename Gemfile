@@ -12,3 +12,4 @@ gem "pry"
 gem "redcarpet"
 gem "slim"
 gem "slim_lint"
+gem 'activesupport'

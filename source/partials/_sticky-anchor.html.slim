@@ -1,19 +1,28 @@
 - page ||= nil
 - categories ||= nil
-- title ||= "Indice della pagina"
+- title ||= t("sections_nav_index")
 
 - if categories.present? || page.content_blocks.present?
   .sticky-top.menu-wrapper.pb-5
     .it-list-wrapper.menu-link-list
-      p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold= title
+      p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold
+        = title
+
       .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
         #progress-indicator.progress-indicator.primary-bg-b1
+
       ul.it-list.small.pt-3 id='_top-menu'
         - if categories.present?
           - categories.each do |cat|
             li.nav-item
-              = link_to cat.name, "##{cat.slug.downcase.gsub(' ', '-')}", class: 'nav-link pr-4'
+              = link_to cat.name,
+                "##{cat.slug}",
+                class: "nav-link pr-4"
+
         - else
           - page.content_blocks.each do |block|
-            li.nav-item 
-              = block.respond_to?(:text_title) ? link_to("<span>#{block.text_title}</span>", "##{block.text_title.downcase.gsub(' ', '-')}", class: 'nav-link pr-4') : ''
+            - if block.respond_to?(:text_title)
+              li.nav-item
+                = link_to "##{anchor_id(block.text_title)}",
+                  class: "nav-link pr-4"
+                  span = block.text_title
