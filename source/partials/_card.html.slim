@@ -1,67 +1,94 @@
 - article ||= nil
-- hide_image ||= nil
-- hide_tags ||= nil
-- show_item_type ||= nil
-- large_title ||= nil
-- medium_title ||= nil
-- special_subtitle ||= nil
-- unequal_height ||= nil
-- hide_shadow ||= nil
 
 - if article.present?
   ruby:
-    date ||= ''
-    subtitle ||= ''
-    tags ||= ''
-    image = ''
-    image_link = ''
-    title_style = ''
-    subtitle_style = ''
-    shadow = hide_shadow ? '' : 'shadow-lg'
-    height = unequal_height ? '' : 'h-100'
+    hide_image ||= nil
+    hide_tags ||= nil
+    show_item_type ||= nil
+    large_title ||= nil
+    medium_title ||= nil
+    special_subtitle ||= nil
+    unequal_height ||= nil
+    hide_shadow ||= nil
+    image = ""
+    image_link = ""
+    title_style = ""
+    subtitle_style = ""
+    shadow = hide_shadow ? "" : "shadow-lg"
+    height = unequal_height ? "" : "h-100"
 
-    if !hide_image && (article.respond_to?(:image_cover) && article.image_cover.present?)
+    show_art_img = !hide_image && article.respond_to?(:image_cover)
+    if show_art_img && article.image_cover.present?
       image = "card-img no-after"
       image_link = article.image_cover
     end
 
-    if !hide_image && (article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?)
+    show_thumbnail = !hide_image && article.respond_to?(:image_thumbnail)
+    if show_thumbnail && article.image_thumbnail.present?
       image = "card-img no-after"
       image_link = article.image_thumbnail
     end
 
     if large_title
-      title_style = 'h2'
+      title_style = "h2"
     elsif medium_title
-      title_style = 'h5 font-weight-bold'
-      subtitle_style = 'mid-caption--large'
+      title_style = "h5 font-weight-bold"
+      subtitle_style = "mid-caption--large"
     else
-      title_style = 'mid-caption--xlarge font-weight-bold'
-      subtitle_style = 'mid-caption--large'
-
+      title_style = "mid-caption--xlarge font-weight-bold"
+      subtitle_style = "mid-caption--large"
     end
 
   .card.rounded class="#{image} #{height} #{shadow}"
     - if image_link.present?
       - if large_title
-        - lg_image_url = image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')
-        - xl_image_url = image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')
+        - lg_image_url = image_link.url(w: 700,
+          h: 400,
+          fit: "crop",
+          auto: "compress")
+        - xl_image_url = image_link.url(w: 700,
+          h: 400,
+          fit: "crop",
+          auto: "compress")
       - else
-        - lg_image_url = image_link.url(w: 320, h: 200, fit:'crop', auto:'compress')
-        - xl_image_url = image_link.url(w: 400, h: 245, fit:'crop', auto:'compress')
-        
+        - lg_image_url = image_link.url(w: 320,
+          h: 200,
+          fit: "crop",
+          auto: "compress")
+        - xl_image_url = image_link.url(w: 400,
+          h: 245,
+          fit: "crop",
+          auto: "compress")
+
       .img-responsive-wrapper
         .img-responsive
           figure.img-wrapper
-            = proxy_image_tag image_link.lqip_data_url(w: 10, h: 6, fit:'crop'),
-              data: {'sizes': '100vw',
-                'src': image_link.url(w: 700, h: 400, fit:'crop', auto:'compress'),
-                'srcset': "#{image_link.url(w: 450, h: 330, fit:'crop', auto:'compress')} 480w,
-                #{image_link.url(w: 600, h: 333, fit:'crop', auto:'compress')} 632w,
-                #{image_link.url(w: 560, h: 333, fit:'crop', auto:'compress')} 844w,
-                #{image_link.url(w: 700, h: 400, fit:'crop', auto:'compress')} 1091w,
-                #{lg_image_url} 1320w,
-                #{xl_image_url} 1400w"},
+            = proxy_image_tag image_link.lqip_data_url(w: 10,
+              h: 6,
+              fit: "crop"),
+              data: {"sizes": "100vw",
+                "src": image_link.url(w: 700,
+                    h: 400,
+                    fit: "crop",
+                    auto: "compress"),
+                "srcset": "#{image_link.url(w: 450,
+                    h: 330,
+                    fit: 'crop',
+                    auto: 'compress')} 480w,
+                  #{image_link.url(w: 600,
+                    h: 333,
+                    fit: 'crop',
+                    auto: 'compress')} 632w,
+                    #{image_link.url(w: 560,
+                      h: 333,
+                      fit: 'crop',
+                      auto: 'compress')} 844w,
+                    #{image_link.url(w: 700,
+                      h: 400,
+                      fit: 'crop',
+                      auto: 'compress')} 1091w,
+                  #{lg_image_url} 1320w,
+                  #{xl_image_url} 1400w"},
               class: "lazyload d-block w-100",
               alt: image_link.alt,
               title: image_link.title
@@ -73,22 +100,26 @@
             span.pr-2.text-uppercase.font-weight-semibold
               = t("models.#{article.item_type.api_key}")
             span.px-2.text-secondary
-              = partial "partials/formatted-date", locals: {date: article.date_shown}
+              = partial "partials/formatted-date",
+                locals: {date: article.date_shown}
         - else
           p.card-text.text-secondary
-            = partial "partials/formatted-date", locals: {date: article.date_shown}
+            = partial "partials/formatted-date",
+              locals: {date: article.date_shown}
         h4.text-primary class="#{title_style}"
           = proxy_link_to page_path(article),
             class: "text-decoration-none"
             = article.title
-        - if special_subtitle && (article.respond_to?(:source) && article.source.present?)
+        - source = article.respond_to?(:source) && article.source.present?
+        - if special_subtitle && source
           p.h6.pt-3
             = article.source
         - else
           p.pt-2 class="#{subtitle_style}"
             = article.subtitle
       .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-        - if !hide_tags && (article.item_type.api_key == "article" && article.tags.present?)
+        - tags = article.item_type.api_key == "article" && article.tags.present?
+        - if !hide_tags && tags
           - article.tags.each do |tag|
             = partial "partials/chip",
               locals: {label: tag.name,
