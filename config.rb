@@ -211,7 +211,7 @@ helpers do
     "interview",
     "participation",
     "press_release",
-    "focus",
+    "focus_page",
     "project",
     "general_page",
     "minister_subpage",
@@ -222,6 +222,14 @@ helpers do
 
   def page_is_editorial(page)
     editorial_models_api_keys.include?(page.item_type.api_key)
+  end
+
+  def explore_models_api_keys
+    ["tags_index", "tag", "explore_page"]
+  end
+
+  def page_is_explore(page)
+    explore_models_api_keys.include?(page.item_type.api_key)
   end
 
   def cta_label(item)

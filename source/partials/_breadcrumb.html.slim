@@ -1,37 +1,47 @@
 - ancestor = page_ancestor(page)
 - parent = page_parent(page)
-
-- page_api_key = page.item_type.api_key
 - html_class ||= ""
 
+ruby:
+  current_classes = [
+    html_class,
+    ("d-none d-sm-block" if page_is_editorial(page))
+  ].join(" ")
+
 nav.breadcrumb-container aria-label="breadcrumb"
-  ol.breadcrumb.mt-4.mb-5
-    li.breadcrumb-item
+  ol.breadcrumb.mt-4.mb-5.justify-content-center.justify-content-sm-start
+    li.breadcrumb-item.d-none.d-sm-block
       = link_to t("home_label"),
         locale_path("/"),
         class: html_class
 
-      span.separator= "/"
+      span.separator
+        = "/"
 
-    - if page_api_key == "tags_index" || page_api_key == "explore_page"
+    - if page_is_explore(page)
       li.breadcrumb-item
-        = t('explore_breadcrumb_prefix')
-        span.separator= "/"
+        = t("explore_breadcrumb_prefix")
+        span.separator
+          = "/"
 
     - if ancestor
       li.breadcrumb-item
         = link_to menu_label_with_fallback(ancestor),
           page_path(ancestor),
           class: html_class
-        span.separator= "/"
+
+        span.separator class="#{current_classes unless parent}"
+          = "/"
 
     - if parent
       li.breadcrumb-item
         = link_to menu_label_with_fallback(parent),
           page_path(parent),
           class: html_class
-        span.separator= "/"
 
-    li.breadcrumb-item.active aria-current="page"
-      div class="#{html_class} #{'d-none d-sm-block' if page_is_editorial(page)}"
+        span.separator class=current_classes
+          = "/"
+
+    li.breadcrumb-item.active aria-current='page'
+      span class=current_classes
         = menu_label_with_fallback(page)
