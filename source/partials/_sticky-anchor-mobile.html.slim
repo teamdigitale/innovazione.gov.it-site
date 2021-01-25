@@ -1,1 +1,32 @@
+- page ||= nil
+- categories ||= nil
+- title ||= t("sections_nav_index")
 
+- if categories.present? || page.content_blocks.present?
+  .sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white
+    .it-list-wrapper.menu-link-list
+      .collapse-div role="tablist" id="accordionDiv-aside"
+        .collapse-header id='headingA-aside'
+          div.p-0 aria-controls="accordion-aside" aria-expanded="false" data-target="#accordion-aside" data-toggle="collapse" 
+            p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold.px-3
+              = title
+
+            .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+              #progress-indicator.progress-indicator.primary-bg-b1
+        .collapse aria-labelledby="headingA-aside" id="accordion-aside" data-parent="#accordionDiv-aside" role="tabpanel" 
+          .collapse-body.p-0
+            ul.it-list.small.pt-3 id='_top-menu'
+              - if categories.present?
+                - categories.each do |cat|
+                  li.nav-item
+                    = link_to cat.name,
+                      "##{cat.slug}",
+                      class: "nav-link pr-4"
+
+              - else
+                - page.content_blocks.each do |block|
+                  - if block.respond_to?(:text_title)
+                    li.nav-item
+                      = link_to "##{anchor_id(block.text_title)}",
+                        class: "nav-link pr-4"
+                        span = block.text_title
