@@ -1,9 +1,13 @@
 .swiper-container {
+  z-index: 0;
 }
 
 .fixed-height {
   height: 400px;
-  z-index: 3;
+}
+
+.fixed-width {
+  max-width: 400px;
 }
 
 .swiper-slide {
@@ -64,6 +68,7 @@
 
 .swiper-pagination {
   position: relative;
+  z-index: 0;
 }
 
 .swiper-pagination-bullet {

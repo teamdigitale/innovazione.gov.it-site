@@ -1,8 +1,8 @@
 .swiper
-  .swiper-container.fixed-height.shadow-lg
+  .swiper-container.fixed-height.fixed-width.shadow-lg
     .swiper-wrapper.h-100
       - slides.each do |slide|
-        .swiper-slide
+        .swiper-slide.fixed-width
           .swiper-slide__image
             - if slide.image_thumbnail
               = proxy_image_tag slide.image_thumbnail.lqip_data_url(w: 10, h: 6,
