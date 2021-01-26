@@ -182,7 +182,7 @@ helpers do
 
   def visible_tags
     PresentationHelper.published_tags(dato.tags) &
-      visible_news_contents.collect {|n| n.tags}.flatten
+      visible_news_contents.collect { |n| n.tags }.flatten
   end
 
   def featured_tags
@@ -194,7 +194,7 @@ helpers do
   end
 
   def visible_fl_pages(pages)
-    PresentationHelper.published_pages(pages).select {|p| !p.parent}
+    PresentationHelper.published_pages(pages).select { |p| !p.parent }
   end
 
   def menu_label_with_fallback(page)
@@ -333,7 +333,7 @@ dato.tap do |dato|
             locale: locale
     end
 
-    minister_articles = visible_articles.select {|a| a.owners.include?(dato.minister_page)}
+    minister_articles = visible_articles.select { |a| a.owners.include?(dato.minister_page) }
 
     paginate minister_articles,
              "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}",
@@ -342,7 +342,7 @@ dato.tap do |dato|
              locals: { page: dato.minister_articles_index },
              per_page: 10
 
-    minister_interviews = visible_interviews.select {|i| i.owners.include?(dato.minister_page)}
+    minister_interviews = visible_interviews.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate minister_interviews,
              "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}",
@@ -351,7 +351,7 @@ dato.tap do |dato|
              locals: { page: dato.minister_interviews_index },
              per_page: 10
 
-    minister_participations = visible_participations.select {|i| i.owners.include?(dato.minister_page)}
+    minister_participations = visible_participations.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate minister_participations,
              "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}",
@@ -360,7 +360,7 @@ dato.tap do |dato|
              locals: { page: dato.minister_participations_index },
              per_page: 10
 
-    minister_press_releases = visible_press_releases.select {|i| i.owners.include?(dato.minister_page)}
+    minister_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate minister_press_releases,
              "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}",
@@ -397,7 +397,7 @@ dato.tap do |dato|
             locale: locale
     end
 
-    department_announcements = visible_announcements.select {|i| i.owners.include?(dato.department_page)}
+    department_announcements = visible_announcements.select { |i| i.owners.include?(dato.department_page) }
 
     paginate department_announcements,
              "#{prefix}/#{dato.department_page.slug}/#{dato.department_announcements_index.slug}",
@@ -406,7 +406,7 @@ dato.tap do |dato|
              locals: { page: dato.department_announcements_index },
              per_page: 10
 
-    department_articles = visible_articles.select {|i| i.owners.include?(dato.department_page)}
+    department_articles = visible_articles.select { |i| i.owners.include?(dato.department_page) }
 
     paginate department_articles,
              "#{prefix}/#{dato.department_page.slug}/#{dato.department_articles_index.slug}",
@@ -415,7 +415,7 @@ dato.tap do |dato|
              locals: { page: dato.department_articles_index },
              per_page: 10
 
-    department_press_releases = visible_press_releases.select {|i| i.owners.include?(dato.department_page)}
+    department_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.department_page) }
 
     paginate department_press_releases,
              "#{prefix}/#{dato.department_page.slug}/#{dato.department_press_releases_index.slug}",
@@ -558,7 +558,7 @@ dato.tap do |dato|
                     visible_press_releases
 
     PresentationHelper.published_tags(dato.tags).each do |tag|
-      tag_news_contents = news_contents.select {|n| n.tags.include?(tag)}.sort_by(&:date_shown).reverse
+      tag_news_contents = news_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
       if tag_news_contents.any?
         paginate tag_news_contents,
                  "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
