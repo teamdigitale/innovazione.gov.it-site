@@ -111,7 +111,7 @@ module PathHelpers
 
   def page_complete_url(page)
     [ENV.fetch("BASE_URL"),
-    page_path(page)].join
+     page_path(page)].join
   end
 
   private

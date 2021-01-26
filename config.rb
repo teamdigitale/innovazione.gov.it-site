@@ -216,17 +216,17 @@ helpers do
 
   def editorial_models_api_keys
     ["announcement",
-    "article",
-    "interview",
-    "participation",
-    "press_release",
-    "focus_page",
-    "project",
-    "general_page",
-    "minister_subpage",
-    "department_subpage",
-    "projects_subpage",
-    "news_subpage"]
+     "article",
+     "interview",
+     "participation",
+     "press_release",
+     "focus_page",
+     "project",
+     "general_page",
+     "minister_subpage",
+     "department_subpage",
+     "projects_subpage",
+     "news_subpage"]
   end
 
   def page_is_editorial(page)
@@ -252,12 +252,12 @@ helpers do
 
   def show_update_date_api_keys
     ["focus_page",
-    "project",
-    "general_page",
-    "minister_subpage",
-    "department_subpage",
-    "projects_subpage",
-    "news_subpage"]
+     "project",
+     "general_page",
+     "minister_subpage",
+     "department_subpage",
+     "projects_subpage",
+     "news_subpage"]
   end
 
   def page_show_update_date?(page)
@@ -266,12 +266,12 @@ helpers do
 
   def all_index_pages
     [dato.articles_index,
-      dato.announcements_index,
-      dato.interviews_index,
-      dato.participations_index,
-      dato.press_releases_index,
-      dato.focus_index,
-      dato.projects_page
+     dato.announcements_index,
+     dato.interviews_index,
+     dato.participations_index,
+     dato.press_releases_index,
+     dato.focus_index,
+     dato.projects_page
     ]
   end
 
