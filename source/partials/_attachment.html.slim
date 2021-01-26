@@ -1,5 +1,9 @@
 - attachment ||= nil
 
+ruby:
+  attachment_classes = %(card-title mid-caption--xlarge mid-text-dark
+   text-decoration-none)
+
 - if attachment.present?
   .card.h-100.card-teaser.rounded.shadow
     svg.icon.icon-primary
@@ -7,7 +11,7 @@
     .card-body
       h4.font-weight-semibold
         = proxy_link_to attachment.file.url,
-          class: "card-title mid-caption--xlarge mid-text-dark text-decoration-none"
+          class: attachment_classes
           .card-title.mid-caption--xlarge
             = attachment.file_title
       p.card-text = attachment.file_description
