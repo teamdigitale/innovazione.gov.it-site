@@ -68,6 +68,14 @@ const initSearch = () => {
   });
 };
 
+// Close accordion on click outside
+$(document).click(function(e) {
+  var container = $('.collapse');
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    container.collapse('hide');
+  }
+})
+
 initSearch();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};
