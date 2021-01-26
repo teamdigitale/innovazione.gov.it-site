@@ -7,15 +7,15 @@
     .it-list-wrapper.menu-link-list
       .collapse-div role="tablist" id="accordionDiv-aside"
         .collapse-header id='headingA-aside'
-          div.p-0 aria-controls="accordion-aside" aria-expanded="false" data-target="#accordion-aside" data-toggle="collapse" 
-            p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold.px-3
+          .p-0.pt-2 aria-controls="accordion-aside" aria-expanded="false" data-target="#accordion-aside" data-toggle="collapse" 
+            p.h3.pt-1.pb-2.text-uppercase.mid-caption.font-weight-semibold.px-3
               = title
 
             .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
               ._progress-indicator.progress-indicator.primary-bg-b1
         .collapse aria-labelledby="headingA-aside" id="accordion-aside" data-parent="#accordionDiv-aside" role="tabpanel" 
           .collapse-body.p-0
-            ul.it-list.small.pt-3 id='_top-menu'
+            ul.it-list.small.py-3 id='_top-menu'
               - if categories.present?
                 - categories.each do |cat|
                   li.nav-item
