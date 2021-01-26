@@ -76,6 +76,10 @@ $(document).click(function(e) {
   }
 })
 
+$('.nav-item').click(function(e) {
+  $('.collapse').collapse('hide');
+})
+
 initSearch();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};
