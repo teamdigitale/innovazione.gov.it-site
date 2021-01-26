@@ -1,15 +1,14 @@
-/ need to pass section title, articles array and button url
-
-- items ||= nil
-- large_title ||= nil
-- medium_title ||= nil
-- hide_image ||= nil
-- hide_tags ||= nil
-- show_item_type ||= nil
-- title ||= ''
-- special_subtitle ||= nil
-- unequal_height ||= nil
-- hide_shadow ||= nil
+ruby:
+  items ||= nil
+  large_title ||= nil
+  medium_title ||= nil
+  hide_image ||= nil
+  hide_tags ||= nil
+  show_item_type ||= nil
+  title ||= ""
+  special_subtitle ||= nil
+  unequal_height ||= nil
+  hide_shadow ||= nil
 
 - if items.present?
   .pb-4.pb-lg-0
@@ -17,15 +16,33 @@
 
   .d-flex.flex-column.justify-content-start
     - items.each do |item|
-      .py-2.py-lg-3
-        - card_partial = ''
-        - if item.item_type.api_key == "announcement"
-          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
-        - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, unequal_height: unequal_height, hide_image: hide_image, show_item_type: show_item_type, hide_shadow: hide_shadow, hide_tags: hide_tags}
+      ruby:
+        card_partial = ""
+        takes_article_card = if (item.item_type.api_key == "article" ||
+          item.item_type.api_key == "press_release") ||
+          (item.item_type.api_key == "interview" ||
+          item.item_type.api_key == "participation")
+          true
+        end
+        if item.item_type.api_key == "announcement"
+          card_partial = partial "partials/card-avvisi-pubblici",
+            locals: {announcement: item,
+            hide_shadow: hide_shadow}
+        elsif takes_article_card
+          card_partial = partial "partials/card",
+            locals: {article: item,
+            large_title: large_title,
+            medium_title: medium_title,
+            special_subtitle: special_subtitle,
+            hide_image: hide_image,
+            unequal_height: unequal_height,
+            show_item_type: show_item_type,
+            hide_shadow: hide_shadow,
+            hide_tags: hide_tags}
+        end
 
-        - if item.present? && card_partial.present?
-          = card_partial
+      .py-2.py-lg-3
+        = card_partial
+
     .d-flex.flex-row.justify-content-center.mt-5.mt-lg-4.mb-5.pb-5
         = partial "partials/button", locals: {btn_url: btn_url}
-
