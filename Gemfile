@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem 'activesupport'
+gem "activesupport"
 gem "html_truncator"
 gem "middleman", "~> 4.2"
 gem "middleman-dato"
