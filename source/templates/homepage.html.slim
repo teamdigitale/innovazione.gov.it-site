@@ -1,12 +1,13 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
+h2.sr-only = dato.homepage.title
+
 - page.banners.each do |block|
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block}
 
 .container.pt-5
-  h2.sr-only Homepage
   h3.h4.mb-4 = t("home.highlights")
 
   - if page.featured_news.any? || page.news.any?
