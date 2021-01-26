@@ -5,15 +5,9 @@ ruby:
   justify-content-center align-items-center)
 
 .row.mt-5.mb-lg-5
-  .col-lg-6.pt-5
-    .col-lg-8.offset-lg-2
-      - if page.featured_projects.present?
-        = partial "partials/image_text_gallery",
-          locals: {slides: page.featured_projects}
-
   .col-lg-5.pt-5
     .mt-5.mt-lg-0
-      div class=["mid-caption--large",
+      h2.h6 class=["mid-caption--large",
                 "text-uppercase",
                 "font-weight-semibold",
                 "pt-5", "p-lg-0", "text-center",
@@ -48,5 +42,12 @@ ruby:
                     = link_to "#{page_path(dato.projects_page)}##{c.slug}",
                       class: "list-item"
                       span.text-nowrap = c.name
+
+  .col-lg-6.pt-5.order-first
+    .col-lg-8.offset-lg-2
+      - if page.featured_projects.present?
+        h3.sr-only In evidenza
+        = partial "partials/image_text_gallery",
+          locals: {slides: page.featured_projects}
 
   .col-lg-1
