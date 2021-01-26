@@ -2,9 +2,10 @@ export function updateProgress() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
-  var progressBar = document.getElementById("progress-indicator")
-  if (progressBar) {progressBar.style.width = scrolled + "%";}
-  setActiveSection()
+  $('._progress-indicator').each(function() {
+    this.style.width = scrolled + "%";
+    setActiveSection()
+  })
 }
 
 function setActiveSection() {
