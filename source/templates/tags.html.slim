@@ -1,7 +1,7 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-- content_for(:tags_section_class) {"d-none"}
+- content_for(:tags_section_class) { "d-none" }
 
 = partial "partials/headers/header-basic", locals: {page: page} do
   = content_for :aside
