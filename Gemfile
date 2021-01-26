@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "dato", git: "https://github.com/leanpanda-com/ruby-datocms-client.git"
 gem "html_truncator"
 gem "middleman", "~> 4.2"
 gem "middleman-dato"
