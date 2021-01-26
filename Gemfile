@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem 'activesupport'
 gem "html_truncator"
 gem "middleman", "~> 4.2"
 gem "middleman-dato"
@@ -14,4 +15,3 @@ gem "pry"
 gem "redcarpet"
 gem "slim"
 gem "slim_lint"
-gem 'activesupport'
