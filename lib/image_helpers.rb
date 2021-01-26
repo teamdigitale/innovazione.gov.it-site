@@ -9,7 +9,7 @@ module ImageHelpers
   )
 
   def favicon_json_path(path, escape = '\/')
-    image_path(path).gsub(/\//, escape)
+    image_path(path).gsub(%r{/}, escape)
   end
 
   # attributes = {class: "", id: "", data: {role: {}, title: {}}}
@@ -26,13 +26,13 @@ module ImageHelpers
       content_tag(:use, "", "xlink:href" => "#icons-#{name}")
     end
   end
-  alias_method :i, :icon
+  alias i icon
 
   def proxy_link_to(*args, &block)
     assign_asset_proxy(link_to(*args, &block))
   end
 
-  def proxy_image_tag(path, params={})
+  def proxy_image_tag(path, params = {})
     assign_asset_proxy(image_tag(path, params))
   end
 
@@ -42,7 +42,7 @@ module ImageHelpers
 
   def assign_asset_proxy(text)
     text.gsub(
-      %r(https://www.datocms-assets.com/\d+/),
+      %r{https://www.datocms-assets.com/\d+/},
       ASSET_PROXY_BASE
     )
   end
