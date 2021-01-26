@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module TextHelpers
   module_function
 
