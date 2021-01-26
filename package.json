@@ -50,6 +50,7 @@
     "@popperjs/core": "^2.6.0",
     "focus-visible": "^5.2.0",
     "lazysizes": "^5.2.2",
+    "sharer.js": "^0.4.1",
     "swiper": "^6.4.5"
   }
 }
