@@ -40,7 +40,7 @@ module PathHelpers
       "projects_subpage",
       "news_subpage",
       "general_page"
-      (page.parent if page.parent)
+      page.parent
 
     when "minister_articles_index",
       "minister_interviews_index",
@@ -93,8 +93,8 @@ module PathHelpers
   end
 
   def page_path(page, locale: I18n.locale)
-    ancestor_path = page_ancestor(page) != nil ? "#{page_ancestor(page).slug}/" : ""
-    parent_path = page_parent(page) != nil ? "#{page_parent(page).slug}/" : ""
+    ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
+    parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
 
     "#{path_prefix(locale)}/#{ancestor_path}#{parent_path}#{page.slug}"
   end
@@ -104,9 +104,9 @@ module PathHelpers
   end
 
   def active_link_to(name, url, options = {})
-    url += "/" if !url.end_with?("/")
+    url += "/" unless url.end_with?("/")
 
-    options[:class] = options.fetch(:class, "") + " active" if active?(url)
+    options[:class] = "#{options.fetch(:class, '')} active" if active?(url)
     link_to name, url, options
   end
 
@@ -122,8 +122,6 @@ module PathHelpers
   end
 
   def locales
-    if LOCALES
-      LOCALES.split(",").map(&:to_sym)
-    end
+    LOCALES&.split(",")&.map(&:to_sym)
   end
 end
