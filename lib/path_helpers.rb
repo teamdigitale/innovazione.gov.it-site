@@ -108,6 +108,11 @@ module PathHelpers
     link_to name, url, options
   end
 
+  def page_complete_url(page)
+    [ENV.fetch("BASE_URL"),
+    page_path(page)].join
+  end
+
   private
 
   def path_prefix(locale)
