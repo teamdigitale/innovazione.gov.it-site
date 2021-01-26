@@ -1,15 +1,14 @@
-/ Pass section title, items array and button url
-
-- items ||= nil
-- large_title ||= nil
-- medium_title ||= nil
-- hide_image ||= nil
-- hide_tags ||= nil
-- show_item_type ||= nil
-- title ||= ''
-- special_subtitle ||= nil
-- unequal_height ||= nil
-- hide_shadow ||= nil
+ruby:
+  items ||= nil
+  large_title ||= nil
+  medium_title ||= nil
+  hide_image ||= nil
+  hide_tags ||= nil
+  show_item_type ||= nil
+  title ||= ""
+  special_subtitle ||= nil
+  unequal_height ||= nil
+  hide_shadow ||= nil
 
 - if items.present?
   - if title.present?
@@ -18,20 +17,38 @@
 
   .row.row-cols-lg-3.mt-lg-3
     - items.each do |item|
+      ruby:
+        card_partial = ""
+        takes_article_card = if (item.item_type.api_key == "article" ||
+          item.item_type.api_key == "press_release") ||
+          (item.item_type.api_key == "interview" ||
+          item.item_type.api_key == "participation")
+          true
+        end
+        if item.item_type.api_key == "announcement"
+          card_partial = partial "partials/card-avvisi-pubblici",
+            locals: {announcement: item,
+            hide_shadow: hide_shadow}
+        elsif takes_article_card
+          card_partial = partial "partials/card",
+            locals: {article: item,
+            large_title: large_title,
+            medium_title: medium_title,
+            special_subtitle: special_subtitle,
+            hide_image: hide_image,
+            unequal_height: unequal_height,
+            show_item_type: show_item_type,
+            hide_shadow: hide_shadow,
+            hide_tags: hide_tags}
+        end
+
       .d-none.d-lg-block.col-lg-4.mt-lg-3
-        - card_partial = ''
-        - if item.item_type.api_key == "announcement"
-          - card_partial = partial "partials/card-avvisi-pubblici", locals: {announcement: item, hide_shadow: hide_shadow}
-        - elsif (item.item_type.api_key == "article" || item.item_type.api_key == "press_release") || (item.item_type.api_key == "interview" || item.item_type.api_key == "participation")
-          - card_partial = partial "partials/card", locals: {article: item, large_title: large_title, medium_title: medium_title, special_subtitle: special_subtitle, hide_image: hide_image, unequal_height: unequal_height, show_item_type: show_item_type, hide_shadow: hide_shadow, hide_tags: hide_tags}
-        - if item.present? && card_partial.present?
-          = card_partial
+        = card_partial
 
     .col-12.d-lg-none.mt-4.mt-lg-3
       = partial "partials/text-gallery-card",
-        locals: {items: items}
+        locals: {items: items, show_item_type: show_item_type}
 
     .col-lg-12
       .my-5.pb-4.pb-lg-4.text-center
         = partial "partials/button", locals: {btn_url: btn_url}
-
