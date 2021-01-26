@@ -274,6 +274,9 @@ helpers do
     ]
   end
 
+  def sharable_socials
+    ["facebook", "twitter"]
+  end
 end
 
 dato.tap do |dato|
