@@ -277,7 +277,7 @@ helpers do
   end
 
   def sharable_socials
-    %w[facebook twitter]
+    %w[facebook twitter linkedin whatsapp telegram email]
   end
 end
 
