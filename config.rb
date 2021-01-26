@@ -216,18 +216,18 @@ helpers do
   end
 
   def editorial_models_api_keys
-    ["announcement",
-     "article",
-     "interview",
-     "participation",
-     "press_release",
-     "focus_page",
-     "project",
-     "general_page",
-     "minister_subpage",
-     "department_subpage",
-     "projects_subpage",
-     "news_subpage"]
+    %w[announcement
+     article
+     interview
+     participation
+     press_release
+     focus_page
+     project
+     general_page
+     minister_subpage
+     department_subpage
+     projects_subpage
+     news_subpage]
   end
 
   def page_is_editorial(page)
@@ -235,7 +235,7 @@ helpers do
   end
 
   def explore_models_api_keys
-    ["tags_index", "tag", "explore_page"]
+    %w[tags_index tag explore_page]
   end
 
   def page_is_explore(page)
@@ -252,13 +252,13 @@ helpers do
   end
 
   def show_update_date_api_keys
-    ["focus_page",
-     "project",
-     "general_page",
-     "minister_subpage",
-     "department_subpage",
-     "projects_subpage",
-     "news_subpage"]
+    %w[focus_page
+     project
+     general_page
+     minister_subpage
+     department_subpage
+     projects_subpage
+     news_subpage]
   end
 
   def page_show_update_date?(page)
@@ -277,7 +277,7 @@ helpers do
   end
 
   def sharable_socials
-    ["facebook", "twitter"]
+    %w[facebook twitter]
   end
 end
 
