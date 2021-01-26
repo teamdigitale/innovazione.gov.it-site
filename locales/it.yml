@@ -51,7 +51,7 @@ it:
   useful_links: Collegamenti utili
   view_more: Vedi di più
   explore_breadcrumb_prefix: Esplora
-  sections_nav_index: Indice della pagina
+  sections_nav_title: Indice della pagina
 
   home:
     highlights: In copertina
@@ -68,6 +68,7 @@ it:
     highlights: In evidenza
     category: Categoria
     topics: Argomenti
+    categories_nav: Categorie progetti
 
   focus:
     title: Focus
