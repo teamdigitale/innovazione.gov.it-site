@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "dotenv"
 
 require "lib/path_helpers"
