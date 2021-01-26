@@ -69,6 +69,5 @@ const initSearch = () => {
 };
 
 initSearch();
-unfocus();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};
