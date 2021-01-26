@@ -17,7 +17,7 @@ set :markdown_engine, :redcarpet
 
 ignore "/templates/*"
 
-LOCALES = ["it"]
+LOCALES = ["it"].freeze
 activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 
 activate :asset_hash
@@ -31,7 +31,7 @@ RETRY_CLASSES = [
   Net::OpenTimeout,
   NoMethodError,
   SocketError
-]
+].freeze
 
 def retry_on_error(limit: 5)
   tries ||= 1
