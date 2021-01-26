@@ -105,7 +105,7 @@
           p.card-text.text-secondary
             = partial "partials/formatted-date",
               locals: {date: article.date_shown}
-        h4.text-primary class="#{title_style}"
+        h3.h4.text-primary class="#{title_style}"
           = proxy_link_to page_path(article),
             class: "text-decoration-none"
             = article.title

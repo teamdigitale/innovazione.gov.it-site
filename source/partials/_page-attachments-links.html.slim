@@ -8,7 +8,7 @@
   - col_layout = !compact_columns ? "col-md-6" : ""
 
   .container.mt-5.py-3
-    h3.h5.font-weight-semibold = t("attachments")
+    h2.h5.font-weight-semibold = t("attachments")
     .row
       - page.attachments.each do |attachment|
         .col-12.mt-3 class="#{col_layout}"
@@ -16,7 +16,7 @@
 
 - if page.respond_to?(:links) && page.links.any?
   .container.mt-5.py-3
-    h3.h5.font-weight-semibold = t("useful_links")
+    h2.h5.font-weight-semibold = t("useful_links")
     .row
       - page.links.each do |link|
         .col-12.mt-3 class="#{col_layout}"

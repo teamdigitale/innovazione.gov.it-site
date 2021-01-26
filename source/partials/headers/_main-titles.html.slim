@@ -8,7 +8,7 @@
   - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
 
   .text-center.text-sm-left.pb-4 class=(classes)
-    h2 class=big_title = page.title
+    h1 class=big_title = page.title
     - if subtitle.present?
       p.lead = subtitle
     - if summary.present?

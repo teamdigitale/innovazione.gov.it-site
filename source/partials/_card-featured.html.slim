@@ -28,7 +28,7 @@
             span.text-secondary
               = partial "partials/formatted-date",
                 locals: {date: article.date_shown}
-          h4 class="h3 text-primary"
+          h3 class="h3 text-primary"
             = proxy_link_to page_path(article),
               class: "text-decoration-none"
               = article.title
