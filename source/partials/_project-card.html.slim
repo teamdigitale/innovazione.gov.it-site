@@ -25,8 +25,18 @@
 
       p.mid-caption--large.text-sans-serif = project.subtitle
 
-      - if project.links_external_project_card.each.present?
+      - if project.links_external_project_card.any?
         ul.list-inline
           - project.links_external_project_card.each do |link|
             li.list-inline-item
-              = partial "partials/external-link", locals: {link: link}
+              = link_to link.link,
+                class: "btn-link pl-0 text-decoration-none",
+                title: project_link_label(link),
+                target: "_blank",
+                rel: "noopener",
+                aria: {"label": project_link_label(link)} do
+
+                  span.mid-caption--xlarge.font-weight-semibold
+                    = project_link_label(link)
+                  svg.icon.icon.icon-sm.icon-primary.ml-2.align-bottom.mb-1
+                    use xlink:href="/images/sprite.svg#it-external-link"

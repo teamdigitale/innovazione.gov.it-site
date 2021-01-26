@@ -205,6 +205,14 @@ helpers do
     end
   end
 
+  def project_link_label(link)
+    if link.cta_label.present?
+      link.cta_label
+    else
+      t("link_labels.website")
+    end
+  end
+
   def editorial_models_api_keys
     ["announcement",
     "article",
