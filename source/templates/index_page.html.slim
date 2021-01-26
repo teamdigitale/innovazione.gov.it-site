@@ -24,3 +24,6 @@
       .pt-lg-4
         = partial "partials/pagination",
           locals: {pager: pager}
+
+    - else
+      = t('empty_list')

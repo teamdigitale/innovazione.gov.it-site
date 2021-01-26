@@ -53,6 +53,7 @@ it:
   explore_breadcrumb_prefix: Esplora
   sections_nav_title: Indice della pagina
   project_categories_dropdown: Esplora per categoria
+  empty_list: Non sono presenti contenuti di questa tipologia.
 
   home:
     highlights: In copertina
