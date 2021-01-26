@@ -182,7 +182,7 @@ helpers do
 
   def visible_tags
     PresentationHelper.published_tags(dato.tags) &
-    visible_news_contents.collect{|n| n.tags}.flatten
+      visible_news_contents.collect{|n| n.tags}.flatten
   end
 
   def featured_tags
@@ -552,10 +552,10 @@ dato.tap do |dato|
           locale: locale
 
     news_contents = visible_announcements +
-    visible_articles +
-    visible_interviews +
-    visible_participations +
-    visible_press_releases
+                    visible_articles +
+                    visible_interviews +
+                    visible_participations +
+                    visible_press_releases
 
     PresentationHelper.published_tags(dato.tags).each do |tag|
       tag_news_contents = news_contents.select{|n| n.tags.include?(tag)}.sort_by(&:date_shown).reverse
