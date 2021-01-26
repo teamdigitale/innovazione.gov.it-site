@@ -39,11 +39,12 @@ header.mb-5
           h2.display-3.font-weight-semibold.mb-4
             = t("focus.title")
 
-        .container.mid-container.px-0
-          - focus_pages.each do |f|
-            .col-lg-8.px-0
-              = partial "partials/card-related-items",
-                locals: {item: f}
+        .container.mid-container
+          .row
+            - focus_pages.each do |f|
+              .col-12.col-lg-8
+                = partial "partials/card-related-items",
+                  locals: {item: f}
 
     - projects = visible_projects.select { |f| f.tags.include?(page) }
 
