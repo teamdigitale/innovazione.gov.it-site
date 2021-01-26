@@ -12,7 +12,8 @@
   - if page.featured_news.any? || page.news.any?
       - if page.featured_news.any?
           = partial "partials/featured-news",
-            locals: {featured_items: page.featured_news}
+            locals: {featured_items: page.featured_news,
+            show_item_type: true}
 
       - if page.news.any?
         = partial "partials/cards-horizontal-list",

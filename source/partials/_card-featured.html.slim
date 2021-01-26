@@ -1,8 +1,9 @@
 - article ||= nil
-- larger_of_two ||= nil
 
 - if article.present?
   ruby:
+    larger_of_two ||= nil
+    show_item_type ||= nil
     length_image = "col-lg"
     length_card = "col-lg"
 
@@ -18,12 +19,13 @@
 
   .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
     div class="#{length_card}"
-      .card-body.d-flex.flex-column
+      .card-body.h-100.d-flex.flex-column
         div
           .category.py-2.card-text
-            span.pr-2.text-uppercase.font-weight-semibold
-              = t("models.#{article.item_type.api_key}")
-            span.px-2.text-secondary
+            - if show_item_type
+              span.pr-4.text-uppercase.font-weight-semibold
+                = t("models.#{article.item_type.api_key}")
+            span.text-secondary
               = partial "partials/formatted-date",
                 locals: {date: article.date_shown}
           h4 class="h3 text-primary"
