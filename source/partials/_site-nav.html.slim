@@ -51,7 +51,7 @@ header.it-header-wrapper data-datocms-noindex=true
                 = link_to page_path(dato.search_page),
                   class: "search-link rounded-icon",
                   aria: {"label": t("search")}
-                  svg.icon
+                  svg.icon focusable="false" alt=t("alt_search")
                     use xlink:href="/images/sprite.svg#it-search"
 
     .it-header-navbar-wrapper
