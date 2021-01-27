@@ -8,7 +8,7 @@ ruby:
   .card.h-100.card-teaser.rounded.shadow
     svg.icon.icon-primary [
       focusable="false"
-      alt=attachment.file.mime_type
+      alt=t("file_type", ext: attachment.file.mime_type.split("/")[1])
     ]
       use xlink:href="/images/sprite.svg#it-copy"
     .card-body
