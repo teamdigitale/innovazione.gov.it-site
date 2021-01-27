@@ -15,9 +15,10 @@
           title: t("projects.categories_nav")}
 
     .col-12.col-lg-9.px-0.border-top
-      = partial "partials/sticky-anchor-mobile",
+      = partial "partials/sticky-anchor",
         locals: {categories: visible_projects_categories,
-        title: "Categorie progetti"}
+        title: t("projects.categories_nav"),
+        mobile: true}
       - if highlight_projects.any?
         section.section.p-0
           .container
