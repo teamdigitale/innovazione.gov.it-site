@@ -1,10 +1,21 @@
 - compact_columns ||= nil
 
+ruby:
+  show_attachtments =
+    main_locale?(locale) &&
+    page.respond_to?(:attachments) &&
+    page.attachments.any?
+
+  show_links =
+    main_locale?(locale) &&
+    page.respond_to?(:links) &&
+    page.links.any?
+
 - if page.respond_to?(:embed_dashboard) && page.embed_dashboard.present?
   .mt-5
     = page.embed_dashboard
 
-- if page.respond_to?(:attachments) && page.attachments.any?
+- if show_attachtments
   - col_layout = compact_columns ? "col-12" : "col-md-6"
 
   .container.mt-5.py-3
@@ -14,9 +25,8 @@
         .mt-3 class="#{col_layout}"
           = partial "partials/attachment", locals: {attachment: attachment}
 
-- if page.respond_to?(:links) && page.links.any?
+- if show_links
   - col_layout = compact_columns ? "col-12" : "col-md-6"
-
   .container.mt-5.py-3
     h2.h5.font-weight-semibold = t("useful_links")
     .row
