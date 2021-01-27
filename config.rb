@@ -17,7 +17,7 @@ set :markdown_engine, :redcarpet
 
 ignore "/templates/*"
 
-LOCALES = ["it", "en"].freeze
+LOCALES = %w[it en].freeze
 activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 
 activate :asset_hash
