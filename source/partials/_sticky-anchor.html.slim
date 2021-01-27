@@ -31,7 +31,8 @@ ruby:
         - else
           - page.content_blocks.each do |block|
             - if block.respond_to?(:text_title)
-              li.nav-item
-                = link_to "##{anchor_id(block.text_title)}",
-                  class: "nav-link pr-4"
-                  span = block.text_title
+              - if block.text_title.length > 0
+                li.nav-item
+                  = link_to "##{anchor_id(block.text_title)}",
+                    class: "nav-link pr-4"
+                    span = block.text_title
