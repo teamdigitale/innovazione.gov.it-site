@@ -8,6 +8,10 @@ it:
     press_release: Comunicato stampa
     project: Progetto
 
+  logos:
+    italy: Logo Repubblica Italiana
+    mid: Logo Ministro Innovazione
+
   announcement_date_closing: Data di chiusura
   announcement_date_opening: Data di apertura
   announcement_owner: Struttura di riferimento
