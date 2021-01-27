@@ -129,6 +129,10 @@ module PathHelpers
     localized_paths
   end
 
+  def home_path
+    "/"
+  end
+
   private
 
   def path_prefix(locale)
