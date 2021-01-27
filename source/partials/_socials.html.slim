@@ -1,6 +1,6 @@
-- group_classes = "d-flex align-items-center"
-- element_classes = "d-block mr-3"
-- icon_classes = "icon-sm icon-white"
+ruby:
+  group_classes = "d-flex align-items-center"
+  element_classes = "d-block mr-3"
 
 div class=group_classes
   - if dato.company.twitter_url.present?
@@ -8,8 +8,8 @@ div class=group_classes
       class: element_classes,
       target: "_blank",
       rel: "noopener",
-      aria: {"label": "Twitter"}
-      svg.icon class=icon_classes focusable="false"
+      aria: {"label": t("socials.twitter")}
+      svg.icon.icon-sm.icon-white focusable="false"
         use xlink:href="/images/sprite.svg#it-twitter"
 
   - if dato.company.linkedin_url.present?
@@ -17,8 +17,8 @@ div class=group_classes
       class: element_classes,
       target: "_blank",
       rel: "noopener",
-      aria: {"label": "Linkedin"}
-      svg.icon class=icon_classes focusable="false"
+      aria: {"label": t("socials.linkedin")}
+      svg.icon.icon-sm.icon-white focusable="false"
         use xlink:href="/images/sprite.svg#it-linkedin"
 
   - if dato.company.facebook_url.present?
@@ -26,8 +26,8 @@ div class=group_classes
       class: element_classes,
       target: "_blank",
       rel: "noopener",
-      aria: {"label": "Facebook"}
-      svg.icon class=icon_classes focusable="false"
+      aria: {"label": t("socials.facebook")}
+      svg.icon.icon-sm.icon-white focusable="false"
         use xlink:href="/images/sprite.svg#it-facebook"
 
   - if dato.company.medium_url.present?
@@ -35,6 +35,6 @@ div class=group_classes
       class: element_classes,
       target: "_blank",
       rel: "noopener",
-      aria: {"label": "Medium"}
-      svg.icon class=icon_classes focusable="false"
+      aria: {"label": t("socials.medium")}
+      svg.icon.icon-sm.icon-white focusable="false"
         use xlink:href="/images/sprite.svg#it-medium"
