@@ -326,7 +326,7 @@ dato.tap do |dato|
       proxy "#{parent_path}/#{locale}/#{general_page.slug}/index.html",
             "/templates/page.html",
             locals: {page: general_page,
-              children: PresentationHelper.published_children_pages(general_page)},
+                     children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
     end
   end
