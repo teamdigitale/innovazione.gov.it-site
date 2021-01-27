@@ -1,8 +1,17 @@
-- page ||= nil
-- categories ||= nil
-- title ||= t("sections_nav_title")
+ruby:
+  page ||= nil
+  categories ||= nil
+  title ||= t("sections_nav_title")
+  any_title_present = false
+  page.content_blocks.each do |block|
+    if block.respond_to?(:text_title)
+      if block.text_title.length > 0
+        any_title_present = true
+      end
+    end
+  end
 
-- if categories.present? || page.content_blocks.present?
+- if categories.present? || any_title_present
   .sticky-top.menu-wrapper.pb-5
     .it-list-wrapper.menu-link-list
       p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold
