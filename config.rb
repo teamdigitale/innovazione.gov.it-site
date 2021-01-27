@@ -197,6 +197,18 @@ helpers do
     PresentationHelper.published_pages(pages).reject(&:parent)
   end
 
+  def links_to_existing_page?(link)
+    if link.item_type.api_key == "internal_link"
+      link.link.slug
+    else
+      true
+    end
+  end
+
+  def visible_links(links)
+    links.select{|l| links_to_existing_page?(l)}
+  end
+
   def menu_label_with_fallback(page)
     if page.respond_to?(:menu_label) && page.menu_label.present?
       page.menu_label
