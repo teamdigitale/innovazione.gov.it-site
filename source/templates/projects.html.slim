@@ -23,7 +23,7 @@
           .container
             .row.py-5.pl-lg-5
               .col-12.col-md-9.mb-4.px-md-0.offset-lg-1
-                h2.font-weight-semibold.mb-3
+                h2.font-weight-semibold.mb-3 tabindex="-1"
                   = t("projects.highlights")
 
                 .row
@@ -41,7 +41,7 @@
             .container
               .row.py-5.pl-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
-                  h2.font-weight-semibold.mb-3 id=anchor_id(cat.slug)
+                  h2.font-weight-semibold.mb-3 id=anchor_id(cat.slug) tabindex="-1"
                     = cat.name
 
                   p.h4.lead.font-weight-semibold
