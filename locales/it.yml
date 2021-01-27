@@ -27,6 +27,7 @@ it:
   email_contact: Contatti email
   empty_list: Non sono presenti contenuti di questa tipologia.
   explore_breadcrumb_prefix: Esplora
+  file_type: File %{ext}
   follow_us_on: Seguici su
   formatted_address: Largo Pietro di Brazzà, 86<br>00187 Roma
   formatted_site_name: "<span>Ministro</span> per l'innovazione tecnologica e la digitalizzazione"
