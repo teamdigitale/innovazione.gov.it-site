@@ -6,7 +6,10 @@ ruby:
 
 - if attachment.present?
   .card.h-100.card-teaser.rounded.shadow
-    svg.icon.icon-primary
+    svg.icon.icon-primary [
+      focusable="false"
+      alt=attachment.file.mime_type
+    ]
       use xlink:href="/images/sprite.svg#it-copy"
     .card-body
       h3.font-weight-semibold
