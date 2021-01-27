@@ -1,4 +1,9 @@
-- if page.respond_to?(:related_items) && page.related_items.any?
+ruby:
+  show_related = main_locale?(locale) &&
+    page.respond_to?(:related_items) &&
+    page.related_items.any?
+
+- if show_related
   ruby:
     elements_partitioned = page.related_items.partition do |item|
       item.item_type.api_key == "focus_page" ||

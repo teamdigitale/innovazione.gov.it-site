@@ -4,13 +4,18 @@
 = partial "partials/headers/header-basic",
   locals: {page: page, subs: children} do
 
-  = content_for :aside
-    = partial "partials/column-title",
-      locals: {title: t("ontology.arguments")}
+  = content_for :col_one
+    = partial "partials/switch-locale-button",
+      locals: {page: page}
 
-    - page.tags.each do |tag|
-      = partial "partials/chip",
-        locals: {label: tag.name, url: page_path(tag)}
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: page_path(tag)}
 
 = partial "partials/page-content",
   locals: {page: page}

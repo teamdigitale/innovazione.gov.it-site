@@ -95,8 +95,9 @@ module PathHelpers
   def page_path(page, locale: I18n.locale)
     ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
     parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
+    locale_prefix = page_is_localizable?(page) ? "#{path_prefix(locale)}" : ""
 
-    "#{path_prefix(locale)}/#{ancestor_path}#{parent_path}#{page.slug}"
+    "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
   end
 
   def active?(url)
@@ -115,10 +116,23 @@ module PathHelpers
      page_path(page)].join
   end
 
+  def localized_paths_for(page)
+    localized_paths = {}
+    sitemap.resources.each do |resource|
+      next if !resource.is_a?(Middleman::Sitemap::ProxyResource)
+      unless current_page.path == "404.html" || current_page.path == "index.html"
+        if resource.target_resource == page.target_resource && resource.metadata[:locals] == page.metadata[:locals]
+          localized_paths[resource.metadata[:options][:locale]] = resource.url
+        end
+      end
+    end
+    localized_paths
+  end
+
   private
 
   def path_prefix(locale)
-    locale == locales[0] ? "" : "/#{locale}"
+    locale == locales[0] ? "" : "#{locale}"
   end
 
   def locales
