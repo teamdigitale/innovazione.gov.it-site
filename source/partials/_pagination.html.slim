@@ -10,7 +10,7 @@ nav.pagination-wrapper aria-label=t("pager.label")
             use xlink:href="/images/sprite.svg#it-chevron-left"
 
     - pager.total_pages.times do |page|
-      - next if page == 0
+      - next if page.zero?
       - is_current_page = page == pager.current_page
 
       li.page-item
