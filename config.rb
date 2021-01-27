@@ -315,7 +315,7 @@ dato.tap do |dato|
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
             "/templates/article.html",
-            locals: { page: article },
+            locals: {page: article},
             locale: locale
     end
 
@@ -325,7 +325,7 @@ dato.tap do |dato|
       parent_path = general_page.parent && general_page.parent.slug.present? ? "/#{general_page.parent.slug}" : ""
       proxy "#{parent_path}/#{locale}/#{general_page.slug}/index.html",
             "/templates/page.html",
-            locals: { page: general_page,
+            locals: {page: general_page,
               children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
     end
