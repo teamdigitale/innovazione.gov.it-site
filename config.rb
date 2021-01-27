@@ -344,7 +344,7 @@ dato.tap do |dato|
 
     def paginate_with_fallback(items, index_page, parent_page, locale)
       parent_path = "#{parent_page.slug}/"
-      index_path = "#{index_page.slug}"
+      index_path = index_page.slug.to_s
       path = "/#{parent_path}#{index_path}"
 
       if items.any?
