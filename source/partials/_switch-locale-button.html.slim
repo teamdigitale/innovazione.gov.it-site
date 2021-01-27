@@ -1,0 +1,5 @@
+- localized_paths_for(current_page).each do |l, path|
+  - next if l.to_sym == I18n.locale
+  .mt-4
+    = proxy_link_to t('switch_language_label'),
+      "#{ENV['BASE_URL']}#{path}"

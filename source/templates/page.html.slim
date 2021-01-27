@@ -4,6 +4,10 @@
 = partial "partials/headers/header-basic",
   locals: {page: page, subs: children} do
 
+  = content_for :col_one
+    = partial "partials/switch-locale-button",
+      locals: {page: page}
+
   - if main_locale?(locale)
     = content_for :aside
       = partial "partials/column-title",
