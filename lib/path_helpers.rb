@@ -95,7 +95,7 @@ module PathHelpers
   def page_path(page, locale: I18n.locale)
     ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
     parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
-    locale_prefix = page_is_localizable?(page) ? "#{path_prefix(locale)}" : ""
+    locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
 
     "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
   end
@@ -112,7 +112,7 @@ module PathHelpers
   end
 
   def base_url
-    ENV['BASE_URL']
+    ENV["BASE_URL"]
   end
 
   def page_complete_url(page)
@@ -123,11 +123,10 @@ module PathHelpers
   def localized_paths_for(page)
     localized_paths = {}
     sitemap.resources.each do |resource|
-      next if !resource.is_a?(Middleman::Sitemap::ProxyResource)
-      unless current_page.path == "404.html" || current_page.path == "index.html"
-        if resource.target_resource == page.target_resource && resource.metadata[:locals] == page.metadata[:locals]
-          localized_paths[resource.metadata[:options][:locale]] = resource.url
-        end
+      next unless resource.is_a?(Middleman::Sitemap::ProxyResource)
+
+      if !(current_page.path == "404.html" || current_page.path == "index.html") && resource.target_resource == page.target_resource && resource.metadata[:locals] == page.metadata[:locals]
+        localized_paths[resource.metadata[:options][:locale]] = resource.url
       end
     end
     localized_paths
@@ -140,7 +139,7 @@ module PathHelpers
   private
 
   def path_prefix(locale)
-    locale == locales[0] ? "" : "#{locale}"
+    locale == locales[0] ? "" : locale.to_s
   end
 
   def locales
