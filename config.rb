@@ -282,9 +282,33 @@ helpers do
 end
 
 dato.tap do |dato|
-  locale = LOCALES[0]
-  I18n.with_locale(locale) do
-    prefix = locale == LOCALES[0] ? "" : "/#{locale}"
+  I18n.with_locale(:en) do
+    locale = :en
+    I18n.fallbacks[:en] = [:en]
+
+    visible_articles = PresentationHelper.published_articles(dato.articles)
+
+    visible_articles.each do |article|
+      proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
+        "/templates/article.html",
+        locals: { page: article },
+        locale: locale
+    end
+
+    visible_pages = PresentationHelper.published_pages(dato.general_pages)
+
+    visible_pages.each do |general_page|
+      parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
+      proxy "/#{parent_path}/#{locale}/#{general_page.slug}/index.html",
+        "/templates/page.html",
+        locals: { page: general_page,
+          children: PresentationHelper.published_children_pages(general_page)},
+        locale: locale
+    end
+  end
+
+  I18n.with_locale(:it) do
+    locale = :it
 
     visible_announcements = PresentationHelper.published_announcements(dato.announcements)
     visible_articles = PresentationHelper.published_articles(dato.articles)
