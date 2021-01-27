@@ -42,10 +42,10 @@
             .container
               .row.py-5.pl-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
-                  h2.font-weight-semibold.mb-3 id=anchor_id(cat.slug) tabindex="-1"
+                  h2.font-weight-semibold id=anchor_id(cat.slug) tabindex="-1"
                     = cat.name
 
-                  p.h4.lead.font-weight-semibold
+                  p.h4.mt-3.lead.font-weight-semibold
                     = cat.description
 
                 - category_projects.each do |p|

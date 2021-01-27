@@ -6,10 +6,8 @@ ruby:
   any_title_present = false
   if page.respond_to?(:content_blocks)
     page.content_blocks.each do |block|
-      if block.respond_to?(:text_title)
-        if block.text_title.length > 0
-          any_title_present = true
-        end
+      if block.respond_to?(:text_title) && block.text_title.present?
+        any_title_present = true
       end
     end
   end
@@ -24,12 +22,11 @@ ruby:
 
   - else
     - page.content_blocks.each do |block|
-      - if block.respond_to?(:text_title)
-        - if block.text_title.length > 0
-          li.nav-item
-            = link_to block.text_title,
-              "##{anchor_id(block.text_title)}",
-              class: "nav-link pr-4"
+      - if block.respond_to?(:text_title) && block.text_title.present?
+        li.nav-item
+          = link_to block.text_title,
+            "##{anchor_id(block.text_title)}",
+            class: "nav-link pr-4"
 
 - if categories.present? || any_title_present
   - if mobile
@@ -41,8 +38,9 @@ ruby:
                       aria-expanded="false"
                       data-target="#accordion-aside"
                       data-toggle="collapse" ]
-              p.h3.pt-1.pb-2.text-uppercase.mid-caption.font-weight-semibold.px-3
-                = title
+              .pt-1.pb-2.px-3
+                p.h3.text-uppercase.mid-caption.font-weight-semibold
+                  = title
 
               .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
                 ._progress-indicator.progress-indicator.primary-bg-b1
@@ -64,4 +62,3 @@ ruby:
 
         ul.it-list.small.pt-3._top-menu
           = content
-
