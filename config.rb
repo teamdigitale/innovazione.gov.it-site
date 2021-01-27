@@ -315,42 +315,42 @@ dato.tap do |dato|
       end
     end
 
-    proxy "#{prefix}/index.html",
+    proxy "/index.html",
           "/templates/homepage.html",
           locals: {page: dato.homepage},
           locale: locale
 
-    proxy "#{prefix}/#{dato.search_page.slug}/index.html",
+    proxy "/#{dato.search_page.slug}/index.html",
           "/templates/search.html",
           locals: {page: dato.search_page},
           locale: locale
 
-    proxy "#{prefix}/#{dato.explore_page.slug}/index.html",
+    proxy "/#{dato.explore_page.slug}/index.html",
           "/templates/explore.html",
           locals: {page: dato.explore_page},
           locale: locale
 
     PresentationHelper.published_pages(dato.general_pages).each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
-      proxy "#{prefix}#{parent_path}/#{general_page.slug}/index.html",
+      proxy "#{parent_path}/#{general_page.slug}/index.html",
             "/templates/page.html",
             locals: {page: general_page,
                      children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
     end
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/index.html",
+    proxy "/#{dato.minister_page.slug}/index.html",
           "/templates/minister.html",
           locals: {page: dato.minister_page},
           locale: locale
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
+    proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
           "/templates/schedule.html",
           locals: {page: dato.schedule_page},
           locale: locale
 
     PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
-      proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
+      proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
             "/templates/schedule_event.html",
             locals: {page: schedule_event},
             locale: locale
@@ -386,14 +386,14 @@ dato.tap do |dato|
 
     PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+      proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: minister_subpage,
                      children: PresentationHelper.published_children_pages(minister_subpage)},
             locale: locale
     end
 
-    proxy "#{prefix}/#{dato.department_page.slug}/index.html",
+    proxy "/#{dato.department_page.slug}/index.html",
           "/templates/department.html",
           locals: {page: dato.department_page},
           locale: locale
@@ -404,7 +404,7 @@ dato.tap do |dato|
                            locale)
 
     visible_focus_pages.each do |focus_page|
-      proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
+      proxy "/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
             "/templates/focus.html",
             locals: {page: focus_page},
             locale: locale
@@ -433,20 +433,20 @@ dato.tap do |dato|
 
     PresentationHelper.published_pages(dato.department_subpages).each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+      proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: department_subpage,
                      children: PresentationHelper.published_children_pages(department_subpage)},
             locale: locale
     end
 
-    proxy "#{prefix}/#{dato.projects_page.slug}/index.html",
+    proxy "/#{dato.projects_page.slug}/index.html",
           "/templates/projects.html",
           locals: {page: dato.projects_page},
           locale: locale
 
     visible_projects.each do |project|
-      proxy "#{prefix}/#{dato.projects_page.slug}/#{project.slug}/index.html",
+      proxy "/#{dato.projects_page.slug}/#{project.slug}/index.html",
             "/templates/project.html",
             locals: {page: project},
             locale: locale
@@ -454,14 +454,14 @@ dato.tap do |dato|
 
     PresentationHelper.published_pages(dato.projects_subpages).each do |projects_subpage|
       parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
+      proxy "/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: projects_subpage,
                      children: PresentationHelper.published_children_pages(projects_subpage)},
             locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/index.html",
+    proxy "/#{dato.news_page.slug}/index.html",
           "/templates/news.html",
           locals: {page: dato.news_page},
           locale: locale
@@ -472,7 +472,7 @@ dato.tap do |dato|
                            locale)
 
     visible_announcements.each do |announcement|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
+      proxy "/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
             "/templates/announcement.html",
             locals: {page: announcement},
             locale: locale
@@ -484,7 +484,7 @@ dato.tap do |dato|
                            locale)
 
     visible_articles.each do |article|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
+      proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
             "/templates/article.html",
             locals: {page: article},
             locale: locale
@@ -496,7 +496,7 @@ dato.tap do |dato|
                            locale)
 
     visible_interviews.each do |interview|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
+      proxy "/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
             "/templates/interview.html",
             locals: {page: interview},
             locale: locale
@@ -508,7 +508,7 @@ dato.tap do |dato|
                            locale)
 
     visible_participations.each do |participation|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
+      proxy "/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
             "/templates/participation.html",
             locals: {page: participation},
             locale: locale
@@ -520,7 +520,7 @@ dato.tap do |dato|
                            locale)
 
     visible_press_releases.each do |press_release|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
+      proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
             "/templates/press_release.html",
             locals: {page: press_release},
             locale: locale
@@ -528,14 +528,14 @@ dato.tap do |dato|
 
     PresentationHelper.published_pages(dato.news_subpages).each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
+      proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: news_subpage,
                      children: PresentationHelper.published_children_pages(news_subpage)},
             locale: locale
     end
 
-    proxy "#{prefix}/#{dato.tags_index.slug}/index.html",
+    proxy "/#{dato.tags_index.slug}/index.html",
           "/templates/tags.html",
           locals: {page: dato.tags_index, hide_tags_section: true},
           locale: locale
@@ -551,7 +551,7 @@ dato.tap do |dato|
       next unless tag_news_contents.any?
 
       paginate tag_news_contents,
-               "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
+               "/#{dato.tags_index.slug}/#{tag.slug}",
                "/templates/tag.html",
                suffix: "/page/:num/index",
                locals: {page: tag},
