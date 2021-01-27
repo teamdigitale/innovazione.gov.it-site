@@ -1,6 +1,16 @@
+ruby:
+  classes = %w[
+    d-flex
+    flex-row
+    align-items-start
+    align-items-lg-baseline
+    justify-content-between
+    justify-content-lg-start
+  ].join(" ")
+
 .border-bottom.py-2.py-lg-1
   .container
-    section.d-flex.flex-row.align-items-start.align-items-lg-baseline.justify-content-between.justify-content-lg-start
+    section class=classes
       .d-lg-flex.align-items-lg-center
         - if banner.title.present?
           h3.h5.font-weight-bold.pr-lg-3.pt-1
