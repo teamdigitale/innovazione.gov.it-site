@@ -1,3 +1,6 @@
+- transparency_pages = visible_pages(dato.company.footer_transparency_pages)
+- footer_links = visible_links(dato.company.footer_external_links)
+
 footer#footer.it-footer data-datocms-noindex=true
   .it-footer-main
     .container
@@ -90,39 +93,41 @@ footer#footer.it-footer data-datocms-noindex=true
             .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
               = partial "partials/socials"
 
-          .col-md-6.col-xl-3.mb-3
-            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("other_links")
+          - if footer_links.any?
+            .col-md-6.col-xl-3.mb-3
+              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+                = t("other_links")
 
-            .text-center.text-md-left
-              .link-list-wrapper
-                ul.link-list
-                  - dato.company.footer_external_links.each do |item|
-                    li
-                      = link_to item.link,
-                        class: "list-item mid-footer-link",
-                        target: "_blank",
-                        rel: "noopener"
-                        = cta_label(item)
+              .text-center.text-md-left
+                .link-list-wrapper
+                  ul.link-list
+                    - footer_links.each do |item|
+                      li
+                        = proxy_link_to item.link,
+                          class: "list-item mid-footer-link",
+                          target: "_blank",
+                          rel: "noopener"
+                          = cta_label(item)
 
-          .col-md-6.col-xl-3.mb-3
-            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("transparency")
+          - if transparency_pages.any?
+            .col-md-6.col-xl-3.mb-3
+              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+                = t("transparency")
 
-            .text-center.text-md-left
-              .link-list-wrapper
-                ul.link-list
-                  - dato.company.footer_transparency_pages.each do |item|
-                    li
-                      = link_to page_path(item),
-                        class: "list-item mid-footer-link"
-                          = item.title
+              .text-center.text-md-left
+                .link-list-wrapper
+                  ul.link-list
+                    - transparency_pages.each do |item|
+                      li
+                        = proxy_link_to page_path(item),
+                          class: "list-item mid-footer-link"
+                            = item.title
 
   .it-footer-small-prints.py-4
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - dato.company.subfooter_pages.each do |item|
+        - visible_pages(dato.company.subfooter_pages).each do |item|
           li.list-inline-item
-            = link_to page_path(item),
+            = proxy_link_to page_path(item),
               class: "list-item mid-footer-link mx-4 mx-md-0"
                 span = item.title
