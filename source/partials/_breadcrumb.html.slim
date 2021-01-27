@@ -5,7 +5,7 @@
 ruby:
   current_classes = [
     html_class,
-    ("d-none d-sm-block" if page_is_editorial(page))
+    ("d-none d-sm-block" if page_is_editorial(page) && main_locale?(locale))
   ].join(" ")
 
 nav.breadcrumb-container aria-label="Sei qui"
@@ -40,6 +40,14 @@ nav.breadcrumb-container aria-label="Sei qui"
           class: html_class
 
         span.separator class=current_classes
+          = "/"
+
+    - if !main_locale?(locale)
+      li.breadcrumb-item
+        .text-capitalize
+          = locale
+
+        span.separator
           = "/"
 
     li.breadcrumb-item.active aria-current='page'
