@@ -15,7 +15,7 @@ ruby:
         .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-md-4
           = partial "partials/headers/main-titles", locals: {page: page}
 
-          - yield
+          - yield if block_given?
           - if content_for?(:col_one) || content_for?(:col_two)
             .row.mb-5
               - if content_for?(:col_one)
