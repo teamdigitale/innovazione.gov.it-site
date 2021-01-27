@@ -18,17 +18,19 @@ it:
   close: Chiudi
   contacts: Contatti
   credits: Crediti
-  deepen: Approfondisci
   date_shown: Data
+  deepen: Approfondisci
   email_contact: Contatti email
+  empty_list: Non sono presenti contenuti di questa tipologia.
+  explore_breadcrumb_prefix: Esplora
   follow_us_on: Seguici su
   formatted_address: Largo Pietro di Brazzà, 86<br>00187 Roma
   formatted_site_name: "<span>Ministro</span> per l'innovazione tecnologica e la digitalizzazione"
   go_home: Vai alla pagina iniziale
   highlighted_topics: Argomenti in evidenza
+  home_label: Home
   hq: Sede istituzionale
   interviews_section_title: Le interviste
-  home_label: Home
   main_nav_label: Mostra/Nascondi la navigazione
   media_comunication: Media e comunicazione
   medium_articles: Gli approfondimenti su Medium
@@ -41,23 +43,21 @@ it:
   participations_section_title: Gli interventi
   press_office: Ufficio stampa
   press_releases_section_title: I comunicati stampa
+  project_categories_dropdown: Esplora per categoria
   public_announcements_title: Gli avvisi pubblici
   reading-time: Tempo di lettura
   related_content: Potrebbero interessarti
-  source: Fonte
   search: Cerca
+  sections_nav_title: Indice della pagina
   share: Condividi
+  source: Fonte
   state_name: Repubblica Italiana
+  switch_language_label: Read in english
   tags_title: Gli argomenti dell'innovazione
   transparency: Trasparenza
   updated_at: Data ultimo aggiornamento
   useful_links: Collegamenti utili
   view_more: Vedi di più
-  explore_breadcrumb_prefix: Esplora
-  sections_nav_title: Indice della pagina
-  project_categories_dropdown: Esplora per categoria
-  empty_list: Non sono presenti contenuti di questa tipologia.
-  switch_language_label: Read in english
 
   home:
     highlights: In copertina
@@ -70,11 +70,11 @@ it:
     website: Sito web
 
   projects:
-    title: Progetti
-    highlights: In evidenza
-    category: Categoria
-    topics: Argomenti
     categories_nav: Categorie progetti
+    category: Categoria
+    highlights: In evidenza
+    title: Progetti
+    topics: Argomenti
 
   focus:
     title: Focus
@@ -98,18 +98,18 @@ it:
       - Dicembre
 
   explore_aside:
-    title: Oppure
-    tags_title: Esplora per argomento
     search_title: Cerca nel sito
+    tags_title: Esplora per argomento
+    title: Oppure
 
   pager:
     label: Navigazione delle pagine
-    prev: Pagina precedente
     next: Pagina successiva
+    prev: Pagina precedente
 
   socials:
-    twitter: Twitter
     facebook: facebook
-    linkedin: Linkedin
-    whatsapp: Whatsapp
     instagram: Instagram
+    linkedin: Linkedin
+    twitter: Twitter
+    whatsapp: Whatsapp

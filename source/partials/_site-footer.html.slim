@@ -11,7 +11,7 @@ footer#footer.it-footer data-datocms-noindex=true
                         justify-content-md-start].join(" ")
             = link_to locale_path("/"),
               class: classes,
-              title: "Vai alla Pagina Iniziale"
+              title: t("go_home")
               = proxy_image_tag "logo-repubblica-italiana.svg",
                 alt: "",
                 class: "icon"
@@ -35,7 +35,10 @@ footer#footer.it-footer data-datocms-noindex=true
             .mb-2
               - if dato.company.google_maps_url.present?
                 .text-center.text-md-left
-                  svg.mb-3.align-top.icon.icon-sm.icon-white role="img" aria-label="Sede istituzionale"
+                  svg.mb-3.align-top.icon.icon-sm.icon-white [
+                      role="img"
+                      aria-label=t("hq")
+                    ]
                     use xlink:href="/images/sprite.svg#it-pa"
 
                   .link-list-wrapper
@@ -49,7 +52,10 @@ footer#footer.it-footer data-datocms-noindex=true
 
             .mb-2
               .text-center.text-md-left
-                svg.mb-3.align-top.icon.icon-sm.icon-white role="img" aria-label="Contatti email"
+                svg.mb-3.align-top.icon.icon-sm.icon-white [
+                    role="img"
+                    aria-label=t("email_contact")
+                  ]
                   use xlink:href="/images/sprite.svg#it-mail"
 
                 .link-list-wrapper
