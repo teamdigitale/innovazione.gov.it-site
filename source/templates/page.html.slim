@@ -4,13 +4,14 @@
 = partial "partials/headers/header-basic",
   locals: {page: page, subs: children} do
 
-  = content_for :aside
-    = partial "partials/column-title",
-      locals: {title: t("ontology.arguments")}
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
 
-    - page.tags.each do |tag|
-      = partial "partials/chip",
-        locals: {label: tag.name, url: page_path(tag)}
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: page_path(tag)}
 
 = partial "partials/page-content",
   locals: {page: page}

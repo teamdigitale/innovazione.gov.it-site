@@ -12,10 +12,14 @@
   = content_for :col_two
     = partial "partials/reading-time", locals: {page: page}
 
-  = content_for :aside
-    = partial "partials/column-title", locals: {title: t("ontology.arguments")}
-    - page.tags.each do |tag|
-      = partial "partials/chip", locals: {label: tag.name, url: page_path(tag)}
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: page_path(tag)}
 
 = partial "partials/page-cover",
   locals: {page: page}
