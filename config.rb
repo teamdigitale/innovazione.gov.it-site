@@ -87,15 +87,15 @@ module PresentationHelper
   end
 
   def self.published_articles(articles)
-    articles.select {|a| a.slug}.sort_by(&:date_shown).reverse
+    articles.select { |a| a.slug }.sort_by(&:date_shown).reverse
   end
 
   def self.published_pages(pages)
-    pages.select {|p| p.slug}.sort_by(&:position)
+    pages.select { |p| p.slug }.sort_by(&:position)
   end
 
   def self.published_children_pages(page)
-    page.children.select {|c| c.slug}.sort_by(&:position)
+    page.children.select { |c| c.slug }.sort_by(&:position)
   end
 
   def self.published_focus_pages(focus_pages)
@@ -206,7 +206,7 @@ helpers do
   end
 
   def visible_links(links)
-    links.select {|l| links_to_existing_page?(l)}
+    links.select { |l| links_to_existing_page?(l) }
   end
 
   def menu_label_with_fallback(page)
