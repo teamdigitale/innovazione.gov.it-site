@@ -103,3 +103,10 @@ it:
     label: Navigazione delle pagine
     prev: Pagina precedente
     next: Pagina successiva
+
+  socials:
+    twitter: Twitter
+    facebook: facebook
+    linkedin: Linkedin
+    whatsapp: Whatsapp
+    instagram: Instagram
