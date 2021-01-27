@@ -310,8 +310,8 @@ dato.tap do |dato|
     visible_pages = PresentationHelper.published_pages(dato.general_pages)
 
     visible_pages.each do |general_page|
-      parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
-      proxy "/#{parent_path}/#{locale}/#{general_page.slug}/index.html",
+      parent_path = general_page.parent && general_page.parent.slug.present? ? "/#{general_page.parent.slug}" : ""
+      proxy "#{parent_path}/#{locale}/#{general_page.slug}/index.html",
         "/templates/page.html",
         locals: { page: general_page,
           children: PresentationHelper.published_children_pages(general_page)},
