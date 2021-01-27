@@ -95,7 +95,7 @@ module PresentationHelper
   end
 
   def self.published_children_pages(page)
-    page.children.sort_by(&:position)
+    page.children.select{|c| c.slug}.sort_by(&:position)
   end
 
   def self.published_focus_pages(focus_pages)
