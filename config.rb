@@ -87,11 +87,11 @@ module PresentationHelper
   end
 
   def self.published_articles(articles)
-    articles.sort_by(&:date_shown).reverse
+    articles.select{|a| a.slug}.sort_by(&:date_shown).reverse
   end
 
   def self.published_pages(pages)
-    pages.sort_by(&:position)
+    pages.select{|p| p.slug}.sort_by(&:position)
   end
 
   def self.published_children_pages(page)
