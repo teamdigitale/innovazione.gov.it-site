@@ -279,6 +279,18 @@ helpers do
   def sharable_socials
     %w[facebook twitter linkedin whatsapp telegram email]
   end
+
+  def localizable_api_keys
+    %w[article general_page]
+  end
+
+  def page_is_localizable?(page)
+    localizable_api_keys.include?(page.item_type.api_key)
+  end
+
+  def main_locale?(locale)
+    locale == locales[0]
+  end
 end
 
 dato.tap do |dato|
