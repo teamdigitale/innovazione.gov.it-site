@@ -42,7 +42,7 @@ nav.breadcrumb-container aria-label="Sei qui"
         span.separator class=current_classes
           = "/"
 
-    - if !main_locale?(locale)
+    - unless main_locale?(locale)
       li.breadcrumb-item
         .text-capitalize
           = locale

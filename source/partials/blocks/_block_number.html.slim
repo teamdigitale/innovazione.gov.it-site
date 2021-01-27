@@ -1,6 +1,8 @@
 .container.mb-5: .row
   .col-12
-    p = partial "partials/column-title", locals: {title: block.block_number_title, large: true}
+    p = partial "partials/column-title",
+    locals: {title: block.block_number_title,
+    large: true}
   - block.numbers.each do |num|
     .col-sm-6
       .mid-huge-numbers.font-weight-semibold = num.number

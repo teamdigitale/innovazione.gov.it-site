@@ -3,8 +3,14 @@
     - block.accordion_items.each do |accordion|
       .collapse-div role="tablist" id="accordionDiv-#{accordion.id}"
         .collapse-header id='headingA-#{accordion.id}'
-          button aria-controls="accordion-#{accordion.id}" aria-expanded="false" data-target="#accordion-#{accordion.id}" data-toggle="collapse" 
+          button [aria-controls="accordion-#{accordion.id}"
+                  aria-expanded="false"
+                  data-target="#accordion-#{accordion.id}"
+                  data-toggle="collapse"]
             .text-uppercase = accordion.accordion_item_title
-        .collapse aria-labelledby="headingA-#{accordion.id}" id="accordion-#{accordion.id}" data-parent="#accordionDiv-#{accordion.id}" role="tabpanel" 
+              .collapse [aria-labelledby="headingA-#{accordion.id}"
+                         id="accordion-#{accordion.id}"
+                         data-parent="#accordionDiv-#{accordion.id}"
+                         role="tabpanel"]
           .collapse-body
             = markdown accordion.accordion_item_body_text
