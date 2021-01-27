@@ -1,5 +1,15 @@
 .dropdown.d-none.d-lg-block.mb-5
-  button#dropdownMenuLink.p-0.text-capitalize.btn.btn-dropdown.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+  button [
+      id="dropdownMenuLink"
+      class=["p-0",
+        "text-capitalize",
+        "btn btn-dropdown",
+        "dropdown-toggle"].join(" ")
+      aria-expanded="false"
+      aria-haspopup="true"
+      data-toggle="dropdown"
+      type="button"
+    ]
     = t("share")
     svg.icon-expand.icon.icon-sm.icon-primary
       use xlink:href="/images/sprite.svg#it-expand"

@@ -4,11 +4,14 @@ footer#footer.it-footer data-datocms-noindex=true
       .row.clearfix
         .col-sm-12
           .it-brand-wrapper
+            ruby:
+              classes = %w[flex-wrap
+                        flex-md-nowrap
+                        justify-content-center
+                        justify-content-md-start].join(" ")
             = link_to locale_path("/"),
-              class: ["flex-wrap", "flex-md-nowrap",
-              "justify-content-center",
-               "justify-content-md-start"].join(" "),
-               title: "Vai alla Pagina Iniziale"
+              class: classes,
+              title: "Vai alla Pagina Iniziale"
               = proxy_image_tag "logo-repubblica-italiana.svg",
                 alt: "",
                 class: "icon"
