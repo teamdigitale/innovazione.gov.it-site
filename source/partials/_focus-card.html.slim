@@ -6,6 +6,8 @@
 
   .card.h-100.mt-4
     .card-body.primary-bg.text-center class="#{align_left}"
+      h2.h6.mid-caption--large.text-uppercase.text-white.font-weight-semibold
+          = t("models.#{item.item_type.api_key}")
       h3.h4.my-3
         = proxy_link_to item.title,
           page_path(item),
