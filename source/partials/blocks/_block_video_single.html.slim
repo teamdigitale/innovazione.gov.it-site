@@ -6,7 +6,8 @@
 
 ruby:
  if block.video.present?
-  nocookie_url = block.video.url.gsub("youtube.com/watch?v=", "youtube-nocookie.com/embed/")
+  nocookie_url = block.video.url.gsub("youtube.com/watch?v=",
+                 "youtube-nocookie.com/embed/")
   minheight = block.video.height < 400 ? 400 : block.video.height
   allows = %w(accelerometer
               autoplay
