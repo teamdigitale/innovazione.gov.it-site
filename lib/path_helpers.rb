@@ -111,8 +111,12 @@ module PathHelpers
     link_to name, url, options
   end
 
+  def base_url
+    ENV['BASE_URL']
+  end
+
   def page_complete_url(page)
-    [ENV.fetch("BASE_URL"),
+    [base_url,
      page_path(page)].join
   end
 

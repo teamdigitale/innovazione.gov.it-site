@@ -31,9 +31,11 @@ meta [name="msapplication-TileColor"
 meta name="theme-color" content="#{data.config.theme_color}"
 
 - localized_paths_for(current_page).each do |locale, path|
-  link rel="alternate" hreflang=locale href="#{ENV['BASE_URL']}#{path}"
+  - complete_path = [base_url, path].join
+
+  link rel="alternate" hreflang=locale href=complete_path
   - if locale && main_locale?(locale)
     link [
       rel="alternate"
       hreflang="x-default"
-      href="#{ENV['BASE_URL']}#{path}"]
+      href=complete_path]
