@@ -13,5 +13,5 @@ ruby:
 - if label.present? && url.present?
   = link_to url,
     class: classes
-    span.chip-label class=(text_color)
+    span.chip-label.text-nowrap class=(text_color)
       = label
