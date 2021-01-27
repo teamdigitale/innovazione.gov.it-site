@@ -29,7 +29,12 @@ ruby:
           locals: {btn_url: dato.projects_page}
 
         .dropdown.ml-5
-          button#projectsCategories class=toggler_classes aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+          button#projectsCategories [class=toggler_classes
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-toggle="dropdown"
+              type="button"]
+
             = t("project_categories_dropdown")
             svg.icon-expand.icon.icon-sm.icon-primary
               use xlink:href="/images/sprite.svg#it-expand"

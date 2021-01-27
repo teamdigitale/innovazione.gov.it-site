@@ -6,34 +6,30 @@
       .row: .col-12.text-center
 
       - case items.length
-      - when 1
-        .row
-          .col-lg-4
-          .col-lg-4
-            = partial "partials/focus-card",
-              locals: {item: items.first}
-          .col-lg-4
-        .row.mt-2.mb-5
-          .col-12.text-center.mt-lg-5
-            = partial "partials/button",
-              locals: {btn_url: dato.focus_index,
-              white_outline: true}
+        - when 1
+          .row
+            .col-lg-4
+            .col-lg-4
+              = partial "partials/focus-card",
+                locals: {item: items.first}
+            .col-lg-4
+          .row.mt-2.mb-5
+            .col-12.text-center.mt-lg-5
+              = partial "partials/button",
+              locals: {btn_url: dato.focus_index, white_outline: true}
 
-      - when 2
-        .row
-          .col-lg-1
-          .col-12.col-lg-4
-            = partial "partials/focus-card",
-              locals: {item: items.first,
-              text_left: true}
-          .col-lg-2
-          .col-12.col-lg-4
-            = partial "partials/focus-card",
-              locals: {item: items[1],
-              text_left: true}
-          .col-lg-1
-        .row.mt-2.mb-5
-          .col-12.text-center
-            = partial "partials/button",
-              locals: {btn_url: dato.focus_index,
-              white_outline: true}
+        - when 2
+          .row
+            .col-lg-1
+            .col-12.col-lg-4
+              = partial "partials/focus-card",
+                locals: {item: items.first, text_left: true}
+            .col-lg-2
+            .col-12.col-lg-4
+              = partial "partials/focus-card",
+                locals: {item: items[1], text_left: true}
+            .col-lg-1
+          .row.mt-2.mb-5
+            .col-12.text-center
+              = partial "partials/button",
+                locals: {btn_url: dato.focus_index, white_outline: true}
