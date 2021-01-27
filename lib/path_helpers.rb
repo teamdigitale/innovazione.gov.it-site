@@ -95,8 +95,9 @@ module PathHelpers
   def page_path(page, locale: I18n.locale)
     ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
     parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
+    locale_prefix = page_is_localizable?(page) ? "#{path_prefix(locale)}" : ""
 
-    "#{path_prefix(locale)}/#{ancestor_path}#{parent_path}#{page.slug}"
+    "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
   end
 
   def active?(url)
@@ -118,7 +119,7 @@ module PathHelpers
   private
 
   def path_prefix(locale)
-    locale == locales[0] ? "" : "/#{locale}"
+    locale == locales[0] ? "" : "#{locale}"
   end
 
   def locales
