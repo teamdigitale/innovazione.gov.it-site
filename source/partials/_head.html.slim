@@ -8,7 +8,7 @@ meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"
   link rel="dns-prefetch" href=ENV["ASSET_PROXY_BASE"]
   link rel="prefetch" href=ENV["ASSET_PROXY_BASE"]
 link href="//www.google-analytics.com" rel="dns-prefetch"
-- if ENV['BUILD_ENV'] == "staging"
+- if ENV["BUILD_ENV"] == "staging"
   meta name="robots" content="noindex, nofollow"
 
 = yield_content :head

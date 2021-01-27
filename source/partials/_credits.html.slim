@@ -1,6 +1,7 @@
 - credits ||= nil
 
 - if credits.present?
-.my-5
-    = partial "partials/column-title", locals: {title: I18n.t("credits"), large: true}
-    = markdown credits
+  .my-5
+    = partial "partials/column-title",
+      locals: {title: I18n.t("credits"), large: true}
+      = markdown credits
