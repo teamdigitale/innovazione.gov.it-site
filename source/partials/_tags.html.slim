@@ -4,7 +4,7 @@ ruby:
   button_classes = %(d-flex justify-content-center align-items-center
   justify-content-lg-end)
 
-- unless hide_tags_section
+- if main_locale?(locale) && !hide_tags_section
   section.section.section-neutral.bg-dark data-datocms-noindex=true
     .container
       .row
