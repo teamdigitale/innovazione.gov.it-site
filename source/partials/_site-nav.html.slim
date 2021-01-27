@@ -28,7 +28,13 @@ header.it-header-wrapper data-datocms-noindex=true
                   class: "icon"
 
                 .it-brand-text
-                  .h4.no_toc.d-none.d-xl-inline-block.font-weight-normal.mb-0.ml-1
+                  div class=["h4",
+                             "no_toc",
+                             "d-none",
+                             "d-xl-inline-block",
+                             "font-weight-normal",
+                             "mb-0",
+                             "ml-1"].join(" ")
                     = t("formatted_site_name")
 
             .it-right-zone
@@ -53,7 +59,13 @@ header.it-header-wrapper data-datocms-noindex=true
         .row
           /! start nav
           nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile
-            button.custom-navbar-toggler aria-controls="nav02" aria-expanded="true" aria-label=t("main_nav_label") data-target="#nav02" type="button"
+            button.custom-navbar-toggler [
+                aria-controls="nav02"
+                aria-expanded="true"
+                aria-label=t("main_nav_label")
+                data-target="#nav02"
+                type="button"
+              ]
               svg.icon
                 use xlink:href="/images/sprite.svg#it-burger"
 
