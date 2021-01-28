@@ -8,20 +8,20 @@ ruby:
     ("d-none d-sm-block" if page_is_editorial(page) && main_locale?(locale))
   ].join(" ")
 
-nav.breadcrumb-container aria-label="Sei qui"
+nav.breadcrumb-container aria-label=t("you_are_here")
   ol.breadcrumb.mt-4.mb-5.justify-content-center.justify-content-sm-start
     li.breadcrumb-item.d-none.d-sm-block
       = link_to t("home_label"),
         home_path,
         class: html_class
 
-      span.separator
+      span.separator aria-hidden=true
         = "/"
 
     - if page_is_explore(page)
       li.breadcrumb-item
         = t("explore_breadcrumb_prefix")
-        span.separator
+        span.separator aria-hidden=true
           = "/"
 
     - if ancestor
@@ -30,7 +30,9 @@ nav.breadcrumb-container aria-label="Sei qui"
           page_path(ancestor),
           class: html_class
 
-        span.separator class="#{current_classes unless parent}"
+        span.separator [
+          class="#{current_classes unless parent}"
+          aria-hidden=true]
           = "/"
 
     - if parent
@@ -39,7 +41,9 @@ nav.breadcrumb-container aria-label="Sei qui"
           page_path(parent),
           class: html_class
 
-        span.separator class=current_classes
+        span.separator [
+          class=current_classes
+          aria-hidden=true]
           = "/"
 
     - unless main_locale?(locale)
@@ -47,7 +51,7 @@ nav.breadcrumb-container aria-label="Sei qui"
         .text-capitalize
           = locale
 
-        span.separator
+        span.separator aria-hidden=true
           = "/"
 
     li.breadcrumb-item.active aria-current='page'
