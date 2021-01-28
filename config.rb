@@ -635,6 +635,12 @@ dato.tap do |dato|
                per_page: 10
     end
   end
+  dato.asset_redirects.each do |asset_redirect|
+    path = PresentationHelper.path_without_domain(asset_redirect.old_url)
+    proxy "#{path}.html",
+          "/templates/asset_redirect.html",
+          locals: {page: asset_redirect}
+  end
 end
 
 proxy "site.webmanifest",
