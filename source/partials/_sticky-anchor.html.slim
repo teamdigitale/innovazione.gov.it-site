@@ -30,7 +30,7 @@ ruby:
 
 - if categories.present? || any_title_present
   - if mobile
-    nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white aria-label="indice di pagina mobile"
+    nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white aria-label="indice di pagina mobile" aria-hidden="true"
       .it-list-wrapper.menu-link-list
         .collapse-div role="tablist" id="accordionDiv-aside"
           .collapse-header id='headingA-aside'
@@ -52,7 +52,7 @@ ruby:
               ul.it-list.small.py-3._top-menu
                 = content
   - else
-    nav.sticky-top.menu-wrapper.pb-5 aria-label="indice di pagina"
+    nav.sticky-top.menu-wrapper.pb-5 aria-label="indice di pagina" aria-hidden="false"
       .it-list-wrapper.menu-link-list
         p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold
           = title
