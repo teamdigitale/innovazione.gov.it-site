@@ -129,6 +129,14 @@ module PresentationHelper
   def self.published_tags(tags)
     tags.sort_by(&:name)
   end
+
+  def self.published_redirects(redirects)
+    redirects.select{|r| r.old_url}
+  end
+
+  def self.path_without_domain(url)
+    url.gsub("https://innovazione.gov.it","")
+  end
 end
 
 helpers do
@@ -331,6 +339,16 @@ dato.tap do |dato|
                      children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
     end
+
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
+
+    visible_resource_redirects.each do |resource_redirect|
+      path = PresentationHelper.path_without_domain(resource_redirect.old_url)
+      proxy "#{path}index.html",
+            "/templates/resource_redirect.html",
+            locals: {page: resource_redirect},
+            locale: locale
+    end
   end
 
   I18n.with_locale(:it) do
@@ -343,6 +361,7 @@ dato.tap do |dato|
     visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
     visible_focus_pages = PresentationHelper.published_focus_pages(dato.focus_pages)
     visible_projects = PresentationHelper.published_projects(dato.projects)
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     def paginate_with_fallback(items, index_page, parent_page, locale)
       parent_path = "#{parent_page.slug}/"
@@ -363,6 +382,14 @@ dato.tap do |dato|
               locals: {page: index_page},
               locale: locale
       end
+    end
+
+    visible_resource_redirects.each do |resource_redirect|
+      path = PresentationHelper.path_without_domain(resource_redirect.old_url)
+      proxy "#{path}index.html",
+            "/templates/resource_redirect.html",
+            locals: {page: resource_redirect},
+            locale: locale
     end
 
     proxy "/index.html",
@@ -608,6 +635,12 @@ dato.tap do |dato|
                per_page: 10
     end
   end
+  dato.asset_redirects.each do |asset_redirect|
+    path = PresentationHelper.path_without_domain(asset_redirect.old_url)
+    proxy "#{path}/index.html",
+          "/templates/asset_redirect.html",
+          locals: {page: asset_redirect}
+  end
 end
 
 proxy "site.webmanifest",
@@ -616,8 +649,4 @@ proxy "site.webmanifest",
 
 proxy "browserconfig.xml",
       "templates/browserconfig.xml",
-      layout: false
-
-proxy "/_redirects",
-      "/templates/redirects.txt",
       layout: false
