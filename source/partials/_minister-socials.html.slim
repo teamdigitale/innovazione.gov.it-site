@@ -9,7 +9,10 @@ div class=group_classes
       target: "_blank",
       rel: "noopener",
       aria: {"label": t("socials.twitter")}
-      svg.icon.icon-sm.icon-primary focusable="false"
+      svg.icon.icon-sm.icon-primary [
+        focusable="false"
+        aria-label="#{t("go_to")} #{t("socials.twitter")}"
+      ]
         use xlink:href="/images/sprite.svg#it-twitter"
 
   - if page.facebook_url.present?
@@ -18,7 +21,10 @@ div class=group_classes
       target: "_blank",
       rel: "noopener",
       aria: {"label": t("socials.facebook")}
-      svg.icon.icon-sm.icon-primary focusable="false"
+      svg.icon.icon-sm.icon-primary [
+        focusable="false"
+        aria-label="#{t("go_to")} #{t("socials.twitter")}"
+      ]
         use xlink:href="/images/sprite.svg#it-facebook"
 
   - if page.instagram_url.present?
@@ -27,5 +33,8 @@ div class=group_classes
       target: "_blank",
       rel: "noopener",
       aria: {"label": t("socials.instagram")}
-      svg.icon.icon-sm.icon-primary focusable="false"
+      svg.icon.icon-sm.icon-primary [
+        focusable="false"
+        aria-label="#{t("go_to")} #{t("socials.twitter")}"
+      ]
         use xlink:href="/images/sprite.svg#it-instagram"
