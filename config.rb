@@ -617,7 +617,3 @@ proxy "site.webmanifest",
 proxy "browserconfig.xml",
       "templates/browserconfig.xml",
       layout: false
-
-proxy "/_redirects",
-      "/templates/redirects.txt",
-      layout: false
