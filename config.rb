@@ -133,6 +133,10 @@ module PresentationHelper
   def self.published_redirects(redirects)
     redirects.select{|r| r.old_url}
   end
+
+  def self.path_without_domain(url)
+    url.gsub("https://innovazione.gov.it","")
+  end
 end
 
 helpers do
