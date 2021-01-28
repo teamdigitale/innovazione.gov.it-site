@@ -4,11 +4,11 @@ hide_from_sitemap: true
 layout: false
 ---
 
-- new_url = assign_asset_proxy(page.new_file.url())
+- new_url = assign_asset_proxy(page.new_file.url)
 
 doctype 5
 html lang=locale
   head
-    title= "Redirecting"
+    title = "Redirecting"
     meta http-equiv="refresh" content="0; URL=#{new_url}"
     link rel="canonical" href=new_url
