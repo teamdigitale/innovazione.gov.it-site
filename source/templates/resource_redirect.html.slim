@@ -1,0 +1,12 @@
+---
+directory_index: false
+hide_from_sitemap: true
+layout: false
+---
+
+doctype 5
+html lang=locale
+  head
+    title= "Redirecting"
+    meta http-equiv="refresh" content="0; URL=#{page_path(page.link)}"
+    link rel="canonical" href=page_path(page.link)
