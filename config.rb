@@ -129,6 +129,10 @@ module PresentationHelper
   def self.published_tags(tags)
     tags.sort_by(&:name)
   end
+
+  def self.published_redirects(redirects)
+    redirects.select{|r| r.old_url}
+  end
 end
 
 helpers do
