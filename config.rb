@@ -637,7 +637,7 @@ dato.tap do |dato|
   end
   dato.asset_redirects.each do |asset_redirect|
     path = PresentationHelper.path_without_domain(asset_redirect.old_url)
-    proxy "#{path}.html",
+    proxy "#{path}/index.html",
           "/templates/asset_redirect.html",
           locals: {page: asset_redirect}
   end
