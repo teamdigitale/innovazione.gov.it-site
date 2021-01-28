@@ -1,7 +1,7 @@
 - compact_columns ||= false
 
 - page.content_blocks.each do |block|
-  .mid-formatted-content._anchor
+  .mid-formatted-content
     = partial "partials/blocks/#{block.item_type.api_key}",
       locals: {block: block,
         compact_columns: compact_columns}
