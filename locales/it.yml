@@ -12,6 +12,7 @@ it:
     italy: Logo Repubblica Italiana
     mid: Logo Ministro Innovazione
 
+  alt_search: Vai alla pagina di ricerca
   announcement_date_closing: Data di chiusura
   announcement_date_opening: Data di apertura
   announcement_owner: Struttura di riferimento
@@ -54,7 +55,6 @@ it:
   reading-time: Tempo di lettura
   related_content: Potrebbero interessarti
   search: Cerca
-  alt_search: Vai alla pagina di ricerca
   sections_nav_title: Indice della pagina
   share: Condividi
   source: Fonte
