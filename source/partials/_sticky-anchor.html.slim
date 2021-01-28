@@ -19,7 +19,7 @@ ruby:
         = link_to cat.name,
           "##{cat.slug}",
           class: "nav-link pr-4",
-          "tab-index": "-1"
+          tabindex: "-1"
 
   - else
     - page.content_blocks.each do |block|
@@ -28,7 +28,7 @@ ruby:
           = link_to block.text_title,
             "##{anchor_id(block.text_title)}",
             class: "nav-link pr-4",
-            "tab-index": "-1"
+            tabindex: "-1"
 
 - if categories.present? || any_title_present
   - if mobile
