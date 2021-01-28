@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "tzinfo"
+Time.zone = "Rome"
+
 require "dotenv"
 
 require "lib/path_helpers"

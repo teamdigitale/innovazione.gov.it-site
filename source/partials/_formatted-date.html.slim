@@ -1,7 +1,8 @@
 - date ||= nil
 - show_time ||= nil
 
+- local_time = date.getlocal(Time.zone)
 - format = show_time.present? ? "%d %B %Y %H:%M" : "%d %B %Y"
 
 - if date.present?
-  span = I18n.l(date, format: format)
+  span = I18n.l(local_time, format: format)
