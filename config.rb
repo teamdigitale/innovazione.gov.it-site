@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-require "tzinfo"
-Time.zone = "Rome"
-
 require "dotenv"
-
 require "lib/path_helpers"
 require "lib/image_helpers"
 require "lib/text_helpers"
@@ -313,6 +309,10 @@ helpers do
 
   def main_locale?(locale)
     locale == locales[0]
+  end
+
+  def in_italian_zone(t)
+    t.in_time_zone(ENV["TZ"])
   end
 end
 
