@@ -56,6 +56,19 @@ Per eseguire il controllo del SCSS, esegui questo comando:
 ```sh
 $ yarn lint:styles
 ```
+## Sviluppo con docker
+Buildare il container con il seguente comando:
+`docker build . -t innovazione.gov.it`
+
+Assicurarsi di avere il proprio file `.env` correttamente popolato e poi eseguire:
+`docker run -it --rm -p4567:4567 --env-file .env innovazione.gov.it --name innovazione.gov.it`
+
+Per utilizzare `docker-compose` sarà necessario aggiornare il proprio file di env con i corretti
+UID e GID utilizzando il seguente comando:
+`echo RUNAS=$(id -u):$(id -g) >> .env`
+
+Assicurarsi che il `.env` sia corretto e quindi eseguire:
+`docker-compose up`
 
 # Custom Asset Host
 
