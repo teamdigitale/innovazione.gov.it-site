@@ -1,10 +1,14 @@
 ruby:
-  icon_url =
-    if link.item_type.api_key == "link_external"
-      "/images/sprite.svg#it-external-link"
-    else
-      "/images/sprite.svg#it-link"
-    end
+  case link.item_type.api_key
+  when "link_external"
+    link_aria_label = "Link esterno"
+    icon_url = "/images/sprite.svg#it-external-link"
+
+  when "link_internal"
+    link_aria_label = "Link interno"
+    icon_url = "/images/sprite.svg#it-link"
+
+  end
 
 .card.h-100.card-teaser.rounded.shadow
   svg.icon.icon-primary
