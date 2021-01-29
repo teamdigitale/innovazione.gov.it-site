@@ -42,7 +42,7 @@ jobs:
         yarn middleman:build
       env:
         BUILD_ENV: production
-        BASE_URL: https://teamdigitale.github.io/innovazione.gov.it-site
+        BASE_URL: https://teamdigitale.github.io/innovazione.gov.it-site/
         DATO_API_TOKEN: ${{ secrets.DATO_API_TOKEN }}
       
     - name: gh_pages_deploy
