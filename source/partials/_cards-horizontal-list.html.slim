@@ -51,4 +51,5 @@ ruby:
 
     .col-lg-12
       .my-5.pb-4.pb-lg-4.text-center
-        = partial "partials/button", locals: {btn_url: btn_url}
+        = partial "partials/button", locals: {btn_url: btn_url,
+          aria_label: (title.present? ? title : "Notizie")}

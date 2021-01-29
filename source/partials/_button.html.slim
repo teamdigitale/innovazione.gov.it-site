@@ -3,6 +3,8 @@ ruby:
   color_class ||= "btn-primary"
   label ||= t("view_more")
   white_outline ||= nil
+  aria_label ||= ""
+  composed_arialabel = t("button_aria_label", topic: aria_label, cta: label)
 
 - border = white_outline ? "box-shadow: inset 0 0 0 2px white" : ""
 
@@ -10,4 +12,5 @@ ruby:
   = proxy_link_to label,
     page_path(btn_url),
     class: "btn text-uppercase #{color_class}",
-    style: border
+    style: border,
+    "aria-label": composed_arialabel

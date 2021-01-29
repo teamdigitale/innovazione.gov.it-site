@@ -45,4 +45,5 @@ ruby:
         = card_partial
 
     .d-flex.flex-row.justify-content-center.mt-5.mt-lg-4.mb-5.pb-5
-        = partial "partials/button", locals: {btn_url: btn_url}
+        = partial "partials/button", locals: {btn_url: btn_url,
+          aria_label: (title.present? ? title : "Notizie")}

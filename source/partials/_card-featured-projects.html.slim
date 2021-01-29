@@ -27,7 +27,8 @@ ruby:
 
       div class=projects_button_parent_classes
         = partial "partials/button",
-          locals: {btn_url: dato.projects_page}
+          locals: {btn_url: dato.projects_page,
+          aria_label: page.projects_pre_title}
 
         .dropdown.ml-5
           button#projectsCategories [class=toggler_classes

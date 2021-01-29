@@ -12,6 +12,8 @@ ruby:
 
 - if label.present? && url.present?
   = link_to url,
-    class: classes
+    class: classes,
+    "aria-label": t("chip_aria_label", topic: label)
+
     span.chip-label.text-nowrap class=(text_color)
       = label

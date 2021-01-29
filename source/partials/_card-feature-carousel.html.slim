@@ -27,7 +27,8 @@ ruby:
             p.h5.mid-text-dark.text-center.text-lg-left
               = page.minister_text
           .my-3.mt-lg-5.text-center.text-lg-left
-            = partial "partials/button", locals: {btn_url: dato.minister_page}
+            = partial "partials/button", locals: {btn_url: dato.minister_page,
+              aria_label: page.minister_pre_title}
   .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
     = partial "partials/text_gallery",
       locals: {slides: page.minister_featured_news, hide_date: true}

@@ -23,6 +23,8 @@ ruby:
           div class=button_classes
             = proxy_link_to t("view_more"),
               page_path(dato.tags_index),
-              class: "btn btn-outline-primary text-uppercase"
+              class: "btn btn-outline-primary text-uppercase",
+              "aria-label": t("button_aria_label",
+                topic: t("tags_title"), cta: t("view_more"))
 
         .col-lg-1

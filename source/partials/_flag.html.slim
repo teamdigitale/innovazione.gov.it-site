@@ -41,7 +41,8 @@
             h3.d-lg-block.h2.pt-2.pb-3
               = flag.title
             .mt-3.mt-lg-4.text-center.text-lg-left.pb-5.pb-lg-0.mb-3.mb-lg-0
-              = partial "partials/button", locals: {btn_url: flag.link.link}
+              = partial "partials/button", locals: {btn_url: flag.link.link,
+                aria_label: flag.title}
 
       .col-12.d-lg-none.px-0
         .img-responsive-wrapper.p-0
