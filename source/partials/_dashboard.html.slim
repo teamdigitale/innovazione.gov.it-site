@@ -8,27 +8,37 @@ ruby:
       .row
         .col-12.col-lg-6.offset-lg-1.container
           h2.h4.font-weight-semibold.text-center.text-lg-left
-            = t("discover_project_data")
+            = page.dashboard_title
+          p.h5
+            = page.dashboard_subtitle
 
-        .col-12.col-lg-3.text-align-right
-          .pt-5.pt-lg-0 class=button_classes
+        .col-12.col-lg-3.text-align-right class=button_classes
+          .pt-5.pt-lg-0
 
             button.btn.btn-outline-dark.mid-text-dark [
-                data-target=".dashboard"
-                data-toggle="modal"
-                type="button"]
+              data-target=".dashboard"
+              data-toggle="modal"
+              type="button"]
 
               = t("open_dashboard")
 
-              .modal.fade.dashboard [
-                aria-hidden="true"
-                aria-labelledby=page.dashboard_title
-                aria-describedby=page.dashboard_subtitle
-                role="dialog"
-                tabindex="-1"]
+            .modal.fade.dashboard [
+              aria-hidden="true"
+              aria-labelledby=page.dashboard_title
+              aria-describedby=page.dashboard_subtitle
+              role="dialog"
+              tabindex="-1"]
 
-                .modal-dialog.modal-lg
-                  .modal-content
+              .modal-dialog.modal-lg role="dashboard"
+                .modal-content
+                  .modal-header
+                    button.close [
+                      type="button"
+                      data-dismiss="modal"
+                      aria-label="Close"]
+                      svg.icon
+                        use xlink:href="/images/sprite.svg#it-close"
+                  .modal-body
                     iframe [
                       src=page.dashboard_embed
                       name="project_dashboard"
