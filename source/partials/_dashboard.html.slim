@@ -31,20 +31,18 @@ ruby:
 
               .modal-dialog.modal-lg role="dashboard"
                 .modal-content
-                  .modal-header
-                    button.close [
-                      type="button"
-                      data-dismiss="modal"
-                      aria-label="Close"]
-                      svg.icon
-                        use xlink:href="/images/sprite.svg#it-close"
-                  .modal-body
-                    iframe [
-                      src=page.dashboard_embed
-                      name="project_dashboard"
-                      id="project_dashboard"
-                      width="100%"
-                      height="600"
-                      allowtransparency=""]
+                  button.close.text-right [
+                    type="button"
+                    data-dismiss="modal"
+                    aria-label="Close"]
+                    svg.icon
+                      use xlink:href="/images/sprite.svg#it-close"
+                  iframe [
+                    src=page.dashboard_embed
+                    name="project_dashboard"
+                    id="project_dashboard"
+                    width="100%"
+                    height="600"
+                    allowtransparency=""]
 
         .col-lg-1
