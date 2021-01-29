@@ -26,11 +26,12 @@ h1.sr-only = dato.homepage.title
           show_item_type: true,
           btn_url: dato.news_page}
 
+/ blocco Ministra
 .py-5.lightgrey-bg-a2
   .container
     = partial "partials/card-feature-carousel"
 
-/ blocco Ministra
+/ blocco Focus
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
 
 .container
