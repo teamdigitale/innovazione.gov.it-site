@@ -19,7 +19,9 @@ it:
   announcement_status: Stato
   articles_section_title: Gli articoli
   attachments: Allegati
+  button_aria_label: "%{topic}: %{cta}"
   category: Categoria
+  chip_aria_label: Esplora contenuti %{topic}
   close: Chiudi
   contacts: Contatti
   credits: Crediti
@@ -66,7 +68,7 @@ it:
   transparency: Trasparenza
   updated_at: Data ultimo aggiornamento
   useful_links: Collegamenti utili
-  view_more: Vedi di più
+  view_more: Scopri di più
   you_are_here: Sei qui
 
   home:
