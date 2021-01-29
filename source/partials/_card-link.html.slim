@@ -11,7 +11,11 @@ ruby:
   end
 
 .card.h-100.card-teaser.rounded.shadow
-  svg.icon.icon-primary
+  svg.icon.icon-primary [
+      focusable="false"
+      role="img"
+      aria-label=link_aria_label
+    ]
     use xlink:href="#{icon_url}"
   .card-body
     h3.font-weight-semibold.mid-caption--xlarge
