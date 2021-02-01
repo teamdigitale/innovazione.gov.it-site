@@ -52,13 +52,15 @@ module TextHelpers
     link.set_attribute("target", "_blank")
     link.set_attribute("rel", "noopener")
     link.set_attribute("aria-label",
-                       "#{link.content} (si apre in un nuovo tab)")
+                       "#{link.content} #{I18n.t('new_tab')}")
     link
   end
 
   def add_pdf_attributes(link)
     link.set_attribute("target", "_blank")
     link.set_attribute("rel", "noopener")
+    link.attributes["aria-label"]&.remove
+
     link.content = "#{link.content} (PDF)"
     link
   end
