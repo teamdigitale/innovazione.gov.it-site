@@ -35,6 +35,17 @@
  * Date: 2020-05-04T22:49Z
  */
 
+/**
+ * @preserve
+ * Sharer.js
+ *
+ * @description Create your own social share buttons
+ * @version 0.4.1
+ * @author Ellison Leao <ellisonleao@gmail.com>
+ * @license GPLv3
+ *
+ */
+
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
