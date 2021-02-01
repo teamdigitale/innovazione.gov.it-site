@@ -1,0 +1,197 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "optparse"
+
+require "dato"
+
+OLD_URL_BASE = "https://innovazione.gov.it/assets/docs"
+
+options = {
+  dry_run: false,
+  verbose: 0
+}
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: #{__FILE__} [options]"
+
+  opts.on(
+    "-k",
+    "--datocms-api-key [KEY]",
+    "The DatoCMS API Key"
+  ) do |datocms_api_key|
+    options[:datocms_api_key] = datocms_api_key
+  end
+
+  opts.on(
+    "-p",
+    "--path [PATH]",
+    "The path to check for docs"
+  ) do |path|
+    options[:path] = path
+  end
+
+  opts.on(
+    "-n",
+    "--dry-run",
+    "Don't do anything"
+  ) do
+    options[:dry_run] = true
+  end
+
+  opts.on(
+    "-q",
+    "--quiet",
+    "Silence all output"
+  ) do
+    options[:verbose] = -1
+  end
+
+  opts.on(
+    "-v",
+    "--verbose",
+    "Give lots of output"
+  ) do
+    options[:verbose] += 1
+  end
+end
+
+parser.parse!
+
+raise "Supply --path PATH" if !options[:path]
+raise "Supply --datocms_api_key KEY" if !options[:datocms_api_key]
+
+DATOCMS_API_KEY = options[:datocms_api_key]
+DRY_RUN = options[:dry_run]
+PATH = File.expand_path(options[:path])
+VERBOSE = options[:verbose]
+
+def info(message)
+  return if VERBOSE.negative?
+
+  puts message
+end
+
+def debug(message)
+  return if VERBOSE < 2
+
+  puts message
+end
+
+if !File.directory?(PATH)
+  raise "The path '#{PATH}' does not exist"
+end
+
+def client
+  @client ||= Dato::Site::Client.new(
+    DATOCMS_API_KEY,
+    extra_headers: {"X-Reason" => "dump", "X-SSG" => "middleman"}
+  )
+end
+
+def slugify(path)
+  base = File.basename(path)
+  base.
+    downcase.
+    gsub("_", "").
+    gsub(" - ", "").
+    gsub(" ", "-")
+end
+
+def uploads
+  @uploads ||= begin
+    response = client.uploads.all(
+      {},
+      deserialize_response: false,
+      all_pages: true
+    )
+    response["data"]
+  end
+end
+
+def names
+  @names = uploads.map { |u| u["attributes"]["filename"] }
+end
+
+def uploaded?(slug)
+  names.include?(slug)
+end
+
+def upload_for_slug(slug)
+  uploads.find { |u| u["attributes"]["filename"] == slug }
+end
+
+def docs
+  @docs ||= Dir.glob("**/*.*", base: PATH).sort
+end
+
+def docs_path(doc)
+  File.join(PATH, doc)
+end
+
+def asset_redirect_type
+  @asset_redirect_type ||= client.item_types.find("asset_redirect")
+end
+
+def asset_redirects
+  @asset_redirects ||=
+    client.items.all(
+      filter: {type: asset_redirect_type["id"]},
+      all_pages: true
+    )
+end
+
+def old_url(doc)
+  parts = doc.split("/")
+  encoded = parts.map { |p| URI.encode_www_form_component(p) }
+  path = encoded.join("/")
+  File.join(OLD_URL_BASE, path)
+end
+
+def redirect_from_old_url(old_url)
+  asset_redirects.find { |a| a["old_url"] == old_url }
+end
+
+def create_redirect(old_url, upload)
+  info "Creating redirect for #{old_url}"
+
+  return if DRY_RUN
+
+  client.items.create(
+    item_type: asset_redirect_type["id"],
+    old_url: old_url,
+    new_file: {
+      upload_id: upload["id"]
+    }
+  )
+end
+
+def upload_missing
+  docs.each do |doc|
+    slug = slugify(doc)
+    exists = uploaded?(slug)
+
+    if !exists
+      pathname = docs_path(doc)
+      info "Uploading '#{pathname}'"
+      client.upload_file(pathname) if !DRY_RUN
+    end
+  end
+end
+
+def create_redirects
+  docs.each do |doc|
+    url = old_url(doc)
+    redirect = redirect_from_old_url(url)
+
+    next if redirect
+
+    slug = slugify(doc)
+    upload = upload_for_slug(slug)
+
+    create_redirect(url, upload)
+  end
+end
+
+upload_missing
+create_redirects
