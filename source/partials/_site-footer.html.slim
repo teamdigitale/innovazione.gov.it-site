@@ -128,7 +128,7 @@ footer#footer.it-footer data-datocms-noindex=true tabindex="-1"
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
         - visible_pages(dato.company.subfooter_pages).each do |item|
-          li.list-inline-item
+          li.list-inline-item.mr-0.mr-md-5
             = proxy_link_to page_path(item),
               class: "list-item mid-footer-link mx-4 mx-md-0"
                 span = item.title
