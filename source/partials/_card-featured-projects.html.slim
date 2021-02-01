@@ -1,9 +1,9 @@
 ruby:
-  projects_button_parent_classes = %(my-5 mt-md-5 text-center d-flex d-flex-wrap
-    justify-content-center align-items-center)
+  projects_button_parent_classes = %(my-5 mt-md-5 text-center d-flex flex-wrap
+    justify-content-center align-items-center justify-content-lg-start)
 
   toggler_classes = %(p-0 btn btn-default btn-dropdown
-    dropdown-toggle)
+    dropdown-toggle m-4 ml-md-3 mr-lg-0 ml-xl-4)
 
 .row.mt-5.mb-lg-5
   .col-lg-5.pt-5
@@ -26,11 +26,12 @@ ruby:
         = page.projects_text
 
       div class=projects_button_parent_classes
-        = partial "partials/button",
-          locals: {btn_url: dato.projects_page,
-          aria_label: page.projects_pre_title}
+        .mx-4.ml-lg-0
+          = partial "partials/button",
+            locals: {btn_url: dato.projects_page,
+            aria_label: page.projects_pre_title}
 
-        .dropdown.ml-5
+        .dropdown
           button#projectsCategories [class=toggler_classes
               aria-expanded="false"
               aria-haspopup="true"
