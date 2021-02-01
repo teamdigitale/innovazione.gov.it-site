@@ -5,6 +5,7 @@ import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
 import "bootstrap-italia/src/js/plugins/sticky-header";
 import "lazysizes";
+import "lazysizes/plugins/respimg/ls.respimg";
 import "focus-visible/src/focus-visible.js"
 import Sharer from "sharer.js/sharer.js"
 
