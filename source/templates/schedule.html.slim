@@ -1,2 +1,11 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: {page: page} do
+  = content_for :aside
+    = partial "partials/column-title",
+      locals: {title: t("or")}
+
+    = proxy_link_to t("schedule_archive"),
+      page_path(page),
+      class: "text-decoration-none font-weight-semibold d-block mb-3"
