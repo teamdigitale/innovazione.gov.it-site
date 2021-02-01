@@ -1,21 +1,28 @@
-- link ||= nil
-- icon_url = ''
-- link_partial = ''
+ruby:
+  case link.item_type.api_key
+  when "link_external"
+    link_aria_label = "Link esterno"
+    icon_url = "/images/sprite.svg#it-external-link"
 
-- if link.present?
-  - if link.item_type.api_key == "link_external"
-    - icon_url = "/images/sprite.svg#it-external-link"
-    - link_partial = partial "partials/links/link_external", locals: {item: link, label: link.title, html_class: "card-title mid-text-dark text-decoration-none"}
-  - else
-    - icon_url = "/images/sprite.svg#it-link"
-    - link_partial = partial "partials/links/link_internal", locals: {item: link, label: link.title, html_class: "card-title mid-text-dark text-decoration-none"}
+  when "link_internal"
+    link_aria_label = "Link interno"
+    icon_url = "/images/sprite.svg#it-link"
 
-  .card.h-100.card-teaser.rounded.shadow
-    svg.icon.icon-primary
-      use xlink:href="#{icon_url}"
-    .card-body
-      h4.font-weight-semibold.mid-caption--xlarge
-        = link_partial
-      p.card-text
-        = link.description
+  end
 
+.card.h-100.card-teaser.rounded.shadow
+  svg.icon.icon-primary [
+      focusable="false"
+      role="img"
+      aria-label=link_aria_label
+    ]
+    use xlink:href="#{icon_url}"
+  .card-body
+    h3.font-weight-semibold.mid-caption--xlarge
+      = partial "partials/links/#{link.item_type.api_key}",
+        locals: {item: link,
+          label: link.title,
+          html_class: "card-title mid-text-dark text-decoration-none"}
+
+    p.card-text
+      = link.description

@@ -3,7 +3,10 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
+import "bootstrap-italia/src/js/plugins/sticky-header";
 import "lazysizes";
+import "focus-visible/src/focus-visible.js"
+import Sharer from "sharer.js/sharer.js"
 
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
@@ -65,6 +68,18 @@ const initSearch = () => {
     initialLocale: $("html").attr("lang"),
   });
 };
+
+// Close accordion on click outside
+$(document).click(function(e) {
+  var container = $('.collapse');
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    container.collapse('hide');
+  }
+})
+
+$('.nav-item').click(function(e) {
+  $('.collapse').collapse('hide');
+})
 
 initSearch();
 progressIndicator.updateProgress()

@@ -1,83 +1,108 @@
-- item ||= nil
-- padding = 'p-0'
-- text_length = 'col-12'
-- logo_length = ''
+ruby:
+  item ||= nil
+  padding = "p-lg-0"
+  logo_length = ""
 
 - if item.present?
-  - date = ''
-  - if item.respond_to?(:date_shown) && item.date_shown.present?
-    - date = partial "partials/formatted-date", locals: {date: item.date_shown}
+  ruby:
+    date = ""
+    is_focus = item.item_type.api_key == "focus_page"
+    is_project = item.item_type.api_key == "project"
+    show_date = item.respond_to?(:date_shown) && item.date_shown.present?
 
-  - logo_url = ''
-  - if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
-    - logo_url = item.image_project_logo
-    - text_length = 'col-12 col-lg-10'
-    - logo_length = 'col-4 col-lg-2'
+    if (!is_focus && !is_project) && show_date
+      date = partial "partials/formatted-date", locals: {date: item.date_shown}
+    end
 
-  - text_type = 'text-muted'
-  - text_date = 'text-secondary'
-  - text_title = 'text-primary'
-  - text_subtitle = 'text-secondary'
-  - card_classes = 'p-0'
+    logo_url = ""
+    if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
+      logo_url = item.image_project_logo
+      logo_length = "col-4 col-md-2 px-lg-0"
+      padding = "pl-lg-2 pr-lg-0"
+    end
 
-  - if item.item_type.api_key == "focus_page"
-    - text_type = 'text-white'
-    - text_date = 'text-white'
-    - text_title = 'text-white'
-    - text_subtitle = 'text-white'
-    - bg_color = ""
-    - card_classes = 'bg-primary rounded'
-    - padding = 'p-3'
+    type = ""
+    txt_date = "text-secondary"
+    txt_title = "text-primary"
+    txt_subtitle = "text-secondary"
+    card_classes = "p-lg-0"
+
+    if is_focus
+      type = "text-white"
+      txt_date = "text-white"
+      txt_title = "text-white"
+      txt_subtitle = "text-white"
+      card_classes = "bg-primary rounded"
+      padding = "p-3"
+    end
 
   - if logo_url.present?
-    .d-lg-none.p-0
-      .px-0 class="#{logo_length}"
-        .img-responsive-wrapper.p-0.m-0
-          figure.p-0.m-0
-            = proxy_image_tag logo_url.lqip_data_url(w: 10, h: 10, fit:'max'),
-              data: {'sizes': '100vw',
-                'src': logo_url.url(w: 120, h: 120, fit:'max', auto:'compress'),
-                'srcset': "#{logo_url.url(w: 120, h: 120, fit:'max', auto:'compress')} 480w,
-                #{logo_url.url(w: 155, h: 250, fit:'max', auto:'compress')} 632w"},
-              style: "max-width: 100%; object-fit: cover; height:auto",
-              class: "p-0 m-0 lazyload d-block",
-              alt: logo_url.alt,
-              title: logo_url.title
-
-  .d-lg-flex.mb-4
-    - if logo_url.present?
+    .d-lg-none
       div class="#{logo_length}"
-        .img-responsive-wrapper.p-0.m-0
-          figure.position-absolute
-            = proxy_image_tag logo_url.lqip_data_url(w: 10, h: 10, fit:'max'),
-              data: {'sizes': '100vw',
-                'src': logo_url.url(w: 120, h: 120, fit:'max', auto:'compress'),
-                'srcset': "#{logo_url.url(w: 120, h: 120, fit:'max', auto:'compress')} 480w,
-                #{logo_url.url(w: 155, h: 250, fit:'max', auto:'compress')} 632w"},
-              style: "width:auto; object-fit: cover; max-height:100px",
+        .img-responsive-wrapper
+          figure
+            = proxy_image_tag logo_url.lqip_data_url(w: 10,
+              h: 10,
+              fit: "max"),
+              data: {"sizes": "100vw",
+                "src": logo_url.url(w: 120,
+                   h: 120,
+                   fit: "max",
+                   auto: "compress"),
+                "srcset": "#{logo_url.url(w: 120,
+                  h: 120,
+                  fit: 'max',
+                  auto: 'compress')} 480w,
+                #{logo_url.url(w: 155,
+                  h: 250,
+                  fit: 'max',
+                  auto: 'compress')} 632w"},
+              style: "max-width: 100%; object-fit: cover; height:auto",
               class: "lazyload d-block",
               alt: logo_url.alt,
               title: logo_url.title
 
-    .card.m-0.p-0
-      .card-body.p-0.m-0 class=card_classes
+  .d-lg-flex.mb-lg-4
+    - if logo_url.present?
+      .d-none.d-lg-block class="#{logo_length}"
+        .img-responsive-wrapper.p-lg-0.m-0
+          figure.position-absolute
+            = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                h: 10,
+                fit: "max"),
+              data: {"sizes": "100vw",
+                "src": logo_url.url(w: 120,
+                  h: 120,
+                  fit: "max", auto: "compress"),
+                "srcset": "#{logo_url.url(w: 120,
+                    h: 120,
+                    fit: 'max',
+                    auto: 'compress')} 480w,
+                  #{logo_url.url(w: 155,
+                    h: 250,
+                    fit: 'max',
+                    auto: 'compress')} 632w"},
+              style: "max-width:100%; object-fit:scale-down; max-height:120px",
+              class: "lazyload d-block",
+              alt: logo_url.alt
 
-        div class="#{padding} #{text_length}"
+    .card.mb-2.m-lg-0.p-lg-0
+      .card-body.px-0.py-2.p-lg-0.m-lg-0 class=card_classes
+        .col-12 class="#{padding}"
           .category.pb-2.card-text
-            span.pr-2.text-uppercase.font-weight-semibold class="#{text_type}"
+            span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
               = t("models.#{item.item_type.api_key}")
 
-            span.px-2 class="#{text_date}"
+            span.px-2 class="#{txt_date}"
               = date
-          h4 class="h5 font-weight-semibold"
+          h3 class="h5 font-weight-semibold"
             = link_to page_path(item),
-              class: "#{text_title} text-decoration-none"
+              class: "#{txt_title} text-decoration-none"
               = item.title
 
           - if item.respond_to?(:subtitle) && item.subtitle.present?
-            p.mid-caption--large.pb-0.mb-0 class="#{text_subtitle}"
+            p.mid-caption--large.pb-0.mb-0 class="#{txt_subtitle}"
               = item.subtitle
 
           - if item.respond_to?(:source) && item.source.present?
             .h6.pb-0 = item.source
-

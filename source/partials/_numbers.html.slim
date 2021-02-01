@@ -7,16 +7,31 @@
       .row
         .col-12.col-lg-9.container
 
-          .h6.text-uppercase.text-center.text-lg-left
+          h2.h6.text-uppercase.text-center.text-lg-left.py-3.py-lg-0
             = t("numbers_section_title")
 
-          .my-4.row.row-cols-lg-3
-            - numbers.each do |number|
-              .col-lg-4
-                .mid-numbers.font-weight-bold
-                  = number.number
-                .h6
-                  = number.text
-        .col-12.col-lg-2.d-flex.justify-content-center.align-items-center.pt-3.justify-content-lg-end
+          .d-none.d-lg-block
+            .my-4.row.row-cols-lg-3
+              - numbers.each do |number|
+                .col-lg-4
+                  .mid-huge-numbers.font-weight-semibold.text-lg-left
+                    = number.number
+                  .h6.text-center.text-lg-left
+                    = number.text
+
+          .d-lg-none
+            .swiper-container
+              .swiper-wrapper.h-100
+                - numbers.each do |number|
+                  .swiper-slide
+                    .swiper-slide__text.px-3.mid-numbers-background.px-md-5
+                      .h-100.d-flex.flex-column.justify-content-around
+                        .mid-huge-numbers.font-weight-semibold.text-center
+                          = number.number
+                        .h6.text-center.pt-5
+                          = number.text
+            .swiper-pagination.numbers-pagination-bullet
+
+        .col-12.col-lg-2.pt-3
           / insert button
         .col-lg-1

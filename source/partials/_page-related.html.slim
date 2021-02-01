@@ -1,9 +1,22 @@
-- if page.respond_to?(:related_items) && page.related_items.any?
+ruby:
+  show_related = main_locale?(locale) &&
+    page.respond_to?(:related_items) &&
+    page.related_items.any?
+
+- if show_related
+  ruby:
+    elements_partitioned = page.related_items.partition do |item|
+      item.item_type.api_key == "focus_page" ||
+      item.item_type.api_key == "project"
+    end
+    elements_ordered = elements_partitioned.flatten
+
   .row.mid-border-lg-top.pt-5.mb-5
     .col-sm-8
-      h3.mb-3
-        = partial "partials/section-title", locals: {title: t("related_content")}
-      .col-lg-12.offset-lg-1.my-0.p-0
-        - page.related_items.each do |item|
+      .mb-3
+        = partial "partials/section-title",
+          locals: {title: t("related_content")}
+      .col-lg-12.offset-lg-1.my-0.p-lg-0
+        - elements_ordered.each do |item|
           = partial "partials/card-related-items",
             locals: {item: item}

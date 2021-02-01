@@ -1,0 +1,8 @@
+*:focus:not(:focus-visible) {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+*:focus:not(:-moz-focusring) {
+  outline: 0 !important;
+  box-shadow: none !important;
+}

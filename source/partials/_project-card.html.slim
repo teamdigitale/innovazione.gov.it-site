@@ -1,0 +1,47 @@
+- project ||= nil
+
+- if project.present?
+  .card.bg-transparent.h-100
+    .card-body
+      .card-img.no-after
+        figure.row
+          .col-4.col-lg-6
+            - logo = project.image_project_logo
+            - if logo.format == "svg"
+              = proxy_image_tag logo.url,
+                class: "d-block w-100",
+                alt: logo.alt
+
+            - else
+              = proxy_image_tag logo.lqip_data_url(w: 10, h: 10, fit: "max"),
+                data: {"sizes": "100vw",
+                  "src": logo.url(w: 190, h: 190,
+                    fit: "max", auto: "compress"),
+                  "srcset": "#{logo.url(w: 190, h: 190,
+                    fit: 'max', auto: 'compress')} 480w,
+                  #{logo.url(w: 230, h: 230,
+                  fit: 'max', auto: 'compress')} 844w"},
+                class: "lazyload d-block w-100",
+                alt: logo.alt
+
+      h3.h4.card-title.font-weight-bold
+        = link_to project.title,
+          page_path(project),
+          class: "text-decoration-none"
+
+      p.mid-caption--large.text-sans-serif = project.subtitle
+
+      - if project.links_external_project_card.any?
+        ul.list-inline
+          - project.links_external_project_card.each do |link|
+            li.list-inline-item
+              = link_to link.link,
+                class: "btn-link pl-0 text-decoration-none",
+                target: "_blank",
+                rel: "noopener",
+                aria: {"label": project_link_label(link)} do
+
+                  span.mid-caption--xlarge.font-weight-semibold
+                    = project_link_label(link)
+                  svg.icon.icon.icon-sm.icon-primary.ml-2.align-bottom.mb-1
+                    use xlink:href="/images/sprite.svg#it-external-link"

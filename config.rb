@@ -1,5 +1,6 @@
-require "dotenv"
+# frozen_string_literal: true
 
+require "dotenv"
 require "lib/path_helpers"
 require "lib/image_helpers"
 require "lib/text_helpers"
@@ -15,7 +16,7 @@ set :markdown_engine, :redcarpet
 
 ignore "/templates/*"
 
-LOCALES = ["it"]
+LOCALES = %w[it en].freeze
 activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 
 activate :asset_hash
@@ -29,7 +30,7 @@ RETRY_CLASSES = [
   Net::OpenTimeout,
   NoMethodError,
   SocketError
-]
+].freeze
 
 def retry_on_error(limit: 5)
   tries ||= 1
@@ -45,9 +46,9 @@ end
 
 retry_on_error(limit: 10) do
   activate :dato,
-    token: ENV.fetch("DATO_API_TOKEN"),
-    live_reload: true,
-    preview: ENV.fetch("BUILD_ENV") != "production"
+           token: ENV.fetch("DATO_API_TOKEN"),
+           live_reload: true,
+           preview: ENV.fetch("BUILD_ENV") != "production"
 end
 
 webpack_command =
@@ -58,22 +59,25 @@ webpack_command =
   end
 
 activate :external_pipeline,
-  name: :webpack,
-  command: webpack_command,
-  source: ".tmp/dist",
-  latency: 1
+         name: :webpack,
+         command: webpack_command,
+         source: ".tmp/dist",
+         latency: 1
 
 configure :build do
   activate :minify_html do |html|
     html.remove_input_attributes = false
   end
   activate :search_engine_sitemap,
-    default_priority: 0.5,
-    default_change_frequency: "weekly"
+           default_priority: 0.5,
+           default_change_frequency: "weekly"
 end
 
 configure :development do
   activate :livereload
+  activate :search_engine_sitemap,
+           default_priority: 0.5,
+           default_change_frequency: "weekly"
 end
 
 module PresentationHelper
@@ -82,15 +86,15 @@ module PresentationHelper
   end
 
   def self.published_articles(articles)
-    articles.sort_by(&:date_shown).reverse
+    articles.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_pages(pages)
-    pages.sort_by(&:position)
+    pages.select(&:slug).sort_by(&:position)
   end
 
   def self.published_children_pages(page)
-    page.children.sort_by(&:position)
+    page.children.select(&:slug).sort_by(&:position)
   end
 
   def self.published_focus_pages(focus_pages)
@@ -123,6 +127,14 @@ module PresentationHelper
 
   def self.published_tags(tags)
     tags.sort_by(&:name)
+  end
+
+  def self.published_redirects(redirects)
+    redirects.select{|r| r.old_url}
+  end
+
+  def self.path_without_domain(url)
+    url.gsub("https://innovazione.gov.it","")
   end
 end
 
@@ -167,12 +179,21 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
+  def visible_news_contents
+    (visible_announcements +
+    visible_articles +
+    visible_interviews +
+    visible_participations +
+    visible_press_releases).sort_by(&:date_shown).reverse
+  end
+
   def visible_tags
-    PresentationHelper.published_tags(dato.tags)
+    PresentationHelper.published_tags(dato.tags) &
+      visible_news_contents.collect(&:tags).flatten
   end
 
   def featured_tags
-    PresentationHelper.published_tags(dato.tags) & dato.company.featured_tags
+    visible_tags & dato.company.featured_tags
   end
 
   def visible_pages(pages)
@@ -180,7 +201,19 @@ helpers do
   end
 
   def visible_fl_pages(pages)
-    PresentationHelper.published_pages(pages).select{|p| !p.parent}
+    PresentationHelper.published_pages(pages).reject(&:parent)
+  end
+
+  def links_to_existing_page?(link)
+    if link.item_type.api_key == "internal_link"
+      link.link.slug
+    else
+      true
+    end
+  end
+
+  def visible_links(links)
+    links.select { |l| links_to_existing_page?(l) }
   end
 
   def menu_label_with_fallback(page)
@@ -193,301 +226,430 @@ helpers do
     end
   end
 
+  def project_link_label(link)
+    if link.cta_label.present?
+      link.cta_label
+    else
+      t("link_labels.website")
+    end
+  end
+
+  def editorial_models_api_keys
+    %w[announcement
+       article
+       interview
+       participation
+       press_release
+       focus_page
+       project
+       general_page
+       minister_subpage
+       department_subpage
+       projects_subpage
+       news_subpage]
+  end
+
+  def page_is_editorial(page)
+    editorial_models_api_keys.include?(page.item_type.api_key)
+  end
+
+  def explore_models_api_keys
+    %w[tags_index tag explore_page]
+  end
+
+  def page_is_explore(page)
+    explore_models_api_keys.include?(page.item_type.api_key)
+  end
+
   def cta_label(item)
     item.cta_label.present? ? item.cta_label : item.title
   end
 
-  def all_index_pages
-    [dato.articles_index,
-      dato.announcements_index,
-      dato.interviews_index,
-      dato.participations_index,
-      dato.press_releases_index,
-      dato.focus_index,
-      dato.projects_page
-    ]
+  def anchor_id(title)
+    return "" unless title
+
+    title.parameterize
   end
 
+  def show_update_date_api_keys
+    %w[focus_page
+       project
+       general_page
+       minister_subpage
+       department_subpage
+       projects_subpage
+       news_subpage]
+  end
+
+  def page_show_update_date?(page)
+    show_update_date_api_keys.include?(page.item_type.api_key)
+  end
+
+  def all_index_pages
+    [dato.articles_index,
+     dato.announcements_index,
+     dato.interviews_index,
+     dato.participations_index,
+     dato.press_releases_index,
+     dato.focus_index,
+     dato.projects_page]
+  end
+
+  def sharable_socials
+    %w[facebook twitter linkedin whatsapp telegram email]
+  end
+
+  def localizable_api_keys
+    %w[article general_page]
+  end
+
+  def page_is_localizable?(page)
+    localizable_api_keys.include?(page.item_type.api_key)
+  end
+
+  def main_locale?(locale)
+    locale == locales[0]
+  end
+
+  def in_italian_zone(t)
+    t.in_time_zone(ENV["TZ"])
+  end
 end
 
 dato.tap do |dato|
-  locale = LOCALES[0]
-  I18n.with_locale(locale) do
-    prefix = locale == LOCALES[0] ? "" : "/#{locale}"
+  I18n.with_locale(:en) do
+    locale = :en
+    I18n.fallbacks[:en] = [:en]
 
-    proxy "#{prefix}/index.html",
-      "/templates/homepage.html",
-      locals: { page: dato.homepage },
-      locale: locale
+    visible_articles = PresentationHelper.published_articles(dato.articles)
 
-    proxy "#{prefix}/#{dato.search_page.slug}/index.html",
-      "/templates/search.html",
-      locals: { page: dato.search_page },
-      locale: locale
+    visible_articles.each do |article|
+      proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
+            "/templates/article.html",
+            locals: {page: article},
+            locale: locale
+    end
 
-    proxy "#{prefix}/#{dato.explore_page.slug}/index.html",
-      "/templates/explore.html",
-      locals: { page: dato.explore_page },
-      locale: locale
+    visible_pages = PresentationHelper.published_pages(dato.general_pages)
+
+    visible_pages.each do |general_page|
+      parent_path = ""
+      parent_path = "/#{general_page.parent.slug}" if general_page.parent && general_page.parent.slug.present?
+
+      proxy "#{parent_path}/#{locale}/#{general_page.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: general_page,
+                     children: PresentationHelper.published_children_pages(general_page)},
+            locale: locale
+    end
+
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
+
+    visible_resource_redirects.each do |resource_redirect|
+      path = PresentationHelper.path_without_domain(resource_redirect.old_url)
+      proxy "#{path}index.html",
+            "/templates/resource_redirect.html",
+            locals: {page: resource_redirect},
+            locale: locale
+    end
+  end
+
+  I18n.with_locale(:it) do
+    locale = :it
+
+    visible_announcements = PresentationHelper.published_announcements(dato.announcements)
+    visible_articles = PresentationHelper.published_articles(dato.articles)
+    visible_interviews = PresentationHelper.published_interviews(dato.interviews)
+    visible_participations = PresentationHelper.published_participations(dato.participations)
+    visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
+    visible_focus_pages = PresentationHelper.published_focus_pages(dato.focus_pages)
+    visible_projects = PresentationHelper.published_projects(dato.projects)
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
+
+    def paginate_with_fallback(items, index_page, parent_page, locale)
+      parent_path = "#{parent_page.slug}/"
+      index_path = index_page.slug.to_s
+      path = "/#{parent_path}#{index_path}"
+
+      if items.any?
+        paginate items,
+                 path,
+                 "/templates/index_page.html",
+                 suffix: "/page/:num/index",
+                 locals: {page: index_page},
+                 per_page: 10
+
+      else
+        proxy "#{path}/index.html",
+              "/templates/index_page.html",
+              locals: {page: index_page},
+              locale: locale
+      end
+    end
+
+    visible_resource_redirects.each do |resource_redirect|
+      path = PresentationHelper.path_without_domain(resource_redirect.old_url)
+      proxy "#{path}index.html",
+            "/templates/resource_redirect.html",
+            locals: {page: resource_redirect},
+            locale: locale
+    end
+
+    proxy "/index.html",
+          "/templates/homepage.html",
+          locals: {page: dato.homepage},
+          locale: locale
+
+    proxy "/#{dato.search_page.slug}/index.html",
+          "/templates/search.html",
+          locals: {page: dato.search_page},
+          locale: locale
+
+    proxy "/#{dato.explore_page.slug}/index.html",
+          "/templates/explore.html",
+          locals: {page: dato.explore_page},
+          locale: locale
 
     PresentationHelper.published_pages(dato.general_pages).each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
-      proxy "#{prefix}#{parent_path}/#{general_page.slug}/index.html",
-        "/templates/page.html",
-        locals: { page: general_page,
-          children: PresentationHelper.published_children_pages(general_page)},
-        locale: locale
+      proxy "#{parent_path}/#{general_page.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: general_page,
+                     children: PresentationHelper.published_children_pages(general_page)},
+            locale: locale
     end
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/index.html",
-      "/templates/minister.html",
-      locals: { page: dato.minister_page },
-      locale: locale
+    proxy "/#{dato.minister_page.slug}/index.html",
+          "/templates/minister.html",
+          locals: {page: dato.minister_page},
+          locale: locale
 
-    proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
-      "/templates/schedule.html",
-      locals: { page: dato.schedule_page },
-      locale: locale
+    proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
+          "/templates/schedule.html",
+          locals: {page: dato.schedule_page},
+          locale: locale
 
     PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
-      proxy "#{prefix}/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
-        "/templates/schedule_event.html",
-        locals: { page: schedule_event },
-        locale: locale
+      proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
+            "/templates/schedule_event.html",
+            locals: {page: schedule_event},
+            locale: locale
     end
 
-    minister_articles = PresentationHelper.published_articles(dato.articles).select{|a| a.owners.include?(dato.minister_page)}
+    minister_articles = visible_articles.select { |a| a.owners.include?(dato.minister_page) }
 
-    paginate minister_articles,
-      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_articles_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.minister_articles_index },
-      per_page: 10
+    paginate_with_fallback(minister_articles,
+                           dato.minister_articles_index,
+                           dato.minister_page,
+                           locale)
 
-    minister_interviews = PresentationHelper.published_interviews(dato.interviews).select{|i| i.owners.include?(dato.minister_page)}
+    minister_interviews = visible_interviews.select { |i| i.owners.include?(dato.minister_page) }
 
-    paginate minister_interviews,
-      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_interviews_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.minister_interviews_index },
-      per_page: 10
+    paginate_with_fallback(minister_interviews,
+                           dato.minister_interviews_index,
+                           dato.minister_page,
+                           locale)
 
-    minister_participations = PresentationHelper.published_participations(dato.participations).select{|i| i.owners.include?(dato.minister_page)}
+    minister_participations = visible_participations.select { |i| i.owners.include?(dato.minister_page) }
 
-    paginate minister_participations,
-      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_participations_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.minister_participations_index },
-      per_page: 10
+    paginate_with_fallback(minister_participations,
+                           dato.minister_participations_index,
+                           dato.minister_page,
+                           locale)
 
-    minister_press_releases = PresentationHelper.published_press_releases(dato.press_releases).select{|i| i.owners.include?(dato.minister_page)}
+    minister_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.minister_page) }
 
-    paginate minister_press_releases,
-      "#{prefix}/#{dato.minister_page.slug}/#{dato.minister_press_releases_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.minister_press_releases_index },
-      per_page: 10
+    paginate_with_fallback(minister_press_releases,
+                           dato.minister_press_releases_index,
+                           dato.minister_page,
+                           locale)
 
     PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
-        "/templates/page.html",
-        locals: { page: minister_subpage,
-          children: PresentationHelper.published_children_pages(minister_subpage)},
-        locale: locale
+      proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: minister_subpage,
+                     children: PresentationHelper.published_children_pages(minister_subpage)},
+            locale: locale
     end
 
-    proxy "#{prefix}/#{dato.department_page.slug}/index.html",
-      "/templates/department.html",
-      locals: { page: dato.department_page },
-      locale: locale
+    proxy "/#{dato.department_page.slug}/index.html",
+          "/templates/department.html",
+          locals: {page: dato.department_page},
+          locale: locale
 
-    paginate PresentationHelper.published_focus_pages(dato.focus_pages),
-      "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.focus_index },
-      per_page: 10
+    paginate_with_fallback(visible_focus_pages,
+                           dato.focus_index,
+                           dato.department_page,
+                           locale)
 
-    PresentationHelper.published_focus_pages(dato.focus_pages).each do |focus_page|
-      proxy "#{prefix}/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
-        "/templates/focus.html",
-        locals: { page: focus_page },
-        locale: locale
+    visible_focus_pages.each do |focus_page|
+      proxy "/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
+            "/templates/focus.html",
+            locals: {page: focus_page},
+            locale: locale
     end
 
-    paginate PresentationHelper.published_announcements(dato.announcements),
-      "#{prefix}/#{dato.department_page.slug}/#{dato.department_announcements_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.department_announcements_index },
-      per_page: 10
+    department_announcements = visible_announcements.select { |i| i.owners.include?(dato.department_page) }
 
-    paginate PresentationHelper.published_articles(dato.articles),
-      "#{prefix}/#{dato.department_page.slug}/#{dato.department_articles_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.department_articles_index },
-      per_page: 10
+    paginate_with_fallback(department_announcements,
+                           dato.department_announcements_index,
+                           dato.department_page,
+                           locale)
 
-    paginate PresentationHelper.published_press_releases(dato.press_releases),
-      "#{prefix}/#{dato.department_page.slug}/#{dato.department_press_releases_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.department_press_releases_index },
-      per_page: 10
+    department_articles = visible_articles.select { |i| i.owners.include?(dato.department_page) }
+
+    paginate_with_fallback(department_articles,
+                           dato.department_articles_index,
+                           dato.department_page,
+                           locale)
+
+    department_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.department_page) }
+
+    paginate_with_fallback(department_press_releases,
+                           dato.department_press_releases_index,
+                           dato.department_page,
+                           locale)
 
     PresentationHelper.published_pages(dato.department_subpages).each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
-        "/templates/page.html",
-        locals: { page: department_subpage,
-          children: PresentationHelper.published_children_pages(department_subpage)},
-        locale: locale
+      proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: department_subpage,
+                     children: PresentationHelper.published_children_pages(department_subpage)},
+            locale: locale
     end
 
-    proxy "#{prefix}/#{dato.projects_page.slug}/index.html",
-      "/templates/projects.html",
-      locals: { page: dato.projects_page },
-      locale: locale
+    proxy "/#{dato.projects_page.slug}/index.html",
+          "/templates/projects.html",
+          locals: {page: dato.projects_page},
+          locale: locale
 
-    PresentationHelper.published_projects(dato.projects).each do |project|
-      proxy "#{prefix}/#{dato.projects_page.slug}/#{project.slug}/index.html",
-        "/templates/project.html",
-        locals: { page: project },
-        locale: locale
+    visible_projects.each do |project|
+      proxy "/#{dato.projects_page.slug}/#{project.slug}/index.html",
+            "/templates/project.html",
+            locals: {page: project},
+            locale: locale
     end
 
     PresentationHelper.published_pages(dato.projects_subpages).each do |projects_subpage|
       parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
-        "/templates/page.html",
-        locals: { page: projects_subpage,
-          children: PresentationHelper.published_children_pages(projects_subpage)},
-        locale: locale
+      proxy "/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: projects_subpage,
+                     children: PresentationHelper.published_children_pages(projects_subpage)},
+            locale: locale
     end
 
-    proxy "#{prefix}/#{dato.news_page.slug}/index.html",
-      "/templates/news.html",
-      locals: { page: dato.news_page },
-      locale: locale
+    proxy "/#{dato.news_page.slug}/index.html",
+          "/templates/news.html",
+          locals: {page: dato.news_page},
+          locale: locale
 
-    paginate PresentationHelper.published_announcements(dato.announcements),
-      "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.announcements_index },
-      per_page: 10
+    paginate_with_fallback(visible_announcements,
+                           dato.announcements_index,
+                           dato.news_page,
+                           locale)
 
-    PresentationHelper.published_announcements(dato.announcements).each do |announcement|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
-        "/templates/announcement.html",
-        locals: { page: announcement },
-        locale: locale
+    visible_announcements.each do |announcement|
+      proxy "/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
+            "/templates/announcement.html",
+            locals: {page: announcement},
+            locale: locale
     end
 
-    paginate PresentationHelper.published_articles(dato.articles),
-      "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.articles_index },
-      per_page: 10
+    paginate_with_fallback(visible_articles,
+                           dato.articles_index,
+                           dato.news_page,
+                           locale)
 
-    PresentationHelper.published_articles(dato.articles).each do |article|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
-        "/templates/article.html",
-        locals: { page: article },
-        locale: locale
+    visible_articles.each do |article|
+      proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
+            "/templates/article.html",
+            locals: {page: article},
+            locale: locale
     end
 
-    paginate PresentationHelper.published_interviews(dato.interviews),
-      "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.interviews_index },
-      per_page: 10
+    paginate_with_fallback(visible_interviews,
+                           dato.interviews_index,
+                           dato.news_page,
+                           locale)
 
-    PresentationHelper.published_interviews(dato.interviews).each do |interview|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
-        "/templates/interview.html",
-        locals: { page: interview },
-        locale: locale
+    visible_interviews.each do |interview|
+      proxy "/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
+            "/templates/interview.html",
+            locals: {page: interview},
+            locale: locale
     end
 
-    paginate PresentationHelper.published_participations(dato.participations),
-      "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.participations_index },
-      per_page: 10
+    paginate_with_fallback(visible_participations,
+                           dato.participations_index,
+                           dato.news_page,
+                           locale)
 
-    PresentationHelper.published_participations(dato.participations).each do |participation|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
-        "/templates/participation.html",
-        locals: { page: participation },
-        locale: locale
+    visible_participations.each do |participation|
+      proxy "/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
+            "/templates/participation.html",
+            locals: {page: participation},
+            locale: locale
     end
 
-    paginate PresentationHelper.published_press_releases(dato.press_releases),
-      "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}",
-      "/templates/index_page.html",
-      suffix: "/page/:num/index",
-      locals: { page: dato.press_releases_index },
-      per_page: 10
+    paginate_with_fallback(visible_press_releases,
+                           dato.press_releases_index,
+                           dato.news_page,
+                           locale)
 
-    PresentationHelper.published_press_releases(dato.press_releases).each do |press_release|
-      proxy "#{prefix}/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
-        "/templates/press_release.html",
-        locals: { page: press_release },
-        locale: locale
+    visible_press_releases.each do |press_release|
+      proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
+            "/templates/press_release.html",
+            locals: {page: press_release},
+            locale: locale
     end
 
     PresentationHelper.published_pages(dato.news_subpages).each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
-      proxy "#{prefix}/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
-        "/templates/page.html",
-        locals: { page: news_subpage,
-          children: PresentationHelper.published_children_pages(news_subpage)},
-        locale: locale
+      proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: news_subpage,
+                     children: PresentationHelper.published_children_pages(news_subpage)},
+            locale: locale
     end
 
-    proxy "#{prefix}/#{dato.tags_index.slug}/index.html",
-      "/templates/tags.html",
-      locals: { page: dato.tags_index },
-      locale: locale
+    proxy "/#{dato.tags_index.slug}/index.html",
+          "/templates/tags.html",
+          locals: {page: dato.tags_index, hide_tags_section: true},
+          locale: locale
 
-    news_contents = PresentationHelper.published_announcements(dato.announcements) +
-    PresentationHelper.published_articles(dato.articles) +
-    PresentationHelper.published_interviews(dato.interviews) +
-    PresentationHelper.published_participations(dato.participations) +
-    PresentationHelper.published_press_releases(dato.press_releases)
+    news_contents = visible_announcements +
+                    visible_articles +
+                    visible_interviews +
+                    visible_participations +
+                    visible_press_releases
 
     PresentationHelper.published_tags(dato.tags).each do |tag|
-      tag_news_contents = news_contents.select{|n| n.tags.include?(tag)}.sort_by(&:date_shown).reverse
+      tag_news_contents = news_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
+      next unless tag_news_contents.any?
 
       paginate tag_news_contents,
-        "#{prefix}/#{dato.tags_index.slug}/#{tag.slug}",
-        "/templates/tag.html",
-        suffix: "/page/:num/index",
-        locals: { page: tag },
-        per_page: 10
-
+               "/#{dato.tags_index.slug}/#{tag.slug}",
+               "/templates/tag.html",
+               suffix: "/page/:num/index",
+               locals: {page: tag},
+               per_page: 10
     end
+  end
+  dato.asset_redirects.each do |asset_redirect|
+    path = PresentationHelper.path_without_domain(asset_redirect.old_url)
+    proxy "#{path}/index.html",
+          "/templates/asset_redirect.html",
+          locals: {page: asset_redirect}
   end
 end
 
 proxy "site.webmanifest",
-  "templates/site.webmanifest",
-  :layout => false
+      "templates/site.webmanifest",
+      layout: false
 
 proxy "browserconfig.xml",
-  "templates/browserconfig.xml",
-  :layout => false
-
-proxy "/_redirects",
-  "/templates/redirects.txt",
-  :layout => false
+      "templates/browserconfig.xml",
+      layout: false

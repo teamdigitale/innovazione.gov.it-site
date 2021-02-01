@@ -4,9 +4,25 @@
 / Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
 / Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
 
-- if block.video.present?
-  - nocookie_url = block.video.url.gsub("youtube.com/watch?v=", "youtube-nocookie.com/embed/")
-  - minheight = block.video.height < 400 ? 400 : block.video.height
+ruby:
+ if block.video.present?
+  nocookie_url = block.video.url.gsub("youtube.com/watch?v=",
+                 "youtube-nocookie.com/embed/")
+  minheight = block.video.height < 400 ? 400 : block.video.height
+  allows = %w[accelerometer
+              autoplay
+              clipboard-write
+              encrypted-media
+              gyroscope
+              picture-in-picture].join("; ")
+  end
 
+- if block.video.present?
   .mb-5 class=(block.big.present? ? "col-12" : "col-lg-9")
-    iframe width="100%" height=minheight src=nocookie_url frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"
+    iframe [width="100%"
+            height=minheight
+            src=nocookie_url
+            frameborder="0"
+            allow=allows
+            title="Youtube video"
+            allowfullscreen="allowfullscreen"]

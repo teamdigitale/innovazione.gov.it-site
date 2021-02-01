@@ -1,13 +1,20 @@
 - page ||= nil
+
 - if page.present?
-  
-  - big_title = page_parent(page).present? ? "h2" : "h1"
+  ruby:
+    classes ||= nil
+    big_title = page_parent(page).present? ? "h2" : "h1"
 
-  - subtitle = page.respond_to?(:subtitle) && page.subtitle.present? ? page.subtitle : nil
-  - summary = page.respond_to?(:summary) && page.summary.present? ? page.summary : nil
+    subtitle = if page.respond_to?(:subtitle) && page.subtitle.present?
+      page.subtitle
+    end
 
-  .text-center.text-sm-left.pb-4
-    h2 class=big_title = page.title
+    summary = if page.respond_to?(:summary) && page.summary.present?
+      page.summary
+    end
+
+  .text-center.text-sm-left.pb-4 class=classes
+    h1 class=big_title = page.title
     - if subtitle.present?
       p.lead = subtitle
     - if summary.present?

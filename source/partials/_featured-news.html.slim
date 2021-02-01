@@ -1,23 +1,41 @@
-- featured_items ||= nil
-- items ||= nil
-- hide_image ||= nil
-- hide_tags ||= nil
-- show_item_type ||= nil
+ruby:
+  featured_items ||= nil
+  show_item_type ||= nil
 
+  with_cover = if featured_items.length == 2 &&
+    (featured_items.first.respond_to?(:image_cover) &&
+    featured_items.first.image_cover.present?)
+    true
+  end
 
+- if featured_items.present?
+  .row.row-cols-3
+    - if featured_items.length == 1
+      .col-12
+        = partial "partials/card-featured",
+          locals: {article: featured_items.first,
+          show_item_type: show_item_type}
 
-.row.row-cols-3.mt-3
-  - if featured_items.length == 1
-    .col-12
-      = partial "partials/card-featured", locals: {article: featured_items.first}
-  - elsif featured_items.length == 2 && (featured_items.first.respond_to?(:image_cover) && featured_items.first.image_cover.present?)
-    .col-12.col-lg-8
-      = partial "partials/card-featured", locals: {article: featured_items.first, larger_of_two: true}
-    .col-12.col-lg-4
-      = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
-  - else
-    .col-12.col-lg-6
-      = partial"partials/card", locals: {article: featured_items[0], medium_title: true, hide_image: true}
-    .col-12.col-lg-6
-      = partial"partials/card", locals: {article: featured_items[1], medium_title: true, hide_image: true}
+    - elsif with_cover
+      .col-12.col-lg-8.mb-4.mb-lg-0
+        = partial "partials/card-featured",
+          locals: {article: featured_items.first,
+          larger_of_two: true,
+          show_item_type: show_item_type}
+      .col-12.col-lg-4
+        = partial "partials/card",
+          locals: {article: featured_items[1],
+          show_item_type: show_item_type,
+          medium_title: true, hide_image: true}
 
+    - else
+      .col-12.col-lg-6.mb-4.mb-lg-0
+        = partial "partials/card",
+          locals: {article: featured_items[0],
+          show_item_type: show_item_type,
+          medium_title: true, hide_image: true}
+      .col-12.col-lg-6
+        = partial "partials/card",
+          locals: {article: featured_items[1],
+          show_item_type: show_item_type,
+          medium_title: true, hide_image: true}

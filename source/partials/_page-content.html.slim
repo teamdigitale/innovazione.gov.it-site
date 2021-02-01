@@ -1,0 +1,7 @@
+- if page.respond_to?(:content_has_index) && page.content_has_index
+  = partial "partials/layouts/two-columns",
+    locals: {page: page}
+
+- else
+  = partial "partials/layouts/one-column",
+    locals: {page: page}

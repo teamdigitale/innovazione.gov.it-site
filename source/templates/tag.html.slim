@@ -1,7 +1,7 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-header.mb-5
+.mb-5
   .container.pb-5.text-center.text-sm-left
     .row
       .col-12
@@ -12,14 +12,14 @@ header.mb-5
 
       .offset-lg-1.col-md-4
         = partial "partials/column-title",
-          locals: {title: t('explore_aside.title')}
+          locals: {title: t("explore_aside.title")}
         .link-list-wrapper.mt-2
           ul.link-list
             li
               = link_to page_path(dato.search_page),
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold.mr-0
-                    = t('explore_aside.search_title')
+                    = t("explore_aside.search_title")
             li
               = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
@@ -27,49 +27,52 @@ header.mb-5
                     = dato.explore_page.title
 
 .container
-  hr.border-bottom
+  .border-bottom
 
 .py-lg-5
-  - if !pager.previous_page
-    - focus_pages = visible_focus_pages.select{|f| f.tags.include?(page)}
+  - unless pager.previous_page
+    - focus_pages = visible_focus_pages.select { |f| f.tags.include?(page) }
 
     - if focus_pages.any?
       section.py-4
         header.container
           h2.display-3.font-weight-semibold.mb-4
-            = t('focus.title')
+            = t("focus.title")
 
         .container.mid-container
-          - focus_pages.each do |f|
-            = partial "partials/card-related-items",
-              locals: {item: f}
+          .row
+            - focus_pages.each do |f|
+              .col-12.col-lg-8
+                = partial "partials/card-related-items",
+                  locals: {item: f}
 
-    - projects = visible_projects.select{|f| f.tags.include?(page)}
+    - projects = visible_projects.select { |f| f.tags.include?(page) }
 
     - if projects.any?
       section.py-4
         header.container
           h2.display-3.font-weight-semibold.mb-4
-            = t('projects.title')
+            = t("projects.title")
 
-        .container.mid-container
+        .container.mid-container.px-0
           - projects.each do |p|
-            div= partial "partials/card-related-items",
-              locals: {item: p}
+            .col-lg-8.px-0
+              = partial "partials/card-related-items",
+                locals: {item: p}
 
-    - if items.any?
-      section.pt-4
-        header.container
-          h2.display-3.font-weight-semibold.mb-4
-            = t('contents.title')
+  - if items.any?
+    section.pt-4
+      header.container
+        h2.display-3.font-weight-semibold.mb-4
+          = t("contents.title")
 
-        .container.mid-container
-          .row
-            - items.each do |n|
-              .col-lg-8
-                = partial "partials/card-related-items",
-                  locals: {item: n}
+      .container.mid-container.px-0
+        - items.each do |n|
+          .col-lg-8.px-0
+            = partial "partials/card-related-items",
+              locals: {item: n}
 
-  .py-lg-4
-    = partial "partials/pagination",
-      locals: {pager: pager}
+  .container
+    .py-lg-4
+      = partial "partials/pagination",
+        locals: {pager: pager}

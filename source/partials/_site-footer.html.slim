@@ -1,36 +1,47 @@
-footer.it-footer data-datocms-noindex=true
+- transparency_pages = visible_pages(dato.company.footer_transparency_pages)
+- footer_links = visible_links(dato.company.footer_external_links)
+
+footer#footer.it-footer data-datocms-noindex=true tabindex="-1"
   .it-footer-main
     .container
       .row.clearfix
         .col-sm-12
           .it-brand-wrapper
-            = link_to locale_path("/"),
-              class: "flex-wrap flex-md-nowrap justify-content-center justify-content-md-start",
-              title: "Vai alla Pagina Iniziale"
+            ruby:
+              classes = %w[flex-wrap
+                        flex-md-nowrap
+                        justify-content-center
+                        justify-content-md-start].join(" ")
+            = link_to home_path,
+              class: classes
               = proxy_image_tag "logo-repubblica-italiana.svg",
-                alt: "Logo Repubblica Italiana",
+                alt: t("logos.italy"),
                 class: "icon"
 
               = proxy_image_tag "logo-mid-white.svg",
-                alt: "Logo #{dato.company.name}",
+                alt: t("logos.mid"),
                 style: "width: 120px",
                 class: "icon"
 
               .it-brand-text.pr-0.pr-md-2
-                h2.mt-4.mt-md-0.text-center.text-md-left style="max-with: 400px;"
-                  = t("formatted_site_name")
+                .h5.mt-4.mt-md-0.text-center.text-md-left [
+                  style="max-width: 400px;"] = t("formatted_site_name")
 
     .py-4
       .container
         .row
           .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("contacts")
 
             .mb-2
               - if dato.company.google_maps_url.present?
                 .text-center.text-md-left
-                  svg.mb-3.align-top.icon.icon-sm.icon-white
+                  svg.mb-3.align-top.icon.icon-sm.icon-white [
+                      role="img"
+                      aria-label=t("hq")
+                      focusable="false"
+                    ]
                     use xlink:href="/images/sprite.svg#it-pa"
 
                   .link-list-wrapper
@@ -40,11 +51,15 @@ footer.it-footer data-datocms-noindex=true
                           class: "list-item font-weight-semibold",
                           target: "_blank",
                           rel: "noopener"
-                          = t('formatted_address')
+                          = t("formatted_address")
 
             .mb-2
               .text-center.text-md-left
-                svg.mb-3.align-top.icon.icon-sm.icon-white
+                svg.mb-3.align-top.icon.icon-sm.icon-white [
+                    role="img"
+                    aria-label=t("email_contact")
+                    focusable="false"
+                  ]
                   use xlink:href="/images/sprite.svg#it-mail"
 
                 .link-list-wrapper
@@ -73,45 +88,47 @@ footer.it-footer data-datocms-noindex=true
                           = dato.company.media_email
 
           .col-md-6.col-xl-3.mb-5
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
               = t("follow_us_on")
 
             .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
               = partial "partials/socials"
 
-          .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("other_links")
+          - if footer_links.any?
+            .col-md-6.col-xl-3.mb-3
+              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+                = t("other_links")
 
-            .text-center.text-md-left
-              .link-list-wrapper
-                ul.link-list
-                  - dato.company.footer_external_links.each do |item|
-                    li
-                      = link_to item.link,
-                        class: "list-item mid-footer-link",
-                        target: "_blank",
-                        rel: "noopener"
-                        = cta_label(item)
+              .text-center.text-md-left
+                .link-list-wrapper
+                  ul.link-list
+                    - footer_links.each do |item|
+                      li
+                        = proxy_link_to item.link,
+                          class: "list-item mid-footer-link",
+                          target: "_blank",
+                          rel: "noopener"
+                          = cta_label(item)
 
-          .col-md-6.col-xl-3.mb-3
-            h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("transparency")
+          - if transparency_pages.any?
+            .col-md-6.col-xl-3.mb-3
+              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
+                = t("transparency")
 
-            .text-center.text-md-left
-              .link-list-wrapper
-                ul.link-list
-                  - dato.company.footer_transparency_pages.each do |item|
-                    li
-                      = link_to page_path(item),
-                        class: "list-item mid-footer-link"
-                          = item.title
+              .text-center.text-md-left
+                .link-list-wrapper
+                  ul.link-list
+                    - transparency_pages.each do |item|
+                      li
+                        = proxy_link_to page_path(item),
+                          class: "list-item mid-footer-link"
+                            = item.title
 
   .it-footer-small-prints.py-4
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - dato.company.subfooter_pages.each do |item|
+        - visible_pages(dato.company.subfooter_pages).each do |item|
           li.list-inline-item
-            = link_to page_path(item),
-              class: "list-item mid-footer-link"
-                span= item.title
+            = proxy_link_to page_path(item),
+              class: "list-item mid-footer-link mx-4 mx-md-0"
+                span = item.title

@@ -1,7 +1,17 @@
-- if page.respond_to?(:credits) && page.credits.present?
-  = partial "partials/credits", locals: {credits: page.credits}
+ruby:
+  show_date = page.respond_to?(:updated_at) &&
+    page.updated_at.present? &&
+    page_show_update_date?(page)
 
-- if page.respond_to?(:updated_at) && page.updated_at.present?
-  .my-5
-    = partial "partials/column-title", locals: {title: I18n.t("updated_at"), large: true}
-    = partial "partials/formatted-date", locals: {date: page.updated_at}
+- if page.respond_to?(:credits) && page.credits.present?
+  .container
+    = partial "partials/credits",
+      locals: {credits: page.credits}
+
+- if show_date
+  .container.my-5
+    = partial "partials/column-title",
+      locals: {title: I18n.t("updated_at"), large: true}
+
+    = partial "partials/formatted-date",
+      locals: {date: page.updated_at}

@@ -1,40 +1,53 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-- page.banners.each do |block|
-  = partial "partials/blocks/#{block.item_type.api_key}",
-    locals: {block: block}
+h1.sr-only = dato.homepage.title
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/featured-news", locals: {featured_items: page.featured_news}
-    = partial "partials/cards-horizontal-list",
-      locals: {items: page.news.take(3),
-      hide_image: true,
-      hide_tags: true,
-      show_item_type: true,
-      btn_url: dato.news_page}
+- if page.banners.present?
+  h2.sr-only Segnalazioni
+  - page.banners.each do |block|
+    = partial "partials/blocks/#{block.item_type.api_key}",
+      locals: {block: block}
 
+.container.pt-5
+  h2.h4.mb-4 = t("home.highlights")
+
+  - if page.featured_news.any? || page.news.any?
+      - if page.featured_news.any?
+          = partial "partials/featured-news",
+            locals: {featured_items: page.featured_news,
+            show_item_type: true}
+
+      - if page.news.any?
+        = partial "partials/cards-horizontal-list",
+          locals: {items: page.news,
+          hide_image: true,
+          hide_tags: true,
+          show_item_type: true,
+          btn_url: dato.news_page}
+
+/ blocco Ministra
 .py-5.lightgrey-bg-a2
   .container
     = partial "partials/card-feature-carousel"
 
+/ blocco Focus
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
 
-.py-5.lightgrey-bg-c1
-  .container
-    = partial "partials/card-featured-projects", locals: {page: page}
+.container
+  = partial "partials/card-featured-projects", locals: {page: page}
 
-.lightgrey-bg-a2
-  .container
-    = partial "partials/flag", locals: {flags: page.sections, image_right: true}
+- if page.sections.any?
+  .lightgrey-bg-a2
+    .container
+      = partial "partials/flag",
+        locals: {flags: page.sections, image_right: true}
 
-.py-5.lightgrey-bg-c1
+- if page.announcements.any?
   .container
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
-      items: dato.announcements.take(3),
+      items: page.announcements,
       btn_url: dato.announcements_index}
 
 = partial "partials/numbers", locals: {numbers: page.numbers}
-

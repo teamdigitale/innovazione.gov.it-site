@@ -1,0 +1,10 @@
+.mid-absolute-column{
+  max-height: 350px;
+  @include media-breakpoint-up(lg) {
+    max-height: initial;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}

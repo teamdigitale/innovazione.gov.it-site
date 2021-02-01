@@ -1,0 +1,16 @@
+.breadcrumb-container {
+  .breadcrumb {
+    .breadcrumb-item {
+      a {
+        font-weight: 400;
+      }
+      &.active {
+        font-weight: 600;
+        a {
+          pointer-events: auto;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

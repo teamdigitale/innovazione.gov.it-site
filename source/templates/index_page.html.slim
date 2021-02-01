@@ -1,22 +1,29 @@
+- items ||= []
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page } do
+= partial "partials/headers/header-basic", locals: {page: page} do
   = content_for :aside
     = partial "partials/explore-aside",
       locals: {page: page}
 
 .container
-  hr.border-bottom
+  .border-bottom
 
 .py-3.my-lg-5
   .container.mid-container
-    .row
-      - items.each do |n|
-        .col-lg-8
-          = partial "partials/card-related-items",
-            locals: {item: n}
+    - if items.any?
+      .row
+        h2.sr-only Elenco degli elementi
+        - items.each do |n|
+          .col-lg-8
+            = partial "partials/card-related-items",
+              locals: {item: n}
 
-    .pt-lg-4
-      = partial "partials/pagination",
-        locals: {pager: pager}
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
+
+    - else
+      = t("empty_list")

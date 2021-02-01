@@ -1,16 +1,23 @@
+ruby:
+  classes = %w[
+    d-flex
+    flex-row
+    align-items-start
+    align-items-lg-baseline
+    justify-content-between
+    justify-content-lg-start
+  ].join(" ")
+
 .border-bottom.py-2.py-lg-1
   .container
-    section.d-flex.flex-row.align-items-start.align-items-lg-baseline.justify-content-between.justify-content-lg-start
+    section class=classes
       .d-lg-flex.align-items-lg-center
         - if banner.title.present?
-          h2.h5.text-primary.mid-underline.font-weight-bold.pr-lg-3
-            = partial "partials/links/#{banner.link.item_type.api_key}",
-              locals: {item: banner.link,
-                label: banner.title,
-                html_class: ""}
+          h3.h5.font-weight-bold.pr-lg-3.pt-1
+            = banner.title
+        .pr-lg-4 = banner.text
 
-        .pr-lg-4= banner.text
-
-      = partial "partials/links/#{banner.link.item_type.api_key}",
-        locals: {item: banner.link,
-          html_class: "btn text-primary text-uppercase px-0 text-nowrap"}
+      - if links_to_existing_page?(banner.link)
+        = partial "partials/links/#{banner.link.item_type.api_key}",
+          locals: {item: banner.link,
+            html_class: "btn text-primary text-uppercase px-0 text-nowrap"}

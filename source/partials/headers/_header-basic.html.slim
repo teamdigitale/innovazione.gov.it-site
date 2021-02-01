@@ -1,11 +1,12 @@
-- page ||= nil
-- share ||= nil
-- classes ||= ""
-- subs ||= nil
-- hide_caption ||= nil
+ruby:
+  page ||= nil
+  share ||= nil
+  classes ||= ""
+  subs ||= nil
+  hide_caption ||= nil
 
 - if page.present?
-  header class=(classes)
+  div class=classes
     .container.pb-5.text-center.text-sm-left
       .row
         .col-12
@@ -14,24 +15,23 @@
         .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-md-4
           = partial "partials/headers/main-titles", locals: {page: page}
 
-          - yield
+          - yield if block_given?
           - if content_for?(:col_one) || content_for?(:col_two)
             .row.mb-5
               - if content_for?(:col_one)
-                .col-6.pb-sm-0
+                .col-md-6
                   = yield_content :col_one
 
               - if content_for?(:col_two)
-                .col-6
+                .col-md-6
                   = yield_content :col_two
 
-          = partial "partials/headers/subpages-menu", locals: {subs: subs, hide_caption: hide_caption}
-          
+          = partial "partials/headers/subpages-menu",
+            locals: {subs: subs, hide_caption: hide_caption}
+
         - if content_for?(:aside)
           .offset-lg-1.col-md-4
             - if share.present?
               = partial "partials/share"
             - if content_for?(:aside)
-              = yield_content :aside 
-
-
+              = yield_content :aside

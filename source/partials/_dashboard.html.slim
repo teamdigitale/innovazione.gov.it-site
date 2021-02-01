@@ -1,0 +1,48 @@
+ruby:
+  button_classes = %(d-flex justify-content-center
+    align-items-center justify-content-lg-end)
+
+- if page.respond_to?(:dashboard_embed) && page.dashboard_embed.present?
+  .mid-numbers-background.py-5
+    .container.pt-5.pb-2.py-lg-5
+      .row
+        .col-12.col-lg-6.offset-lg-1.container
+          h2.h4.font-weight-semibold.text-center.text-lg-left
+            = page.dashboard_title
+          p.h5.text-center.text-lg-left
+            = page.dashboard_subtitle
+
+        .col-12.col-lg-3.text-align-right class=button_classes
+          .pt-5.pt-lg-0
+
+            button.btn.btn-outline-dark.mid-text-dark [
+              data-target=".dashboard"
+              data-toggle="modal"
+              type="button"]
+
+              = t("open_dashboard")
+
+            .modal.fade.dashboard [
+              aria-hidden="true"
+              aria-labelledby=page.dashboard_title
+              aria-describedby=page.dashboard_subtitle
+              role="dialog"
+              tabindex="-1"]
+
+              .modal-dialog.modal-lg role="dashboard"
+                .modal-content
+                  button.close.text-right [
+                    type="button"
+                    data-dismiss="modal"
+                    aria-label="Close"]
+                    svg.icon
+                      use xlink:href="/images/sprite.svg#it-close"
+                  iframe [
+                    src=page.dashboard_embed
+                    name="project_dashboard"
+                    id="project_dashboard"
+                    width="100%"
+                    height="600"
+                    allowtransparency=""]
+
+        .col-lg-1

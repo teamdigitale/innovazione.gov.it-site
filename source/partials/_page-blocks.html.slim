@@ -2,7 +2,6 @@
 
 - page.content_blocks.each do |block|
   .mid-formatted-content
-    div id="#{block.respond_to?(:text_title) ? block.text_title.downcase.gsub(' ', '-') : ''}"
-      = partial "partials/blocks/#{block.item_type.api_key}",
-        locals: {block: block,
-          compact_columns: compact_columns}
+    = partial "partials/blocks/#{block.item_type.api_key}",
+      locals: {block: block,
+        compact_columns: compact_columns}

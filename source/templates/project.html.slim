@@ -1,30 +1,46 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: { page: page } do
+- logo = page.image_project_logo
+- image_url = logo.file.width(800).format("pjpg").to_url
+
+= partial "partials/headers/header-basic",
+    locals: {page: page} do
 
   = content_for :aside
-    .img-responsive-wrapper
-      figure.figure.w-75
-        = proxy_image_tag page.image_project_logo.file.width(800).format('pjpg').to_url,
-                    alt: "Logo #{page.image_project_logo}",
-                    class: "figure-img img-fluid"
+    .d-flex.justify-content-center.d-lg-block
+      .col-4.col-md-6.px-0
+        .img-responsive-wrapper
+          figure.figure
+            = proxy_image_tag image_url,
+                alt: logo.alt,
+                class: "figure-img img-fluid"
 
     - if page.link_external_project_website.present?
-      - link  = page.link_external_project_website
-      - label = link.cta_label.present? ? link.cta_label : t("link_labels.go_to_website")
-
-      = link_to label, link.link, class: "btn btn-primary mt-3", target: "_blank"
+      ruby:
+        link = page.link_external_project_website
+        label = if link.cta_label.present?
+                  link.cta_label
+                else
+                  t("link_labels.go_to_website")
+                end
+      .d-flex.justify-content-center.d-lg-block
+        .pb-4
+          = link_to label, link.link,
+            class: "btn btn-primary mt-3",
+            target: "_blank"
 
   = content_for :col_one
-    = partial "partials/column-title", locals: {title: t("projects.category")}
-    = link_to page.category.name, "#{page_path(dato.projects_page)}##{page.category.slug}"
+    .mb-4
+      = partial "partials/column-title", locals: {title: t("projects.category")}
+      = link_to page.category.name,
+                "#{page_path(dato.projects_page)}##{page.category.slug}"
 
   = content_for :col_two
     = partial "partials/column-title", locals: {title: t("projects.topics")}
     - page.tags.each do |tag|
       = partial "partials/chip",
-        locals: {label: tag.name, url: "#"}
+        locals: {label: tag.name, url: page_path(tag)}
 
-= partial "partials/layouts/two-columns",
+= partial "partials/page-content",
   locals: {page: page}

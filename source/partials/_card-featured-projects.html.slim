@@ -1,18 +1,63 @@
-.row.align-items-center
-  .col-lg-6
-    .col-lg-8.offset-lg-2
-      = partial "partials/image_text_gallery",
-        locals: {slides: page.featured_projects}
-  .col-lg-5
-    div.py-5.px-2.p-md-0
-      .small.text-uppercase.font-weight-semibold.text-muted.pt-5.p-md-0.text-center.text-md-left
-        = page.projects_pre_title
-      .d-none.d-lg-block.h1.pt-2 = page.projects_title
-      .d-none.d-md-block.d-lg-none.h4.pt-2 = page.projects_title
-      .d-md-none.h4.pt-2.text-center = page.projects_title
-      .my-3.mt-md-5.text-center.text-md-left.pb-5.p-md-0
-        = link_to t("view_more"),
-          page_path(dato.projects_page),
-          class: "btn btn-primary text-white text-uppercase"
-  .col-lg-1
+ruby:
+  projects_button_parent_classes = %(my-5 mt-md-5 text-center d-flex d-flex-wrap
+    justify-content-center align-items-center)
 
+  toggler_classes = %(p-0 btn btn-default btn-dropdown
+    dropdown-toggle)
+
+.row.mt-5.mb-lg-5
+  .col-lg-5.pt-5
+    .mt-5.mt-lg-0
+      h2.h6 class=["mid-caption--large",
+                "text-uppercase",
+                "font-weight-semibold",
+                "pt-5", "p-lg-0", "text-center",
+                "text-lg-left"].join(" ")
+
+        = page.projects_pre_title
+
+      h3.d-lg-block.h1.pt-2.text-center.text-lg-left
+        = page.projects_title
+
+      p.d-none.d-lg-block.h3.font-weight-normal.text-center.text-lg-left
+        = page.projects_text
+
+      p.d-lg-none.font-weight-normal.text-center.text-lg-left
+        = page.projects_text
+
+      div class=projects_button_parent_classes
+        = partial "partials/button",
+          locals: {btn_url: dato.projects_page,
+          aria_label: page.projects_pre_title}
+
+        .dropdown.ml-5
+          button#projectsCategories [class=toggler_classes
+              aria-expanded="false"
+              aria-haspopup="true"
+              data-toggle="dropdown"
+              type="button"]
+
+            = t("project_categories_dropdown")
+            svg.icon-expand.icon.icon-sm.icon-primary [
+              focusable="false"
+              alt=""
+            ]
+              use xlink:href="/images/sprite.svg#it-expand"
+
+          .dropdown-menu aria-labelledby="projectsCategories"
+            .link-list-wrapper
+              ul.link-list
+                - visible_projects_categories.each do |c|
+                  li
+                    = link_to "#{page_path(dato.projects_page)}##{c.slug}",
+                      class: "list-item"
+                      span.text-nowrap = c.name
+
+  .col-lg-6.pt-5.order-first
+    .col-lg-8.offset-lg-2
+      - if page.featured_projects.present?
+        h3.sr-only In evidenza
+        = partial "partials/image_text_gallery",
+          locals: {slides: page.featured_projects}
+
+  .col-lg-1

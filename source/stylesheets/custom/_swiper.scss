@@ -1,16 +1,13 @@
 .swiper-container {
+  z-index: 0;
 }
 
 .fixed-height {
   height: 400px;
-  z-index: 3;
 }
 
-.mid-fixed-height--300 {
-  height: 300px;
-}
-
-.swiper-wrapper {
+.fixed-width {
+  max-width: 400px;
 }
 
 .swiper-slide {
@@ -18,7 +15,6 @@
   position: relative;
 
   img {
-    position: absolute;
     width: 90%;
     height: 90%;
     top: 5%;
@@ -58,7 +54,7 @@
 
 .swiper--text {
   .swiper-slide__text {
-    border-bottom: 3px solid #0066CC;
+    border-bottom: 5px solid #0066CC;
     height: 100%;
   }
 }
@@ -72,6 +68,7 @@
 
 .swiper-pagination {
   position: relative;
+  z-index: 0;
 }
 
 .swiper-pagination-bullet {
@@ -81,5 +78,11 @@
 
   &:last-child {
     margin-right: none;
+  }
+}
+
+.numbers-pagination-bullet {
+  .swiper-pagination-bullet {
+    background-color: #33485C;
   }
 }

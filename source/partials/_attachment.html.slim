@@ -1,13 +1,19 @@
 - attachment ||= nil
 
+ruby:
+  attachment_classes = %(card-title mid-text-dark text-decoration-none)
+
 - if attachment.present?
   .card.h-100.card-teaser.rounded.shadow
-    svg.icon.icon-primary
+    svg.icon.icon-primary [
+      focusable="false"
+      role="img"
+      aria-label=t("file_type", ext: attachment.file.mime_type.split("/")[1])
+    ]
       use xlink:href="/images/sprite.svg#it-copy"
     .card-body
-      h4.font-weight-semibold
+      h3.font-weight-semibold.mid-caption--xlarge
         = proxy_link_to attachment.file.url,
-          class: "card-title mid-caption--xlarge mid-text-dark text-decoration-none"
-          .card-title.mid-caption--xlarge
+          class: attachment_classes
             = attachment.file_title
       p.card-text = attachment.file_description
