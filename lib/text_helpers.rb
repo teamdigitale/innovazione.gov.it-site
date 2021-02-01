@@ -59,7 +59,6 @@ module TextHelpers
   def add_pdf_attributes(link)
     link.set_attribute("target", "_blank")
     link.set_attribute("rel", "noopener")
-    link.set_attribute("aria-label", "link a file PDF")
     link.content = "#{link.content} (PDF)"
     link
   end
