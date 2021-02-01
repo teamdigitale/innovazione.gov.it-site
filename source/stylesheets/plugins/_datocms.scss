@@ -40,7 +40,7 @@
   margin-bottom: 10px;
   font-size: 0.8em;
   font-weight: bold;
-  color: #888;
+  color: #666;
 }
 .datocms-widget__loading__inner-1 {
   width: 100%;
@@ -187,8 +187,6 @@
   }
   .datocms-widget__body {
     min-height: 80px;
-    max-height: 60vh;
-    overflow: auto;
   }
   .datocms-widget__header__inner {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
