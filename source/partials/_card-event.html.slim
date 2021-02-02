@@ -1,0 +1,20 @@
+ruby:
+  event ||= nil
+  time ||= ""
+  category ||= ""
+
+- if event.present?
+  .card
+    .card-body.lightgrey-bg-a2.py-2.px-3
+      .col-12
+        .category.pb-2.mid-caption.font-weight-semibold
+          span.pr-2
+            = time
+
+          span.px-2.text-uppercase
+            = category
+        h3.h5.font-weight-semibold
+          = link_to page_path(event),
+            class: "text-primary text-decoration-none"
+            = title
+
