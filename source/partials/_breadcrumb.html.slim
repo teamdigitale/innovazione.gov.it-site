@@ -51,9 +51,9 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
         .text-capitalize
           = locale
 
-        span.separator aria-hidden=true
+        span.separator aria-hidden="true"
           = "/"
 
-    li.breadcrumb-item.active aria-current='page'
+    li.breadcrumb-item.active aria-current="page"
       span class=current_classes
         = menu_label_with_fallback(page)
