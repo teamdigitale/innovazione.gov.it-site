@@ -8,7 +8,7 @@ ruby:
     ("d-none d-sm-block" if page_is_editorial(page) && main_locale?(locale))
   ].join(" ")
 
-nav.breadcrumb-container aria-label=t("you_are_here")
+nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
   ol.breadcrumb.mt-4.mb-5.justify-content-center.justify-content-sm-start
     li.breadcrumb-item.d-none.d-sm-block
       = link_to t("home_label"),
@@ -21,7 +21,7 @@ nav.breadcrumb-container aria-label=t("you_are_here")
     - if page_is_explore(page)
       li.breadcrumb-item
         = t("explore_breadcrumb_prefix")
-        span.separator aria-hidden=true
+        span.separator aria-hidden="true"
           = "/"
 
     - if ancestor
@@ -31,8 +31,8 @@ nav.breadcrumb-container aria-label=t("you_are_here")
           class: html_class
 
         span.separator [
-          class="#{current_classes unless parent}"
-          aria-hidden=true]
+          class="#{current_classes if !parent}"
+          aria-hidden="true"]
           = "/"
 
     - if parent
@@ -43,17 +43,17 @@ nav.breadcrumb-container aria-label=t("you_are_here")
 
         span.separator [
           class=current_classes
-          aria-hidden=true]
+          aria-hidden="true"]
           = "/"
 
-    - unless main_locale?(locale)
+    - if !main_locale?(locale)
       li.breadcrumb-item
         .text-capitalize
           = locale
 
-        span.separator aria-hidden=true
+        span.separator aria-hidden="true"
           = "/"
 
-    li.breadcrumb-item.active aria-current='page'
+    li.breadcrumb-item.active aria-current="page"
       span class=current_classes
         = menu_label_with_fallback(page)

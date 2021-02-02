@@ -30,7 +30,7 @@
   .border-bottom
 
 .py-lg-5
-  - unless pager.previous_page
+  - if !pager.previous_page
     - focus_pages = visible_focus_pages.select { |f| f.tags.include?(page) }
 
     - if focus_pages.any?

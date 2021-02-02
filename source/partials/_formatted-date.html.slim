@@ -4,4 +4,4 @@
 - format = show_time.present? ? "%d %B %Y %H:%M" : "%d %B %Y"
 
 - if date.present?
-  span = I18n.l(in_italian_zone(date), format: format)
+  span = I18n.l(in_italian_zone(date), format: format).downcase

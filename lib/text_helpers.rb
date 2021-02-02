@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
+# Text manipulation helper functions
 module TextHelpers
   module_function
 
   def markdown(content)
     return "" if content.blank?
 
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, autolink: true, space_after_headers: true)
-    markdown.render(content)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
+                                       autolink: true, space_after_headers: true)
+    new_content = markdown.render(content)
+    replace_external_links(new_content)
   end
 
   WORDS_PER_MINUTE = 180
@@ -29,5 +32,37 @@ module TextHelpers
   def reading_time(text)
     words = text.split.size
     (words / WORDS_PER_MINUTE).floor
+  end
+
+  def replace_external_links(content)
+    return "" if content.blank?
+
+    doc = Nokogiri::HTML(content)
+
+    links = doc.search("a")
+    links.each do |link|
+      url = link.attributes["href"].content
+      add_link_attributes(link) if !url.include?(ENV["BASE_URL"])
+      add_pdf_attributes(link) if url.include? ".pdf"
+    end
+
+    doc.to_html
+  end
+
+  def add_link_attributes(link)
+    link.set_attribute("target", "_blank")
+    link.set_attribute("rel", "noopener")
+    link.set_attribute("aria-label",
+                       "#{link.content} #{I18n.t('new_tab')}")
+    link
+  end
+
+  def add_pdf_attributes(link)
+    link.set_attribute("target", "_blank")
+    link.set_attribute("rel", "noopener")
+    link.attributes["aria-label"]&.remove
+
+    link.content = "#{link.content} (PDF)"
+    link
   end
 end

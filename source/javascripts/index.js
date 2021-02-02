@@ -3,11 +3,15 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
-import "bootstrap-italia/src/js/plugins/sticky-header";
 import "lazysizes";
+import "lazysizes/plugins/respimg/ls.respimg";
 import "focus-visible/src/focus-visible.js"
 import Sharer from "sharer.js/sharer.js"
-
+import "core-js/features/promise";
+import "core-js/features/object/assign";
+import "core-js/features/string/repeat";
+import "core-js/features/number";
+import svg4everybody from "svg4everybody";
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
 
@@ -43,6 +47,14 @@ if ($(".swiper-container").length > 0) {
         el: ".pagination-" + index,
         type: "bullets",
         clickable: true,
+      },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "Slide precedente",
+        nextSlideMessage: "Slide successiva",
+        firstSlideMessage: "Questa è la prima slide",
+        lastSlideMessage: "Questa è l'ultima slide",
+        paginationBulletMessage: "Vai alla slide {{index}}"
       },
     });
   });
@@ -82,5 +94,6 @@ $('.nav-item').click(function(e) {
 })
 
 initSearch();
+svg4everybody();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};

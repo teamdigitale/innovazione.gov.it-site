@@ -2,8 +2,9 @@ doctype 5
 html lang=I18n.locale
   head = partial "partials/head"
   body
-    a.sr-only.sr-only-focusable href="#content" Vai al contenuto principale
-    a.sr-only.sr-only-focusable href="#footer" Vai al footer
+    div data-datocms-noindex=true
+      a.sr-only.sr-only-focusable href="#content" Vai al contenuto principale
+      a.sr-only.sr-only-focusable href="#footer" Vai al footer
 
     = partial "partials/site-nav"
 
