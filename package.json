@@ -55,6 +55,7 @@
     "gh-pages": "^3.1.0",
     "lazysizes": "^5.2.2",
     "sharer.js": "^0.4.1",
+    "svg4everybody": "^2.1.9",
     "swiper": "^6.4.5"
   },
   "browserslist": [

@@ -11,7 +11,7 @@ import 'core-js/features/promise';
 import 'core-js/features/object/assign';
 import 'core-js/features/string/repeat';
 import 'core-js/features/number';
-
+import svg4everybody from "svg4everybody";
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
 
@@ -86,5 +86,6 @@ $('.nav-item').click(function(e) {
 })
 
 initSearch();
+svg4everybody();
 progressIndicator.updateProgress()
 window.onscroll = function() {progressIndicator.updateProgress()};
