@@ -141,7 +141,7 @@ module PathHelpers
   private
 
   def path_prefix(locale)
-    locale == locales[0] ? "" : "#{locale.to_s}/"
+    locale == locales[0] ? "" : "#{locale}/"
   end
 
   def locales
