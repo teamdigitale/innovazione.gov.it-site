@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Image path and tag functions
 module ImageHelpers
   module_function
 

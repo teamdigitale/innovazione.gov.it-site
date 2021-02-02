@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - "bin/stubs/*"
+
 Layout/SpaceBeforeBrackets:
   Enabled: true
 Layout/SpaceInsideHashLiteralBraces:
@@ -16,6 +20,8 @@ Lint/EmptyClass:
   Enabled: true
 Lint/LambdaWithoutLiteralBlock:
   Enabled: true
+Style/NegatedIf:
+  Enabled: false
 Lint/NoReturnInBeginEndBlocks:
   Enabled: true
 Lint/RedundantDirGlobSort:

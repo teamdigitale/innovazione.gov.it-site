@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Helpers for the construction of paths
 module PathHelpers
   module_function
 
@@ -105,7 +106,7 @@ module PathHelpers
   end
 
   def active_link_to(name, url, options = {})
-    url += "/" unless url.end_with?("/")
+    url += "/" if !url.end_with?("/")
 
     options[:class] = "#{options.fetch(:class, '')} active" if active?(url)
     link_to name, url, options
@@ -141,7 +142,7 @@ module PathHelpers
   private
 
   def path_prefix(locale)
-    locale == locales[0] ? "" : "#{locale.to_s}/"
+    locale == locales[0] ? "" : "#{locale}/"
   end
 
   def locales
