@@ -54,5 +54,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: notify_deploy
-        # Temporarily notifying success under any circumstances
-        run: ./sh/notify.sh ${{ secrets.DATOCMS_ENDPOINT_ID }} success
+      # Temporarily notifying success under any circumstances
+      run: ./sh/notify.sh ${{ secrets.DATOCMS_ENDPOINT_ID }} success
