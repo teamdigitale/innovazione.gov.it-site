@@ -48,6 +48,14 @@ if ($(".swiper-container").length > 0) {
         type: "bullets",
         clickable: true,
       },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "Slide precedente",
+        nextSlideMessage: "Slide successiva",
+        firstSlideMessage: "Questa è la prima slide",
+        lastSlideMessage: "Questa è l'ultima slide",
+        paginationBulletMessage: "Vai alla slide {{index}}"
+      },
     });
   });
 
