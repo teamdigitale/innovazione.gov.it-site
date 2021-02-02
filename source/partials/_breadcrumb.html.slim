@@ -21,7 +21,7 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
     - if page_is_explore(page)
       li.breadcrumb-item
         = t("explore_breadcrumb_prefix")
-        span.separator aria-hidden=true
+        span.separator aria-hidden="true"
           = "/"
 
     - if ancestor
@@ -32,7 +32,7 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
 
         span.separator [
           class="#{current_classes if !parent}"
-          aria-hidden=true]
+          aria-hidden="true"]
           = "/"
 
     - if parent
@@ -43,7 +43,7 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
 
         span.separator [
           class=current_classes
-          aria-hidden=true]
+          aria-hidden="true"]
           = "/"
 
     - if !main_locale?(locale)
