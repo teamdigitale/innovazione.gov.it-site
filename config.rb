@@ -512,15 +512,23 @@ dato.tap do |dato|
       index_template = "/templates/index_page.html"
     )
       parent_path = "#{parent_page.slug}/"
-      index_path = index_page.slug.to_s
-      path = "/#{parent_path}#{index_path}"
+      page_path = page.slug.to_s
+      path = "/#{parent_path}#{page_path}"
 
-      if items.any?
+      if items.any? && template == "index"
         paginate items,
                  path,
                  index_template,
                  suffix: "/page/:num/index",
-                 locals: {page: index_page},
+                 locals: {page: page},
+                 per_page: 10
+
+      elsif items.any? && template == "schedule"
+        paginate items,
+                 path,
+                 "/templates/schedule.html",
+                 suffix: "/page/:num/index",
+                 locals: {page: page},
                  per_page: 10
 
       else
@@ -632,7 +640,27 @@ dato.tap do |dato|
                            dato.minister_page,
                            locale)
 
-    visible_minister_subpages.each do |minister_subpage|
+    minister_events = dato.schedule_events.sort do |a, b|
+      a.agenda_date <=> b.agenda_date
+    end
+
+    months = (minister_events.each_with_object([]) do |e, arr|
+      arr << e.agenda_date.strftime("%B %Y")
+    end).uniq!
+
+    minister_events_by_month = months.each_with_object({}) do |month, h|
+      h[month] = (minister_events.select do |event|
+        event.agenda_date.strftime("%B %Y") == month
+      end)
+    end
+
+    paginate_with_fallback(minister_events_by_month,
+                           dato.schedule_page,
+                           dato.minister_page,
+                           locale,
+                           "schedule")
+
+    PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
       proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
             "/templates/page.html",
