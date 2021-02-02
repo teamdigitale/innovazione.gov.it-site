@@ -512,23 +512,15 @@ dato.tap do |dato|
       index_template = "/templates/index_page.html"
     )
       parent_path = "#{parent_page.slug}/"
-      page_path = page.slug.to_s
+      index_path = index_page.slug.to_s
       path = "/#{parent_path}#{page_path}"
 
-      if items.any? && template == "index"
+      if items.any?
         paginate items,
                  path,
                  index_template,
                  suffix: "/page/:num/index",
-                 locals: {page: page},
-                 per_page: 10
-
-      elsif items.any? && template == "schedule"
-        paginate items,
-                 path,
-                 "/templates/schedule.html",
-                 suffix: "/page/:num/index",
-                 locals: {page: page},
+                 locals: {page: index_page},
                  per_page: 10
 
       else
