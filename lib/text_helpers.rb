@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Text manipulation helper functions
 module TextHelpers
   module_function
 

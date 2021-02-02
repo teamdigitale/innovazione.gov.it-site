@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Helpers for the construction of paths
 module PathHelpers
   module_function
 

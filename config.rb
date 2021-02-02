@@ -80,6 +80,7 @@ configure :development do
            default_change_frequency: "weekly"
 end
 
+# Item selection functions
 module PresentationHelper
   def self.published_announcements(announcements)
     announcements.sort_by(&:date_shown).reverse
@@ -130,11 +131,11 @@ module PresentationHelper
   end
 
   def self.published_redirects(redirects)
-    redirects.select{|r| r.old_url}
+    redirects.select(&:old_url)
   end
 
   def self.path_without_domain(url)
-    url.gsub("https://innovazione.gov.it","")
+    url.gsub("https://innovazione.gov.it", "")
   end
 end
 
@@ -311,8 +312,8 @@ helpers do
     locale == locales[0]
   end
 
-  def in_italian_zone(t)
-    t.in_time_zone(ENV["TZ"])
+  def in_italian_zone(time)
+    time.in_time_zone(ENV["TZ"])
   end
 end
 
