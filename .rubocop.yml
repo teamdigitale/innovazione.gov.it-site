@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - "bin/stubs/*"
+
 Layout/SpaceBeforeBrackets:
   Enabled: true
 Layout/SpaceInsideHashLiteralBraces:
