@@ -105,7 +105,7 @@ module PathHelpers
   end
 
   def active_link_to(name, url, options = {})
-    url += "/" unless url.end_with?("/")
+    url += "/" if !url.end_with?("/")
 
     options[:class] = "#{options.fetch(:class, '')} active" if active?(url)
     link_to name, url, options

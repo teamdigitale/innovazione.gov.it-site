@@ -41,7 +41,7 @@ module TextHelpers
     links = doc.search("a")
     links.each do |link|
       url = link.attributes["href"].content
-      add_link_attributes(link) unless url.include? ENV["BASE_URL"]
+      add_link_attributes(link) if !url.include?(ENV["BASE_URL"])
       add_pdf_attributes(link) if url.include? ".pdf"
     end
 

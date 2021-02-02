@@ -20,6 +20,8 @@ Lint/EmptyClass:
   Enabled: true
 Lint/LambdaWithoutLiteralBlock:
   Enabled: true
+Style/NegatedIf:
+  Enabled: false
 Lint/NoReturnInBeginEndBlocks:
   Enabled: true
 Lint/RedundantDirGlobSort:

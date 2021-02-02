@@ -266,7 +266,7 @@ helpers do
   end
 
   def anchor_id(title)
-    return "" unless title
+    return "" if !title
 
     title.parameterize
   end
@@ -628,7 +628,7 @@ dato.tap do |dato|
 
     PresentationHelper.published_tags(dato.tags).each do |tag|
       tag_news_contents = news_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
-      next unless tag_news_contents.any?
+      next if tag_news_contents.none?
 
       paginate tag_news_contents,
                "/#{dato.tags_index.slug}/#{tag.slug}",

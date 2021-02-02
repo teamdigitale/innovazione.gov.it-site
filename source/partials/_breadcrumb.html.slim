@@ -31,7 +31,7 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
           class: html_class
 
         span.separator [
-          class="#{current_classes unless parent}"
+          class="#{current_classes if !parent}"
           aria-hidden=true]
           = "/"
 
@@ -46,7 +46,7 @@ nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
           aria-hidden=true]
           = "/"
 
-    - unless main_locale?(locale)
+    - if !main_locale?(locale)
       li.breadcrumb-item
         .text-capitalize
           = locale
