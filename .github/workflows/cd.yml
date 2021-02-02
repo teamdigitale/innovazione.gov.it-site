@@ -52,3 +52,7 @@ jobs:
         yarn deploy -- --dotfiles -m "Automated deployment: ${GITHUB_SHA} [ci skip]"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: notify_deploy
+        # Temporarily notifying success under any circumstances
+        run: ./sh/notify.sh ${{ secrets.DATOCMS_ENDPOINT_ID }} success
