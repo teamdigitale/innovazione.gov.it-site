@@ -1,25 +1,51 @@
-.container
-  = "Agenda"
-  ul#agenda-tabs.nav.nav-tabs role="tablist"
-    - (1..5).each do |i|
-      li.nav-item
-        a [
-          id="data-ex-tab#{i}-tab"
-          class="nav-link #{'active' if i == 3}"
-          aria-controls="tab#{i}"
-          aria-selected="true"
-          data-toggle="tab"
-          href="#tab#{i}"
-          role="tab"]
+.pt-5.lightgrey-bg-a2
+  .container
+    .row.no-gutters.align-items-stretch.justify-content-center
+      .col-12.col-lg-2.d-flex.align-items-center.py-1.justify-content-xl-end
+        h2.h4.pb-2.pr-xl-5
+          = t('the_schedule')
 
-          = i
+      .col-12.col-lg-8
+        ul#agenda-tabs.nav.nav-tabs.mid-tabs-nav role="tablist"
+          - (1..8).each do |i|
+            li.nav-item
+              a [
+                id="data-ex-tab#{i}-tab"
+                class="nav-link #{'active' if i == 3}"
+                aria-controls="tab#{i}"
+                aria-selected="true"
+                data-toggle="tab"
+                href="#tab#{i}"
+                role="tab"]
 
-  .tab-content
-    - (1..5).each do |i|
-      div [
-        id="tab#{i}"
-        class="tab-pane #{'active' if i == 3}"
-        aria-labelledby="data-ex-tab#{i}-tab"
-        role="tabpanel"]
+                .h5.mb-0.font-weight-semibold
+                  = "33"
 
-        = "tab #{i}"
+                .mid-caption--xsmall
+                  = "Nov"
+
+      .col-12.col-lg-2.d-none.d-lg-flex.white-bg.align-items-center.py-1
+        = partial "partials/button",
+          locals: {btn_url: dato.schedule_page,
+            color_class: "btn btn-outline-primary"}
+
+    .tab-content.mid-tabs-content
+      - (1..8).each do |i|
+        div [
+          id="tab#{i}"
+          class="tab-pane #{'active' if i == 3}"
+          aria-labelledby="data-ex-tab#{i}-tab"
+          role="tabpanel"]
+          .container
+            .row
+              - visible_schedule_events.take(4).each do |event|
+                .col-12.col-md-6.col-lg-3
+                  .p-2
+                    .border-left.border-200
+                      = partial "partials/card-event",
+                        locals: {event: event,
+                        time: "Ore #{event.agenda_date.to_time.hour}",
+                        category: event.agenda_category.name,
+                        title: event.title,
+                        card_class: "bg-transparent",
+                        title_class: "h6"}
