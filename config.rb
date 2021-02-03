@@ -677,18 +677,22 @@ dato.tap do |dato|
 
     visible_schedule_events = dato.schedule_events.sort_by(&:agenda_date)
 
-    days = (visible_schedule_events.each_with_object([]) do |event, daily_arr|
+    current_and_future_events = visible_schedule_events.select do |event|
+      event.agenda_date >= DateTime.now
+    end
+
+    days = (current_and_future_events.each_with_object([]) do |event, daily_arr|
       daily_arr << event.agenda_date.strftime("%d %B %Y")
     end)
     days.uniq!
 
     events_by_day = (days.each_with_object({}) do |day, h|
-      h[day] = (visible_schedule_events.select do |e|
+      h[day] = (current_and_future_events.select do |e|
         e.agenda_date.strftime("%d %B %Y") == day
       end)
     end)
 
-    months = (visible_schedule_events.each_with_object([]) do |e, arr|
+    months = (current_and_future_events.each_with_object([]) do |e, arr|
       arr << e.agenda_date.strftime("%B %Y")
     end)
     months.uniq!
@@ -705,7 +709,10 @@ dato.tap do |dato|
                            locale,
                            "schedule")
 
-    archive_events = visible_schedule_events.reverse
+    archive_events = visible_schedule_events.reverse.select do |event|
+      event.agenda_date <= DateTime.now
+    end
+
     days_in_archive = (archive_events.each_with_object([]) do |event, daily_arr|
       daily_arr << event.agenda_date.strftime("%d %B %Y")
     end)
