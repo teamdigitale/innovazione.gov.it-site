@@ -16,18 +16,19 @@
 .py-3.my-lg-5
   .container.mid-container
     - if items.any?
-      h2.sr-only Elenco degli eventi
+      h2.sr-only = t("event_list")
       - items.each do |month, events_by_day|
         .col-12.mb-5
           h4.mb-5 = month
-        - events_by_day.each do |day, events|
+        - events_by_day.each do |_day, events|
           .row
-            .col-lg-1.offset-lg-1.px-0.d-flex.justify-content-center.align-items-start
-              .py-3.w-100.bg-primary.text-white.text-center
-                p.h5.text-center.weight-font-semibold.mb-0
-                  = events.first.agenda_date.strftime("%d")
-                p.h6.mid-caption--xsmall.mb-0
-                  = events.first.agenda_date.strftime("%#b")
+            .col-lg-1.offset-lg-1.px-0
+              .d-flex.justify-content-center.align-items-start
+                .py-3.w-100.bg-primary.text-white.text-center
+                  p.h5.text-center.weight-font-semibold.mb-0
+                    = events.first.agenda_date.strftime("%d")
+                  p.h6.mid-caption--xsmall.mb-0
+                    = events.first.agenda_date.strftime("%#b")
             .col-lg-7.mb-5.px-0
               - events.each do |event|
                 = partial "partials/card-event",
