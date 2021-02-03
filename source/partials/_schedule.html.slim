@@ -1,0 +1,25 @@
+.container
+  = "Agenda"
+  ul#agenda-tabs.nav.nav-tabs role="tablist"
+    - (1..5).each do |i|
+      li.nav-item
+        a [
+          id="data-ex-tab#{i}-tab"
+          class="nav-link #{'active' if i == 3}"
+          aria-controls="tab#{i}"
+          aria-selected="true"
+          data-toggle="tab"
+          href="#tab#{i}"
+          role="tab"]
+
+          = i
+
+  .tab-content
+    - (1..5).each do |i|
+      div [
+        id="tab#{i}"
+        class="tab-pane #{'active' if i == 3}"
+        aria-labelledby="data-ex-tab#{i}-tab"
+        role="tabpanel"]
+
+        = "tab #{i}"
