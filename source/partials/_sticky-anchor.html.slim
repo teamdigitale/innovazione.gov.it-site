@@ -12,6 +12,10 @@ ruby:
     end
   end
 
+  show_related = main_locale?(locale) &&
+    page.respond_to?(:related_items) &&
+    page.related_items.any?
+
 - content = capture
   - if categories.present?
     - categories.each do |cat|
@@ -29,6 +33,13 @@ ruby:
             "##{anchor_id(block.text_title)}",
             class: "nav-link pr-4",
             tabindex: "-1"
+    - if show_related 
+      li.nav-item
+        = link_to "Related",
+          "#_related-content",
+          class: "nav-link pr-4",
+          tabindex: "-1"
+      
 
 - if categories.present? || any_title_present
   - if mobile
