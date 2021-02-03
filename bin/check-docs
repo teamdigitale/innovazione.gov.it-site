@@ -143,10 +143,7 @@ def asset_redirects
 end
 
 def old_url(doc)
-  parts = doc.split("/")
-  encoded = parts.map { |p| URI.encode_www_form_component(p) }
-  path = encoded.join("/")
-  File.join(OLD_URL_BASE, path)
+  File.join(OLD_URL_BASE, doc)
 end
 
 def redirect_from_old_url(old_url)
