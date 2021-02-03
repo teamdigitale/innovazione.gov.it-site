@@ -16,18 +16,26 @@
 .py-3.my-lg-5
   .container.mid-container
     - if items.any?
-      .row
-        h2.sr-only Elenco degli elementi
-        - items.each do |month, events|
-          .col-lg-8.mb-5
-            h4.mb-5 = month
-            .col-lg-12.offset-lg-1
+      h2.sr-only Elenco degli eventi
+      - items.each do |month, events_by_day|
+        .col-12.mb-5
+          h4.mb-5 = month
+        - events_by_day.each do |day, events|
+          .row
+            .col-lg-1.offset-lg-1.px-0.d-flex.justify-content-center.align-items-start
+              .py-3.w-100.bg-primary.text-white.text-center
+                p.h5.text-center.weight-font-semibold.mb-0
+                  = events.first.agenda_date.strftime("%d")
+                p.h6.mid-caption--xsmall.mb-0
+                  = events.first.agenda_date.strftime("%#b")
+            .col-lg-7.mb-5.px-0
               - events.each do |event|
                 = partial "partials/card-event",
                   locals: {event: event,
                   time: "Ore #{event.agenda_date.to_time.hour}",
                   category: event.agenda_category.name,
                   title: event.title}
+            .col-lg-3
 
       .pt-lg-4
         = partial "partials/pagination",
