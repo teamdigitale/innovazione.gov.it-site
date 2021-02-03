@@ -632,21 +632,31 @@ dato.tap do |dato|
                            dato.minister_page,
                            locale)
 
-    minister_events = dato.schedule_events.sort do |a, b|
-      a.agenda_date <=> b.agenda_date
-    end
+    visible_schedule_events = dato.schedule_events.sort_by(&:agenda_date)
 
-    months = (minister_events.each_with_object([]) do |e, arr|
+    days = (visible_schedule_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.agenda_date.strftime("%d %B %Y")
+    end)
+    days.uniq!
+
+    events_by_day = (days.each_with_object({}) do |day, h|
+      h[day] = (visible_schedule_events.select do |e|
+        e.agenda_date.strftime("%d %B %Y") == day
+      end)
+    end)
+
+    months = (visible_schedule_events.each_with_object([]) do |e, arr|
       arr << e.agenda_date.strftime("%B %Y")
-    end).uniq!
+    end)
+    months.uniq!
 
-    minister_events_by_month = months.each_with_object({}) do |month, h|
-      h[month] = (minister_events.select do |event|
-        event.agenda_date.strftime("%B %Y") == month
+    events_by_month = months.each_with_object({}) do |month, h|
+      h[month] = (events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
       end)
     end
 
-    paginate_with_fallback(minister_events_by_month,
+    paginate_with_fallback(events_by_month,
                            dato.schedule_page,
                            dato.minister_page,
                            locale,
