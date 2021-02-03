@@ -12,12 +12,12 @@ ruby:
         .col-12
           = partial "partials/breadcrumb", locals: {page: page}
 
-        .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-md-4
+        .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
           = partial "partials/headers/main-titles", locals: {page: page}
 
           - yield if block_given?
           - if content_for?(:col_one) || content_for?(:col_two)
-            .row.mb-5
+            .row.mb-5.mb-md-0.mb-lg-5
               - if content_for?(:col_one)
                 .col-md-6
                   = yield_content :col_one
