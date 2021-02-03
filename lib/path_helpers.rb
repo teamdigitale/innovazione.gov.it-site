@@ -49,7 +49,8 @@ module PathHelpers
       "minister_interviews_index",
       "minister_participations_index",
       "minister_press_releases_index",
-      "schedule_page"
+      "schedule_page",
+      "schedule_archive_page"
       dato.minister_page
 
     when "schedule_event"
