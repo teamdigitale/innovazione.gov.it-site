@@ -16,6 +16,16 @@ ruby:
     page.respond_to?(:related_items) &&
     page.related_items.any?
 
+  show_attachments =
+    main_locale?(locale) &&
+    page.respond_to?(:attachments) &&
+    page.attachments.any?
+
+  show_links =
+    main_locale?(locale) &&
+    page.respond_to?(:links) &&
+    page.links.any?
+
 - content = capture
   - if categories.present?
     - categories.each do |cat|
@@ -33,14 +43,29 @@ ruby:
             "##{anchor_id(block.text_title)}",
             class: "nav-link pr-4",
             tabindex: "-1"
+
+  - if show_attachments
+    li.nav-item
+      = link_to t("attachments"),
+        "#_attachments",
+        class: "nav-link pr-4",
+        tabindex: "-1"
+  - if show_links
+    li.nav-item
+      = link_to t("useful_links"),
+        "#_useful_links",
+        class: "nav-link pr-4",
+        tabindex: "-1"
   - if show_related
     li.nav-item
-      = link_to t("sections_nav_related-content"),
+      = link_to t("related_content"),
         "#_related-content",
         class: "nav-link pr-4",
         tabindex: "-1"
 
-- if categories.present? || any_title_present || show_related
+- extra_content = show_related || show_attachments || show_links
+
+- if categories.present? || any_title_present || extra_content
   - if mobile
     nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
       aria-label="indice di pagina mobile" aria-hidden="true"]
