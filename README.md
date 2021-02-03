@@ -5,14 +5,15 @@ Il progetto è costruito sul generatore di siti statici [Middleman](https://midd
 Per installare l’ambiente necessario allo sviluppo è necessario avere installato
 sul proprio sistema i seguenti pacchetti:
 
-* [asdf](https://asdf-vm.com/#/),
-* [bundler](https://bundler/),
-* [Yarn](https://yarnpkg.com/).
+* [bundler](https://bundler/)
+* [Yarn](https://yarnpkg.com/)
+
+L'utilizzo di [asdf](https://asdf-vm.com/#/) è opzionale.
 
 Successivamente, bisogna lanciare i comandi seguenti:
 
 ```sh
-asdf install (opzionale)
+(opzionale) asdf install
 bundle
 yarn
 ```
@@ -24,6 +25,7 @@ configurazione `.env`:
 BUILD_ENV=production
 DATO_API_TOKEN={{inserire la chiave API di sola lettura da DatoCMS}}
 BASE_URL=http://localhost:4567/
+TZ=Europe/Rome
 ```
 
 A questo punto, il sito può essere testato in ambiente locale utilizzando

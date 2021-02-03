@@ -4,6 +4,7 @@ ENV PORT 4567
 ENV BUILD_ENV production
 ENV DATO_API_TOKEN xx
 ENV BASE_URL http://localhost:4567/
+ENV TZ Europe/Rome
 
 WORKDIR /usr/src/innovazione.gov.it
 
