@@ -95,6 +95,7 @@ def slugify(path)
     downcase.
     gsub("_", "").
     gsub(" - ", "").
+    tr("àéèìóòù", "aeeioou").
     gsub(/-{2,}/, "-")
 end
 
