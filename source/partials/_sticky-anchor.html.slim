@@ -33,15 +33,15 @@ ruby:
             "##{anchor_id(block.text_title)}",
             class: "nav-link pr-4",
             tabindex: "-1"
-    - if show_related 
-      li.nav-item
-        = link_to t("sections_nav_related-content"),
-          "#_related-content",
-          class: "nav-link pr-4",
-          tabindex: "-1"
+  - if show_related 
+    li.nav-item
+      = link_to t("sections_nav_related-content"),
+        "#_related-content",
+        class: "nav-link pr-4",
+        tabindex: "-1"
       
 
-- if categories.present? || any_title_present
+- if categories.present? || any_title_present || show_related
   - if mobile
     nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
       aria-label="indice di pagina mobile" aria-hidden="true"]
