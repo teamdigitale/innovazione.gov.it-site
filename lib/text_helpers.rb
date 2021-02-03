@@ -37,7 +37,7 @@ module TextHelpers
   def replace_external_links(content)
     return "" if content.blank?
 
-    doc = Nokogiri::HTML(content)
+    doc = Nokogiri::HTML::fragment(content)
 
     links = doc.search("a")
     links.each do |link|
