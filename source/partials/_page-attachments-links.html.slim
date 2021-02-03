@@ -18,8 +18,8 @@ ruby:
 - if show_attachtments
   - col_layout = compact_columns ? "col-12" : "col-md-6"
 
-  .container.mt-5.py-3
-    h2.h5.font-weight-semibold = t("attachments")
+  .container.mt-5.py-3._anchor
+    h2.h5.font-weight-semibold id="_attachments" = t("attachments")
     .row
       - page.attachments.each do |attachment|
         .mt-3 class="#{col_layout}"
@@ -27,8 +27,8 @@ ruby:
 
 - if show_links
   - col_layout = compact_columns ? "col-12" : "col-md-6"
-  .container.mt-5.py-3
-    h2.h5.font-weight-semibold = t("useful_links")
+  .container.mt-5.py-3._anchor
+    h2.h5.font-weight-semibold id="_useful_links" = t("useful_links")
     .row
       - page.links.each do |link|
         .mt-3 class="#{col_layout}"

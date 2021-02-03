@@ -94,8 +94,9 @@ def slugify(path)
   base.
     downcase.
     gsub("_", "").
-    gsub(" - ", "").
-    gsub(" ", "-")
+    tr("àéèìóòù", "aeeioou").
+    gsub(/[^a-z0-9\-\.]/i, "-").
+    gsub(/-{2,}/, "-")
 end
 
 def uploads
@@ -142,10 +143,7 @@ def asset_redirects
 end
 
 def old_url(doc)
-  parts = doc.split("/")
-  encoded = parts.map { |p| URI.encode_www_form_component(p) }
-  path = encoded.join("/")
-  File.join(OLD_URL_BASE, path)
+  File.join(OLD_URL_BASE, doc)
 end
 
 def redirect_from_old_url(old_url)
@@ -157,13 +155,14 @@ def create_redirect(old_url, upload)
 
   return if DRY_RUN
 
-  client.items.create(
+  result = client.items.create(
     item_type: asset_redirect_type["id"],
     old_url: old_url,
     new_file: {
       upload_id: upload["id"]
     }
   )
+  debug "result: #{result.inspect}"
 end
 
 def upload_missing
@@ -174,6 +173,7 @@ def upload_missing
     if !exists
       pathname = docs_path(doc)
       info "Uploading '#{pathname}'"
+      debug "slug: '#{slug}'"
       client.upload_file(pathname) if !DRY_RUN
     end
   end
@@ -188,6 +188,10 @@ def create_redirects
 
     slug = slugify(doc)
     upload = upload_for_slug(slug)
+    if !upload
+      info "No upload found for slug '#{slug}'"
+      next
+    end
 
     create_redirect(url, upload)
   end

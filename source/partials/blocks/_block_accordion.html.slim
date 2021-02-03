@@ -8,7 +8,7 @@
                   data-target="#accordion-#{acc.id}"
                   data-toggle="collapse"
                   role="tab"]
-            .text-uppercase = acc.accordion_item_title
+            span.text-uppercase = acc.accordion_item_title
         .collapse [aria-labelledby="headingA-#{acc.id}" id="accordion-#{acc.id}"
          data-parent="#accordionDiv-#{acc.id}" role="tabpanel"]
           .collapse-body

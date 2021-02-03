@@ -39,7 +39,7 @@
                 class: "btn-link pl-0 text-decoration-none",
                 target: "_blank",
                 rel: "noopener",
-                aria: {"label": project_link_label(link)} do
+                aria: {"label": "#{link.title}: #{project_link_label(link)}"} do
 
                   span.mid-caption--xlarge.font-weight-semibold
                     = project_link_label(link)

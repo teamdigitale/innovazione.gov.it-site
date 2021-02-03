@@ -5,7 +5,10 @@ ruby:
   justify-content-lg-end)
 
 - if main_locale?(locale) && !hide_tags_section
-  section.section.section-neutral.bg-dark data-datocms-noindex=true
+  section.section.section-neutral.bg-dark [
+    data-datocms-noindex=true
+    role="region"
+    aria-label=t("tags_title")]
     .container
       .row
         .col-12.col-lg-6.offset-lg-1.container.white-color
