@@ -1,4 +1,4 @@
-- transparency_pages = visible_pages(dato.company.footer_transparency_pages)
+- transparency_links = visible_links(dato.company.footer_transparency_links)
 - footer_links = visible_links(dato.company.footer_external_links)
 
 footer#footer.it-footer data-datocms-noindex=true tabindex="-1"
@@ -104,13 +104,12 @@ footer#footer.it-footer data-datocms-noindex=true tabindex="-1"
                   ul.link-list
                     - footer_links.each do |item|
                       li
-                        = proxy_link_to item.link,
-                          class: "list-item mid-footer-link",
-                          target: "_blank",
-                          rel: "noopener"
-                          = item.title
+                        = partial "partials/links/#{item.item_type.api_key}",
+                          locals: {item: item,
+                            label: item.title,
+                            html_class: "list-item mid-footer-link"}
 
-          - if transparency_pages.any?
+          - if transparency_links.any?
             .col-md-6.col-xl-3.mb-3
               .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
                 = t("transparency")
@@ -118,17 +117,19 @@ footer#footer.it-footer data-datocms-noindex=true tabindex="-1"
               .text-center.text-md-left
                 .link-list-wrapper
                   ul.link-list
-                    - transparency_pages.each do |item|
+                    - transparency_links.each do |item|
                       li
-                        = proxy_link_to page_path(item),
-                          class: "list-item mid-footer-link"
-                            = item.title
+                        = partial "partials/links/#{item.item_type.api_key}",
+                          locals: {item: item,
+                            label: item.title,
+                            html_class: "list-item mid-footer-link"}
 
   .it-footer-small-prints.py-4
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - visible_pages(dato.company.subfooter_pages).each do |item|
+        - visible_links(dato.company.subfooter_links).each do |item|
           li.list-inline-item.mr-0.mr-md-5
-            = proxy_link_to page_path(item),
-              class: "list-item mid-footer-link mx-4 mx-md-0"
-                span = item.title
+            = partial "partials/links/#{item.item_type.api_key}",
+              locals: {item: item,
+                label: item.title,
+                html_class: "list-item mid-footer-link mx-4 mx-md-0"}
