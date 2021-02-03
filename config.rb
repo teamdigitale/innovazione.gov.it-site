@@ -200,6 +200,18 @@ helpers do
     PresentationHelper.published_videos(dato.videos)
   end
 
+  def current_and_past_events
+    visible_schedule_events.reverse.select do |event|
+      event.agenda_date <= DateTime.now
+    end
+  end
+
+  def current_and_future_events
+    visible_schedule_events.select do |event|
+      event.agenda_date >= DateTime.now
+    end
+  end
+
   def schedule_events_by_day(day_date_string)
     visible_schedule_events.select do |event|
       event.date_shown("%d %B %Y") == day_date_string
