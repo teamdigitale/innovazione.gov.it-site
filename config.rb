@@ -196,13 +196,10 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
-<<<<<<< HEAD
   def visible_videos
     PresentationHelper.published_videos(dato.videos)
   end
 
-=======
->>>>>>> ddb63b5f (Add pagination items for agenda in config file)
   def current_and_past_events
     visible_schedule_events.reverse.select do |event|
       event.agenda_date <= DateTime.now
@@ -647,6 +644,16 @@ dato.tap do |dato|
     proxy "/#{dato.minister_page.slug}/index.html",
           "/templates/minister.html",
           locals: {page: dato.minister_page},
+          locale: locale
+
+    proxy "/#{dato.schedule_archive_page.slug}/index.html",
+          "/templates/archive.html",
+          locals: {page: dato.schedule_archive_page},
+          locale: locale
+
+    proxy "/#{dato.schedule_page.slug}/index.html",
+          "/templates/schedule.html",
+          locals: {page: dato.schedule_page},
           locale: locale
 
     PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
