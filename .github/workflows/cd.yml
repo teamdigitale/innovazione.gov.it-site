@@ -53,6 +53,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: notify_deploy
-      # Temporarily notifying success under any circumstances
+    - name: The job has failed
+      if: cancelled() || failure()
+      run: ./sh/notify.sh ${{ secrets.DATOCMS_ENDPOINT_ID }} error
+      
+    - name: The job has succeeded
+      if: success()
       run: ./sh/notify.sh ${{ secrets.DATOCMS_ENDPOINT_ID }} success
