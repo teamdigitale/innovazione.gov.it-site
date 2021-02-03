@@ -11,6 +11,8 @@ page "/*.xml", layout: false
 page "/*.json", layout: false
 page "/*.txt", layout: false
 
+ENV["TZ"] = "Europe/Rome"
+
 set :url_root, ENV.fetch("BASE_URL")
 set :markdown_engine, :redcarpet
 

@@ -1,3 +1,8 @@
 [build]
   command = "middleman build"
   publish = "build"
+
+[[headers]]
+for = "/*"
+[headers.values]
+Access-Control-Allow-Origin = "*"
