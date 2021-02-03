@@ -158,13 +158,14 @@ def create_redirect(old_url, upload)
 
   return if DRY_RUN
 
-  client.items.create(
+  result = client.items.create(
     item_type: asset_redirect_type["id"],
     old_url: old_url,
     new_file: {
       upload_id: upload["id"]
     }
   )
+  debug "result: #{result.inspect}"
 end
 
 def upload_missing
@@ -175,6 +176,7 @@ def upload_missing
     if !exists
       pathname = docs_path(doc)
       info "Uploading '#{pathname}'"
+      debug "slug: '#{slug}'"
       client.upload_file(pathname) if !DRY_RUN
     end
   end
