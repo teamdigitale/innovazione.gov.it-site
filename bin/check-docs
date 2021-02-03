@@ -191,6 +191,10 @@ def create_redirects
 
     slug = slugify(doc)
     upload = upload_for_slug(slug)
+    if !upload
+      info "No upload found for slug '#{slug}'"
+      next
+    end
 
     create_redirect(url, upload)
   end
