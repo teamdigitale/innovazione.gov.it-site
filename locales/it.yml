@@ -38,8 +38,10 @@ it:
   date_shown: Data
   deepen: Approfondisci
   discover_project_data: Scopri i dati del progetto aggiornati ogni giorno
+  elements_list: Elenco degli elementi
   email_contact: Contatti email
   empty_list: Non sono presenti contenuti di questa tipologia.
+  event_list: Elenco degli eventi
   explore_breadcrumb_prefix: Esplora
   file_type: File %{ext}
   follow_us_on: Seguici su
@@ -47,7 +49,10 @@ it:
   formatted_site_name: "<span>Ministro</span> per l'innovazione tecnologica e la transizione digitale"
   go_home: Vai alla pagina iniziale
   go_to: Vai a
+  go_to_footer: Vai al footer
+  go_to_main_content: Vai al contenuto principale
   highlighted_topics: Argomenti in evidenza
+  highlights: In evidenza
   home_label: Home
   hq: Sede istituzionale
   interviews_section_title: Le interviste
@@ -58,6 +63,7 @@ it:
   medium: Vai su Medium
   ministry_secretariat: Segreteria del Ministro
   minutes: minuti
+  notes: Segnalazioni
   numbers_section_title: I numeri dell'innovazione
   new_email: (Posta elettronica)
   new_tab: (Si apre in un nuovo tab)
