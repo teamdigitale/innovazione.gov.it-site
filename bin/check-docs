@@ -95,7 +95,7 @@ def slugify(path)
     downcase.
     gsub("_", "").
     gsub(" - ", "").
-    gsub(" ", "-")
+    gsub(/-{2,}/, "-")
 end
 
 def uploads
