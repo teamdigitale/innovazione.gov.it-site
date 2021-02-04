@@ -182,17 +182,24 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
-  def visible_news_contents
+  def visible_taggable_contents
     (visible_announcements +
     visible_articles +
     visible_interviews +
     visible_participations +
-    visible_press_releases).sort_by(&:date_shown).reverse
+    visible_press_releases +
+    visible_projects +
+    visible_focus_pages +
+    visible_pages(dato.general_pages) +
+    visible_pages(dato.minister_subpages) +
+    visible_pages(dato.department_subpages) +
+    visible_pages(dato.projects_subpages) +
+    visible_pages(dato.news_subpages))
   end
 
   def visible_tags
     PresentationHelper.published_tags(dato.tags) &
-      visible_news_contents.collect(&:tags).flatten
+      visible_taggable_contents.collect(&:tags).flatten
   end
 
   def featured_tags
@@ -367,6 +374,12 @@ dato.tap do |dato|
     visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
     visible_focus_pages = PresentationHelper.published_focus_pages(dato.focus_pages)
     visible_projects = PresentationHelper.published_projects(dato.projects)
+    visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
+    visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
+    visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
+    visible_tags = PresentationHelper.published_tags(dato.tags)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     def paginate_with_fallback(items, index_page, parent_page, locale)
@@ -413,7 +426,7 @@ dato.tap do |dato|
           locals: {page: dato.explore_page},
           locale: locale
 
-    PresentationHelper.published_pages(dato.general_pages).each do |general_page|
+    visible_general_pages.each do |general_page|
       parent_path = general_page.parent ? "/#{general_page.parent.slug}" : ""
       proxy "#{parent_path}/#{general_page.slug}/index.html",
             "/templates/page.html",
@@ -467,7 +480,7 @@ dato.tap do |dato|
                            dato.minister_page,
                            locale)
 
-    PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
+    visible_minister_subpages.each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
       proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
             "/templates/page.html",
@@ -514,7 +527,7 @@ dato.tap do |dato|
                            dato.department_page,
                            locale)
 
-    PresentationHelper.published_pages(dato.department_subpages).each do |department_subpage|
+    visible_department_subpages.each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
       proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
             "/templates/page.html",
@@ -535,7 +548,7 @@ dato.tap do |dato|
             locale: locale
     end
 
-    PresentationHelper.published_pages(dato.projects_subpages).each do |projects_subpage|
+    visible_projects_subpages.each do |projects_subpage|
       parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
       proxy "/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
             "/templates/page.html",
@@ -609,7 +622,7 @@ dato.tap do |dato|
             locale: locale
     end
 
-    PresentationHelper.published_pages(dato.news_subpages).each do |news_subpage|
+    visible_news_subpages.each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
       proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
             "/templates/page.html",
@@ -623,22 +636,34 @@ dato.tap do |dato|
           locals: {page: dato.tags_index, hide_tags_section: true},
           locale: locale
 
-    news_contents = visible_announcements +
-                    visible_articles +
-                    visible_interviews +
-                    visible_participations +
-                    visible_press_releases
+    taggable_contents = visible_announcements +
+                        visible_articles +
+                        visible_interviews +
+                        visible_participations +
+                        visible_press_releases +
+                        visible_general_pages +
+                        visible_minister_subpages +
+                        visible_department_subpages +
+                        visible_projects_subpages +
+                        visible_news_subpages
 
-    PresentationHelper.published_tags(dato.tags).each do |tag|
-      tag_news_contents = news_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
-      next if tag_news_contents.none?
+    visible_tags.each do |tag|
+      items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
 
-      paginate tag_news_contents,
-               "/#{dato.tags_index.slug}/#{tag.slug}",
-               "/templates/tag.html",
-               suffix: "/page/:num/index",
-               locals: {page: tag},
-               per_page: 10
+      if items.any?
+        paginate items,
+                 "/#{dato.tags_index.slug}/#{tag.slug}",
+                 "/templates/tag.html",
+                 suffix: "/page/:num/index",
+                 locals: {page: tag},
+                 per_page: 10
+
+      else
+        proxy "/#{dato.tags_index.slug}/#{tag.slug}/index.html",
+              "/templates/tag.html",
+              locals: {page: tag},
+              locale: locale
+      end
     end
   end
   dato.asset_redirects.each do |asset_redirect|
