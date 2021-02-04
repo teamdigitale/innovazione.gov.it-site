@@ -13,16 +13,16 @@
 .container
   .border-bottom
 
-.py-3.my-lg-5
+.py-3.mt-5.mb-lg-5
   .container.mid-container
     - if items.any?
       h2.sr-only = t("event_list")
       - items.each do |month, events_by_day|
         .col-12.mb-5
-          h4.mb-5 = month
+          h4.mb-5.text-center.text-md-left = month
         - events_by_day.each do |_day, events|
           .row
-            .col-lg-1.offset-lg-1.px-0
+            .col-md-1.offset-lg-1.px-0
               .d-flex.justify-content-center.align-items-start
                 .py-3.w-100.bg-primary.text-white.text-center
                   p.h5.text-center.weight-font-semibold.mb-0
