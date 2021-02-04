@@ -1,6 +1,14 @@
-- html_class ||= "btn btn-primary mr-2"
-- aria_cta = label.present? ? cta_label(item) : t("link_labels.go_to_website")
-- label ||= cta_label(item)
+ruby:
+  html_class ||= "btn btn-primary mr-2"
+
+  aria_cta = case locals.respond_to?(:label)
+             when true
+               cta_label(item)
+             when false
+               t("link_labels.go_to_website")
+             end
+
+  label ||= cta_label(item)
 
 = proxy_link_to label,
   item.link,
