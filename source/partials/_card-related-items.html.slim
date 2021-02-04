@@ -66,7 +66,7 @@ ruby:
     - if logo_url.present?
       .d-none.d-lg-block class="#{logo_length}"
         .img-responsive-wrapper.p-lg-0.m-0
-          figure.position-absolute
+          figure
             = proxy_image_tag logo_url.lqip_data_url(w: 10,
                 h: 10,
                 fit: "max"),

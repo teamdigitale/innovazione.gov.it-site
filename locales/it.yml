@@ -7,6 +7,11 @@ it:
     participation: Intervento
     press_release: Comunicato stampa
     project: Progetto
+    general_page: Pagina
+    minister_subpage: Pagina Ministro
+    department_subpage: Pagina Dipartimento
+    projects_subpage: Pagina Progetti
+    news_subpage: Pagina Notizie
 
   logos:
     italy: Logo Repubblica Italiana
@@ -49,6 +54,7 @@ it:
   ministry_secretariat: Segreteria del Ministro
   minutes: minuti
   numbers_section_title: I numeri dell'innovazione
+  new_email: (Posta elettronica)
   new_tab: (Si apre in un nuovo tab)
   open_dashboard: Apri la dashboard
   other_links: Altri siti web
@@ -129,3 +135,7 @@ it:
     telegram: Telegram
     twitter: Twitter
     whatsapp: Whatsapp
+
+  skiplinks:
+    content: Vai al contenuto principale
+    footer: Vai al footer

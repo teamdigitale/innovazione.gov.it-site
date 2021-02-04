@@ -8,7 +8,11 @@ ruby:
     ("d-none d-sm-block" if page_is_editorial(page) && main_locale?(locale))
   ].join(" ")
 
-nav.breadcrumb-container data-datocms-noindex=true aria-label=t("you_are_here")
+nav.breadcrumb-container [
+  data-datocms-noindex=true
+  aria-label=t("you_are_here")
+  lang="it"]
+
   ol.breadcrumb.mt-4.mb-5.justify-content-center.justify-content-sm-start
     li.breadcrumb-item.d-none.d-sm-block
       = link_to t("home_label"),

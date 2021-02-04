@@ -244,6 +244,10 @@ helpers do
     end
   end
 
+  def cta_label(item)
+    item.cta_label.present? ? item.cta_label : item.title
+  end
+
   def editorial_models_api_keys
     %w[announcement
        article
@@ -269,10 +273,6 @@ helpers do
 
   def page_is_explore(page)
     explore_models_api_keys.include?(page.item_type.api_key)
-  end
-
-  def cta_label(item)
-    item.cta_label.present? ? item.cta_label : item.title
   end
 
   def anchor_id(title)
