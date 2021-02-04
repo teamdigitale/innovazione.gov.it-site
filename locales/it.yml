@@ -135,3 +135,7 @@ it:
     telegram: Telegram
     twitter: Twitter
     whatsapp: Whatsapp
+
+  skiplinks:
+    content: Vai al contenuto principale
+    footer: Vai al footer
