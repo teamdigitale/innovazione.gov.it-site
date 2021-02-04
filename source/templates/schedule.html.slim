@@ -29,14 +29,14 @@
                     = events.first.agenda_date.strftime("%d")
                   p.h6.mid-caption--xsmall.mb-0
                     = events.first.agenda_date.strftime("%#b")
-            .col-lg-7.mb-5.px-0
+            .col-lg-6.mb-5.px-0
               - events.each do |event|
                 = partial "partials/card-event",
                   locals: {event: event,
                   time: "Ore #{event.agenda_date.to_time.hour}",
                   category: event.agenda_category.name,
                   title: event.title}
-            .col-lg-3
+            .col-lg-4
 
       .pt-lg-4
         = partial "partials/pagination",
