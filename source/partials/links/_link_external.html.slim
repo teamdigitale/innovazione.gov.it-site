@@ -1,12 +1,12 @@
 ruby:
   html_class ||= "btn btn-primary mr-2"
-
-  aria_cta = case locals.respond_to?(:label)
-             when true
-               cta_label(item)
-             when false
-               t("link_labels.go_to_website")
-             end
+  label ||= nil
+  case label.present?
+  when true
+    aria_cta = cta_label(item)
+  when false
+    aria_cta = t("link_labels.go_to_website")
+  end
 
   label ||= cta_label(item)
 

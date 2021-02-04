@@ -6,10 +6,15 @@
     li
       = link_to page_path(dato.search_page),
         class: "p-0 list-item d-inline-block"
-          span.font-weight-semibold.mr-0
-            = t("explore_aside.search_title")
+        span.font-weight-semibold.mr-0
+          = t("explore_aside.search_title")
     li
       = link_to page_path(dato.tags_index),
         class: "p-0 list-item d-inline-block"
-          span.font-weight-semibold.mr-0
-            = t("explore_aside.tags_title")
+        span.font-weight-semibold.mr-0
+          = t("explore_aside.tags_title")
+    li
+      = link_to page_path(dato.explore_page),
+        class: "p-0 list-item d-inline-block"
+        span.font-weight-semibold
+          = dato.explore_page.title
