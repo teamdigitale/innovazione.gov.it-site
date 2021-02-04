@@ -1,33 +1,34 @@
-.dropdown.d-none.d-lg-block.mb-5
-  button [
-      id="dropdownMenuLink"
-      class=["p-0",
-        "text-capitalize",
-        "btn btn-dropdown",
-        "dropdown-toggle"].join(" ")
-      aria-expanded="false"
-      aria-haspopup="true"
-      data-toggle="dropdown"
-      type="button"
-    ]
-    = t("share")
-    svg.icon-expand.icon.icon-sm.icon-primary [
-        focusable="false"
+- if false
+  .dropdown.d-none.d-lg-block.mb-5
+    button [
+        id="dropdownMenuLink"
+        class=["p-0",
+          "text-capitalize",
+          "btn btn-dropdown",
+          "dropdown-toggle"].join(" ")
+        aria-expanded="false"
+        aria-haspopup="true"
+        data-toggle="dropdown"
+        type="button"
       ]
-      use xlink:href="/images/sprite.svg#it-expand"
+      = t("share")
+      svg.icon-expand.icon.icon-sm.icon-primary [
+          focusable="false"
+        ]
+        use xlink:href="/images/sprite.svg#it-expand"
 
-  .dropdown-menu aria-labelledby="dropdownMenuLink"
-    .link-list-wrapper
-      ul.link-list
-        - sharable_socials.each do |social|
-          li
-            button [
-              class="btn text-capitalize text-primary font-weight-normal"
-              data-sharer=social
-              data-url=page_complete_url(page)
-              data-width="800"
-              data-height="600"
-              data-to=""
-              data-title=""
-            ]
-              = social
+    .dropdown-menu aria-labelledby="dropdownMenuLink"
+      .link-list-wrapper
+        ul.link-list
+          - sharable_socials.each do |social|
+            li
+              button [
+                class="btn text-capitalize text-primary font-weight-normal"
+                data-sharer=social
+                data-url=page_complete_url(page)
+                data-width="800"
+                data-height="600"
+                data-to=""
+                data-title=""
+              ]
+                = social
