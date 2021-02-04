@@ -747,7 +747,7 @@ dato.tap do |dato|
                            locale,
                            "archive")
 
-    PresentationHelper.published_pages(dato.minister_subpages).each do |minister_subpage|
+    visible_minister_subpages.each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
       proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
             "/templates/page.html",
