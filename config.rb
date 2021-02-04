@@ -182,17 +182,24 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
-  def visible_news_contents
+  def visible_taggable_contents
     (visible_announcements +
     visible_articles +
     visible_interviews +
     visible_participations +
-    visible_press_releases).sort_by(&:date_shown).reverse
+    visible_press_releases +
+    visible_projects +
+    visible_focus_pages +
+    visible_pages(dato.general_pages) +
+    visible_pages(dato.minister_subpages) +
+    visible_pages(dato.department_subpages) +
+    visible_pages(dato.projects_subpages) +
+    visible_pages(dato.news_subpages))
   end
 
   def visible_tags
     PresentationHelper.published_tags(dato.tags) &
-      visible_news_contents.collect(&:tags).flatten
+      visible_taggable_contents.collect(&:tags).flatten
   end
 
   def featured_tags
