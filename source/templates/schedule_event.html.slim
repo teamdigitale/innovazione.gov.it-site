@@ -1,5 +1,50 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
+= partial "partials/headers/header-basic",
+  locals: {page: page,
+  classes: "lightgrey-bg-a2",
+  share: true} do
+
+  = content_for :col_one
+    - if page.agenda_category.present?
+      .mb-5
+        = partial "partials/column-title", locals: {title: t("category")}
+        p = page.agenda_category.name
+
+  = content_for :col_two
+    - if page.agenda_date.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("date_and_time")}
+
+        = partial "partials/formatted-date",
+          locals: {date: page.agenda_date, show_time: true}
+
+    - if page.agenda_site.present?
+      = partial "partials/column-title",
+        locals: {title: t("place")}
+
+      - if page.agenda_site_link.present?
+        = partial "partials/links/link_external",
+          locals: {label: page.agenda_site,
+          item: page.agenda_site_link,
+          html_class: ""}
+      - else
+        p = page.agenda_site
+
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name,
+          chip_type: "",
+          text_color: "text-primary",
+          btn_type: "",
+          url: page_path(tag)}
+
 = partial "partials/page-content",
   locals: {page: page}
