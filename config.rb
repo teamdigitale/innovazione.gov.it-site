@@ -263,6 +263,7 @@ helpers do
     visible_projects +
     visible_focus_pages +
     visible_videos +
+    visible_schedule_events +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
@@ -938,7 +939,8 @@ dato.tap do |dato|
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
-                        visible_news_subpages
+                        visible_news_subpages +
+                        visible_schedule_events
 
     visible_tags.each do |tag|
       items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
