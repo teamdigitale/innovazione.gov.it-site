@@ -1,4 +1,5 @@
 - html_class ||= "btn btn-primary mr-2"
+- aria_cta = label.present? ? cta_label(item) : t("link_labels.go_to_website")
 - label ||= cta_label(item)
 
 = proxy_link_to label,
@@ -6,4 +7,4 @@
   class: html_class,
   target: "_blank",
   rel: "noopener",
-  "aria-label": "#{label}: (Link esterno) #{item.title}"
+  "aria-label": "#{item.title}: (Link esterno) #{aria_cta}"
