@@ -636,22 +636,34 @@ dato.tap do |dato|
           locals: {page: dato.tags_index, hide_tags_section: true},
           locale: locale
 
-    news_contents = visible_announcements +
-                    visible_articles +
-                    visible_interviews +
-                    visible_participations +
-                    visible_press_releases
+    taggable_contents = visible_announcements +
+                        visible_articles +
+                        visible_interviews +
+                        visible_participations +
+                        visible_press_releases +
+                        visible_general_pages +
+                        visible_minister_subpages +
+                        visible_department_subpages +
+                        visible_projects_subpages +
+                        visible_news_subpages
 
-    PresentationHelper.published_tags(dato.tags).each do |tag|
-      tag_news_contents = news_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
-      next if tag_news_contents.none?
+    visible_tags.each do |tag|
+      items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
 
-      paginate tag_news_contents,
-               "/#{dato.tags_index.slug}/#{tag.slug}",
-               "/templates/tag.html",
-               suffix: "/page/:num/index",
-               locals: {page: tag},
-               per_page: 10
+      if items.any?
+        paginate items,
+                 "/#{dato.tags_index.slug}/#{tag.slug}",
+                 "/templates/tag.html",
+                 suffix: "/page/:num/index",
+                 locals: {page: tag},
+                 per_page: 10
+
+      else
+        proxy "/#{dato.tags_index.slug}/#{tag.slug}/index.html",
+              "/templates/tag.html",
+              locals: {page: tag},
+              locale: locale
+      end
     end
   end
   dato.asset_redirects.each do |asset_redirect|
