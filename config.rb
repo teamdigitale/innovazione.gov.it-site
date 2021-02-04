@@ -135,7 +135,7 @@ module PresentationHelper
   end
 
   def self.published_schedule_events(schedule_events)
-    schedule_events.sort_by(&:agenda_date).reverse
+    schedule_events.sort_by(&:agenda_date)
   end
 
   def self.published_tags(tags)
@@ -212,30 +212,36 @@ helpers do
     end
   end
 
-  def schedule_events_by_day(day_date_string)
-    visible_schedule_events.select do |event|
-      event.date_shown("%d %B %Y") == day_date_string
-    end
+  def nearest_date
+    current_and_future_events.first.agenda_date
   end
 
   def days_in_minister_schedule
     days = (visible_schedule_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.agenda_date.strftime("%d %B %Y")
+      daily_arr << event.agenda_date.strftime("%d%B%Y")
     end)
     days.uniq!
+  end
+
+  def dates_shown
+    nearest = nearest_date.strftime("%d%B%Y")
+    active_index = days_in_minister_schedule.index(nearest)
+    start = active_index - 3
+    finish = active_index + 4
+    days_in_minister_schedule[start..finish]
   end
 
   def schedule_events_by_day
     days_in_minister_schedule.each_with_object({}) do |day, hash|
       hash[day] = (visible_schedule_events.select do |e|
-        e.agenda_date.strftime("%d %B %Y") == day
+        e.agenda_date.strftime("%d%B%Y") == day
       end)
     end
   end
 
   def months_in_minister_schedule
     m = (visible_schedule_events.each_with_object([]) do |e, arr|
-      arr << e.agenda_date.strftime("%B %Y")
+      arr << e.agenda_date.strftime("%B%Y")
     end)
     m.uniq!
   end
