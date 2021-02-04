@@ -52,8 +52,16 @@ module TextHelpers
   def add_link_attributes(link)
     link.set_attribute("target", "_blank")
     link.set_attribute("rel", "noopener")
-    link.set_attribute("aria-label",
-                       "#{link.content} #{I18n.t('new_tab')}")
+
+    case link.attributes["href"].content
+    when /^mailto/
+      link.set_attribute("aria-label",
+        "#{link.content} #{I18n.t('new_email')}")
+    when /^http/
+      link.set_attribute("aria-label",
+        "#{link.content} #{I18n.t('new_tab')}")
+    end
+
     link
   end
 
