@@ -1,3 +1,5 @@
+- items ||= []
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
@@ -30,7 +32,7 @@
   .border-bottom
 
 .py-lg-5
-  - if !pager.previous_page
+  - if items.any? ? !pager.previous_page : true
     - focus_pages = visible_focus_pages.select { |f| f.tags.include?(page) }
 
     - if focus_pages.any?
@@ -72,7 +74,7 @@
             = partial "partials/card-related-items",
               locals: {item: n}
 
-  .container
-    .py-lg-4
-      = partial "partials/pagination",
-        locals: {pager: pager}
+    .container
+      .py-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
