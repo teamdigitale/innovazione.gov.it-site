@@ -54,6 +54,13 @@ ruby:
   = partial "partials/sticky-navs/page-sections",
     locals: {sections: section_titles}
 
+/= partial "partials/schedule"
+
+.container.pt-3
+  .pt-5.pb-4
+    = partial "partials/section-title",
+      locals: {title: t("articles_section_title")}
+
   .container.pt-3
     .pt-5.pb-4
       = partial "partials/section-title",
