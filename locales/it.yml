@@ -7,6 +7,11 @@ it:
     participation: Intervento
     press_release: Comunicato stampa
     project: Progetto
+    general_page: Pagina
+    minister_subpage: Pagina Ministro
+    department_subpage: Pagina Dipartimento
+    projects_subpage: Pagina Progetti
+    news_subpage: Pagina Notizie
 
   logos:
     italy: Logo Repubblica Italiana
