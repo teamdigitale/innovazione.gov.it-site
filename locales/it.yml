@@ -35,6 +35,7 @@ it:
   close: Chiudi
   contacts: Contatti
   credits: Crediti
+  date_and_time: Data e ora
   date_shown: Data
   deepen: Approfondisci
   discover_project_data: Scopri i dati del progetto aggiornati ogni giorno
@@ -72,6 +73,7 @@ it:
   other_links: Altri siti web
   owner_name: Governo Italiano
   participations_section_title: Gli interventi
+  place: luogo
   press_office: Ufficio stampa
   press_releases_section_title: I comunicati stampa
   project_categories_dropdown: Esplora per categoria
