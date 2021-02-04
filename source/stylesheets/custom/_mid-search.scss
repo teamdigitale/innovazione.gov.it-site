@@ -6,7 +6,9 @@
   .datocms-widget__search__input {
     height: auto;
     box-shadow: none;
-    margin-right: 24px;
+    @media (min-width: 600px) {
+      margin-right: 24px;
+    }
   }
   .datocms-widget__header__label {
     // display: none;
