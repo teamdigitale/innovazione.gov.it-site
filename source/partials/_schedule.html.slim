@@ -3,8 +3,8 @@
 
   .lightgrey-bg-a2
     .container.px-0
-      .row.no-gutters.align-items-stretch.justify-content-center
-        .col-12.col-lg-2.d-flex.align-items-center.py-1.justify-content-xl-end
+      .row.no-gutters.align-items-stretch.text-center.justify-content-center
+        .col-12.col-md-2.d-md-flex.align-items-md-center.py-1
           h2.h4.pb-2.pr-xl-5
             = t("the_schedule")
 
@@ -40,15 +40,22 @@
             aria-labelledby="data-ex-tab#{date}-tab"
             role="tabpanel"]
             .container
-              .row class=center
-                - schedule_events_by_day[date].each do |event|
-                  .col-12.col-md-6.col-lg-3
-                    .p-2
-                      .border-left.border-200
-                        = partial "partials/card-event",
-                          locals: {event: event,
-                          time: "Ore #{event.agenda_date.to_time.hour}",
-                          category: event.agenda_category.name,
-                          title: event.title,
-                          card_class: "bg-transparent",
-                          title_class: "h6"}
+              .swiper
+                .swiper-container.p-0
+                  .swiper-wrapper
+                    - schedule_events_by_day[date].each do |event|
+                      .swiper-slide.d-flex.col-12.col-md-4.col-lg-3.py-0
+                        .swiper-slide__text.py-0
+                          .border-left.border-200
+                            = partial "partials/card-event",
+                              locals: {event: event,
+                              time: "Ore #{event.agenda_date.to_time.hour}",
+                              category: event.agenda_category.name,
+                              title: event.title,
+                              card_class: "bg-transparent",
+                              title_class: "h6"}
+
+                .d-lg-none.text-center.pt-4.pb-5
+                  = partial "partials/button",
+                    locals: {btn_url: dato.schedule_page,
+                    color_class: "btn btn-outline-primary"}
