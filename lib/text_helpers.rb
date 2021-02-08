@@ -59,10 +59,10 @@ module TextHelpers
     case link.attributes["href"].content
     when /^mailto/
       link.set_attribute("aria-label",
-        "#{link.content} #{I18n.t('new_email')}")
+                         "#{link.content} #{I18n.t('new_email')}")
     when /^http/
       link.set_attribute("aria-label",
-        "#{link.content} #{I18n.t('new_tab')}")
+                         "#{link.content} #{I18n.t('new_tab')}")
     end
 
     link
