@@ -2,7 +2,9 @@
   outline: 0 !important;
   box-shadow: none !important;
 }
-*:focus:not(:-moz-focusring) {
+*:focus:not(:-moz-focusring),
+*:focus:not(::-moz-focus-inner) {
   outline: 0 !important;
   box-shadow: none !important;
+  border: none !important;
 }
