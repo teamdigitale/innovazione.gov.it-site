@@ -36,14 +36,17 @@ module TextHelpers
 
   def replace_external_links(content)
     return "" if content.blank?
-
-    doc = Nokogiri::HTML::fragment(content)
+    doc = Nokogiri::HTML.fragment(content)
 
     links = doc.search("a")
     links.each do |link|
       url = link.attributes["href"].content
-      add_link_attributes(link) if !url.include?(ENV["BASE_URL"])
-      add_pdf_attributes(link) if url.include? ".pdf"
+      
+      if !url.start_with?("/") && !url.include?(ENV["BASE_URL"])
+        add_link_attributes(link)
+      elsif url.include? ".pdf"
+        add_pdf_attributes(link)
+      end
     end
 
     doc.to_html
