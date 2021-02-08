@@ -1,65 +1,63 @@
 - if !dato.schedule_events.empty?
   - center = "d-lg-flex justify-content-lg-center"
 
-  .lightgrey-bg-a2
-    .container.px-0
-      .row.no-gutters.align-items-stretch.text-center.justify-content-center
-        .col-12.col-lg-2.d-lg-flex.align-items-lg-center.py-1
-          h2.h4.pb-2.pr-xl-5
-            = t("the_schedule")
+  .row.no-gutters.align-items-stretch.text-center.justify-content-center
+    .col-12.col-lg-2.d-lg-flex.align-items-lg-center.py-1
+      h2.h4.pb-2.pr-xl-5
+        = t("the_schedule")
 
-        .col-12.col-lg-8
-          ul#agenda-tabs.nav.nav-tabs.mid-tabs-nav class=center role="tablist"
-            - dates_shown.each_with_index do |date, index|
-              li.nav-item
-                a [
-                  id="data-ex-tab#{date}-tab"
-                  class="nav-link #{"active" if index == 3}"
-                  aria-controls="tab#{date}"
-                  aria-selected="true"
-                  data-toggle="tab"
-                  href="#tab#{date}"
-                  role="tab"]
-
-                  .h5.mb-0.font-weight-semibold
-                    = DateTime.parse(date).strftime("%d")
-
-                  .mid-caption--xsmall
-                    = DateTime.parse(date).strftime("%#b")
-
-            li.nav-item.d-lg-none.text-center
-              .ml-5.mr-3.d-flex.align-items-center style="width: max-content"
-                = partial "partials/button",
-                  locals: {btn_url: dato.schedule_page,
-                  color_class: "btn mid-caption btn-sm btn-outline-primary"}
-
-        .d-none.col-lg-2.d-lg-flex.white-bg.align-items-center.py-1
-          = partial "partials/button",
-            locals: {btn_url: dato.schedule_page,
-              color_class: "btn btn-outline-primary"}
-
-      .tab-content.mid-tabs-content
+    .col-12.col-lg-8
+      ul#agenda-tabs.nav.nav-tabs.mid-tabs-nav class=center role="tablist"
         - dates_shown.each_with_index do |date, index|
-          div [
-            id="tab#{date}"
-            class="tab-pane #{"active" if index == 3}"
-            aria-labelledby="data-ex-tab#{date}-tab"
-            role="tabpanel"]
-            .container.px-0.py-4
-              .swiper
-                .swiper-container.p-0
-                  .swiper-wrapper
-                    - schedule_events_by_day[date].each do |event|
-                      .swiper-slide.d-flex.col-12.col-md-4.col-lg-3.py-0
-                        .swiper-slide__text.py-0
-                          .border-left.border-200.primary-border-color
-                            .p-3.text-center.text-md-left
-                              .category.pb-2.mid-caption.font-weight-semibold
-                                span.pr-2
-                                  = "Ore #{event.agenda_date.to_time.hour}"
-                                span.px-2.text-uppercase
-                                  = event.agenda_category.name
-                              h3.h5.font-weight-semibold
-                                = link_to page_path(event),
-                                  class: "text-primary text-decoration-none"
-                                  = event.title
+          li.nav-item
+            a [
+              id="data-ex-tab#{date}-tab"
+              class="nav-link #{"active" if index == 3}"
+              aria-controls="tab#{date}"
+              aria-selected="true"
+              data-toggle="tab"
+              href="#tab#{date}"
+              role="tab"]
+
+              .h5.mb-0.font-weight-semibold
+                = DateTime.parse(date).strftime("%d")
+
+              .mid-caption--xsmall
+                = DateTime.parse(date).strftime("%#b")
+
+        li.nav-item.d-lg-none.text-center
+          .ml-5.mr-3.d-flex.align-items-center style="width: max-content"
+            = partial "partials/button",
+              locals: {btn_url: dato.schedule_page,
+              color_class: "btn mid-caption btn-sm btn-outline-primary"}
+
+    .d-none.col-lg-2.d-lg-flex.white-bg.align-items-center.py-1
+      = partial "partials/button",
+        locals: {btn_url: dato.schedule_page,
+          color_class: "btn btn-outline-primary"}
+
+  .tab-content.mid-tabs-content
+    - dates_shown.each_with_index do |date, index|
+      div [
+        id="tab#{date}"
+        class="tab-pane #{"active" if index == 3}"
+        aria-labelledby="data-ex-tab#{date}-tab"
+        role="tabpanel"]
+        .container.px-0.pt-4.pb-5
+          .swiper
+            .swiper-container.p-0
+              .swiper-wrapper.d-flex.justify-content-center
+                - schedule_events_by_day[date].each do |event|
+                  .swiper-slide.d-flex.col-8.col-md-4.col-lg-3.py-0
+                    .swiper-slide__text.py-0
+                      .border-left.border-200.primary-border-color
+                        .p-3.text-center.text-md-left
+                          .category.pb-2.mid-caption.font-weight-semibold
+                            span.pr-2
+                              = "Ore #{event.agenda_date.to_time.hour}"
+                            span.px-2.text-uppercase
+                              = event.agenda_category.name
+                          h3.h5.font-weight-semibold
+                            = link_to page_path(event),
+                              class: "text-primary text-decoration-none"
+                              = event.title
