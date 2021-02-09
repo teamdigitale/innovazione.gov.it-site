@@ -3,7 +3,7 @@ ruby:
   chip_type ||= "chip-primary"
   btn_type ||= "btn-outline-primary"
   text_color ||= ""
-  default_classes = "chip mr-3 mb-2 text-decoration-none"
+  default_classes = "chip chip-simple mb-2 ml-1 mr-1 mt-1 text-decoration-none"
   border = text_color == "text-white" ? "border-white" : ""
   classes = [default_classes, chip_size, chip_type, btn_type, border].join(" ")
 
