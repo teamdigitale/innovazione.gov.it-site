@@ -2,7 +2,7 @@
   .row.mb-5: .col-12
     - block.accordion_items.each do |acc|
       .collapse-div role="tablist" id="accordionDiv-#{acc.id}"
-        .collapse-header id='headingA-#{acc.id}'
+        .collapse-header id="headingA-#{acc.id}"
           button [aria-controls="accordion-#{acc.id}"
                   aria-expanded="false"
                   data-target="#accordion-#{acc.id}"
