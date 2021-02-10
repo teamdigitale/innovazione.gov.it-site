@@ -17,7 +17,7 @@ export function updateProgress() {
 }
 
 function value_limit(val, min, max) {
-  return val < min ? min : (val > max ? max : val);
+  return (Math.min(max, Math.max(min, val)));
 }
 
 function setActiveSection() {
