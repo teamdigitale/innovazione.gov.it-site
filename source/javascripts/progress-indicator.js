@@ -5,7 +5,7 @@ export function updateProgress() {
     var scrolled = (winScroll / height) * 100;
     if (obj.getBoundingClientRect().top <= 0) {
       $('._progress-indicator').each(function() {
-        this.style.width = value_limit(scrolled, 0, 100) + "%";
+        this.style.width = valueLimit(scrolled, 0, 100) + "%";
         setActiveSection()
       })
     } else {
@@ -16,7 +16,7 @@ export function updateProgress() {
   })
 }
 
-function value_limit(val, min, max) {
+function valueLimit(val, min, max) {
   return (Math.min(max, Math.max(min, val)));
 }
 
