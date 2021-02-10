@@ -9,12 +9,12 @@
 
 .container
   .row
-    .col-lg-3.px-0.border-right.hidden.d-none.d-lg-block.border-top
+    .col-lg-3.px-0.border-right.hidden.d-none.d-lg-block.border-top._content
       = partial "partials/sticky-anchor",
         locals: {categories: visible_projects_categories,
           title: t("projects.categories_nav")}
 
-    .col-12.col-lg-9.px-0.border-top
+    .col-12.col-lg-9.px-0.border-top._content
       = partial "partials/sticky-anchor",
         locals: {categories: visible_projects_categories,
         title: t("projects.categories_nav"),

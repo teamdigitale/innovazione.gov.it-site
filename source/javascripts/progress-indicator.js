@@ -1,10 +1,18 @@
 export function updateProgress() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  $('._progress-indicator').each(function() {
-    this.style.width = scrolled + "%";
-    setActiveSection()
+  $('._content').each(function(i, obj) {
+    var winScroll = Math.abs(obj.getBoundingClientRect().top);
+    var height = obj.getBoundingClientRect().height;
+    var scrolled = (winScroll / height) * 100;
+    if (obj.getBoundingClientRect().top <= 0) {
+      $('._progress-indicator').each(function() {
+        this.style.width = scrolled + "%";
+        setActiveSection()
+      })
+    } else {
+      $('._progress-indicator').each(function() {
+        this.style.width = 0 + "%";
+      })
+    }
   })
 }
 
