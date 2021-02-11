@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$VERCEL_GIT_COMMIT_REF" == "develop"  ]] ; then
+if [[ "$VERCEL_GIT_COMMIT_REF" == "develop" || "$VERCEL_GIT_COMMIT_REF" == "main" ]] ; then
   # Proceed with the build
   exit 1;
 
