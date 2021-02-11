@@ -1,10 +1,11 @@
 .container.border-top.pb-5.pt-5
   .row.justify-content-center
-    .col-lg-6.px-0
+    .col-12.col-lg-6.px-0
       = partial "partials/page-blocks",
         locals: {page: page,
           compact_columns: true}
 
+    .col-12.col-lg-8.offset-lg-2
       = partial "partials/page-attachments-links",
         locals: {page: page,
           compact_columns: true}
@@ -13,7 +14,7 @@
         locals: {page: page}
 
 = partial "partials/dashboard",
-        locals: {page: page}
+  locals: {page: page}
 
 .container.pb-5.pt-5
   = partial "partials/page-related",
