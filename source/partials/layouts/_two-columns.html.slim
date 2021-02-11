@@ -5,7 +5,9 @@
 
     .col-12.col-lg-9.pt-lg-5._content
       .row
-        = partial "partials/sticky-anchor", locals: {page: page, mobile: true}
+        = partial "partials/sticky-anchor",
+          locals: {page: page, mobile: true}
+
         = partial "partials/page-blocks",
           locals: {page: page,
             html_class: "pt-5 pt-lg-0"}

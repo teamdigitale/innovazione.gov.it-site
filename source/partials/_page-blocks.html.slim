@@ -3,29 +3,28 @@
 
 - expandable_blocks_api_keys = %w[block_image_single block_video_single]
 
-div class=html_class
-  - page.content_blocks.each do |block|
-    ruby:
-      block_api = block.item_type.api_key
-      block_is_expandable = expandable_blocks_api_keys.include?(block_api)
-      block_is_big = block.respond_to?(:big) && block.big
+- page.content_blocks.each.with_index do |block, i|
+  ruby:
+    block_api = block.item_type.api_key
+    block_is_expandable = expandable_blocks_api_keys.include?(block_api)
+    block_is_big = block.respond_to?(:big) && block.big
 
-      block_class =
-        if block_is_expandable && compact_columns && block_is_big
-          "col-12 col-lg-10 px-0 px-lg-2"
-        elsif block_is_expandable && compact_columns && !block_is_big
-          "col-12 col-lg-7 px-0"
-        elsif block_is_expandable && !compact_columns && !block_is_big
-          "col-12 col-lg-9 px-0 pl-lg-4 pr-lg-5 offset-lg-1"
-        elsif block_is_expandable && !compact_columns && block_is_big
-          "col-12 px-0"
-        elsif !block_is_expandable && compact_columns
-          "col-12 col-lg-7"
-        elsif !block_is_expandable && !compact_columns
-          "col-12 col-lg-11 offset-lg-1"
-        end
+    block_class =
+      if block_is_expandable && compact_columns && block_is_big
+        "col-12 col-lg-10 px-0 px-lg-2"
+      elsif block_is_expandable && compact_columns && !block_is_big
+        "col-12 col-lg-7 px-0"
+      elsif block_is_expandable && !compact_columns && !block_is_big
+        "col-12 col-lg-9 px-0 pl-lg-4 pr-lg-5 offset-lg-1"
+      elsif block_is_expandable && !compact_columns && block_is_big
+        "col-12 px-0"
+      elsif !block_is_expandable && compact_columns
+        "col-12 col-lg-7"
+      elsif !block_is_expandable && !compact_columns
+        "col-12 col-lg-11 offset-lg-1"
+      end
 
-    div class=block_class
-      = partial "partials/blocks/#{block.item_type.api_key}",
-        locals: {block: block,
-          compact_columns: compact_columns}
+  div class="#{block_class} #{html_class if i == 0}"
+    = partial "partials/blocks/#{block.item_type.api_key}",
+      locals: {block: block,
+        compact_columns: compact_columns}
