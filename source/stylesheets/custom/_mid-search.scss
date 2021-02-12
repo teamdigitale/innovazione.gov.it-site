@@ -27,6 +27,9 @@
       background-color: #0053a6;
     }
   }
+  .datocms-widget__result {
+    text-align: left !important;
+  }
   .datocms-widget__result__title,
   .datocms-widget__pagination__page {
     color: $primary;
