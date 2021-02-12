@@ -36,6 +36,10 @@
   }
   .datocms-widget__result:hover {
     border-left-color: $primary;
+  .datocms-widget__result__url {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .datocms-widget__footer {
     flex-direction: column-reverse;
