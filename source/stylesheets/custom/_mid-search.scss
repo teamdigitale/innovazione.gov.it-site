@@ -30,12 +30,13 @@
   .datocms-widget__result {
     text-align: left !important;
   }
+  .datocms-widget__result:hover {
+    border-left-color: $primary;
+  }
   .datocms-widget__result__title,
   .datocms-widget__pagination__page {
     color: $primary;
   }
-  .datocms-widget__result:hover {
-    border-left-color: $primary;
   .datocms-widget__result__url {
     white-space: nowrap;
     overflow: hidden;
@@ -69,7 +70,7 @@
     border: none;
     font-size: 0.8888888889rem;
     font-weight: 600;
-    color: #5b6f82;
+    color: $secondary;
     background-color: transparent;
     text-decoration: none;
     margin-left: 5px;
@@ -81,8 +82,8 @@
     }
 
     &.is-active {
-      border: 1px solid #0066cc;
-      color: #0066cc;
+      border: 1px solid $primary;
+      color: $primary;
       pointer-events: none;
     }
 
