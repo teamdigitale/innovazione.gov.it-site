@@ -105,15 +105,15 @@ module PresentationHelper
   end
 
   def self.published_interviews(interviews)
-    interviews.sort_by(&:date_shown).reverse
+    interviews.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_participations(participations)
-    participations.sort_by(&:date_shown).reverse
+    participations.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_press_releases(press_releases)
-    press_releases.sort_by(&:date_shown).reverse
+    press_releases.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_projects_categories(projects_categories)
