@@ -332,6 +332,11 @@ dato.tap do |dato|
     I18n.fallbacks[:en] = [:en]
 
     visible_articles = PresentationHelper.published_articles(dato.articles)
+    visible_interviews = PresentationHelper.published_interviews(dato.interviews)
+    visible_participations = PresentationHelper.published_participations(dato.participations)
+    visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
+    visible_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
@@ -340,7 +345,26 @@ dato.tap do |dato|
             locale: locale
     end
 
-    visible_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_interviews.each do |interview|
+      proxy "/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{locale}/#{interview.slug}/index.html",
+            "/templates/interview.html",
+            locals: {page: interview},
+            locale: locale
+    end
+
+    visible_participations.each do |participation|
+      proxy "/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{locale}/#{participation.slug}/index.html",
+            "/templates/participation.html",
+            locals: {page: participation},
+            locale: locale
+    end
+
+    visible_press_releases.each do |press_release|
+      proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{locale}/#{press_release.slug}/index.html",
+            "/templates/press_release.html",
+            locals: {page: press_release},
+            locale: locale
+    end
 
     visible_pages.each do |general_page|
       parent_path = ""
@@ -352,8 +376,6 @@ dato.tap do |dato|
                      children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
     end
-
-    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     visible_resource_redirects.each do |resource_redirect|
       path = PresentationHelper.path_without_domain(resource_redirect.old_url)
