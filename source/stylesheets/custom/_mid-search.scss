@@ -42,9 +42,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .datocms-widget__no-results {
+    display: none;
+  }
+  .datocms-widget__body {
+    min-height: 0;
+  }
   .datocms-widget__footer {
     flex-direction: column-reverse;
-    align-items: flex-start;
+    align-items: stretch;
+    border-top: none;
   }
   .datocms-widget__total {
     text-align: left;
