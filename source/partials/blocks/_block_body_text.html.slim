@@ -4,7 +4,7 @@
       = block.text_title
 
   .row
-    div class=(compact_columns.present? ? "col-12" : "col-12 col-lg-9")
+    .col-12.col-lg-9
       - if block.image_little.present?
         figure.block-body__small-image
           = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6),
@@ -21,7 +21,7 @@
 
       = markdown block.body_text
 
-    div class=("col-10 offset-2 col-lg-3 offset-lg-0" if !compact_columns)
+    .col-10.offset-2.col-lg-3.offset-lg-0
       - if block.text_note.present? || block.image_little.present?
         .mid-notes.pl-3
           - if block.text_note.present?
