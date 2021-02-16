@@ -310,7 +310,15 @@ helpers do
   end
 
   def localizable_api_keys
-    %w[article general_page]
+    %w[article
+       interview
+       participation
+       press_release
+       general_page
+       minister_subpage
+       department_subpage
+       projects_subpage
+       news_subpage]
   end
 
   def page_is_localizable?(page)
