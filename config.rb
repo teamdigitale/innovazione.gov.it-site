@@ -383,7 +383,7 @@ dato.tap do |dato|
 
     visible_minister_subpages.each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
-      proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+      proxy "/#{dato.minister_page.slug}#{parent_path}/#{locale}/#{minister_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: minister_subpage,
                      children: PresentationHelper.published_children_pages(minister_subpage)},
@@ -392,7 +392,7 @@ dato.tap do |dato|
 
     visible_department_subpages.each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
-      proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+      proxy "/#{dato.department_page.slug}#{parent_path}/#{locale}/#{department_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: department_subpage,
                      children: PresentationHelper.published_children_pages(department_subpage)},
@@ -401,7 +401,7 @@ dato.tap do |dato|
 
     visible_projects_subpages.each do |projects_subpage|
       parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
-      proxy "/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
+      proxy "/#{dato.projects_page.slug}#{parent_path}/#{locale}/#{projects_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: projects_subpage,
                      children: PresentationHelper.published_children_pages(projects_subpage)},
@@ -410,7 +410,7 @@ dato.tap do |dato|
 
     visible_news_subpages.each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
-      proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
+      proxy "/#{dato.news_page.slug}#{parent_path}/#{locale}/#{news_subpage.slug}/index.html",
             "/templates/page.html",
             locals: {page: news_subpage,
                      children: PresentationHelper.published_children_pages(news_subpage)},
