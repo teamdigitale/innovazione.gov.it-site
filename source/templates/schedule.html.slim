@@ -4,7 +4,7 @@
 = partial "partials/headers/header-basic", locals: {page: page} do
   = content_for :aside
     = partial "partials/column-title",
-      locals: {title: t("or")}
+      locals: {title: t("explore_aside.title")}
 
     = proxy_link_to t("schedule_archive"),
       page_path(dato.schedule_archive_page),
