@@ -5,56 +5,55 @@ ruby:
   toggler_classes = %(p-0 btn btn-default btn-dropdown
     dropdown-toggle m-4 ml-md-3 mr-lg-0 ml-xl-4)
 
-.row.mt-5.mb-lg-5
-  .col-lg-5.pt-5
-    .mt-5.mt-lg-0
-      h2.h6 class=["mid-caption--large",
-                "text-uppercase",
-                "font-weight-semibold",
-                "pt-5", "p-lg-0", "text-center",
-                "text-lg-left"].join(" ")
+.row.mt-4.my-lg-5
+  .col-lg-5.pt-lg-5
+    h2.h6 class=["mid-caption--large",
+              "text-uppercase",
+              "font-weight-semibold",
+              "pt-5", "p-lg-0", "text-center",
+              "text-lg-left"].join(" ")
 
-        = page.projects_pre_title
+      = page.projects_pre_title
 
-      h3.d-lg-block.h1.pt-2.text-center.text-lg-left
-        = page.projects_title
+    h3.d-lg-block.h1.pt-2.text-center.text-lg-left
+      = page.projects_title
 
-      p.d-none.d-lg-block.h3.font-weight-normal.text-center.text-lg-left
-        = page.projects_text
+    p.d-none.d-lg-block.h3.font-weight-normal.text-center.text-lg-left
+      = page.projects_text
 
-      p.d-lg-none.font-weight-normal.text-center.text-lg-left
-        = page.projects_text
+    p.d-lg-none.font-weight-normal.text-center.text-lg-left
+      = page.projects_text
 
-      div class=projects_button_parent_classes
-        .mx-4.ml-lg-0
-          = partial "partials/button",
-            locals: {btn_url: dato.projects_page,
-            aria_label: page.projects_pre_title}
+    div class=projects_button_parent_classes
+      .mx-4.ml-lg-0
+        = partial "partials/button",
+          locals: {btn_url: dato.projects_page,
+          aria_label: page.projects_pre_title}
 
-        .dropdown
-          button#projectsCategories [class=toggler_classes
-              aria-expanded="false"
-              aria-haspopup="true"
-              data-toggle="dropdown"
-              type="button"]
+      .dropdown
+        button#projectsCategories [class=toggler_classes
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-toggle="dropdown"
+            type="button"]
 
-            = t("project_categories_dropdown")
-            svg.icon-expand.icon.icon-sm.icon-primary [
-              focusable="false"
-            ]
-              use xlink:href="/images/sprite.svg#it-expand"
+          = t("project_categories_dropdown")
+          svg.icon-expand.icon.icon-sm.icon-primary [
+            focusable="false"
+          ]
+            use xlink:href="/images/sprite.svg#it-expand"
 
-          .dropdown-menu aria-labelledby="projectsCategories"
-            .link-list-wrapper
-              ul.link-list
-                - visible_projects_categories.each do |c|
-                  li
-                    = link_to "#{page_path(dato.projects_page)}##{c.slug}",
-                      class: "list-item"
-                      span.text-nowrap = c.name
+        .dropdown-menu aria-labelledby="projectsCategories"
+          .link-list-wrapper
+            ul.link-list
+              - visible_projects_categories.each do |c|
+                li
+                  = link_to "#{page_path(dato.projects_page)}##{c.slug}",
+                    class: "list-item"
+                    span.text-nowrap = c.name
 
-  .col-lg-6.pt-5.order-first
-    .col-lg-8.offset-lg-2
+  .col-lg-6.pt-lg-5.pb-5.order-lg-first
+    .col-lg-8.offset-lg-2.mb-5
       - if page.featured_projects.present?
         h3.sr-only In evidenza
         = partial "partials/image_text_gallery",

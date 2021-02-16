@@ -9,12 +9,12 @@
 
 .container
   .row
-    .col-lg-3.px-0.border-right.hidden.d-none.d-lg-block.border-top
+    .col-lg-3.px-0.border-right.hidden.d-none.d-lg-block.border-top._content
       = partial "partials/sticky-anchor",
         locals: {categories: visible_projects_categories,
           title: t("projects.categories_nav")}
 
-    .col-12.col-lg-9.px-0.border-top
+    .col-12.col-lg-9.px-0.border-top._content
       = partial "partials/sticky-anchor",
         locals: {categories: visible_projects_categories,
         title: t("projects.categories_nav"),
@@ -36,13 +36,12 @@
       - visible_projects_categories.each_with_index do |cat, i|
         - category_projects = visible_projects.select { |p| p.category == cat }
         - bg = i.even? ? "section-muted" : ""
-
         - if category_projects.any?
           section.section.p-0.mx-md-n4.mx-lg-0 class=bg
             .container
               .row.py-5.pl-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
-                  h2.font-weight-semibold id=anchor_id(cat.slug) tabindex="-1"
+                  h2.font-weight-semibold._mid-target id=anchor_id(cat.slug)
                     = cat.name
 
                   p.h4.mt-3.lead.font-weight-semibold

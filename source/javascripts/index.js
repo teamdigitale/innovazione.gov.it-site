@@ -78,6 +78,7 @@ const initSearch = () => {
   }
   return searchClient.addWidget("#search-container", {
     initialLocale: $("html").attr("lang"),
+    initialQuery: ""
   });
 };
 

@@ -32,8 +32,7 @@ ruby:
       li.nav-item
         = link_to cat.name,
           "##{cat.slug}",
-          class: "nav-link pr-4",
-          tabindex: "-1"
+          class: "nav-link pr-4"
 
   - else
     - page.content_blocks.each do |block|
@@ -41,8 +40,7 @@ ruby:
         li.nav-item
           = link_to block.text_title,
             "##{anchor_id(block.text_title)}",
-            class: "nav-link pr-4",
-            tabindex: "-1"
+            class: "nav-link pr-4"
 
   - if show_attachments
     li.nav-item

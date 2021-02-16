@@ -5,7 +5,11 @@ ruby:
   when true
     aria_cta = cta_label(item)
   when false
-    aria_cta = t("link_labels.go_to_website")
+    aria_cta = if item.cta_label.present?
+                 item.cta_label
+               else
+                 t("link_labels.go_to_website")
+               end
   end
 
   label ||= cta_label(item)

@@ -1,22 +1,26 @@
 .container.border-top.pb-5
-  .row
+  .row.no-gutter
     aside.col-lg-3.border-right.hidden.d-none.d-lg-block.px-0
       = partial "partials/sticky-anchor", locals: {page: page}
 
-    .col-12.col-lg-8.offset-lg-1.pt-lg-5.px-0
-      = partial "partials/sticky-anchor", locals: {page: page, mobile: true}
-      .pt-5.pt-lg-0
-      = partial "partials/page-blocks",
-        locals: {page: page}
+    .col-12.col-lg-9.pt-lg-5._content
+      .row
+        = partial "partials/sticky-anchor",
+          locals: {page: page, mobile: true}
 
-      = partial "partials/page-attachments-links",
-        locals: {page: page}
+        = partial "partials/page-blocks",
+          locals: {page: page,
+            html_class: "pt-5 pt-lg-0"}
 
-      = partial "partials/page-other-contents",
-        locals: {page: page}
+        .col-12.col-lg-11.offset-lg-1
+          = partial "partials/page-attachments-links",
+            locals: {page: page}
+
+          = partial "partials/page-other-contents",
+            locals: {page: page}
 
 = partial "partials/dashboard",
-        locals: {page: page}
+  locals: {page: page}
 
 .container.pb-5
   = partial "partials/page-related",

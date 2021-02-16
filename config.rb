@@ -105,15 +105,15 @@ module PresentationHelper
   end
 
   def self.published_interviews(interviews)
-    interviews.sort_by(&:date_shown).reverse
+    interviews.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_participations(participations)
-    participations.sort_by(&:date_shown).reverse
+    participations.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_press_releases(press_releases)
-    press_releases.sort_by(&:date_shown).reverse
+    press_releases.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_projects_categories(projects_categories)
@@ -332,6 +332,15 @@ dato.tap do |dato|
     I18n.fallbacks[:en] = [:en]
 
     visible_articles = PresentationHelper.published_articles(dato.articles)
+    visible_interviews = PresentationHelper.published_interviews(dato.interviews)
+    visible_participations = PresentationHelper.published_participations(dato.participations)
+    visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
+    visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
+    visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
+    visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
+    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
@@ -340,9 +349,28 @@ dato.tap do |dato|
             locale: locale
     end
 
-    visible_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_interviews.each do |interview|
+      proxy "/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{locale}/#{interview.slug}/index.html",
+            "/templates/interview.html",
+            locals: {page: interview},
+            locale: locale
+    end
 
-    visible_pages.each do |general_page|
+    visible_participations.each do |participation|
+      proxy "/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{locale}/#{participation.slug}/index.html",
+            "/templates/participation.html",
+            locals: {page: participation},
+            locale: locale
+    end
+
+    visible_press_releases.each do |press_release|
+      proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{locale}/#{press_release.slug}/index.html",
+            "/templates/press_release.html",
+            locals: {page: press_release},
+            locale: locale
+    end
+
+    visible_general_pages.each do |general_page|
       parent_path = ""
       parent_path = "/#{general_page.parent.slug}" if general_page.parent && general_page.parent.slug.present?
 
@@ -353,7 +381,41 @@ dato.tap do |dato|
             locale: locale
     end
 
-    visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
+    visible_minister_subpages.each do |minister_subpage|
+      parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
+      proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: minister_subpage,
+                     children: PresentationHelper.published_children_pages(minister_subpage)},
+            locale: locale
+    end
+
+    visible_department_subpages.each do |department_subpage|
+      parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
+      proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: department_subpage,
+                     children: PresentationHelper.published_children_pages(department_subpage)},
+            locale: locale
+    end
+
+    visible_projects_subpages.each do |projects_subpage|
+      parent_path = projects_subpage.parent ? "/#{projects_subpage.parent.slug}" : ""
+      proxy "/#{dato.projects_page.slug}#{parent_path}/#{projects_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: projects_subpage,
+                     children: PresentationHelper.published_children_pages(projects_subpage)},
+            locale: locale
+    end
+
+    visible_news_subpages.each do |news_subpage|
+      parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
+      proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: news_subpage,
+                     children: PresentationHelper.published_children_pages(news_subpage)},
+            locale: locale
+    end
 
     visible_resource_redirects.each do |resource_redirect|
       path = PresentationHelper.path_without_domain(resource_redirect.old_url)
