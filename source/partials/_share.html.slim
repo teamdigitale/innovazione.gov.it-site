@@ -29,6 +29,6 @@
                 data-width="800"
                 data-height="600"
                 data-to=""
-                data-title=""
+                data-title=(page.respond_to?(:title) ? page.title : "")
               ]
                 = social
