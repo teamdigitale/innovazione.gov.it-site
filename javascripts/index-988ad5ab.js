@@ -12,8 +12,8 @@ import "core-js/features/object/assign";
 import "core-js/features/string/repeat";
 import "core-js/features/number";
 import svg4everybody from "svg4everybody";
-const progressIndicator = require("progress-indicator-af7800eb.js");
-const DatoCmsSearch = require("datocms-search.widget-268e4a6d.js");
+const progressIndicator = require("progress-indicator-6de72121.js");
+const DatoCmsSearch = require("datocms-search.widget-061d36de.js");
 
 if ($(".swiper-container").length > 0) {
   //some-slider-wrap-in
@@ -78,6 +78,7 @@ const initSearch = () => {
   }
   return searchClient.addWidget("#search-container", {
     initialLocale: $("html").attr("lang"),
+    initialQuery: ""
   });
 };
 
