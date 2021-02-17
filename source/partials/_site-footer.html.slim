@@ -1,5 +1,6 @@
 - transparency_links = visible_links(dato.company.footer_transparency_links)
 - footer_links = visible_links(dato.company.footer_external_links)
+- subfooter_links = visible_links(dato.company.subfooter_links)
 
 footer#footer.it-footer data-datocms-noindex=true tabindex="-1" lang="it"
   .it-footer-main
@@ -127,7 +128,7 @@ footer#footer.it-footer data-datocms-noindex=true tabindex="-1" lang="it"
   .it-footer-small-prints.py-4
     .container
       ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - visible_links(dato.company.subfooter_links).each do |item|
+        - visible_links(subfooter_links).each do |item|
           li.list-inline-item.mr-0.mr-md-5
             = partial "partials/links/#{item.item_type.api_key}",
               locals: {item: item,
