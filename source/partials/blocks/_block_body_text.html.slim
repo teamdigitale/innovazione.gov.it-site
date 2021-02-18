@@ -1,12 +1,8 @@
 ruby:
   column_class =
-    if block.text_note.present? && compact_columns
-      "col-12 col-lg-9"
-    elsif block.text_note.present? && !compact_columns
-      "col-12 col-lg-9"
-    elsif !block.text_note.present? && compact_columns
+    if !block.text_note.present? && compact_columns
       "col-12"
-    elsif !block.text_note.present? && !compact_columns
+    else
       "col-12 col-lg-9"
     end
 
