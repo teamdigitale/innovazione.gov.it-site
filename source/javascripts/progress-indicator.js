@@ -1,4 +1,5 @@
 export function updateProgress() {
+  showTitle()
   $('._content').each(function(i, obj) {
     var winScroll = Math.abs(obj.getBoundingClientRect().top);
     var height = obj.getBoundingClientRect().height;
@@ -39,6 +40,17 @@ function setActive(id) {
   $('._top-menu .nav-item').each(function(i, obj) {
     if ($(obj).children().attr('href') === `#${id}` && !$(obj).children().hasClass('active')) {
       $(obj).children().addClass('active')
+    }
+  })
+}
+
+function showTitle() {
+  $('#_sticky-aside').each(function(i, nav) {
+    var title = $(nav).find('#_sticky-title')
+    if (nav.getBoundingClientRect().top === 0) {
+      $(title).collapse('show')
+    } else {
+      $(title).collapse('hide')
     }
   })
 }

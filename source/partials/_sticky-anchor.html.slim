@@ -89,8 +89,10 @@ ruby:
               ul.it-list.small.py-3._top-menu
                 = content
   - else
-    nav.sticky-top.menu-wrapper.pb-5 [
+    nav.sticky-top.menu-wrapper.pb-5#_sticky-aside [
       aria-label="indice di pagina" aria-hidden="false"]
+      .collapse.py-2.px-1 data-toggle="collapse" id='_sticky-title'
+        h3 = page.title
       .it-list-wrapper.menu-link-list
         p.h3.pt-3.pb-2.text-uppercase.mid-caption.font-weight-semibold
           = title
