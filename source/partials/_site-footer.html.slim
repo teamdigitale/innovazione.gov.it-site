@@ -1,135 +1,142 @@
-- transparency_links = visible_links(dato.company.footer_transparency_links)
-- footer_links = visible_links(dato.company.footer_external_links)
+ruby:
+  title_class = %w[h6 text-uppercase font-weight-bold text-center
+    text-md-left mb-3]
 
-footer#footer.it-footer data-datocms-noindex=true tabindex="-1" lang="it"
-  .it-footer-main
-    .container
-      .row.clearfix
-        .col-sm-12
-          .it-brand-wrapper
-            ruby:
-              classes = %w[flex-wrap
-                        flex-md-nowrap
-                        justify-content-center
-                        justify-content-md-start].join(" ")
-            = link_to home_path,
-              class: classes
-              = proxy_image_tag "logo-repubblica-italiana.svg",
-                alt: t("logos.italy"),
-                class: "icon"
+- I18n.with_locale(:it)
+  - transparency_links = visible_links(dato.company.footer_transparency_links)
+  - footer_links = visible_links(dato.company.footer_external_links)
+  - subfooter_links = visible_links(dato.company.subfooter_links)
 
-              = proxy_image_tag "logo-mid-white.svg",
-                alt: t("logos.mid"),
-                style: "width: 120px",
-                class: "icon"
-
-              .it-brand-text.pr-0.pr-md-2
-                .h5.mt-4.mt-md-0.text-center.text-md-left [
-                  style="max-width: 400px;"] = t("formatted_site_name")
-
-    .py-4
+  footer#footer.it-footer data-datocms-noindex=true tabindex="-1" lang="it"
+    .it-footer-main
       .container
-        .row
-          .col-md-6.col-xl-3.mb-3
-            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("contacts")
+        .row.clearfix
+          .col-sm-12
+            .it-brand-wrapper
+              ruby:
+                classes = %w[flex-wrap
+                          flex-md-nowrap
+                          justify-content-center
+                          justify-content-md-start]
 
-            .mb-2
-              - if dato.company.google_maps_url.present?
+              = link_to home_path,
+                class: classes
+                = proxy_image_tag "logo-repubblica-italiana.svg",
+                  alt: t("logos.italy"),
+                  class: "icon"
+
+                = proxy_image_tag "logo-mid-white.svg",
+                  alt: t("logos.mid"),
+                  style: "width: 120px",
+                  class: "icon"
+
+                .it-brand-text.pr-0.pr-md-2
+                  .h5.mt-4.mt-md-0.text-center.text-md-left [
+                    style="max-width: 400px;"] = t("formatted_site_name")
+
+      .py-4
+        .container
+          .row
+            .col-md-6.col-xl-3.mb-3
+              div class=title_class
+                = t("contacts")
+
+              .mb-2
+                - if dato.company.google_maps_url.present?
+                  .text-center.text-md-left
+                    svg.mb-3.align-top.icon.icon-sm.icon-white [
+                        role="img"
+                        aria-label=t("hq")
+                        focusable="false"
+                      ]
+                      use xlink:href="/images/sprite.svg#it-pa"
+
+                    .link-list-wrapper
+                      ul.link-list
+                        li
+                          = link_to dato.company.google_maps_url,
+                            class: "list-item font-weight-semibold",
+                            target: "_blank",
+                            rel: "noopener"
+                            = t("formatted_address")
+
+              .mb-2
                 .text-center.text-md-left
                   svg.mb-3.align-top.icon.icon-sm.icon-white [
                       role="img"
-                      aria-label=t("hq")
+                      aria-label=t("email_contact")
                       focusable="false"
                     ]
-                    use xlink:href="/images/sprite.svg#it-pa"
+                    use xlink:href="/images/sprite.svg#it-mail"
 
                   .link-list-wrapper
+                    - if dato.company.secretariat_email.present?
+                      ul.link-list
+                        li
+                          = t("ministry_secretariat")
+
+                        li
+                          = link_to "mailto:#{dato.company.secretariat_email}",
+                            class: "list-item mid-footer-link",
+                            target: "_blank",
+                            rel: "noopener"
+                            = dato.company.secretariat_email
+
+                    - if dato.company.media_email.present?
+                      ul.link-list
+                        li
+                          = t("media_comunication")
+
+                        li
+                          = link_to "mailto:#{dato.company.media_email}",
+                            class: "list-item mid-footer-link",
+                            target: "_blank",
+                            rel: "noopener"
+                            = dato.company.media_email
+
+            .col-md-6.col-xl-3.mb-5
+              div class=title_class
+                = t("follow_us_on")
+
+              .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
+                = partial "partials/socials"
+
+            - if footer_links.any?
+              .col-md-6.col-xl-3.mb-3
+                div class=title_class
+                  = t("other_links")
+
+                .text-center.text-md-left
+                  .link-list-wrapper
                     ul.link-list
-                      li
-                        = link_to dato.company.google_maps_url,
-                          class: "list-item font-weight-semibold",
-                          target: "_blank",
-                          rel: "noopener"
-                          = t("formatted_address")
+                      - footer_links.each do |item|
+                        li
+                          = partial "partials/links/#{item.item_type.api_key}",
+                            locals: {item: item,
+                              label: item.title,
+                              html_class: "list-item mid-footer-link"}
 
-            .mb-2
-              .text-center.text-md-left
-                svg.mb-3.align-top.icon.icon-sm.icon-white [
-                    role="img"
-                    aria-label=t("email_contact")
-                    focusable="false"
-                  ]
-                  use xlink:href="/images/sprite.svg#it-mail"
+            - if transparency_links.any?
+              .col-md-6.col-xl-3.mb-3
+                div class=title_class
+                  = t("transparency")
 
-                .link-list-wrapper
-                  - if dato.company.secretariat_email.present?
+                .text-center.text-md-left
+                  .link-list-wrapper
                     ul.link-list
-                      li
-                        = t("ministry_secretariat")
+                      - transparency_links.each do |item|
+                        li
+                          = partial "partials/links/#{item.item_type.api_key}",
+                            locals: {item: item,
+                              label: item.title,
+                              html_class: "list-item mid-footer-link"}
 
-                      li
-                        = link_to "mailto:#{dato.company.secretariat_email}",
-                          class: "list-item mid-footer-link",
-                          target: "_blank",
-                          rel: "noopener"
-                          = dato.company.secretariat_email
-
-                  - if dato.company.media_email.present?
-                    ul.link-list
-                      li
-                        = t("media_comunication")
-
-                      li
-                        = link_to "mailto:#{dato.company.media_email}",
-                          class: "list-item mid-footer-link",
-                          target: "_blank",
-                          rel: "noopener"
-                          = dato.company.media_email
-
-          .col-md-6.col-xl-3.mb-5
-            .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-              = t("follow_us_on")
-
-            .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
-              = partial "partials/socials"
-
-          - if footer_links.any?
-            .col-md-6.col-xl-3.mb-3
-              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-                = t("other_links")
-
-              .text-center.text-md-left
-                .link-list-wrapper
-                  ul.link-list
-                    - footer_links.each do |item|
-                      li
-                        = partial "partials/links/#{item.item_type.api_key}",
-                          locals: {item: item,
-                            label: item.title,
-                            html_class: "list-item mid-footer-link"}
-
-          - if transparency_links.any?
-            .col-md-6.col-xl-3.mb-3
-              .h6.text-uppercase.font-weight-bold.text-center.text-md-left.mb-3
-                = t("transparency")
-
-              .text-center.text-md-left
-                .link-list-wrapper
-                  ul.link-list
-                    - transparency_links.each do |item|
-                      li
-                        = partial "partials/links/#{item.item_type.api_key}",
-                          locals: {item: item,
-                            label: item.title,
-                            html_class: "list-item mid-footer-link"}
-
-  .it-footer-small-prints.py-4
-    .container
-      ul.list-inline.link-list.mb-0.text-center.text-md-left
-        - visible_links(dato.company.subfooter_links).each do |item|
-          li.list-inline-item.mr-0.mr-md-5
-            = partial "partials/links/#{item.item_type.api_key}",
-              locals: {item: item,
-                label: item.title,
-                html_class: "list-item mid-footer-link mx-4 mx-md-0"}
+    .it-footer-small-prints.py-4
+      .container
+        ul.list-inline.link-list.mb-0.text-center.text-md-left
+          - visible_links(subfooter_links).each do |item|
+            li.list-inline-item.mr-0.mr-md-5
+              = partial "partials/links/#{item.item_type.api_key}",
+                locals: {item: item,
+                  label: item.title,
+                  html_class: "list-item mid-footer-link mx-4 mx-md-0"}

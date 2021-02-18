@@ -1,125 +1,126 @@
-header.it-header-wrapper data-datocms-noindex=true lang="it"
-  .it-header-slim-wrapper.px-0
-    .container
-      .row
-        .col-12
-          .it-header-slim-wrapper-content.px-2
-            = link_to t("owner_name"),
-              "//www.governo.it/",
-              target: "_blank",
-              rel: "noopener",
-              class: "navbar-brand font-weight-semibold"
-
-  .it-nav-wrapper
-    .it-header-center-wrapper
+- I18n.with_locale(:it)
+  header.it-header-wrapper data-datocms-noindex=true lang="it"
+    .it-header-slim-wrapper.px-0
       .container
         .row
-          .it-header-center-content-wrapper.px-2.px-sm-0
-            .it-brand-wrapper.pr-0.pr-md-5
-              = link_to home_path
-                = proxy_image_tag "logo-repubblica-italiana.svg",
-                  alt: t("logos.italy"),
-                  style: "max-height: 72px;",
-                  class: "icon"
+          .col-12
+            .it-header-slim-wrapper-content.px-2
+              = link_to t("owner_name"),
+                "//www.governo.it/",
+                target: "_blank",
+                rel: "noopener",
+                class: "navbar-brand font-weight-semibold"
 
-                = proxy_image_tag "logo-mid-white.svg",
-                  alt: t("logos.mid"),
-                  style: "width: 120px; max-height: 72px;",
-                  class: "icon"
+    .it-nav-wrapper
+      .it-header-center-wrapper
+        .container
+          .row
+            .it-header-center-content-wrapper.px-2.px-sm-0
+              .it-brand-wrapper.pr-0.pr-md-5
+                = link_to home_path
+                  = proxy_image_tag "logo-repubblica-italiana.svg",
+                    alt: t("logos.italy"),
+                    style: "max-height: 72px;",
+                    class: "icon"
 
-                .it-brand-text
-                  div class=["h4",
-                             "no_toc",
-                             "d-none",
-                             "d-xl-inline-block",
-                             "font-weight-normal",
-                             "mb-0",
-                             "ml-1"].join(" ")
-                    = t("formatted_site_name")
+                  = proxy_image_tag "logo-mid-white.svg",
+                    alt: t("logos.mid"),
+                    style: "width: 120px; max-height: 72px;",
+                    class: "icon"
 
-            .it-right-zone
-              .it-socials.d-none.d-md-flex.text-nowrap
-                span = t("follow_us_on")
+                  .it-brand-text
+                    div class=["h4",
+                               "no_toc",
+                               "d-none",
+                               "d-xl-inline-block",
+                               "font-weight-normal",
+                               "mb-0",
+                               "ml-1"].join(" ")
+                      = t("formatted_site_name")
 
-                .ml-3
-                  = partial "partials/socials"
-
-              .it-search-wrapper
-                span.d-none.d-md-block.font-weight-semibold
-                  = t("search")
-
-                = link_to page_path(dato.search_page),
-                  class: "search-link rounded-icon",
-                  aria: {"label": t("search")}
-                  svg.icon [
-                      focusable="false"
-                      aria-label=t("alt_search")
-                      role="img"
-                    ]
-                    use xlink:href="/images/sprite.svg#it-search"
-
-    .it-header-navbar-wrapper
-      .container
-        .row
-          /! start nav
-          nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile [
-            aria-label=t("main_nav_role")
-          ]
-            button.custom-navbar-toggler [
-                aria-controls="nav02"
-                aria-expanded="true"
-                aria-label=t("main_nav_label")
-                data-target="#nav02"
-                type="button"
-              ]
-              svg.icon
-                use xlink:href="/images/sprite.svg#it-burger"
-
-            #nav02.navbar-collapsable style="display: none; z-index: 2000"
-              .overlay style="display: none;"
-              .close-div.sr-only
-                button.btn.close-menu type="button"
-                  span.it-close
-                    = t("close")
-
-              .menu-wrapper
-                .pl-4.pt-4.d-lg-none
-                  = link_to locale_path("/"),
-                    class: "d-inline-flex"
-                    = proxy_image_tag "logo-repubblica-italiana.svg",
-                      alt: t("logos.italy"),
-                      style: "max-height: 32px;",
-                      class: "mr-2"
-
-                    = proxy_image_tag "logo-mid-white.svg",
-                      alt: t("logos.mid"),
-                      style: "width: 120px; max-height: 32px;",
-                      class: ""
-
-                ul.navbar-nav
-                  li.nav-item
-                    = active_link_to dato.minister_page.menu_label,
-                      page_path(dato.minister_page),
-                      class: "nav-link font-weight-semibold"
-
-                  li.nav-item
-                    = active_link_to dato.department_page.menu_label,
-                      page_path(dato.department_page),
-                      class: "nav-link font-weight-semibold"
-
-                  li.nav-item
-                    = active_link_to dato.projects_page.menu_label,
-                      page_path(dato.projects_page),
-                      class: "nav-link font-weight-semibold"
-
-                  li.nav-item
-                    = active_link_to dato.news_page.menu_label,
-                      page_path(dato.news_page),
-                      class: "nav-link font-weight-semibold"
-
-                .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
-                  span.text-white
-                    = t("follow_us_on")
+              .it-right-zone
+                .it-socials.d-none.d-md-flex.text-nowrap
+                  span = t("follow_us_on")
 
                   .ml-3
                     = partial "partials/socials"
+
+                .it-search-wrapper
+                  span.d-none.d-md-block.font-weight-semibold
+                    = t("search")
+
+                  = link_to page_path(dato.search_page),
+                    class: "search-link rounded-icon",
+                    aria: {"label": t("search")}
+                    svg.icon [
+                        focusable="false"
+                        aria-label=t("alt_search")
+                        role="img"
+                      ]
+                      use xlink:href="/images/sprite.svg#it-search"
+
+      .it-header-navbar-wrapper
+        .container
+          .row
+            /! start nav
+            nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile [
+              aria-label=t("main_nav_role")
+            ]
+              button.custom-navbar-toggler [
+                  aria-controls="nav02"
+                  aria-expanded="true"
+                  aria-label=t("main_nav_label")
+                  data-target="#nav02"
+                  type="button"
+                ]
+                svg.icon
+                  use xlink:href="/images/sprite.svg#it-burger"
+
+              #nav02.navbar-collapsable style="display: none; z-index: 2000"
+                .overlay style="display: none;"
+                .close-div.sr-only
+                  button.btn.close-menu type="button"
+                    span.it-close
+                      = t("close")
+
+                .menu-wrapper
+                  .pl-4.pt-4.d-lg-none
+                    = link_to locale_path("/"),
+                      class: "d-inline-flex"
+                      = proxy_image_tag "logo-repubblica-italiana.svg",
+                        alt: t("logos.italy"),
+                        style: "max-height: 32px;",
+                        class: "mr-2"
+
+                      = proxy_image_tag "logo-mid-white.svg",
+                        alt: t("logos.mid"),
+                        style: "width: 120px; max-height: 32px;",
+                        class: ""
+
+                  ul.navbar-nav
+                    li.nav-item
+                      = active_link_to dato.minister_page.menu_label,
+                        page_path(dato.minister_page),
+                        class: "nav-link font-weight-semibold"
+
+                    li.nav-item
+                      = active_link_to dato.department_page.menu_label,
+                        page_path(dato.department_page),
+                        class: "nav-link font-weight-semibold"
+
+                    li.nav-item
+                      = active_link_to dato.projects_page.menu_label,
+                        page_path(dato.projects_page),
+                        class: "nav-link font-weight-semibold"
+
+                    li.nav-item
+                      = active_link_to dato.news_page.menu_label,
+                        page_path(dato.news_page),
+                        class: "nav-link font-weight-semibold"
+
+                  .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
+                    span.text-white
+                      = t("follow_us_on")
+
+                    .ml-3
+                      = partial "partials/socials"

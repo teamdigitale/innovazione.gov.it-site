@@ -215,7 +215,7 @@ helpers do
   end
 
   def links_to_existing_page?(link)
-    if link.item_type.api_key == "internal_link"
+    if link.link.respond_to?(:slug)
       link.link.slug
     else
       true
