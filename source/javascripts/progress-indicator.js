@@ -47,7 +47,7 @@ function setActive(id) {
 function showTitle() {
   $('#_sticky-aside').each(function(i, nav) {
     var title = $(nav).find('#_sticky-title')
-    if (nav.getBoundingClientRect().top === 0) {
+    if (nav.getBoundingClientRect().top <= 0) {
       $(title).collapse('show')
     } else {
       $(title).collapse('hide')
