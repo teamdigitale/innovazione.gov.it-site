@@ -12,7 +12,7 @@ it:
     department_subpage: Pagina Dipartimento
     projects_subpage: Pagina Progetti
     news_subpage: Pagina Notizie
-
+    job_position: Posizione lavorativa
   logos:
     italy: Logo Repubblica Italiana
     mid: Logo Ministro Innovazione
@@ -22,6 +22,9 @@ it:
   announcement_date_opening: Data di apertura
   announcement_owner: Struttura di riferimento
   announcement_status: Stato
+  job_position_legal_reference: Riferimento legislativo
+  job_position_fee: Compenso
+  job_position_fee_to: Fino a
   articles_section_title: Gli articoli
   attachments: Allegati
   button_aria_label: "%{topic}: %{cta}"
