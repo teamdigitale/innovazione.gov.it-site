@@ -96,7 +96,7 @@ ruby:
               = date
             
             - if item.respond_to?(:announcement_status)
-              span.px-2 class="#{txt_date}"
+              span.px-2 class="#{txt_date} font-weight-bold"
                 = item.announcement_status.name
 
           h3 class="h5 font-weight-semibold"

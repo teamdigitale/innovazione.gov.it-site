@@ -45,17 +45,15 @@
         = partial "partials/formatted-date",
           locals: {date: page.announcement_date_closing, show_time: true}
 
-    - if page.announcement_owner.present?
-      = partial "partials/column-title",
-        locals: {title: t("announcement_owner")}
+    - if page.job_position_owner_link.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("announcement_owner")}
 
-      - if page.announcement_owner_link.present?
-        = link_to page.announcement_owner,
-          page.announcement_owner_link,
-          target: "_blank",
-          rel: "noopener"
-      - else
-        p = page.announcement_owner
+        = partial "partials/links/#{page.job_position_owner_link.item_type.api_key}",
+          locals: {item: page.job_position_owner_link,
+            label: page.job_position_owner_link.title,
+            html_class: "list-item"}
 
   - if main_locale?(locale)
     = content_for :aside
