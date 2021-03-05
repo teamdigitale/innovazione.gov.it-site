@@ -11,7 +11,7 @@
           locals: {title: t("announcement_date_opening")}
 
         = partial "partials/formatted-date",
-          locals: {date: page.announcement_date_opening, show_time: true}
+          locals: {date: page.announcement_date_opening}
 
     - if page.legal_reference.present?
       .mb-5
@@ -43,7 +43,7 @@
           locals: {title: t("announcement_date_closing")}
 
         = partial "partials/formatted-date",
-          locals: {date: page.announcement_date_closing, show_time: true}
+          locals: {date: page.announcement_date_closing}
 
     - if page.job_position_owner_link.present?
       .mb-5
