@@ -92,9 +92,13 @@ ruby:
           .category.pb-2.card-text
             span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
               = t("models.#{item.item_type.api_key}")
-
             span.px-2 class="#{txt_date}"
               = date
+            
+            - if item.respond_to?(:announcement_status)
+              span.px-2 class="#{txt_date} font-weight-bold"
+                = item.announcement_status.name
+
           h3 class="h5 font-weight-semibold"
             = link_to page_path(item),
               class: "#{txt_title} text-decoration-none"

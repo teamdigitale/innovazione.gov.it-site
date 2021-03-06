@@ -96,6 +96,10 @@ module PresentationHelper
     pages.select(&:slug).sort_by(&:position)
   end
 
+  def self.published_job_positions(job_positions)
+    job_positions.select(&:slug).sort_by(&:date_shown).reverse
+  end
+
   def self.published_children_pages(page)
     page.children.select(&:slug).sort_by(&:position)
   end
@@ -257,6 +261,7 @@ helpers do
        focus_page
        project
        general_page
+       job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -285,6 +290,7 @@ helpers do
     %w[focus_page
        project
        general_page
+       job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -315,6 +321,7 @@ helpers do
        participation
        press_release
        general_page
+       job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -445,6 +452,7 @@ dato.tap do |dato|
     visible_focus_pages = PresentationHelper.published_focus_pages(dato.focus_pages)
     visible_projects = PresentationHelper.published_projects(dato.projects)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
+    visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
@@ -503,6 +511,18 @@ dato.tap do |dato|
             locals: {page: general_page,
                      children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
+    end
+
+    paginate_with_fallback(visible_job_positions,
+                           dato.job_positions_index,
+                           dato.department_page,
+                           locale)
+
+    visible_job_positions.each do |job_position|
+      proxy "/#{dato.department_page.slug}/#{dato.job_positions_index.slug}/#{job_position.slug}/index.html",
+      "/templates/job_position.html",
+      locals: {page: job_position},
+      locale: locale
     end
 
     proxy "/#{dato.minister_page.slug}/index.html",
@@ -712,6 +732,7 @@ dato.tap do |dato|
                         visible_participations +
                         visible_press_releases +
                         visible_general_pages +
+                        visible_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +

@@ -1,0 +1,68 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic",
+  locals: {page: page, share: true} do
+
+  = content_for :col_one
+    - if page.announcement_date_opening.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("announcement_date_opening")}
+
+        = partial "partials/formatted-date",
+          locals: {date: page.announcement_date_opening}
+
+    - if page.legal_reference.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("job_position_legal_reference")}
+
+        = partial "partials/links/#{page.legal_reference.item_type.api_key}",
+          locals: {item: page.legal_reference,
+            label: page.legal_reference.title,
+            html_class: "list-item"}
+
+    - if page.fee.present?
+      = partial "partials/column-title",
+        locals: {title: t("job_position_fee")}
+
+      p = "#{t("job_position_fee_to")} #{number_to_currency(page.fee, locale: I18n.locale, separator: ",", delimiter: ".")}"
+
+  = content_for :col_two
+    - if page.announcement_status.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("announcement_status")}
+
+        p = page.announcement_status.name
+
+    - if page.announcement_date_closing.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("announcement_date_closing")}
+
+        = partial "partials/formatted-date",
+          locals: {date: page.announcement_date_closing}
+
+    - if page.job_position_owner_link.present?
+      .mb-5
+        = partial "partials/column-title",
+          locals: {title: t("announcement_owner")}
+
+        = partial "partials/links/#{page.job_position_owner_link.item_type.api_key}",
+          locals: {item: page.job_position_owner_link,
+            label: page.job_position_owner_link.title,
+            html_class: "list-item"}
+
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: page_path(tag)}
+
+= partial "partials/page-content",
+  locals: {page: page}
