@@ -31,7 +31,7 @@ Il sito può essere testato in ambiente locale eseguendo il seguente comando:
 In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
 
 ## Sviluppo con docker
-Buildare il container con il seguente comando:
+È possibile compilare il container eseguendo il seguente comando:
 `docker build . -t innovazione.gov.it`
 
 Assicurarsi di avere il proprio file `.env` correttamente popolato e poi eseguire:
@@ -44,4 +44,6 @@ UID e GID utilizzando il seguente comando:
 Assicurarsi che il `.env` sia corretto e quindi eseguire:
 `docker-compose up`
 
-Maggiori informazioni su dettagli di implementazione del sito sono reperibili nella [Wiki di progetto](https://github.com/teamdigitale/innovazione.gov.it-site/wiki).
+## Maggiori informazioni
+
+Per ulteriori dettagli di implementazione del sito sono reperibili nella [Wiki di progetto](https://github.com/teamdigitale/innovazione.gov.it-site/wiki).
