@@ -1,7 +1,8 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-h1.sr-only = dato.homepage.title
+/ h1.sr-only = dato.homepage.title
+h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-text = "<span>Ministro</span> per l'innovazione tecnologica e la transizione digitale"
 
 - if page.banners.present?
   h2.sr-only Segnalazioni

@@ -1,7 +1,9 @@
 ruby:
   classes = %w[
     d-flex
-    flex-row
+    flex-column
+    flex-md-row
+    flex-sm-column
     align-items-start
     align-items-lg-baseline
     justify-content-between
@@ -11,7 +13,7 @@ ruby:
 .border-bottom.py-2.py-lg-1
   .container
     section class=classes
-      .d-lg-flex.align-items-lg-center
+      .pt-3.pb-1.pb-md-3.d-lg-flex.align-items-lg-center
         - if banner.title.present?
           h3.h5.font-weight-bold.pr-lg-3.pt-1
             = banner.title
@@ -20,4 +22,4 @@ ruby:
       - if links_to_existing_page?(banner.link)
         = partial "partials/links/#{banner.link.item_type.api_key}",
           locals: {item: banner.link,
-            html_class: "btn text-primary text-uppercase px-0 text-nowrap"}
+            html_class: "btn text-primary text-uppercase ml-0 ml-md-4 pt-0 pt-md-3 pb-3 px-0"}
