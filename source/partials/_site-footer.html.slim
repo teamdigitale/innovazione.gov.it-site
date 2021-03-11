@@ -1,6 +1,6 @@
 ruby:
   title_class = %w[h6 text-uppercase font-weight-bold text-center
-    text-md-left mb-3]
+    text-md-left mb-3].join(" ")
 
 - I18n.with_locale(:it)
   - transparency_links = visible_links(dato.company.footer_transparency_links)
@@ -15,9 +15,9 @@ ruby:
             .it-brand-wrapper
               ruby:
                 classes = %w[flex-wrap
-                          flex-md-nowrap
-                          justify-content-center
-                          justify-content-md-start]
+                            flex-md-nowrap
+                            justify-content-center
+                            justify-content-md-start].join(" ")
 
               = link_to home_path,
                 class: classes
@@ -25,9 +25,9 @@ ruby:
                   alt: t("logos.italy"),
                   class: "icon"
 
-                = proxy_image_tag "logo-mid-white.svg",
+                = proxy_image_tag "logo-mitd-white.svg",
                   alt: t("logos.mid"),
-                  style: "width: 120px",
+                  style: "width: 160px",
                   class: "icon"
 
                 .it-brand-text.pr-0.pr-md-2
