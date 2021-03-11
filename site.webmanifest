@@ -3,12 +3,12 @@
     "short_name": "Ministro per l'innovazione tecnologica e la transizione digitale",
     "icons": [
         {
-            "src": "\/android-chrome-192x192-bd7fcdb0.png",
+            "src": "\/android-chrome-192x192-f480daea.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "\/android-chrome-512x512-6f882ffa.png",
+            "src": "\/android-chrome-512x512-c2cf24cb.png",
             "sizes": "512x512",
             "type": "image/png"
         }
