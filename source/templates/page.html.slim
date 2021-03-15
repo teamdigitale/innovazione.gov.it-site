@@ -1,8 +1,7 @@
 ruby:
-  children = 
-    if page.respond_to?(:menu_general_links) && page.menu_general_links.any?
-      children + page.menu_general_links.collect(&:link)
-    end
+  if page.respond_to?(:menu_general_links) && page.menu_general_links.any?
+    children = children + page.menu_general_links.collect(&:link)
+  end
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
