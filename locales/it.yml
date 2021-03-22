@@ -142,3 +142,4 @@ it:
   skiplinks:
     content: Vai al contenuto principale
     footer: Vai al footer
+  aria_label_link_pdf: E' presente un link ad un file .pdf
