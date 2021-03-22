@@ -42,10 +42,10 @@ module TextHelpers
     links.each do |link|
       url = link.attributes["href"].content
       
-      if !url.start_with?("/") && !url.include?(ENV["BASE_URL"])
-        add_link_attributes(link)
-      elsif url.include? ".pdf"
+      if url.include? ".pdf"
         add_pdf_attributes(link)
+      elsif !url.start_with?("/") && !url.include?(ENV["BASE_URL"])
+        add_link_attributes(link)
       end
     end
 
@@ -72,6 +72,8 @@ module TextHelpers
     link.set_attribute("target", "_blank")
     link.set_attribute("rel", "noopener")
     link.attributes["aria-label"]&.remove
+    link.set_attribute("aria-label",
+                         "#{I18n.t('aria_label_link_pdf')}")
 
     link.content = "#{link.content} (PDF)"
     link
