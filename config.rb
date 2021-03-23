@@ -312,7 +312,7 @@ helpers do
   end
 
   def sharable_socials
-    %w[facebook twitter linkedin whatsapp telegram email]
+    %w[facebook twitter linkedin whatsapp]
   end
 
   def localizable_api_keys

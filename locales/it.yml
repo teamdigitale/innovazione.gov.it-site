@@ -74,7 +74,7 @@ it:
   share: Condividi
   source: Fonte
   state_name: Repubblica Italiana
-  switch_language_label: Read in english
+  switch_language_label: Read in English
   tags_title: Gli argomenti dell'innovazione
   transparency: Trasparenza
   updated_at: Data ultimo aggiornamento
@@ -142,3 +142,4 @@ it:
   skiplinks:
     content: Vai al contenuto principale
     footer: Vai al footer
+  aria_label_link_pdf: E' presente un link ad un file .pdf
