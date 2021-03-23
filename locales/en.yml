@@ -25,4 +25,4 @@ en:
   skiplinks:
     content: Go to main content
     footer: Go to footer
-  aria_label_link_pdf: A link to a .pdf file is present.
+  aria_label_link_pdf: (download the PDF)
