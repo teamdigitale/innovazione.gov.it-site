@@ -73,7 +73,7 @@ module TextHelpers
     link.set_attribute("rel", "noopener")
     link.attributes["aria-label"]&.remove
     link.set_attribute("aria-label",
-                         "#{I18n.t('aria_label_link_pdf')}")
+                         "#{link.content} #{I18n.t('aria_label_link_pdf')}")
 
     link.content = "#{link.content} (PDF)"
     link
