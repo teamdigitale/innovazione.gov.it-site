@@ -100,6 +100,10 @@ module PresentationHelper
     job_positions.select(&:slug).sort_by(&:date_shown).reverse
   end
 
+  def self.published_general_chart(general_charts)
+    general_charts.select(&:slug).sort_by(&:date_shown).reverse
+  end
+
   def self.published_children_pages(page)
     page.children.select(&:slug).sort_by(&:position)
   end
@@ -261,6 +265,7 @@ helpers do
        focus_page
        project
        general_page
+       general_chart
        job_position
        minister_subpage
        department_subpage
@@ -291,6 +296,7 @@ helpers do
        project
        general_page
        job_position
+       general_chart
        minister_subpage
        department_subpage
        projects_subpage
@@ -322,6 +328,7 @@ helpers do
        press_release
        general_page
        job_position
+       general_chart
        minister_subpage
        department_subpage
        projects_subpage
@@ -453,6 +460,7 @@ dato.tap do |dato|
     visible_projects = PresentationHelper.published_projects(dato.projects)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
+    visible_general_chart = PresentationHelper.published_general_chart(dato.general_charts)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
@@ -522,6 +530,13 @@ dato.tap do |dato|
       proxy "/#{dato.department_page.slug}/#{dato.job_positions_index.slug}/#{job_position.slug}/index.html",
       "/templates/job_position.html",
       locals: {page: job_position},
+      locale: locale
+    end
+
+    visible_general_chart.each do |general_chart|
+      proxy "/#{general_chart.slug}/index.html",
+      "/templates/chart01.html",
+      locals: {page: general_chart},
       locale: locale
     end
 

@@ -1,0 +1,24 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+- if page.present?
+  .pb-5.lightgrey-bg-a2
+    .container.pb-5.text-center.text-sm-left
+      .row
+        .col-12.order-1
+          = partial "partials/breadcrumb", locals: {page: page}
+
+        .offset-lg-1.col-lg-6.col-md-8.order-3.order-md-2
+          .row
+            .col-md-9
+              = partial "partials/headers/main-titles", locals: {page: page}
+
+.container.pt-3
+  .pt-5.pb-4
+    = partial "partials/section-title",
+      locals: {title: t("articles_section_title")}
+  / p = "#{t("job_position_fee_to")} #{page.chart_data}"
+  #chartData style="display: none;"
+    = page.chart_data
+= javascript_include_tag 'chart.js' 
+
