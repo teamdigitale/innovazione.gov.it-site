@@ -21,7 +21,7 @@
                         url: page_path(tag),
                         text_color: "text-white"}
 
-        .col-12.col-lg-5.mid-absolute-column.mb-3.mb-md-5.mb-lg-0
+        .col-12.col-lg-5.mid-absolute-column.mb-lg-0.pr-lg-0
           - if page.image_cover.present?
             = proxy_image_tag page.image_cover.lqip_data_url(w: 10, h: 10,
               fit: "crop"), data: {"sizes": "100vw",

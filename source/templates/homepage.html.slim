@@ -22,7 +22,7 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
       - if page.news.any?
         = partial "partials/cards-horizontal-list",
           locals: {items: page.news,
-          hide_image: true,
+          hide_image: false,
           hide_tags: true,
           show_item_type: true,
           btn_url: dato.news_page}
