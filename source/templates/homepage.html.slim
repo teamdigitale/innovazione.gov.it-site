@@ -27,10 +27,8 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
           show_item_type: true,
           btn_url: dato.news_page}
 
-  p #{ENV["BUILD_ENV"]}
-
 / blocco Italia 2026
-- if ENV["BUILD_ENV"] != "production"
+- if ENV["BUILD_ENV"] == "WE-CAN-PUBLIC"
   .py-5.lightgrey-bg-a2
     .container
       = partial "partials/card-feature-italia2026"
