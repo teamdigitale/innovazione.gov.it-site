@@ -38,7 +38,7 @@
         locals: {title: t("articles_section_title")}
     = partial "partials/cards-horizontal-list",
       locals: {items: page.articles.take(3),
-      hide_image: true,
+      hide_image: false,
       hide_tags: true,
       btn_url: dato.department_articles_index}
 
