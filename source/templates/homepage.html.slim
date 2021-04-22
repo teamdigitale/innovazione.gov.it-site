@@ -34,9 +34,14 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
       = partial "partials/card-feature-italia2026"
 
 / blocco Ministra
-.py-5
-  .container
-    = partial "partials/card-feature-carousel"
+- if ENV["BUILD_ENV"] == "WE-CAN-PUBLIC"
+  .py-5
+    .container
+      = partial "partials/card-feature-carousel"
+- else
+  .py-5.py-5.lightgrey-bg-a2
+    .container
+      = partial "partials/card-feature-carousel"
 
 / blocco Focus
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
