@@ -8,8 +8,7 @@ ruby:
   - page.italy2026_percent_numbers.each do |item|
       ruby:
         card_partial = partial "partials/card-2026",
-          locals: {element: item,
-          margin_bottom: true,}
+          locals: {element: item}
       .d-none.d-lg-block
         = card_partial
   
@@ -22,9 +21,8 @@ ruby:
               .swiper-slide
                 .swiper-slide__text.py-0
                   ruby:
-                    card_partial = partial "partials/card-2026",
-                      locals: {element: item,
-                      hide_shadow: true}
+                    card_partial = partial "partials/card-2026-mobile",
+                      locals: {element: item}
                   = card_partial
 
         .swiper-pagination.py-3
