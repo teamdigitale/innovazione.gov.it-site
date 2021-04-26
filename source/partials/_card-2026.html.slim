@@ -6,15 +6,15 @@
       description ||=""
       number ||= nil
       image_icon ||= nil
-    .card.d-flex.flex-row.rounded.mb-3.shadow-lg.p-3
-      .card-body.p-0
+    .card.d-flex.flex-row.rounded.mb-3.shadow-lg.p-3.align-items-center
+      .card-body.pl-4.py-2
         h4.text-primary.h5.font-weight-bold
           = element.title
-        div.card-text.text-secondary.pt-1
+        div.card-text.text-secondary
           span = element.description
-      div.text-primary.h2.font-weight-semibold.mb-0.pt-4
+      div.text-primary.h2.font-weight-semibold.mb-0
         = "#{element.number}%"
-      .img-responsive-wrapper.pt-4
+      .img-responsive-wrapper.pr-3
           .icon.mid-icon-large.text-primary.ml-3
             figure.mb-0
               = proxy_image_tag element.image_icon.lqip_data_url(w: 48,
