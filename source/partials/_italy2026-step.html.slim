@@ -1,1 +1,29 @@
-  div = page.italy2026_goals
+ruby:
+  title ||= ""
+  description ||=""
+  number ||= nil
+  image_icon ||= nil
+
+- if page.italy2026_percent_numbers.present?
+  - page.italy2026_percent_numbers.each do |item|
+      ruby:
+        card_partial = partial "partials/card-2026",
+          locals: {element: item}
+      .d-none.d-lg-block
+        = card_partial
+  
+  .col-12.d-lg-none
+    - if page.italy2026_percent_numbers.present?
+      .swiper
+        .swiper-container.p-0.mb-4.bg-white.rounded.shadow-lg
+          .swiper-wrapper
+            - page.italy2026_percent_numbers.each do |item|
+              .swiper-slide
+                .swiper-slide__text.py-0
+                  ruby:
+                    card_partial = partial "partials/card-2026-mobile",
+                      locals: {element: item}
+                  = card_partial
+
+        .swiper-pagination.py-3
+
