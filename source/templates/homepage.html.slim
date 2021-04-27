@@ -7,8 +7,14 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
 - if page.banners.present?
   h2.sr-only Segnalazioni
   - page.banners.each do |block|
-    = partial "partials/blocks/#{block.item_type.api_key}",
-      locals: {block: block}
+    - if block.item_type.api_key ==  'block_hero_banner' && block.show
+      = partial "partials/blocks/#{block.item_type.api_key}",
+        locals: {block: block}
+
+    - else
+      - if block.item_type.api_key !=  'block_hero_banner'
+        = partial "partials/blocks/#{block.item_type.api_key}",
+          locals: {block: block}
 
 .container.pt-5
   h2.h4.mb-4 = t("home.highlights")
