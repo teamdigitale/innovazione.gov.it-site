@@ -63,13 +63,13 @@
         .d-none.d-lg-block
           .img-responsive-panoramic
             figure.position-absolute.w-100.h-100
-              = proxy_image_tag card_image.lqip_data_url(w: 5, h: 10,
+              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
                 fit: "crop"), data: {"sizes": "100vw",
-                  "src": card_image.url(w: 220, h: 420,
+                  "src": card_image.url(w: 700, h: 400,
                   fit: "crop", auto: "compress"),
-                  "srcset": "#{card_image.url(w: 180, h: 370,
+                  "srcset": "#{card_image.url(w: 700, h: 400,
                   fit: 'crop', auto: 'compress')} 1090w,
-                  #{card_image.url(w: 220, h: 420,
+                  #{card_image.url(w: 700, h: 400,
                   fit: 'crop', auto: 'compress')} 1320w"},
                 class: "lazyload d-block w-100 h-100 m-0",
                 style: "object-fit: cover",
