@@ -2,9 +2,9 @@ ruby:
   featured_items ||= nil
   show_item_type ||= nil
 
-  with_cover = if featured_items.length == 2 &&
-    (featured_items.first.respond_to?(:image_cover) &&
-    featured_items.first.image_cover.present?)
+  with_thumbnail = if featured_items.length == 2 &&
+    (featured_items.first.respond_to?(:image_thumbnail) &&
+    featured_items.first.image_thumbnail.present?)
     true
   end
 
@@ -16,7 +16,7 @@ ruby:
           locals: {article: featured_items.first,
           show_item_type: show_item_type}
 
-    - elsif with_cover
+    - elsif with_thumbnail
       .col-12.col-lg-8.mb-4.mb-lg-0
         = partial "partials/card-featured",
           locals: {article: featured_items.first,
@@ -33,9 +33,9 @@ ruby:
         = partial "partials/card",
           locals: {article: featured_items[0],
           show_item_type: show_item_type,
-          medium_title: true, hide_image: false}
+          medium_title: true, hide_image: true}
       .col-12.col-lg-6
         = partial "partials/card",
           locals: {article: featured_items[1],
           show_item_type: show_item_type,
-          medium_title: true, hide_image: false}
+          medium_title: true, hide_image: true}
