@@ -19,10 +19,20 @@ ruby:
 
 - if block.video.present?
   .mb-5
-    iframe [width="100%"
-            height=minheight
-            src=nocookie_url
-            frameborder="0"
-            allow=allows
-            title="Youtube video"
-            allowfullscreen="allowfullscreen"]
+    .d-none.d-lg-block
+      iframe [width="100%"
+              height=minheight
+              src=nocookie_url
+              frameborder="0"
+              allow=allows
+              title="Youtube video"
+              allowfullscreen="allowfullscreen"]
+    / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
+    .col-12.d-lg-none.p-0
+      iframe [width="100%"
+              height="200"
+              src=nocookie_url
+              frameborder="0"
+              allow=allows
+              title="Youtube video"
+              allowfullscreen="allowfullscreen"]
