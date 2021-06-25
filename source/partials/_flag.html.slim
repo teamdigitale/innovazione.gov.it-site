@@ -23,12 +23,12 @@
       .d-none.d-lg-block.col-lg-6.p-0 class="#{image_position}"
         - if is_first_flag
           - if large_title
-            - lg_image_url = flag.image.url(w: 700,
-              h: 400,
+            - lg_image_url = flag.image.url(w: 1400,
+              h: 8400,
               fit: "crop",
               auto: "compress")
-            - xl_image_url = flag.image.url(w: 700,
-              h: 400,
+            - xl_image_url = flag.image.url(w: 1400,
+              h: 800,
               fit: "crop",
               auto: "compress")
           - else
