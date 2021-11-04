@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem "activesupport"
 gem "html_truncator"
-gem "middleman", "~> 4.2"
+gem "middleman", "~> 4.4"
 gem "middleman-dato"
 gem "middleman-livereload"
 gem "middleman-minify-html"
