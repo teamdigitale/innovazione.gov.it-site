@@ -10,7 +10,7 @@ ruby:
     is_project = item.item_type.api_key == "project"
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
 
-    if (!is_focus && !is_project) && show_date
+    if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
 
@@ -94,7 +94,7 @@ ruby:
               = t("models.#{item.item_type.api_key}")
             span.px-2 class="#{txt_date}"
               = date
-            
+
             - if item.respond_to?(:announcement_status)
               span.px-2 class="#{txt_date} font-weight-bold"
                 = item.announcement_status.name

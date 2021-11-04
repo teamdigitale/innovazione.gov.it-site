@@ -304,6 +304,18 @@ helpers do
     show_update_date_api_keys.include?(page.item_type.api_key)
   end
 
+  def show_update_date_in_preview_api_keys
+    %w[announcement
+       article
+       interview
+       participation
+       press_release]
+  end
+
+  def page_show_update_date_in_preview?(page)
+    show_update_date_in_preview_api_keys.include?(page.item_type.api_key)
+  end
+
   def all_index_pages
     [dato.articles_index,
      dato.announcements_index,
