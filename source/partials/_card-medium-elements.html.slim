@@ -1,32 +1,6 @@
 - article ||= nil
 
 - if article.present?
-  ruby:
-    owners = []
-    article.owners.each do |owner|
-      if owner.respond_to?(:title) && owner.title.present?
-        owners << owner.title
-      end
-    end
-    authors = case owners.length
-              when 0
-                ""
-              when 1
-                if owners[0].downcase.start_with?("la")
-                  "della #{owners[0].slice(3..-1)}"
-                else
-                  "di #{owners[0]}"
-                end
-              when 2
-                if owners[0].downcase.start_with?("la")
-                  "della #{owners[0].slice(3..-1)} e #{owners[-1]}"
-                else
-                  "di #{owners[0..-2]} e #{owners[-1]}"
-                end
-              else
-                "di #{owners[0..-2].join(', ')} e #{owners[-1]}"
-              end
-
   .card-wrapper
     .card.card-img.no-after.rounded.shadow-lg
       .img-responsive-wrapper
@@ -67,15 +41,15 @@
                 class: "lazyload d-block w-100",
                 alt: article.image_thumbnail.alt
 
-      .card-body.mb-4.d-flex.flex-column.justify-content-between.mt-n5
+      .card-body.d-flex.flex-column.justify-content-between.mt-n5
         .px-4
-          h4.text-primary.card-title
+          h4.h5.font-weight-bold.text-primary.card-title
             = proxy_link_to article.link_medium.link,
               class: "text-decoration-none"
               = article.title
-          .h6.text-black.mt-2
-            = authors
-        .my-5
+          .mid-caption--large.font-weight-semibold.mt-2
+            = article.author
+        .my-2
         .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
           - if article.tags.present?
             - article.tags.each do |tag|
