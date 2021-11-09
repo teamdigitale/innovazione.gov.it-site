@@ -1,28 +1,31 @@
 - if dato.news_page.medium_articles.present?
 
-  .d-lg-flex
-    .mr-lg-auto.p-2
+  .d-lg-flex.mb-lg-0.pb-lg-0
+    .mr-lg-auto
       = partial "partials/section-title", locals: {title: t("medium_articles")}
-    .p-2
+    .p-1
       svg.icon
         use xlink:href="/images/sprite.svg#it-external-link"
       span.d-lg-none.px-2
         = "Link esterni"
-    .p-2.px-2.d-none.d-lg-block
+    .pt-2.pl-2.d-none.d-lg-block
       = "Link esterni"
 
-  .row.mt-4.mt-lg-5.mx-n4
+  .row.mt-4.mx-n4
     - dato.news_page.medium_articles[0..2].map do |article|
       .col-lg-4.px-4
         = partial "partials/card-medium-elements", locals: {article: article}
 
   .row.pb-5
     .col-12.my-3.mt-lg-5.text-center
-      button.btn.btn-sm.btn-outline-primary.btn-icon.text-uppercase
+      button.btn.btn-sm.py-2.btn-outline-primary.mid-button-medium.btn-icon.text-uppercase
         = proxy_link_to dato.company.medium_url,
           class: "text-decoration-none align-middle"
           .d-inline-block.pr-3
-            h6.font-weight-bold = t("medium")
-          span
+            p.mb-0.mid-caption--large.font-weight-bold = t("medium")
+          span.d-none.d-lg-inline
             svg.icon.icon-lg.icon-primary
+              use xlink:href="/images/sprite.svg#it-medium"
+          span.d-lg-none
+            svg.icon.icon-sm.icon-primary.align-top
               use xlink:href="/images/sprite.svg#it-medium"

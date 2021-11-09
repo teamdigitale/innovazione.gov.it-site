@@ -24,7 +24,6 @@ activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 activate :asset_hash
 activate :directory_indexes
 activate :pagination
-activate :inline_svg
 
 RETRY_CLASSES = [
   Faraday::ClientError,
@@ -53,7 +52,7 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           environment: DATO_ENV
+           environment: ENV.fetch("DATO_ENV")
 end
 
 webpack_command =

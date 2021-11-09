@@ -3,13 +3,13 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-.mb-5
-  .container.pb-5.text-center.text-sm-left
+.mb-3
+  .container.pb-md-5.text-center.text-sm-left
     .row
       .col-12
         = partial "partials/breadcrumb", locals: {page: page}
 
-      .col-md-7
+      .col-md-7.offset-lg-1
         h1.font-weight-bold = page.name
 
       .offset-lg-1.col-md-4.mt-5.m-md-0
@@ -32,6 +32,14 @@
                 class: "p-0 list-item d-inline-block"
                   span.font-weight-semibold.mr-0
                     = dato.explore_page.title
+
+    = if page.title.present?
+      .row
+        .offset-lg-1.col-lg-6.col-md-8.mb-0
+          = partial "partials/headers/main-titles", locals: {page: page}
+
+= partial "partials/page-cover",
+  locals: {page: page}
 
 .container
   .border-bottom
