@@ -54,6 +54,11 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
 / blocco Focus
 = partial "partials/focus-flag", locals: {items: page.focus_elements}
 
+/ blocco video
+.lightgrey-bg-a2
+  .container.pt-3
+    = partial "partials/video-single", locals: {item: page.video_section}
+
 .container
   = partial "partials/card-featured-projects", locals: {page: page}
 

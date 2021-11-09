@@ -143,3 +143,7 @@ it:
     content: Vai al contenuto principale
     footer: Vai al footer
   aria_label_link_pdf: (scarica il PDF)
+
+  video:
+    youtube: Guarda su Youtube
+    transcript: Trascrizione
