@@ -51,17 +51,23 @@ ruby:
   
     .d-flex.justify-content-end.mt-2
       = link_to item.youtube_url,
-        class: "mid-caption"
+        class: "mid-caption",
+        target: "_blank",
+        rel: "noopener",
+        "aria-label": "#{item.title}: (Link esterno) #{t("video.youtube")}"
         =t("video.youtube")
 
       = link_to item.youtube_url,
-        class: "mx-4 mid-caption"
+        class: "mx-4 mid-caption",
+        target: "_blank",
+        rel: "noopener",
+        "aria-label": "#{item.title}: (Link esterno) #{t("video.transcript")}"
         = t("video.transcript")
 
 
 .row.mt-2.pb-5
   .col-12.text-center.my-4
     = partial "partials/button",
-    locals: {btn_url: dato.focus_index,
+    locals: {btn_url: dato.video_index,
       white_outline: true,
       aria_label: section_title}
