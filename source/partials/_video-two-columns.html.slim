@@ -1,4 +1,5 @@
 - items ||= nil
+- homepage_section ||= nil
 
 / Dato ritorna un url di youtube che non vogliamo usare
 / quindi sostituiamo il dominio e l'embed al volo
@@ -6,17 +7,18 @@
 / Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
 / Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
 
-
-.py-5.pb-4
-  = partial "partials/section-title",
-      locals: {title: title}
+- if homepage_section
+  .pt-5.pb-4.mb-4
+    h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+      = items.first.item_type.api_key
 
 .row
   - items.map do |item|
     .col-lg-6.mb-4
-      p.ml-lg-4.mid-caption.text-secondary
-        = partial "partials/formatted-date",
-          locals: {date: item.publication_date}
+      - unless homepage_section
+        p.ml-lg-4.mid-caption.text-secondary
+          = partial "partials/formatted-date",
+            locals: {date: item.publication_date}
       h2.ml-lg-4.mid-caption--xxlarge.text-primary = item.title
 
 .row
@@ -63,4 +65,6 @@
     locals: {btn_url: dato.video_index,
       label: t("see_more"),
       white_outline: true,
-      aria_label: title}
+      aria_label: "sezione video"}
+- if homepage_section
+  .pb-5

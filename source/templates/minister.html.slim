@@ -61,9 +61,11 @@
 
 .lightgrey-bg-a2
   .container.pt-3
+    .py-5.pb-4
+      = partial "partials/section-title",
+      locals: {title: dato.minister_page.video_section_title}
     = partial "partials/video-two-columns",
-      locals: {title: t("speaker_corner_section_title"),
-      items: dato.minister_page.speaker_corner.take(2)}
+      locals: {items: dato.minister_page.video_section.take(2)}
 
 .container.pt-3
   = partial "partials/cards-horizontal-list",
