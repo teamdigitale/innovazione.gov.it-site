@@ -19,35 +19,36 @@ ruby:
               picture-in-picture].join("; ")
   end
 
-.d-none.d-lg-block
-  iframe [width="100%"
-          height=minheight
-          src=nocookie_url
-          frameborder="0"
-          allow=allows
-          title="Youtube video"
-          allowfullscreen="allowfullscreen"]
-/ Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
-.col-12.d-lg-none.p-0
-  iframe [width="100%"
-          height="200"
-          src=nocookie_url
-          frameborder="0"
-          allow=allows
-          title="Youtube video"
-          allowfullscreen="allowfullscreen"]
+- if item.present?
+  .d-none.d-lg-block
+    iframe [width="100%"
+            height=minheight
+            src=nocookie_url
+            frameborder="0"
+            allow=allows
+            title="Youtube video"
+            allowfullscreen="allowfullscreen"]
+  / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
+  .col-12.d-lg-none.p-0
+    iframe [width="100%"
+            height="200"
+            src=nocookie_url
+            frameborder="0"
+            allow=allows
+            title="Youtube video"
+            allowfullscreen="allowfullscreen"]
 
-.d-flex.justify-content-end.mt-2
-  = link_to item.youtube_url,
-    class: "mid-caption",
-    target: "_blank",
-    rel: "noopener",
-    "aria-label": "#{item.title}: (Link esterno) #{t("video.youtube")}"
-    =t("video.youtube")
+  .d-flex.justify-content-end.mt-2
+    = link_to item.youtube_url,
+      class: "mid-caption",
+      target: "_blank",
+      rel: "noopener",
+      "aria-label": "#{item.title}: (Link esterno) #{t("video.youtube")}"
+      =t("video.youtube")
 
-  = link_to item.youtube_url,
-    class: "mx-4 mid-caption",
-    target: "_blank",
-    rel: "noopener",
-    "aria-label": "#{item.title}: (Link esterno) #{t("video.transcript")}"
-    = t("video.transcript")
+    = link_to item.youtube_url,
+      class: "mx-4 mid-caption",
+      target: "_blank",
+      rel: "noopener",
+      "aria-label": "#{item.title}: (Link esterno) #{t("video.transcript")}"
+      = t("video.transcript")

@@ -22,9 +22,19 @@
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
 
-.lightgrey-bg-a2
-  .container.py-3
-    = partial "partials/video-cover", locals: {item: page}
+.container.py-3
+  = partial "partials/video-cover", locals: {item: page}
 
-/= partial "partials/page-content",
-  locals: {page: page}
+.container.border-top.pb-5.pt-5
+  .row.justify-content-center
+    .col-12.col-lg-9.offset-lg-2
+      = partial "partials/page-attachments-links",
+        locals: {page: page,
+          compact_columns: true}
+
+      = partial "partials/page-other-contents",
+        locals: {page: page}
+
+.container.pb-5.pt-5
+  = partial "partials/page-related",
+    locals: {page: page}
