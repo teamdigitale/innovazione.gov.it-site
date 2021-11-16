@@ -22,5 +22,9 @@
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
 
+.lightgrey-bg-a2
+  .container.py-3
+    = partial "partials/video-cover", locals: {item: page}
+
 /= partial "partials/page-content",
   locals: {page: page}

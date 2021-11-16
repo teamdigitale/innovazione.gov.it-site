@@ -1,0 +1,53 @@
+- item ||= nil
+
+/ Dato ritorna un url di youtube che non vogliamo usare
+/ quindi sostituiamo il dominio e l'embed al volo
+/ per rispettare le questioni di privacy
+/ Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
+/ Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
+
+ruby:
+ if item.video.present?
+  nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
+                 "youtube-nocookie.com/embed/")
+  minheight = item.video.height < 400 ? 400 : video.height
+  allows = %w[accelerometer
+              autoplay
+              clipboard-write
+              encrypted-media
+              gyroscope
+              picture-in-picture].join("; ")
+  end
+
+.d-none.d-lg-block
+  iframe [width="100%"
+          height=minheight
+          src=nocookie_url
+          frameborder="0"
+          allow=allows
+          title="Youtube video"
+          allowfullscreen="allowfullscreen"]
+/ Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
+.col-12.d-lg-none.p-0
+  iframe [width="100%"
+          height="200"
+          src=nocookie_url
+          frameborder="0"
+          allow=allows
+          title="Youtube video"
+          allowfullscreen="allowfullscreen"]
+
+.d-flex.justify-content-end.mt-2
+  = link_to item.youtube_url,
+    class: "mid-caption",
+    target: "_blank",
+    rel: "noopener",
+    "aria-label": "#{item.title}: (Link esterno) #{t("video.youtube")}"
+    =t("video.youtube")
+
+  = link_to item.youtube_url,
+    class: "mx-4 mid-caption",
+    target: "_blank",
+    rel: "noopener",
+    "aria-label": "#{item.title}: (Link esterno) #{t("video.transcript")}"
+    = t("video.transcript")
