@@ -1,4 +1,5 @@
 - if dato.news_page.medium_articles.present?
+  - cols = dato.news_page.medium_articles.size
 
   .d-lg-flex.mb-lg-0.pb-lg-0
     .mr-lg-auto
@@ -12,8 +13,8 @@
       = "Link esterni"
 
   .row.mt-4.mx-n4
-    - dato.news_page.medium_articles[0..2].map do |article|
-      .col-lg-4.px-4
+    - dato.news_page.medium_articles.map do |article|
+      div class="col-lg-#{12/cols} px-4"
         = partial "partials/card-medium-elements", locals: {article: article}
 
   .row.pb-5
