@@ -80,7 +80,7 @@ ruby:
           - if is_video
             = link_to page_path(item)
               figure
-                = proxy_image_tag logo_url,
+                = image_tag logo_url,
                   style: "max-width:100%; object-fit:scale-down; max-height:120px",
                   class: "lazyload d-block"
           - else

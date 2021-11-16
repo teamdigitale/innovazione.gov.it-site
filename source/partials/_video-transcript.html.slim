@@ -1,0 +1,15 @@
+- item ||= nil
+
+.container
+  .collapse-div role="tablist" id="accordionDiv"
+    .collapse-header id="headingA"
+      button [aria-controls="accordion"
+              aria-expanded="false"
+              data-target="#accordion"
+              data-toggle="collapse"
+              role="tab"]
+        span.text-uppercase = t("video.transcript")
+    .collapse [aria-labelledby="headingA" id="accordion"
+     data-parent="#accordionDiv" role="tabpanel"]
+      .collapse-body
+        = markdown item
