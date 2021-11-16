@@ -1,25 +1,5 @@
-// .video {
-//   position: relative;
-// }
-//
-// .video a {
-//   position: absolute;
-//   display: block;
-//   background: url("../../images/play_button_image.svg");
-//   height: 40px;
-//   width: 40px;
-//   top: 20px;
-//   left: 20px;
-// }
-
-.video:after {
-  content: "";
+.video {
   position: absolute;
-  top: 0;
-  width: 150px;
-  height: 120px;
-  z-index: 100;
-  background: transparent url("../../images/play_button_image.svg") no-repeat
-    center;
-  pointer-events: none;
+  top: 20%;
+  left: 30%;
 }

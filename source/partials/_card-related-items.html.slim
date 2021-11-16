@@ -47,10 +47,11 @@ ruby:
         .img-responsive-wrapper
           figure
             - if is_video
-              .img-fluid
-                = image_tag logo_url,
-                  style: "max-width: 100%; object-fit: cover; height:auto",
-                  class: "lazyload d-block"
+              svg.icon.icon-lg.video
+                use xlink:href="/images/sprite.svg#it-youtube"
+              = image_tag logo_url,
+                style: "max-width: 100%; object-fit: cover; height:auto",
+                class: "lazyload d-block"
             - else
               = proxy_image_tag logo_url.lqip_data_url(w: 10,
                 h: 10,
@@ -76,13 +77,14 @@ ruby:
   .d-lg-flex.mb-lg-4
     - if logo_url.present?
       .d-none.d-lg-block class="#{logo_length}"
-        .img-responsive-wrapper.p-lg-0.m-0.video
+        .img-responsive-wrapper.p-lg-0.m-0
           - if is_video
-            = link_to page_path(item)
-              figure
-                = image_tag logo_url,
-                  style: "max-width:100%; object-fit:scale-down; max-height:120px",
-                  class: "lazyload d-block"
+            svg.icon.icon-lg.video
+              use xlink:href="/images/sprite.svg#it-youtube"
+            figure
+              = image_tag logo_url,
+                style: "max-width:100%; object-fit:scale-down; max-height:120px",
+                class: "lazyload d-block"
           - else
             figure
               = proxy_image_tag logo_url.lqip_data_url(w: 10,
