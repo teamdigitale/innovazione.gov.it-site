@@ -18,7 +18,7 @@
       - unless homepage_section
         p.ml-lg-4.mid-caption.text-secondary
           = partial "partials/formatted-date",
-            locals: {date: item.publication_date}
+            locals: {date: item.date_shown}
       h2.ml-lg-4.mid-caption--xxlarge.text-primary = item.title
 
 .row
@@ -62,7 +62,7 @@
 .row.mt-2.pb-4
   .col-12.text-center.my-4
     = partial "partials/button",
-    locals: {btn_url: dato.video_index,
+    locals: {btn_url: dato.videos_index,
       label: t("see_more"),
       white_outline: true,
       aria_label: "sezione video"}

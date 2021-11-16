@@ -56,7 +56,7 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
 
 / blocco video
 .lightgrey-bg-a2
-  .container.pt-3
+  .container.py-3
     - if page.video_section.size == 1
       = partial "partials/video-single", locals: {item: page.video_section.first}
     - elsif page.video_section.size == 2

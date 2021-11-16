@@ -28,9 +28,9 @@ module PathHelpers
       "article",
       "interview",
       "participation",
-      "press_release"
+      "press_release",
+      "video"
       dato.news_page
-
     end
   end
 
@@ -65,7 +65,8 @@ module PathHelpers
       "articles_index",
       "interviews_index",
       "participations_index",
-      "press_releases_index"
+      "press_releases_index",
+      "videos_index"
       dato.news_page
 
     when "focus_page"
@@ -79,6 +80,9 @@ module PathHelpers
 
     when "article"
       dato.articles_index
+
+    when "video"
+      dato.videos_index
 
     when "interview"
       dato.interviews_index

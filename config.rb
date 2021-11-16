@@ -142,6 +142,10 @@ module PresentationHelper
     redirects.select(&:old_url)
   end
 
+  def self.published_videos(videos)
+    videos.select(&:slug).sort_by(&:date_shown).reverse
+  end
+
   def self.path_without_domain(url)
     url.gsub("https://innovazione.gov.it", "")
   end
@@ -188,6 +192,10 @@ helpers do
     PresentationHelper.published_schedule_events(dato.schedule_events)
   end
 
+  def visible_videos
+    PresentationHelper.published_videos(dato.videos)
+  end
+
   def visible_taggable_contents
     (visible_announcements +
     visible_articles +
@@ -200,7 +208,8 @@ helpers do
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
     visible_pages(dato.projects_subpages) +
-    visible_pages(dato.news_subpages))
+    visible_pages(dato.news_subpages) +
+    visible_videos)
   end
 
   def visible_tags
@@ -262,6 +271,7 @@ helpers do
        press_release
        focus_page
        project
+       video
        general_page
        job_position
        minister_subpage
@@ -322,7 +332,9 @@ helpers do
      dato.participations_index,
      dato.press_releases_index,
      dato.focus_index,
-     dato.projects_page]
+     dato.projects_page,
+     dato.videos_index
+    ]
   end
 
   def sharable_socials
@@ -339,7 +351,8 @@ helpers do
        minister_subpage
        department_subpage
        projects_subpage
-       news_subpage]
+       news_subpage
+       video]
   end
 
   def page_is_localizable?(page)
@@ -370,6 +383,7 @@ dato.tap do |dato|
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
+    visible_videos = PresentationHelper.published_videos(dato.videos)
 
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
@@ -396,6 +410,13 @@ dato.tap do |dato|
       proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{locale}/#{press_release.slug}/index.html",
             "/templates/press_release.html",
             locals: {page: press_release},
+            locale: locale
+    end
+
+    visible_videos.each do |video|
+      proxy "/#{dato.news_page.slug}/#{dato.videos_index.slug}/#{locale}/#{video.slug}/index.html",
+            "/templates/video.html",
+            locals: {page: video},
             locale: locale
     end
 
@@ -472,6 +493,7 @@ dato.tap do |dato|
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_tags = PresentationHelper.published_tags(dato.tags)
+    visible_videos = PresentationHelper.published_videos(dato.videos)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
     def paginate_with_fallback(items, index_page, parent_page, locale)
@@ -726,6 +748,18 @@ dato.tap do |dato|
             locale: locale
     end
 
+    paginate_with_fallback(visible_videos,
+                           dato.videos_index,
+                           dato.news_page,
+                           locale)
+
+    visible_videos.each do |video|
+      proxy "/#{dato.news_page.slug}/#{dato.videos_index.slug}/#{video.slug}/index.html",
+            "/templates/video.html",
+            locals: {page: video},
+            locale: locale
+    end
+
     visible_news_subpages.each do |news_subpage|
       parent_path = news_subpage.parent ? "/#{news_subpage.parent.slug}" : ""
       proxy "/#{dato.news_page.slug}#{parent_path}/#{news_subpage.slug}/index.html",
@@ -745,6 +779,7 @@ dato.tap do |dato|
                         visible_interviews +
                         visible_participations +
                         visible_press_releases +
+                        visible_videos +
                         visible_general_pages +
                         visible_job_positions +
                         visible_minister_subpages +
