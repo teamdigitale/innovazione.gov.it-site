@@ -24,7 +24,6 @@ activate :i18n, langs: LOCALES, mount_at_root: LOCALES[0].intern
 activate :asset_hash
 activate :directory_indexes
 activate :pagination
-activate :inline_svg
 
 RETRY_CLASSES = [
   Faraday::ClientError,
@@ -46,11 +45,14 @@ rescue *RETRY_CLASSES => e
   raise e
 end
 
+DATO_ENV = ENV.has_key?("DATO_ENV") ? ENV.fetch("DATO_ENV") : nil
+
 retry_on_error(limit: 10) do
   activate :dato,
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
-           preview: ENV.fetch("BUILD_ENV") != "production"
+           preview: ENV.fetch("BUILD_ENV") != "production",
+           environment: ENV.fetch("DATO_ENV")
 end
 
 webpack_command =
@@ -299,6 +301,18 @@ helpers do
 
   def page_show_update_date?(page)
     show_update_date_api_keys.include?(page.item_type.api_key)
+  end
+
+  def show_update_date_in_preview_api_keys
+    %w[announcement
+       article
+       interview
+       participation
+       press_release]
+  end
+
+  def page_show_update_date_in_preview?(page)
+    show_update_date_in_preview_api_keys.include?(page.item_type.api_key)
   end
 
   def all_index_pages

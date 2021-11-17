@@ -3,15 +3,21 @@
 - deadline ||= ""
 
 - if announcement.present?
-
   - shadow = hide_shadow ? "" : "shadow-lg"
-  - ann_closing_date = announcement.announcement_date_closing.present?
-  - ann_status = announcement.announcement_status.name
+  - closing_date = announcement.announcement_date_closing.present?
+  - status = announcement.announcement_status.name
+  - last_date = partial "partials/formatted-date",
+    locals: {date: announcement.announcement_date_closing}
 
-  - if ann_closing_date && ann_status == "APERTO"
-    - last_date = partial "partials/formatted-date",
-      locals: {date: announcement.announcement_date_closing}
-    - deadline = "Scade il #{last_date}"
+  ruby:
+    date =
+      if !closing_date
+        ""
+      elsif status == "APERTO"
+        "Scade il #{last_date}"
+      elsif announcement.show_date_after_closed && status == "CHIUSO"
+        "Chiuso il #{last_date}"
+      end
 
   .card.rounded.h-100 class="#{shadow}"
     .card-body
@@ -22,4 +28,4 @@
           class: "text-decoration-none"
           = announcement.title
       p.mid-caption--large.text-secondary.font-weight-semibold
-        = deadline
+        = date
