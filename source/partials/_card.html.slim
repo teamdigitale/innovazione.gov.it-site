@@ -112,11 +112,11 @@
         - if special_subtitle && source
           p.h6.pt-3
             = article.source
-        - else
+        - elsif article.respond_to?(:subtitle) && article.subtitle.present?
           p.pt-2 class="#{subtitle_style}"
             = article.subtitle
       .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-        - tags = article.item_type.api_key == "article" && article.tags.present?
+        - tags = article.tags.present?
         - if !hide_tags && tags
           - article.tags.each do |tag|
             = partial "partials/chip",
