@@ -1,4 +1,7 @@
-- article ||= nil
+ruby:
+  article ||= nil
+  card_body = %(card-body d-flex flex-column
+    justify-content-between mt-n5)
 
 - if article.present?
   .card-wrapper
@@ -41,7 +44,7 @@
                 class: "lazyload d-block w-100",
                 alt: article.image_thumbnail.alt
 
-      .card-body.d-flex.flex-column.justify-content-between.mt-n5 style="z-index: 2;"
+      div class=card_body style="z-index: 2;"
         div
           h4.h5.font-weight-bold.text-primary.card-title
             = proxy_link_to article.link_medium.link,
