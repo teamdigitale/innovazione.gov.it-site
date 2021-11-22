@@ -16,7 +16,7 @@ h1 class=mobile_title_classes
 - if page.banners.present?
   h2.sr-only Segnalazioni
   - page.banners.each do |block|
-    - if block.show || block.item_type.api_key != "block_hero_banner"
+    - if block.item_type.api_key != "block_hero_banner" || block.show
       = partial "partials/blocks/#{block.item_type.api_key}",
         locals: {block: block}
 
