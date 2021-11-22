@@ -1,6 +1,6 @@
 ruby:
   if page.respond_to?(:menu_general_links) && page.menu_general_links.any?
-    children = children + page.menu_general_links.collect(&:link)
+    children += page.menu_general_links.collect(&:link)
   end
 
 - content_for(:head)
