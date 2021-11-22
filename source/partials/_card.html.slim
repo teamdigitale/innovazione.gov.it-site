@@ -10,9 +10,13 @@
     show_item_type ||= nil
     special_subtitle ||= nil
     unequal_height ||= nil
+    show ||= nil
+    status ||= nil
+    last_date ||= nil
     image = ""
     image_link = ""
     title_style = ""
+    subtitle ||= nil
     subtitle_style = ""
     shadow = hide_shadow ? "" : "shadow-lg"
     height = unequal_height ? "" : "h-100"
@@ -28,6 +32,23 @@
       image = "card-img no-after"
       image_link = article.image_thumbnail
     end
+
+    if article.respond_to?(:announcement_date_closing) &&
+      article.announcement_date_closing.present?
+        show = article.show_date_after_closed
+        status = article.announcement_status.name
+        last_date = partial "partials/formatted-date",
+          locals: {date: article.announcement_date_closing}
+    end
+
+    subtitle =
+      if article.respond_to?(:subtitle) && article.subtitle.present?
+        article.subtitle
+      elsif status && status == "APERTO"
+        "Scade il #{last_date}"
+      elsif show && status == "CHIUSO"
+        "Chiuso il #{last_date}"
+      end
 
     if large_title
       title_style = "h2"
@@ -112,9 +133,9 @@
         - if special_subtitle && source
           p.h6.pt-3
             = article.source
-        - elsif article.respond_to?(:subtitle) && article.subtitle.present?
+        - elsif subtitle
           p.pt-2 class="#{subtitle_style}"
-            = article.subtitle
+            = subtitle
       .mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
         - tags = article.tags.present?
         - if !hide_tags && tags

@@ -11,7 +11,7 @@ ruby:
   hide_shadow ||= nil
 
 - if items.present?
-  - cols = items.size
+  - cols = items.size > 1 ? items.size : 2
 
   - if title.present?
     .pt-5.pb-4.pb-lg-0
