@@ -1,15 +1,15 @@
-- announcement ||= nil
-- hide_shadow ||= nil
-- deadline ||= ""
+ruby:
+  announcement ||= nil
+  hide_shadow ||= nil
 
 - if announcement.present?
-  - shadow = hide_shadow ? "" : "shadow-lg"
-  - closing_date = announcement.announcement_date_closing.present?
-  - status = announcement.announcement_status.name
-  - last_date = partial "partials/formatted-date",
-    locals: {date: announcement.announcement_date_closing}
-
   ruby:
+    shadow = hide_shadow ? "" : "shadow-lg"
+    closing_date = announcement.announcement_date_closing.present?
+    status = announcement.announcement_status.name
+    last_date = partial "partials/formatted-date",
+      locals: {date: announcement.announcement_date_closing}
+
     date =
       if !closing_date
         ""
