@@ -63,6 +63,7 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
       = partial "partials/flag",
         locals: {flags: page.sections, image_right: true}
 
+/ blocco avvisi pubblici
 - if page.announcements.any?
   .container
     = partial "partials/cards-horizontal-list",
@@ -70,4 +71,5 @@ h1.d-lg-none.h5.px-3.px-sm-5.text-md-center.pb-3.primary-bg.text-white.it-brand-
       items: page.announcements,
       btn_url: dato.announcements_index}
 
+/ blocco numeri
 = partial "partials/numbers", locals: {numbers: page.numbers}
