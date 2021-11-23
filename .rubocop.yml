@@ -1,7 +1,7 @@
 AllCops:
   Exclude:
     - "bin/stubs/*"
-  NewCops: disable
+  NewCops: enable
 
 Layout/SpaceBeforeBrackets:
   Enabled: true

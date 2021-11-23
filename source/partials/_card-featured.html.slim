@@ -84,9 +84,9 @@
             figure.img-wrapper.p-0
               = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
                 fit: "crop"),
-                data: {"sizes": "100vw",
-                  "src": image_src,
-                  "srcset": image_mobile_srcset},
+                data: {sizes: "100vw",
+                  src: image_src,
+                  srcset: image_mobile_srcset},
                 class: "lazyload d-block w-100 m-0",
                 alt: card_image.alt
 
@@ -95,9 +95,9 @@
             figure.position-absolute.w-100.h-100
               = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
                 fit: "crop"),
-                data: {"sizes": "100vw",
-                  "src": image_src,
-                  "srcset": image_desk_srcset},
+                data: {sizes: "100vw",
+                  src: image_src,
+                  srcset: image_desk_srcset},
                 class: "lazyload d-block w-100 h-100 m-0",
                 style: "object-fit: cover",
                 alt: card_image.alt

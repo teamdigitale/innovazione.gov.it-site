@@ -14,10 +14,10 @@
 
             - else
               = proxy_image_tag logo.lqip_data_url(w: 10, h: 10, fit: "max"),
-                data: {"sizes": "100vw",
-                  "src": logo.url(w: 190, h: 190,
+                data: {sizes: "100vw",
+                  src: logo.url(w: 190, h: 190,
                     fit: "max", auto: "compress"),
-                  "srcset": "#{logo.url(w: 190, h: 190,
+                  srcset: "#{logo.url(w: 190, h: 190,
                     fit: 'max', auto: 'compress')} 480w,
                   #{logo.url(w: 230, h: 230,
                   fit: 'max', auto: 'compress')} 844w"},
@@ -39,7 +39,7 @@
                 class: "btn-link pl-0 text-decoration-none",
                 target: "_blank",
                 rel: "noopener",
-                aria: {"label": "#{link.title}: #{project_link_label(link)}"} do
+                aria: {label: "#{link.title}: #{project_link_label(link)}"} do
 
                   span.mid-caption--xlarge.font-weight-semibold
                     = project_link_label(link)

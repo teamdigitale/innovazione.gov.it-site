@@ -6,10 +6,10 @@ ruby:
   .text-center class=classes
     figure.avatar style="width: 175px; height: 175px"
       = proxy_image_tag page.italy2026_thumbnail.url(w: 10, h: 10,
-          fit: "crop"), data: {"sizes": "100vw",
-          'src': page.italy2026_thumbnail.url(w: 1200, h: 1200,
+          fit: "crop"), data: {sizes: "100vw",
+          src: page.italy2026_thumbnail.url(w: 1200, h: 1200,
           fit: "crop", auto: "compress"),
-          "srcset": "#{page.italy2026_thumbnail.url(w: 800, h: 800,
+          srcset: "#{page.italy2026_thumbnail.url(w: 800, h: 800,
           fit: 'crop', auto: 'compress')} 480w"},
         class: "lazyload rounded-circle d-block w-100 h-100 bg-primary",
         alt: page.italy2026_thumbnail.alt
