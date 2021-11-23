@@ -27,12 +27,12 @@
   = partial "partials/video-transcript",
     locals: {video: page}
 
-.container.border-top.pb-5.pt-5
+.container.pb-5.pt-5
   .row.justify-content-center
-    .col-12.col-lg-9.offset-lg-2
+    .col-12.col-md-6.justify-content-md-center
       = partial "partials/page-attachments-links",
         locals: {page: page,
-          compact_columns: true}
+          single_column: true}
 
       = partial "partials/page-other-contents",
         locals: {page: page}

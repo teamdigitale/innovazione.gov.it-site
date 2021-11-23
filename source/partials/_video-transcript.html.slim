@@ -15,6 +15,9 @@ ruby:
       span.mr-3.text-uppercase = t("video.transcript")
   .collapse [aria-labelledby="headingA#{video.id}" id="accordion#{video.id}"
    data-parent="#accordionDiv#{video.id}" role="tabpanel"]
-    .collapse-body.mx-5 style="overflow-y:scroll; height: 400px;"
-      .px-5
+    .d-none.d-md-block.collapse-body.mx-md-5 style="overflow-y:scroll; height: 400px;"
+      .px-md-5
+        = markdown video.transcription
+    .d-md-none.collapse-body.mx-md-5 style="overflow-y:scroll; height: 200px;"
+      .px-md-5
         = markdown video.transcription
