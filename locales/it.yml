@@ -147,5 +147,5 @@ it:
   aria_label_link_pdf: (scarica il PDF)
 
   video:
-    youtube: Guarda su Youtube
     transcript: Trascrizione
+    go_to_video: "Vai alla pagina del video"

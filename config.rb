@@ -204,12 +204,12 @@ helpers do
     visible_press_releases +
     visible_projects +
     visible_focus_pages +
+    visible_videos +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
     visible_pages(dato.projects_subpages) +
-    visible_pages(dato.news_subpages) +
-    visible_videos)
+    visible_pages(dato.news_subpages))
   end
 
   def visible_tags
