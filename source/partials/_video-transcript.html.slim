@@ -1,14 +1,20 @@
-- item ||= nil
+ruby:
+  item ||= nil
+  button_classes = %(d-flex flex-row-reverse
+    justify-content-center justify-content-lg-start)
 
-.collapse-div role="tablist" id="accordionDiv"
-  .collapse-header id="headingA"
-    button [aria-controls="accordion"
+
+.collapse-div role="tablist" id="accordionDiv#{video.id}"
+  .collapse-header id="headingA#{video.id}"
+    button [class=button_classes
+            aria-controls="accordion#{video.id}"
             aria-expanded="false"
-            data-target="#accordion"
+            data-target="#accordion#{video.id}"
             data-toggle="collapse"
             role="tab"]
-      span.text-uppercase = t("video.transcript")
-  .collapse [aria-labelledby="headingA" id="accordion"
-   data-parent="#accordionDiv" role="tabpanel"]
-    .collapse-body
-      = markdown item
+      span.mr-3.text-uppercase = t("video.transcript")
+  .collapse [aria-labelledby="headingA#{video.id}" id="accordion#{video.id}"
+   data-parent="#accordionDiv#{video.id}" role="tabpanel"]
+    .collapse-body.mx-5 style="overflow-y:scroll; height: 400px;"
+      .px-5
+        = markdown video.transcription

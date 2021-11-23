@@ -48,7 +48,8 @@ ruby:
               allow=allows
               title="Youtube video"
               allowfullscreen="allowfullscreen"]
-    = partial "partials/video-transcript", locals: {item: item.transcription}
+    = partial "partials/video-transcript",
+      locals: {video: item}
 
 .row.mt-2.pb-5
   .col-12.text-center.my-4

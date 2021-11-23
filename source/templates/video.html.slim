@@ -24,7 +24,8 @@
 
 .container.py-3
   = partial "partials/video-cover", locals: {item: page}
-  = partial "partials/video-transcript", locals: {item: page.transcription}
+  = partial "partials/video-transcript",
+    locals: {video: page}
 
 .container.border-top.pb-5.pt-5
   .row.justify-content-center
