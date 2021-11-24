@@ -33,7 +33,7 @@
                   span.font-weight-semibold.mr-0
                     = dato.explore_page.title
 
-    = if page.title.present?
+    = if page.title.present? || page.subtitle.present?
       .row
         .offset-lg-1.col-lg-6.col-md-8.mb-0
           = partial "partials/headers/main-titles", locals: {page: page}
