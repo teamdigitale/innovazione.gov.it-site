@@ -5,6 +5,10 @@
     classes ||= nil
     big_title = page_parent(page).present? ? "h2" : "h1"
 
+    title = if page.respond_to?(:title) && page.title.present?
+      page.title
+    end
+
     subtitle = if page.respond_to?(:subtitle) && page.subtitle.present?
       page.subtitle
     end
@@ -14,9 +18,10 @@
     end
 
   .text-center.text-sm-left.pb-4 class=classes
-    h1 class=big_title = page.title
-    - if subtitle.present?
+    - if title
+      h1 class=big_title = title
+    - if subtitle
       p.lead = subtitle
-    - if summary.present?
+    - if summary
       .text-left.text-sm-left
         = markdown summary
