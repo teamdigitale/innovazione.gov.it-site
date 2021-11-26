@@ -15,6 +15,39 @@
     if article.respond_to?(:image_thumbnail) && article.image_thumbnail.present?
       image_link = article.image_thumbnail.url
       card_image = article.image_thumbnail
+      image_src = card_image.url(w: 700,
+        h: 400,
+        fit: "crop",
+        auto: "compress")
+
+      image_mobile_srcset = "#{card_image.url(w: 445,
+        h: 255,
+        fit: 'crop',
+        auto: 'compress')} 480w,
+        #{card_image.url(w: 700,
+        h: 400,
+        fit: 'crop',
+        auto: 'compress')} 719w"
+
+      if larger_of_two
+        image_desk_srcset = "#{card_image.url(w: 160,
+          h: 500,
+          fit: 'crop',
+          auto: 'compress')} 1200w,
+          #{card_image.url(w: 200,
+          h: 400,
+          fit: 'crop',
+          auto: 'compress')} 1320w"
+      else
+        image_desk_srcset = "#{card_image.url(w: 452,
+          h: 400,
+          fit: 'crop',
+          auto: 'compress')} 1200,
+          #{card_image.url(w: 564,
+          h: 400,
+          fit: 'crop',
+          auto: 'compress')} 1320w"
+      end
     end
 
   .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse
@@ -50,13 +83,10 @@
           .img-responsive.img-responsive-panoramic
             figure.img-wrapper.p-0
               = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"), data: {"sizes": "100vw",
-                  "src": card_image.url(w: 700, h: 400,
-                  fit: "crop", auto: "compress"),
-                  "srcset": "#{card_image.url(w: 445, h: 255,
-                  fit: 'crop', auto: 'compress')} 480w,
-                  #{card_image.url(w: 700, h: 400,
-                  fit: 'crop', auto: 'compress')} 719w"},
+                fit: "crop"),
+                data: {"sizes": "100vw",
+                  "src": image_src,
+                  "srcset": image_mobile_srcset},
                 class: "lazyload d-block w-100 m-0",
                 alt: card_image.alt
 
@@ -64,13 +94,10 @@
           .img-responsive-panoramic
             figure.position-absolute.w-100.h-100
               = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"), data: {"sizes": "100vw",
-                  "src": card_image.url(w: 700, h: 400,
-                  fit: "crop", auto: "compress"),
-                  "srcset": "#{card_image.url(w: 700, h: 400,
-                  fit: 'crop', auto: 'compress')} 1090w,
-                  #{card_image.url(w: 700, h: 400,
-                  fit: 'crop', auto: 'compress')} 1320w"},
+                fit: "crop"),
+                data: {"sizes": "100vw",
+                  "src": image_src,
+                  "srcset": image_desk_srcset},
                 class: "lazyload d-block w-100 h-100 m-0",
                 style: "object-fit: cover",
                 alt: card_image.alt
