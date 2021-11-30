@@ -30,6 +30,19 @@ Il sito può essere testato in ambiente locale eseguendo il seguente comando:
 
 In questo modo il sito sarà disponibile all’indirizzo http://localhost:4567/.
 
+## Ambienti
+
+Il sito ha un deploy di produzione live (branch `main` su GitHub Pages) e i contenuti sono presi da DatoCMS.
+
+L'area di amministrazione di DatoCMS ha anche dei trigger per lanciare le build:
+
+| Branch git | Contenuti | Dove | Trigger di build |
+| --- | --- | --- | --- |
+| `main` | Contenuti _published_ | GitHub Pages | <ul><li>Merge di `main`</li><li>Trigger "PRODUZIONE" di DatoCMS</li></ul> |
+| `main` | Contenuti _published_ *DA CONFERMARE* | Vercel ("Production" Deployment) | <ul><li>Merge di `main`</li><li>Trigger "STAGING" di DatoCMS</li></ul> |
+| `develop` | Contenuti _published_ & _draft_ | Vercel ("Preview" Deployment) | <ul><li>Push in `develop`</li><li>Trigger "Ambiente di sviluppo" di DatoCMS</li></ul> |
+| Feature branch | Contenuti _published_ & _draft_ | Vercel ("Preview" Deployment) | <ul><li>Nuova PR</li><li>Push su feature branch</li></ul>|
+
 ## Maggiori informazioni
 
 Ulteriori dettagli di implementazione del sito sono reperibili nella [Wiki di progetto](https://github.com/teamdigitale/innovazione.gov.it-site/wiki).
