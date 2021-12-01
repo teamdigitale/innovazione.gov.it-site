@@ -21,13 +21,15 @@ ruby:
 
 - if item.present?
   .d-none.d-lg-block
-    iframe [width="100%"
-            height=minheight
-            src=nocookie_url
-            frameborder="0"
-            allow=allows
-            title="Youtube video"
-            allowfullscreen="allowfullscreen"]
+    .col-10.offset-1
+      iframe [width="100%"
+              height=minheight
+              src=nocookie_url
+              frameborder="0"
+              allow=allows
+              title="Youtube video"
+              allowfullscreen="allowfullscreen"]
+
   / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
   .col-12.d-lg-none.p-0
     iframe [width="100%"
@@ -37,3 +39,5 @@ ruby:
             allow=allows
             title="Youtube video"
             allowfullscreen="allowfullscreen"]
+    = partial "partials/video-transcript",
+      locals: {video: item}

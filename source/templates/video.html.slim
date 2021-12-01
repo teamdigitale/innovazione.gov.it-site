@@ -7,11 +7,11 @@
   = content_for :col_one
     = partial "partials/column-title", locals: {title: t("date_shown")}
     = partial "partials/formatted-date", locals: {date: page.date_shown}
-    = partial "partials/switch-locale-button",
+    /= partial "partials/switch-locale-button",
       locals: {page: page}
 
   = content_for :col_two
-    = partial "partials/reading-time", locals: {page: page}
+    = partial "partials/video-time", locals: {page: page}
 
   - if main_locale?(locale)
     = content_for :aside
@@ -22,12 +22,15 @@
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
 
-.container.py-3
-  = partial "partials/video-cover", locals: {item: page}
-  = partial "partials/video-transcript",
-    locals: {video: page}
+.lightgrey-bg-a2.pt-5
+  .container.py-5
+    = partial "partials/video-cover", locals: {item: page}
+    .d-flex.justify-content-center
+      .col-6.mt-3.mb-5
+        = partial "partials/video-transcript",
+          locals: {video: page}
 
-.container.pb-5.pt-5
+.container.py-5
   .row.justify-content-center
     .col-12.col-md-6.justify-content-md-center
       = partial "partials/page-attachments-links",
