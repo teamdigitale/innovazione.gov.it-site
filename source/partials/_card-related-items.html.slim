@@ -50,8 +50,8 @@ ruby:
               = link_to page_path(item),
                 aria_label: t("video.go_to_video"),
                 title: "video: #{item.title}"
-                svg.icon.icon-lg.video
-                  use xlink:href="/images/sprite.svg#it-youtube"
+                /svg.icon.icon-lg.bg-white.icon-primary.video
+                  use xlink:href="/images/sprite.svg#it-video"
                 = image_tag logo_url,
                   style: "max-width: 100%; object-fit: cover; height:auto",
                   class: "lazyload d-block"
@@ -85,8 +85,8 @@ ruby:
             = link_to page_path(item),
               aria_label: t("video.go_to_video"),
               title: "video: #{item.title}"
-              svg.icon.icon-lg.video
-                use xlink:href="/images/sprite.svg#it-youtube"
+              /svg.icon.icon-lg.video.bg-white.icon-primary
+                use xlink:href="/images/sprite.svg#it-video"
               figure
                 = image_tag logo_url,
                   style: "max-width:100%; object-fit:scale-down; max-height:120px",
