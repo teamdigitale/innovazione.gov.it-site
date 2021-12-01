@@ -8,51 +8,49 @@
 / Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
 
 - if homepage_section
-  .pt-5.pb-4.mb-4
+  .pt-5.pb-lg-4
     h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
       = items.first.item_type.api_key
 
-.row
-  - items.map do |item|
-    .col-lg-6.mb-4
-      - unless homepage_section
-        p.ml-lg-4.mid-caption.text-secondary
-          = partial "partials/formatted-date",
-            locals: {date: item.date_shown}
-      h2.ml-lg-4.mid-caption--xxlarge.text-primary = item.title
+.d-none.d-lg-block
+  .row
+    - items.map do |item|
+      .col-lg-6
+        - if homepage_section
+          .my-4
+        - unless homepage_section
+          p.ml-lg-4.mid-caption.text-secondary
+            = partial "partials/formatted-date",
+              locals: {date: item.date_shown}
+        h2.ml-lg-4.h4.text-primary
+          = link_to page_path(item),
+            class: "text-decoration-none"
+            = item.title
 
 .row
   - items.map do |item|
-    ruby:
-      if item.video.present?
-        nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
-                      "youtube-nocookie.com/embed/")
-        minheight = item.video.height < 400 ? 400 : video.height
-        allows = %w[accelerometer
-                    autoplay
-                    clipboard-write
-                    encrypted-media
-                    gyroscope
-                    picture-in-picture].join("; ")
-      end
-
-    .col-lg-6.mb-2
-      iframe [width="100%"
-              height=336
-              src=nocookie_url
-              frameborder="0"
-              allow=allows
-              title="Youtube video"
-              allowfullscreen="allowfullscreen"]
-      = partial "partials/video-transcript",
-        locals: {video: item}
+    .col-lg-6
+      .d-lg-none.my-4.pt-4
+        - unless homepage_section
+          p.ml-lg-4.mid-caption.text-secondary
+            = partial "partials/formatted-date",
+              locals: {date: item.date_shown}
+        h2.ml-lg-4.h4.text-primary.mt-2g
+          = link_to page_path(item),
+            class: "text-decoration-none"
+            = item.title
+      = link_to page_path(item)
+        .img-responsive-wrapper
+          svg.icon.video_two_col_icon.bg-white.icon-primary
+            use xlink:href="/images/sprite.svg#it-video"
+          figure.mb-0
+            = image_tag item.video.thumbnail_url,
+              class: "video_two_col_thumbnail lazyload d-block"
 
 .row.mt-2.pb-4
-  .col-12.text-center.my-4
+  .col-12.text-center.my-5
     = partial "partials/button",
     locals: {btn_url: dato.videos_index,
       label: t("see_more"),
       white_outline: true,
       aria_label: "sezione video"}
-- if homepage_section
-  .pb-5

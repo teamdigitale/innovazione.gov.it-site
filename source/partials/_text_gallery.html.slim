@@ -40,8 +40,8 @@ ruby:
                       = slide.subtitle
                 - if is_video
                   = link_to page_path(slide)
-                    svg.icon.icon-xl.video_slide
-                      use xlink:href="/images/sprite.svg#it-youtube"
+                    svg.icon.icon-xl.bg-white.icon-primary.video_slide
+                      use xlink:href="/images/sprite.svg#it-video"
                   figure.mb-0
                     = image_tag slide.video.thumbnail_url,
                       style: "width:100%; object-fit:cover; max-height: 210px;",
