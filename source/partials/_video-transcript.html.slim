@@ -1,7 +1,7 @@
 ruby:
   item ||= nil
   button_classes = %(d-flex flex-row-reverse
-    justify-content-center justify-content-lg-start)
+    justify-content-start)
 
 
 .collapse-div role="tablist" id="accordionDiv#{video.id}"
@@ -12,12 +12,9 @@ ruby:
             data-target="#accordion#{video.id}"
             data-toggle="collapse"
             role="tab"]
-      span.mr-3.text-uppercase = t("video.transcript")
+      span.mr-3 = t("video.transcript")
   .collapse [aria-labelledby="headingA#{video.id}" id="accordion#{video.id}"
    data-parent="#accordionDiv#{video.id}" role="tabpanel"]
-    .d-none.d-md-block.collapse-body.mx-md-5 style="overflow-y:scroll; height: 400px;"
-      .px-md-5
-        = markdown video.transcription
-    .d-md-none.collapse-body.mx-md-5 style="overflow-y:scroll; height: 200px;"
+    .collapse-body.mx-md-5
       .px-md-5
         = markdown video.transcription
