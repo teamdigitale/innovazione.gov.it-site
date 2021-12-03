@@ -496,7 +496,13 @@ dato.tap do |dato|
     visible_videos = PresentationHelper.published_videos(dato.videos)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
 
-    def paginate_with_fallback(items, index_page, parent_page, locale)
+    def paginate_with_fallback(
+      items,
+      index_page,
+      parent_page,
+      locale,
+      index_template = "/templates/index_page.html"
+    )
       parent_path = "#{parent_page.slug}/"
       index_path = index_page.slug.to_s
       path = "/#{parent_path}#{index_path}"
@@ -504,14 +510,14 @@ dato.tap do |dato|
       if items.any?
         paginate items,
                  path,
-                 "/templates/index_page.html",
+                 index_template,
                  suffix: "/page/:num/index",
                  locals: {page: index_page},
                  per_page: 10
 
       else
         proxy "#{path}/index.html",
-              "/templates/index_page.html",
+              index_template,
               locals: {page: index_page},
               locale: locale
       end
@@ -751,7 +757,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_videos,
                            dato.videos_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           "/templates/video_index.html")
 
     visible_videos.each do |video|
       proxy "/#{dato.news_page.slug}/#{dato.videos_index.slug}/#{video.slug}/index.html",
