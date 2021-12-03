@@ -16,19 +16,7 @@ ruby:
                 role="tab"]
           span.mr-3 = t("video.transcript")
 
-      /p.mr-auto
-        = proxy_link_to video.transcript_attachment.file.url,
-          class: "mid-text-dark font-weight-normal"
-          = "scarica.txt"
   .collapse [aria-labelledby="headingA#{video.id}" id="accordion#{video.id}"
    data-parent="#accordionDiv#{video.id}" role="tabpanel"]
-    /p.mt-n5
-      = proxy_link_to video.transcript_attachment.file.url,
-        class: "mid-caption--large mid-text-dark font-weight-normal"
-        = "scarica.txt"
     .collapse-body.px-0
-      p
-        = proxy_link_to video.transcript_attachment.url,
-          class: "mid-caption--large mid-text-dark font-weight-normal"
-          = "scarica.txt"
       = markdown video.transcription

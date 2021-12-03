@@ -81,7 +81,7 @@ it:
   updated_at: Data ultimo aggiornamento
   useful_links: Collegamenti utili
   view_more: Scopri di più
-  see_more: Vedi di più
+  see_more: Scopri di più
   you_are_here: Sei qui
 
   home:
@@ -150,3 +150,5 @@ it:
     transcript: Trascrizione
     go_to_video: "Vai alla pagina del video"
     time: Durata
+    highlights: In evidenza
+    all: Tutti i video
