@@ -1,0 +1,31 @@
+- item ||= nil
+- max_height ||= ""
+- top_margin ||= ""
+
+.card.rounded.card-img.no-after.h-100.bg-transparent
+  .img-responsive-wrapper
+    .img-responsive
+      figure.img-wrapper
+        = image_tag item.video.thumbnail_url,
+          class: "lazyload",
+          style: "max-height: #{max_height};"
+  .card-body.d-flex.flex-column class=top_margin
+    div
+      p.card-text.text-secondary
+        = partial "partials/formatted-date",
+          locals: {date: item.date_shown}
+      h3.h4.text-primary class="mid-caption--xlarge font-weight-bold"
+        = link_to page_path(item),
+          class: "text-decoration-none"
+          = item.title
+    div
+      /mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+      - if item.tags.present?
+        - item.tags.each do |tag|
+          = partial "partials/chip",
+            locals: {label: tag.name,
+            url: page_path(tag),
+            chip_type: "",
+            btn_type: "",
+            bg_color: "bg-transparent",
+            chip_size: ""}

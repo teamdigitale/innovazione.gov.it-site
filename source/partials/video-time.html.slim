@@ -1,0 +1,8 @@
+- page ||= nil
+
+- if page.present? && page.time
+
+  = partial "partials/column-title", locals: {title: t("video.time")}
+  .post__reading-time
+    = "#{page.time} "
+    = t("minutes")

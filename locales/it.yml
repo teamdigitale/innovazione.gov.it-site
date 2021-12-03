@@ -13,6 +13,7 @@ it:
     projects_subpage: Pagina Progetti
     news_subpage: Pagina Notizie
     job_position: Posizione lavorativa
+    video: Video
   logos:
     italy: Logo Repubblica Italiana
     mid: Logo Ministro Innovazione
@@ -80,6 +81,7 @@ it:
   updated_at: Data ultimo aggiornamento
   useful_links: Collegamenti utili
   view_more: Scopri di più
+  see_more: Scopri di più
   you_are_here: Sei qui
 
   home:
@@ -143,3 +145,10 @@ it:
     content: Vai al contenuto principale
     footer: Vai al footer
   aria_label_link_pdf: (scarica il PDF)
+
+  video:
+    transcript: Trascrizione
+    go_to_video: "Vai alla pagina del video"
+    time: Durata
+    highlights: In evidenza
+    all: Tutti i video

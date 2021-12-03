@@ -1,0 +1,73 @@
+- items ||= []
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: {page: page} do
+  /= content_for :aside
+    = partial "partials/explore-aside",
+      locals: {page: page}
+
+.lightgrey-bg-a2
+  .container.py-3
+    - if page.featured_videos.present?
+      - number_of_cards = page.featured_videos.size
+      .py-5
+        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+          = t("video.highlights")
+      .d-none.d-lg-block
+        .row.pb-5
+          - page.featured_videos.each do |featured_video|
+            div class="col-lg-#{12 / number_of_cards}"
+              - img_max_height = number_of_cards == 3 ? "206px" : "317px"
+              - top_margin = number_of_cards == 3 ? "" : "pt-0"
+              = partial "partials/video-card",
+                locals: {item: featured_video,
+                max_height: img_max_height,
+                top_margin: top_margin}
+      .d-lg-none
+        .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
+          = partial "partials/text_gallery",
+            locals: {slides: page.featured_videos,
+            hide_type: true,
+            hide_video_tags: false}
+          /.mb-4
+            = partial "partials/video-card",
+              locals: {item: featured_video,
+              max_height: "190px",
+              top_margin: "pt-0"}
+
+.py-3.my-lg-5
+  .container
+    - if items.any?
+      .py-5
+        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+          = t("video.all")
+      .row
+        h2.sr-only Elenco degli elementi
+        .d-none.d-lg-block
+          .row.pb-5
+            - items.each do |video|
+              .col-3
+                = partial "partials/video-card",
+                  locals: {item: video,
+                  max_height: "125px",
+                  top_margin: "pt-0"}
+        .d-lg-none
+          - items.each do |video|
+            .mb-4
+              = partial "partials/video-card",
+                locals: {item: video,
+                max_height: "224px",
+                top_margin: "pt-0"}
+        /- items.each do |n|
+          .col-lg-8
+            = partial "partials/card-related-items",
+              locals: {item: n}
+
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
+
+    - else
+      = t("empty_list")

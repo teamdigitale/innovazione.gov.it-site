@@ -1,0 +1,59 @@
+- item ||= nil
+
+/ Dato ritorna un url di youtube che non vogliamo usare
+/ quindi sostituiamo il dominio e l'embed al volo
+/ per rispettare le questioni di privacy
+/ Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
+/ Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
+
+ruby:
+ if item.video.present?
+  nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
+                 "youtube-nocookie.com/embed/")
+  minheight = item.video.height < 400 ? 400 : video.height
+  allows = %w[accelerometer
+              autoplay
+              clipboard-write
+              encrypted-media
+              gyroscope
+              picture-in-picture].join("; ")
+  end
+
+
+- if item.present?
+  .pt-5.pb-4
+    h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+      = item.item_type.api_key
+  - section_title = item.title
+
+  .col-lg-10.offset-lg-2.pl-lg-6
+    h2.mb-4.h3.ml-lg-4.text-primary = section_title
+  
+  .col-lg-10.offset-lg-1
+
+    .d-none.d-lg-block
+      iframe [width="100%"
+              height=minheight
+              src=nocookie_url
+              frameborder="0"
+              allow=allows
+              title="Youtube video"
+              allowfullscreen="allowfullscreen"]
+    / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
+    .col-12.d-lg-none.p-0
+      iframe [width="100%"
+              height="200"
+              src=nocookie_url
+              frameborder="0"
+              allow=allows
+              title="Youtube video"
+              allowfullscreen="allowfullscreen"]
+    = partial "partials/video-transcript",
+      locals: {video: item}
+
+.row.mt-2.pb-5
+  .col-12.text-center.my-4
+    = partial "partials/button",
+    locals: {btn_url: dato.videos_index,
+      white_outline: true,
+      aria_label: section_title}

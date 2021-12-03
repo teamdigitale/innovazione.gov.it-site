@@ -1,6 +1,8 @@
-- slides ||= nil
-- hide_tags ||= nil
-- hide_date ||= nil
+ruby:
+  slides ||= nil
+  hide_tags ||= nil
+  hide_type ||= nil
+  hide_date ||= nil
 
 - if slides.present?
   h3.sr-only In evidenza
@@ -10,17 +12,24 @@
         - slides.each do |slide|
           ruby:
             has_tags = slide.respond_to?(:tags) && slide.tags.present?
+            is_video = if slide.item_type.api_key == "video" &&
+              slide.respond_to?(:video)
+              true
+            end
+            hide_tags = is_video && hide_video_tags ? true : false
+            icon_position = hide_tags ? "video_slide_icon" : "with_tags"
             has_date = if slide.respond_to?(:date_shown) &&
               slide.date_shown.present?
               true
             end
 
           .swiper-slide.fixed-width
-            .swiper-slide__text.px-3.bg-white.px-md-5
+            .swiper-slide__text.bg-white
               .h-100.d-flex.flex-column.justify-content-around
-                div
-                  span.pr-2.text-uppercase.font-weight-semibold
-                    = t("models.#{slide.item_type.api_key}")
+                .px-3.px-md-5
+                  - if !hide_type
+                    span.pr-2.text-uppercase.font-weight-semibold
+                      = t("models.#{slide.item_type.api_key}")
                   - if !hide_date && has_date
                     span.px-2.text-secondary
                       = partial "partials/formatted-date",
@@ -30,15 +39,25 @@
                       = proxy_link_to slide.title,
                         page_path(slide),
                         class: "text-decoration-none"
+                  - if !is_video
                     .mid-caption--xlarge
                       = slide.subtitle
-                .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
-                  - if !hide_tags && has_tags
-                    - slide.tags.each do |tag|
-                      = partial "partials/chip",
-                        locals: {label: tag.name,
-                        url: page_path(tag),
-                        chip_type: "",
-                        btn_type: "",
-                        chip_size: ""}
+                - if is_video
+                  = link_to page_path(slide)
+                    svg.icon.bg-white.icon-primary.rounded.p-1 class=icon_position
+                      use xlink:href="/images/sprite.svg#it-video"
+                  figure.mb-0
+                    = image_tag slide.video.thumbnail_url,
+                      style: "width:100%; object-fit:cover; max-height: 210px;",
+                      class: "lazyload d-block"
+                - if !hide_tags && has_tags
+                  .px-3.px-md-5
+                    .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                      - slide.tags.each do |tag|
+                        = partial "partials/chip",
+                          locals: {label: tag.name,
+                          url: page_path(tag),
+                          chip_type: "",
+                          btn_type: "",
+                          chip_size: ""}
     .swiper-pagination.mt-4
