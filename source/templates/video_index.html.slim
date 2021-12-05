@@ -8,8 +8,9 @@
     = partial "partials/explore-aside",
       locals: {page: page}
 
-.lightgrey-bg-a2
-  .container.py-3
+- if page.featured_videos.present?
+  .lightgrey-bg-a2
+    .container.py-3
     - if page.featured_videos.present?
       - number_of_cards = page.featured_videos.size
       .py-5
