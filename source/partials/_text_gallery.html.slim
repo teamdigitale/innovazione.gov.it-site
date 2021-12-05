@@ -17,6 +17,7 @@ ruby:
               true
             end
             hide_tags = is_video && hide_video_tags ? true : false
+            title_style = is_video ? "mid-caption--xmlarge" : ""
             icon_position = hide_tags ? "video_slide_icon" : "with_tags"
             has_date = if slide.respond_to?(:date_shown) &&
               slide.date_shown.present?
@@ -38,7 +39,7 @@ ruby:
                     h4.h4.pt-1.text-primary.font-weight-bold
                       = proxy_link_to slide.title,
                         page_path(slide),
-                        class: "text-decoration-none"
+                        class: "text-decoration-none #{title_style}"
                   - if !is_video
                     .mid-caption--xlarge
                       = slide.subtitle
