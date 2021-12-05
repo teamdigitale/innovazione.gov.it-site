@@ -32,11 +32,6 @@
             locals: {slides: page.featured_videos,
             hide_type: true,
             hide_video_tags: false}
-          /.mb-4
-            = partial "partials/video-card",
-              locals: {item: featured_video,
-              max_height: "190px",
-              top_margin: "pt-0"}
 
 .py-3.my-lg-5
   .container
@@ -61,10 +56,6 @@
                 locals: {item: video,
                 max_height: "224px",
                 top_margin: "pt-0"}
-        /- items.each do |n|
-          .col-lg-8
-            = partial "partials/card-related-items",
-              locals: {item: n}
 
       .pt-lg-4
         = partial "partials/pagination",
