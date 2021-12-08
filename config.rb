@@ -213,7 +213,7 @@ helpers do
   end
 
   def nearest_date
-    current_and_future_events.first.agenda_date
+    return current_and_future_events.first.agenda_date unless current_and_future_events.empty?
   end
 
   def days_in_minister_schedule
@@ -395,6 +395,8 @@ helpers do
      dato.focus_index,
      dato.projects_page,
      dato.videos_index
+     # dato.schedule_page,
+     # dato.schedule_archive_page
     ]
   end
 
@@ -568,7 +570,7 @@ dato.tap do |dato|
     )
       parent_path = "#{parent_page.slug}/"
       index_path = index_page.slug.to_s
-      path = "/#{parent_path}#{page_path}"
+      path = "/#{parent_path}#{index_path}"
 
       if items.any?
         paginate items,
@@ -720,11 +722,11 @@ dato.tap do |dato|
       end)
     end
 
-    paginate_with_fallback(events_by_month,
-                           dato.schedule_page,
-                           dato.minister_page,
-                           locale,
-                           "/templates/schedule.html")
+   paginate_with_fallback(events_by_month,
+                          dato.schedule_page,
+                          dato.minister_page,
+                          locale,
+                          "/templates/schedule.html")
 
     archive_events = visible_schedule_events.reverse.select do |event|
       event.agenda_date <= DateTime.now
@@ -939,8 +941,8 @@ dato.tap do |dato|
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
-                        visible_news_subpages +
-                        visible_schedule_events
+                        visible_news_subpages
+                         visible_schedule_events
 
     visible_tags.each do |tag|
       items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
