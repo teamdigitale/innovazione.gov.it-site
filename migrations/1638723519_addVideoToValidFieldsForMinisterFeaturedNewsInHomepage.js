@@ -12,10 +12,4 @@ module.exports = async (client) => {
       }
     }
   })
-  .then((field) => {
-    console.log(field);
-  })
-  .catch((error) => {
-    console.error(error);
-  })
 }

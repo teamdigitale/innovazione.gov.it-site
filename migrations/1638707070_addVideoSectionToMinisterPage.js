@@ -3,7 +3,10 @@
 module.exports = async (client) => {
   const ministerModel = await client.itemType.find('minister_page');
   const videoModel = await client.itemType.find('video');
-  const contentFieldset = await client.fieldset.find('393969')
+
+  const ministerFieldsets = await client.fieldsets.all('minister_page');
+
+  const contentFieldset = ministerFieldsets.find(fieldset => fieldset.title === "Contenuti");
 
   const videoTitleField = await client.fields.create(ministerModel.id, {
     label: 'Titolo sezione video',
