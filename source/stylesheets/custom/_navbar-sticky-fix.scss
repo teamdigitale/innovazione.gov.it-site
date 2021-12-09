@@ -1,0 +1,10 @@
+.it-header-sticky {
+  z-index: $zindex-fixed;
+
+  .it-brand-wrapper.cloned,
+  .it-search-wrapper.cloned {
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+}
