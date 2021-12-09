@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
+import "sticky-header-custom.js";
 import "lazysizes";
 import "lazysizes/plugins/respimg/ls.respimg";
 import "focus-visible/src/focus-visible.js"
