@@ -4,6 +4,13 @@
  */
 ;(function() {
   const elSticky = document.querySelector('.it-header-sticky')
+  const elCenter = document.querySelector('.it-header-center-wrapper')
+  const elNavbar = document.querySelector('.it-header-navbar-wrapper')
+  const elSlim = document.querySelector('.it-header-slim-wrapper')
+
+  const navbarHeight = (elNavbar && elNavbar.offsetHeight) || 0
+  const slimHeight = (elSlim && elSlim.offsetHeight) || 0
+
   const otherStickyElements = document.querySelectorAll(".sticky-top")
 
   if (!!elSticky) {
@@ -25,12 +32,6 @@
     let runCheckSticky = undefined
 
     const initSticky = isDesktop => {
-      const elSlim = document.querySelector('.it-header-slim-wrapper')
-      const elCenter = document.querySelector('.it-header-center-wrapper')
-      const elNavbar = document.querySelector('.it-header-navbar-wrapper')
-
-      const navbarHeight = (elNavbar && elNavbar.offsetHeight) || 0
-      const slimHeight = (elSlim && elSlim.offsetHeight) || 0
       let navOffsetTop = slimHeight
 
       if (isDesktop && navbarHeight) {
@@ -75,15 +76,6 @@
         }
 
         if (toAdd) {
-          topAmountReset = 0 + 'px'
-
-          otherStickyElements.forEach(function (element) {
-            console.log(isDesktop)
-          	element.style.top = navbarHeight +
-            (isDesktop ? 0 : navbarHeight) +
-            'px'
-          })
-
           elSticky.nextElementSibling.style.paddingTop = navbarHeight +
           (isDesktop
             ? navOffsetTop - scrollToGap
@@ -91,10 +83,7 @@
           'px'
 
         } else {
-          otherStickyElements.forEach(function (element) {
-            element.style.top = topAmountReset
-          })
-          elSticky.nextElementSibling.style.paddingTop = topAmountReset
+          elSticky.nextElementSibling.style.paddingTop = 0 + 'px'
         }
       }
 
@@ -118,9 +107,22 @@
         } else if (window.scrollY + scrollToGap < navOffsetTop && isSticky) {
           toggleOff()
         }
+        runCheckHeight()
+      }
+
+      runCheckHeight = () => {
+        const centerResizeHeight = elCenter.offsetHeight
+        const navbarResizeHeight = elNavbar.offsetHeight
+        const actualNavHeight = (centerResizeHeight > navbarResizeHeight
+          ? centerResizeHeight : navbarResizeHeight)
+
+        otherStickyElements.forEach(function (element) {
+          element.style.top = actualNavHeight + 'px'
+        })
       }
 
       window.addEventListener('scroll', runCheckSticky)
+      window.addEventListener('resize', runCheckHeight)
 
       runCheckSticky()
     }
