@@ -133,13 +133,14 @@ it:
     prev: Pagina precedente
 
   socials:
-    facebook: facebook
+    facebook: Facebook
     instagram: Instagram
     linkedin: Linkedin
     medium: Medium
     telegram: Telegram
     twitter: Twitter
     whatsapp: Whatsapp
+    youtube: Youtube
 
   skiplinks:
     content: Vai al contenuto principale
