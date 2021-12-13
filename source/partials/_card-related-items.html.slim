@@ -27,10 +27,11 @@ ruby:
 
     type = ""
     txt_date = "text-secondary"
-    txt_title = "text-primary"
-    txt_subtitle = "text-secondary"
+    txt_title = is_video ? "d-block text-primary text-truncate" : "text-primary"
+    txt_subtitle = is_video ? "text-secondary text-truncate" : "text-secondary"
     card_classes = "p-lg-0"
     video_img_style = "max-width:100%; object-fit:scale-down; max-height:120px"
+    video_lg_img_style = "max-width:100%; object-fit:cover; height: 100%"
 
     if is_focus
       type = "text-white"
@@ -84,9 +85,9 @@ ruby:
             = link_to page_path(item),
               aria_label: t("video.go_to_video"),
               title: "video: #{item.title}"
-              figure
+              figure style="height: 100px;"
                 = image_tag logo_url,
-                  style: video_img_style,
+                  style: video_lg_img_style,
                   class: "lazyload d-block"
           - else
             figure
