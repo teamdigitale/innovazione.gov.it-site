@@ -64,12 +64,14 @@ h1 class=mobile_title_classes
 - if page.video_section.any?
   .lightgrey-bg-a2
     .container.py-3
-      - if page.video_section.size == 1
-        = partial "partials/video-single", locals: {item: page.video_section.first}
-      - elsif page.video_section.size == 2
+      - if page.video_section == 1
+        = partial "partials/video-single",
+          locals: {item: page.video_section.first}
+
+      - else
         = partial "partials/video-two-columns",
           locals: {items: page.video_section,
-          homepage_section:true}
+          homepage_section: true}
 
 .container
   = partial "partials/card-featured-projects", locals: {page: page}

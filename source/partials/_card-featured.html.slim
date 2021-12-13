@@ -29,25 +29,26 @@
         fit: 'crop',
         auto: 'compress')} 719w"
 
-      if larger_of_two
-        image_desk_srcset = "#{card_image.url(w: 160,
-          h: 500,
-          fit: 'crop',
-          auto: 'compress')} 1200w,
-          #{card_image.url(w: 200,
-          h: 400,
-          fit: 'crop',
-          auto: 'compress')} 1320w"
-      else
-        image_desk_srcset = "#{card_image.url(w: 452,
-          h: 400,
-          fit: 'crop',
-          auto: 'compress')} 1200,
-          #{card_image.url(w: 564,
-          h: 400,
-          fit: 'crop',
-          auto: 'compress')} 1320w"
-      end
+      image_desk_srcset =
+        if larger_of_two
+          "#{card_image.url(w: 160,
+            h: 500,
+            fit: 'crop',
+            auto: 'compress')} 1200w,
+            #{card_image.url(w: 200,
+            h: 400,
+            fit: 'crop',
+            auto: 'compress')} 1320w"
+        else
+          "#{card_image.url(w: 452,
+            h: 400,
+            fit: 'crop',
+            auto: 'compress')} 1200,
+            #{card_image.url(w: 564,
+            h: 400,
+            fit: 'crop',
+            auto: 'compress')} 1320w"
+        end
     end
 
   .card.rounded.shadow-lg.h-100.d-flex.flex-column-reverse.flex-lg-row-reverse

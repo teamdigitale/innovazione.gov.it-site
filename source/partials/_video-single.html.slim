@@ -19,18 +19,18 @@ ruby:
               picture-in-picture].join("; ")
   end
 
-
 - if item.present?
+  - section_title = item.title
+
   .pt-5.pb-4
     h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
       = item.item_type.api_key
-  - section_title = item.title
 
   .col-lg-10.offset-lg-2.pl-lg-6
-    h2.mb-4.h3.ml-lg-4.text-primary = section_title
-  
-  .col-lg-10.offset-lg-1
+    h2.mb-4.h3.ml-lg-4.text-primary
+      = section_title
 
+  .col-lg-10.offset-lg-1
     .d-none.d-lg-block
       iframe [width="100%"
               height=minheight
@@ -48,12 +48,13 @@ ruby:
               allow=allows
               title="Youtube video"
               allowfullscreen="allowfullscreen"]
+
     = partial "partials/video-transcript",
       locals: {video: item}
 
 .row.mt-2.pb-5
   .col-12.text-center.my-4
     = partial "partials/button",
-    locals: {btn_url: dato.videos_index,
-      white_outline: true,
-      aria_label: section_title}
+      locals: {btn_url: dato.videos_index,
+        white_outline: true,
+        aria_label: section_title}

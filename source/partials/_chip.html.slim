@@ -6,7 +6,12 @@ ruby:
   bg_color ||= ""
   default = "chip chip-simple mb-2 ml-1 mr-1 mt-1 text-decoration-none"
   border = text_color == "text-white" ? "border-white" : ""
-  classes = [default, chip_size, bg_color, chip_type, btn_type, border].join(" ")
+  classes = [default,
+    chip_size,
+    bg_color,
+    chip_type,
+    btn_type,
+    border].join(" ")
 
   label ||= nil
   url ||= nil
