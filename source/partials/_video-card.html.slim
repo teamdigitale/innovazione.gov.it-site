@@ -1,8 +1,7 @@
 ruby:
   item ||= nil
   add_card_shadow ||= ""
-  horizontal_spacing ||= ""
-  horizontal_spacing
+  x_spacing ||= ""
   image_shadow = add_card_shadow ? "" : "shadow-lg"
 
 .card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
@@ -14,7 +13,7 @@ ruby:
         = image_tag thumbnail_url,
           class: "lazyload",
           style: "transform: scale(1.1);"
-  .card-body.d-flex.flex-column class=horizontal_spacing
+  .card-body.d-flex.flex-column class=x_spacing
     div
       p.card-text.text-secondary
         = partial "partials/formatted-date",
