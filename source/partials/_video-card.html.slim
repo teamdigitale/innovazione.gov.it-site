@@ -1,19 +1,19 @@
 ruby:
   item ||= nil
-  max_height ||= ""
-  top_margin ||= ""
-  add_shadow ||= ""
-  hide_image_shadow ||= "shadow-lg"
+  add_card_shadow ||= ""
+  horizontal_spacing ||= ""
+  horizontal_spacing
+  image_shadow = add_card_shadow ? "" : "shadow-lg"
 
-.card.rounded.card-img.no-after.h-100.bg-transparent class=add_shadow
-  .img-responsive-wrapper.rounded class=hide_image_shadow
+.card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
+  .img-responsive-wrapper.rounded class=image_shadow
     .img-responsive
       figure.img-wrapper
         - high_res_thumbnail_url = "https://i.ytimg.com/vi/#{item.video.provider_uid}/maxresdefault.jpg"
         = image_tag high_res_thumbnail_url,
           class: "lazyload",
           style: "transform: scale(1.1);"
-  .card-body.d-flex.flex-column class=top_margin
+  .card-body.d-flex.flex-column class=horizontal_spacing
     div
       p.card-text.text-secondary
         = partial "partials/formatted-date",
@@ -23,7 +23,6 @@ ruby:
           class: "text-decoration-none"
           = item.title
     div
-      /mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
       - if item.tags.present?
         - item.tags.each do |tag|
           = partial "partials/chip",
