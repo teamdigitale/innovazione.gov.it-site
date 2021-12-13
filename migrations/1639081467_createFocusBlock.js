@@ -11,7 +11,7 @@ module.exports = async (client) => {
 
   const focusField = await client.fields.create(focusBlock.id, {
     label: 'Elemento Focus',
-    apiKey: 'focus_element',
+    apiKey: 'focus_elements',
     fieldType: 'links',
     validators: {
       size: {
