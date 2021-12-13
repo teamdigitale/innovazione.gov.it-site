@@ -15,9 +15,8 @@
 .d-none.d-lg-block
   .row
     - items.map do |item|
-      .col-lg-6
-        - if homepage_section
-          .my-4
+      - spacing = homepage_section ? "my-4" : ""
+      .col-lg-6 class=spacing
         - unless homepage_section
           p.ml-lg-4.mid-caption.text-secondary
             = partial "partials/formatted-date",
