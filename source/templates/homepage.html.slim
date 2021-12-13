@@ -64,7 +64,7 @@ h1 class=mobile_title_classes
 - if page.video_section.any?
   .lightgrey-bg-a2
     .container.py-3
-      - if page.video_section == 1
+      - if page.video_section.size == 1
         = partial "partials/video-single",
           locals: {item: page.video_section.first}
 

@@ -13,8 +13,8 @@
 @include media-breakpoint-up(md) {
   .video_two_col_icon {
     position: absolute;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     top: 81%;
     left: 83%;
   }
@@ -23,8 +23,8 @@
 @include media-breakpoint-up(lg) {
   .video_two_col_icon {
     position: absolute;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     top: 72%;
     left: 82%;
   }
@@ -60,8 +60,8 @@
 
 .with_tags{
   position: absolute;
-  top: 63%;
-  left: 84%;
+  top: 61%;
+  left: 79%;
 }
 
 .video_slide_icon {
@@ -73,8 +73,8 @@
 @include media-breakpoint-up(md) {
   .video_slide_icon {
     position: absolute;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     top: 72%;
     left: 82%;
   }
@@ -83,15 +83,21 @@
 @include media-breakpoint-up(lg) {
   .video_slide_icon {
     position: absolute;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     top: 63%;
     left: 77%;
   }
 }
 
-.video_slide_thumbnail {
-  max-height: 209px;
+.video_thumbnail_height {
+  max-height: 180px;
   object-fit: cover;
   width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  .video_thumbnail_height {
+    max-height: 100%;
+  }
 }

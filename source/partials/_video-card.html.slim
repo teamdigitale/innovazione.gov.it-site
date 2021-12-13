@@ -1,15 +1,19 @@
-- item ||= nil
-- max_height ||= ""
-- top_margin ||= ""
+ruby:
+  item ||= nil
+  add_card_shadow ||= ""
+  x_spacing ||= ""
+  image_shadow = add_card_shadow ? "" : "shadow-lg"
 
-.card.rounded.card-img.no-after.h-100.bg-transparent
-  .img-responsive-wrapper
+.card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
+  .img-responsive-wrapper.rounded class=image_shadow
     .img-responsive
       figure.img-wrapper
-        = image_tag item.video.thumbnail_url,
+        - id = item.video.provider_uid
+        - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+        = image_tag thumbnail_url,
           class: "lazyload",
-          style: "max-height: #{max_height};"
-  .card-body.d-flex.flex-column class=top_margin
+          style: "transform: scale(1.1);"
+  .card-body.d-flex.flex-column class=x_spacing
     div
       p.card-text.text-secondary
         = partial "partials/formatted-date",
@@ -19,7 +23,6 @@
           class: "text-decoration-none"
           = item.title
     div
-      /mt-auto.d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
       - if item.tags.present?
         - item.tags.each do |tag|
           = partial "partials/chip",
@@ -27,5 +30,5 @@
             url: page_path(tag),
             chip_type: "",
             btn_type: "",
-            bg_color: "bg-transparent",
+            bg_color: "chip-transparent",
             chip_size: ""}
