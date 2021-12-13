@@ -3,19 +3,19 @@ ruby:
                pt-5 d-ml-flex align-items-left
                justify-content-lg-around)
 
-.py-5
- .container
+.py-5.py-5.lightgrey-bg-a2
+  .container
     .row.my-lg-5
       .text-center class=classes
         figure.avatar style="width: 175px; height: 175px"
-          = proxy_image_tag block.thumbnail.url(w: 10, h: 10,
+          = proxy_image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10,
               fit: "crop"), data: {sizes: "100vw",
-              src: block.thumbnail.url(w: 1200, h: 1200,
+              src: dato.minister_page.photo.url(w: 1200, h: 1200,
               fit: "crop", auto: "compress"),
-              srcset: "#{block.thumbnail.url(w: 800, h: 800,
+              srcset: "#{dato.minister_page.photo.url(w: 800, h: 800,
               fit: 'crop', auto: 'compress')} 480w"},
             class: "lazyload rounded-circle d-block w-100 h-100 bg-primary",
-            alt: block.thumbnail.alt
+            alt: dato.minister_page.photo.alt
 
       .col-lg-5
         .card-wrapper
@@ -23,7 +23,11 @@ ruby:
             .card-body.ml-lg-4
               div
                 .py-2.text-center.text-lg-left
-                  h2.h6.mid-caption--large.pr-2.text-uppercase.font-weight-semibold
+                  h2 class=["h6",
+                    "mid-caption--large",
+                    "pr-2",
+                    "text-uppercase",
+                    "font-weight-semibold"].join(" ")
                     = block.pre_title
 
                 h3.h1.text-center.text-lg-left
@@ -34,10 +38,13 @@ ruby:
 
               .my-3.mt-lg-5.text-center.text-lg-left
                 = partial "partials/button",
-                  locals: {btn_url: block.link.link,
-                  aria_label: block.pre_title}
+                  locals: {btn_url: dato.minister_page,
+                    aria_label: block.pre_title}
 
-      .col-lg-5.px-4.p-md-0.mb-5.mb-md-0
-        = partial "partials/_italy2026-step"
+      .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
+        = partial "partials/text_gallery",
+          locals: {slides: block.featured_interviews,
+            hide_date: true,
+            hide_video_tags: true}
 
       .col-lg-1

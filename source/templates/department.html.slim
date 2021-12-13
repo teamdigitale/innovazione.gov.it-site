@@ -55,10 +55,13 @@
       items: page.announcements.take(3),
       btn_url: dato.department_announcements_index}
 
-= partial "partials/focus-flag", locals: {items: page.focus_elements}
+- if page.focus_elements.any?
+  = partial "partials/blocks/block_focus_highlight",
+    locals: {items: page.focus_elements}
 
 .lightgrey-bg-a2
   .container
-    = partial "partials/flag", locals: {flags: page.sections}
+    = partial "partials/flags",
+      locals: {flags: page.sections}
 
 = partial "partials/numbers", locals: {numbers: page.numbers}
