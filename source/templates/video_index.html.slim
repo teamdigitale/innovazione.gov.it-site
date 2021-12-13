@@ -4,7 +4,7 @@
   == proxy_dato_meta_tags(page)
 
 = partial "partials/headers/header-basic", locals: {page: page} do
-  /= content_for :aside
+  = content_for :aside
     = partial "partials/explore-aside",
       locals: {page: page}
 
@@ -39,7 +39,7 @@
         h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
           = t("video.all")
 
-      .row
+      .row-lg
         h2.sr-only Elenco degli elementi
         .d-none.d-lg-block
           .row.pb-5
@@ -47,7 +47,7 @@
               .col-3
                 = partial "partials/video-card",
                   locals: {item: video,
-                  add_cards_shadow: "shadow-lg"}
+                  add_card_shadow: "shadow-lg"}
 
         .d-lg-none
           - items.each do |video|

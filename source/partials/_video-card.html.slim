@@ -9,8 +9,9 @@ ruby:
   .img-responsive-wrapper.rounded class=image_shadow
     .img-responsive
       figure.img-wrapper
-        - high_res_thumbnail_url = "https://i.ytimg.com/vi/#{item.video.provider_uid}/maxresdefault.jpg"
-        = image_tag high_res_thumbnail_url,
+        - id = item.video.provider_uid
+        - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+        = image_tag thumbnail_url,
           class: "lazyload",
           style: "transform: scale(1.1);"
   .card-body.d-flex.flex-column class=horizontal_spacing

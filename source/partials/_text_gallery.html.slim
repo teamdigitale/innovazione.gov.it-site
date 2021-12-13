@@ -55,19 +55,6 @@ ruby:
                       "p-1",
                       icon_position].join(" ")
                       use xlink:href="/images/sprite.svg#it-video"
-                /- if is_video
-                  = link_to page_path(slide)
-                    svg class=["icon",
-                      "bg-white",
-                      "icon-primary",
-                      "rounded",
-                      "p-1",
-                      icon_position].join(" ")
-                      use xlink:href="/images/sprite.svg#it-video"
-                  figure.mb-0
-                    = image_tag slide.video.thumbnail_url,
-                      style: "width:100%; object-fit:cover; max-height: 210px;",
-                      class: "lazyload d-block"
                 - if !hide_tags && has_tags
                   .px-3.px-md-5
                     .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
