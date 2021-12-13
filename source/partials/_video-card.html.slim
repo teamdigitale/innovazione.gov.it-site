@@ -3,14 +3,16 @@ ruby:
   max_height ||= ""
   top_margin ||= ""
   add_shadow ||= ""
+  hide_image_shadow ||= "shadow-lg"
 
 .card.rounded.card-img.no-after.h-100.bg-transparent class=add_shadow
-  .img-responsive-wrapper
+  .img-responsive-wrapper.rounded class=hide_image_shadow
     .img-responsive
       figure.img-wrapper
-        = image_tag item.video.thumbnail_url,
+        - high_res_thumbnail_url = "https://i.ytimg.com/vi/#{item.video.provider_uid}/maxresdefault.jpg"
+        = image_tag high_res_thumbnail_url,
           class: "lazyload",
-          style: "max-height: #{max_height};"
+          style: "transform: scale(1.1);"
   .card-body.d-flex.flex-column class=top_margin
     div
       p.card-text.text-secondary

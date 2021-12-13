@@ -35,9 +35,10 @@
 
 .py-3.my-lg-5
   - if items.any?
-    .container.py-5
-      h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
-        = t("video.all")
+    .container
+      .py-5
+        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+          = t("video.all")
       .row
         h2.sr-only Elenco degli elementi
         .d-none.d-lg-block
@@ -47,8 +48,8 @@
                 = partial "partials/video-card",
                   locals: {item: video,
                   add_shadow: "shadow-lg",
-                  max_height: "125px",
-                  top_margin: "pt-0"}
+                  hide_image_shadow: "",
+                  max_height: "125px"}
         .d-lg-none
           - items.each do |video|
             .mb-4
