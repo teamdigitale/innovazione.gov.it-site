@@ -14,16 +14,17 @@
 
   .row.mt-4.mx-n4
     - dato.news_page.medium_articles.map do |article|
-      div class="col-lg-#{12/cols} px-4"
+      div class="col-lg-#{12 / cols} px-4"
         = partial "partials/card-medium-elements", locals: {article: article}
 
   .row.pb-5
     .col-12.my-3.mt-lg-5.text-center
-      button.btn.btn-sm.py-2.btn-outline-primary.mid-button-medium.btn-icon.text-uppercase
+      button.btn.btn-sm.py-2.btn-outline-primary.mid-button-medium.btn-icon
         = proxy_link_to dato.company.medium_url,
           class: "text-decoration-none align-middle"
           .d-inline-block.pr-3
-            p.mb-0.mid-caption--large.font-weight-bold = t("medium")
+            p.mb-0.mid-caption--large.text-uppercase.font-weight-bold
+              = t("medium")
           span.d-none.d-lg-inline
             svg.icon.icon-lg.icon-primary
               use xlink:href="/images/sprite.svg#it-medium"
