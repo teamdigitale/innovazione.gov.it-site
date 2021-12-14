@@ -1,4 +1,6 @@
 .it-header-wrapper {
+  z-index: $zindex-fixed;
+  position: relative;
   .it-header-center-wrapper {
     .it-header-center-content-wrapper {
       .it-search-wrapper {
