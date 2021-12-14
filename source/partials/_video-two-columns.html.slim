@@ -9,8 +9,8 @@
 .d-none.d-lg-block
   .row
     - items.map do |item|
-      - spacing = homepage_section ? "my-4" : ""
-      .col-lg-6 class=spacing
+      - spacing = homepage_section ? "my-4" : "mb-4"
+      .col-lg-5 class=spacing
         - unless homepage_section
           p.ml-lg-4.mid-caption.text-secondary
             = partial "partials/formatted-date",
@@ -19,6 +19,7 @@
           = link_to page_path(item),
             class: "text-decoration-none"
             = item.title
+      .col-lg-1
 
 .row
   - items.map do |item|
