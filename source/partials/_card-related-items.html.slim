@@ -20,7 +20,8 @@ ruby:
       logo_length = "col-4 col-md-2 px-lg-0"
       padding = "pl-lg-2 pr-lg-0"
     elsif item.respond_to?(:video) && item.video.thumbnail_url.present?
-      logo_url = item.video.thumbnail_url
+      id = item.video.provider_uid
+      logo_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
       logo_length = "col-4 col-md-2 px-lg-0"
       padding = "pl-lg-4 pr-lg-0"
     end

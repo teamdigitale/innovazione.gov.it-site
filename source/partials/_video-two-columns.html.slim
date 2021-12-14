@@ -1,12 +1,6 @@
 - items ||= nil
 - homepage_section ||= nil
 
-/ Dato ritorna un url di youtube che non vogliamo usare
-/ quindi sostituiamo il dominio e l'embed al volo
-/ per rispettare le questioni di privacy
-/ Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
-/ Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
-
 - if homepage_section
   .pt-5.pb-lg-4
     h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
@@ -43,7 +37,9 @@
           svg.icon.video_two_col_icon.bg-white.icon-primary.rounded.p-1
             use xlink:href="/images/sprite.svg#it-video"
           figure.mb-0
-            = image_tag item.video.thumbnail_url,
+            - id = item.video.provider_uid
+            - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+            = image_tag thumbnail_url,
               class: "video_two_col_thumbnail lazyload d-block"
 
 .row.mt-2.pb-4

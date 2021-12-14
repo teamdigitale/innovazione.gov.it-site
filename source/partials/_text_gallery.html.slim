@@ -45,7 +45,9 @@ ruby:
                       = slide.subtitle
                 - if is_video
                   figure.mb-0
-                    = image_tag slide.video.thumbnail_url,
+                    - id = slide.video.provider_uid
+                    - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+                    = image_tag thumbnail_url,
                       style: "width:100%; object-fit:cover",
                       class: "lazyload d-block video_thumbnail_height"
                     svg class=["icon",
