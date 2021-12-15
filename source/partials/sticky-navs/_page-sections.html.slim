@@ -1,15 +1,15 @@
 ruby:
   title ||= t("sections_nav_title")
-  anchors = anchors.reject(&:blank?)
+  sections = sections.reject(&:blank?)
 
 - content = capture
-  - anchors.each do |anchor|
+  - sections.each do |section|
     li.nav-item
-      = link_to anchor,
-        "##{anchor_id(anchor)}",
+      = link_to section,
+        "##{anchor_id(section)}",
         class: "nav-link"
 
-- if anchors.any?
+- if sections.any?
   .sticky-top.bg-white.mid-section-border-below
     nav.menu-wrapper.d-lg-none.px-0.container [
       aria-label="indice di pagina mobile" aria-hidden="true"]
@@ -42,7 +42,14 @@ ruby:
       nav.menu-wrapper.d-none.d-lg-block.border-bottom [
         aria-label="indice di pagina" aria-hidden="false"]
         .it-list-wrapper.menu-link-list.d-inline-flex
-          p.h3.py-3.mb-0.pl-2.pr-1.text-uppercase.mid-caption.font-weight-semibold
+          p class=["h3",
+            "py-3",
+            "mb-0",
+            "pl-2",
+            "pr-1",
+            "text-uppercase",
+            "mid-caption",
+            "font-weight-semibold"].join(" ")
             = title
 
           ul.it-list.small.d-inline-flex.mt-1

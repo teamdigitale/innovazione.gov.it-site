@@ -1,5 +1,5 @@
 ruby:
-  anchors = [
+  section_titles = [
     t("articles_section_title"),
     t("press_releases_section_title"),
     t("participations_section_title"),
@@ -24,8 +24,8 @@ ruby:
         locals: {label: tag.name, url: page_path(tag), btn_type: ""}
 
 ._content
-  = partial "partials/sticky/page-sections-nav",
-    locals: {anchors: anchors}
+  = partial "partials/sticky-navs/page-sections",
+    locals: {sections: section_titles}
 
   .container
     .row.d-lg-flex

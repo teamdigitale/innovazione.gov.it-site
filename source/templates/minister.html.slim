@@ -1,5 +1,5 @@
 ruby:
-  anchors = [
+  section_titles = [
     t("articles_section_title"),
     t("press_releases_section_title"),
     (page.video_section_title if page.video_section.any?),
@@ -51,8 +51,8 @@ ruby:
                 locals: {page: page}
 
 ._content
-  = partial "partials/sticky/page-sections-nav",
-    locals: {anchors: anchors}
+  = partial "partials/sticky-navs/page-sections",
+    locals: {sections: section_titles}
 
   .container.pt-3
     .pt-5.pb-4
