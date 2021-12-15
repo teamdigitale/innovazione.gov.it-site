@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   const ministerBlock = await client.itemTypes.create({
     name: 'Blocco Ministro',
-    apiKey: 'minister_block',
+    apiKey: 'block_minister',
     modularBlock: true,
   });
 

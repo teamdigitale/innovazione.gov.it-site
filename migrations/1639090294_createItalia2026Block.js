@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   const Italia2026Block = await client.itemTypes.create({
     name: 'Italia 2026',
-    apiKey: 'italy2026_block',
+    apiKey: 'block_italy2026',
     modularBlock: true,
   });
 

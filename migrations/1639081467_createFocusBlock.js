@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   const focusBlock = await client.itemTypes.create({
     name: 'Blocco Focus',
-    apiKey: 'focus_block',
+    apiKey: 'block_focus_highlight',
     modularBlock: true,
   });
 

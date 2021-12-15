@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = async (client) => {
-  const focusBlock = await client.itemType.find('focus_block');
-  const Italia2026Block = await client.itemType.find('italy2026_block');
-  const ministerBlock = await client.itemType.find('minister_block');
+  const focusBlock = await client.itemType.find('block_focus_highlight');
+  const Italia2026Block = await client.itemType.find('block_italy2026');
+  const ministerBlock = await client.itemType.find('block_minister');
   const homepageModel = await client.itemType.find('homepage');
 
   const homepageBlockField = await client.fields.create(homepageModel.id, {
