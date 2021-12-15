@@ -1,3 +1,12 @@
+ruby:
+  anchors = [
+    t("articles_section_title"),
+    t("press_releases_section_title"),
+    t("participations_section_title"),
+    t("interviews_section_title"),
+    (t("medium_articles") if dato.news_page.medium_articles.any?)
+  ]
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
@@ -5,6 +14,7 @@
   = content_for :col_one
     = partial "partials/headers/subpages-menu",
       locals: {subs: visible_fl_pages(dato.news_subpages)}
+
   = content_for :aside
     = partial "partials/column-title",
       locals: {title: t("highlighted_topics")}
@@ -13,29 +23,39 @@
       = partial "partials/chip",
         locals: {label: tag.name, url: page_path(tag), btn_type: ""}
 
-.container.px-4.border-top
-  .row.d-lg-flex
-    .col-lg-7.pt-5
-      = partial "partials/cards-vertical-list",
-        locals: {title: t("articles_section_title"),
-        items: page.articles,
-        large_title: true,
-        btn_url: dato.articles_index}
+._content
+  = partial "partials/sticky/page-sections-nav",
+    locals: {anchors: anchors}
 
-    .col-lg-4.offset-lg-1.pl-lg-4.mb-lg-3.mid-border-lg-left.pt-lg-5
-      = partial "partials/cards-vertical-list",
-        locals: {title: t("press_releases_section_title"),
-        items: page.press_releases,
-        btn_url: dato.press_releases_index}
-      = partial "partials/cards-vertical-list",
-        locals: {title: t("participations_section_title"),
-        items: page.participations,
-        btn_url: dato.participations_index}
-      = partial "partials/cards-vertical-list",
-        locals: {title: t("interviews_section_title"),
-        items: page.interviews,
-        btn_url: dato.interviews_index}
+  .container
+    .row.d-lg-flex
+      .col-lg-7.pt-5
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("articles_section_title"),
+          title_is_anchor: true,
+          items: page.articles,
+          large_title: true,
+          btn_url: dato.articles_index}
 
-  - if dato.news_page.medium_articles.any?
-    .py-lg-5
-      = partial "partials/medium-elements"
+      .col-lg-4.offset-lg-1.pl-lg-4.mb-lg-3.mid-border-lg-left.pt-lg-5
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("press_releases_section_title"),
+          title_is_anchor: true,
+          items: page.press_releases,
+          btn_url: dato.press_releases_index}
+
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("participations_section_title"),
+          title_is_anchor: true,
+          items: page.participations,
+          btn_url: dato.participations_index}
+
+        = partial "partials/cards-vertical-list",
+          locals: {title: t("interviews_section_title"),
+          title_is_anchor: true,
+          items: page.interviews,
+          btn_url: dato.interviews_index}
+
+    - if dato.news_page.medium_articles.any?
+      .py-lg-5
+        = partial "partials/medium-elements"
