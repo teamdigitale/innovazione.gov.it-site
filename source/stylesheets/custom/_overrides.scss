@@ -1,3 +1,7 @@
 .link-list-wrapper.menu-link-list h3:after, .link-list-wrapper.menu-link-list h4:after {
   background-color: #06C;
 }
+
+.sticky-top {
+  top: var(--sticky-header-height, 0);
+}
