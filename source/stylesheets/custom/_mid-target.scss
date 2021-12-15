@@ -1,8 +1,8 @@
 ._mid-target::before {
   display: block;
   content: " ";
-  margin-top: calc(-#{$page-sticky-nav-height} - var(--sticky-header-height));
-  height: calc(#{$page-sticky-nav-height} + var(--sticky-header-height));
+  margin-top: calc(-#{$page-sticky-nav-height} - var(--sticky-header-height) - 12px);
+  height: calc(#{$page-sticky-nav-height} + var(--sticky-header-height) + 12px);
   visibility: hidden;
   pointer-events: none;
 }

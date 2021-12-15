@@ -1,0 +1,9 @@
+.mid-section-border-above {
+  z-index: $zindex-sticky + 1;
+  position: relative;
+}
+
+.mid-section-border-below {
+  z-index: $zindex-sticky;
+  margin-top: -1px;
+}
