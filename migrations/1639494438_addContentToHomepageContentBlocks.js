@@ -42,7 +42,9 @@ module.exports = async (client) => {
   const firstFlagImage = nestedRecord.image;
   const firstFlagLink = nestedRecord.link;
 
-  const createMinisterBlock = await client.items
+  // Old content for flag Blocks
+
+  const addHomepageBlocks = await client.items
     .update(homepageRecordId, {
       contentBlocks: [
         buildModularBlock({
