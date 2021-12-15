@@ -9,13 +9,15 @@ ruby:
   special_subtitle ||= nil
   unequal_height ||= nil
   hide_shadow ||= nil
+  title_is_anchor ||= nil
 
 - if items.present?
   - cols = items.size > 1 ? items.size : 2
 
   - if title.present?
     .pt-5.pb-4.pb-lg-0
-      = partial "partials/section-title", locals: {title: title}
+      = partial "partials/section-title",
+        locals: {title: title, is_anchor: title_is_anchor}
 
   div class="row row-cols-lg-#{cols} mt-log-3"
     - items.each do |item|
