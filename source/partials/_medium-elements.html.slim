@@ -3,7 +3,10 @@
 
   .d-lg-flex.mb-lg-0.pb-lg-0
     .mr-lg-auto
-      = partial "partials/section-title", locals: {title: t("medium_articles")}
+      = partial "partials/section-title",
+        locals: {title: t("medium_articles"),
+        is_anchor: true}
+
     .p-1
       svg.icon
         use xlink:href="/images/sprite.svg#it-external-link"
