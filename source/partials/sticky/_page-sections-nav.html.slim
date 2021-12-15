@@ -1,0 +1,47 @@
+ruby:
+  title ||= t("sections_nav_title")
+  anchors = anchors.reject(&:blank?)
+
+- content = capture
+  - anchors.each do |anchor|
+    li.nav-item
+      = link_to anchor,
+        "##{anchor_id(anchor)}",
+        class: "nav-link"
+
+- if anchors.any?
+  .sticky-top.bg-white.container
+    nav.menu-wrapper.col-12.d-lg-none.px-0 [
+      aria-label="indice di pagina mobile" aria-hidden="true"]
+      .it-list-wrapper.menu-link-list
+        .collapse-div role="tablist" id="accordionDiv-aside"
+          .collapse-header id='headingA-aside'
+            .p-0.pt-2 [aria-controls="accordion-aside"
+                      aria-expanded="false"
+                      data-target="#accordion-aside"
+                      data-toggle="collapse"
+                      role="button"]
+              .pt-1.pb-2.px-3
+                p.h3.text-uppercase.mid-caption.font-weight-semibold
+                  = title
+
+              .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+                ._progress-indicator.progress-indicator.primary-bg-b1
+
+          .collapse [aria-labelledby="headingA-aside"
+                    id="accordion-aside"
+                    data-parent="#accordionDiv-aside"
+                    role="tabpanel"]
+
+            .collapse-body.p-0
+              ul.it-list.small.py-3._top-menu
+                = content
+
+    nav.menu-wrapper.d-none.d-lg-block.border-bottom [
+      aria-label="indice di pagina" aria-hidden="false"]
+      .it-list-wrapper.menu-link-list.d-inline-flex
+        p.h3.py-3.mb-0.pl-2.pr-1.text-uppercase.mid-caption.font-weight-semibold
+          = title
+
+        ul.it-list.small.d-inline-flex.mt-1
+          = content
