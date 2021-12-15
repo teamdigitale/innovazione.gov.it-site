@@ -10,8 +10,8 @@ ruby:
         class: "nav-link"
 
 - if anchors.any?
-  .sticky-top.bg-white.container
-    nav.menu-wrapper.col-12.d-lg-none.px-0 [
+  .sticky-top.bg-white.mid-section-border-below
+    nav.menu-wrapper.d-lg-none.px-0.container [
       aria-label="indice di pagina mobile" aria-hidden="true"]
       .it-list-wrapper.menu-link-list
         .collapse-div role="tablist" id="accordionDiv-aside"
@@ -21,6 +21,7 @@ ruby:
                       data-target="#accordion-aside"
                       data-toggle="collapse"
                       role="button"]
+
               .pt-1.pb-2.px-3
                 p.h3.text-uppercase.mid-caption.font-weight-semibold
                   = title
@@ -37,11 +38,12 @@ ruby:
               ul.it-list.small.py-3._top-menu
                 = content
 
-    nav.menu-wrapper.d-none.d-lg-block.border-bottom [
-      aria-label="indice di pagina" aria-hidden="false"]
-      .it-list-wrapper.menu-link-list.d-inline-flex
-        p.h3.py-3.mb-0.pl-2.pr-1.text-uppercase.mid-caption.font-weight-semibold
-          = title
+    .container
+      nav.menu-wrapper.d-none.d-lg-block.border-bottom [
+        aria-label="indice di pagina" aria-hidden="false"]
+        .it-list-wrapper.menu-link-list.d-inline-flex
+          p.h3.py-3.mb-0.pl-2.pr-1.text-uppercase.mid-caption.font-weight-semibold
+            = title
 
-        ul.it-list.small.d-inline-flex.mt-1
-          = content
+          ul.it-list.small.d-inline-flex.mt-1
+            = content
