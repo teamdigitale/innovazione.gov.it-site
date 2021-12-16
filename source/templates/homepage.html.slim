@@ -38,16 +38,11 @@ h1 class=mobile_title_classes
           show_item_type: true,
           btn_url: dato.news_page}
 
+/ content blocks
 - page.content_blocks.each_with_index do |block, i|
   - image_right = i % 2 == 0
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block, image_right: image_right}
-
-/ blocco Ministra e Agenda
-.pt-5.lightgrey-bg-a2
-  - if page.show_schedule
-    .container.px-0
-      = partial "partials/schedule"
 
 / blocco video
 - if page.video_section.any?

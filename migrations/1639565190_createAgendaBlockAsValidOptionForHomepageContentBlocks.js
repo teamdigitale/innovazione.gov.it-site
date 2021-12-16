@@ -28,7 +28,7 @@ module.exports = async (client) => {
 
   const eventModel = await client.itemType.find('schedule_event');
 
-  const eventhField = await client.fields.create(agendaBlock.id, {
+  const eventField = await client.fields.create(agendaBlock.id, {
     label: 'Evento Agenda',
     apiKey: 'agenda_events',
     fieldType: 'links',
