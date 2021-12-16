@@ -21,7 +21,8 @@ h1 class=mobile_title_classes
         locals: {block: block}
 
 .container.pt-5
-  h2.h4.mb-4 = t("home.highlights")
+  h2.h4.mb-4
+    = t("home.highlights")
 
   - if page.featured_news.any? || page.news.any?
       - if page.featured_news.any?
@@ -37,28 +38,10 @@ h1 class=mobile_title_classes
           show_item_type: true,
           btn_url: dato.news_page}
 
-/ blocco Italia 2026
-- if page.italy2026_show
-  .py-5.
-    .container
-      = partial "partials/card-feature-italia2026"
-
-/ blocco bandiera alta
-- if page.firstflag_show
-    .pt-0.pb-5
-      .container
-        = partial "partials/flag",
-          locals: {flags: page.block_first_flags,
-          is_first_flag: true,
-          large_title: true}
-
-/ blocco Ministra
-.py-5.py-5.lightgrey-bg-a2
-  .container
-    = partial "partials/card-feature-carousel"
-
-/ blocco Focus
-= partial "partials/focus-flag", locals: {items: page.focus_elements}
+- page.content_blocks.each_with_index do |block, i|
+  - image_right = i % 2 == 0
+  = partial "partials/blocks/#{block.item_type.api_key}",
+    locals: {block: block, image_right: image_right}
 
 / blocco video
 - if page.video_section.any?
@@ -79,7 +62,7 @@ h1 class=mobile_title_classes
 - if page.sections.any?
   .lightgrey-bg-a2
     .container
-      = partial "partials/flag",
+      = partial "partials/flags",
         locals: {flags: page.sections, image_right: true}
 
 / blocco avvisi pubblici

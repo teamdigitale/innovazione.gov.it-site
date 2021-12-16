@@ -23,7 +23,7 @@ ruby:
         - if is_first_flag
           - if large_title
             - lg_image_url = flag.image.url(w: 1400,
-              h: 8400,
+              h: 840,
               fit: "crop",
               auto: "compress")
             - xl_image_url = flag.image.url(w: 1400,
@@ -68,6 +68,7 @@ ruby:
                     #{xl_image_url} 1400w"},
               class: "lazyload d-block w-100",
               alt: flag.image.alt
+
         - else
           figure.m-0
             = proxy_image_tag flag.image.lqip_data_url(w: 10, h: 8,
@@ -96,6 +97,7 @@ ruby:
               - html_class = "btn text-uppercase btn-primary"
               = partial "partials/links/#{flag.link.item_type.api_key}",
                 locals: {item: flag.link, html_class: html_class}
+
       .col-12.d-lg-none.px-0
         .img-responsive-wrapper.p-0
           .img-responsive

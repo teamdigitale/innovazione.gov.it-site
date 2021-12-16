@@ -117,7 +117,7 @@ module.exports = async (client) => {
   const videoIndexContent = await client.items.create({
     itemType: videoIndexModel.id,
     title: "Video",
-    menu_label: "video",
+    menuLabel: "video",
     slug: "video"
   });
 }

@@ -1,4 +1,4 @@
-- items ||= nil
+- items ||= block.focus_elements
 
 - if items.present?
   - section_title = t("models.#{items.first.item_type.api_key}")
