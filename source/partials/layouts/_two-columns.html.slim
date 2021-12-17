@@ -1,11 +1,11 @@
 .container.border-top.pb-5
   .row.no-gutter
     aside.col-lg-3.border-right.hidden.d-none.d-lg-block.px-0
-      = partial "partials/sticky-anchor", locals: {page: page}
+      = partial "partials/sticky-navs/categories-or-blocks", locals: {page: page}
 
     .col-12.col-lg-9.pt-lg-5._content
       .row
-        = partial "partials/sticky-anchor",
+        = partial "partials/sticky-navs/categories-or-blocks",
           locals: {page: page, mobile: true}
 
         = partial "partials/page-blocks",

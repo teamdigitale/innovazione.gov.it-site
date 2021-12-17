@@ -111,14 +111,21 @@
       }
 
       runCheckHeight = () => {
+        const cssVarElement = document.querySelector(':root').style
+        const cssVarHeight = cssVarElement
+          .getPropertyValue('--sticky-header-height')
+
         const centerResizeHeight = elCenter.offsetHeight
         const navbarResizeHeight = elNavbar.offsetHeight
         const actualNavHeight = (centerResizeHeight > navbarResizeHeight
           ? centerResizeHeight : navbarResizeHeight)
 
-        otherStickyElements.forEach(function (element) {
-          element.style.top = actualNavHeight + 'px'
-        })
+        const stickyHeaderHeight = actualNavHeight + 'px'
+
+        if (otherStickyElements && stickyHeaderHeight != cssVarHeight) {
+          cssVarElement
+            .setProperty('--sticky-header-height', stickyHeaderHeight);
+        }
       }
 
       window.addEventListener('scroll', runCheckSticky)
