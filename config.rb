@@ -102,6 +102,10 @@ module PresentationHelper
     job_positions.select(&:slug).sort_by(&:date_shown).reverse
   end
 
+  def self.published_pnrr_job_positions(pnrr_job_positions)
+    pnrr_job_positions.select(&:slug).sort_by(&:date_shown).reverse
+  end
+
   def self.published_children_pages(page)
     page.children.select(&:slug).sort_by(&:position)
   end
@@ -274,6 +278,7 @@ helpers do
        video
        general_page
        job_position
+       pnrr_job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -303,6 +308,7 @@ helpers do
        project
        general_page
        job_position
+       pnrr_job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -348,6 +354,7 @@ helpers do
        press_release
        general_page
        job_position
+       pnrr_job_position
        minister_subpage
        department_subpage
        projects_subpage
@@ -488,6 +495,7 @@ dato.tap do |dato|
     visible_projects = PresentationHelper.published_projects(dato.projects)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
+    visible_pnrr_job_positions = PresentationHelper.published_pnrr_job_positions(dato.pnrr_job_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
@@ -564,6 +572,18 @@ dato.tap do |dato|
       proxy "/#{dato.department_page.slug}/#{dato.job_positions_index.slug}/#{job_position.slug}/index.html",
       "/templates/job_position.html",
       locals: {page: job_position},
+      locale: locale
+    end
+
+    paginate_with_fallback(visible_pnrr_job_positions,
+                           dato.pnrr_job_positions_index,
+                           dato.department_page,
+                           locale)
+
+    visible_pnrr_job_positions.each do |pnrr_job_position|
+      proxy "/#{dato.department_page.slug}/#{dato.pnrr_job_positions_index.slug}/#{pnrr_job_position.slug}/index.html",
+      "/templates/pnrr_job_position.html",
+      locals: {page: pnrr_job_position},
       locale: locale
     end
 
@@ -789,6 +809,7 @@ dato.tap do |dato|
                         visible_videos +
                         visible_general_pages +
                         visible_job_positions +
+                        visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
