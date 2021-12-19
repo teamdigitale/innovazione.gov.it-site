@@ -5,4 +5,5 @@
   height: calc(#{$page-sticky-nav-height} + var(--sticky-header-height) + 12px);
   visibility: hidden;
   pointer-events: none;
+  position: absolute;
 }
