@@ -1,15 +1,24 @@
-- subs ||= nil
-- hide_caption ||= nil
+ruby:
+  subs ||= nil
+  hide_caption ||= nil
+  right_col_longer ||= nil
 
 - if subs.present? && subs.count.positive?
-  - col_items = (subs.count.to_f / 2).ceil
-  - i = 1
+  ruby:
+    max = (subs.count.to_f / 2).ceil
+    i = 1
+    groups =
+      if right_col_longer
+        [subs[0..max - 2], subs[max - 1..-1]]
+      else
+        [subs[0, max], subs[max..-1]]
+      end
 
   - if hide_caption != true
     .pb-2 = partial "partials/column-title", locals: {title: t("deepen")}
 
   .row
-    - subs.each_slice(col_items) do |group|
+    - groups.each do |group|
       .col-sm-5 class=("m-auto m-sm-0 mr-sm-5" if i == 1)
         - i += 1
         - group.each do |item|

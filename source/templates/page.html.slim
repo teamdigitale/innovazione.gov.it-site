@@ -1,5 +1,8 @@
 ruby:
-  if page.respond_to?(:menu_general_links) && page.menu_general_links.any?
+  menu_links = page.respond_to?(:menu_general_links) && page.menu_general_links.any?
+  right_col_longer = menu_links && page.right_column_longer ? true : false
+
+  if menu_links
     children += page.menu_general_links.collect(&:link)
   end
 
@@ -7,7 +10,9 @@ ruby:
   == proxy_dato_meta_tags(page)
 
 = partial "partials/headers/header-basic",
-  locals: {page: page, subs: children} do
+  locals: {page: page,
+  subs: children,
+  right_col_longer: right_col_longer} do
 
   = content_for :col_one
     = partial "partials/switch-locale-button",

@@ -4,6 +4,7 @@ ruby:
   classes ||= ""
   subs ||= nil
   hide_caption ||= nil
+  right_col_longer ||= nil
 
 - if page.present?
   div class=classes
@@ -27,7 +28,9 @@ ruby:
                   = yield_content :col_two
 
           = partial "partials/headers/subpages-menu",
-            locals: {subs: subs, hide_caption: hide_caption}
+            locals: {subs: subs,
+            hide_caption: hide_caption,
+            right_col_longer: right_col_longer}
 
         - if content_for?(:aside)
           .offset-lg-1.col-md-4
