@@ -1,9 +1,10 @@
-._mid-target::before {
-  display: block;
-  content: " ";
-  margin-top: calc(-#{$page-sticky-nav-height} - var(--sticky-header-height) - 12px);
-  height: calc(#{$page-sticky-nav-height} + var(--sticky-header-height) + 12px);
+._mid-target {
+  position: relative;
+}
+
+._mid-target-point {
+  position: absolute;
+  top: calc(-#{$page-sticky-nav-height} - var(--sticky-header-height) - 12px);
   visibility: hidden;
   pointer-events: none;
-  position: absolute;
 }
