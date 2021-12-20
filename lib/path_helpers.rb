@@ -17,7 +17,8 @@ module PathHelpers
 
     when "department_subpage",
       "focus_page",
-      "job_position"
+      "job_position",
+      "pnrr_job_position"
       dato.department_page
 
     when "projects_subpage"
@@ -28,9 +29,9 @@ module PathHelpers
       "article",
       "interview",
       "participation",
-      "press_release"
+      "press_release",
+      "video"
       dato.news_page
-
     end
   end
 
@@ -58,14 +59,16 @@ module PathHelpers
       "department_announcements_index",
       "department_press_releases_index",
       "focus_index",
-      "job_positions_index"
+      "job_positions_index",
+      "pnrr_job_positions_index"
       dato.department_page
 
     when "announcements_index",
       "articles_index",
       "interviews_index",
       "participations_index",
-      "press_releases_index"
+      "press_releases_index",
+      "videos_index"
       dato.news_page
 
     when "focus_page"
@@ -80,6 +83,9 @@ module PathHelpers
     when "article"
       dato.articles_index
 
+    when "video"
+      dato.videos_index
+
     when "interview"
       dato.interviews_index
 
@@ -91,10 +97,12 @@ module PathHelpers
 
     when "tag"
       dato.tags_index
-    
+ 
     when "job_position"
       dato.job_positions_index
 
+    when "pnrr_job_position"
+      dato.pnrr_job_positions_index
     end
   end
 

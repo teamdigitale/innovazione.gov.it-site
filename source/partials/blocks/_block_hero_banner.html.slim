@@ -9,13 +9,13 @@ section.lightgrey-bg-b2.py-4
           .img-responsive-wrapper
             .img-responsive
               .img-wrapper
-                = proxy_image_tag image.lqip_data_url(w: 10, h: 6, fit: 'max'),
-                  data: {"sizes": "100vw",
-                    "src": image.url(w: 1000,
+                = proxy_image_tag image.lqip_data_url(w: 10, h: 6, fit: "max"),
+                  data: {sizes: "100vw",
+                    src: image.url(w: 1000,
                       h: 640,
-                      fit: 'max',
+                      fit: "max",
                       auto: "compress"),
-                    "srcset": "#{image.url(w: 1000,
+                    srcset: "#{image.url(w: 1000,
                       h: 640,
                       fit: 'max',
                       auto: 'compress')} 480w,
@@ -55,5 +55,3 @@ section.lightgrey-bg-b2.py-4
                       - html_class = "btn btn-outline-primary" if !i.zero?
                       = partial "partials/links/#{item.item_type.api_key}",
                         locals: {item: item, html_class: html_class}
-
-

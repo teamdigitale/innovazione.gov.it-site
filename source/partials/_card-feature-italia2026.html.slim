@@ -6,10 +6,10 @@ ruby:
   .text-center class=classes
     figure.avatar style="width: 175px; height: 175px"
       = proxy_image_tag page.italy2026_thumbnail.url(w: 10, h: 10,
-          fit: "crop"), data: {"sizes": "100vw",
-          'src': page.italy2026_thumbnail.url(w: 1200, h: 1200,
+          fit: "crop"), data: {sizes: "100vw",
+          src: page.italy2026_thumbnail.url(w: 1200, h: 1200,
           fit: "crop", auto: "compress"),
-          "srcset": "#{page.italy2026_thumbnail.url(w: 800, h: 800,
+          srcset: "#{page.italy2026_thumbnail.url(w: 800, h: 800,
           fit: 'crop', auto: 'compress')} 480w"},
         class: "lazyload rounded-circle d-block w-100 h-100 bg-primary",
         alt: page.italy2026_thumbnail.alt
@@ -27,7 +27,8 @@ ruby:
             p.h5.mid-text-dark.text-center.text-lg-left
               = page.italy2026_text
           .my-3.mt-lg-5.text-center.text-lg-left
-            = partial "partials/button", locals: {btn_url: page.italy2026_link.link,
+            = partial "partials/button",
+              locals: {btn_url: page.italy2026_link.link,
               aria_label: page.italy2026_pre_title}
   .col-lg-5.px-4.p-md-0.mb-5.mb-md-0
     = partial "partials/_italy2026-step"

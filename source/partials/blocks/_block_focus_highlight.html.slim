@@ -1,9 +1,9 @@
-- items ||= nil
+- items ||= block.focus_elements
 
 - if items.present?
   - section_title = t("models.#{items.first.item_type.api_key}")
 
-  .primary-bg.py-5
+  .primary-bg.pt-5.pb-4
     .container.white-color
       .row: .col-12.text-center
         h2 class=["h6", "mid-caption--large",
@@ -24,11 +24,10 @@
         - when 2
           .row
             .col-lg-1
-            .col-12.col-lg-4
+            .col-12.col-lg-5
               = partial "partials/focus-card",
                 locals: {item: items.first, text_left: true}
-            .col-lg-2
-            .col-12.col-lg-4
+            .col-12.col-lg-5
               = partial "partials/focus-card",
                 locals: {item: items[1], text_left: true}
             .col-lg-1

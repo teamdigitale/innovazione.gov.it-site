@@ -1,0 +1,64 @@
+- items ||= []
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: {page: page} do
+  = content_for :aside
+    = partial "partials/explore-aside",
+      locals: {page: page}
+
+- if page.featured_videos.present?
+  .lightgrey-bg-a2
+    .container.py-3
+      - if page.featured_videos.present?
+        - number_of_cards = page.featured_videos.size
+        .py-5
+          h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+            = t("video.highlights")
+
+        .d-none.d-lg-block
+          .row.pb-5
+            - page.featured_videos.each do |featured_video|
+              div class="col-lg-#{12 / number_of_cards}"
+                = partial "partials/video-card",
+                  locals: {item: featured_video,
+                  x_spacing: "px-0"}
+
+        .d-lg-none
+          .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
+            = partial "partials/text_gallery",
+              locals: {slides: page.featured_videos,
+              hide_type: true,
+              hide_video_tags: false}
+
+.py-3.my-lg-5
+  - if items.any?
+    .container
+      .py-5
+        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+          = t("video.all")
+
+      .row-lg
+        h2.sr-only Elenco degli elementi
+        .d-none.d-lg-block
+          .row.pb-5
+            - items.each do |video|
+              .col-3
+                = partial "partials/video-card",
+                  locals: {item: video,
+                  add_card_shadow: "shadow-lg"}
+
+        .d-lg-none
+          - items.each do |video|
+            .mb-4
+              = partial "partials/video-card",
+                locals: {item: video}
+
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
+
+  - else
+    .container
+      = t("empty_list")

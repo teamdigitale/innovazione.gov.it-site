@@ -10,15 +10,16 @@
 .container
   .row
     .col-lg-3.px-0.border-right.hidden.d-none.d-lg-block.border-top._content
-      = partial "partials/sticky-anchor",
+      = partial "partials/sticky-navs/categories-or-blocks",
         locals: {categories: visible_projects_categories,
           title: t("projects.categories_nav")}
 
     .col-12.col-lg-9.px-0.border-top._content
-      = partial "partials/sticky-anchor",
+      = partial "partials/sticky-navs/categories-or-blocks",
         locals: {categories: visible_projects_categories,
         title: t("projects.categories_nav"),
         mobile: true}
+
       - if highlight_projects.any?
         section.section.p-0
           .container
@@ -41,7 +42,8 @@
             .container
               .row.py-5.pl-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
-                  h2.font-weight-semibold._mid-target id=anchor_id(cat.slug)
+                  h2.font-weight-semibold._mid-target
+                    span._mid-target-point id=anchor_id(cat.slug)
                     = cat.name
 
                   p.h4.mt-3.lead.font-weight-semibold

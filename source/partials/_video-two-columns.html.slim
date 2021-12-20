@@ -1,0 +1,52 @@
+- items ||= nil
+- homepage_section ||= nil
+
+- if homepage_section
+  .pt-5.pb-lg-4
+    h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+      = items.first.item_type.api_key
+
+.d-none.d-lg-block
+  .row
+    - items.map do |item|
+      - spacing = homepage_section ? "my-4" : "mb-4"
+      .col-lg-5 class=spacing
+        - unless homepage_section
+          p.ml-lg-4.mid-caption.text-secondary
+            = partial "partials/formatted-date",
+              locals: {date: item.date_shown}
+        h2.ml-lg-4.h4.text-primary
+          = link_to page_path(item),
+            class: "text-decoration-none"
+            = item.title
+      .col-lg-1
+
+.row
+  - items.map do |item|
+    .col-lg-6
+      .d-lg-none.my-4.pt-4
+        - unless homepage_section
+          p.ml-lg-4.mid-caption.text-secondary
+            = partial "partials/formatted-date",
+              locals: {date: item.date_shown}
+        h2.ml-lg-4.h4.text-primary.mt-2g
+          = link_to page_path(item),
+            class: "text-decoration-none"
+            = item.title
+      = link_to page_path(item)
+        .img-responsive-wrapper
+          svg.icon.video_two_col_icon.bg-white.icon-primary.rounded.p-1
+            use xlink:href="/images/sprite.svg#it-video"
+          figure.mb-0
+            - id = item.video.provider_uid
+            - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+            = image_tag thumbnail_url,
+              class: "video_two_col_thumbnail lazyload d-block"
+
+.row.mt-2.pb-4
+  .col-12.text-center.my-5
+    = partial "partials/button",
+    locals: {btn_url: dato.videos_index,
+      label: t("see_more"),
+      white_outline: true,
+      aria_label: "sezione video"}

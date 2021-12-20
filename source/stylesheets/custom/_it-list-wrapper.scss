@@ -1,0 +1,9 @@
+.it-list-wrapper {
+  .it-list {
+    a:hover {
+      @include media-breakpoint-up(xl) {
+        box-shadow: none;
+      }
+    }
+  }
+}

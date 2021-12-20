@@ -7,7 +7,7 @@ ruby:
   ruby:
     date = ""
     is_focus = item.item_type.api_key == "focus_page"
-    is_project = item.item_type.api_key == "project"
+    is_video = item.item_type.api_key == "video"
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
 
     if page_show_update_date_in_preview?(item) && show_date
@@ -19,13 +19,20 @@ ruby:
       logo_url = item.image_project_logo
       logo_length = "col-4 col-md-2 px-lg-0"
       padding = "pl-lg-2 pr-lg-0"
+    elsif item.respond_to?(:video) && item.video.thumbnail_url.present?
+      id = item.video.provider_uid
+      logo_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+      logo_length = "col-4 col-md-2 px-lg-0"
+      padding = "pl-lg-4 pr-lg-0"
     end
 
     type = ""
     txt_date = "text-secondary"
-    txt_title = "text-primary"
-    txt_subtitle = "text-secondary"
+    txt_title = is_video ? "d-block text-primary text-truncate" : "text-primary"
+    txt_subtitle = is_video ? "text-secondary text-truncate" : "text-secondary"
     card_classes = "p-lg-0"
+    video_img_style = "max-width:100%; object-fit:scale-down; max-height:120px"
+    video_lg_img_style = "max-width:100%; object-fit:cover; height: 100%"
 
     if is_focus
       type = "text-white"
@@ -41,40 +48,23 @@ ruby:
       div class="#{logo_length}"
         .img-responsive-wrapper
           figure
-            = proxy_image_tag logo_url.lqip_data_url(w: 10,
-              h: 10,
-              fit: "max"),
-              data: {"sizes": "100vw",
-                "src": logo_url.url(w: 120,
-                   h: 120,
-                   fit: "max",
-                   auto: "compress"),
-                "srcset": "#{logo_url.url(w: 120,
-                  h: 120,
-                  fit: 'max',
-                  auto: 'compress')} 480w,
-                #{logo_url.url(w: 155,
-                  h: 250,
-                  fit: 'max',
-                  auto: 'compress')} 632w"},
-              style: "max-width: 100%; object-fit: cover; height:auto",
-              class: "lazyload d-block",
-              alt: logo_url.alt,
-              title: logo_url.title
-
-  .d-lg-flex.mb-lg-4
-    - if logo_url.present?
-      .d-none.d-lg-block class="#{logo_length}"
-        .img-responsive-wrapper.p-lg-0.m-0
-          figure
-            = proxy_image_tag logo_url.lqip_data_url(w: 10,
+            - if is_video
+              = link_to page_path(item),
+                aria_label: t("video.go_to_video"),
+                title: "video: #{item.title}"
+                = image_tag logo_url,
+                  style: video_img_style,
+                  class: "lazyload d-block"
+            - else
+              = proxy_image_tag logo_url.lqip_data_url(w: 10,
                 h: 10,
                 fit: "max"),
-              data: {"sizes": "100vw",
-                "src": logo_url.url(w: 120,
-                  h: 120,
-                  fit: "max", auto: "compress"),
-                "srcset": "#{logo_url.url(w: 120,
+                data: {sizes: "100vw",
+                  src: logo_url.url(w: 120,
+                     h: 120,
+                     fit: "max",
+                     auto: "compress"),
+                  srcset: "#{logo_url.url(w: 120,
                     h: 120,
                     fit: 'max',
                     auto: 'compress')} 480w,
@@ -82,9 +72,44 @@ ruby:
                     h: 250,
                     fit: 'max',
                     auto: 'compress')} 632w"},
-              style: "max-width:100%; object-fit:scale-down; max-height:120px",
-              class: "lazyload d-block",
-              alt: logo_url.alt
+                style: video_img_style,
+                class: "lazyload d-block",
+                alt: logo_url.alt,
+                title: logo_url.title
+
+  .d-lg-flex.mb-lg-4
+    - if logo_url.present?
+      .d-none.d-lg-block class="#{logo_length}"
+        .img-responsive-wrapper.p-lg-0.m-0
+
+          - if is_video
+            = link_to page_path(item),
+              aria_label: t("video.go_to_video"),
+              title: "video: #{item.title}"
+              figure style="height: 100px;"
+                = image_tag logo_url,
+                  style: video_lg_img_style,
+                  class: "lazyload d-block"
+          - else
+            figure
+              = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                  h: 10,
+                  fit: "max"),
+                data: {sizes: "100vw",
+                  src: logo_url.url(w: 120,
+                    h: 120,
+                    fit: "max", auto: "compress"),
+                  srcset: "#{logo_url.url(w: 120,
+                      h: 120,
+                      fit: 'max',
+                      auto: 'compress')} 480w,
+                    #{logo_url.url(w: 155,
+                      h: 250,
+                      fit: 'max',
+                      auto: 'compress')} 632w"},
+                style: video_img_style,
+                class: "lazyload d-block",
+                alt: logo_url.alt
 
     .card.mb-2.m-lg-0.p-lg-0
       .card-body.px-0.py-2.p-lg-0.m-lg-0 class=card_classes

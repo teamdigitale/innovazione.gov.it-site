@@ -1,0 +1,34 @@
+ruby:
+  item ||= nil
+  add_card_shadow ||= nil
+  x_spacing ||= ""
+  image_shadow = add_card_shadow ? "" : "shadow-lg"
+
+.card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
+  .img-responsive-wrapper.rounded class=image_shadow
+    .img-responsive
+      figure.img-wrapper
+        - id = item.video.provider_uid
+        - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+        = image_tag thumbnail_url,
+          class: "lazyload",
+          style: "transform: scale(1.1);"
+  .card-body.d-flex.flex-column class=x_spacing
+    div
+      p.card-text.text-secondary
+        = partial "partials/formatted-date",
+          locals: {date: item.date_shown}
+      h3.h4.text-primary class="mid-caption--xlarge font-weight-bold"
+        = link_to page_path(item),
+          class: "text-decoration-none"
+          = item.title
+    div
+      - if item.tags.present?
+        - item.tags.each do |tag|
+          = partial "partials/chip",
+            locals: {label: tag.name,
+            url: page_path(tag),
+            chip_type: "",
+            btn_type: "",
+            bg_color: "chip-transparent",
+            chip_size: ""}

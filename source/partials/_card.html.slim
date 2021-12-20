@@ -16,7 +16,6 @@
     image = ""
     image_link = ""
     title_style = ""
-    subtitle ||= nil
     subtitle_style = ""
     shadow = hide_shadow ? "" : "shadow-lg"
     height = unequal_height ? "" : "h-100"
@@ -86,12 +85,12 @@
             = proxy_image_tag image_link.lqip_data_url(w: 10,
               h: 6,
               fit: "crop"),
-              data: {"sizes": "100vw",
-                "src": image_link.url(w: 700,
+              data: {sizes: "100vw",
+                src: image_link.url(w: 700,
                     h: 400,
                     fit: "crop",
                     auto: "compress"),
-                "srcset": "#{image_link.url(w: 450,
+                srcset: "#{image_link.url(w: 450,
                     h: 330,
                     fit: 'crop',
                     auto: 'compress')} 480w,

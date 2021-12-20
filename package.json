@@ -46,7 +46,8 @@
     "terser-webpack-plugin": "^5.0.3",
     "webpack": "^5.10.0",
     "webpack-cli": ">= 3.2.1",
-    "webpack-modernizr-loader": "^5"
+    "webpack-modernizr-loader": "^5",
+    "datocms-client": "^3.5.9"
   },
   "dependencies": {
     "@popperjs/core": "^2.6.0",

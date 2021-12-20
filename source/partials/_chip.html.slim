@@ -3,9 +3,15 @@ ruby:
   chip_type ||= "chip-primary"
   btn_type ||= "btn-outline-primary"
   text_color ||= ""
-  default_classes = "chip chip-simple mb-2 ml-1 mr-1 mt-1 text-decoration-none"
+  bg_color ||= ""
+  default = "chip chip-simple mb-2 ml-1 mr-1 mt-1 text-decoration-none"
   border = text_color == "text-white" ? "border-white" : ""
-  classes = [default_classes, chip_size, chip_type, btn_type, border].join(" ")
+  classes = [default,
+    chip_size,
+    bg_color,
+    chip_type,
+    btn_type,
+    border].join(" ")
 
   label ||= nil
   url ||= nil

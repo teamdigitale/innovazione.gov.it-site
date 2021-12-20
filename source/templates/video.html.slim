@@ -1,0 +1,47 @@
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic",
+  locals: {page: page, share: true} do
+
+  = content_for :col_one
+    = partial "partials/column-title", locals: {title: t("date_shown")}
+    = partial "partials/formatted-date", locals: {date: page.date_shown}
+    /= partial "partials/switch-locale-button",
+      locals: {page: page}
+
+  = content_for :col_two
+    = partial "partials/video-time", locals: {page: page}
+
+  - if main_locale?(locale)
+    = content_for :aside
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+      - page.tags.each do |tag|
+        = partial "partials/chip",
+          locals: {label: tag.name, url: page_path(tag)}
+
+.lightgrey-bg-a2.pt-5
+  .container.py-5
+    = partial "partials/video-cover", locals: {item: page}
+    .d-lg-flex.justify-content-center
+      .col-lg-6.mt-lg-3.mb-lg-5
+        = partial "partials/video-transcript",
+          locals: {video: page}
+
+- if page.attachments.any? || page.links.any?
+  .container.py-5
+    .row.justify-content-center
+      .col-12.col-md-6.justify-content-md-center
+        = partial "partials/page-attachments-links",
+          locals: {page: page,
+            single_column: true}
+
+        = partial "partials/page-other-contents",
+          locals: {page: page}
+
+- if page.related_items.any?
+  .container.pb-5.pt-5
+    = partial "partials/page-related",
+      locals: {page: page}
