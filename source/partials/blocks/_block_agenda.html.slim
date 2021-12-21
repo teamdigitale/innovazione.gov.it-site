@@ -1,64 +1,32 @@
-- if !dato.schedule_events.empty?
+- if block.agenda_events.present? && block.agenda_events.size >= 2
   .pt-5.container.px-0
     - center = "d-lg-flex justify-content-lg-center"
 
-    .row.no-gutters.align-items-stretch.text-center.justify-content-center
-      .col-12.col-lg-2.d-lg-flex.align-items-lg-center.py-1
-        h2.h4.pb-2.pr-xl-5
-          = block.title
+    .col-12.offset-lg-1.mb-4
+      .d-flex.justify-content-between
+        h2.h4 = block.title
+        = partial "partials/button",
+          locals: {btn_url: dato.schedule_page,
+          color_class: "btn-outline-primary"}
 
-//    .col-12.col-lg-8
-//      ul#agenda-tabs.nav.nav-tabs.mid-tabs-nav class=center role="tablist"
-//        - dates_shown.each_with_index do |date, index|
-//          li.nav-item
-//            a [
-//              id="data-ex-tab#{date}-tab"
-//              class="nav-link #{"active" if index == 3}"
-//              aria-controls="tab#{date}"
-//              aria-selected="true"
-//              data-toggle="tab"
-//              href="#tab#{date}"
-//              role="tab"]
-//
-//              .h5.mb-0.font-weight-semibold
-//                = DateTime.parse(date).strftime("%d")
-//
-//              .mid-caption--xsmall
-//                = DateTime.parse(date).strftime("%#b")
-//
-//        li.nav-item.d-lg-none.text-center
-//          .ml-5.mr-3.d-flex.align-items-center style="width: max-content"
-//            = partial "partials/button",
-//              locals: {btn_url: dato.schedule_page,
-//              color_class: "btn mid-caption btn-sm btn-outline-primary"}
-//
-//    .d-none.col-lg-2.d-lg-flex.white-bg.align-items-center.py-1
-//      = partial "partials/button",
-//        locals: {btn_url: dato.schedule_page,
-//          color_class: "btn btn-outline-primary"}
-//
-//  .tab-content.mid-tabs-content
-//    - dates_shown.each_with_index do |date, index|
-//      div [
-//        id="tab#{date}"
-//        class="tab-pane #{"active" if index == 3}"
-//        aria-labelledby="data-ex-tab#{date}-tab"
-//        role="tabpanel"]
-//        .container.px-0.pt-4.pb-5
-//          .swiper
-//            .swiper-container.p-0
-//              .swiper-wrapper.d-flex.justify-content-center
-//                - schedule_events_by_day[date].each do |event|
-//                  .swiper-slide.d-flex.col-8.col-md-4.col-lg-3.py-0
-//                    .swiper-slide__text.py-0
-//                      .border-left.border-200.primary-border-color
-//                        .p-3.text-center.text-md-left
-//                          .category.pb-2.mid-caption.font-weight-semibold
-//                            span.pr-2
-//                              = "Ore #{event.agenda_date.to_time.hour}"
-//                            span.px-2.text-uppercase
-//                              = event.agenda_category.name
-//                          h3.h5.font-weight-semibold
-//                            = link_to page_path(event),
-//                              class: "text-primary text-decoration-none"
-//                              = event.title
+  .pt-2.bg-primary
+  .container.px-0.pt-4.pb-5
+    .swiper
+      .swiper-container.p-0
+        .swiper-wrapper.d-flex.justify-content-center
+          - block.agenda_events.each do |event|
+            .swiper-slide.d-flex.col-8.col-md-4.col-lg-3.py-0
+              .swiper-slide__text.py-0
+                .border-left.border-200.primary-border-color
+                  .p-3.text-center.text-md-left
+                    .category.pb-2.mid-caption.font-weight-semibold
+                      span.pr-2
+                        = partial "partials/formatted-date",
+                          locals: {date: event.date_shown}
+                    h3.h6.font-weight-semibold
+                      = link_to page_path(event),
+                        class: "text-primary text-decoration-none"
+                        = event.title
+      - if block.agenda_events.size > 4
+        .swiper-pagination.pt-3
+  .pt-2.bg-primary
