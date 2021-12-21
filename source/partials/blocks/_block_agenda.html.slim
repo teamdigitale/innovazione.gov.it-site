@@ -11,14 +11,16 @@
 
   .pt-2.bg-primary
   .container.px-0.pt-4.pb-5
-    .swiper
-      .swiper-container.p-0
-        .swiper-wrapper.d-flex.justify-content-center
-          - block.agenda_events.each do |event|
-            .swiper-slide.d-flex.col-8.col-md-4.col-lg-3.py-0
-              .swiper-slide__text.py-0
-                .border-left.border-200.primary-border-color
-                  .p-3.text-center.text-md-left
+
+    .d-lg-none
+      .swiper.pt-2
+        .swiper-container.p-0
+          .swiper-wrapper
+            - block.agenda_events.each do |event|
+              .swiper-slide
+                .swiper-slide__text.py-0
+                  .mid-agenda-block-border
+                  .pb-3.px-3.text-center.text-md-left
                     .category.pb-2.mid-caption.font-weight-semibold
                       span.pr-2
                         = partial "partials/formatted-date",
@@ -27,6 +29,32 @@
                       = link_to page_path(event),
                         class: "text-primary text-decoration-none"
                         = event.title
-      - if block.agenda_events.size > 4
-        .swiper-pagination.pt-3
+        .swiper-pagination.pt-4
+
+    .d-none.d-lg-block
+      .swiper.pt-2
+        .swiper-container.p-0
+          .swiper-wrapper
+            - block.agenda_events.each_slice(4) do |events|
+              .swiper-slide style="height: 152px;"
+                .d-flex.justify-content-center
+                  - events.each do |event|
+                    .d-flex.col-8.col-md-4.col-lg-3.py-0
+                      .swiper-slide__text.py-0
+                        .mid-agenda-block-border
+                          .pb-3.px-3.text-center.text-md-left
+                            .category.pb-2.mid-caption.font-weight-semibold
+                              span.pr-2
+                                = partial "partials/formatted-date",
+                                  locals: {date: event.date_shown}
+                            h3.h6.font-weight-semibold
+                              = link_to page_path(event),
+                                class: "text-primary text-decoration-none"
+                                = event.title
+
+
+        .d-none.d-lg-block
+          - if block.agenda_events.size > 4
+            .swiper-pagination.pt-4
+
   .pt-2.bg-primary
