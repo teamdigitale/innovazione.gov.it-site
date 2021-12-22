@@ -26,14 +26,14 @@
               .d-flex.justify-content-center.align-items-start
                 .py-3.w-100.bg-primary.text-white.text-center
                   p.h5.text-center.weight-font-semibold.mb-0
-                    = events.first.agenda_date.strftime("%d")
+                    = events.first.date_shown.strftime("%d")
                   p.h6.mid-caption--xsmall.mb-0
-                    = events.first.agenda_date.strftime("%#b")
+                    = events.first.date_shown.strftime("%#b")
             .col-lg-6.mb-5.px-0
               - events.each do |event|
                 = partial "partials/card-event",
                   locals: {event: event,
-                  time: "Ore #{event.agenda_date.to_time.hour}",
+                  time: "Ore #{event.date_shown.to_time.hour}",
                   category: event.agenda_category.name,
                   title: event.title}
             .col-lg-4

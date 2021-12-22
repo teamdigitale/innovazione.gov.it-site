@@ -13,13 +13,13 @@
         p = page.agenda_category.name
 
   = content_for :col_two
-    - if page.agenda_date.present?
+    - if page.date_shown.present?
       .mb-5
         = partial "partials/column-title",
           locals: {title: t("date_and_time")}
 
         = partial "partials/formatted-date",
-          locals: {date: page.agenda_date, show_time: true}
+          locals: {date: page.date_shown, show_time: true}
 
     - if page.agenda_site.present?
       = partial "partials/column-title",
@@ -30,6 +30,7 @@
           locals: {label: page.agenda_site,
           item: page.agenda_site_link,
           html_class: ""}
+
       - else
         p = page.agenda_site
 
@@ -41,8 +42,7 @@
       - page.tags.each do |tag|
         = partial "partials/chip",
           locals: {label: tag.name,
-          chip_type: "",
-          text_color: "text-primary",
+          chip_type: "_mid-chip-secondary",
           btn_type: "",
           url: page_path(tag)}
 
