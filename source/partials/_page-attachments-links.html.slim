@@ -5,6 +5,7 @@ ruby:
     page.attachments.any?
 
   single_column ||= nil
+  col_layout = single_column ? "col-12" : "col-12 col-md-6"
 
   show_links =
     main_locale?(locale) &&
@@ -16,9 +17,6 @@ ruby:
     = page.embed_dashboard
 
 - if show_attachtments
-  - col_layout = single_column ? "col-12" : "col-6"
-  /- col_layout = "col-md-6"
-
   .container.mt-5.py-3._anchor
     h2.h5.font-weight-semibold id="_attachments" = t("attachments")
     .row
@@ -27,8 +25,6 @@ ruby:
           = partial "partials/attachment", locals: {attachment: attachment}
 
 - if show_links
-  - col_layout = single_column ? "col-12" : "col-6"
-  /- col_layout = "col-md-6"
   .container.mt-5.py-3._anchor
     h2.h5.font-weight-semibold id="_useful_links" = t("useful_links")
     .row
