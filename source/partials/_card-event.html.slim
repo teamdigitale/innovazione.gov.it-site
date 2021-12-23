@@ -1,7 +1,7 @@
 ruby:
   event ||= nil
   time ||= ""
-  category ||= ""
+  owners ||= ""
   card_class ||= "lightgrey-bg-a2"
   title_class ||= "h5"
 
@@ -14,7 +14,7 @@ ruby:
             = time
 
           span.px-2.text-uppercase
-            = category
+            = owner
         h3.font-weight-semibold class=title_class
           = link_to page_path(event),
             class: "text-primary text-decoration-none"

@@ -31,10 +31,12 @@
                     = events.first.date_shown.strftime("%#b")
             .col-lg-6.mb-5.px-0
               - events.each do |event|
+                - time = in_italian_zone(event.date_shown.to_time)
+                - formatted_time = I18n.l time, format: "%H:%M"
                 = partial "partials/card-event",
                   locals: {event: event,
-                  time: "Ore #{event.date_shown.to_time.hour}",
-                  category: event.agenda_category.name,
+                  time: "Ore #{formatted_time}",
+                  owner: event.owner.title,
                   title: event.title}
             .col-lg-4
 

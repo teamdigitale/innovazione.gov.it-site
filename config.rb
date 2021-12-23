@@ -135,7 +135,7 @@ module PresentationHelper
   end
 
   def self.published_schedule_events(schedule_events)
-    schedule_events.sort_by(&:agenda_date)
+    schedule_events.sort_by(&:date_shown)
   end
 
   def self.published_tags(tags)
@@ -202,23 +202,23 @@ helpers do
 
   def current_and_past_events
     visible_schedule_events.reverse.select do |event|
-      event.agenda_date <= DateTime.now
+      event.date_shown <= DateTime.now
     end
   end
 
   def current_and_future_events
     visible_schedule_events.select do |event|
-      event.agenda_date >= DateTime.now
+      event.date_shown >= DateTime.now
     end
   end
 
   def nearest_date
-    return current_and_future_events.first.agenda_date unless current_and_future_events.empty?
+    return current_and_future_events.first.date_shown unless current_and_future_events.empty?
   end
 
   def days_in_minister_schedule
     days = (visible_schedule_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.agenda_date.strftime("%d%B%Y")
+      daily_arr << event.date_shown.strftime("%d%B%Y")
     end)
     days.uniq!
   end
@@ -234,14 +234,14 @@ helpers do
   def schedule_events_by_day
     days_in_minister_schedule.each_with_object({}) do |day, hash|
       hash[day] = (visible_schedule_events.select do |e|
-        e.agenda_date.strftime("%d%B%Y") == day
+        e.date_shown.strftime("%d%B%Y") == day
       end)
     end
   end
 
   def months_in_minister_schedule
     m = (visible_schedule_events.each_with_object([]) do |e, arr|
-      arr << e.agenda_date.strftime("%B%Y")
+      arr << e.date_shown.strftime("%B%Y")
     end)
     m.uniq!
   end
@@ -694,25 +694,25 @@ dato.tap do |dato|
                            dato.minister_page,
                            locale)
 
-    visible_schedule_events = dato.schedule_events.sort_by(&:agenda_date)
+    visible_schedule_events = dato.schedule_events.sort_by(&:date_shown)
 
     current_and_future_events = visible_schedule_events.select do |event|
-      event.agenda_date >= DateTime.now
+      event.date_shown >= DateTime.now
     end
 
     days = (current_and_future_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.agenda_date.strftime("%d %B %Y")
+      daily_arr << event.date_shown.strftime("%d %B %Y")
     end)
     days.uniq!
 
     events_by_day = (days.each_with_object({}) do |day, h|
       h[day] = (current_and_future_events.select do |e|
-        e.agenda_date.strftime("%d %B %Y") == day
+        e.date_shown.strftime("%d %B %Y") == day
       end)
     end)
 
     months = (current_and_future_events.each_with_object([]) do |e, arr|
-      arr << e.agenda_date.strftime("%B %Y")
+      arr << e.date_shown.strftime("%B %Y")
     end)
     months.uniq!
 
@@ -729,22 +729,22 @@ dato.tap do |dato|
                           "/templates/schedule.html")
 
     archive_events = visible_schedule_events.reverse.select do |event|
-      event.agenda_date <= DateTime.now
+      event.date_shown <= DateTime.now
     end
 
     days_in_archive = (archive_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.agenda_date.strftime("%d %B %Y")
+      daily_arr << event.date_shown.strftime("%d %B %Y")
     end)
     days_in_archive.uniq!
 
     archive_events_by_day = (days_in_archive.each_with_object({}) do |day, h|
       h[day] = (archive_events.select do |e|
-        e.agenda_date.strftime("%d %B %Y") == day
+        e.date_shown.strftime("%d %B %Y") == day
       end)
     end)
 
     months_in_archive = (archive_events.each_with_object([]) do |e, arr|
-      arr << e.agenda_date.strftime("%B %Y")
+      arr << e.date_shown.strftime("%B %Y")
     end)
     months_in_archive.uniq!
 
