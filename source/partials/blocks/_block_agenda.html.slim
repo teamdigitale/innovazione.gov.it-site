@@ -1,4 +1,13 @@
 - if block.agenda_events.present? && block.agenda_events.size >= 2
+  //ruby:
+  //  events_num = blocks.agenda_events.size
+  //  selected = if events_num <= 4
+  //                visible_schedule_events
+  //              else
+  //                current_and_future_events[0..2] + past_events[0]
+  //              end
+
+
   .pt-5.container.px-0
     - center = "d-lg-flex justify-content-lg-center"
 
@@ -12,6 +21,7 @@
   .pt-2.bg-primary
   .container.px-0.pt-4.pb-5
 
+    // Mobile view with 2-4 events
     .d-lg-none
       .swiper.pt-2
         .swiper-container.p-0
@@ -31,6 +41,7 @@
                         = event.title
         .swiper-pagination.pt-4
 
+    // Desktop view with 2-8 events
     .d-none.d-lg-block
       .swiper.pt-2
         .swiper-container.p-0

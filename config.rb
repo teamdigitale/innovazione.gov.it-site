@@ -200,6 +200,12 @@ helpers do
     PresentationHelper.published_videos(dato.videos)
   end
 
+  def past_events
+    visible_schedule_events.reverse.select do |event|
+      event.date_shown < DateTime.now
+    end
+  end
+
   def current_and_past_events
     visible_schedule_events.reverse.select do |event|
       event.date_shown <= DateTime.now
@@ -221,14 +227,6 @@ helpers do
       daily_arr << event.date_shown.strftime("%d%B%Y")
     end)
     days.uniq!
-  end
-
-  def dates_shown
-    nearest = nearest_date.strftime("%d%B%Y")
-    active_index = days_in_minister_schedule.index(nearest)
-    start = active_index - 3
-    finish = active_index + 4
-    days_in_minister_schedule[start..finish]
   end
 
   def schedule_events_by_day
