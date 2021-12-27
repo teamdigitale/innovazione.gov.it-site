@@ -5,3 +5,15 @@
   background-color: #8b98a6;
   }
 }
+
+._mid-chip-secondary {
+  color: #0066cc !important;
+  &:hover {
+    background: #0066cc !important;
+    color: #ffffff !important;
+  }
+}
+
+._mid-chip-border-light {
+  border: 1px solid #dfe4f2 !important;;
+}
