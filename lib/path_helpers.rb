@@ -11,8 +11,7 @@ module PathHelpers
   def page_ancestor(page)
     case page.item_type.api_key
 
-    when "minister_subpage",
-      "schedule_event"
+    when "minister_subpage"
       dato.minister_page
 
     when "department_subpage",
@@ -48,9 +47,7 @@ module PathHelpers
     when "minister_articles_index",
       "minister_interviews_index",
       "minister_participations_index",
-      "minister_press_releases_index",
-      "schedule_page",
-      "schedule_archive_page"
+      "minister_press_releases_index"
       dato.minister_page
 
     when "schedule_event"

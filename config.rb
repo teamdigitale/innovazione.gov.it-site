@@ -393,8 +393,6 @@ helpers do
      dato.focus_index,
      dato.projects_page,
      dato.videos_index
-     # dato.schedule_page,
-     # dato.schedule_archive_page
     ]
   end
 
@@ -657,8 +655,92 @@ dato.tap do |dato|
           locals: {page: dato.schedule_page},
           locale: locale
 
+    visible_schedule_events = dato.schedule_events.sort_by(&:date_shown)
+
+    current_and_future_events = visible_schedule_events.select do |event|
+      event.date_shown >= DateTime.now
+    end
+
+    days = (current_and_future_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.date_shown.strftime("%d %B %Y")
+    end)
+    days.uniq!
+
+    events_by_day = (days.each_with_object({}) do |day, h|
+      h[day] = (current_and_future_events.select do |e|
+        e.date_shown.strftime("%d %B %Y") == day
+      end)
+    end)
+
+    months = (current_and_future_events.each_with_object([]) do |e, arr|
+      arr << e.date_shown.strftime("%B %Y")
+    end)
+    months.uniq!
+
+    events_by_month = months.each_with_object({}) do |month, h|
+      h[month] = (events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
+      end)
+    end
+
+    if events_by_month.any?
+      paginate events_by_month,
+        "/#{dato.schedule_page.slug}",
+        "/templates/schedule.html",
+        suffix: "/page/:num/index",
+        locals: {page: dato.schedule_page},
+        per_page: 10
+
+    else
+      proxy "#{dato.schedule_page.slug}/index.html",
+        "/templates/schedule.html",
+        locals: {page: dato.schedule_page},
+        locale: locale
+    end
+
+    archive_events = visible_schedule_events.reverse.select do |event|
+      event.date_shown <= DateTime.now
+    end
+
+    days_in_archive = (archive_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.date_shown.strftime("%d %B %Y")
+    end)
+    days_in_archive.uniq!
+
+    archive_events_by_day = (days_in_archive.each_with_object({}) do |day, h|
+      h[day] = (archive_events.select do |e|
+        e.date_shown.strftime("%d %B %Y") == day
+      end)
+    end)
+
+    months_in_archive = (archive_events.each_with_object([]) do |e, arr|
+      arr << e.date_shown.strftime("%B %Y")
+    end)
+    months_in_archive.uniq!
+
+    archive_events_by_month = months_in_archive.each_with_object({}) do |month, h|
+      h[month] = (archive_events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
+      end)
+    end
+
+    if archive_events_by_month.any?
+      paginate archive_events_by_month,
+        "/#{dato.schedule_archive_page.slug}",
+        "/templates/archive.html",
+        suffix: "/page/:num/index",
+        locals: {page: dato.schedule_archive_page},
+        per_page: 10
+
+    else
+      proxy "#{dato.schedule_archive_page.slug}/index.html",
+        "/templates/archive.html",
+        locals: {page: dato.schedule_archive_page},
+        locale: locale
+    end
+
     PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
-      proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
+      proxy "/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
             "/templates/schedule_event.html",
             locals: {page: schedule_event},
             locale: locale
@@ -691,72 +773,6 @@ dato.tap do |dato|
                            dato.minister_press_releases_index,
                            dato.minister_page,
                            locale)
-
-    visible_schedule_events = dato.schedule_events.sort_by(&:date_shown)
-
-    current_and_future_events = visible_schedule_events.select do |event|
-      event.date_shown >= DateTime.now
-    end
-
-    days = (current_and_future_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.date_shown.strftime("%d %B %Y")
-    end)
-    days.uniq!
-
-    events_by_day = (days.each_with_object({}) do |day, h|
-      h[day] = (current_and_future_events.select do |e|
-        e.date_shown.strftime("%d %B %Y") == day
-      end)
-    end)
-
-    months = (current_and_future_events.each_with_object([]) do |e, arr|
-      arr << e.date_shown.strftime("%B %Y")
-    end)
-    months.uniq!
-
-    events_by_month = months.each_with_object({}) do |month, h|
-      h[month] = (events_by_day.select do |k, v|
-        k.downcase.include?(month.downcase)
-      end)
-    end
-
-   paginate_with_fallback(events_by_month,
-                          dato.schedule_page,
-                          dato.minister_page,
-                          locale,
-                          "/templates/schedule.html")
-
-    archive_events = visible_schedule_events.reverse.select do |event|
-      event.date_shown <= DateTime.now
-    end
-
-    days_in_archive = (archive_events.each_with_object([]) do |event, daily_arr|
-      daily_arr << event.date_shown.strftime("%d %B %Y")
-    end)
-    days_in_archive.uniq!
-
-    archive_events_by_day = (days_in_archive.each_with_object({}) do |day, h|
-      h[day] = (archive_events.select do |e|
-        e.date_shown.strftime("%d %B %Y") == day
-      end)
-    end)
-
-    months_in_archive = (archive_events.each_with_object([]) do |e, arr|
-      arr << e.date_shown.strftime("%B %Y")
-    end)
-    months_in_archive.uniq!
-
-    archive_events_by_month = months_in_archive.each_with_object({}) do |month, h|
-      h[month] = (archive_events_by_day.select do |k, v|
-        k.downcase.include?(month.downcase)
-      end)
-    end
-
-    paginate_with_fallback(archive_events_by_month,
-                           dato.schedule_archive_page,
-                           dato.minister_page,
-                           locale,
-                           "/templates/archive.html")
 
     visible_minister_subpages.each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
@@ -939,8 +955,8 @@ dato.tap do |dato|
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
-                        visible_news_subpages
-                         visible_schedule_events
+                        visible_news_subpages +
+                        visible_schedule_events
 
     visible_tags.each do |tag|
       items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
@@ -961,6 +977,7 @@ dato.tap do |dato|
       end
     end
   end
+
   dato.asset_redirects.each do |asset_redirect|
     path = PresentationHelper.path_without_domain(asset_redirect.old_url)
     proxy "#{path}/index.html",
