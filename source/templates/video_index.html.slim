@@ -42,9 +42,9 @@
       .row-lg
         h2.sr-only Elenco degli elementi
         .d-none.d-lg-block
-          .row.pb-5
+          .row
             - items.each do |video|
-              .col-3
+              .col-3.pb-5
                 = partial "partials/video-card",
                   locals: {item: video,
                   add_card_shadow: "shadow-lg"}
