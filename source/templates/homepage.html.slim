@@ -42,17 +42,19 @@ h1 class=mobile_title_classes
 - page.content_blocks.each_with_index do |block, i|
   - image_right = i % 2 == 0
   = partial "partials/blocks/#{block.item_type.api_key}",
-    locals: {block: block, image_right: image_right}
+    locals: {block: block,
+    image_right: image_right,
+    homepage_section: true}
 
 / blocco video
-- if page.video_section.any?
+/- if page.video_section.any?
   .lightgrey-bg-a2
     .container.py-3
       - if page.video_section.size == 1
         = partial "partials/video-single",
           locals: {item: page.video_section.first}
 
-      - else
+ /     - else
         = partial "partials/video-two-columns",
           locals: {items: page.video_section,
           homepage_section: true}
