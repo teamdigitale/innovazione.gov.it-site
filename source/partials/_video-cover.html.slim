@@ -1,4 +1,5 @@
 - item ||= nil
+- offset ||= "col-10 offset-1"
 
 / Dato ritorna un url di youtube che non vogliamo usare
 / quindi sostituiamo il dominio e l'embed al volo
@@ -7,21 +8,21 @@
 / Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
 
 ruby:
- if item.video.present?
-  nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
-                 "youtube-nocookie.com/embed/")
-  minheight = item.video.height < 400 ? 400 : video.height
-  allows = %w[accelerometer
-              autoplay
-              clipboard-write
-              encrypted-media
-              gyroscope
-              picture-in-picture].join("; ")
+  if item.video.present?
+    nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
+                   "youtube-nocookie.com/embed/")
+    minheight = item.video.height < 400 ? 400 : video.height
+    allows = %w[accelerometer
+                autoplay
+                clipboard-write
+                encrypted-media
+                gyroscope
+                picture-in-picture].join("; ")
   end
 
 - if item.present?
   .d-none.d-lg-block
-    .col-10.offset-1
+    div class=offset
       iframe [width="100%"
               height=minheight
               src=nocookie_url
