@@ -7,7 +7,6 @@ module.exports = async (client) => {
     modularBlock: true,
   });
 
-
   const videoModel = await client.itemType.find('video');
 
   const videoField = await client.fields.create(videoBlock.id, {
