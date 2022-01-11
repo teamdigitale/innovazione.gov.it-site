@@ -34,7 +34,7 @@ module.exports = async (client) => {
   // Add boolean to use placeholder image instead of youtube thumbnail
   const usePlaceholderImgField = await client.fields.create(videoModel.id, {
     label: 'Usare immagine di anteprima',
-    apiKey: 'use_placeholder_imagee',
+    apiKey: 'use_placeholder_image',
     fieldType: 'boolean',
     fieldset: contentFieldset.id,
     position: 4,

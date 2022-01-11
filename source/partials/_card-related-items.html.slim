@@ -9,7 +9,10 @@ ruby:
     is_focus = item.item_type.api_key == "focus_page"
     is_video = item.item_type.api_key == "video"
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
-
+    placeholder = if item.respond_to?(:placeholder_image) &&
+      (item.placeholder_image.present? && item.use_placeholder_image)
+      true
+    end
     if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
@@ -19,9 +22,10 @@ ruby:
       logo_url = item.image_project_logo
       logo_length = "col-4 col-md-2 px-lg-0"
       padding = "pl-lg-2 pr-lg-0"
-    elsif item.respond_to?(:video) && item.video.thumbnail_url.present?
+    elsif item.respond_to?(:video)
       id = item.video.provider_uid
-      logo_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+      youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+      logo_url = placeholder ? item.placeholder_image : youtube_thumb
       logo_length = "col-4 col-md-2 px-lg-0"
       padding = "pl-lg-4 pr-lg-0"
     end
@@ -47,12 +51,33 @@ ruby:
     .d-lg-none
       div class="#{logo_length}"
         .img-responsive-wrapper
-          figure
-            - if is_video
+          figure.mb-0.mt-3
+            - if is_video && !placeholder
               = link_to page_path(item),
                 aria_label: t("video.go_to_video"),
                 title: "video: #{item.title}"
                 = image_tag logo_url,
+                  style: video_img_style,
+                  class: "lazyload d-block"
+            - elsif is_video && placeholder
+              = link_to page_path(item),
+                aria_label: t("video.go_to_video"),
+                title: "video: #{item.title}"
+                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                    h: 10,
+                    fit: "max"),
+                  data: {sizes: "100vw",
+                    src: logo_url.url(w: 120,
+                      h: 120,
+                      fit: "max", auto: "compress"),
+                    srcset: "#{logo_url.url(w: 120,
+                        h: 120,
+                        fit: 'max',
+                        auto: 'compress')} 480w,
+                      #{logo_url.url(w: 155,
+                        h: 250,
+                        fit: 'max',
+                        auto: 'compress')} 632w"},
                   style: video_img_style,
                   class: "lazyload d-block"
             - else
@@ -82,12 +107,34 @@ ruby:
       .d-none.d-lg-block class="#{logo_length}"
         .img-responsive-wrapper.p-lg-0.m-0
 
-          - if is_video
+          - if is_video && !placeholder
             = link_to page_path(item),
               aria_label: t("video.go_to_video"),
               title: "video: #{item.title}"
               figure style="height: 100px;"
                 = image_tag logo_url,
+                  style: video_lg_img_style,
+                  class: "lazyload d-block"
+          - elsif is_video && placeholder
+            = link_to page_path(item),
+              aria_label: t("video.go_to_video"),
+              title: "video: #{item.title}"
+              figure style="height: 100px;"
+                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                    h: 10,
+                    fit: "max"),
+                  data: {sizes: "100vw",
+                    src: logo_url.url(w: 120,
+                      h: 120,
+                      fit: "max", auto: "compress"),
+                    srcset: "#{logo_url.url(w: 120,
+                        h: 120,
+                        fit: 'max',
+                        auto: 'compress')} 480w,
+                      #{logo_url.url(w: 155,
+                        h: 250,
+                        fit: 'max',
+                        auto: 'compress')} 632w"},
                   style: video_lg_img_style,
                   class: "lazyload d-block"
           - else
