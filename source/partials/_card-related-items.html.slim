@@ -79,7 +79,9 @@ ruby:
                         fit: 'max',
                         auto: 'compress')} 632w"},
                   style: video_img_style,
-                  class: "lazyload d-block"
+                  class: "lazyload d-block",
+                  alt: logo_url.alt,
+                  title: logo_url.title
             - else
               = proxy_image_tag logo_url.lqip_data_url(w: 10,
                 h: 10,
@@ -136,7 +138,9 @@ ruby:
                         fit: 'max',
                         auto: 'compress')} 632w"},
                   style: video_lg_img_style,
-                  class: "lazyload d-block"
+                  class: "lazyload d-block",
+                  alt: logo_url.alt,
+                  title: logo_url.title
           - else
             figure
               = proxy_image_tag logo_url.lqip_data_url(w: 10,
