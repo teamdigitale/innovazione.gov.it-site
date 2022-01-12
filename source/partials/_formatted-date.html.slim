@@ -1,7 +1,16 @@
 - date ||= nil
 - show_time ||= nil
+- format ||= nil
 
-- format = show_time.present? ? "%d %B %Y %H:%M" : "%d %B %Y"
+ruby:
+  format =
+    if !format && show_time.present?
+      "%d %B %Y %H:%M"
+    elsif !format && !show_time.present? 
+      "%d %B %Y"
+    else
+      format
+    end
 
 - if date.present?
   span = I18n.l(in_italian_zone(date), format: format).downcase

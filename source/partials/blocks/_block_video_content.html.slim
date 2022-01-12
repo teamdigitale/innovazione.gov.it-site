@@ -1,11 +1,12 @@
 - if block.video.present?
+
+  - if block.show_title
+    h2.mb-4.h4.mx-lg-4.text-primary.text-center
+      = block.video.title
+
   = partial "partials/video-cover",
     locals: {item: block.video,
     offset: ""}
-
-  - alignment = block.big ? "col-lg-6 mt-lg-3 mb-lg-5" : "px-3 px-lg-0"
-  - justify = block.big ? "d-lg-flex justify-content-center" : ""
-  div class=justify
-    div class=alignment
-      = partial "partials/video-transcript",
-        locals: {video: block.video}
+  .px-3.px-lg-0
+    = partial "partials/video-transcript",
+      locals: {video: block.video}

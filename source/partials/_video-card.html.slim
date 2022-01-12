@@ -3,16 +3,60 @@ ruby:
   add_card_shadow ||= nil
   x_spacing ||= ""
   image_shadow = add_card_shadow ? "" : "shadow-lg"
+  placeholder = if item.respond_to?(:placeholder_image) &&
+    (item.placeholder_image.present? && item.use_placeholder_image)
+    true
+  end
+  id = item.video.provider_uid
+  youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+  thumbnail = placeholder ? item.placeholder_image : youtube_thumb
 
 .card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
   .img-responsive-wrapper.rounded class=image_shadow
     .img-responsive
       figure.img-wrapper
-        - id = item.video.provider_uid
-        - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
-        = image_tag thumbnail_url,
-          class: "lazyload",
-          style: "transform: scale(1.1);"
+        - if placeholder
+          = proxy_image_tag thumbnail.lqip_data_url(w:10,
+            h: 6,
+            fit: "crop"),
+            data: {sizes: "100vw",
+              src: thumbnail.url(w: 700,
+                 h: 400,
+                 fit: "crop",
+                 auto: "compress"),
+              srcset: "#{thumbnail.url(w: 450,
+                  h: 330,
+                  fit: 'crop',
+                  auto: 'compress')} 480w,
+                #{thumbnail.url(w: 600,
+                  h: 333,
+                  fit: 'crop',
+                  auto: 'compress')} 632w,
+                  #{thumbnail.url(w: 560,
+                    h: 333,
+                    fit: 'crop',
+                    auto: 'compress')} 844w,
+                  #{thumbnail.url(w: 700,
+                    h: 400,
+                    fit: 'crop',
+                    auto: 'compress')} 1091w,
+                  #{thumbnail.url(w: 360,
+                    h: 226,
+                    fit: 'crop',
+                    auto: 'compress')} 1320w,
+                  #{thumbnail.url(w: 590,
+                    h: 385,
+                    fit: 'crop',
+                    auto: 'compress')} 1440w"},
+            style: "width:100%; object-fit:cover",
+            class: "lazyload d-block video_thumbnail_height",
+            alt: thumbnail.alt,
+            title: thumbnail.title
+
+        - else
+          = image_tag thumbnail,
+            class: "lazyload",
+            style: "transform: scale(1.1);"
   .card-body.d-flex.flex-column class=x_spacing
     div
       p.card-text.text-secondary

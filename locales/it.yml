@@ -14,6 +14,7 @@ it:
     news_subpage: Pagina Notizie
     job_position: Posizione lavorativa
     pnrr_job_position: Posizione lavorativa PNRR
+    schedule_event: Evento
     video: Video
   logos:
     italy: Logo Repubblica Italiana
@@ -132,6 +133,18 @@ it:
       - Ottobre
       - Novembre
       - Dicembre
+    January: Gennaio
+    February: Febbraio
+    March: Marzo
+    April: Aprile
+    May: Maggio
+    June: Giugno
+    July: Luglio
+    August: Agosto
+    September: Settembre
+    October: Ottobre
+    November: Novembre
+    December: dicembre
 
   explore_aside:
     search_title: Cerca nel sito

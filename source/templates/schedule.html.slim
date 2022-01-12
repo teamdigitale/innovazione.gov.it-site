@@ -17,18 +17,24 @@
   .container.mid-container
     - if items.any?
       h2.sr-only = t("event_list")
-      - items.each do |month, events_by_day|
+      - items.each do |month_and_year, events_by_day|
         .col-12.mb-5
+          - m = month_and_year.split.first
+          - y = month_and_year.split.last
+          - month = t("time.#{m}").concat(" #{y}")
           h4.mb-5.text-center.text-md-left = month
         - events_by_day.each do |_day, events|
+          - date = events.first.date_shown
           .row
             .col-md-1.offset-lg-1.px-0
               .d-flex.justify-content-center.align-items-start
                 .py-3.w-100.bg-primary.text-white.text-center
                   p.h5.text-center.weight-font-semibold.mb-0
                     = events.first.date_shown.strftime("%d")
-                  p.h6.mid-caption--xsmall.mb-0
-                    = events.first.date_shown.strftime("%#b")
+                  p.h6.mid-caption--xsmall.mb-0.text-uppercase
+                    = partial "partials/formatted-date",
+                      locals: {date: events.first.date_shown,
+                      format: "%b"}
             .col-lg-6.mb-5.px-0
               - events.each do |event|
                 - time = in_italian_zone(event.date_shown.to_time)
