@@ -53,48 +53,50 @@ ruby:
                     .mid-caption--xlarge
                       = slide.subtitle
                 - if is_video
+                  ruby:
+                    id = slide.video.provider_uid
+                    youtube = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+                    thumbnail = placeholder ? slide.placeholder_image : youtube
                   figure.mb-0
                     - if placeholder
-                      = proxy_image_tag slide.placeholder_image.lqip_data_url(w:10,
+                      = proxy_image_tag thumbnail.lqip_data_url(w: 10,
                         h: 6,
                         fit: "crop"),
                         data: {sizes: "100vw",
-                          src: slide.placeholder_image.url(w: 700,
+                          src: thumbnail.url(w: 700,
                              h: 400,
                              fit: "crop",
                              auto: "compress"),
-                          srcset: "#{slide.placeholder_image.url(w: 450,
+                          srcset: "#{thumbnail.url(w: 450,
                               h: 330,
                               fit: 'crop',
                               auto: 'compress')} 480w,
-                            #{slide.placeholder_image.url(w: 600,
+                            #{thumbnail.url(w: 600,
                               h: 333,
                               fit: 'crop',
                               auto: 'compress')} 632w,
-                              #{slide.placeholder_image.url(w: 560,
+                              #{thumbnail.url(w: 560,
                                 h: 333,
                                 fit: 'crop',
                                 auto: 'compress')} 844w,
-                              #{slide.placeholder_image.url(w: 700,
+                              #{thumbnail.url(w: 700,
                                 h: 400,
                                 fit: 'crop',
                                 auto: 'compress')} 1091w,
-                              #{slide.placeholder_image.url(w: 360,
+                              #{thumbnail.url(w: 360,
                                 h: 226,
                                 fit: 'crop',
                                 auto: 'compress')} 1320w,
-                              #{slide.placeholder_image.url(w: 590,
+                              #{thumbnail.url(w: 590,
                                 h: 385,
                                 fit: 'crop',
                                 auto: 'compress')} 1440w"},
                         style: "width:100%; object-fit:cover",
                         class: "lazyload d-block video_thumbnail_height",
-                        alt: slide.placeholder_image.alt,
-                        title: slide.placeholder_image.title
+                        alt: thumbnail.alt,
+                        title: thumbnail.title
                     - else
-                      - id = slide.video.provider_uid
-                      - thumbnail_url = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
-                      = image_tag thumbnail_url,
+                      = image_tag thumbnail,
                         style: "width:100%; object-fit:cover",
                         class: "lazyload d-block video_thumbnail_height"
 

@@ -40,7 +40,7 @@ h1 class=mobile_title_classes
 
 / content blocks
 - page.content_blocks.each_with_index do |block, i|
-  - image_right = i % 2 == 0
+  - image_right = i.even?
   = partial "partials/blocks/#{block.item_type.api_key}",
     locals: {block: block,
     image_right: image_right,

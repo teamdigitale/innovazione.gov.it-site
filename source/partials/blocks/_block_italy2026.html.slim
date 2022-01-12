@@ -2,6 +2,8 @@ ruby:
   classes = %(col-lg-2
                pt-5 d-ml-flex align-items-left
                justify-content-lg-around)
+  pretitle_font_classes = %(h6 mid-caption--large
+               pr-2 text-uppercase font-weight-semibold)
 
 .py-5
  .container
@@ -23,7 +25,7 @@ ruby:
             .card-body.ml-lg-4
               div
                 .py-2.text-center.text-lg-left
-                  h2.h6.mid-caption--large.pr-2.text-uppercase.font-weight-semibold
+                  h2 class=pretitle_font_classes
                     = block.pre_title
 
                 h3.h1.text-center.text-lg-left

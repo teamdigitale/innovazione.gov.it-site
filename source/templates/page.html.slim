@@ -1,5 +1,8 @@
 ruby:
-  menu_links = page.respond_to?(:menu_general_links) && page.menu_general_links.any?
+  menu_links = if page.respond_to?(:menu_general_links) &&
+    page.menu_general_links.any?
+    true
+  end
   right_col_longer = menu_links && page.right_column_longer ? true : false
 
   if menu_links

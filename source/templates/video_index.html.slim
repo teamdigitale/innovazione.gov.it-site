@@ -1,4 +1,7 @@
-- items ||= []
+ruby:
+  items ||= []
+  section_name_classes = %(h6 mid-caption--large text-center
+                          text-uppercase font-weight-semibold)
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
@@ -14,7 +17,7 @@
       - if page.featured_videos.present?
         - number_of_cards = page.featured_videos.size
         .py-5
-          h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+          h2 class=section_name_classes
             = t("video.highlights")
 
         .d-none.d-lg-block
@@ -36,7 +39,7 @@
   - if items.any?
     .container
       .py-5
-        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+        h2 class=section_name_classes
           = t("video.all")
 
       .row-lg

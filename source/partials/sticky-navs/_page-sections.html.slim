@@ -1,6 +1,8 @@
 ruby:
   title ||= t("sections_nav_title")
   sections = sections.reject(&:blank?)
+  title_classes = %(h3 py-3 mb-0 pl-2 pr-1 mid-caption
+                    text-uppercase font-weight-semibold)
 
 - content = capture
   - sections.each do |section|
@@ -42,14 +44,7 @@ ruby:
       nav.menu-wrapper.d-none.d-lg-block.border-bottom [
         aria-label="indice di pagina" aria-hidden="false"]
         .it-list-wrapper.menu-link-list.d-inline-flex
-          p class=["h3",
-            "py-3",
-            "mb-0",
-            "pl-2",
-            "pr-1",
-            "text-uppercase",
-            "mid-caption",
-            "font-weight-semibold"].join(" ")
+          p class=title_classes
             = title
 
           ul.it-list.small.d-inline-flex.mt-1

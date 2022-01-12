@@ -18,9 +18,10 @@
     - if items.any?
       h2.sr-only = t("event_list")
       - items.each do |month_and_year, events_by_day|
-        - m = month_and_year.split.first
-        - y = month_and_year.split.last
-        - month = t("time.#{m}").concat(" #{y}")
+        ruby:
+          m = month_and_year.split.first
+          y = month_and_year.split.last
+          month = t("time.#{m}").concat(" #{y}")
         .col-12.mb-5
           h4.mb-5 = month
         - events_by_day.each do |_day, events|
