@@ -46,6 +46,14 @@
 
 @include media-breakpoint-up(lg) {
   .video_two_col_thumbnail {
+    max-height: 245px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .video_two_col_thumbnail {
     max-height: 317px;
     object-fit: cover;
     width: 100%;
