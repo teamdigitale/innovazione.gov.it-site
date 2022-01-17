@@ -56,7 +56,8 @@ ruby:
           - items.each do |video|
             .mb-4
               = partial "partials/video-card",
-                locals: {item: video}
+                locals: {item: video,
+                add_card_shadow: "shadow-lg"}
 
       .pt-lg-4
         = partial "partials/pagination",
