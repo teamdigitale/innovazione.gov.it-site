@@ -388,6 +388,8 @@ helpers do
     [dato.articles_index,
      dato.announcements_index,
      dato.interviews_index,
+     dato.job_positions_index,
+     dato.pnrr_job_positions_index,
      dato.participations_index,
      dato.press_releases_index,
      dato.focus_index,
