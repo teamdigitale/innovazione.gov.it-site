@@ -18,7 +18,9 @@ ruby:
 
 - if show_attachtments
   .container.mt-5.py-3._anchor
-    h2.h5.font-weight-semibold id="_attachments" = t("attachments")
+    h2.h5.font-weight-semibold._mid-target
+      span._mid-target-point id="_attachments"
+      = t("attachments")
     .row
       - page.attachments.each do |attachment|
         .mt-3 class="#{col_layout}"
@@ -26,7 +28,9 @@ ruby:
 
 - if show_links
   .container.mt-5.py-3._anchor
-    h2.h5.font-weight-semibold id="_useful_links" = t("useful_links")
+    h2.h5.font-weight-semibold._mid-target
+      span._mid-target-point id="_useful_links"
+      = t("useful_links")
     .row
       - page.links.each do |link|
         .mt-3 class="#{col_layout}"
