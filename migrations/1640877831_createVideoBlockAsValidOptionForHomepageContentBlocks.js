@@ -15,7 +15,6 @@ module.exports = async (client) => {
     fieldType: 'links',
     validators: {
       size: {
-        min: 1,
         max: 2
       },
       itemsItemType: {

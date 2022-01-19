@@ -22,14 +22,19 @@ module.exports = async (client) => {
   // New video block
   const videoBlock = await client.itemType.find('block_video');
 
-  const addHomepageBlock = await client.items
-    .update(homepageRecordId, {
-      contentBlocks: [
-        ...contentBlocks,
-        buildModularBlock({
-          itemType: videoBlock.id,
-          videos: videoSection,
-        })
-      ],
-  });
+  if (Array.isArray(videoSection) && videoSection.length) {
+    const addHomepageBlock = await client.items
+      .update(homepageRecordId, {
+        contentBlocks: [
+          ...contentBlocks,
+          buildModularBlock({
+            itemType: videoBlock.id,
+            videos: videoSection,
+          })
+        ],
+    });
+    console.log(addHomepageBlock);
+  } else {
+    console.log("No video section content to migrate!");
+  }
 }
