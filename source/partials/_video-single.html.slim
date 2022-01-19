@@ -20,15 +20,19 @@ ruby:
   end
 
 - if item.present?
-  - section_title = item.title
 
-  .pt-5.pb-4
-    h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
-      = item.item_type.api_key
+  .pt-5.text-center
+    .pb-5.mb-0
+      h2.h6.mid-caption--large.text-uppercase.font-weight-semibold
+        = item.item_type.api_key
+
+    p.mid-caption.text-secondary
+      = partial "partials/formatted-date",
+        locals: {date: item.date_shown}
 
   .col-lg-8.offset-lg-2.pl-lg-6.text-center
     h2.mb-4.h3.ml-lg-4.text-primary
-      = section_title
+      = item.title
 
   .col-lg-10.offset-lg-1
     .d-none.d-lg-block
@@ -57,4 +61,4 @@ ruby:
     = partial "partials/button",
       locals: {btn_url: dato.videos_index,
         white_outline: true,
-        aria_label: section_title}
+        aria_label: item.title}
