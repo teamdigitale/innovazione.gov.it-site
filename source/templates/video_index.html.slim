@@ -15,25 +15,17 @@ ruby:
   .lightgrey-bg-a2
     .container.py-3
       - if page.featured_videos.present?
-        - number_of_cards = page.featured_videos.size
-        .py-5
-          h2 class=section_name_classes
-            = t("video.highlights")
+        - videos_num = page.featured_videos.size
 
-        .d-none.d-lg-block
-          .row.pb-5
-            - page.featured_videos.each do |featured_video|
-              div class="col-lg-#{12 / number_of_cards}"
-                = partial "partials/video-card",
-                  locals: {item: featured_video,
-                  x_spacing: "px-0"}
+        - if videos_num == 1
+          = partial "partials/video-single",
+            locals: {item: page.featured_videos.first}
 
-        .d-lg-none
-          .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
-            = partial "partials/text_gallery",
-              locals: {slides: page.featured_videos,
-              hide_type: true,
-              hide_video_tags: false}
+        - else
+          = partial "partials/video-two-columns",
+            locals: {items: page.featured_videos,
+            homepage_section: true,
+            pre_title: t("video.highlights")}
 
 .py-3.my-lg-5
   - if items.any?
@@ -44,6 +36,8 @@ ruby:
 
       .row-lg
         h2.sr-only Elenco degli elementi
+
+        // Desktop
         .d-none.d-lg-block
           .row
             - items.each do |video|
@@ -52,6 +46,7 @@ ruby:
                   locals: {item: video,
                   add_card_shadow: "shadow-lg"}
 
+        // Mobile
         .d-lg-none
           - items.each do |video|
             .mb-4

@@ -21,7 +21,6 @@ ruby:
 
             hide_tags = is_video && hide_video_tags
             title_style = is_video ? "mid-caption--xmlarge" : "h4"
-            icon_position = hide_tags ? "video_slide_icon" : "with_tags"
 
             placeholder = if slide.respond_to?(:placeholder_image) &&
               (slide.placeholder_image.present? && slide.use_placeholder_image)
@@ -105,7 +104,7 @@ ruby:
                       "icon-primary",
                       "rounded",
                       "p-1",
-                      icon_position].join(" ")
+                      "video_slide_icon"].join(" ")
                       use xlink:href="/images/sprite.svg#it-video"
 
                 - if !hide_tags && has_tags
