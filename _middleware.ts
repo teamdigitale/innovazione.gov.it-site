@@ -1,8 +1,17 @@
+// Vercel middleware to password protect the staging deployment
 export default function middleware(req: Request) {
-  const basicAuth = req.headers['authorization']
-
+  const basicAuthPasswords = process.env.BASIC_AUTH_PASSWORDS;
+  if (basicAuthPasswords === undefined) {
+    return new Response(null, {
+      headers: {
+        'x-middleware-next': '1',
+      },
+    });
+  }
+  
+  const basicAuth = req.headers['authorization'];
   if (basicAuth) {
-    const pwdLines = process.env.BASIC_AUTH_PASSWORDS.split(/\s+/);
+    const pwdLines = basicAuthPasswords.split(/\s+/);
 
     const auth = basicAuth.split(' ')[1];
     const [user, pwd] = atob(auth).split(':');
@@ -15,7 +24,7 @@ export default function middleware(req: Request) {
           headers: {
             'x-middleware-next': '1',
           },
-        })
+        });
       }
     }
   }
@@ -25,5 +34,5 @@ export default function middleware(req: Request) {
     headers: {
       'WWW-Authenticate': 'Basic realm="Secure Area"',
     },
-  })
+  });
 }
