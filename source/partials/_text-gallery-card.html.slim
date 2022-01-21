@@ -6,10 +6,13 @@ ruby:
   show_item_type ||= nil
   special_subtitle ||= nil
   unequal_height ||= nil
+  hide_shadow ||= nil
+  shadow = hide_shadow ? "" : "shadow-lg"
+  background ||= "bg-white"
 
 - if items.present?
   .swiper
-    .swiper-container.p-0.mb-4.bg-white.rounded.shadow-lg
+    .swiper-container.p-0.mb-4.rounded class="#{shadow} #{background}"
       .swiper-wrapper
         - items.each do |item|
           .swiper-slide
@@ -27,6 +30,9 @@ ruby:
                   card_partial = partial "partials/card-avvisi-pubblici",
                   locals: {announcement: item,
                   hide_shadow: true}
+                elsif item.item_type.api_key == "video"
+                  card_partial = partial "partials/video-featured-card",
+                  locals: {item: item}
                 elsif use_card
                   card_partial = partial "partials/card",
                   locals: {article: item,

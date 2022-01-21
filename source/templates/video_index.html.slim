@@ -13,19 +13,19 @@ ruby:
 
 - if page.featured_videos.present?
   .lightgrey-bg-a2
-    .container.py-3
-      - if page.featured_videos.present?
-        - videos_num = page.featured_videos.size
 
-        - if videos_num == 1
-          = partial "partials/video-single",
-            locals: {item: page.featured_videos.first}
+    - if page.featured_videos.size == 1
+      .container.pt-3.pb-5
+        .mb-3
+        = partial "partials/video-single",
+          locals: {item: page.featured_videos.first}
 
-        - else
-          = partial "partials/video-many-columns",
-            locals: {items: page.featured_videos,
-            center_pre_title: true,
-            pre_title: t("video.highlights")}
+    - else
+      .container.pb-3
+        = partial "partials/video-many-columns",
+          locals: {items: page.featured_videos,
+          center_pre_title: true,
+          pre_title: t("video.highlights")}
 
 .pt-3.mb-lg-5
   - if items.any?

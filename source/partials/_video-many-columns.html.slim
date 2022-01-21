@@ -1,15 +1,18 @@
 ruby:
   items ||= nil
   center_pre_title ||= nil
-  cols = items.size == 2 ? 6 : 4
+  cols =
+    if items.size == 2
+      "col-lg-6"
+    elsif items.size == 3
+      "col-lg-4"
+    else
+      ""
+    end
+  add_mb = items.size === 3 ? true : false
   pre_title ||= items.first.item_type.api_key
   title_size = items.size == 2 ? "mid-caption--lead" : "mid-caption--xmlarge"
-  icon_classes =
-    if items.size == 2
-      "icon video_two_col_icon"
-    else
-      "icon video_three_col_icon"
-    end
+  icon_classes = items.size == 2 ? "video_two_col_icon" : "video_three_col_icon"
 
 - if center_pre_title
   .pt-5.pb-lg-4
@@ -20,7 +23,7 @@ ruby:
   .row
     - items.map do |item|
       - spacing = center_pre_title ? "my-4" : "mb-4"
-      div class="col-lg-#{cols}"
+      div class=cols
         p.mx-lg-4.mid-caption.text-secondary
           = partial "partials/formatted-date",
             locals: {date: item.date_shown}
@@ -29,79 +32,17 @@ ruby:
             class: "text-decoration-none"
             = item.title
 
-.row
-  - items.map do |item|
+.d-none.d-lg-block
+  .row
+    - items.map do |item|
+      = partial "partials/video-featured-card",
+        locals: {item: item,
+        cols: cols,
+        icon_classes: icon_classes,
+        add_mb: add_mb}
 
-    ruby:
-      placeholder = if item.respond_to?(:placeholder_image) &&
-        (item.placeholder_image.present? && item.use_placeholder_image)
-        true
-      end
-
-    div class="col-lg-#{cols}"
-      .d-lg-none.my-4.pt-4
-        p.ml-lg-4.mid-caption.text-secondary
-          = partial "partials/formatted-date",
-            locals: {date: item.date_shown}
-        h2.ml-lg-4.h4.text-primary.mt-2g
-          = link_to page_path(item),
-            class: "text-decoration-none"
-            = item.title
-      = link_to page_path(item)
-        .img-responsive-wrapper
-          svg.bg-white.icon-primary.rounded.p-1 class=icon_classes
-            use xlink:href="/images/sprite.svg#it-video"
-          figure.mb-0
-
-            ruby:
-              id = item.video.provider_uid
-              youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
-              thumbnail = placeholder ? item.placeholder_image : youtube_thumb
-
-            - if placeholder
-              = proxy_image_tag thumbnail.lqip_data_url(w: 10,
-                h: 10,
-                fit: "crop"),
-                data: {sizes: "100vw",
-                  src: thumbnail.url(w: 700,
-                     h: 400,
-                     fit: "crop",
-                     auto: "compress"),
-                  srcset: "#{thumbnail.url(w: 450,
-                      h: 330,
-                      fit: 'crop',
-                      auto: 'compress')} 480w,
-                    #{thumbnail.url(w: 600,
-                      h: 333,
-                      fit: 'crop',
-                      auto: 'compress')} 632w,
-                      #{thumbnail.url(w: 560,
-                        h: 333,
-                        fit: 'crop',
-                        auto: 'compress')} 844w,
-                      #{thumbnail.url(w: 700,
-                        h: 400,
-                        fit: 'crop',
-                        auto: 'compress')} 1091w,
-                      #{thumbnail.url(w: 700,
-                        h: 400,
-                        fit: 'crop',
-                        auto: 'compress')} 1320w,
-                      #{thumbnail.url(w: 700,
-                        h: 400,
-                        fit: 'crop',
-                        auto: 'compress')} 1440w"},
-                class: "video_two_col_thumbnail lazyload d-block",
-                alt: thumbnail.alt,
-                title: thumbnail.title
-
-            - else
-              = image_tag thumbnail,
-                class: "video_two_col_thumbnail lazyload d-block"
-
-.row.mt-2.pb-4
-  .col-12.text-center.my-5
-    = partial "partials/button",
-    locals: {btn_url: dato.videos_index,
-      label: t("see_more"),
-      aria_label: "sezione video"}
+.d-lg-none
+  = partial "partials/text-gallery-card",
+    locals: {items: items,
+    background: "lightgrey-bg-a2",
+    hide_shadow: true}

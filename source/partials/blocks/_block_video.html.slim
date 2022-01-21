@@ -1,4 +1,5 @@
 - center_pre_title ||= nil
+- vertical_space = block.videos.size == 1 ? "mt-2" : "mt-5"
 
 - if block.videos.present?
 
@@ -12,3 +13,9 @@
         = partial "partials/video-many-columns",
           locals: {items: block.videos,
           center_pre_title: center_pre_title}
+
+      .row.mt-2.pb-4
+        .mb-4.col-12.text-center class=vertical_space
+          = partial "partials/button",
+          locals: {btn_url: dato.videos_index,
+            label: t("see_more")}
