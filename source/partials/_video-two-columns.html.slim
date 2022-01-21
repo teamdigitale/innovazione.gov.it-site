@@ -1,6 +1,6 @@
 ruby:
   items ||= nil
-  homepage_section ||= nil
+  center_pre_title ||= nil
   cols = items.size == 2 ? 6 : 4
   pre_title ||= items.first.item_type.api_key
   title_size = items.size == 2 ? "mid-caption--lead" : "mid-caption--xmlarge"
@@ -11,7 +11,7 @@ ruby:
       "icon video_three_col_icon"
     end
 
-- if homepage_section
+- if center_pre_title
   .pt-5.pb-lg-4
     h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
       = pre_title
@@ -19,7 +19,7 @@ ruby:
 .d-none.d-lg-block
   .row
     - items.map do |item|
-      - spacing = homepage_section ? "my-4" : "mb-4"
+      - spacing = center_pre_title ? "my-4" : "mb-4"
       div class="col-lg-#{cols}"
         p.mx-lg-4.mid-caption.text-secondary
           = partial "partials/formatted-date",

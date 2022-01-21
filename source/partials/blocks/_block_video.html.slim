@@ -1,4 +1,4 @@
-- homepage_section ||= nil
+- center_pre_title ||= nil
 
 - if block.videos.present?
 
@@ -11,4 +11,4 @@
       - else
         = partial "partials/video-two-columns",
           locals: {items: block.videos,
-          homepage_section: homepage_section}
+          center_pre_title: center_pre_title}
