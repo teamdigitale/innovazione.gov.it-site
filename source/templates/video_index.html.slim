@@ -22,7 +22,7 @@ ruby:
             locals: {item: page.featured_videos.first}
 
         - else
-          = partial "partials/video-two-columns",
+          = partial "partials/video-many-columns",
             locals: {items: page.featured_videos,
             center_pre_title: true,
             pre_title: t("video.highlights")}
