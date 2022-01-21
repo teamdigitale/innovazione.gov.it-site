@@ -24,10 +24,10 @@ ruby:
         - else
           = partial "partials/video-two-columns",
             locals: {items: page.featured_videos,
-            homepage_section: true,
+            center_pre_title: true,
             pre_title: t("video.highlights")}
 
-.py-3.my-lg-5
+.pt-3.mb-lg-5
   - if items.any?
     .container
       .py-5
