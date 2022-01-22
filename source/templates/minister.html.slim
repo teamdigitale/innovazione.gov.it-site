@@ -79,12 +79,17 @@ ruby:
   - if dato.minister_page.video_section.any?
     .lightgrey-bg-a2
       .container.pt-3
-        .pt-5.pb-lg-5
+        .pt-5
           = partial "partials/section-title",
           locals: {title: dato.minister_page.video_section_title,
             is_anchor: true}
-        = partial "partials/video-many-columns",
-          locals: {items: dato.minister_page.video_section.take(2)}
+          = partial "partials/video-many-columns",
+            locals: {items: dato.minister_page.video_section.take(2)}
+        .row.mt-2
+          .my-5.col-12.pb-4.text-center
+            = partial "partials/button",
+            locals: {btn_url: dato.videos_index,
+              label: t("see_more")}
 
   .container.pt-3
     = partial "partials/cards-horizontal-list",
