@@ -3,6 +3,7 @@ ruby:
   hide_tags ||= nil
   hide_type ||= nil
   hide_date ||= nil
+  icon_classes = %(icon bg-white icon-primary rounded p-1 video_slide_icon)
 
 - if slides.present?
   h3.sr-only = t("highlights")
@@ -99,12 +100,7 @@ ruby:
                         style: "width:100%; object-fit:cover",
                         class: "lazyload d-block video_thumbnail_height"
 
-                    svg class=["icon",
-                      "bg-white",
-                      "icon-primary",
-                      "rounded",
-                      "p-1",
-                      "video_slide_icon"].join(" ")
+                    svg class=icon_classes
                       use xlink:href="/images/sprite.svg#it-video"
 
                 - if !hide_tags && has_tags
