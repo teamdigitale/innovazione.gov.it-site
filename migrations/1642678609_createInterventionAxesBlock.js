@@ -4,7 +4,7 @@ module.exports = async (client) => {
   // Create intervention axes block
   const interventionAxesBlock = await client.itemTypes.create({
     name: "Blocco assi d'intervento",
-    apiKey: 'intervention_axes_block',
+    apiKey: 'block_axes_intervention',
     modularBlock: true,
   });
 
