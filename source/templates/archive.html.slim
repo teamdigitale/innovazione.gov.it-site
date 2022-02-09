@@ -1,3 +1,5 @@
+- items ||= nil
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
@@ -15,7 +17,7 @@
 
 .py-3.my-lg-5
   .container.mid-container
-    - if items.any?
+    - if items.present?
       h2.sr-only = t("event_list")
       - items.each do |month_and_year, events_by_day|
         ruby:
