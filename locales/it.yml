@@ -14,6 +14,7 @@ it:
     news_subpage: Pagina Notizie
     job_position: Posizione lavorativa
     pnrr_job_position: Posizione lavorativa PNRR
+    schedule_event: Evento
     video: Video
   logos:
     italy: Logo Repubblica Italiana
@@ -35,11 +36,14 @@ it:
   close: Chiudi
   contacts: Contatti
   credits: Crediti
+  date_and_time: Data e ora
   date_shown: Data
   deepen: Approfondisci
   discover_project_data: Scopri i dati del progetto aggiornati ogni giorno
+  elements_list: Elenco degli elementi
   email_contact: Contatti email
   empty_list: Non sono presenti contenuti di questa tipologia.
+  event_list: Elenco degli eventi
   explore_breadcrumb_prefix: Esplora
   file_type: File %{ext}
   follow_us_on: Seguici su
@@ -48,6 +52,7 @@ it:
   go_home: Vai alla pagina iniziale
   go_to: Vai a
   highlighted_topics: Argomenti in evidenza
+  highlights: In evidenza
   home_label: Home
   hq: Sede istituzionale
   interviews_section_title: Le interviste
@@ -58,6 +63,7 @@ it:
   medium: Vai su Medium
   ministry_secretariat: Segreteria del Ministro
   minutes: minuti
+  notes: Segnalazioni
   numbers_section_title: I numeri dell'innovazione
   new_email: (Posta elettronica)
   new_tab: (Si apre in un nuovo tab)
@@ -65,12 +71,17 @@ it:
   other_links: Altri siti web
   owner_name: Governo Italiano
   participations_section_title: Gli interventi
+  place: luogo
   press_office: Ufficio stampa
   press_releases_section_title: I comunicati stampa
   project_categories_dropdown: Esplora per categoria
   public_announcements_title: Gli avvisi pubblici
   reading-time: Tempo di lettura
   related_content: Potrebbero interessarti
+  schedule_archive: Archivio eventi
+  schedule: Agenda
+  the_schedule: "L'agenda"
+  current_schedule: Agenda corrente
   search: Cerca
   sections_nav_title: Indice della pagina
   share: Condividi
@@ -122,6 +133,18 @@ it:
       - Ottobre
       - Novembre
       - Dicembre
+    January: Gennaio
+    February: Febbraio
+    March: Marzo
+    April: Aprile
+    May: Maggio
+    June: Giugno
+    July: Luglio
+    August: Agosto
+    September: Settembre
+    October: Ottobre
+    November: Novembre
+    December: dicembre
 
   explore_aside:
     search_title: Cerca nel sito

@@ -1,0 +1,12 @@
+- if block.video.present?
+
+  - if block.show_title
+    h2.mb-4.h4.mx-lg-4.text-primary.text-center
+      = block.video.title
+
+  = partial "partials/video-cover",
+    locals: {item: block.video,
+    offset: ""}
+  .px-3.px-lg-0
+    = partial "partials/video-transcript",
+      locals: {video: block.video}

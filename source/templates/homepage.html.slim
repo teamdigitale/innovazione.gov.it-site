@@ -14,7 +14,7 @@ h1 class=mobile_title_classes
     = " per l'innovazione tecnologica e la transizione digitale"
 
 - if page.banners.present?
-  h2.sr-only Segnalazioni
+  h2.sr-only = t("notes")
   - page.banners.each do |block|
     - if block.item_type.api_key != "block_hero_banner" || block.show
       = partial "partials/blocks/#{block.item_type.api_key}",
@@ -38,23 +38,13 @@ h1 class=mobile_title_classes
           show_item_type: true,
           btn_url: dato.news_page}
 
+/ content blocks
 - page.content_blocks.each_with_index do |block, i|
-  - image_right = i % 2 == 0
+  - image_right = i.even?
   = partial "partials/blocks/#{block.item_type.api_key}",
-    locals: {block: block, image_right: image_right}
-
-/ blocco video
-- if page.video_section.any?
-  .lightgrey-bg-a2
-    .container.py-3
-      - if page.video_section.size == 1
-        = partial "partials/video-single",
-          locals: {item: page.video_section.first}
-
-      - else
-        = partial "partials/video-two-columns",
-          locals: {items: page.video_section,
-          homepage_section: true}
+    locals: {block: block,
+    image_right: image_right,
+    center_pre_title: true}
 
 .container
   = partial "partials/card-featured-projects", locals: {page: page}

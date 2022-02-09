@@ -1,0 +1,15 @@
+._mid-agenda__event--height {
+  height: 152px;
+}
+
+@include media-breakpoint-up(md) {
+  .mid-agenda__event--height {
+    height: 175px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mid-agenda__event--height {
+    height: 152px;
+  }
+}

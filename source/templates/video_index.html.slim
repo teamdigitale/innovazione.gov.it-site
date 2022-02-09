@@ -1,4 +1,7 @@
-- items ||= []
+ruby:
+  items ||= []
+  section_name_classes = %(h6 mid-caption--large text-center
+                          text-uppercase font-weight-semibold)
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
@@ -10,51 +13,48 @@
 
 - if page.featured_videos.present?
   .lightgrey-bg-a2
-    .container.py-3
-      - if page.featured_videos.present?
-        - number_of_cards = page.featured_videos.size
-        .py-5
-          h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
-            = t("video.highlights")
 
-        .d-none.d-lg-block
-          .row.pb-5
-            - page.featured_videos.each do |featured_video|
-              div class="col-lg-#{12 / number_of_cards}"
-                = partial "partials/video-card",
-                  locals: {item: featured_video,
-                  x_spacing: "px-0"}
+    - if page.featured_videos.size == 1
+      .container.pt-3.pb-5
+        .mb-3
+        = partial "partials/video-single",
+          locals: {item: page.featured_videos.first}
 
-        .d-lg-none
-          .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
-            = partial "partials/text_gallery",
-              locals: {slides: page.featured_videos,
-              hide_type: true,
-              hide_video_tags: false}
+    - else
+      .container.pb-3
+        = partial "partials/video-many-columns",
+          locals: {items: page.featured_videos,
+          center_pre_title: true,
+          pre_title: t("video.highlights")}
 
-.py-3.my-lg-5
+.pt-3.mb-lg-5
   - if items.any?
     .container
       .py-5
-        h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+        h2 class=section_name_classes
           = t("video.all")
 
       .row-lg
         h2.sr-only Elenco degli elementi
+
+        // Desktop
         .d-none.d-lg-block
-          .row.pb-5
+          .row
             - items.each do |video|
-              .col-3
+              .col-3.pb-5
                 = partial "partials/video-card",
                   locals: {item: video,
                   add_card_shadow: "shadow-lg"}
 
+        // Mobile
         .d-lg-none
           - items.each do |video|
             .mb-4
               = partial "partials/video-card",
-                locals: {item: video}
+                locals: {item: video,
+                add_card_shadow: "shadow-lg"}
 
+    .container
       .pt-lg-4
         = partial "partials/pagination",
           locals: {pager: pager}

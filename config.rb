@@ -135,7 +135,7 @@ module PresentationHelper
   end
 
   def self.published_schedule_events(schedule_events)
-    schedule_events.sort_by(&:agenda_date).reverse
+    schedule_events.sort_by(&:date_shown)
   end
 
   def self.published_tags(tags)
@@ -200,6 +200,58 @@ helpers do
     PresentationHelper.published_videos(dato.videos)
   end
 
+  def past_events
+    visible_schedule_events.reverse.select do |event|
+      event.date_shown < DateTime.now
+    end
+  end
+
+  def current_and_past_events
+    visible_schedule_events.reverse.select do |event|
+      event.date_shown <= DateTime.now
+    end
+  end
+
+  def current_and_future_events
+    visible_schedule_events.select do |event|
+      event.date_shown >= DateTime.now
+    end
+  end
+
+  def nearest_date
+    return current_and_future_events.first.date_shown unless current_and_future_events.empty?
+  end
+
+  def days_in_minister_schedule
+    days = (visible_schedule_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.date_shown.strftime("%d%B%Y")
+    end)
+    days.uniq!
+  end
+
+  def schedule_events_by_day
+    days_in_minister_schedule.each_with_object({}) do |day, hash|
+      hash[day] = (visible_schedule_events.select do |e|
+        e.date_shown.strftime("%d%B%Y") == day
+      end)
+    end
+  end
+
+  def months_in_minister_schedule
+    m = (visible_schedule_events.each_with_object([]) do |e, arr|
+      arr << e.date_shown.strftime("%B%Y")
+    end)
+    m.uniq!
+  end
+
+  def schedule_events_by_month
+    months_in_minister_schedule.each_with_object({}) do |month, h|
+      h[month] = (schedule_events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
+      end)
+    end
+  end
+
   def visible_taggable_contents
     (visible_announcements +
     visible_articles +
@@ -209,6 +261,7 @@ helpers do
     visible_projects +
     visible_focus_pages +
     visible_videos +
+    visible_schedule_events +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
@@ -335,6 +388,8 @@ helpers do
     [dato.articles_index,
      dato.announcements_index,
      dato.interviews_index,
+     dato.job_positions_index,
+     dato.pnrr_job_positions_index,
      dato.participations_index,
      dato.press_releases_index,
      dato.focus_index,
@@ -509,6 +564,7 @@ dato.tap do |dato|
       index_page,
       parent_page,
       locale,
+      per_page,
       index_template = "/templates/index_page.html"
     )
       parent_path = "#{parent_page.slug}/"
@@ -521,7 +577,7 @@ dato.tap do |dato|
                  index_template,
                  suffix: "/page/:num/index",
                  locals: {page: index_page},
-                 per_page: 10
+                 per_page: per_page
 
       else
         proxy "#{path}/index.html",
@@ -566,7 +622,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_job_positions,
                            dato.job_positions_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_job_positions.each do |job_position|
       proxy "/#{dato.department_page.slug}/#{dato.job_positions_index.slug}/#{job_position.slug}/index.html",
@@ -578,7 +635,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_pnrr_job_positions,
                            dato.pnrr_job_positions_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_pnrr_job_positions.each do |pnrr_job_position|
       proxy "/#{dato.department_page.slug}/#{dato.pnrr_job_positions_index.slug}/#{pnrr_job_position.slug}/index.html",
@@ -592,13 +650,102 @@ dato.tap do |dato|
           locals: {page: dato.minister_page},
           locale: locale
 
-    proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/index.html",
+    proxy "/#{dato.schedule_archive_page.slug}/index.html",
+          "/templates/archive.html",
+          locals: {page: dato.schedule_archive_page},
+          locale: locale
+
+    proxy "/#{dato.schedule_page.slug}/index.html",
           "/templates/schedule.html",
           locals: {page: dato.schedule_page},
           locale: locale
 
+    visible_schedule_events = dato.schedule_events.sort_by(&:date_shown)
+
+    current_and_future_events = visible_schedule_events.select do |event|
+      event.date_shown >= DateTime.now
+    end
+
+    days = (current_and_future_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.date_shown.strftime("%d %B %Y")
+    end)
+    days.uniq!
+
+    events_by_day = (days.each_with_object({}) do |day, h|
+      h[day] = (current_and_future_events.select do |e|
+        e.date_shown.strftime("%d %B %Y") == day
+      end)
+    end)
+
+    months = (current_and_future_events.each_with_object([]) do |e, arr|
+      arr << e.date_shown.strftime("%B %Y")
+    end)
+    months.uniq!
+
+    events_by_month = months.each_with_object({}) do |month, h|
+      h[month] = (events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
+      end)
+    end
+
+    if events_by_month.any?
+      paginate events_by_month,
+        "/#{dato.schedule_page.slug}",
+        "/templates/schedule.html",
+        suffix: "/page/:num/index",
+        locals: {page: dato.schedule_page},
+        per_page: 10
+
+    else
+      proxy "#{dato.schedule_page.slug}/index.html",
+        "/templates/schedule.html",
+        locals: {page: dato.schedule_page},
+        locale: locale
+    end
+
+    archive_events = visible_schedule_events.reverse.select do |event|
+      event.date_shown <= DateTime.now
+    end
+
+    days_in_archive = (archive_events.each_with_object([]) do |event, daily_arr|
+      daily_arr << event.date_shown.strftime("%d %B %Y")
+    end)
+    days_in_archive.uniq!
+
+    archive_events_by_day = (days_in_archive.each_with_object({}) do |day, h|
+      h[day] = (archive_events.select do |e|
+        e.date_shown.strftime("%d %B %Y") == day
+      end)
+    end)
+
+    months_in_archive = (archive_events.each_with_object([]) do |e, arr|
+      arr << e.date_shown.strftime("%B %Y")
+    end)
+    months_in_archive.uniq!
+
+    archive_events_by_month = months_in_archive.each_with_object({}) do |month, h|
+      h[month] = (archive_events_by_day.select do |k, v|
+        k.downcase.include?(month.downcase)
+      end)
+    end
+
+    if archive_events_by_month.any?
+      paginate archive_events_by_month,
+        "/#{dato.schedule_archive_page.slug}",
+        "/templates/archive.html",
+        suffix: "/page/:num/index",
+        locals: {page: dato.schedule_archive_page},
+        per_page: 10
+
+    else
+      proxy "#{dato.schedule_archive_page.slug}/index.html",
+        "/templates/archive.html",
+        locals: {page: dato.schedule_archive_page},
+        locale: locale
+    end
+
     PresentationHelper.published_schedule_events(dato.schedule_events).each do |schedule_event|
-      proxy "/#{dato.minister_page.slug}/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
+      proxy "/#{dato.schedule_page.slug}/#{schedule_event.slug}/index.html",
             "/templates/schedule_event.html",
             locals: {page: schedule_event},
             locale: locale
@@ -609,28 +756,32 @@ dato.tap do |dato|
     paginate_with_fallback(minister_articles,
                            dato.minister_articles_index,
                            dato.minister_page,
-                           locale)
+                           locale,
+                           10)
 
     minister_interviews = visible_interviews.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate_with_fallback(minister_interviews,
                            dato.minister_interviews_index,
                            dato.minister_page,
-                           locale)
+                           locale,
+                           10)
 
     minister_participations = visible_participations.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate_with_fallback(minister_participations,
                            dato.minister_participations_index,
                            dato.minister_page,
-                           locale)
+                           locale,
+                           10)
 
     minister_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.minister_page) }
 
     paginate_with_fallback(minister_press_releases,
                            dato.minister_press_releases_index,
                            dato.minister_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_minister_subpages.each do |minister_subpage|
       parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
@@ -649,7 +800,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_focus_pages,
                            dato.focus_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_focus_pages.each do |focus_page|
       proxy "/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
@@ -663,21 +815,24 @@ dato.tap do |dato|
     paginate_with_fallback(department_announcements,
                            dato.department_announcements_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     department_articles = visible_articles.select { |i| i.owners.include?(dato.department_page) }
 
     paginate_with_fallback(department_articles,
                            dato.department_articles_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     department_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.department_page) }
 
     paginate_with_fallback(department_press_releases,
                            dato.department_press_releases_index,
                            dato.department_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_department_subpages.each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
@@ -717,7 +872,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_announcements,
                            dato.announcements_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_announcements.each do |announcement|
       proxy "/#{dato.news_page.slug}/#{dato.announcements_index.slug}/#{announcement.slug}/index.html",
@@ -729,7 +885,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_articles,
                            dato.articles_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{article.slug}/index.html",
@@ -741,7 +898,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_interviews,
                            dato.interviews_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_interviews.each do |interview|
       proxy "/#{dato.news_page.slug}/#{dato.interviews_index.slug}/#{interview.slug}/index.html",
@@ -753,7 +911,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_participations,
                            dato.participations_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_participations.each do |participation|
       proxy "/#{dato.news_page.slug}/#{dato.participations_index.slug}/#{participation.slug}/index.html",
@@ -765,7 +924,8 @@ dato.tap do |dato|
     paginate_with_fallback(visible_press_releases,
                            dato.press_releases_index,
                            dato.news_page,
-                           locale)
+                           locale,
+                           10)
 
     visible_press_releases.each do |press_release|
       proxy "/#{dato.news_page.slug}/#{dato.press_releases_index.slug}/#{press_release.slug}/index.html",
@@ -778,6 +938,7 @@ dato.tap do |dato|
                            dato.videos_index,
                            dato.news_page,
                            locale,
+                            8,
                            "/templates/video_index.html")
 
     visible_videos.each do |video|
@@ -813,7 +974,8 @@ dato.tap do |dato|
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
-                        visible_news_subpages
+                        visible_news_subpages +
+                        visible_schedule_events
 
     visible_tags.each do |tag|
       items = taggable_contents.select { |n| n.tags.include?(tag) }.sort_by(&:date_shown).reverse
@@ -834,6 +996,7 @@ dato.tap do |dato|
       end
     end
   end
+
   dato.asset_redirects.each do |asset_redirect|
     path = PresentationHelper.path_without_domain(asset_redirect.old_url)
     proxy "#{path}/index.html",

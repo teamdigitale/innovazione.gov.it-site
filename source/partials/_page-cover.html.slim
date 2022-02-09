@@ -1,4 +1,10 @@
 - if page.respond_to?(:image_cover) && page.image_cover.present?
+  ruby:
+    title = ""
+    if page.image_cover.respond_to?(:title) && page.image_cover.title.present?
+      title = page.image_cover.title
+    end
+
   figure
     = proxy_image_tag page.image_cover.lqip_data_url(w: 10, h: 4,
       fit: "crop"), data: {sizes: "100vw",
@@ -17,8 +23,14 @@
         #{page.image_cover.url(w: 2500, h: 750,
           fit: 'crop', auto: 'compress')} 2500w"},
       class: "lazyload d-block w-100",
-      alt: page.image_cover.alt
+      alt: page.image_cover.alt,
+      title: title
 
-    - if page.image_cover_description.present?
+    ruby:
+      description = if page.respond_to?(:image_cover_description) &&
+        page.image_cover_description.present?
+        true
+      end
+    - if description
       figcaption.figure-caption.my-3.text-center
         = page.image_cover_description

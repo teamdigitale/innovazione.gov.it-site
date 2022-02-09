@@ -1,0 +1,48 @@
+ruby:
+  items ||= nil
+  center_pre_title ||= nil
+  cols =
+    case items.size
+    when 2
+      "col-lg-6"
+    when 3
+      "col-lg-4"
+    else
+      ""
+    end
+  add_mb = items.size == 3
+  pre_title ||= items.first.item_type.api_key
+  title_size = items.size == 2 ? "mid-caption--lead" : "mid-caption--xmlarge"
+  icon_classes = items.size == 2 ? "video_two_col_icon" : "video_three_col_icon"
+
+- if center_pre_title
+  .pt-5.pb-lg-4
+    h2.h6.mid-caption--large.text-center.text-uppercase.font-weight-semibold
+      = pre_title
+
+.d-none.d-lg-block class="#{center_pre_title ? "pt-4" : ""}"
+  .row
+    - items.map do |item|
+      div class=cols
+        p.mx-lg-4.mid-caption.text-secondary
+          = partial "partials/formatted-date",
+            locals: {date: item.date_shown}
+        h2.mx-lg-4.mb-4.text-primary class=title_size
+          = link_to page_path(item),
+            class: "text-decoration-none"
+            = item.title
+
+.d-none.d-lg-block
+  .row
+    - items.map do |item|
+      = partial "partials/video-featured-card",
+        locals: {item: item,
+        cols: cols,
+        icon_classes: icon_classes,
+        add_mb: add_mb}
+
+.d-lg-none
+  = partial "partials/text-gallery-card",
+    locals: {items: items,
+    background: "lightgrey-bg-a2",
+    hide_shadow: true}

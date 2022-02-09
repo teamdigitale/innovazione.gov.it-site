@@ -1,0 +1,69 @@
+- if block.agenda_events.present? && block.agenda_events.size >= 2
+  ruby:
+    featured_events = block.agenda_events.sort_by(&:date_shown)
+    events_num = block.agenda_events.size
+    selected = if events_num <= 4
+                  featured_events
+               else
+                 [past_events[0]].concat(current_and_future_events[0..2])
+               end
+
+  .pt-5.container.px-0
+    .col-12.offset-lg-1.mb-4
+      .d-flex.justify-content-between
+        h2.h4 = block.title
+
+        = partial "partials/button",
+          locals: {btn_url: dato.schedule_page,
+          color_class: "btn-outline-primary"}
+
+  .pt-2.bg-primary
+  .container.px-0.pt-4.pb-5
+
+    // Mobile view with 2-4 events
+    .d-lg-none
+      .swiper.pt-2
+        .swiper-container.p-0
+          .swiper-wrapper
+            - selected.each do |event|
+              .swiper-slide
+                .swiper-slide__text.py-0
+                  .mid-agenda-block-border
+                  .pb-3.px-3.text-center.text-md-left
+                    .category.pb-2.mid-caption.font-weight-semibold
+                      span.pr-2
+                        = partial "partials/formatted-date",
+                          locals: {date: event.date_shown}
+                    h3.h5.font-weight-semibold
+                      = link_to page_path(event),
+                        class: "text-primary text-decoration-none"
+                        = event.title
+        .swiper-pagination.pt-4
+
+    // Desktop view with 2-8 events
+    .d-none.d-lg-block
+      .swiper.pt-2
+        .swiper-container.p-0
+          .swiper-wrapper
+            - featured_events.each_slice(4) do |events|
+              .swiper-slide._mid-agenda__event--height
+                .d-flex.justify-content-center
+                  - events.each do |event|
+                    .d-flex.col-8.col-md-4.col-lg-3.py-0
+                      .swiper-slide__text.py-0
+                        .mid-agenda-block-border
+                          .pb-3.px-3.text-center.text-md-left
+                            .category.pb-2.mid-caption.font-weight-semibold
+                              span.pr-2
+                                = partial "partials/formatted-date",
+                                  locals: {date: event.date_shown}
+                            h3.h6.font-weight-semibold
+                              = link_to page_path(event),
+                                class: "text-primary text-decoration-none"
+                                = event.title
+
+        .d-none.d-lg-block
+          - if featured_events.size > 4
+            .swiper-pagination.pt-4
+
+  .pt-2.bg-primary

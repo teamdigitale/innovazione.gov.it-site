@@ -1,0 +1,20 @@
+ruby:
+  event ||= nil
+  time ||= ""
+  card_class ||= "lightgrey-bg-a2"
+  title_class ||= "h5"
+
+- if event.present?
+  .card class=card_class
+    .card-body.p-3 class=card_class
+      .col-12.text-center.text-md-left
+        .category.pb-2.mid-caption.font-weight-semibold
+          span.pr-2
+            = time
+
+          span.px-2.text-uppercase
+            = owner
+        h3.font-weight-semibold class=title_class
+          = link_to page_path(event),
+            class: "text-primary text-decoration-none"
+            = title

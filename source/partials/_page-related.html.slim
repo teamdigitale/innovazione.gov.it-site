@@ -12,8 +12,9 @@ ruby:
     elements_ordered = elements_partitioned.flatten
 
   .row.border-top.pt-5.mb-5._anchor
-    .col-sm-8 id='_related-content'
-      .mb-3
+    .col-sm-8
+      .mb-3._mid-target
+        span._mid-target-point id='_related-content'
         = partial "partials/section-title",
           locals: {title: t("related_content")}
       .col-lg-12.offset-lg-1.my-0.p-lg-0

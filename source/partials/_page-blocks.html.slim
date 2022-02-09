@@ -1,12 +1,11 @@
 - compact_columns ||= false
 - html_class ||= ""
-
-- expandable_blocks_api_keys = %w[block_image_single block_video_single]
+- expandable = %w[block_image_single block_video_single block_video_content]
 
 - page.content_blocks.each.with_index do |block, i|
   ruby:
     block_api = block.item_type.api_key
-    block_is_expandable = expandable_blocks_api_keys.include?(block_api)
+    block_is_expandable = expandable.include?(block_api)
     block_is_big = block.respond_to?(:big) && block.big
 
     block_class =
