@@ -1,22 +1,21 @@
-'use strict';
+"use strict";
+const { buildModularBlock } = require("datocms-client");
 
 module.exports = async (client) => {
-  const { buildModularBlock } = require("datocms-client");
-
   // Retrieve homepage record
   const homepageContents = await client.items.all({
     filter: {
-      type: "homepage"
-    }
+      type: "homepage",
+    },
   });
-  const homepageContent = homepageContents[0]
+  const homepageContent = homepageContents[0];
   const homepageRecordId = homepageContent.id;
 
   // New blocks
-  const focusBlock = await client.itemType.find('block_focus_highlight');
-  const italy2026Block = await client.itemType.find('block_italy2026');
-  const ministerBlock = await client.itemType.find('block_minister');
-  const flagBlock = await client.itemType.find('block_first_flag');
+  const focusBlock = await client.itemType.find("block_focus_highlight");
+  const italy2026Block = await client.itemType.find("block_italy2026");
+  const ministerBlock = await client.itemType.find("block_minister");
+  const flagBlock = await client.itemType.find("block_first_flag");
 
   // Old content for minister block
   const ministerPreTitle = homepageContent.ministerPreTitle;
@@ -44,36 +43,35 @@ module.exports = async (client) => {
 
   // Old content for flag Blocks
 
-  const addHomepageBlocks = await client.items
-    .update(homepageRecordId, {
-      contentBlocks: [
-        buildModularBlock({
-          itemType: italy2026Block.id,
-          preTitle: italy2026PreTitle,
-          title: italy2026Title,
-          text: italy2026Text,
-          thumbnail: italy2026Thumbnail,
-          link: italy2026Link,
-          percentNumbers: italy2026PercentNumbers
-        }),
-        buildModularBlock({
-          title: nestedRecord.title,
-          itemType: flagBlock.id,
-          preTitle: nestedRecord.preTitle,
-          image: nestedRecord.image,
-          link: nestedRecord.link,
-        }),
-        buildModularBlock({
-          itemType: ministerBlock.id,
-          preTitle: ministerPreTitle,
-          title: ministerTitle,
-          text: ministerText,
-          featuredInterviews: ministerFeaturedNews
-        }),
-        buildModularBlock({
-          itemType: focusBlock.id,
-          focusElements: focusElements,
-        }),
-      ],
+  const addHomepageBlocks = await client.items.update(homepageRecordId, {
+    contentBlocks: [
+      buildModularBlock({
+        itemType: italy2026Block.id,
+        preTitle: italy2026PreTitle,
+        title: italy2026Title,
+        text: italy2026Text,
+        thumbnail: italy2026Thumbnail,
+        link: italy2026Link,
+        percentNumbers: italy2026PercentNumbers,
+      }),
+      buildModularBlock({
+        title: nestedRecord.title,
+        itemType: flagBlock.id,
+        preTitle: nestedRecord.preTitle,
+        image: nestedRecord.image,
+        link: nestedRecord.link,
+      }),
+      buildModularBlock({
+        itemType: ministerBlock.id,
+        preTitle: ministerPreTitle,
+        title: ministerTitle,
+        text: ministerText,
+        featuredInterviews: ministerFeaturedNews,
+      }),
+      buildModularBlock({
+        itemType: focusBlock.id,
+        focusElements: focusElements,
+      }),
+    ],
   });
-}
+};

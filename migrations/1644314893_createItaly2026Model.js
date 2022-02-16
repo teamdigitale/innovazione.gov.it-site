@@ -1,36 +1,36 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
   // Create model
   const italy2026Model = await client.itemTypes.create({
-    name: 'Italia 2026',
-    apiKey: 'italy2026',
+    name: "Italia 2026",
+    apiKey: "italy2026",
     draftModeActive: true,
-    singleton: true
+    singleton: true,
   });
 
   // Create header fieldset
   const headerFieldset = await client.fieldset.create(italy2026Model.id, {
-    title: 'Header',
+    title: "Header",
     collapsible: true,
-    startCollapsed: true
+    startCollapsed: true,
   });
 
-  // Create title and subtitle fields
+  // Create hero fields
   const titleField = await client.fields.create(italy2026Model.id, {
-    label: 'Titolo',
-    apiKey: 'title',
+    label: "Titolo",
+    apiKey: "title",
     fieldset: headerFieldset.id,
-    fieldType: 'string',
+    fieldType: "string",
     position: 1,
     validators: {
       required: {},
       length: {
         max: 120,
-      }
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: true,
       },
@@ -39,19 +39,19 @@ module.exports = async (client) => {
   });
 
   const subtitleField = await client.fields.create(italy2026Model.id, {
-    label: 'Sottotitolo (o descrizione)',
-    apiKey: 'subtitle',
+    label: "Sottotitolo (o descrizione)",
+    apiKey: "subtitle",
     fieldset: headerFieldset.id,
-    fieldType: 'string',
+    fieldType: "string",
     position: 2,
     validators: {
       required: {},
       length: {
-        max: 160
-      }
+        max: 160,
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -59,20 +59,47 @@ module.exports = async (client) => {
     },
   });
 
+  const imageField = await client.fields.create(italy2026Model.id, {
+    label: "Immagine",
+    apiKey: "image",
+    fieldset: headerFieldset.id,
+    fieldType: "file",
+    position: 3,
+    validators: {
+      required: {},
+      file_size: {
+        max_value: 2,
+        max_unit: "MB",
+      },
+      extension: {
+        predefined_list: "image",
+      },
+      required_alt_title: {
+        alt: true,
+        title: false,
+      },
+    },
+    appearance: {
+      editor: "file",
+      parameters: {},
+      addons: [],
+    },
+  });
+
   // Menu label and slug fields
   const menuLabelField = await client.fields.create(italy2026Model.id, {
-    label: 'Menu label',
-    apiKey: 'menu_label',
-    fieldType: 'string',
-    position: 3,
+    label: "Menu label",
+    apiKey: "menu_label",
+    fieldType: "string",
+    position: 4,
     validators: {
       required: {},
       length: {
         max: 24,
-      }
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -81,22 +108,22 @@ module.exports = async (client) => {
   });
 
   const slugField = await client.fields.create(italy2026Model.id, {
-    label: 'Slug',
-    apiKey: 'slug',
-    fieldType: 'slug',
-    position: 4,
+    label: "Slug",
+    apiKey: "slug",
+    fieldType: "slug",
+    position: 5,
     validators: {
       slugTitleField: {
-        titleFieldId: titleField.id
+        titleFieldId: titleField.id,
       },
       required: {},
       unique: {},
       slugFormat: {
-        predefinedPattern: 'webpage_slug'
-      }
+        predefinedPattern: "webpage_slug",
+      },
     },
     appearance: {
-      editor: 'slug',
+      editor: "slug",
       parameters: {},
       addons: [],
     },
@@ -104,38 +131,38 @@ module.exports = async (client) => {
 
   // Create featured and contents fieldsets
   const featuredFieldset = await client.fieldset.create(italy2026Model.id, {
-    title: 'In evidenza',
-    position: 5,
+    title: "In evidenza",
+    position: 6,
     collapsible: true,
-    startCollapsed: true
+    startCollapsed: true,
   });
 
   const contentFieldset = await client.fieldset.create(italy2026Model.id, {
-    title: 'Contenuti',
-    position: 6,
+    title: "Contenuti",
+    position: 7,
     collapsible: true,
-    startCollapsed: true
+    startCollapsed: true,
   });
 
   // SEO fieldset and field
   const seoFieldset = await client.fieldset.create(italy2026Model.id, {
-    title: 'SEO',
-    position: 7,
+    title: "SEO",
+    position: 8,
     collapsible: true,
-    startCollapsed: true
+    startCollapsed: true,
   });
 
   const seoMetatagsField = await client.fields.create(italy2026Model.id, {
-    label: 'SEO',
-    apiKey: 'seo',
+    label: "SEO",
+    apiKey: "seo",
     fieldset: seoFieldset.id,
-    fieldType: 'seo',
+    fieldType: "seo",
     validators: {
       requiredSeoFields: {
         title: true,
         description: true,
         image: false,
-        twitterCard: false
+        twitterCard: false,
       },
       titleLength: {
         max: 100,
@@ -145,7 +172,7 @@ module.exports = async (client) => {
       },
     },
     appearance: {
-      editor: 'seo',
+      editor: "seo",
       parameters: {},
       addons: [],
     },
@@ -153,18 +180,17 @@ module.exports = async (client) => {
 
   // Add fields to featured fieldset
   const preTitleField = await client.fields.create(italy2026Model.id, {
-    label: 'Pre titolo',
-    apiKey: 'pre_title',
+    label: "Pre titolo",
+    apiKey: "pre_title",
     fieldset: featuredFieldset.id,
-    fieldType: 'string',
+    fieldType: "string",
     validators: {
-      required: {},
       length: {
-        max: 60
+        max: 60,
       },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -173,19 +199,17 @@ module.exports = async (client) => {
   });
 
   const featuredTitleField = await client.fields.create(italy2026Model.id, {
-    label: 'Titolo in evidenza',
-    apiKey: 'featured_title',
+    label: "Titolo in evidenza",
+    apiKey: "featured_title",
     fieldset: featuredFieldset.id,
-    fieldType: 'string',
-    position: 1,
+    fieldType: "string",
     validators: {
-      required: {},
       length: {
         max: 120,
-      }
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: true,
       },
@@ -193,24 +217,21 @@ module.exports = async (client) => {
     },
   });
 
-  const externalLinkModel = await client.itemType.find('link_external');
-  const internalLinkModel = await client.itemType.find('link_internal');
+  const externalLinkModel = await client.itemType.find("link_external");
+  const internalLinkModel = await client.itemType.find("link_internal");
 
   const linksField = await client.fields.create(italy2026Model.id, {
-    label: 'Collegamenti',
-    apiKey: 'featured_links',
-    fieldType: 'links',
+    label: "Collegamenti",
+    apiKey: "featured_links",
+    fieldType: "links",
     fieldset: featuredFieldset.id,
     validators: {
       itemsItemType: {
-        item_types: [
-          externalLinkModel.id,
-          internalLinkModel.id
-        ]
-      }
+        item_types: [externalLinkModel.id, internalLinkModel.id],
+      },
     },
     appearance: {
-      editor: 'links_select',
+      editor: "links_select",
       parameters: {},
       addons: [],
     },
@@ -218,107 +239,103 @@ module.exports = async (client) => {
 
   // Add fields to content fieldset
   // Add blocks field
-  const pnrrBlock = await client.itemType.find('block_pnrr');
-  const interventionAxesBlock = await client.itemType.find('block_axes_intervention');
-  const flagBlock = await client.itemType.find('block_flag');
-  const italy2026Block = await client.itemType.find('block_italy2026');
+  const pnrrBlock = await client.itemType.find("block_pnrr");
+  const interventionAxesBlock = await client.itemType.find(
+    "block_axes_intervention"
+  );
+  const flagBlock = await client.itemType.find("block_flag");
+  const italy2026Block = await client.itemType.find("block_italy2026");
 
   const italy2026BlockField = await client.fields.create(italy2026Model.id, {
-    label: 'Blocchi',
-    apiKey: 'content_blocks',
+    label: "Blocchi",
+    apiKey: "content_blocks",
     fieldset: contentFieldset.id,
-    fieldType: 'rich_text',
+    fieldType: "rich_text",
     validators: {
       richTextBlocks: {
         itemTypes: [
           pnrrBlock.id,
           interventionAxesBlock.id,
           flagBlock.id,
-          italy2026Block.id
-        ]
-      }
+          italy2026Block.id,
+        ],
+      },
     },
     appearance: {
-      editor: 'rich_text',
+      editor: "rich_text",
       parameters: {
-        start_collapsed: true
+        start_collapsed: true,
       },
       addons: [],
     },
   });
 
   // Add featured articles field
-  const articleModel = await client.itemType.find('article');
+  const articleModel = await client.itemType.find("article");
 
   const articlesField = await client.fields.create(italy2026Model.id, {
-    label: 'Articoli',
-    apiKey: 'articles',
-    fieldType: 'links',
+    label: "Articoli",
+    apiKey: "articles",
+    fieldType: "links",
     fieldset: contentFieldset.id,
     validators: {
       size: {
         max: 3,
       },
       itemsItemType: {
-        item_types: [
-          articleModel.id
-        ]
-      }
+        item_types: [articleModel.id],
+      },
     },
     appearance: {
-      editor: 'links_embed',
+      editor: "links_embed",
       parameters: {},
       addons: [],
     },
   });
 
   // Add press releases field
-  const pressReleaseModel = await client.itemType.find('press_release');
+  const pressReleaseModel = await client.itemType.find("press_release");
 
   const pressReleasesField = await client.fields.create(italy2026Model.id, {
-    label: 'Comunicati stampa',
-    apiKey: 'press_releases',
-    fieldType: 'links',
+    label: "Comunicati stampa",
+    apiKey: "press_releases",
+    fieldType: "links",
     fieldset: contentFieldset.id,
     validators: {
       size: {
         max: 3,
       },
       itemsItemType: {
-        item_types: [
-          pressReleaseModel.id
-        ]
-      }
+        item_types: [pressReleaseModel.id],
+      },
     },
     appearance: {
-      editor: 'links_embed',
+      editor: "links_embed",
       parameters: {},
       addons: [],
     },
   });
 
   // Add public announcements field
-  const announcementModel = await client.itemType.find('announcement');
+  const announcementModel = await client.itemType.find("announcement");
 
   const announcementsField = await client.fields.create(italy2026Model.id, {
-    label: 'Avvisi pubblici',
-    apiKey: 'announcements',
-    fieldType: 'links',
+    label: "Avvisi pubblici",
+    apiKey: "announcements",
+    fieldType: "links",
     fieldset: contentFieldset.id,
     validators: {
       size: {
         max: 3,
       },
       itemsItemType: {
-        item_types: [
-          announcementModel.id
-        ]
-      }
+        item_types: [announcementModel.id],
+      },
     },
     appearance: {
-      editor: 'links_embed',
+      editor: "links_embed",
       parameters: {},
       addons: [],
     },
   });
-}
+};
