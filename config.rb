@@ -600,6 +600,11 @@ dato.tap do |dato|
           locals: {page: dato.homepage},
           locale: locale
 
+    proxy "/#{dato.italy2026.slug}/index.html",
+          "/templates/italy2026.html",
+          locals: {page: dato.italy2026},
+          locale: locale
+
     proxy "/#{dato.search_page.slug}/index.html",
           "/templates/search.html",
           locals: {page: dato.search_page},
