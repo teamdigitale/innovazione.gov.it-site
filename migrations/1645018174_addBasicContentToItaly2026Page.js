@@ -25,7 +25,9 @@ module.exports = async (client) => {
   // Create page record
   const page = await client.items.create({
     itemType: italy2026Model.id,
-    image: bannerImage,
+    image: {
+      uploadId: bannerImage.id,
+    },
     title: "Italia digitale 2026",
     subtitle:
       "Obiettivi e iniziative per il digitale nel Piano nazionale di ripresa e resilienza",
