@@ -4,7 +4,7 @@ module.exports = async (client) => {
   // Create model
   const italy2026Model = await client.itemTypes.create({
     name: "Italia 2026",
-    apiKey: "italy2026",
+    apiKey: "italy2026_page",
     draftModeActive: true,
     singleton: true,
   });
@@ -129,7 +129,7 @@ module.exports = async (client) => {
     },
   });
 
-  // Create featured and contents fieldsets
+  // Create featured, contents and ontology fieldsets
   const featuredFieldset = await client.fieldset.create(italy2026Model.id, {
     title: "In evidenza",
     position: 6,
@@ -144,10 +144,17 @@ module.exports = async (client) => {
     startCollapsed: true,
   });
 
+  const ontologyFieldset = await client.fieldset.create(italy2026Model.id, {
+    title: "Ontologia",
+    position: 8,
+    collapsible: true,
+    startCollapsed: true,
+  });
+
   // SEO fieldset and field
   const seoFieldset = await client.fieldset.create(italy2026Model.id, {
     title: "SEO",
-    position: 8,
+    position: 9,
     collapsible: true,
     startCollapsed: true,
   });
@@ -173,6 +180,29 @@ module.exports = async (client) => {
     },
     appearance: {
       editor: "seo",
+      parameters: {},
+      addons: [],
+    },
+  });
+
+  // Add tags in ontology fieldset
+  const tagModel = await client.itemType.find("tag");
+
+  const tagsField = await client.fields.create(italy2026Model.id, {
+    label: "Argomenti",
+    apiKey: "tags",
+    fieldset: ontologyFieldset.id,
+    fieldType: "links",
+    validators: {
+      size: {
+        max: 4,
+      },
+      itemsItemType: {
+        item_types: [tagModel.id],
+      },
+    },
+    appearance: {
+      editor: "links_embed",
       parameters: {},
       addons: [],
     },
