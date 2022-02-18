@@ -24,7 +24,7 @@ module.exports = async (client) => {
   });
 
   // Update  parent menu item's position
-  const italy2026Model = await client.itemType.find("italy2026");
+  const italy2026Model = await client.itemType.find("italy2026_page");
   const updatedItaly2026MenuItem = await client.menuItem.update(
     italy2026MenuItem.id,
     {

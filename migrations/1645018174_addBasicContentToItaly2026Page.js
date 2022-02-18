@@ -2,7 +2,7 @@
 
 module.exports = async (client) => {
   // Retrive page model
-  const italy2026Model = await client.itemType.find("italy2026");
+  const italy2026Model = await client.itemType.find("italy2026_page");
 
   // Retrieve image from hero banner in homepage record
   const uploads = await client.uploads.all({
