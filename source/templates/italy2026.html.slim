@@ -39,10 +39,35 @@
           locals: {subs: nav_pages,
           hide_caption: false,
           right_col_longer: false}
-    /= partial "partials/column-title",
-        locals: {title: t("ontology.arguments")}
-    /- page.tags.each do |tag|
-      = partial "partials/chip",
-        locals: {label: tag.name,
-                url: page_path(tag),
-                text_color: "text-white"}
+      .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
+        .pt-4
+          = partial "partials/column-title",
+              locals: {title: t("ontology.arguments")}
+          - page.tags.each do |tag|
+            = partial "partials/chip",
+              locals: {label: tag.name,
+                url: page_path(tag)}
+
+/.py-5
+  .container
+    .mt-lg-3.mb-4.mb-lg-0
+      = partial "partials/section-title",
+        locals: {title: t("articles_section_title")}
+    = partial "partials/cards-horizontal-list",
+      locals: {items: page.articles.take(3),
+      hide_image: false,
+      hide_tags: true,
+      btn_url: dato.department_articles_index}
+
+  /.container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("press_releases_section_title"),
+      items: page.press_releases.take(3),
+      hide_tags: true,
+      btn_url: dato.department_press_releases_index}
+
+  /.container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: page.announcements.take(3),
+      btn_url: dato.department_announcements_index}
