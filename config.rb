@@ -265,6 +265,7 @@ helpers do
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
+    visible_pages(dato.italy2026_subpages) +
     visible_pages(dato.projects_subpages) +
     visible_pages(dato.news_subpages))
   end
@@ -334,6 +335,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage]
   end
@@ -364,6 +366,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage]
   end
@@ -412,6 +415,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage
        video]
@@ -442,6 +446,7 @@ dato.tap do |dato|
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
@@ -502,6 +507,15 @@ dato.tap do |dato|
             locale: locale
     end
 
+    visible_italy2026_subpages.each do |italy2026_subpage|
+      parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+      proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{locale}/#{italy2026_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: italy2026_subpage,
+                     children: PresentationHelper.published_children_pages(italy2026_subpage)},
+            locale: locale
+    end
+
     visible_department_subpages.each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
       proxy "/#{dato.department_page.slug}#{parent_path}/#{locale}/#{department_subpage.slug}/index.html",
@@ -553,6 +567,7 @@ dato.tap do |dato|
     visible_pnrr_job_positions = PresentationHelper.published_pnrr_job_positions(dato.pnrr_job_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_tags = PresentationHelper.published_tags(dato.tags)
@@ -600,9 +615,9 @@ dato.tap do |dato|
           locals: {page: dato.homepage},
           locale: locale
 
-    proxy "/#{dato.italy2026.slug}/index.html",
+    proxy "/#{dato.italy2026_page.slug}/index.html",
           "/templates/italy2026.html",
-          locals: {page: dato.italy2026},
+          locals: {page: dato.italy2026_page},
           locale: locale
 
     proxy "/#{dato.search_page.slug}/index.html",
@@ -848,6 +863,15 @@ dato.tap do |dato|
             locale: locale
     end
 
+    visible_italy2026_subpages.each do |italy2026_subpage|
+      parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+      proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: italy2026_subpage,
+                     children: PresentationHelper.published_children_pages(italy2026_subpage)},
+            locale: locale
+    end
+
     proxy "/#{dato.projects_page.slug}/index.html",
           "/templates/projects.html",
           locals: {page: dato.projects_page},
@@ -978,6 +1002,7 @@ dato.tap do |dato|
                         visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
+                        visible_italy2026_subpages +
                         visible_projects_subpages +
                         visible_news_subpages +
                         visible_schedule_events

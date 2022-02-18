@@ -20,6 +20,9 @@ module PathHelpers
       "pnrr_job_position"
       dato.department_page
 
+    when "italy2026_subpage"
+      dato.italy2026_page
+
     when "projects_subpage"
       dato.projects_page
 
@@ -39,6 +42,7 @@ module PathHelpers
 
     when "minister_subpage",
       "department_subpage",
+      "italy2026_subpage",
       "projects_subpage",
       "news_subpage",
       "general_page"
