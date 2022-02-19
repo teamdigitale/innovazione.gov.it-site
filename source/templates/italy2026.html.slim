@@ -5,6 +5,13 @@
   locals: {page: page,
   subs: visible_fl_pages(dato.italy2026_subpages)}
 
+/ content blocks
+- page.content_blocks.each_with_index do |block, i|
+  - image_right = i.even?
+  = partial "partials/blocks/#{block.item_type.api_key}",
+    locals: {block: block,
+    image_right: image_right}
+
 /.py-5
   .container
     .mt-lg-3.mb-4.mb-lg-0
