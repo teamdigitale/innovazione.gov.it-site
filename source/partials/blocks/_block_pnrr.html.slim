@@ -1,0 +1,41 @@
+section
+  .container
+    .row.mt-4.my-lg-5
+      .offset-lg-1.col-lg-5.pt-lg-4
+        h2.h6 class=["mid-caption--large",
+                  "text-uppercase",
+                  "font-weight-semibold",
+                  "pt-5", "p-lg-0", "text-center",
+                  "text-lg-left"].join(" ")
+
+          = block.pre_title
+
+        .d-none.d-lg-block
+          h3.h2.pt-2.text-center.text-lg-left
+            = block.title
+          p.d-none.d-lg-block.pt-2.mid-caption--lead.font-weight-normal.text-center.text-lg-left
+            = block.text
+        .d-lg-none
+          h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-left
+            = block.title
+          p.d-lg-none.pt-2.mid-caption--large.font-weight-normal.text-center.text-lg-left
+            = block.text
+      .offset-lg-1.col-lg-4.pt-lg-4.d-flex.flex-column.justify-content-end
+        - block.numbers.each do |number|
+          .d-none.d-lg-block
+            .mb-lg-4
+              .align-self-end.mid-xl-huge-numbers = number.number
+              .h6 = number.text
+
+    .d-lg-none.mt-4.mb-5
+      .swiper-container
+        .swiper-wrapper.h-100
+          - block.numbers.each do |number|
+            .swiper-slide
+              .swiper-slide__text.px-3.px-md-5
+                .h-100.d-flex.flex-column.justify-content-around
+                  .mid-huge-numbers.font-weight-semibold.text-center
+                    = number.number
+                  .h6.text-center.pt-5
+                    = number.text
+      .swiper-pagination.numbers-pagination-bullet
