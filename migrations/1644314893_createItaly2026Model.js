@@ -211,7 +211,7 @@ module.exports = async (client) => {
   // Add fields to featured fieldset
   const preTitleField = await client.fields.create(italy2026Model.id, {
     label: "Pre titolo",
-    apiKey: "pre_title",
+    apiKey: "featured_pre_title",
     fieldset: featuredFieldset.id,
     fieldType: "string",
     validators: {
