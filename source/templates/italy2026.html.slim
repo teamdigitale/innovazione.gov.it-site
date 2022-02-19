@@ -1,52 +1,9 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-- nav_pages = visible_fl_pages(dato.italy2026_subpages)
-
-.bg-dark
-  .bg-primary.text-white.position-relative
-    .container.text-center.text-sm-left
-      .row
-        .col-12.col-lg-7.pb-5
-          = partial "partials/breadcrumb",
-            locals: {page: page,
-              html_class: "text-white"}
-
-          .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
-            = partial "partials/headers/main-titles", locals: {page: page}
-
-        .col-12.col-lg-5.mid-absolute-column.mb-lg-0.pr-lg-0
-          - if page.image.present?
-            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
-              fit: "crop"), data: {sizes: "100vw",
-                src: page.image.url(w: 1200, h: 1200,
-                fit: "crop", auto: "compress"),
-                srcset: "#{page.image.url(w: 480, h: 350,
-                fit: 'crop', auto: 'compress')} 480w,
-                #{page.image.url(w: 1090, h: 1090,
-                fit: 'crop', auto: 'compress')} 1090w,
-                #{page.image.url(w: 1300, h: 1300,
-                fit: 'crop', auto: 'compress')} 1320w"},
-              class: "lazyload w-100 h-100 m-0",
-              style: "object-fit: cover",
-              alt: page.image.alt
-
-.lightgrey-bg-a2
-  .container.py-5.text-center.text-sm-left
-    .col-12
-      .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
-        = partial "partials/headers/subpages-menu",
-          locals: {subs: nav_pages,
-          hide_caption: false,
-          right_col_longer: false}
-      .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
-        .pt-4
-          = partial "partials/column-title",
-              locals: {title: t("ontology.arguments")}
-          - page.tags.each do |tag|
-            = partial "partials/chip",
-              locals: {label: tag.name,
-                url: page_path(tag)}
+= partial "partials/headers/italy2026",
+  locals: {page: page,
+  subs: visible_fl_pages(dato.italy2026_subpages)}
 
 /.py-5
   .container
