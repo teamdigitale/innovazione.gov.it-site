@@ -12,26 +12,26 @@
     locals: {block: block,
     image_right: image_right}
 
-/.py-5
-  .container
-    .mt-lg-3.mb-4.mb-lg-0
-      = partial "partials/section-title",
-        locals: {title: t("articles_section_title")}
-    = partial "partials/cards-horizontal-list",
-      locals: {items: page.articles.take(3),
-      hide_image: false,
-      hide_tags: true,
-      btn_url: dato.department_articles_index}
+/ Three-column blocks
+.container
+  .mt-lg-3.mb-4.mb-lg-0
+    = partial "partials/section-title",
+      locals: {title: t("articles_section_title")}
+  = partial "partials/cards-horizontal-list",
+    locals: {items: page.articles.take(3),
+    hide_image: false,
+    hide_tags: true,
+    btn_url: dato.articles_index}
 
-  /.container
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("press_releases_section_title"),
-      items: page.press_releases.take(3),
-      hide_tags: true,
-      btn_url: dato.department_press_releases_index}
+.container
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("press_releases_section_title"),
+    items: page.press_releases.take(3),
+    hide_tags: true,
+    btn_url: dato.press_releases_index}
 
-  /.container
-    = partial "partials/cards-horizontal-list",
-      locals: {title: t("public_announcements_title"),
-      items: page.announcements.take(3),
-      btn_url: dato.department_announcements_index}
+.container
+  = partial "partials/cards-horizontal-list",
+    locals: {title: t("public_announcements_title"),
+    items: page.announcements.take(3),
+    btn_url: dato.announcements_index}
