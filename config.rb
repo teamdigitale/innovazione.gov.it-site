@@ -615,11 +615,6 @@ dato.tap do |dato|
           locals: {page: dato.homepage},
           locale: locale
 
-    proxy "/#{dato.italy2026_page.slug}/index.html",
-          "/templates/italy2026.html",
-          locals: {page: dato.italy2026_page},
-          locale: locale
-
     proxy "/#{dato.search_page.slug}/index.html",
           "/templates/search.html",
           locals: {page: dato.search_page},
@@ -862,6 +857,35 @@ dato.tap do |dato|
                      children: PresentationHelper.published_children_pages(department_subpage)},
             locale: locale
     end
+
+    proxy "/#{dato.italy2026_page.slug}/index.html",
+          "/templates/italy2026.html",
+          locals: {page: dato.italy2026_page},
+          locale: locale
+
+    italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_articles,
+                           dato.italy2026_articles_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
+
+    italy2026_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_press_releases,
+                           dato.italy2026_press_releases_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
+
+    italy2026_announcements = visible_announcements.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_announcements,
+                           dato.italy2026_announcements_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
 
     visible_italy2026_subpages.each do |italy2026_subpage|
       parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""

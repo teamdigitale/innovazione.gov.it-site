@@ -65,6 +65,11 @@ module PathHelpers
       "pnrr_job_positions_index"
       dato.department_page
 
+    when "italy2026_announcements_index",
+      "italy2026_articles_index",
+      "italy2026_press_releases_index"
+      dato.italy2026_page
+
     when "announcements_index",
       "articles_index",
       "interviews_index",
