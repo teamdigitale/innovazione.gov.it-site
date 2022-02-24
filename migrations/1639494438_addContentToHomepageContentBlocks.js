@@ -33,6 +33,8 @@ module.exports = async (client) => {
 
   //Old content for focus block
   const focusElements = homepageContent.focusElements;
+
+  // Old content for flag Blocks
   const oldBlockFirstFlag = homepageContent.blockFirstFlags;
   const oldBlockFirstFlagId = oldBlockFirstFlag[0];
   const nestedRecord = await client.item.find(oldBlockFirstFlagId);
@@ -40,8 +42,6 @@ module.exports = async (client) => {
   const firstFlagTitle = nestedRecord.title;
   const firstFlagImage = nestedRecord.image;
   const firstFlagLink = nestedRecord.link;
-
-  // Old content for flag Blocks
 
   const addHomepageBlocks = await client.items.update(homepageRecordId, {
     contentBlocks: [
