@@ -1,4 +1,7 @@
-- items ||= block.focus_elements
+ruby:
+  items ||= block.focus_elements
+  pretitle_font_classes = %(h6 mid-caption--large
+                 text-uppercase mt-4 text-white font-weight-semibold)
 
 - if items.present?
   - section_title = t("models.#{items.first.item_type.api_key}")
@@ -6,11 +9,8 @@
   .primary-bg.pt-5.pb-4
     .container.white-color
       .row: .col-12.text-center
-        h2 class=["h6", "mid-caption--large",
-          "text-uppercase", "text-uppercase", "text-uppercase",
-          "mt-4", "text-white",
-          "font-weight-semibold"].join(" ")
-            = section_title
+        h2 class=pretitle_font_classes
+          = section_title
 
       - case items.length
         - when 1
