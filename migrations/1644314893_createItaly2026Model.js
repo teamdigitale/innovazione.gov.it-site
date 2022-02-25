@@ -273,7 +273,7 @@ module.exports = async (client) => {
   const interventionAxesBlock = await client.itemType.find(
     "block_axes_intervention"
   );
-  const flagBlock = await client.itemType.find("block_flag");
+  const flagBlock = await client.itemType.find("block_first_flag");
   const italy2026Block = await client.itemType.find("block_italy2026");
 
   const italy2026BlockField = await client.fields.create(italy2026Model.id, {
