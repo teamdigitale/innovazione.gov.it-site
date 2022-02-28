@@ -1,4 +1,5 @@
 ruby:
+  menu_title = block.menu_title ? block.menu_title : nil
   classes = %(col-lg-2
                pt-5 d-ml-flex align-items-left
                justify-content-lg-around)
@@ -25,7 +26,8 @@ ruby:
             .card-body.ml-lg-4
               div
                 .py-2.text-center.text-lg-left
-                  h2 class=pretitle_font_classes
+                  h2._mid-target class=pretitle_font_classes
+                    span._mid-target-point id=anchor_id(menu_title)
                     = block.pre_title
 
                 h3.h1.text-center.text-lg-left

@@ -1,13 +1,15 @@
+ruby:
+  menu_title = block.menu_title ? block.menu_title : nil
+  pre_title_classes = %(mid-caption--large
+                      text-uppercase font-weight-semibold
+                      pt-5 p-lg-0 text-center text-lg-left)
+
 section
   .container
     .row.mt-4.my-lg-5
       .offset-lg-1.col-lg-5.pt-lg-4
-        h2.h6 class=["mid-caption--large",
-                  "text-uppercase",
-                  "font-weight-semibold",
-                  "pt-5", "p-lg-0", "text-center",
-                  "text-lg-left"].join(" ")
-
+        h2.h6._mid-target class=pre_title_classes
+          span._mid-target-point id=anchor_id(menu_title)
           = block.pre_title
 
         .d-none.d-lg-block
