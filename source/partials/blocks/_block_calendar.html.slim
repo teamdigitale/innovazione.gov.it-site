@@ -1,0 +1,53 @@
+ruby:
+  titles = block.calendars.map {|c| c.title}
+
+section
+  .container.py-5
+    h3.h1.text-center._mid-target
+      span._mid-target-point id=anchor_id(block.menu_title)
+      = block.title
+
+    .d-flex.justify-content-center
+      .dropdown
+        button.btn.btn-dropdown.border-bottom.border-primary.dropdown-toggle [aria-expanded="false"
+          id="dropdownMenuButton"
+          aria-haspopup="true"
+          data-toggle="dropdown"
+          type="button" ]
+          .d-flex.justify-content-between
+            .text-capitalize.mr-5 id="active-calendar"
+              = block.calendars.first.title
+            svg.icon-expand.icon.icon-sm.icon-primary
+              use xlink:href="/images/sprite.svg#it-expand" 
+        .dropdown-menu aria-labelledby="dropdownMenuButton" 
+          .link-list-wrapper
+            ul.link-list.nav.nav-tabs id="myTab" role="tablist"
+              - titles.each_with_index do |title, index|
+                ruby:
+                  selected = (index == 0)
+                  status = index == 0 ? "active" : ""
+                  n = index + 1
+
+                li.nav-items
+                  a.list-item.nav-link [
+                    class="#{status} click-tab"
+                    id="tab#{n}-tab"
+                    data-toggle="tab"
+                    href="#tab#{n}"
+                    role="tab"
+                    aria-controls="tab#{n}"
+                    aria-selected=selected]
+
+                    = title
+
+    .tab-content id="myTabContent"
+      - titles.each_with_index do |title, index|
+        - status = index == 0 ? "show active" : ""
+        - n = index + 1
+
+        .tab-pane.show [class=status
+          id="tab#{n}"
+          role="tabpanel"
+          aria-labelledby="tab#{n}-tab"]
+
+          h1 = title
