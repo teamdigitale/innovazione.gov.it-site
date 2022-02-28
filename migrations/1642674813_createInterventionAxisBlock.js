@@ -54,6 +54,7 @@ module.exports = async (client) => {
     apiKey: "thumbnail",
     fieldType: "file",
     validators: {
+      required: {},
       file_size: {
         max_value: 1,
         max_unit: "MB",
