@@ -20,13 +20,14 @@ ruby:
           .col-lg-2 class=classes
             figure.avatar style="width: 175px; height: 175px"
               = proxy_image_tag item.thumbnail.url(w: 10, h: 10,
-                  fit: "crop"), data: {sizes: "100vw",
+                  fit: "max"), data: {sizes: "100vw",
                   src: item.thumbnail.url(w: 1200, h: 1200,
-                  fit: "crop", auto: "compress"),
+                  fit: "max", auto: "compress"),
                   srcset: "#{item.thumbnail.url(w: 800, h: 800,
-                  fit: 'crop', auto: 'compress')} 480w"},
-                  class: "#{avatar_classes}"
-                alt: item.thumbnail.alt
+                  fit: 'max', auto: 'compress')} 480w"},
+                  class: "#{avatar_classes}",
+                  style: "object-fit:contain;",
+                  alt: item.thumbnail.alt
           .col-lg-4
             .card-wrapper
               .card.bg-transparent
@@ -38,9 +39,10 @@ ruby:
                     p.mid-caption--xlarge
                       = item.description
 
-      .row.mt-2.mb-5
-        .col-12.text-center
-          = partial "partials/links/link_internal",
-            locals: {item: block.link,
-            label: block.link.cta_label,
-            white_outline: true}
+      - if block.link
+        .row.mt-2.mb-5
+          .col-12.text-center
+            = partial "partials/links/link_internal",
+              locals: {item: block.link,
+              label: block.link.cta_label,
+              white_outline: true}
