@@ -1,3 +1,11 @@
+ruby:
+  section_titles = [t("pnrr_section_title"),
+                    t("italy2026_section_title"),
+                    t("calendars_section_title"),
+                    t("articles_section_title"),
+                    t("press_releases_section_title"),
+                    t("announcements_section_title")]
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
@@ -5,33 +13,41 @@
   locals: {page: page,
   subs: visible_fl_pages(dato.italy2026_subpages)}
 
-/ content blocks
-- page.content_blocks.each_with_index do |block, i|
-  - image_right = i.even?
-  = partial "partials/blocks/#{block.item_type.api_key}",
-    locals: {block: block,
-    image_right: false}
+._content
+  = partial "partials/sticky-navs/page-sections",
+    locals: {sections: section_titles}
 
-/ Three-column blocks
-.container
-  .mt-lg-5.mb-4.mb-lg-0
-    = partial "partials/section-title",
-      locals: {title: t("articles_section_title")}
-  = partial "partials/cards-horizontal-list",
-    locals: {items: page.articles.take(3),
-    hide_image: false,
-    hide_tags: true,
-    btn_url: dato.italy2026_articles_index}
+  / content blocks
+  - page.content_blocks.each_with_index do |block, i|
+    - image_right = i.even?
+    = partial "partials/blocks/#{block.item_type.api_key}",
+      locals: {block: block,
+      image_right: false}
 
-.container
-  = partial "partials/cards-horizontal-list",
-    locals: {title: t("press_releases_section_title"),
-    items: page.press_releases.take(3),
-    hide_tags: true,
-    btn_url: dato.italy2026_press_releases_index}
+  / Three-column blocks
+  .container
+    .mt-lg-5.mb-4.mb-lg-0
+      = partial "partials/section-title",
+        locals: {title: t("articles_section_title"),
+        is_anchor: true}
+    = partial "partials/cards-horizontal-list",
+      locals: {items: page.articles.take(3),
+      title_is_anchor: true,
+      hide_image: false,
+      hide_tags: true,
+      btn_url: dato.italy2026_articles_index}
 
-.container
-  = partial "partials/cards-horizontal-list",
-    locals: {title: t("public_announcements_title"),
-    items: page.announcements.take(3),
-    btn_url: dato.italy2026_announcements_index}
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("press_releases_section_title"),
+      title_is_anchor: true,
+      items: page.press_releases.take(3),
+      hide_tags: true,
+      btn_url: dato.italy2026_press_releases_index}
+
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: page.announcements.take(3),
+      title_is_anchor: true,
+      btn_url: dato.italy2026_announcements_index}

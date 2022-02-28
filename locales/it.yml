@@ -24,6 +24,7 @@ it:
   announcement_date_closing: Data di chiusura
   announcement_date_opening: Data di apertura
   announcement_owner: Struttura di riferimento
+  announcements_section_title: Gli avvisi pubblici
   announcement_status: Stato
   job_position_legal_reference: Riferimento legislativo
   job_position_fee: Compenso
@@ -31,6 +32,7 @@ it:
   articles_section_title: Gli articoli
   attachments: Allegati
   button_aria_label: "%{topic}: %{cta}"
+  calendars_section_title: I cronoprogrammi
   category: Categoria
   chip_aria_label: Esplora contenuti %{topic}
   close: Chiudi
@@ -56,6 +58,7 @@ it:
   home_label: Home
   hq: Sede istituzionale
   interviews_section_title: Le interviste
+  italy2026_section_title: Gli obiettivi
   main_nav_label: Mostra/Nascondi la navigazione
   main_nav_role: Menu principale
   media_comunication: Media e comunicazione
@@ -72,6 +75,7 @@ it:
   owner_name: Governo Italiano
   participations_section_title: Gli interventi
   place: luogo
+  pnrr_section_title: Il PNRR
   press_office: Ufficio stampa
   press_releases_section_title: I comunicati stampa
   project_categories_dropdown: Esplora per categoria
