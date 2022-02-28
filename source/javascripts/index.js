@@ -6,8 +6,8 @@ import "bootstrap-italia/src/js/plugins/navbar";
 import "sticky-header-custom.js";
 import "lazysizes";
 import "lazysizes/plugins/respimg/ls.respimg";
-import "focus-visible/src/focus-visible.js"
-import Sharer from "sharer.js/sharer.js"
+import "focus-visible/src/focus-visible.js";
+import Sharer from "sharer.js/sharer.js";
 import "core-js/features/promise";
 import "core-js/features/object/assign";
 import "core-js/features/string/repeat";
@@ -15,6 +15,12 @@ import "core-js/features/number";
 import svg4everybody from "svg4everybody";
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
+
+$(".click-tab").click(function (event) {
+  console.log(event.target);
+  const value = $(this).text();
+  $("#active-calendar").text(value);
+});
 
 if ($(".swiper-container").length > 0) {
   //some-slider-wrap-in
@@ -55,7 +61,7 @@ if ($(".swiper-container").length > 0) {
         nextSlideMessage: "Slide successiva",
         firstSlideMessage: "Questa è la prima slide",
         lastSlideMessage: "Questa è l'ultima slide",
-        paginationBulletMessage: "Vai alla slide {{index}}"
+        paginationBulletMessage: "Vai alla slide {{index}}",
       },
     });
   });
@@ -79,23 +85,25 @@ const initSearch = () => {
   }
   return searchClient.addWidget("#search-container", {
     initialLocale: $("html").attr("lang"),
-    initialQuery: ""
+    initialQuery: "",
   });
 };
 
 // Close accordion on click outside
-$(document).click(function(e) {
-  var container = $('.collapse');
+$(document).click(function (e) {
+  var container = $(".collapse");
   if (!container.is(e.target) && container.has(e.target).length === 0) {
-    container.collapse('hide');
+    container.collapse("hide");
   }
-})
+});
 
-$('.nav-item').click(function(e) {
-  $('.collapse').collapse('hide');
-})
+$(".nav-item").click(function (e) {
+  $(".collapse").collapse("hide");
+});
 
 initSearch();
 svg4everybody();
-progressIndicator.updateProgress()
-window.onscroll = function() {progressIndicator.updateProgress()};
+progressIndicator.updateProgress();
+window.onscroll = function () {
+  progressIndicator.updateProgress();
+};
