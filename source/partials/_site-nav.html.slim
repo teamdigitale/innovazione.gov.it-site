@@ -65,6 +65,7 @@
             /! start nav
             nav.navbar.navbar-expand-lg.has-megamenu.theme-dark-mobile [
               aria-label=t("main_nav_role")
+              style="min-width: 100%"
             ]
               button.custom-navbar-toggler [
                   aria-controls="nav02"
@@ -76,7 +77,7 @@
                 svg.icon
                   use xlink:href="/images/sprite.svg#it-burger"
 
-              #nav02.navbar-collapsable style="display: none; z-index: 2000"
+              #nav02.navbar-collapsable style="display: none; z-index: 2000; min-width: 100%;"
                 .overlay style="display: none;"
                 .close-div.sr-only
                   button.btn.close-menu type="button"
@@ -116,6 +117,12 @@
                     li.nav-item
                       = active_link_to dato.news_page.menu_label,
                         page_path(dato.news_page),
+                        class: "nav-link font-weight-semibold"
+
+                  ul.navbar-nav.ml-lg-auto.pt-0
+                    li.nav-item
+                      = active_link_to dato.italy2026_page.menu_label,
+                        page_path(dato.italy2026_page),
                         class: "nav-link font-weight-semibold"
 
                   .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
