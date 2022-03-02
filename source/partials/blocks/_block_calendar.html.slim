@@ -3,11 +3,11 @@ ruby:
 
 section
   .container.py-5
-    h3.h1.text-center._mid-target
+    h3.h1.text-center._mid-target.mb-4
       span._mid-target-point id=anchor_id(block.menu_title)
       = block.title
 
-    .d-flex.justify-content-center
+    .d-flex.justify-content-center.mb-5
       .dropdown
         button.btn.btn-dropdown.border-bottom.border-primary.dropdown-toggle [aria-expanded="false"
           id="dropdownMenuButton"
@@ -15,7 +15,7 @@ section
           data-toggle="dropdown"
           type="button" ]
           .d-flex.justify-content-between
-            .text-capitalize.mr-5 id="active-calendar"
+            .text-capitalize.mr-5.pb-2 id="active-calendar"
               = block.calendars.first.title
             svg.icon-expand.icon.icon-sm.icon-primary
               use xlink:href="/images/sprite.svg#it-expand" 
@@ -41,13 +41,46 @@ section
                     = title
 
     .tab-content id="myTabContent"
-      - titles.each_with_index do |title, index|
-        - status = index == 0 ? "show active" : ""
-        - n = index + 1
+      - block.calendars.each_with_index do |calendar, index|
+        ruby:
+          status = index == 0 ? "show active" : ""
+          n = index + 1
+          milestones = calendar.phases.map {|p| p.milestones}.flatten
+          phase_1 = calendar.phases.first
+          phase1_idx = phase_1.milestones.size
+          phase_2 = calendar.phases[1] ? calendar.phases[1] : nil
+          phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
+          phase_3 = calendar.phases[2] ? calendar.phases[2] : nil
 
         .tab-pane.show [class=status
           id="tab#{n}"
           role="tabpanel"
           aria-labelledby="tab#{n}-tab"]
 
-          h1 = title
+          .swiper.pt-2
+            .swiper-container.p-0
+              .swiper-wrapper
+                - milestones.each_slice(4) do |milestones_group|
+                  .swiper-slide._mid-agenda__event--height
+                    .d-flex.justify-content-center
+                      - milestones_group.each_with_index do |milestone, index|
+                        ruby:
+                          phase = case
+                            when index < phase1_idx
+                              phase_1
+                            when index < phase2_idx
+                              phase_2
+                            else
+                              phase_3
+                            end
+                        .d-flex.col-8.col-md-4.col-lg-3.py-0
+                          .swiper-slide__text.py-0
+                            .mid-agenda-block-border
+                              .pb-3.px-3.text-center.text-md-left
+                                h3.h6.font-weight-semibold
+                                  = milestone.timeframe
+                                h4 = phase.title
+
+
+              - if milestones.size > 4
+                .swiper-pagination.pt-4
