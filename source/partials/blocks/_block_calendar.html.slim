@@ -15,7 +15,7 @@ section.lightgrey-bg-a2
           data-toggle="dropdown"
           type="button" ]
           .d-flex.justify-content-between
-            .text-capitalize.mr-5.pb-2 id="active-calendar"
+            .mr-5.pb-2 id="active-calendar" style="text-transform:none;"
               = block.calendars.first.title
             svg.icon-expand.icon.icon-sm.icon-primary
               use xlink:href="/images/sprite.svg#it-expand" 
@@ -59,8 +59,8 @@ section.lightgrey-bg-a2
           role="tabpanel"
           aria-labelledby="tab#{n}-tab"]
 
-          /.swiper id="swiper-#{n}"
-            .swiper-calendar id="swiper-calendar-#{n}"
+          .swiper style="overflow:hidden;"
+            .swiper-container-calendar
               .swiper-wrapper
                 - milestones.each_with_index do |milestone, index|
                   .swiper-slide
@@ -73,36 +73,17 @@ section.lightgrey-bg-a2
                         else
                           phase_3
                         end
-                    h3.h6.font-weight-semibold
-                      = milestone.timeframe
-                    h4 = "Calendar n. #{n}"
-                    h4 = phase.title
+                        show_title = start_idx_array.include?(index)
+                    = partial "partials/card-calendar",
+                      locals: {milestone: milestone,
+                      phase: phase,
+                      show_phase_title: show_title}
 
-              /.swiper-button-next
-              /.swiper-button-prev
+              .swiper-button-next
+              .swiper-button-prev
+              .swiper-pagination
 
-          .swiper.pt-2
-            .swiper-container.p-0
-              .swiper-wrapper
-                - milestones.each_slice(4) do |milestones_group|
-                  .swiper-slide
-                    .row.col-12
-                      - milestones_group.each_with_index do |milestone, index|
-                        ruby:
-                          phase = case
-                            when index < phase1_idx
-                              phase_1
-                            when index < phase2_idx
-                              phase_2
-                            else
-                              phase_3
-                            end
-                          show_title = start_idx_array.include?(index)
-                        .col-3.px-0
-                          = partial "partials/card-calendar",
-                            locals: {milestone: milestone,
-                            phase: phase,
-                            show_phase_title: show_title}
-
-              - if milestones.size > 4
-                .swiper-pagination.pt-4
+              // Navigation arrows are not working.
+              // Possible solution is to add custom arrows and
+              // use slideNext and slidePrev methods.
+              // See https://swiperjs.com/swiper-api#initialize-swiper
