@@ -1,7 +1,7 @@
 ruby:
   titles = block.calendars.map {|c| c.title}
 
-section
+section.lightgrey-bg-a2
   .container.py-5
     h3.h1.text-center._mid-target.mb-4
       span._mid-target-point id=anchor_id(block.menu_title)
@@ -51,18 +51,42 @@ section
           phase_2 = calendar.phases[1] ? calendar.phases[1] : nil
           phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
           phase_3 = calendar.phases[2] ? calendar.phases[2] : nil
+          phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
+          start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
 
         .tab-pane.show [class=status
           id="tab#{n}"
           role="tabpanel"
           aria-labelledby="tab#{n}-tab"]
 
+          /.swiper id="swiper-#{n}"
+            .swiper-calendar id="swiper-calendar-#{n}"
+              .swiper-wrapper
+                - milestones.each_with_index do |milestone, index|
+                  .swiper-slide
+                    ruby:
+                      phase = case
+                        when index < phase1_idx
+                          phase_1
+                        when index < phase2_idx
+                          phase_2
+                        else
+                          phase_3
+                        end
+                    h3.h6.font-weight-semibold
+                      = milestone.timeframe
+                    h4 = "Calendar n. #{n}"
+                    h4 = phase.title
+
+              /.swiper-button-next
+              /.swiper-button-prev
+
           .swiper.pt-2
             .swiper-container.p-0
               .swiper-wrapper
                 - milestones.each_slice(4) do |milestones_group|
-                  .swiper-slide._mid-agenda__event--height
-                    .d-flex.justify-content-center
+                  .swiper-slide
+                    .row.col-12
                       - milestones_group.each_with_index do |milestone, index|
                         ruby:
                           phase = case
@@ -73,14 +97,12 @@ section
                             else
                               phase_3
                             end
-                        .d-flex.col-8.col-md-4.col-lg-3.py-0
-                          .swiper-slide__text.py-0
-                            .mid-agenda-block-border
-                              .pb-3.px-3.text-center.text-md-left
-                                h3.h6.font-weight-semibold
-                                  = milestone.timeframe
-                                h4 = phase.title
-
+                          show_title = start_idx_array.include?(index)
+                        .col-3.px-0
+                          = partial "partials/card-calendar",
+                            locals: {milestone: milestone,
+                            phase: phase,
+                            show_phase_title: show_title}
 
               - if milestones.size > 4
                 .swiper-pagination.pt-4

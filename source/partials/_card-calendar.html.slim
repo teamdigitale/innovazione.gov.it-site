@@ -1,0 +1,55 @@
+ruby:
+  milestone ||= nil
+  phase ||= nil
+  phase_title = show_phase_title ? phase.title : ""
+  card_top = case phase.state
+              when "past"
+                "_mid-past text-white"
+              when "current"
+                "primary-bg text-white"
+              when "future"
+                "_mid-future"
+              end
+
+  milestone_top = case milestone.state
+              when "past"
+                "_mid-past text-white"
+              when "current"
+                "primary-bg text-white"
+              when "future"
+                "_mid-future"
+              end
+
+  timeline_icon = case phase.state
+              when "past"
+                "check-circle"
+              when "current"
+                "exchange-circle"
+              when "future"
+                "flag"
+              end
+
+  icon_class = case phase.state
+              when "past"
+                "_mid-past icon-white"
+              when "current"
+                "bg-primary icon-white"
+              when "future"
+                "bg-white icon-primary"
+              end
+
+- if milestone && phase
+    .p-2.pl-4.mb-4.font-weight-semibold.mid-caption--large class=card_top style="height:44px; position:relative;"
+      = phase_title
+
+    div class=card_top style="height:5px; z-index:0;"
+
+    svg.icon class=icon_class style="z-index:100; position:absolute; top:57px;"
+      use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
+
+    .card-body.mb-5
+      .px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
+        = milestone.timeframe
+      .mt-4
+        p.card-text.mid-caption--large
+          = milestone.subtitle
