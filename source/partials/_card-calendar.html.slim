@@ -44,8 +44,9 @@ ruby:
 
     div class=card_top style="height:5px; z-index:0;"
 
-    svg.icon class=icon_class style="z-index:100; position:absolute; top:57px;"
-      use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
+    figure.rounded-circle
+      svg.icon.rounded-circle class=icon_class style="z-index:100; position:absolute; top:57px;"
+        use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
     .card-body.mb-5
       .px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
