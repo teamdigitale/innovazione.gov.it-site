@@ -1,0 +1,46 @@
+ruby:
+  milestones ||= []
+  phases ||= phases
+  milestones = phases.map {|p| p.milestones}.flatten
+  phase_1 = phases.first
+  phase1_idx = phase_1.milestones.size
+  phase_2 = phases[1] ? phases[1] : nil
+  phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
+  phase_3 = phases[2] ? phases[2] : nil
+  phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
+  start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
+
+.row.col-12
+  .col-1.d-flex.align-items-center
+    svg.icon.icon-lg.icon-primary.swiper-nav-prev.swiper-button-prev
+      use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+  
+  .col-10
+    .swiper style="overflow:hidden;"
+      .swiper-container-calendar
+        .swiper-wrapper
+          - milestones.each_with_index do |milestone, index|
+            .swiper-slide
+              ruby:
+                phase = case
+                  when index < phase1_idx
+                    phase_1
+                  when index < phase2_idx
+                    phase_2
+                  else
+                    phase_3
+                  end
+                  show_title = start_idx_array.include?(index)
+              = partial "partials/card-calendar",
+                locals: {milestone: milestone,
+                phase: phase,
+                show_phase_title: show_title}
+
+  .col-1.d-flex.align-items-center
+    svg.icon.icon-lg.icon-primary.swiper-nav-next.swiper-button-next
+      use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+
+    // Navigation arrows are not working.
+    // Possible solution is to add custom arrows and
+    // use slideNext and slidePrev methods.
+    // See https://swiperjs.com/swiper-api#initialize-swiper

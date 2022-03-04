@@ -68,11 +68,13 @@ if ($(".swiper-container").length > 0) {
   }, 50);
 }
 
+// Change active title in dropdown menu when a calendar is clicked in the calendars block of Italy2026 page
 $(".click-tab").click(function (event) {
   const value = $(this).text();
   $("#active-calendar").text(value);
 });
 
+// Swiper for calendars in calendar block
 if ($(".swiper-container-calendar").length > 0) {
   //some-slider-wrap-in
   let swiperInstances = [];
@@ -132,6 +134,8 @@ if ($(".swiper-container-calendar").length > 0) {
     }
   }, 50);
 }
+
+//$(".swiper-nav-prev")
 
 const searchClient = new DatoCmsSearch(
   "7bc02ea800b5526cd655912c1b6cfa",
