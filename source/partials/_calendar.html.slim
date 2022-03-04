@@ -9,15 +9,21 @@ ruby:
   phase_3 = phases[2] ? phases[2] : nil
   phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
   start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
+  cols = case milestones.size
+          when 1
+            4
+          when 2
+            6
+          when 3
+            8
+          else
+            10
+          end
 
-.row.col-12
-  .col-1.d-flex.align-items-center
-    svg.icon.icon-lg.icon-primary.swiper-nav-prev.swiper-button-prev
-      use xlink:href="/images/sprite.svg#it-arrow-left-circle"
-  
-  .col-10
+.row.justify-content-lg-center
+  div class="col-lg-#{cols}"
     .swiper style="overflow:hidden;"
-      .swiper-container-calendar
+      .swiper-container-calendar data-slides="#{milestones.size}"
         .swiper-wrapper
           - milestones.each_with_index do |milestone, index|
             .swiper-slide
@@ -35,12 +41,7 @@ ruby:
                 locals: {milestone: milestone,
                 phase: phase,
                 show_phase_title: show_title}
-
-  .col-1.d-flex.align-items-center
-    svg.icon.icon-lg.icon-primary.swiper-nav-next.swiper-button-next
-      use xlink:href="/images/sprite.svg#it-arrow-right-circle"
-
-    // Navigation arrows are not working.
-    // Possible solution is to add custom arrows and
-    // use slideNext and slidePrev methods.
-    // See https://swiperjs.com/swiper-api#initialize-swiper
+        svg.icon.icon-lg.icon-primary.swiper-button-prev
+          use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+        svg.icon.icon-lg.icon-primary.swiper-button-next
+          use xlink:href="/images/sprite.svg#it-arrow-right-circle"
