@@ -68,12 +68,6 @@ if ($(".swiper-container").length > 0) {
   }, 50);
 }
 
-// Change active title in dropdown menu when a calendar is clicked in the calendars block of Italy2026 page
-$(".click-tab").click(function (event) {
-  const value = $(this).text();
-  $("#active-calendar").text(value);
-});
-
 // Swiper for calendars in calendar block
 if ($(".swiper-container-calendar").length > 0) {
   //some-slider-wrap-in
@@ -81,6 +75,8 @@ if ($(".swiper-container-calendar").length > 0) {
   $(".swiper-container-calendar").each(function (index, element) {
     //some-slider-wrap-in
     const $this = $(this);
+    const slides = $this.data("slides");
+    const slidesNumber = slides < 4 ? slides : 4;
     $this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
     $this
       .parent()
@@ -102,14 +98,13 @@ if ($(".swiper-container-calendar").length > 0) {
       parallax: true,
       preloadImages: false,
       lazy: true,
-      slidesPerView: 3,
+      slidesPerView: slidesNumber,
       spaceBetween: 0,
-      slidesPerGroup: 3,
-      loop: false,
+      slidesPerGroup: slidesNumber,
       direction: "horizontal",
       navigation: {
-        nextEl: `.swiper-button-next .next-${index}`, //next must be unique (ex: some-slider-next)
-        prevEl: `.swiper-button-prev .prev-${index}`, //prev must be unique (ex: some-slider-prev)
+        prevEl: ".prev-" + index, //prev must be unique (ex: some-slider-prev)
+        nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
       },
       pagination: {
         el: ".pagination-" + index,
@@ -135,7 +130,15 @@ if ($(".swiper-container-calendar").length > 0) {
   }, 50);
 }
 
-//$(".swiper-nav-prev")
+// Change active title in dropdown menu when a calendar is clicked in the calendars block of Italy2026 page
+$(".click-tab").click(function (event) {
+  const value = $(this).text();
+  $("#active-calendar").text(value);
+});
+
+//$(".swiper-nav-prev").click(function (event) {
+//  const swiper = document.querySelector
+//});
 
 const searchClient = new DatoCmsSearch(
   "7bc02ea800b5526cd655912c1b6cfa",
