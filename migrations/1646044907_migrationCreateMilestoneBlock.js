@@ -13,6 +13,7 @@ module.exports = async (client) => {
     label: "Periodo",
     apiKey: "timeframe",
     fieldType: "string",
+    hint: "Esempio: I semestre 2022",
     validators: {
       required: {},
       length: {
