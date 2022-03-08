@@ -1,7 +1,7 @@
 ruby:
   milestone ||= nil
   phase ||= nil
-  phase_title = show_phase_title ? phase.title : ""
+  phase_title = show_phase_title_lg ? phase.title : ""
   line_top = phase.state == "past" ? "_mid-past_gradient" : "primary-bg"
 
   card_top = case phase.state
@@ -51,7 +51,10 @@ ruby:
 
 - if milestone && phase
     .p-2.pl-4.mb-5.font-weight-semibold.mid-caption--large._mid-phase-title class=card_top
-      = phase_title
+      .d-none.d-lg-block
+        = phase_title
+      .d-lg-none
+        = phase.title
 
     div class=line_top style="height:5px; z-index:0;"
 

@@ -8,21 +8,6 @@
 ._mid-past_gradient {
   background-image: linear-gradient(to right, #004080, #0066cc);
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
-}
-
-.swiper-button-prev {
-  position: absolute;
-  left: -90px;
-}
-
-.swiper-button-next {
-  position: absolute;
-  right: -90px;
-}
-
 ._mid-phase-title {
   height: 65px;
   position: relative;
@@ -57,5 +42,37 @@
   svg {
     width: $timeline-pin-size;
     height: $timeline-pin-size;
+  }
+}
+
+// swiper buttons for calendars
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 85%;
+  right: 35%;
+}
+
+@include media-breakpoint-up(lg) {
+  .swiper-button-prev {
+    position: absolute;
+    left: -90px;
+    top: 50%;
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    right: -90px;
+    top: 50%;
   }
 }

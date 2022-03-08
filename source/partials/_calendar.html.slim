@@ -1,5 +1,6 @@
 ruby:
   milestones ||= []
+  current_index = milestones.index {|m| m.state == "current"}.to_s
   phases ||= phases
   milestones = phases.map {|p| p.milestones}.flatten
   phase_1 = phases.first
@@ -11,11 +12,11 @@ ruby:
   start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
   cols = case milestones.size
           when 1
-            4
+            3
           when 2
             6
           when 3
-            8
+            9
           else
             10
           end
@@ -23,24 +24,25 @@ ruby:
 .row.justify-content-lg-center
   div class="col-lg-#{cols}"
     .swiper style="overflow:hidden;"
-      .swiper-container-calendar data-slides="#{milestones.size}"
+      .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_index
         .swiper-wrapper
           - milestones.each_with_index do |milestone, index|
+            ruby:
+              show_title_desktop = start_idx_array.include?(index)
+              phase = case
+                when index < phase1_idx
+                  phase_1
+                when index < phase2_idx
+                  phase_2
+                else
+                  phase_3
+                end
             .swiper-slide
-              ruby:
-                phase = case
-                  when index < phase1_idx
-                    phase_1
-                  when index < phase2_idx
-                    phase_2
-                  else
-                    phase_3
-                  end
-                  show_title = start_idx_array.include?(index)
               = partial "partials/card-calendar",
                 locals: {milestone: milestone,
                 phase: phase,
-                show_phase_title: show_title}
+                show_phase_title_lg: show_title_desktop}
+
         svg.icon.icon-lg.icon-primary.swiper-button-prev
           use xlink:href="/images/sprite.svg#it-arrow-left-circle"
         svg.icon.icon-lg.icon-primary.swiper-button-next

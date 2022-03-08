@@ -8,6 +8,9 @@ if ($(".swiper-container-calendar").length > 0) {
     const $this = $(this);
     const slides = $this.data("slides");
     const slidesNumber = slides < 4 ? slides : 4;
+    const initial_slide_index = $this.data("initial");
+    console.log("initial slide index:");
+    console.log(initial_slide_index);
     $this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
     $this
       .parent()
@@ -29,9 +32,18 @@ if ($(".swiper-container-calendar").length > 0) {
       parallax: true,
       preloadImages: false,
       lazy: true,
-      slidesPerView: slidesNumber,
       spaceBetween: 0,
-      slidesPerGroup: slidesNumber,
+      slidesPerView: 1,
+      initialSlide: initial_slide_index,
+      //slidesPerGroup: 1,
+      breakpoints: {
+        // medium is 768 and large is 992
+        992: {
+          slidesPerView: slidesNumber,
+          slidesPerGroup: slidesNumber,
+          initialSlide: 0,
+        },
+      },
       direction: "horizontal",
       navigation: {
         prevEl: ".prev-" + index, //prev must be unique (ex: some-slider-prev)
