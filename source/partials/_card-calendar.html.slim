@@ -31,31 +31,38 @@ ruby:
                 "flag"
               end
 
+  pin_icon_class = case phase.state
+              when "past"
+                "_mid-past"
+              when "current"
+                "bg-primary"
+              when "future"
+                ""
+              end
+
   icon_class = case phase.state
               when "past"
-                "_mid-past icon-white"
+                "icon-white"
               when "current"
-                "bg-primary icon-white"
+                "icon-white"
               when "future"
-                "bg-white icon-primary future_icon"
+                "icon-primary _mid-future_icon"
               end
 
 - if milestone && phase
-    .p-2.pl-4.mb-4.font-weight-semibold.mid-caption--large class=card_top style="height:65px; position:relative;"
+    .p-2.pl-4.mb-5.font-weight-semibold.mid-caption--large._mid-phase-title class=card_top
       = phase_title
 
     div class=line_top style="height:5px; z-index:0;"
 
-    figure.rounded-circle
-      svg.icon.icon-padded.icon_timeline.rounded-circle class=icon_class
-        use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
+    .it-pin-wrapper
+      .pin-icon class=pin_icon_class
+        svg class=icon_class
+          use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
-    .card-body.mb-5.pr-0
+    .card-body.mb-5.pr-0.pt-0
       .px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
         = milestone.timeframe
       .mt-4
         p.font-weight-semibold.mid-caption--large
           = milestone.subtitle
-
-
-// for the icons style look at https://github.com/italia/bootstrap-italia/blob/075a765fa6d6de77109a0a138613cac5e46f5041/src/scss/custom/_timeline.scss#L29
