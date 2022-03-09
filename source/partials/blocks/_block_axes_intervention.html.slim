@@ -1,11 +1,11 @@
 ruby:
   items ||= block.interventions
-  classes = %(pt-5 text-center d-ml-flex align-items-left
-               justify-content-lg-around)
+  classes = %(pt-5 text-center d-flex align-items-left
+               justify-content-center justify-content-lg-around)
   pretitle_font_classes = %(h6 mid-caption--large
                text-uppercase mt-4 text-white font-weight-semibold)
-  avatar_classes = %(lazyload rounded-circle
-               d-block w-100 h-100 bg-white)
+  figure_classes = %(d-flex justify-content-center
+               bg-white rounded-circle)
 
 - if items.present?
 
@@ -18,14 +18,14 @@ ruby:
       .row.my-lg-5
         - items.each do |item|
           .col-lg-2 class=classes
-            figure.avatar style="width: 175px; height: 175px"
+            figure class=figure_classes style="width:175px; height:175px;"
               = proxy_image_tag item.thumbnail.url(w: 10, h: 10,
                   fit: "max"), data: {sizes: "100vw",
                   src: item.thumbnail.url(w: 1200, h: 1200,
                   fit: "max", auto: "compress"),
                   srcset: "#{item.thumbnail.url(w: 800, h: 800,
                   fit: 'max', auto: 'compress')} 480w"},
-                  class: "#{avatar_classes}",
+                  class: "w-100 lazyload",
                   style: "object-fit:contain;",
                   alt: item.thumbnail.alt
           .col-lg-4
