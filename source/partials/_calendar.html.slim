@@ -1,6 +1,8 @@
 ruby:
   milestones ||= []
   current_index = milestones.index {|m| m.state == "current"}.to_s
+
+
   phases ||= phases
   milestones = phases.map {|p| p.milestones}.flatten
   phase_1 = phases.first
@@ -10,6 +12,7 @@ ruby:
   phase_3 = phases[2] ? phases[2] : nil
   phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
   start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
+  last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
   cols = case milestones.size
           when 1
             3
@@ -28,6 +31,7 @@ ruby:
         .swiper-wrapper
           - milestones.each_with_index do |milestone, index|
             ruby:
+              last_in_past_phase = last_idx_in_past == index
               show_title_desktop = start_idx_array.include?(index)
               phase = case
                 when index < phase1_idx
@@ -41,6 +45,7 @@ ruby:
               = partial "partials/card-calendar",
                 locals: {milestone: milestone,
                 phase: phase,
+                last_in_past_phase: last_in_past_phase,
                 show_phase_title_lg: show_title_desktop}
 
         a.swiper-button-prev

@@ -1,8 +1,15 @@
 ruby:
   milestone ||= nil
   phase ||= nil
+  last_in_past_phase ||= nil
   phase_title = show_phase_title_lg ? phase.title : ""
-  line_top = phase.state == "past" ? "_mid-past_gradient" : "primary-bg"
+  line_top = if last_in_past_phase
+                "_mid-past_gradient"
+              elsif phase.state =="past"
+                "_mid-past"
+              else
+                "primary-bg"
+              end
 
   card_top = case phase.state
               when "past"
@@ -49,6 +56,15 @@ ruby:
                 "icon-primary _mid-future_icon"
               end
 
+  timeframe_top_class = case milestone.state
+              when "past"
+                "round_top_past"
+              when "current"
+                "round_top_current"
+              when "future"
+                "round_top_future"
+              end
+
 - if milestone && phase
     .p-2.pl-4.mb-5.font-weight-semibold.mid-caption--large._mid-phase-title class=card_top
       .d-none.d-lg-block
@@ -64,8 +80,10 @@ ruby:
           use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
     .card-body.mb-5.pr-0.pt-0
-      .px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
-        = milestone.timeframe
+      /.px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
+      .pin-text.mid-caption--large class=milestone_top
+        span class=timeframe_top_class
+          = milestone.timeframe
       .mt-4
         p.font-weight-semibold.mid-caption--large
           = milestone.subtitle
