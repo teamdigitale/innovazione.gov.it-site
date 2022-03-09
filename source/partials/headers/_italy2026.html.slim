@@ -30,7 +30,7 @@
               alt: page.image.alt
 
   .lightgrey-bg-a2
-    .container.py-5.text-center.text-sm-left
+    .container.pt-5.pb-4.py-lg-5.text-center.text-sm-left
       .col-12
         .row
           .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
@@ -55,16 +55,16 @@
                     = partial "partials/column-title",
                       locals: {title: page.featured_pre_title}
 
-                  h3.h3.text-primary.d-lg-block.h2.pt-2.pb-3.mr-4
+                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.mr-4
                     = page.featured_title
 
               - if page.featured_links.present?
-                .mt-3.mt-lg-4.text-center.text-lg-left.pb-5.pb-lg-0.mb-3.mb-lg-0
+                .mt-3.text-center.text-lg-left.pb-5.pb-lg-0.mb-3
                   ruby:
                     first_link = page.featured_links.first
                     html_class = "btn mr-3 text-uppercase"
-                    first_btn_class = "btn-outline-primary #{html_class}"
-                    second_btn_class = "btn-primary #{html_class}"
+                    first_btn_class = "btn-outline-primary mt-3 #{html_class}"
+                    second_btn_class = "btn-primary mt-3 #{html_class}"
 
                   = partial "partials/links/#{first_link.item_type.api_key}",
                     locals: {item: first_link,
