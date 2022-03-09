@@ -15,13 +15,13 @@ section.lightgrey-bg-a2
           data-toggle="dropdown"
           type="button" ]
           .d-flex.justify-content-between
-            .mr-5.pb-2 id="active-calendar" style="text-transform:none;"
+            .mr-5.pb-2.text-primary id="active-calendar" style="text-transform:none;"
               = block.calendars.first.title
             svg.icon-expand.icon.icon-sm.icon-primary
               use xlink:href="/images/sprite.svg#it-expand" 
         .dropdown-menu aria-labelledby="dropdownMenuButton" 
           .link-list-wrapper
-            ul.link-list.nav.nav-tabs id="myTab" role="tablist"
+            ul.link-list.nav.nav-tabs.nav-tabs-vertical id="myTab" role="tablist" style="flex-wrap:wrap;"
               - titles.each_with_index do |title, index|
                 ruby:
                   selected = (index == 0)
@@ -30,7 +30,8 @@ section.lightgrey-bg-a2
 
                 li.nav-items
                   a.list-item.nav-link [
-                    class="#{status} click-tab"
+                    class="#{status} click-tab text-primary"
+                    style="border:none; font-weight:normal;"
                     id="tab#{n}-tab"
                     data-toggle="tab"
                     href="#tab#{n}"
