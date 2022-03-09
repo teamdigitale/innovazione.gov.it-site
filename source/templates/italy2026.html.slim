@@ -22,7 +22,8 @@ ruby:
     - image_right = i.even?
     = partial "partials/blocks/#{block.item_type.api_key}",
       locals: {block: block,
-      image_right: false}
+      image_right: false,
+      image_mobile_top: true}
 
   / Three-column blocks
   .container
