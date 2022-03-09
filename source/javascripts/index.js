@@ -24,28 +24,15 @@ if ($(".swiper-container").length > 0) {
   $(".swiper-container").each(function (index, element) {
     //some-slider-wrap-in
     const $this = $(this);
-    $this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
+    $this.addClass("instance-" + index); //instance need to be unique
     $this
       .parent()
       .find(".swiper-pagination")
       .addClass("pagination-" + index);
-    $this
-      .parent()
-      .find(".swiper-button-prev")
-      .addClass("prev-" + index); //prev must be unique (ex: some-slider-prev)
-    $this
-      .parent()
-      .find(".swiper-button-next")
-      .addClass("next-" + index); //next must be unique (ex: some-slider-next)
     swiperInstances[index] = new Swiper(".instance-" + index, {
       //instance need to be unique (ex: some-slider)
-      // your settings ...
       preloadImages: false,
       lazy: true,
-      navigation: {
-        prevEl: ".prev-" + index, //prev must be unique (ex: some-slider-prev)
-        nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
-      },
       pagination: {
         el: ".pagination-" + index,
         type: "bullets",
@@ -61,13 +48,6 @@ if ($(".swiper-container").length > 0) {
       },
     });
   });
-
-  //or all of them
-  setTimeout(function () {
-    for (const slider of swiperInstances) {
-      slider.update();
-    }
-  }, 50);
 }
 
 const searchClient = new DatoCmsSearch(
