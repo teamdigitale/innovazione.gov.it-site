@@ -55,12 +55,14 @@
   position: absolute;
   top: 85%;
   left: 35%;
+  width: 48px;
 }
 
 .swiper-button-next {
   position: absolute;
   top: 85%;
   right: 35%;
+  width: 48px;
 }
 
 @include media-breakpoint-up(lg) {
@@ -68,11 +70,13 @@
     position: absolute;
     left: -90px;
     top: 50%;
+    width: 48px;
   }
 
   .swiper-button-next {
     position: absolute;
     right: -90px;
     top: 50%;
+    width: 48px;
   }
 }
