@@ -1,10 +1,24 @@
 ruby:
-  section_titles = [t("pnrr_section_title"),
-                    t("italy2026_section_title"),
-                    t("calendars_section_title"),
-                    t("articles_section_title"),
-                    t("press_releases_section_title"),
-                    t("announcements_section_title")]
+  section_titles = []
+
+  page.content_blocks.each do |block|
+    arr = ["block_calendar", "block_pnrr", "block_italy2026"]
+    if arr.include? block.item_type.api_key
+      section_titles << block.menu_title
+    end
+  end
+
+  if page.articles.any?
+    section_titles << t("articles_section_title")
+  end
+
+  if page.press_releases.any?
+    section_titles << t("press_releases_section_title")
+  end
+
+  if page.announcements.any?
+    section_titles << t("announcements_section_title")
+  end
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
