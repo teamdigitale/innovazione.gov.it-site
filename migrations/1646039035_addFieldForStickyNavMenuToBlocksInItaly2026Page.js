@@ -12,7 +12,6 @@ module.exports = async (client) => {
     fieldType: "string",
     position: 1,
     validators: {
-      required: {},
       length: {
         max: 40,
       },
@@ -33,7 +32,6 @@ module.exports = async (client) => {
     fieldType: "string",
     position: 1,
     validators: {
-      required: {},
       length: {
         max: 40,
       },
