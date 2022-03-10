@@ -21,7 +21,7 @@ module.exports = async (client) => {
     itemType: linkInternalModel.id,
     title: "Il Piano",
     link: ilPiano.id,
-    cta_label: "Scopri di più",
+    ctaLabel: "Scopri di più",
   });
 
   // Create internal link to 'Gli obiettivi'
@@ -29,6 +29,6 @@ module.exports = async (client) => {
     itemType: linkInternalModel.id,
     title: "Gli obiettivi",
     link: gliObiettivi.id,
-    cta_label: "Scopri di più",
+    ctaLabel: "Scopri di più",
   });
 };
