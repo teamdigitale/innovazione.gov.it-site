@@ -1,0 +1,44 @@
+ruby:
+  dark = block.background == "dark"
+  background = dark ? "bg-primary text-white" : "primary-bg-a1"
+  button_background = dark ? "bg-dark" : ""
+  img_style = "max-width:100%; object-fit:scale-down; max-height:100px"
+
+.card-wrapper
+  .card
+    .card-body class=background
+      .row
+        .col-2.d-flex.align-items-center
+          .img-responsive-wrapper
+            figure.my-0
+              = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                  h: 10,
+                  fit: "max"),
+                data: {sizes: "100vw",
+                  src: block.thumbnail.url(w: 100,
+                    h: 100,
+                    fit: "max", auto: "compress"),
+                  srcset: "#{block.thumbnail.url(w: 120,
+                      h: 120,
+                      fit: 'max',
+                      auto: 'compress')} 480w,
+                    #{block.thumbnail.url(w: 155,
+                      h: 250,
+                      fit: 'max',
+                      auto: 'compress')} 632w"},
+                class: "lazyload d-block",
+                style: img_style,
+                alt: block.thumbnail.alt
+        .col-10.d-flex.align-items-between
+          .mr-4
+            h3.h5.font-weight-semibold
+              = block.title
+            - if block.description.present?
+              p.mid-caption--large.pb-0.mb-0
+                = block.description
+
+          .d-flex.align-items-center
+            div class=button_background
+              - html_class = "btn btn-primary"
+              = partial "partials/links/#{block.link.item_type.api_key}",
+                locals: {item: block.link, html_class: html_class}
