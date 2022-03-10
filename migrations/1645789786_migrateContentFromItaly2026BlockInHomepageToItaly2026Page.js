@@ -47,6 +47,7 @@ module.exports = async (client) => {
           itemType: italy2026Block.id,
           preTitle: blockRecord.preTitle,
           title: blockRecord.title,
+          menuTitle: "Gli obiettivi",
           text: blockRecord.text,
           thumbnail: blockRecord.thumbnail,
           link: gliObiettivi.id,
