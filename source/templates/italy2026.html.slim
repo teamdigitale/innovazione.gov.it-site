@@ -27,10 +27,11 @@ ruby:
 
   / Three-column blocks
   .container
-    .mt-5.mb-4.mb-lg-0
-      = partial "partials/section-title",
-        locals: {title: t("articles_section_title"),
-        is_anchor: true}
+    - if page.articles.any?
+      .mt-5.mb-4.mb-lg-0
+        = partial "partials/section-title",
+          locals: {title: t("articles_section_title"),
+          is_anchor: true}
     = partial "partials/cards-horizontal-list",
       locals: {items: page.articles.take(3),
       title_is_anchor: true,
