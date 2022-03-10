@@ -31,10 +31,10 @@ module.exports = async (client) => {
     title: "Italia digitale 2026",
     subtitle:
       "Obiettivi e iniziative per il digitale nel Piano nazionale di ripresa e resilienza",
-    menuLabel: "Italia digitale",
-    slug: "italia-digitale",
+    menuLabel: "Italia digitale 2026",
+    slug: "italia-digitale-2026",
     seo: {
-      title: "Italia digitale",
+      title: "Italia digitale 2026",
       description:
         "Obiettivi e iniziative per il digitale nel Piano nazionale di ripresa e resilienza",
     },
