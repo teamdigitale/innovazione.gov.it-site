@@ -54,7 +54,6 @@ module.exports = async (client) => {
         }),
       ],
     });
-    console.log(addBlock);
   } else {
     console.log("No block found to migrate!");
   }

@@ -3,66 +3,52 @@ ruby:
   phase ||= nil
   last_in_past_phase ||= nil
   phase_title = show_phase_title_lg ? phase.title : ""
+  card_top = nil
+  milestone_top = nil
+  timeline_icon = nil
+  pin_icon_class = nil
+  icon_class = nil
+  timeframe_top_class = nil
+
+  case phase.state
+  when "past"
+    card_top = "_mid-past text-white"
+    timeline_icon = "check-circle"
+    pin_icon_class = "_mid-past"
+    icon_class = "icon-white"
+  when "current"
+    card_top = "primary-bg text-white"
+    timeline_icon = "exchange-circle"
+    pin_icon_class = "bg-primary"
+    icon_class = "icon-white"
+  when "future"
+    card_top = "_mid-future"
+    timeline_icon = "flag"
+    pin_icon_class = ""
+    icon_class = "icon-primary _mid-future_icon"
+  end
+
+  case milestone.state
+  when "past"
+    timeframe_top_class = "_mid-past text-white it-evidence"
+    milestone_top = "_mid-past text-white it-evidence"
+    timeframe_top_class = "round_top_past"
+  when "current"
+    timeframe_top_class = "primary-bg text-white it-now"
+    milestone_top = "primary-bg text-white it-now"
+    timeframe_top_class = "round_top_current"
+  when "future"
+    timeframe_top_class = "_mid-future"
+    milestone_top = "_mid-future"
+    timeframe_top_class = "round_top_future"
+  end
+
   line_top = if last_in_past_phase
                 "_mid-past_gradient"
               elsif phase.state =="past"
                 "_mid-past"
               else
                 "primary-bg"
-              end
-
-  card_top = case phase.state
-              when "past"
-                "_mid-past text-white"
-              when "current"
-                "primary-bg text-white"
-              when "future"
-                "_mid-future"
-              end
-
-  milestone_top = case milestone.state
-              when "past"
-                "_mid-past text-white it-evidence"
-              when "current"
-                "primary-bg text-white it-now"
-              when "future"
-                "_mid-future"
-              end
-
-  timeline_icon = case phase.state
-              when "past"
-                "check-circle"
-              when "current"
-                "exchange-circle"
-              when "future"
-                "flag"
-              end
-
-  pin_icon_class = case phase.state
-              when "past"
-                "_mid-past"
-              when "current"
-                "bg-primary"
-              when "future"
-                ""
-              end
-
-  icon_class = case phase.state
-              when "past"
-                "icon-white"
-              when "current"
-                "icon-white"
-              when "future"
-                "icon-primary _mid-future_icon"
-              end
-
-  timeframe_top_class = case milestone.state
-              when "past"
-                "round_top_past"
-              when "current"
-                "round_top_current"
-              when "future"
-                "round_top_future"
               end
 
 - if milestone && phase
@@ -80,7 +66,6 @@ ruby:
           use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
     .card-body.mb-5.pr-0.pt-0
-      /.px-4.py-1.text-uppercase.mid-caption--large.font-weight-semibold class=milestone_top
       .pin-text.mid-caption--large class=milestone_top
         span class=timeframe_top_class
           = milestone.timeframe

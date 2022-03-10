@@ -7,8 +7,7 @@
 }
 
 ._mid-past_gradient {
-  background-image: linear-gradient(to right, #004080, #0066cc);
-  //background-image: linear-gradient(to right, $primary-a10);
+  background-image: linear-gradient(to right, $primary-a10, $primary);
 }
 ._mid-phase-title {
   height: 65px;
@@ -51,7 +50,7 @@
   font-weight: 600;
   text-transform: uppercase;
   border-radius: $border-radius;
-  font-family: $font-family-monospace;
+  //font-family: $font-family-monospace;
 }
 
 .round_top_current {
