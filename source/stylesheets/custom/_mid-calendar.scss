@@ -151,3 +151,7 @@
     width: 48px;
   }
 }
+
+._mid-fade-in {
+  mask-image: linear-gradient(to right, transparent -5%, black 10%);
+}

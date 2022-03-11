@@ -43,7 +43,7 @@ ruby:
                 else
                   phase_3
                 end
-            .swiper-slide
+            .swiper-slide class="#{index == 2 ? "_mid-fade-in" : ""}"
               = partial "partials/card-calendar",
                 locals: {milestone: milestone,
                 phase: phase,
