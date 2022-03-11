@@ -41,8 +41,10 @@
   }
 
   svg {
-    width: $timeline-pin-size;
-    height: $timeline-pin-size;
+    //width: $timeline-pin-size;
+    //height: $timeline-pin-size;
+    width: 32px;
+    height: 32px;
   }
 }
 
