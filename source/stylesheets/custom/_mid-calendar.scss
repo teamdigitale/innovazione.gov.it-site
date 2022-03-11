@@ -104,6 +104,16 @@
   }
 }
 
+._mid-dotted:after {
+  content: "";
+  border-style: dotted;
+  position: absolute;
+  height: 5px;
+  border-color: $lightgrey-a2;
+  width: 39px;
+  left: 180px;
+}
+
 // swiper buttons for calendars
 .swiper-button-next::after,
 .swiper-button-prev::after {

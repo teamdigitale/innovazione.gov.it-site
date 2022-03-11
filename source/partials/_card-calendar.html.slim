@@ -2,7 +2,9 @@ ruby:
   milestone ||= nil
   phase ||= nil
   last_in_past_phase ||= nil
-  phase_title = show_phase_title_lg ? phase.title : ""
+  phase_title = first_in_phase ? phase.title : ""
+  add_right_margin = last_in_phase && !last ? "mr-2" : ""
+  show_dotted = milestone.long_duration ? "_mid-dotted" : ""
   card_top = nil
   milestone_top = nil
   timeline_icon = nil
@@ -52,23 +54,23 @@ ruby:
               end
 
 - if milestone && phase
-    .p-2.pl-4.mb-5.font-weight-semibold.mid-caption--large._mid-phase-title class=card_top
-      .d-none.d-lg-block
-        = phase_title
-      .d-lg-none
-        = phase.title
+  .p-2.pl-4.mb-5.font-weight-semibold.mid-caption--large._mid-phase-title class="#{card_top} #{add_right_margin}"
+    .d-none.d-lg-block
+      = phase_title
+    .d-lg-none
+      = phase.title
 
-    div class=line_top style="height:5px; z-index:0;"
+  div class="#{line_top} #{show_dotted}" style="height:5px; z-index:0;"
 
-    .it-pin-wrapper
-      .pin-icon class=pin_icon_class
-        svg class=icon_class
-          use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
+  .it-pin-wrapper
+    .pin-icon class=pin_icon_class
+      svg class=icon_class
+        use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
-    .card-body.mb-5.pr-0.pt-0
-      .pin-text.mid-caption--large class=milestone_top
-        span class=timeframe_top_class
-          = milestone.timeframe
-      .mt-4
-        p.font-weight-semibold.mid-caption--large
-          = milestone.subtitle
+  .card-body.mb-5.pr-0.pt-0
+    .pin-text.mid-caption--large class=milestone_top
+      span class=timeframe_top_class
+        = milestone.timeframe
+    .mt-4
+      p.font-weight-semibold.mid-caption--large
+        = milestone.subtitle
