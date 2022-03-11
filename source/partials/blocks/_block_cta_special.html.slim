@@ -8,37 +8,65 @@ ruby:
   .card
     .card-body class=background
       .row
-        .col-2.d-flex.align-items-center
-          .img-responsive-wrapper
-            figure.my-0
-              = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
-                  h: 10,
-                  fit: "max"),
-                data: {sizes: "100vw",
-                  src: block.thumbnail.url(w: 100,
-                    h: 100,
-                    fit: "max", auto: "compress"),
-                  srcset: "#{block.thumbnail.url(w: 120,
-                      h: 120,
-                      fit: 'max',
-                      auto: 'compress')} 480w,
-                    #{block.thumbnail.url(w: 155,
-                      h: 250,
-                      fit: 'max',
-                      auto: 'compress')} 632w"},
-                class: "lazyload d-block",
-                style: img_style,
-                alt: block.thumbnail.alt
-        .col-10.d-flex.align-items-between
-          .mr-4
-            h3.h5.font-weight-semibold
+        .col-md-2.d-md-flex.align-items-center
+          .d-none.d-md-block
+            .img-responsive-wrapper
+                figure.my-0
+                  = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                      h: 10,
+                      fit: "clip"),
+                    data: {sizes: "100vw",
+                      src: block.thumbnail.url(w: 100,
+                        h: 100,
+                        fit: "clip", auto: "compress"),
+                      srcset: "#{block.thumbnail.url(w: 120,
+                          h: 120,
+                          fit: 'clip',
+                          auto: 'compress')} 480w,
+                        #{block.thumbnail.url(w: 155,
+                          h: 250,
+                          fit: 'clip',
+                          auto: 'compress')} 632w"},
+                    class: "lazyload d-block",
+                    style: img_style,
+                    alt: block.thumbnail.alt
+          .d-md-none
+            .mx-5.mt-4
+              .img-responsive-wrapper
+                .img-responsive
+                  .img-wrapper
+                    figure
+                      = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                          h: 10,
+                          fit: "clip"),
+                        data: {sizes: "100vw",
+                          src: block.thumbnail.url(w: 100,
+                            h: 100,
+                            fit: "clip", auto: "compress"),
+                          srcset: "#{block.thumbnail.url(w: 120,
+                              h: 120,
+                              fit: 'clip',
+                              auto: 'compress')} 480w,
+                            #{block.thumbnail.url(w: 155,
+                              h: 250,
+                              fit: 'clip',
+                              auto: 'compress')} 632w"},
+                        class: "lazyload d-block",
+                        alt: block.thumbnail.alt
+        .col-md-10.d-md-flex.align-items-md-between.mt-5.mt-md-0
+          .m-4.my-md-0.ml-md-0
+            h3.mid-caption--lead.font-weight-semibold.text-center.text-md-left
               = block.title
             - if block.description.present?
+            .d-none.d-md-block
               p.mid-caption--large.pb-0.mb-0
                 = block.description
+            .d-md-none
+              p.mid-caption--xlarge.pb-0.mb-0.text-center
+                = block.description
 
-          .d-flex.align-items-center
-            div class=button_background
+          .d-flex.align-items-center.justify-content-center
+            .m-4.m-md-0 class=button_background
               - html_class = "btn btn-primary"
               = partial "partials/links/#{block.link.item_type.api_key}",
                 locals: {item: block.link, html_class: html_class}
