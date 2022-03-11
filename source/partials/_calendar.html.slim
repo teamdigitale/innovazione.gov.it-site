@@ -11,7 +11,8 @@ ruby:
   phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
   phase_3 = phases[2] ? phases[2] : nil
   phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
-  start_idx_array = [0, phase1_idx, phase2_idx, phase3_idx]
+  start_idx = [0, phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}
+  last_idx = [phase1_idx -1, phase2_idx - 1, phase3_idx -1].reject {|e| e == nil}
   last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
   cols = case milestones.size
           when 1
@@ -32,7 +33,8 @@ ruby:
           - milestones.each_with_index do |milestone, index|
             ruby:
               last_in_past_phase = last_idx_in_past == index
-              show_title_desktop = start_idx_array.include?(index)
+              first_in_phase = start_idx.include?(index)
+              last_in_phase = last_idx.include?(index)
               phase = case
                 when index < phase1_idx
                   phase_1
@@ -46,7 +48,9 @@ ruby:
                 locals: {milestone: milestone,
                 phase: phase,
                 last_in_past_phase: last_in_past_phase,
-                show_phase_title_lg: show_title_desktop}
+                last_in_phase: last_in_phase,
+                last: index == milestones.size - 1,
+                first_in_phase: first_in_phase}
 
         a.swiper-button-prev
           svg.icon.icon-lg.icon-primary
