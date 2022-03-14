@@ -26,8 +26,12 @@ ruby:
           end
 
 .row.justify-content-lg-center
-  div class="col-lg-#{cols}"
-    .swiper style="overflow:hidden;"
+  .col-lg-1.order-2.order-lg-0 
+    a.swiper-button-prev class="prev-#{calendar_idx}"
+      svg.icon.icon-lg.icon-primary
+        use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+  .slides_block class="col-lg-#{cols}"
+    .swiper.overflow-lg-hidden
       .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_index
         .swiper-wrapper
           - milestones.each_with_index do |milestone, index|
@@ -43,7 +47,7 @@ ruby:
                 else
                   phase_3
                 end
-            .swiper-slide class="#{index == 2 ? "_mid-fade-in" : ""}"
+            .swiper-slide
               = partial "partials/card-calendar",
                 locals: {milestone: milestone,
                 phase: phase,
@@ -52,9 +56,7 @@ ruby:
                 last: index == milestones.size - 1,
                 first_in_phase: first_in_phase}
 
-        a.swiper-button-prev
-          svg.icon.icon-lg.icon-primary
-            use xlink:href="/images/sprite.svg#it-arrow-left-circle"
-        a.swiper-button-next
-          svg.icon.icon-lg.icon-primary
-            use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+  .col-lg-1
+    a.swiper-button-next class="next-#{calendar_idx}"
+      svg.icon.icon-lg.icon-primary
+        use xlink:href="/images/sprite.svg#it-arrow-right-circle"
