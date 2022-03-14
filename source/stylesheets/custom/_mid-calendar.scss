@@ -123,35 +123,47 @@
 }
 
 .swiper-button-prev {
-  position: absolute;
-  top: 85%;
-  left: 35%;
+  left: 40%;
   width: 48px;
 }
 
 .swiper-button-next {
-  position: absolute;
-  top: 85%;
-  right: 35%;
+  right: 40%;
   width: 48px;
 }
 
 @include media-breakpoint-up(lg) {
   .swiper-button-prev {
     position: absolute;
-    left: -90px;
+    left: -10%;
     top: 50%;
     width: 48px;
   }
 
   .swiper-button-next {
     position: absolute;
-    right: -90px;
+    right: -10%;
     top: 50%;
     width: 48px;
   }
 }
 
-._mid-fade-in {
-  mask-image: linear-gradient(to right, transparent -5%, black 10%);
+@include media-breakpoint-up(lg) {
+  ._mid-fade-in {
+    mask-image: linear-gradient(to right, RGB(237, 245, 252, 10%), black 50%);
+  }
+
+  ._mid-fade-out {
+    mask-image: linear-gradient(to right, black 50%, RGB(237, 245, 252, 10%));
+  }
+
+  ._mid-faded-calendar {
+    mask-image: linear-gradient(
+      to right,
+      RGB(237, 245, 252, 10%),
+      black 25%,
+      black 75%,
+      RGB(237, 245, 252, 10%)
+    );
+  }
 }
