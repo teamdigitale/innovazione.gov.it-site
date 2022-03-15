@@ -113,7 +113,7 @@
   height: 5px;
   border-color: $lightgrey-a2;
   width: 39px;
-  left: 180px;
+  left: 254px;
 }
 
 // swiper buttons for calendars
@@ -123,12 +123,12 @@
 }
 
 .swiper-button-prev {
-  left: 40%;
+  left: 35%;
   width: 48px;
 }
 
 .swiper-button-next {
-  right: 40%;
+  right: 35%;
   width: 48px;
 }
 
@@ -150,20 +150,40 @@
 
 @include media-breakpoint-up(lg) {
   ._mid-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 10%), black 50%);
+    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 10%);
   }
 
   ._mid-fade-out {
-    mask-image: linear-gradient(to right, black 50%, RGB(237, 245, 252, 10%));
+    mask-image: linear-gradient(to right, black 90%, RGB(237, 245, 252, 0%));
   }
 
   ._mid-faded-calendar {
     mask-image: linear-gradient(
       to right,
-      RGB(237, 245, 252, 10%),
-      black 25%,
-      black 75%,
-      RGB(237, 245, 252, 10%)
+      RGB(237, 245, 252, 0%),
+      black 10%,
+      black 90%,
+      RGB(237, 245, 252, 0%)
+    );
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  ._mid-mobile-fade-in {
+    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 10%);
+  }
+
+  ._mid-mobile-fade-out {
+    mask-image: linear-gradient(to right, black 90%, RGB(237, 245, 252, 0%));
+  }
+
+  ._mid-mobile-faded-calendar {
+    mask-image: linear-gradient(
+      to right,
+      RGB(237, 245, 252, 0%),
+      black 10%,
+      black 90%,
+      RGB(237, 245, 252, 0%)
     );
   }
 }
