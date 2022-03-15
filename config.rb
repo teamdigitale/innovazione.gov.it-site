@@ -52,8 +52,8 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           environment: "develop"
            #environment: DATO_ENV
+           environment: "develop"
 end
 
 webpack_command =
