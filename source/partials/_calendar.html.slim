@@ -1,10 +1,7 @@
 ruby:
-  milestones ||= []
-  current_index = milestones.index {|m| m.state == "current"}.to_s
-
-
   phases ||= phases
-  milestones = phases.map {|p| p.milestones}.flatten
+  milestones ||= []
+  current_milestone_index = milestones.index {|m| m.state == "current"}.to_s
   phase_1 = phases.first
   phase1_idx = phase_1.milestones.size
   phase_2 = phases[1] ? phases[1] : nil
@@ -32,9 +29,10 @@ ruby:
         use xlink:href="/images/sprite.svg#it-arrow-left-circle"
   .slides_block class="col-lg-#{cols}"
     .swiper.overflow-lg-hidden
-      .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_index
+      .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_milestone_index
         .swiper-wrapper
           - milestones.each_with_index do |milestone, index|
+
             ruby:
               last_in_past_phase = last_idx_in_past == index
               first_in_phase = start_idx.include?(index)
@@ -47,6 +45,7 @@ ruby:
                 else
                   phase_3
                 end
+
             .swiper-slide
               = partial "partials/card-calendar",
                 locals: {milestone: milestone,
