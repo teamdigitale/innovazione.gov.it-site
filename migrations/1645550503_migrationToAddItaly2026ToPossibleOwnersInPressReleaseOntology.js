@@ -11,7 +11,7 @@ module.exports = async (client) => {
   const italy2026Model = await client.itemType.find("italy2026_page");
 
   // Update function
-  const updatedField = await client.field.update(ownersField.id, {
+  await client.field.update(ownersField.id, {
     label: "A chi appartiene",
     apiKey: "owners",
     validators: {

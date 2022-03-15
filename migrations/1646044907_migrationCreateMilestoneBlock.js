@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const title = await client.fields.create(milestoneBlock.id, {
+  await client.fields.create(milestoneBlock.id, {
     label: "Periodo",
     apiKey: "timeframe",
     fieldType: "string",
@@ -30,7 +30,7 @@ module.exports = async (client) => {
   });
 
   // Add state, with 3 pre-determined options
-  const state = await client.fields.create(milestoneBlock.id, {
+  await client.fields.create(milestoneBlock.id, {
     label: "Stato",
     apiKey: "state",
     fieldType: "string",
@@ -54,7 +54,7 @@ module.exports = async (client) => {
   });
 
   // Add subtitle
-  const subtitle = await client.fields.create(milestoneBlock.id, {
+  await client.fields.create(milestoneBlock.id, {
     label: "Descrizione",
     apiKey: "subtitle",
     fieldType: "string",

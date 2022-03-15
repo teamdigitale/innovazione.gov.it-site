@@ -18,13 +18,10 @@ module.exports = async (client) => {
     "italy2026_articles_index"
   );
 
-  const articlesUpdatedItem = await client.menuItem.update(
-    articlesIndexMenuItem.id,
-    {
-      label: "Indice Articoli Italia 2026",
-      position: 6,
-      itemType: articlesIndexModel.id,
-      parent: italy2026MenuItem.id,
-    }
-  );
+  await client.menuItem.update(articlesIndexMenuItem.id, {
+    label: "Indice Articoli Italia 2026",
+    position: 6,
+    itemType: articlesIndexModel.id,
+    parent: italy2026MenuItem.id,
+  });
 };

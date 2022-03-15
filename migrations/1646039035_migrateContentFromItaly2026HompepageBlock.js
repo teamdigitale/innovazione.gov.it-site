@@ -40,7 +40,7 @@ module.exports = async (client) => {
   const gliObiettivi = linkInternalRecords[0];
 
   if (Array.isArray(italyBlockRecords) && italyBlockRecords.length) {
-    const addBlock = await client.items.update(italy2026RecordId, {
+    await client.items.update(italy2026RecordId, {
       contentBlocks: [
         ...contentBlocks,
         buildModularBlock({

@@ -17,7 +17,7 @@ module.exports = async (client) => {
   const linkInternalModel = await client.itemType.find("link_internal");
 
   // Create internal link to 'Il Piano'
-  const linkToIlPiano = await client.items.create({
+  await client.items.create({
     itemType: linkInternalModel.id,
     title: "Il Piano",
     link: ilPiano.id,
@@ -25,7 +25,7 @@ module.exports = async (client) => {
   });
 
   // Create internal link to 'Gli obiettivi'
-  const linkToGliObiettivi = await client.items.create({
+  await client.items.create({
     itemType: linkInternalModel.id,
     title: "Gli obiettivi",
     link: gliObiettivi.id,

@@ -16,7 +16,7 @@ module.exports = async (client) => {
   const subpage = await client.itemType.find("italy2026_subpage");
 
   // Update menu item
-  const updatedItem = await client.menuItem.update(copyMenuItem.id, {
+  await client.menuItem.update(copyMenuItem.id, {
     label: "Pagine",
     position: 8,
     itemType: subpage.id,
@@ -25,12 +25,9 @@ module.exports = async (client) => {
 
   // Update  parent menu item's position
   const italy2026Model = await client.itemType.find("italy2026_page");
-  const updatedItaly2026MenuItem = await client.menuItem.update(
-    italy2026MenuItem.id,
-    {
-      label: "Italia 2026",
-      position: 6,
-      itemType: italy2026Model.id,
-    }
-  );
+  await client.menuItem.update(italy2026MenuItem.id, {
+    label: "Italia 2026",
+    position: 6,
+    itemType: italy2026Model.id,
+  });
 };

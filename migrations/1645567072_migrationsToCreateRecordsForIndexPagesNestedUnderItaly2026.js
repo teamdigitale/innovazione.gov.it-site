@@ -11,7 +11,7 @@ module.exports = async (client) => {
   );
 
   // Create Italy 2026 articles index page record
-  const articlesIndexPage = await client.items.create({
+  await client.items.create({
     itemType: articlesIndex.id,
     title: "Articoli di Italia Digitale 2026",
     menuLabel: "Articoli",
@@ -23,7 +23,7 @@ module.exports = async (client) => {
   });
 
   // Create Italy 2026 press releases index page record
-  const pressReleasesIndexPage = await client.items.create({
+  await client.items.create({
     itemType: pressReleasesIndex.id,
     title: "Comunicati Stampa di Italia Digitale 2026",
     menuLabel: "Comunicati stampa",
@@ -35,7 +35,7 @@ module.exports = async (client) => {
   });
 
   // Create Italy 2026 announcements index page record
-  const announcementsIndexPage = await client.items.create({
+  await client.items.create({
     itemType: announcementsIndex.id,
     title: "Avvisi Pubblici di Italia Digitale 2026",
     menuLabel: "Avvisi pubblici",

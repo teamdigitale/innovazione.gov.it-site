@@ -18,13 +18,10 @@ module.exports = async (client) => {
     (item) => item.label === "Indice Avvisi Pubblici Italia 2026"
   );
 
-  const announcementsUpdatedItem = await client.menuItem.update(
-    announcementsIndexMenuItem.id,
-    {
-      label: "Indice Avvisi Pubblici Italia 2026",
-      position: 6,
-      itemType: announcementsIndexModel.id,
-      parent: italy2026MenuItem.id,
-    }
-  );
+  await client.menuItem.update(announcementsIndexMenuItem.id, {
+    label: "Indice Avvisi Pubblici Italia 2026",
+    position: 6,
+    itemType: announcementsIndexModel.id,
+    parent: italy2026MenuItem.id,
+  });
 };
