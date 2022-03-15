@@ -38,7 +38,7 @@ module.exports = async (client) => {
     },
   });
 
-  const subtitleField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Sottotitolo (o descrizione)",
     apiKey: "subtitle",
     fieldset: headerFieldset.id,
@@ -59,7 +59,7 @@ module.exports = async (client) => {
     },
   });
 
-  const imageField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Immagine",
     apiKey: "image",
     fieldset: headerFieldset.id,
@@ -87,7 +87,7 @@ module.exports = async (client) => {
   });
 
   // Menu label and slug fields
-  const menuLabelField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Menu label",
     apiKey: "menu_label",
     fieldType: "string",
@@ -107,7 +107,7 @@ module.exports = async (client) => {
     },
   });
 
-  const slugField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Slug",
     apiKey: "slug",
     fieldType: "slug",
@@ -159,7 +159,7 @@ module.exports = async (client) => {
     startCollapsed: true,
   });
 
-  const seoMetatagsField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "SEO",
     apiKey: "seo",
     fieldset: seoFieldset.id,
@@ -188,7 +188,7 @@ module.exports = async (client) => {
   // Add tags in ontology fieldset
   const tagModel = await client.itemType.find("tag");
 
-  const tagsField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Argomenti",
     apiKey: "tags",
     fieldset: ontologyFieldset.id,
@@ -209,7 +209,7 @@ module.exports = async (client) => {
   });
 
   // Add fields to featured fieldset
-  const preTitleField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Pre titolo",
     apiKey: "featured_pre_title",
     fieldset: featuredFieldset.id,
@@ -228,7 +228,7 @@ module.exports = async (client) => {
     },
   });
 
-  const featuredTitleField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Titolo in evidenza",
     apiKey: "featured_title",
     fieldset: featuredFieldset.id,
@@ -250,7 +250,7 @@ module.exports = async (client) => {
   const externalLinkModel = await client.itemType.find("link_external");
   const internalLinkModel = await client.itemType.find("link_internal");
 
-  const linksField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Collegamenti",
     apiKey: "featured_links",
     fieldType: "links",
@@ -276,7 +276,7 @@ module.exports = async (client) => {
   const flagBlock = await client.itemType.find("block_first_flag");
   const italy2026Block = await client.itemType.find("block_italy2026");
 
-  const italy2026BlockField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Blocchi",
     apiKey: "content_blocks",
     fieldset: contentFieldset.id,
@@ -303,7 +303,7 @@ module.exports = async (client) => {
   // Add featured articles field
   const articleModel = await client.itemType.find("article");
 
-  const articlesField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Articoli",
     apiKey: "articles",
     fieldType: "links",
@@ -326,7 +326,7 @@ module.exports = async (client) => {
   // Add press releases field
   const pressReleaseModel = await client.itemType.find("press_release");
 
-  const pressReleasesField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Comunicati stampa",
     apiKey: "press_releases",
     fieldType: "links",
@@ -349,7 +349,7 @@ module.exports = async (client) => {
   // Add public announcements field
   const announcementModel = await client.itemType.find("announcement");
 
-  const announcementsField = await client.fields.create(italy2026Model.id, {
+  await client.fields.create(italy2026Model.id, {
     label: "Avvisi pubblici",
     apiKey: "announcements",
     fieldType: "links",

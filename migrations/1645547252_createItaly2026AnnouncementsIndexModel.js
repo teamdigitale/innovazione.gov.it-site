@@ -9,7 +9,8 @@ module.exports = async (client) => {
     singleton: true,
   });
 
-  const title = await client.fields.create(italy2026AnnouncementsIndex.id, {
+  // Create title field
+  await client.fields.create(italy2026AnnouncementsIndex.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -28,6 +29,7 @@ module.exports = async (client) => {
     },
   });
 
+  // Create menu label and slug field
   const menuLabel = await client.fields.create(italy2026AnnouncementsIndex.id, {
     label: "Menu label",
     apiKey: "menu_label",
@@ -47,7 +49,7 @@ module.exports = async (client) => {
     },
   });
 
-  const slug = await client.fields.create(italy2026AnnouncementsIndex.id, {
+  await client.fields.create(italy2026AnnouncementsIndex.id, {
     label: "Slug",
     apiKey: "slug",
     fieldType: "slug",
@@ -68,31 +70,29 @@ module.exports = async (client) => {
     },
   });
 
-  const seoMetatagsField = await client.fields.create(
-    italy2026AnnouncementsIndex.id,
-    {
-      label: "SEO",
-      apiKey: "seo",
-      fieldType: "seo",
-      validators: {
-        requiredSeoFields: {
-          title: true,
-          description: true,
-          image: false,
-          twitterCard: false,
-        },
-        titleLength: {
-          max: 60,
-        },
-        descriptionLength: {
-          max: 160,
-        },
+  // Create SEO field
+  await client.fields.create(italy2026AnnouncementsIndex.id, {
+    label: "SEO",
+    apiKey: "seo",
+    fieldType: "seo",
+    validators: {
+      requiredSeoFields: {
+        title: true,
+        description: true,
+        image: false,
+        twitterCard: false,
       },
-      appearance: {
-        editor: "seo",
-        parameters: {},
-        addons: [],
+      titleLength: {
+        max: 60,
       },
-    }
-  );
+      descriptionLength: {
+        max: 160,
+      },
+    },
+    appearance: {
+      editor: "seo",
+      parameters: {},
+      addons: [],
+    },
+  });
 };

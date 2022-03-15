@@ -5,7 +5,7 @@ module.exports = async (client) => {
   const subpageCopy = await client.itemType.duplicate("department_subpage");
 
   // modify copy
-  const updatedCopy = await client.itemType.update(subpageCopy.id, {
+  await client.itemType.update(subpageCopy.id, {
     name: "Scheda Italia 2026",
     apiKey: "italy2026_subpage",
   });

@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   const milestoneBlock = await client.itemType.find("block_milestone");
 
-  const dotted = await client.fields.create(milestoneBlock.id, {
+  await client.fields.create(milestoneBlock.id, {
     label: "Durata molto lunga (più di 18 mesi)",
     apiKey: "long_duration",
     fieldType: "boolean",

@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const titleField = await client.fields.create(ctaSpecialBlock.id, {
+  await client.fields.create(ctaSpecialBlock.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -29,7 +29,7 @@ module.exports = async (client) => {
   });
 
   // Add description
-  const descriptionField = await client.fields.create(ctaSpecialBlock.id, {
+  await client.fields.create(ctaSpecialBlock.id, {
     label: "Descrizione",
     apiKey: "description",
     fieldType: "string",
@@ -49,7 +49,7 @@ module.exports = async (client) => {
   });
 
   // Add image
-  const thumbnailField = await client.fields.create(ctaSpecialBlock.id, {
+  await client.fields.create(ctaSpecialBlock.id, {
     label: "Thumbnail",
     apiKey: "thumbnail",
     fieldType: "file",
@@ -75,7 +75,7 @@ module.exports = async (client) => {
   });
 
   // Add checkbox for light or dark background
-  const backgroundField = await client.fields.create(ctaSpecialBlock.id, {
+  await client.fields.create(ctaSpecialBlock.id, {
     label: "Sfondo",
     apiKey: "background",
     fieldType: "string",
@@ -100,7 +100,7 @@ module.exports = async (client) => {
   const externalLinkModel = await client.itemType.find("link_external");
   const internalLinkModel = await client.itemType.find("link_internal");
 
-  const linksField = await client.fields.create(ctaSpecialBlock.id, {
+  await client.fields.create(ctaSpecialBlock.id, {
     label: "Link",
     apiKey: "link",
     fieldType: "link",

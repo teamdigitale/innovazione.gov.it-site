@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const title = await client.fields.create(calendarBlock.id, {
+  await client.fields.create(calendarBlock.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -28,7 +28,7 @@ module.exports = async (client) => {
     },
   });
 
-  const stickyNavField = await client.fields.create(calendarBlock.id, {
+  await client.fields.create(calendarBlock.id, {
     label: "Titolo di sezione nel menù di navigazione",
     apiKey: "menu_title",
     fieldType: "string",
@@ -51,7 +51,7 @@ module.exports = async (client) => {
   // Add multiple links
   const calendarModel = await client.itemType.find("calendar");
 
-  const calendarsField = await client.fields.create(calendarBlock.id, {
+  await client.fields.create(calendarBlock.id, {
     label: "Calendari",
     apiKey: "calendars",
     fieldType: "links",

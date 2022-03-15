@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const title = await client.fields.create(phaseBlock.id, {
+  await client.fields.create(phaseBlock.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -29,7 +29,7 @@ module.exports = async (client) => {
   });
 
   // Add state, with 3 pre-determined options
-  const state = await client.fields.create(phaseBlock.id, {
+  await client.fields.create(phaseBlock.id, {
     label: "Stato",
     apiKey: "state",
     fieldType: "string",
@@ -55,7 +55,7 @@ module.exports = async (client) => {
   // Add milestones field
   const milestoneBlock = await client.itemType.find("block_milestone");
 
-  const interventionsField = await client.fields.create(phaseBlock.id, {
+  await client.fields.create(phaseBlock.id, {
     label: "Milestones",
     apiKey: "milestones",
     fieldType: "rich_text",

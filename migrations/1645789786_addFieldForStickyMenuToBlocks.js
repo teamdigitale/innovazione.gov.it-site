@@ -6,7 +6,7 @@ module.exports = async (client) => {
   const italy2026Block = await client.itemType.find("block_italy2026");
 
   // Create field in PNRR block
-  const stickyNavField = await client.fields.create(pnrrBlock.id, {
+  await client.fields.create(pnrrBlock.id, {
     label: "Titolo di sezione nel menù di navigazione",
     apiKey: "menu_title",
     fieldType: "string",
@@ -27,7 +27,7 @@ module.exports = async (client) => {
   });
 
   // Create field in Italy2026 block
-  const stickyMenuField = await client.fields.create(italy2026Block.id, {
+  await client.fields.create(italy2026Block.id, {
     label: "Titolo di sezione nel menù di navigazione",
     apiKey: "menu_title",
     fieldType: "string",

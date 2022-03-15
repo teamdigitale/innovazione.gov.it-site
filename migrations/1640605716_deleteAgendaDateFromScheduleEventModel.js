@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
-  const field = await client.field.destroy('schedule_event::agenda_date');
-}
+  await client.field.destroy("schedule_event::agenda_date");
+};

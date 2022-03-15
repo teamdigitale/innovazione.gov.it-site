@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Create pre-title field
-  const preTitleField = await client.fields.create(interventionAxesBlock.id, {
+  await client.fields.create(interventionAxesBlock.id, {
     label: "Pre titolo",
     apiKey: "pre_title",
     fieldType: "string",
@@ -31,35 +31,32 @@ module.exports = async (client) => {
   // Add interventions field
   const interventionBlock = await client.itemType.find("intervention_block");
 
-  const interventionsField = await client.fields.create(
-    interventionAxesBlock.id,
-    {
-      label: "Interventi",
-      apiKey: "interventions",
-      fieldType: "rich_text",
-      validators: {
-        size: {
-          max: 2,
-        },
-        richTextBlocks: {
-          itemTypes: [interventionBlock.id],
-        },
+  await client.fields.create(interventionAxesBlock.id, {
+    label: "Interventi",
+    apiKey: "interventions",
+    fieldType: "rich_text",
+    validators: {
+      size: {
+        max: 2,
       },
-      appearance: {
-        editor: "rich_text",
-        parameters: {
-          start_collapsed: true,
-        },
-        addons: [],
+      richTextBlocks: {
+        itemTypes: [interventionBlock.id],
       },
-    }
-  );
+    },
+    appearance: {
+      editor: "rich_text",
+      parameters: {
+        start_collapsed: true,
+      },
+      addons: [],
+    },
+  });
 
   // Create link field
   const linkInternalModel = await client.itemType.find("link_internal");
   const linkExternalModel = await client.itemType.find("link_external");
 
-  const linkField = await client.fields.create(interventionAxesBlock.id, {
+  await client.fields.create(interventionAxesBlock.id, {
     label: "Link",
     apiKey: "link",
     fieldType: "link",

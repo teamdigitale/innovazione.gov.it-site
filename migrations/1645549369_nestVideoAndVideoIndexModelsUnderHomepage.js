@@ -14,15 +14,12 @@ module.exports = async (client) => {
     (item) => item.label === "Indice Video"
   );
 
-  const updatedVideosIndexItem = await client.menuItem.update(
-    videosIndexMenuItem.id,
-    {
-      label: "Indice Video",
-      position: 0,
-      itemType: videosIndexModel.id,
-      parent: homepageMenuItem.id,
-    }
-  );
+  await client.menuItem.update(videosIndexMenuItem.id, {
+    label: "Indice Video",
+    position: 0,
+    itemType: videosIndexModel.id,
+    parent: homepageMenuItem.id,
+  });
 
   // Find menu item for video model
   const videoModel = await client.itemType.find("video");
@@ -30,7 +27,7 @@ module.exports = async (client) => {
   // Find and update menu item for videos index model
   const videoMenuItem = menuItems.find((item) => item.label === "Video");
 
-  const updatedVideoItem = await client.menuItem.update(videoMenuItem.id, {
+  await client.menuItem.update(videoMenuItem.id, {
     label: "Video",
     position: 0,
     itemType: videoModel.id,

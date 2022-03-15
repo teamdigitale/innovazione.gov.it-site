@@ -18,13 +18,10 @@ module.exports = async (client) => {
     (item) => item.label === "Indice Comunicati Stampa Italia 2026"
   );
 
-  const pressReleasesUpdatedItem = await client.menuItem.update(
-    pressReleasesIndexMenuItem.id,
-    {
-      label: "Indice Comunicati Stampa Italia 2026",
-      position: 6,
-      itemType: pressReleasesIndexModel.id,
-      parent: italy2026MenuItem.id,
-    }
-  );
+  await client.menuItem.update(pressReleasesIndexMenuItem.id, {
+    label: "Indice Comunicati Stampa Italia 2026",
+    position: 6,
+    itemType: pressReleasesIndexModel.id,
+    parent: italy2026MenuItem.id,
+  });
 };

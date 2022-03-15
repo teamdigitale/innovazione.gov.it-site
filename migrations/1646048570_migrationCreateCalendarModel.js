@@ -8,7 +8,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const title = await client.fields.create(calendar.id, {
+  await client.fields.create(calendar.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -30,7 +30,7 @@ module.exports = async (client) => {
   // Add phases
   const phaseBlock = await client.itemType.find("block_phase");
 
-  const phasesField = await client.fields.create(calendar.id, {
+  await client.fields.create(calendar.id, {
     label: "Fasi",
     apiKey: "phases",
     fieldType: "rich_text",

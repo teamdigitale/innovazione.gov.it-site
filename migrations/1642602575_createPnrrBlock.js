@@ -1,26 +1,26 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
   // Create new block
   const pnrrBlock = await client.itemTypes.create({
-    name: 'Blocco PNRR',
-    apiKey: 'block_pnrr',
+    name: "Blocco PNRR",
+    apiKey: "block_pnrr",
     modularBlock: true,
   });
 
   // Add pre-title field
-  const preTitleField = await client.fields.create(pnrrBlock.id, {
-    label: 'Pre titolo',
-    apiKey: 'pre_title',
-    fieldType: 'string',
+  await client.fields.create(pnrrBlock.id, {
+    label: "Pre titolo",
+    apiKey: "pre_title",
+    fieldType: "string",
     validators: {
       required: {},
       length: {
-        max: 60
+        max: 60,
       },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -29,18 +29,18 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const titleField = await client.fields.create(pnrrBlock.id, {
-    label: 'Titolo',
-    apiKey: 'title',
-    fieldType: 'string',
+  await client.fields.create(pnrrBlock.id, {
+    label: "Titolo",
+    apiKey: "title",
+    fieldType: "string",
     validators: {
       required: {},
       length: {
-        max: 120
+        max: 120,
       },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: true,
       },
@@ -49,45 +49,43 @@ module.exports = async (client) => {
   });
 
   // Add text (description)
-  const textField = await client.fields.create(pnrrBlock.id, {
-    label: 'Testo',
-    apiKey: 'text',
-    fieldType: 'text',
+  await client.fields.create(pnrrBlock.id, {
+    label: "Testo",
+    apiKey: "text",
+    fieldType: "text",
     validators: {
       required: {},
       length: {
-        max: 240
+        max: 240,
       },
     },
     appearance: {
-      editor: 'textarea',
+      editor: "textarea",
       parameters: {},
       addons: [],
     },
   });
 
   // Find number element model
-  const numberModel = await client.itemType.find('number_element');
+  const numberModel = await client.itemType.find("number_element");
 
   // Add numbers
-  const numberField = await client.fields.create(pnrrBlock.id, {
-    label: 'Numeri',
-    apiKey: 'numbers',
-    fieldType: 'links',
+  await client.fields.create(pnrrBlock.id, {
+    label: "Numeri",
+    apiKey: "numbers",
+    fieldType: "links",
     validators: {
       size: {
-        max: 2
+        max: 2,
       },
       itemsItemType: {
-        item_types: [
-          numberModel.id
-        ]
-      }
+        item_types: [numberModel.id],
+      },
     },
     appearance: {
-      editor: 'links_select',
+      editor: "links_select",
       parameters: {},
       addons: [],
     },
   });
-}
+};

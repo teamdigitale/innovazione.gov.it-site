@@ -9,7 +9,7 @@ module.exports = async (client) => {
   });
 
   // Add title
-  const titleField = await client.fields.create(interventionBlock.id, {
+  await client.fields.create(interventionBlock.id, {
     label: "Titolo",
     apiKey: "title",
     fieldType: "string",
@@ -29,7 +29,7 @@ module.exports = async (client) => {
   });
 
   // Add description
-  const descriptionField = await client.fields.create(interventionBlock.id, {
+  await client.fields.create(interventionBlock.id, {
     label: "Descrizione",
     apiKey: "description",
     fieldType: "string",
@@ -49,7 +49,7 @@ module.exports = async (client) => {
   });
 
   // Add image
-  const thumbnailField = await client.fields.create(interventionBlock.id, {
+  await client.fields.create(interventionBlock.id, {
     label: "Thumbnail",
     apiKey: "thumbnail",
     fieldType: "file",

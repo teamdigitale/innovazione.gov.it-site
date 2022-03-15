@@ -10,7 +10,7 @@ module.exports = async (client) => {
 
   const videoModel = await client.itemType.find("video");
 
-  const videoField = await client.fields.create(videoBlock.id, {
+  await client.fields.create(videoBlock.id, {
     label: "Video",
     apiKey: "video",
     fieldType: "links",
@@ -29,7 +29,7 @@ module.exports = async (client) => {
     },
   });
 
-  const bigField = await client.fields.create(videoBlock.id, {
+  await client.fields.create(videoBlock.id, {
     label: "Grande?",
     apiKey: "big",
     fieldType: "boolean",

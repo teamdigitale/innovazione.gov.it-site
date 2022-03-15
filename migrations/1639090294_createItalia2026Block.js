@@ -1,27 +1,27 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
   const Italia2026Block = await client.itemTypes.create({
-    name: 'Italia 2026',
-    apiKey: 'block_italy2026',
+    name: "Italia 2026",
+    apiKey: "block_italy2026",
     modularBlock: true,
   });
 
-  const percentModel = await client.itemType.find('percent_element');
-  const linkInternalModel = await client.itemType.find('link_internal');
-  
-  const preTitleField = await client.fields.create(Italia2026Block.id, {
-    label: 'Pre titolo',
-    apiKey: 'pre_title',
-    fieldType: 'string',
+  const percentModel = await client.itemType.find("percent_element");
+  const linkInternalModel = await client.itemType.find("link_internal");
+
+  await client.fields.create(Italia2026Block.id, {
+    label: "Pre titolo",
+    apiKey: "pre_title",
+    fieldType: "string",
     validators: {
       required: {},
       length: {
-        max: 60
+        max: 60,
       },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -29,18 +29,18 @@ module.exports = async (client) => {
     },
   });
 
-  const titleField = await client.fields.create(Italia2026Block.id, {
-    label: 'Titolo',
-    apiKey: 'title',
-    fieldType: 'string',
+  await client.fields.create(Italia2026Block.id, {
+    label: "Titolo",
+    apiKey: "title",
+    fieldType: "string",
     validators: {
       required: {},
       length: {
-        max: 120
+        max: 120,
       },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: true,
       },
@@ -48,83 +48,79 @@ module.exports = async (client) => {
     },
   });
 
-  const textField = await client.fields.create(Italia2026Block.id, {
-    label: 'Testo',
-    apiKey: 'text',
-    fieldType: 'text',
+  await client.fields.create(Italia2026Block.id, {
+    label: "Testo",
+    apiKey: "text",
+    fieldType: "text",
     validators: {
       required: {},
       length: {
-        max: 240
+        max: 240,
       },
     },
     appearance: {
-      editor: 'textarea',
+      editor: "textarea",
       parameters: {},
       addons: [],
     },
   });
 
-  const thumbnailField = await client.fields.create(Italia2026Block.id, {
-    label: 'Thumbnail',
-    apiKey: 'thumbnail',
-    fieldType: 'file',
+  await client.fields.create(Italia2026Block.id, {
+    label: "Thumbnail",
+    apiKey: "thumbnail",
+    fieldType: "file",
     validators: {
       file_size: {
         max_value: 1,
-        max_unit: 'MB',
+        max_unit: "MB",
       },
       extension: {
-        predefined_list: 'image',
+        predefined_list: "image",
       },
       required_alt_title: {
         alt: true,
-        title: false
+        title: false,
       },
     },
     appearance: {
-      editor: 'file',
+      editor: "file",
       parameters: {},
       addons: [],
     },
   });
 
-  const linkField = await client.fields.create(Italia2026Block.id, {
-    label: 'Link',
-    apiKey: 'link',
-    fieldType: 'link',
+  await client.fields.create(Italia2026Block.id, {
+    label: "Link",
+    apiKey: "link",
+    fieldType: "link",
     validators: {
       itemItemType: {
-        itemTypes: [
-          linkInternalModel.id
-        ]
+        itemTypes: [linkInternalModel.id],
       },
     },
     appearance: {
-      editor: 'link_select',
+      editor: "link_select",
       parameters: {},
       addons: [],
     },
   });
 
-  const numberField = await client.fields.create(Italia2026Block.id, {
-    label: 'Numero percentuale',
-    apiKey: 'percent_numbers',
-    fieldType: 'links',
+  await client.fields.create(Italia2026Block.id, {
+    label: "Numero percentuale",
+    apiKey: "percent_numbers",
+    fieldType: "links",
     validators: {
       size: {
-        max: 6
+        max: 6,
       },
       itemsItemType: {
-        item_types: [
-          percentModel.id
-        ]
-      }
+        item_types: [percentModel.id],
+      },
     },
     appearance: {
-      editor: 'links_select',
+      editor: "links_select",
       parameters: {},
       addons: [],
     },
   });
-}
+};

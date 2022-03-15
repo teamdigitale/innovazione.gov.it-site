@@ -46,7 +46,7 @@ module.exports = async (client) => {
     },
   });
 
-  const publishedPage = await client.item.publish(ilPianoPage.id, {
+  await client.item.publish(ilPianoPage.id, {
     recurisve: "false",
   });
 };

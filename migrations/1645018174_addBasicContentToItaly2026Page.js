@@ -23,7 +23,7 @@ module.exports = async (client) => {
   const bannerImage = uploads[0];
 
   // Create page record
-  const page = await client.items.create({
+  await client.items.create({
     itemType: italy2026Model.id,
     image: {
       uploadId: bannerImage.id,

@@ -46,7 +46,7 @@ module.exports = async (client) => {
     },
   });
 
-  const publishedPage = await client.item.publish(gliObiettiviPage.id, {
+  await client.item.publish(gliObiettiviPage.id, {
     recurisve: "false",
   });
 };
