@@ -16,7 +16,6 @@ ruby:
 
     start_idx = [0, phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}
     last_idx = [phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}.map {|x| x -1}
-    puts last_idx.inspect
     last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
     cols = case milestones.size
             when 1
