@@ -1,61 +1,68 @@
 ruby:
-  phases ||= phases
+  phases ||= []
   milestones ||= []
-  current_milestone_index = milestones.index {|m| m.state == "current"}.to_s
-  phase_1 = phases.first
-  phase1_idx = phase_1.milestones.size
-  phase_2 = phases[1] ? phases[1] : nil
-  phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
-  phase_3 = phases[2] ? phases[2] : nil
-  phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
-  start_idx = [0, phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}
-  last_idx = [phase1_idx -1, phase2_idx - 1, phase3_idx -1].reject {|e| e == nil}
-  last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
-  cols = case milestones.size
-          when 1
-            3
-          when 2
-            6
-          when 3
-            9
-          else
-            10
-          end
 
-.row.justify-content-lg-center
-  .col-lg-1.order-2.order-lg-0 
-    a.swiper-button-prev class="prev-#{calendar_idx}"
-      svg.icon.icon-lg.icon-primary
-        use xlink:href="/images/sprite.svg#it-arrow-left-circle"
-  .slides_block class="col-lg-#{cols}"
-    .swiper.overflow-lg-hidden
-      .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_milestone_index
-        .swiper-wrapper
-          - milestones.each_with_index do |milestone, index|
+- if milestones.any?
+  ruby:
+    current_milestone_index = milestones.index {|m| m.state == "current"}.to_s
+    phase_1 = phases.first
+    phase1_idx = phase_1.milestones.size
 
-            ruby:
-              last_in_past_phase = last_idx_in_past == index
-              first_in_phase = start_idx.include?(index)
-              last_in_phase = last_idx.include?(index)
-              phase = case
-                when index < phase1_idx
-                  phase_1
-                when index < phase2_idx
-                  phase_2
-                else
-                  phase_3
-                end
+    phase_2 = phases[1] ? phases[1] : nil
+    phase2_idx = phase_2 ? phase_2.milestones.size + phase1_idx : nil
 
-            .swiper-slide
-              = partial "partials/card-calendar",
-                locals: {milestone: milestone,
-                phase: phase,
-                last_in_past_phase: last_in_past_phase,
-                last_in_phase: last_in_phase,
-                last: index == milestones.size - 1,
-                first_in_phase: first_in_phase}
+    phase_3 = phases[2] ? phases[2] : nil
+    phase3_idx = phase_3 ? phase_3.milestones.size + phase2_idx : nil
 
-  .col-lg-1
-    a.swiper-button-next class="next-#{calendar_idx}"
-      svg.icon.icon-lg.icon-primary
-        use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+    start_idx = [0, phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}
+    last_idx = [phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}.map {|x| x -1}
+    puts last_idx.inspect
+    last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
+    cols = case milestones.size
+            when 1
+              3
+            when 2
+              6
+            when 3
+              9
+            else
+              10
+            end
+
+  .row.justify-content-lg-center
+    .col-lg-1.order-2.order-lg-0 
+      a.swiper-button-prev class="prev-#{calendar_idx}"
+        svg.icon.icon-lg.icon-primary
+          use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+    .slides_block class="col-lg-#{cols}"
+      .swiper._mid-overflow-lg-hidden
+        .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_milestone_index
+          .swiper-wrapper
+            - milestones.each_with_index do |milestone, index|
+
+              ruby:
+                last_in_past_phase = last_idx_in_past ? last_idx_in_past == index : nil
+                first_in_phase = start_idx.include?(index)
+                last_in_phase = last_idx.include?(index)
+                phase = case
+                  when index < phase1_idx
+                    phase_1
+                  when index < phase2_idx
+                    phase_2
+                  else
+                    phase_3
+                  end
+
+              .swiper-slide
+                = partial "partials/card-calendar",
+                  locals: {milestone: milestone,
+                  phase: phase,
+                  last_in_past_phase: last_in_past_phase,
+                  last_in_phase: last_in_phase,
+                  last: index == milestones.size - 1,
+                  first_in_phase: first_in_phase}
+
+    .col-lg-1
+      a.swiper-button-next class="next-#{calendar_idx}"
+        svg.icon.icon-lg.icon-primary
+          use xlink:href="/images/sprite.svg#it-arrow-right-circle"
