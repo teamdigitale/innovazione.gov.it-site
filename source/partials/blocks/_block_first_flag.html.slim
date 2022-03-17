@@ -14,39 +14,41 @@ ruby:
     txt_mobile = "order-1"
   end
 
-.container
+.container.py-5
   .row
-    .align-self-center.col-lg-6.p-0 class="#{img_mobile} #{image_position}"
-      = proxy_image_tag block.image.lqip_data_url(w: 10,
-          h: 6,
-          fit: "max"),
-          data: {sizes: "100vw",
-            src: block.image.url(w: 700,
-                h: 400,
-                fit: "max",
-                auto: "compress"),
-            srcset: "#{block.image.url(w: 450,
-                h: 330,
-                fit: 'max',
-                auto: 'compress')} 480w,
-              #{block.image.url(w: 600,
-                h: 333,
-                fit: 'max',
-                auto: 'compress')} 632w,
-              #{block.image.url(w: 560,
-                h: 333,
-                fit: 'max',
-                auto: 'compress')} 844w,
-              #{block.image.url(w: 700,
-                h: 400,
-                fit: 'max',
-                auto: 'compress')} 1091w,
-              #{block.image.url(w: 1400,
-                h: 840,
-                fit: 'max',
-                auto: 'compress')} 1320w"},
-          class: "lazyload d-block w-100",
-          alt: block.image.alt
+    .d-flex.justify-content-center.col-lg-6.p-0 class="#{img_mobile} #{image_position}"
+      figure
+        = proxy_image_tag block.image.lqip_data_url(w: 10,
+            h: 6,
+            fit: "clip"),
+            data: {sizes: "100vw",
+              src: block.image.url(w: 700,
+                  h: 400,
+                  fit: "clip",
+                  auto: "compress"),
+              srcset: "#{block.image.url(w: 450,
+                  h: 330,
+                  fit: 'clip',
+                  auto: 'compress')} 480w,
+                #{block.image.url(w: 600,
+                  h: 333,
+                  fit: 'clip',
+                  auto: 'compress')} 632w,
+                #{block.image.url(w: 560,
+                  h: 333,
+                  fit: 'clip',
+                  auto: 'compress')} 844w,
+                #{block.image.url(w: 700,
+                  h: 400,
+                  fit: 'clip',
+                  auto: 'compress')} 1091w,
+                #{block.image.url(w: 700,
+                  h: 400,
+                  fit: 'clip',
+                  auto: 'compress')} 1320w"},
+            class: "lazyload d-block h-100",
+            style: "object-fit: scale-down;",
+            alt: block.image.alt
 
     .col-12.col-lg-6.px-0.align-self-center class="#{txt_mobile} #{text_position}"
       .col-lg-10.offset-lg-2.px-0.py-lg-5.my-4
