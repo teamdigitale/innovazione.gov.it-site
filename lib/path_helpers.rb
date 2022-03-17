@@ -81,7 +81,8 @@ module PathHelpers
     when "focus_page"
       dato.focus_index
 
-    when "project"
+    when "project",
+      "completed_projects_index"
       dato.projects_page
 
     when "announcement"
