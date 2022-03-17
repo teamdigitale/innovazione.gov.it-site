@@ -59,18 +59,19 @@
                     = page.featured_title
 
               - if page.featured_links.present?
-                .mt-3.text-center.text-lg-left.pb-5.pb-lg-0.mb-3
+                .mt-3.text-center.text-lg-left.pb-5.pb-lg-0.mb-3.d-flex.flex-column.d-lg-block
                   ruby:
                     first_link = page.featured_links.first
-                    html_class = "btn mr-3 text-uppercase"
-                    first_btn_class = "btn-outline-primary mt-3 #{html_class}"
+                    html_class = "btn text-uppercase"
+                    first_btn_class = "btn-outline-primary mr-lg-3 mt-3 #{html_class}"
                     second_btn_class = "btn-primary mt-3 #{html_class}"
-
-                  = partial "partials/links/#{first_link.item_type.api_key}",
-                    locals: {item: first_link,
-                    html_class: first_btn_class}
-                  - if page.featured_links[1].present?
-                    - second_link = page.featured_links[1]
-                    = partial "partials/links/#{second_link.item_type.api_key}",
-                      locals: {item: second_link,
-                      html_class: second_btn_class}
+                  div.d-lg-inline-block
+                    = partial "partials/links/#{first_link.item_type.api_key}",
+                      locals: {item: first_link,
+                      html_class: first_btn_class}
+                  div.d-lg-inline-block
+                    - if page.featured_links[1].present?
+                      - second_link = page.featured_links[1]
+                      = partial "partials/links/#{second_link.item_type.api_key}",
+                        locals: {item: second_link,
+                        html_class: second_btn_class}
