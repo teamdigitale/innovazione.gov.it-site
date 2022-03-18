@@ -16,7 +16,7 @@ module.exports = async (client) => {
     validators: {
       required: {},
       length: {
-        max: 50,
+        max: 42,
       },
     },
     appearance: {
