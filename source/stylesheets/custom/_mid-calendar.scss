@@ -150,19 +150,19 @@
 
 @include media-breakpoint-up(lg) {
   ._mid-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 10%);
+    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
   }
 
   ._mid-fade-out {
-    mask-image: linear-gradient(to right, black 90%, RGB(237, 245, 252, 0%));
+    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
   }
 
   ._mid-faded-calendar {
     mask-image: linear-gradient(
       to right,
       RGB(237, 245, 252, 0%),
-      black 10%,
-      black 90%,
+      black 5%,
+      black 95%,
       RGB(237, 245, 252, 0%)
     );
   }
@@ -170,19 +170,19 @@
 
 @include media-breakpoint-down(lg) {
   ._mid-mobile-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 10%);
+    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
   }
 
   ._mid-mobile-fade-out {
-    mask-image: linear-gradient(to right, black 90%, RGB(237, 245, 252, 0%));
+    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
   }
 
   ._mid-mobile-faded-calendar {
     mask-image: linear-gradient(
       to right,
       RGB(237, 245, 252, 0%),
-      black 10%,
-      black 90%,
+      black 5%,
+      black 95%,
       RGB(237, 245, 252, 0%)
     );
   }
