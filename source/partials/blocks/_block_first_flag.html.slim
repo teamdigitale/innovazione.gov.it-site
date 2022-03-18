@@ -14,19 +14,7 @@ ruby:
     txt_mobile = "order-1"
   end
 
-.container.py-5
-  .row
-    .d-flex.justify-content-center.col-lg-6.p-0 class="#{img_mobile} #{image_position}"
-      figure
-        = proxy_image_tag block.image.lqip_data_url(w: 10,
-            h: 6,
-            fit: "clip"),
-            data: {sizes: "100vw",
-              src: block.image.url(w: 700,
-                  h: 400,
-                  fit: "clip",
-                  auto: "compress"),
-              srcset: "#{block.image.url(w: 450,
+  srcset_str = "#{block.image.url(w: 450,
                   h: 330,
                   fit: 'clip',
                   auto: 'compress')} 480w,
@@ -45,8 +33,23 @@ ruby:
                 #{block.image.url(w: 700,
                   h: 400,
                   fit: 'clip',
-                  auto: 'compress')} 1320w"},
-            class: "lazyload d-block h-100",
+                  auto: 'compress')} 1320w"
+
+.container.py-5
+  .row
+    .d-flex.justify-content-center.col-lg-6.p-0 class="#{img_mobile} #{image_position}"
+      // Must be max-width 60% in mobile but normal in desktop
+      figure.d-flex.align-items-center.justify-content-center
+        = proxy_image_tag block.image.lqip_data_url(w: 10,
+            h: 6,
+            fit: "clip"),
+            data: {sizes: "100vw",
+              src: block.image.url(w: 700,
+                  h: 400,
+                  fit: "clip",
+                  auto: "compress"),
+              srcset: srcset_str},
+            class: "lazyload d-block _mid-first_flag_img_width",
             style: "object-fit: scale-down;",
             alt: block.image.alt
 
