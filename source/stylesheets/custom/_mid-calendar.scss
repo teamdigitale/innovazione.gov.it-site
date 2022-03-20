@@ -171,10 +171,12 @@
 @include media-breakpoint-down(lg) {
   ._mid-mobile-fade-in {
     mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
+    margin-right: 12px;
   }
 
   ._mid-mobile-fade-out {
     mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
+    margin-left: 12px;
   }
 
   ._mid-mobile-faded-calendar {
