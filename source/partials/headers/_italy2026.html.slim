@@ -3,7 +3,33 @@
 - image = page.image
 
 - if page.present?
-  .it-hero-wrapper.it-overlay style="min-height: 364px;"
+  .text-white.position-relative style="background-color: #0073E6;"
+    .container.text-center.text-sm-left
+      .row
+        .col-12.col-lg-5.pb-2.pb-lg-5
+          = partial "partials/breadcrumb",
+            locals: {page: page,
+              html_class: "text-white"}
+
+          .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
+            = partial "partials/headers/main-titles", locals: {page: page}
+
+        .col-12.col-lg-7.mid-absolute-column.mb-lg-0.pr-lg-0.px-0
+          - if page.image.present?
+            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
+              fit: "clip"), data: {sizes: "100vw",
+                src: page.image.url(w: 1200, h: 1200,
+                fit: "clip", auto: "compress"),
+                srcset: "#{page.image.url(w: 480, h: 350,
+                fit: 'clip', auto: 'compress')} 480w,
+                #{page.image.url(w: 1090, h: 1090,
+                fit: 'clip', auto: 'compress')} 1090w,
+                #{page.image.url(w: 1300, h: 364,
+                fit: 'clip', auto: 'compress')} 1320w"},
+              class: "lazyload w-100 h-100 m-0",
+              style: "object-fit: cover",
+              alt: page.image.alt
+  /.it-hero-wrapper.it-overlay style="min-height: 364px;"
     .img-responsive-wrapper
       .img-responsive
         .img-wrapper
@@ -50,7 +76,7 @@
               locals: {page: page,
                 html_class: "text-white"}
 
-            .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
+            /.offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
               .text-white
                 = partial "partials/headers/main-titles", locals: {page: page}
 
