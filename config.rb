@@ -406,7 +406,7 @@ helpers do
      dato.press_releases_index,
      dato.focus_index,
      dato.projects_page,
-     dato.completed_projects_index,
+     #dato.completed_projects_index,
      dato.videos_index
     ]
   end
