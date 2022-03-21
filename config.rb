@@ -684,7 +684,7 @@ dato.tap do |dato|
                            "/templates/completed_projects.html")
 
     visible_completed_projects.each do |completed_project|
-      proxy "/#{dato.projects_page.slug}/#{dato.completed_projects_index.slug}/#{completed_project.slug}/index.html",
+      proxy "/#{dato.projects_page.slug}/#{completed_project.slug}/index.html",
             "/templates/project.html",
             locals: {page: completed_project},
             locale: locale
