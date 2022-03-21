@@ -1,5 +1,6 @@
-- text ||= nil
-- date ||= nil
+ruby:
+  text ||= nil
+  date ||= nil
 
 .notification.with-icon.warning._mid-notification-static
   h5
@@ -9,3 +10,8 @@
       use href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle" 
     | Attenzione
   p = text
+  - if date
+    p.d-inline = "Data di conclusione: "
+    .mid-caption.d-inline
+      = partial "partials/formatted-date",
+        locals: {date: date}

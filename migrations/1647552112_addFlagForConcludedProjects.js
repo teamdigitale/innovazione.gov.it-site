@@ -32,7 +32,7 @@ module.exports = async (client) => {
     fieldset: stateFieldset.id,
     apiKey: "warning_text",
     fieldType: "string",
-    defaultValue: "Questo progetto è stato completato e non è piu attivo",
+    defaultValue: "Questo progetto è stato completato e non è piu attivo.",
     validators: {
       length: {
         max: 120,
