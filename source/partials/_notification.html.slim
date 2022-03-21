@@ -1,6 +1,7 @@
 ruby:
   text ||= nil
   date ||= nil
+  project_name ||= ""
 
 .notification.with-icon.warning._mid-notification-static
   h5
@@ -8,10 +9,11 @@ ruby:
       use xlink:href="/images/sprite.svg#it-external-link"
     svg.icon
       use href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle" 
-    | Attenzione
-  p = text
+    = t("warning")
   - if date
-    p.d-inline = "Data di conclusione: "
-    .mid-caption.d-inline
-      = partial "partials/formatted-date",
-        locals: {date: date}
+    - month = I18n.l(in_italian_zone(date), format: "%B")
+    - year = date.strftime("%Y")
+    p  = t("projects_warning_completed",
+        project_name: project_name,
+        month: month,
+        year: year)
