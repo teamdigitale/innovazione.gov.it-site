@@ -81,6 +81,8 @@ it:
   project_categories_dropdown: Esplora per categoria
   projects_active: Progetti attivi
   projects_completed: Progetti conclusi
+  warning: Attenzione
+  projects_warning_completed: "Il progetto %{project_name} si è concluso a %{month} del %{year}"
   public_announcements_title: Gli avvisi pubblici
   reading-time: Tempo di lettura
   related_content: Potrebbero interessarti
