@@ -1,4 +1,11 @@
 - text ||= nil
 - date ||= nil
 
-h1 = text
+.notification.with-icon.warning._mid-notification-static
+  h5
+    svg.icon
+      use xlink:href="/images/sprite.svg#it-external-link"
+    svg.icon
+      use href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle" 
+    | Attenzione
+  p = text
