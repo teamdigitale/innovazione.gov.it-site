@@ -105,6 +105,7 @@ module.exports = async (client) => {
     apiKey: "link",
     fieldType: "link",
     validators: {
+      required: {},
       itemItemType: {
         itemTypes: [externalLinkModel.id, internalLinkModel.id],
       },
