@@ -135,7 +135,7 @@ module PresentationHelper
   end
 
   def self.published_completed_projects(projects)
-    projects.sort_by(&:position).select {|p| p.completed == true}
+    projects.select {|p| p.completed == true}.sort_by(&:date_completed).reverse
   end
 
   def self.published_schedule_events(schedule_events)
