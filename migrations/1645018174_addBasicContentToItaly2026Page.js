@@ -13,7 +13,7 @@ module.exports = async (client) => {
         },
         filename: {
           matches: {
-            pattern: "italia-digitalemitd2021bynasacover.jpg",
+            pattern: "img_header_crop.png",
           },
         },
       },

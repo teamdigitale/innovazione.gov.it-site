@@ -1,0 +1,33 @@
+- items ||= []
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic", locals: {page: page} do
+  = content_for :aside
+    = partial "partials/column-title",
+      locals: {title: t("explore_aside.title")}
+
+    = proxy_link_to t("projects_active"),
+      page_path(dato.projects_page),
+      class: "text-decoration-none font-weight-semibold d-block mb-3"
+
+.container
+  .border-bottom
+
+.py-3.my-lg-5
+  .container.mid-container
+    - if items.any?
+      .row
+        h2.sr-only = t("elements_list")
+        - items.each do |n|
+          .col-lg-8
+            = partial "partials/card-related-items",
+              locals: {item: n}
+
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
+
+    - else
+      = t("empty_list")

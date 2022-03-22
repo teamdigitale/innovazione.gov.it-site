@@ -7,6 +7,13 @@
 = partial "partials/headers/header-basic",
     locals: {page: page} do
 
+  - if page.completed
+    = content_for :notification
+      = partial "partials/notification",
+        locals: {text: page.warning_text,
+        project_name: page.title,
+        date: page.date_completed}
+
   = content_for :aside
     .d-flex.justify-content-center.d-lg-block
       .col-4.col-md-6.px-0
