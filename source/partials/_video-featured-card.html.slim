@@ -32,7 +32,7 @@ ruby:
             thumbnail = placeholder ? item.placeholder_image : youtube_thumb
 
           - if placeholder
-            = proxy_image_tag thumbnail.lqip_data_url(w: 10,
+            = proxy_image_tag thumbnail.url(w: 10,
               h: 10,
               fit: "crop"),
               data: {sizes: "100vw",

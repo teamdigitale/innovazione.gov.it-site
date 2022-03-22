@@ -59,7 +59,7 @@ ruby:
                     thumbnail = placeholder ? slide.placeholder_image : youtube
                   figure.mb-0
                     - if placeholder
-                      = proxy_image_tag thumbnail.lqip_data_url(w: 10,
+                      = proxy_image_tag thumbnail.url(w: 10,
                         h: 6,
                         fit: "crop"),
                         data: {sizes: "100vw",
