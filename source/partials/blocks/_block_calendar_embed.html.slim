@@ -3,9 +3,10 @@ ruby:
 
 section.lightgrey-bg-a2.pb-5.pb-lg-0
   .container.py-5
-    h3.h1.text-center._mid-target.mb-4
-      span._mid-target-point id=anchor_id(block.item_type.api_key)
-      = block.title
+    .offset-lg-1.pl-3
+      h2.h5.font-weight-semibold._mid-target.mb-4
+        span._mid-target-point id=anchor_id(block.text_title)
+        = block.text_title
 
     .d-flex.justify-content-center.mb-5
       .dropdown
@@ -55,4 +56,6 @@ section.lightgrey-bg-a2.pb-5.pb-lg-0
           = partial "partials/calendar",
             locals: {milestones: calendar.phases.map {|p| p.milestones}.flatten,
             calendar_idx: index,
-            phases: calendar.phases}
+            phases: calendar.phases,
+            fixed_slides_per_view: 2,
+            nav_arrows_unpositioned: true}

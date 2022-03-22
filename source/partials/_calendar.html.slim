@@ -1,6 +1,8 @@
 ruby:
   phases ||= []
   milestones ||= []
+  fixed_slides_per_view ||= 0
+  #nav_arrows_unpositioned ||= false
 
 - if milestones.any?
   ruby:
@@ -17,6 +19,7 @@ ruby:
     start_idx = [0, phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}
     last_idx = [phase1_idx, phase2_idx, phase3_idx].reject {|e| e == nil}.map {|x| x -1}
     last_idx_in_past = phase_1.state == "past" ? phase1_idx - 1 : nil
+
     cols = case milestones.size
             when 1
               3
@@ -35,7 +38,7 @@ ruby:
           use xlink:href="/images/sprite.svg#it-arrow-left-circle"
     .px-0 class="col-lg-#{cols}"
       .swiper._mid-overflow-lg-hidden
-        .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_milestone_index
+        .swiper-container-calendar data-slides="#{milestones.size}" data-initial=current_milestone_index data-fixed=fixed_slides_per_view
           .swiper-wrapper
             - milestones.each_with_index do |milestone, index|
 

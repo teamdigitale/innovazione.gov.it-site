@@ -8,15 +8,20 @@ if ($(".swiper-container-calendar").length > 0) {
   $(".swiper-container-calendar").each(function (index, element) {
     //some-slider-wrap-in
     const $this = $(this);
-    const slides = $this.data("slides");
-    const slidesNumber = slides < 4 ? slides : 4;
+    const slides = parseInt($this.data("slides"));
+    const fixed_slides_per_view = parseInt($this.data("fixed"));
+
+    let slidesNumber = null;
+    if (fixed_slides_per_view > 0) {
+      slidesNumber = fixed_slides_per_view;
+    } else if (slides < 4) {
+      slidesNumber = slides;
+    } else {
+      slidesNumber = 4;
+    }
+
     const initialSlideIndex = $this.data("initial");
     $this.addClass("calendar-instance-" + index); //instance need to be unique
-
-    // Remove fading effect where needed based on active slide
-    //if (slides > 4) {
-    //  $this.addClass("_mid-faded-calendar");
-    //}
 
     // init calendars
     swiperInstances[index] = new Swiper(".calendar-instance-" + index, {
@@ -47,22 +52,26 @@ if ($(".swiper-container-calendar").length > 0) {
       },
       on: {
         init: function () {
-          console.log("swiper initialized");
           let container = this.el;
           let totalSlides = parseInt(container.dataset.slides);
+          let fixedSlides = parseInt(container.dataset.fixed);
+          let max = fixedSlides > 0 ? fixedSlides : 4;
           let initialSlideIndex = parseInt(container.dataset.initial);
           let initialSlideIsLast = initialSlideIndex === totalSlides - 1;
 
-          if (initialSlideIndex === 0 && totalSlides > 4) {
+          if (initialSlideIndex === 0 && totalSlides > max) {
             container.classList.add("_mid-fade-out", "_mid-mobile-fade-out");
-          } else if (totalSlides > 4 && initialSlideIsLast) {
+          } else if (totalSlides > max && initialSlideIsLast) {
             container.classList.add("_mid-mobile-fade-in");
-          } else if (totalSlides > 4 && totalSlides - initialSlideIndex <= 4) {
+          } else if (
+            totalSlides > max &&
+            totalSlides - initialSlideIndex <= max
+          ) {
             container.classList.add(
               "_mid-fade-in",
               "_mid-mobile-faded-calendar"
             );
-          } else if (totalSlides > 4) {
+          } else if (totalSlides > max) {
             container.classList.add(
               "_mid-faded-calendar",
               "_mid-mobile-faded-calendar"
