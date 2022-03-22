@@ -36,10 +36,10 @@
                   = t("projects.highlights")
 
                 .row
-                  - highlight_projects.each do |prj|
+                  - highlight_projects.each do |project|
                     .col-12.col-md-6
                       = partial "partials/project-card",
-                        locals: {project: prj}
+                        locals: {project: project}
 
       - visible_projects_categories.each_with_index do |cat, i|
         - category_projects = visible_projects.select { |p| p.category == cat }
