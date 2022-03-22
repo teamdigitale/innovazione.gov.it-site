@@ -41,8 +41,6 @@
   }
 
   svg {
-    //width: $timeline-pin-size;
-    //height: $timeline-pin-size;
     width: 32px;
     height: 32px;
   }
@@ -135,14 +133,12 @@
 @include media-breakpoint-up(lg) {
   .swiper-button-prev {
     position: absolute;
-    left: -10%;
     top: 50%;
     width: 48px;
   }
 
   .swiper-button-next {
     position: absolute;
-    right: -10%;
     top: 50%;
     width: 48px;
   }
