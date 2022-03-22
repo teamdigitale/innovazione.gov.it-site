@@ -1,5 +1,6 @@
 ruby:
   titles = block.calendars.map {|c| c.title}
+  compact_columns ||= nil
 
 section.lightgrey-bg-a2.pb-5.pb-lg-0
   .container.py-5
@@ -57,5 +58,4 @@ section.lightgrey-bg-a2.pb-5.pb-lg-0
             locals: {milestones: calendar.phases.map {|p| p.milestones}.flatten,
             calendar_idx: index,
             phases: calendar.phases,
-            fixed_slides_per_view: 2,
-            nav_arrows_unpositioned: true}
+            fixed_slides_per_view: compact_columns ? 0 : 2}
