@@ -13,7 +13,10 @@ ruby:
   - if date
     - month = I18n.l(in_italian_zone(date), format: "%B")
     - year = date.strftime("%Y")
-    p  = t("projects_warning_completed",
+    p  = t("projects_warning_completed_with_date",
         project_name: project_name,
         month: month,
         year: year)
+  - else
+    p  = t("projects_warning_completed",
+        project_name: project_name)
