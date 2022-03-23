@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   // Create model
   const italy2026Model = await client.itemTypes.create({
-    name: "Italia 2026",
+    name: "Italia Digitale 2026",
     apiKey: "italy2026_page",
     draftModeActive: true,
     singleton: true,
