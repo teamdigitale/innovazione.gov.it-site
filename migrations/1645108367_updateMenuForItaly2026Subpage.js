@@ -9,7 +9,7 @@ module.exports = async (client) => {
 
   // Find parent menu item
   const italy2026MenuItem = menuItems.find(
-    (item) => item.label === "Italia 2026"
+    (item) => item.label === "Italia Digitale 2026"
   );
 
   // Find item type id
