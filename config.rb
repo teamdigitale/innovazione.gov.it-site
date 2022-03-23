@@ -131,11 +131,15 @@ module PresentationHelper
   end
 
   def self.published_projects(projects)
-    projects.sort_by(&:position).reject {|p| p.completed == true}
+    projects.sort_by(&:position).reject do |project|
+      !project.state_block.empty? && project.state_block.first.completed == true
+    end
   end
 
   def self.published_completed_projects(projects)
-    projects.select {|p| p.completed == true}.sort_by(&:date_completed).reverse
+    (projects.select do |project|
+      !project.state_block.empty? && project.state_block.first.completed == true
+    end).sort_by { |project| project.state_block.first.date_completed}.reverse
   end
 
   def self.published_schedule_events(schedule_events)
