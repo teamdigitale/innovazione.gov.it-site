@@ -9,7 +9,10 @@ ruby:
     is_focus = item.item_type.api_key == "focus_page"
     is_video = item.item_type.api_key == "video"
     is_project = item.item_type.api_key == "project"
-    is_completed_project = is_project && item.state_block.first.completed == true
+    is_completed_project = if (is_project && !item.state_block.empty?) &&
+      item.state_block.first.completed == true
+      true
+    end
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
     placeholder = if item.respond_to?(:placeholder_image) &&
       (item.placeholder_image.present? && item.use_placeholder_image)
