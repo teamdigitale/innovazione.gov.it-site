@@ -16,7 +16,7 @@ ruby:
 .container
   .border-bottom
 
-- if page.banner_block.any?
+- if page.respond_to?(:banner_block) && page.banner_block.any?
   .mb-5
     .mid-banner-border style="background-color: rgba(39,209,214,0.2)"
       .container
