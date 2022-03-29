@@ -2,7 +2,7 @@ ruby:
   section_titles = []
 
   page.content_blocks.each do |block|
-    arr = ["block_calendar", "block_pnrr", "block_italy2026"]
+    arr = %w[block_calendar block_pnrr block_italy2026]
     if arr.include? block.item_type.api_key
       section_titles << block.menu_title
     end
@@ -32,8 +32,7 @@ ruby:
     locals: {sections: section_titles}
 
   / content blocks
-  - page.content_blocks.each_with_index do |block, i|
-    - image_right = i.even?
+  - page.content_blocks.each do |block|
     = partial "partials/blocks/#{block.item_type.api_key}",
       locals: {block: block,
       image_right: false,

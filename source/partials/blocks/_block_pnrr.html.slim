@@ -1,8 +1,10 @@
 ruby:
-  menu_title = block.menu_title ? block.menu_title : nil
+  menu_title = block.menu_title || nil
   pre_title_classes = %(mid-caption--large
                       text-uppercase font-weight-semibold
                       pt-5 p-lg-0 text-center text-lg-left)
+  txt_classes = %(pt-2 font-weight-normal
+                    text-center text-lg-left)
 
 section
   .container
@@ -15,12 +17,12 @@ section
         .d-none.d-lg-block
           h3.h2.pt-2.text-center.text-lg-left
             = block.title
-          p.d-none.d-lg-block.pt-2.mid-caption--lead.font-weight-normal.text-center.text-lg-left
+          p.d-none.d-lg-block.mid-caption--lead class=txt_classes
             = block.text
         .d-lg-none
           h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-left
             = block.title
-          p.d-lg-none.pt-2.mid-caption--large.font-weight-normal.text-center.text-lg-left
+          p.d-lg-none.mid-caption--large class=txt_classes
             = block.text
       .offset-lg-1.col-lg-4.pt-lg-4.d-flex.flex-column.justify-content-end
         - block.numbers.each do |number|

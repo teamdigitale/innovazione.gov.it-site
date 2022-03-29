@@ -1,5 +1,4 @@
 ruby:
-  text ||= nil
   date ||= nil
   project_name ||= ""
 
@@ -8,15 +7,15 @@ ruby:
     svg.icon
       use xlink:href="/images/sprite.svg#it-external-link"
     svg.icon
-      use href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle" 
+      use href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle"
     = t("warning")
   - if date
     - month = I18n.l(in_italian_zone(date), format: "%B")
     - year = date.strftime("%Y")
-    p  = t("projects_warning_completed_with_date",
+    p = t("projects_warning_completed_with_date",
         project_name: project_name,
         month: month,
         year: year)
   - else
-    p  = t("projects_warning_completed",
+    p = t("projects_warning_completed",
         project_name: project_name)

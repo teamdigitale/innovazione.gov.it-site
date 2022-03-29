@@ -2,7 +2,7 @@ ruby:
   items ||= []
   description_classes = %( col-md-7 col-lg-6 offset-lg-1 text-center
                         text-md-left px-4 pb-4 py-md-2 pl-md-2 pr-md-0)
-  flex_classes = %(d-flex justify-content-center justify-content-md-end 
+  flex_classes = %(d-flex justify-content-center justify-content-md-end
                   justify-content-lg-start align-items-center)
 
 - content_for(:head)
@@ -25,7 +25,8 @@ ruby:
             p.h4.font-weight-semibold
               = page.banner_block.first.description
           .col-lg-3.offset-lg-2.col-md-5 class=flex_classes
-            = partial "partials/links/#{page.banner_block.first.link.item_type.api_key}",
+            - link_api_key = page.banner_block.first.link.item_type.api_key
+            = partial "partials/links/#{link_api_key}",
               locals: {item: page.banner_block.first.link,
               html_class: "btn mid-button-banner d-inline-block"}
 

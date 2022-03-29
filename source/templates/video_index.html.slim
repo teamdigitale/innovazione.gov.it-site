@@ -22,7 +22,7 @@ ruby:
           locals: {item: featured.first}
 
     - else
-      .container.pb-3 class="#{featured.size == 2 ? 'pb-lg-5' : ''}"
+      .container.pb-3 class="#{featured.size == 2 ? "pb-lg-5" : ""}"
         = partial "partials/video-many-columns",
           locals: {items: featured,
           center_pre_title: true,
