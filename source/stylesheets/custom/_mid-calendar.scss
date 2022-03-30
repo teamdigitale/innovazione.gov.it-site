@@ -205,9 +205,3 @@
     );
   }
 }
-
-@include media-breakpoint-up(lg) {
-  ._mid-overflow-lg-hidden {
-    overflow: hidden;
-  }
-}
