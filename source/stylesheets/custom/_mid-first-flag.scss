@@ -1,9 +1,9 @@
 ._mid-first_flag_img_width {
-  max-width: 282px;
+  max-width: 100%;
 }
 
-@include media-breakpoint-up(lg) {
+@media (max-width: 767.98px) {
   ._mid-first_flag_img_width {
-    max-width: 100%;
+    width: 235px;
   }
 }
