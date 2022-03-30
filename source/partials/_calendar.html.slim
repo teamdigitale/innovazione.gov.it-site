@@ -5,7 +5,7 @@ ruby:
 
 - if milestones.any?
   ruby:
-    current_milestone_index = milestones.index { |m| m.state == "current" }.to_s
+    current_milestone_index = milestones.index { |m| m.state == "current" } || 0
     phase1 = phases.first
     phase1_idx = phase1.milestones.size
     phase2 = phases[1] || nil

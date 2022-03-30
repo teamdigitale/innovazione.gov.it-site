@@ -20,7 +20,7 @@ if ($(".swiper-container-calendar").length > 0) {
       slidesNumber = 4;
     }
 
-    const initialSlideIndex = $this.data("initial");
+    const initialSlideIndex = parseInt($this.data("initial"));
     $this.addClass("calendar-instance-" + index); //instance need to be unique
 
     // init calendars
