@@ -106,12 +106,32 @@
 
 ._mid-dotted:after {
   content: "";
-  border-style: dotted;
   position: absolute;
-  height: 5px;
-  border-color: $lightgrey-a2;
+  height: 10px;
+  background: $lightgrey-a2;
   width: 39px;
-  left: 254px;
+  left: 80%;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 12%,
+    black 12%,
+    black 24%,
+    transparent 24%,
+    transparent 36%,
+    black 36%,
+    black 48%,
+    transparent 48%,
+    transparent 60%,
+    black 60%,
+    black 72%,
+    transparent 72%,
+    transparent 84%,
+    black 84%,
+    black 96%,
+    transparent 96%,
+    transparent 100%
+  );
 }
 
 // swiper buttons for calendars
