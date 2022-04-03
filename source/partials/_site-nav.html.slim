@@ -1,3 +1,5 @@
+- nav_element_classes = "nav-link font-weight-semibold text-nowrap"
+
 - I18n.with_locale(:it)
   header.it-header-wrapper.it-header-sticky data-datocms-noindex=true lang="it"
     .it-header-slim-wrapper.px-0
@@ -25,8 +27,7 @@
 
                   = proxy_image_tag "logo-mitd-white.svg",
                     alt: t("logos.mid"),
-                    style: "width: 160px; max-height: 72px;",
-                    class: "icon"
+                    class: "icon _mid-logo-size"
 
                   .it-brand-text
                     div class=["h4",
@@ -102,28 +103,28 @@
                     li.nav-item
                       = active_link_to dato.minister_page.menu_label,
                         page_path(dato.minister_page),
-                        class: "nav-link font-weight-semibold"
+                        class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.department_page.menu_label,
                         page_path(dato.department_page),
-                        class: "nav-link font-weight-semibold"
+                        class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.projects_page.menu_label,
                         page_path(dato.projects_page),
-                        class: "nav-link font-weight-semibold"
+                        class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.news_page.menu_label,
                         page_path(dato.news_page),
-                        class: "nav-link font-weight-semibold"
+                        class: nav_element_classes
 
                   ul.navbar-nav.ml-lg-auto.pt-0
                     li.nav-item
                       = active_link_to dato.italy2026_page.menu_label,
                         page_path(dato.italy2026_page),
-                        class: "nav-link font-weight-semibold"
+                        class: nav_element_classes
 
                   .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
                     span.text-white

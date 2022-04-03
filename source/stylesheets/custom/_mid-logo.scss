@@ -1,0 +1,15 @@
+._mid-logo-size {
+  width: 160px !important;
+  max-height: 72px;
+}
+
+.it-brand-wrapper.cloned {
+  margin-right: 0;
+}
+
+@include media-breakpoint-only(lg) {
+  .it-brand-wrapper.cloned img._mid-logo-size {
+    width: 44px !important;
+    max-height: 72px;
+  }
+}
