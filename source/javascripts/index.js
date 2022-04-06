@@ -73,7 +73,6 @@ $(".nav-item").click(function (e) {
 });
 
 initSearch();
-svg4everybody();
 progressIndicator.updateProgress();
 window.onscroll = function () {
   progressIndicator.updateProgress();
