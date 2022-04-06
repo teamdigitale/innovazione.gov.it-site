@@ -45,14 +45,15 @@ rescue *RETRY_CLASSES => e
   raise e
 end
 
-DATO_ENV = ENV.has_key?("DATO_ENV") ? ENV.fetch("DATO_ENV") : nil
+# DATO_ENV = ENV.has_key?("DATO_ENV") ? ENV.fetch("DATO_ENV") : nil
 
 retry_on_error(limit: 10) do
   activate :dato,
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           environment: DATO_ENV
+           environment: "develop"
+           # environment: DATO_ENV
 end
 
 webpack_command =
