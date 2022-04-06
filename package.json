@@ -57,5 +57,5 @@
     "sharer.js": "^0.4.1",
     "swiper": "^6.4.5"
   },
-  "browserslist": ["last 2 versions", "> 1%", "IE 11"]
+  "browserslist": ["last 2 versions", "> 1%"]
 }
