@@ -1,0 +1,75 @@
+ruby:
+  phase_title_classes = %(p-2 pl-4 mb-5 font-weight-semibold
+                          mid-caption--large _mid-phase-title)
+  milestone ||= nil
+  phase ||= nil
+  last_in_past_phase ||= nil
+  phase_title = first_in_phase ? phase.title : ""
+  add_right_margin = last_in_phase && !last ? "mr-2" : ""
+  show_dotted = milestone.long_duration ? "_mid-dotted" : ""
+  card_top = nil
+  milestone_top = nil
+  timeline_icon = nil
+  pin_icon_class = nil
+  icon_class = nil
+  timeframe_top_class = nil
+
+  case phase.state
+  when "past"
+    card_top = "_mid-past text-white"
+    timeline_icon = "check-circle"
+    pin_icon_class = "_mid-past"
+    icon_class = "icon-white"
+  when "current"
+    card_top = "primary-bg text-white"
+    timeline_icon = "exchange-circle"
+    pin_icon_class = "bg-primary"
+    icon_class = "icon-white"
+  when "future"
+    card_top = "_mid-future"
+    timeline_icon = "flag"
+    pin_icon_class = ""
+    icon_class = "icon-primary _mid-future_icon"
+  end
+
+  case milestone.state
+  when "past"
+    milestone_top = "_mid-past text-white it-evidence"
+    timeframe_top_class = "round_top_past"
+  when "current"
+    milestone_top = "primary-bg text-white it-now"
+    timeframe_top_class = "round_top_current"
+  when "future"
+    milestone_top = "_mid-future"
+    timeframe_top_class = "round_top_future"
+  end
+
+  line_top = if last_in_past_phase
+               "_mid-past_gradient"
+             elsif phase.state == "past"
+               "_mid-past"
+             else
+               "primary-bg"
+             end
+
+- if milestone && phase
+  div class="#{phase_title_classes} #{card_top} #{add_right_margin}"
+    .d-none.d-lg-block
+      = phase_title
+    .d-lg-none
+      = phase.title
+
+  div class="#{line_top} #{show_dotted}" style="height:5px; z-index:0;"
+
+  .it-pin-wrapper
+    .pin-icon class=pin_icon_class
+      svg class=icon_class
+        use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
+
+  .card-body.mb-5.pr-0.pt-0
+    .pin-text.d-inline-block.mid-caption--large class=milestone_top
+      span class=timeframe_top_class
+        = milestone.timeframe
+    .mt-4
+      p.font-weight-semibold.mid-caption--large
+        = milestone.subtitle

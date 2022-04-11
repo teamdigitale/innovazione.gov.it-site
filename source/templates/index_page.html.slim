@@ -1,4 +1,9 @@
-- items ||= []
+ruby:
+  items ||= []
+  description_classes = %( col-md-7 col-lg-6 offset-lg-1 text-center
+                        text-md-left px-4 pb-4 py-md-2 pl-md-2 pr-md-0)
+  flex_classes = %(d-flex justify-content-center justify-content-md-end
+                  justify-content-lg-start align-items-center)
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
@@ -10,6 +15,20 @@
 
 .container
   .border-bottom
+
+- if page.respond_to?(:banner_block) && page.banner_block.any?
+  .mb-5
+    .mid-banner-border style="background-color: rgba(39,209,214,0.2)"
+      .container
+        .row.py-5.py-md-4
+          div class=description_classes
+            p.h4.font-weight-semibold
+              = page.banner_block.first.description
+          .col-lg-3.offset-lg-2.col-md-5 class=flex_classes
+            - link_api_key = page.banner_block.first.link.item_type.api_key
+            = partial "partials/links/#{link_api_key}",
+              locals: {item: page.banner_block.first.link,
+              html_class: "btn mid-button-banner d-inline-block"}
 
 .py-3.my-lg-5
   .container.mid-container

@@ -1,5 +1,6 @@
 ruby:
   items ||= []
+  featured = page.featured_videos
   section_name_classes = %(h6 mid-caption--large text-center
                           text-uppercase font-weight-semibold)
 
@@ -11,19 +12,19 @@ ruby:
     = partial "partials/explore-aside",
       locals: {page: page}
 
-- if page.featured_videos.present?
+- if featured.present?
   .lightgrey-bg-a2
 
-    - if page.featured_videos.size == 1
+    - if featured.size == 1
       .container.pt-3.pb-5
         .mb-3
         = partial "partials/video-single",
-          locals: {item: page.featured_videos.first}
+          locals: {item: featured.first}
 
     - else
-      .container.pb-3
+      .container.pb-3 class="#{featured.size == 2 ? "pb-lg-5" : ""}"
         = partial "partials/video-many-columns",
-          locals: {items: page.featured_videos,
+          locals: {items: featured,
           center_pre_title: true,
           pre_title: t("video.highlights")}
 

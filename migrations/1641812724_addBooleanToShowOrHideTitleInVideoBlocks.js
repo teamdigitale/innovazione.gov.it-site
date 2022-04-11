@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
   // Find video content block
-  const videoContentBlock = await client.itemType.find('block_video_content');
+  const videoContentBlock = await client.itemType.find("block_video_content");
 
   // Add boolean to show or hide title to video content block
-  const titleField = await client.fields.create(videoContentBlock.id, {
-    label: 'Show title',
-    apiKey: 'show_title',
-    fieldType: 'boolean',
+  await client.fields.create(videoContentBlock.id, {
+    label: "Show title",
+    apiKey: "show_title",
+    fieldType: "boolean",
     validators: {},
     appearance: {
-      editor: 'boolean',
+      editor: "boolean",
       parameters: {},
       addons: [],
     },
   });
-}
+};

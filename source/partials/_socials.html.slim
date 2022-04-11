@@ -1,69 +1,83 @@
 ruby:
-  group_classes = "d-flex align-items-center"
   element_classes = "d-block mr-3"
 
-div class=group_classes
-  - if dato.company.twitter_url.present?
-    = link_to dato.company.twitter_url,
-      class: element_classes,
-      target: "_blank",
-      rel: "noopener",
-      aria: {label: t("socials.twitter")}
-      svg.icon.icon-sm.icon-white [
-        focusable="false"
-        role="img"
-        aria-label="#{t("go_to")} #{t("socials.twitter")}"
-      ]
-        use xlink:href="/images/sprite.svg#it-twitter"
+.d-flex.flex-column
+  .d-flex.align-items-center
+    - if dato.company.twitter_url.present?
+      = link_to dato.company.twitter_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.twitter")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.twitter")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-twitter"
 
-  - if dato.company.linkedin_url.present?
-    = link_to dato.company.linkedin_url,
-      class: element_classes,
-      target: "_blank",
-      rel: "noopener",
-      aria: {label: t("socials.linkedin")}
-      svg.icon.icon-sm.icon-white [
-        focusable="false"
-        role="img"
-        aria-label="#{t("go_to")} #{t("socials.linkedin")}"
-      ]
-        use xlink:href="/images/sprite.svg#it-linkedin"
+    - if dato.company.linkedin_url.present?
+      = link_to dato.company.linkedin_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.linkedin")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.linkedin")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-linkedin"
 
-  - if dato.company.facebook_url.present?
-    = link_to dato.company.facebook_url,
-      class: element_classes,
-      target: "_blank",
-      rel: "noopener",
-      aria: {label: t("socials.facebook")}
-      svg.icon.icon-sm.icon-white [
-        focusable="false"
-        role="img"
-        aria-label="#{t("go_to")} #{t("socials.facebook")}"
-      ]
-        use xlink:href="/images/sprite.svg#it-facebook"
+    - if dato.company.facebook_url.present?
+      = link_to dato.company.facebook_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.facebook")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.facebook")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-facebook"
 
-  - if dato.company.medium_url.present?
-    = link_to dato.company.medium_url,
-      class: element_classes,
-      target: "_blank",
-      rel: "noopener",
-      aria: {label: t("socials.medium")}
-      svg.icon.icon-sm.icon-white [
-        focusable="false"
-        role="img"
-        aria-label="#{t("go_to")} #{t("socials.medium")}"
-      ]
-        use xlink:href="/images/sprite.svg#it-medium"
+  .d-flex.align-items-center
+    - if dato.company.medium_url.present?
+      = link_to dato.company.medium_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.medium")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.medium")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-medium"
 
-  - if dato.company.youtube_url.present?
-    = link_to dato.company.youtube_url,
-      class: element_classes,
-      target: "_blank",
-      rel: "noopener",
-      aria: {label: t("socials.youtube")}
-      svg.icon.icon-sm.icon-white [
-        focusable="false"
-        role="img"
-        aria-label="#{t("go_to")} #{t("socials.youtube")}"
-      ]
-        use xlink:href="/images/sprite.svg#it-youtube"
+    - if dato.company.youtube_url.present?
+      = link_to dato.company.youtube_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.youtube")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.youtube")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-youtube"
+
+    - if dato.company.instagram_url.present?
+      = link_to dato.company.instagram_url,
+        class: element_classes,
+        target: "_blank",
+        rel: "noopener",
+        aria: {label: t("socials.instagram")}
+        svg.icon.icon-sm.icon-white [
+          focusable="false"
+          role="img"
+          aria-label="#{t("go_to")} #{t("socials.instagram")}"
+        ]
+          use xlink:href="/images/sprite.svg#it-instagram"

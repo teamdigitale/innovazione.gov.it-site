@@ -1,26 +1,25 @@
-'use strict';
+"use strict";
 
 module.exports = async (client) => {
-
   const videoIndexModel = await client.itemTypes.create({
-    name: 'Indice Video',
-    apiKey: 'videos_index',
+    name: "Indice Video",
+    apiKey: "videos_index",
     singleton: true,
   });
 
   const titleField = await client.fields.create(videoIndexModel.id, {
-    label: 'Titolo',
-    apiKey: 'title',
-    fieldType: 'string',
+    label: "Titolo",
+    apiKey: "title",
+    fieldType: "string",
     position: 1,
     validators: {
       required: {},
       length: {
         max: 120,
-      }
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: true,
       },
@@ -28,43 +27,41 @@ module.exports = async (client) => {
     },
   });
 
-  const videoModel = await client.itemType.find('video');
+  const videoModel = await client.itemType.find("video");
 
-  const featuredField = await client.fields.create(videoIndexModel.id, {
-    label: 'Video in evidenza',
-    apiKey: 'featured_videos',
-    fieldType: 'links',
+  await client.fields.create(videoIndexModel.id, {
+    label: "Video in evidenza",
+    apiKey: "featured_videos",
+    fieldType: "links",
     position: 2,
     validators: {
       size: {
-        max: 3
+        max: 3,
       },
       itemsItemType: {
-        item_types: [
-          videoModel.id
-        ]
-      }
+        item_types: [videoModel.id],
+      },
     },
     appearance: {
-      editor: 'links_embed',
+      editor: "links_embed",
       parameters: {},
       addons: [],
     },
   });
 
   const menuLabelField = await client.fields.create(videoIndexModel.id, {
-    label: 'Menu label',
-    apiKey: 'menu_label',
-    fieldType: 'string',
+    label: "Menu label",
+    apiKey: "menu_label",
+    fieldType: "string",
     position: 3,
     validators: {
       required: {},
       length: {
         max: 24,
-      }
+      },
     },
     appearance: {
-      editor: 'single_line',
+      editor: "single_line",
       parameters: {
         heading: false,
       },
@@ -72,32 +69,32 @@ module.exports = async (client) => {
     },
   });
 
-  const slugField = await client.fields.create(videoIndexModel.id, {
-    label: 'Slug',
-    apiKey: 'slug',
-    fieldType: 'slug',
+  await client.fields.create(videoIndexModel.id, {
+    label: "Slug",
+    apiKey: "slug",
+    fieldType: "slug",
     position: 4,
     validators: {
       slugTitleField: {
-        titleFieldId: menuLabelField.id
+        titleFieldId: menuLabelField.id,
       },
       required: {},
       unique: {},
       slugFormat: {
-        predefinedPattern: 'webpage_slug'
-      }
+        predefinedPattern: "webpage_slug",
+      },
     },
     appearance: {
-      editor: 'slug',
+      editor: "slug",
       parameters: {},
       addons: [],
     },
   });
 
-  const seoMetatagsField = await client.fields.create(videoIndexModel.id, {
-    label: 'SEO',
-    apiKey: 'seo',
-    fieldType: 'seo',
+  await client.fields.create(videoIndexModel.id, {
+    label: "SEO",
+    apiKey: "seo",
+    fieldType: "seo",
     position: 5,
     validators: {
       titleLength: {
@@ -108,16 +105,16 @@ module.exports = async (client) => {
       },
     },
     appearance: {
-      editor: 'seo',
+      editor: "seo",
       parameters: {},
       addons: [],
     },
   });
 
-  const videoIndexContent = await client.items.create({
+  await client.items.create({
     itemType: videoIndexModel.id,
     title: "Video",
     menuLabel: "video",
-    slug: "video"
+    slug: "video",
   });
-}
+};

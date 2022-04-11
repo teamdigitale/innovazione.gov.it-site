@@ -1,0 +1,96 @@
+- page ||= nil
+- subs ||= nil
+
+- if page.present?
+  .text-white.position-relative style="background-color: #0073E6;"
+    .container.text-center.text-sm-left
+      .row
+        .col-12.col-lg-5.pb-2.pb-lg-5
+          = partial "partials/breadcrumb",
+            locals: {page: page,
+              html_class: "text-white"}
+
+          .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
+            = partial "partials/headers/main-titles", locals: {page: page}
+
+        .col-12.offset-lg-2.col-lg-5.mb-lg-0.pr-lg-0.mid-absolute-column
+          - if page.image.present?
+            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
+              fit: "crop"), data: {sizes: "100vw",
+                src: page.image.url(w: 1200, h: 1200,
+                fit: "crop", auto: "compress"),
+                srcset: "#{page.image.url(w: 480, h: 350,
+                fit: 'crop', auto: 'compress')} 480w,
+                #{page.image.url(w: 1090, h: 1090,
+                fit: 'crop', auto: 'compress')} 1090w,
+                #{page.image.url(w: 1300, h: 1300,
+                fit: 'crop', auto: 'compress')} 1320w"},
+              class: "lazyload w-100 h-100 m-0",
+              style: "object-fit: cover; mix-blend-mode: lighten;",
+              alt: page.image.alt
+
+        /.col-12.col-lg-7.mb-lg-0.px-0 style="max-height: initial;"
+          - if page.image.present?
+            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
+              fit: "clip"), data: {sizes: "100vw",
+                src: page.image.url(w: 1200, h: 1200,
+                fit: "clip", auto: "compress"),
+                srcset: "#{page.image.url(w: 618, h: 471,
+                fit: 'clip', auto: 'compress')} 480w,
+                #{page.image.url(w: 690, h: 375,
+                fit: 'clip', auto: 'compress')} 1090w,
+                #{page.image.url(w: 690, h: 375,
+                fit: 'clip', auto: 'compress')} 1320w"},
+              class: "lazyload w-100 h-100 m-0",
+              style: "object-fit: cover",
+              alt: page.image.alt
+
+  .lightgrey-bg-a2
+    .container.pt-5.pb-4.py-lg-5.text-center.text-sm-left
+      .col-12
+        .row
+          .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
+            = partial "partials/headers/subpages-menu",
+              locals: {subs: subs,
+              hide_caption: false,
+              right_col_longer: false}
+            .pt-4
+              = partial "partials/column-title",
+                  locals: {title: t("ontology.arguments")}
+              - page.tags.each do |tag|
+                = partial "partials/chip",
+                  locals: {label: tag.name,
+                    url: page_path(tag)}
+
+          - if page.featured_title.present?
+            .col-lg-5
+              .px-0.pt-5.pt-lg-0
+                .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-left
+                  h2.p-lg-0.mr-lg-4
+                    .mid-text--large.text-uppercase.font-weight-semibold
+                    = partial "partials/column-title",
+                      locals: {title: page.featured_pre_title}
+
+                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.mr-4
+                    = page.featured_title
+
+              - if page.featured_links.present?
+                - txt = "text-center text-lg-left"
+                - spacing = "my-3 pb-5 pb-lg-0"
+                .d-flex.flex-column.d-lg-block class="#{txt} #{spacing}"
+                  ruby:
+                    first_link = page.featured_links.first
+                    html_class = "btn text-uppercase"
+                    first_btn = "btn-outline-primary mr-lg-3 mt-3 #{html_class}"
+                    second_btn = "btn-primary mt-3 #{html_class}"
+                  .d-lg-inline-block
+                    = partial "partials/links/#{first_link.item_type.api_key}",
+                      locals: {item: first_link,
+                      html_class: first_btn}
+                  .d-lg-inline-block
+                    - if page.featured_links[1].present?
+                      - second_link = page.featured_links[1]
+                      - second_link_api_key = second_link.item_type.api_key
+                      = partial "partials/links/#{second_link_api_key}",
+                        locals: {item: second_link,
+                        html_class: second_btn}

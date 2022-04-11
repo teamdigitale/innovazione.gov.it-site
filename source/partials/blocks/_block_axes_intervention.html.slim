@@ -1,0 +1,48 @@
+ruby:
+  items ||= block.interventions
+  classes = %(pt-5 text-center d-flex align-items-left
+               justify-content-center justify-content-lg-around)
+  pretitle_font_classes = %(h6 mid-caption--large
+               text-uppercase mt-4 text-white font-weight-semibold)
+  figure_classes = %(d-flex justify-content-center
+               bg-white rounded-circle)
+
+- if items.present?
+
+  .primary-bg.pt-5.pb-4
+    .container.white-color
+      .row: .col-12.text-center
+        h2 class=pretitle_font_classes
+          = block.pre_title
+
+      .row.my-lg-5
+        - items.each do |item|
+          .col-lg-2 class=classes
+            figure class=figure_classes style="width:175px; height:175px;"
+              = proxy_image_tag item.thumbnail.url(w: 10, h: 10,
+                  fit: "max"), data: {sizes: "100vw",
+                  src: item.thumbnail.url(w: 1200, h: 1200,
+                  fit: "max", auto: "compress"),
+                  srcset: "#{item.thumbnail.url(w: 800, h: 800,
+                  fit: 'max', auto: 'compress')} 480w"},
+                  class: "h-100 lazyload",
+                  style: "object-fit:contain;",
+                  alt: item.thumbnail.alt
+          .col-lg-4
+            .card-wrapper
+              .card.bg-transparent
+                .card-body.py-0.py-lg-4.ml-lg-4
+                  .text-center.text-lg-left.text-white
+                    h3.h5.my-3.mid-caption--xxxlarge.font-weight-bold
+                      = item.title
+
+                    p.mid-caption--xlarge
+                      = item.description
+
+      - if block.link
+        .row.mt-2.mb-5
+          .col-12.text-center
+            = partial "partials/links/link_internal",
+              locals: {item: block.link,
+              label: block.link.cta_label,
+              white_outline: true}

@@ -1,0 +1,62 @@
+ruby:
+  titles = block.calendars.map(&:title)
+
+section.lightgrey-bg-a2.pb-5.pb-lg-0
+  .container.py-5
+    h3.h1.text-center._mid-target.mb-4
+      span._mid-target-point id=anchor_id(block.menu_title)
+      = block.title
+
+    .d-flex.justify-content-center.mb-5
+      .dropdown
+        button.btn.btn-dropdown.border-bottom.border-primary.dropdown-toggle [
+          aria-expanded="false"
+          id="dropdownMenuButton"
+          style="min-width: 260px;"
+          aria-haspopup="true"
+          data-toggle="dropdown"
+          type="button" ]
+          .d-flex.justify-content-between
+            .mr-1.pb-2.text-primary#active-calendar style="text-transform:none;"
+              = block.calendars.first.title
+            svg.icon-expand.icon.icon.icon-primary
+              use xlink:href="/images/sprite.svg#it-expand"
+        .dropdown-menu aria-labelledby="dropdownMenuButton"
+          .link-list-wrapper
+            ul.link-list.nav.nav-tabs.nav-tabs-vertical [
+              id="myTab"
+              role="tablist"
+              style="flex-wrap:wrap;"]
+              - titles.each_with_index do |title, index|
+                ruby:
+                  selected = index.zero?
+                  status = index.zero? ? "active" : ""
+                  n = index + 1
+
+                li.nav-items
+                  a.list-item.nav-link [
+                    class="#{status} click-tab text-primary"
+                    style="border:none; font-weight:normal;"
+                    id="tab#{n}-tab"
+                    data-toggle="tab"
+                    href="#tab#{n}"
+                    role="tab"
+                    aria-controls="tab#{n}"
+                    aria-selected=selected]
+
+                    = title
+
+    .tab-content id="myTabContent"
+      - block.calendars.each_with_index do |calendar, index|
+        ruby:
+          status = index.zero? ? "show active" : ""
+          n = index + 1
+
+        .tab-pane.show [class=status
+          id="tab#{n}"
+          role="tabpanel"
+          aria-labelledby="tab#{n}-tab"]
+          = partial "partials/calendar",
+            locals: {milestones: calendar.phases.map(&:milestones).flatten,
+            calendar_idx: index,
+            phases: calendar.phases}

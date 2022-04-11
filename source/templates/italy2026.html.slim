@@ -1,0 +1,68 @@
+ruby:
+  section_titles = []
+
+  page.content_blocks.each do |block|
+    arr = %w[block_calendar block_pnrr block_italy2026]
+    if arr.include? block.item_type.api_key
+      section_titles << block.menu_title
+    end
+  end
+
+  if page.articles.any?
+    section_titles << t("articles_section_title")
+  end
+
+  if page.press_releases.any?
+    section_titles << t("press_releases_section_title")
+  end
+
+  if page.announcements.any?
+    section_titles << t("announcements_section_title")
+  end
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/italy2026",
+  locals: {page: page,
+  subs: visible_fl_pages(dato.italy2026_subpages)}
+
+._content
+  = partial "partials/sticky-navs/page-sections",
+    locals: {sections: section_titles}
+
+  / content blocks
+  - page.content_blocks.each do |block|
+    = partial "partials/blocks/#{block.item_type.api_key}",
+      locals: {block: block,
+      image_right: false,
+      image_mobile_top: true}
+
+  / Three-column blocks
+  .container
+    - if page.articles.any?
+      .mt-5.mb-4.mb-lg-0
+        = partial "partials/section-title",
+          locals: {title: t("articles_section_title"),
+          is_anchor: true}
+    = partial "partials/cards-horizontal-list",
+      locals: {items: page.articles.take(3),
+      title_is_anchor: true,
+      hide_image: false,
+      hide_tags: true,
+      btn_url: dato.italy2026_articles_index}
+
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("press_releases_section_title"),
+      title_is_anchor: true,
+      items: page.press_releases.take(3),
+      hide_tags: true,
+      btn_url: dato.italy2026_press_releases_index}
+
+  .container
+    = partial "partials/cards-horizontal-list",
+      locals: {title: t("public_announcements_title"),
+      items: page.announcements.take(3),
+      title_is_anchor: true,
+      btn_url: dato.italy2026_announcements_index}

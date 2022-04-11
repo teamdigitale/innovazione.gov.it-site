@@ -131,7 +131,15 @@ module PresentationHelper
   end
 
   def self.published_projects(projects)
-    projects.sort_by(&:position)
+    projects.sort_by(&:position).reject do |project|
+      !project.state_block.empty? && project.state_block.first.completed == true
+    end
+  end
+
+  def self.published_completed_projects(projects)
+    (projects.select do |project|
+      !project.state_block.empty? && project.state_block.first.completed == true
+    end).sort_by { |project| project.state_block.first.date_completed}.reverse
   end
 
   def self.published_schedule_events(schedule_events)
@@ -190,6 +198,10 @@ helpers do
 
   def visible_projects
     PresentationHelper.published_projects(dato.projects)
+  end
+
+  def visible_completed_projects
+    PresentationHelper.published_completed_projects(dato.projects)
   end
 
   def visible_schedule_events
@@ -259,12 +271,14 @@ helpers do
     visible_participations +
     visible_press_releases +
     visible_projects +
+    visible_completed_projects +
     visible_focus_pages +
     visible_videos +
     visible_schedule_events +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
+    visible_pages(dato.italy2026_subpages) +
     visible_pages(dato.projects_subpages) +
     visible_pages(dato.news_subpages))
   end
@@ -334,6 +348,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage]
   end
@@ -364,6 +379,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage]
   end
@@ -394,6 +410,7 @@ helpers do
      dato.press_releases_index,
      dato.focus_index,
      dato.projects_page,
+     #dato.completed_projects_index,
      dato.videos_index
     ]
   end
@@ -412,6 +429,7 @@ helpers do
        pnrr_job_position
        minister_subpage
        department_subpage
+       italy2026_subpage
        projects_subpage
        news_subpage
        video]
@@ -442,6 +460,7 @@ dato.tap do |dato|
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
@@ -502,6 +521,15 @@ dato.tap do |dato|
             locale: locale
     end
 
+    visible_italy2026_subpages.each do |italy2026_subpage|
+      parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+      proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{locale}/#{italy2026_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: italy2026_subpage,
+                     children: PresentationHelper.published_children_pages(italy2026_subpage)},
+            locale: locale
+    end
+
     visible_department_subpages.each do |department_subpage|
       parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
       proxy "/#{dato.department_page.slug}#{parent_path}/#{locale}/#{department_subpage.slug}/index.html",
@@ -548,11 +576,13 @@ dato.tap do |dato|
     visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
     visible_focus_pages = PresentationHelper.published_focus_pages(dato.focus_pages)
     visible_projects = PresentationHelper.published_projects(dato.projects)
+    visible_completed_projects = PresentationHelper.published_completed_projects(dato.projects)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
     visible_pnrr_job_positions = PresentationHelper.published_pnrr_job_positions(dato.pnrr_job_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
+    visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_tags = PresentationHelper.published_tags(dato.tags)
@@ -643,6 +673,25 @@ dato.tap do |dato|
       "/templates/pnrr_job_position.html",
       locals: {page: pnrr_job_position},
       locale: locale
+    end
+
+    proxy "/#{dato.completed_projects_index.slug}/index.html",
+          "/templates/completed_projects.html",
+          locals: {page: dato.completed_projects_index},
+          locale: locale
+
+    paginate_with_fallback(visible_completed_projects,
+                           dato.completed_projects_index,
+                           dato.projects_page,
+                           locale,
+                           10,
+                           "/templates/completed_projects.html")
+
+    visible_completed_projects.each do |completed_project|
+      proxy "/#{dato.projects_page.slug}/#{completed_project.slug}/index.html",
+            "/templates/project.html",
+            locals: {page: completed_project},
+            locale: locale
     end
 
     proxy "/#{dato.minister_page.slug}/index.html",
@@ -843,6 +892,44 @@ dato.tap do |dato|
             locale: locale
     end
 
+    proxy "/#{dato.italy2026_page.slug}/index.html",
+          "/templates/italy2026.html",
+          locals: {page: dato.italy2026_page},
+          locale: locale
+
+    italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_articles,
+                           dato.italy2026_articles_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
+
+    italy2026_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_press_releases,
+                           dato.italy2026_press_releases_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
+
+    italy2026_announcements = visible_announcements.select { |i| i.owners.include?(dato.italy2026_page) }
+
+    paginate_with_fallback(italy2026_announcements,
+                           dato.italy2026_announcements_index,
+                           dato.italy2026_page,
+                           locale,
+                           10)
+
+    visible_italy2026_subpages.each do |italy2026_subpage|
+      parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+      proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: italy2026_subpage,
+                     children: PresentationHelper.published_children_pages(italy2026_subpage)},
+            locale: locale
+    end
+
     proxy "/#{dato.projects_page.slug}/index.html",
           "/templates/projects.html",
           locals: {page: dato.projects_page},
@@ -973,6 +1060,7 @@ dato.tap do |dato|
                         visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
+                        visible_italy2026_subpages +
                         visible_projects_subpages +
                         visible_news_subpages +
                         visible_schedule_events

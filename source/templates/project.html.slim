@@ -1,11 +1,19 @@
-- content_for(:head)
-  == proxy_dato_meta_tags(page)
-
+- completed = !page.state_block.empty? && page.state_block.first.completed
 - logo = page.image_project_logo
 - image_url = logo.file.width(800).format("pjpg").to_url
 
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
 = partial "partials/headers/header-basic",
     locals: {page: page} do
+
+  - if completed
+    = content_for :notification
+      = partial "partials/notification",
+        locals: {text: page.state_block.first.warning_text,
+        project_name: page.title,
+        date: page.state_block.first.date_completed}
 
   = content_for :aside
     .d-flex.justify-content-center.d-lg-block
