@@ -119,11 +119,12 @@
                         page_path(dato.news_page),
                         class: nav_element_classes
 
-                  ul.navbar-nav.ml-lg-auto.pt-0
-                    li.nav-item
-                      = active_link_to dato.italy2026_page.menu_label,
-                        page_path(dato.italy2026_page),
-                        class: nav_element_classes
+                  - if dato.italy2026_page
+                    ul.navbar-nav.ml-lg-auto.pt-0
+                      li.nav-item
+                        = active_link_to dato.italy2026_page.menu_label,
+                          page_path(dato.italy2026_page),
+                          class: nav_element_classes
 
                   .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
                     span.text-white
