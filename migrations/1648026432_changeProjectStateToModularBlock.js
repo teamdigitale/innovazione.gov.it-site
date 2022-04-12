@@ -81,7 +81,7 @@ module.exports = async (client) => {
     fieldType: "rich_text",
     validators: {
       size: {
-        eq: 1,
+        max: 1,
       },
       richTextBlocks: {
         itemTypes: [projectStateBlock.id],
