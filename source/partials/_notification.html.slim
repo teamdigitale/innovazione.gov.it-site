@@ -1,15 +1,18 @@
 ruby:
   date ||= nil
+  text ||= nil
   project_name ||= ""
+  month = date ? I18n.l(in_italian_zone(date), format: "%B").downcase : nil
+  year = date ? date.strftime("%Y") : nil
 
 .notification.with-icon.warning._mid-notification-static
   h5
     svg.icon
       use xlink:href="/images/sprite.svg#it-warning-circle"
     = t("warning")
-  - if date
-    - month = I18n.l(in_italian_zone(date), format: "%B")
-    - year = date.strftime("%Y")
+  - if date && text && !text.empty?
+    p = text
+  - elsif date
     p = t("projects_warning_completed_with_date",
         project_name: project_name,
         month: month.downcase,
