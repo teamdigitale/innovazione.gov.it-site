@@ -12,7 +12,7 @@ ruby:
     - year = date.strftime("%Y")
     p = t("projects_warning_completed_with_date",
         project_name: project_name,
-        month: month,
+        month: month.downcase,
         year: year)
   - else
     p = t("projects_warning_completed",
