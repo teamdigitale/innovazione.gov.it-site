@@ -8,20 +8,20 @@ module.exports = async (client) => {
   // modify copy
   const innovaConNoi = await client.itemType.update(copy.id, {
     name: "Innova con noi",
-    apiKey: "innova_con_noi",
+    apiKey: "innovate",
     draftModeActive: true,
     singleton: true,
   });
 
   // Delete date_shown, menu_general_links, right_column_longer, fieldset 'Metadati'
-  const pageFieldsets = await client.fieldsets.all("innova_con_noi");
+  const pageFieldsets = await client.fieldsets.all("innovate");
   const metadataFieldset = pageFieldsets.find(
     (fieldset) => fieldset.title === "Metadati"
   );
   await client.fieldset.destroy(metadataFieldset.id);
-  await client.field.destroy("innova_con_noi::date_shown");
-  await client.field.destroy("innova_con_noi::menu_general_links");
-  await client.field.destroy("innova_con_noi::right_column_longer");
+  await client.field.destroy("innovate::date_shown");
+  await client.field.destroy("innovate::menu_general_links");
+  await client.field.destroy("innovate::right_column_longer");
 
   // Add menu_label field
   await client.fields.create(innovaConNoi.id, {
@@ -45,7 +45,7 @@ module.exports = async (client) => {
   });
 
   // Update subtitle, slug and seo fields, which should not be localized
-  await client.field.update("innova_con_noi::subtitle", {
+  await client.field.update("innovate::subtitle", {
     localized: false,
     validators: {
       required: {},
@@ -56,27 +56,27 @@ module.exports = async (client) => {
   });
 
   // Remove localization
-  await client.field.update("innova_con_noi::slug", {
+  await client.field.update("innovate::title", {
     localized: false,
   });
 
-  await client.field.update("innova_con_noi::title", {
+  await client.field.update("innovate::seo", {
     localized: false,
   });
 
-  await client.field.update("innova_con_noi::seo", {
+  await client.field.update("innovate::slug", {
     localized: false,
   });
 
-  await client.field.update("innova_con_noi::summary", {
+  await client.field.update("innovate::summary", {
     localized: false,
   });
 
-  await client.field.update("innova_con_noi::image_cover_description", {
+  await client.field.update("innovate::image_cover_description", {
     localized: false,
   });
 
-  await client.field.update("innova_con_noi::content_blocks", {
+  await client.field.update("innovate::content_blocks", {
     localized: false,
   });
 };

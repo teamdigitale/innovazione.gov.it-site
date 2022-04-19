@@ -31,7 +31,7 @@ module.exports = async (client) => {
   const targetId = targetRecords[0].id;
 
   // Create new record
-  const innovaConNoiModel = await client.itemType.find("innova_con_noi");
+  const innovaConNoiModel = await client.itemType.find("innovate");
   const innovaConNoiPage = await client.items.create({
     itemType: innovaConNoiModel.id,
     title: "Innova con noi",

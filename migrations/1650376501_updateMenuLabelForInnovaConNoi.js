@@ -8,7 +8,7 @@ module.exports = async (client) => {
   );
 
   // Update menu item
-  const innovaConNoiModel = await client.itemType.find("innova_con_noi");
+  const innovaConNoiModel = await client.itemType.find("innovate");
   await client.menuItem.update(innovaConNoiMenuItem.id, {
     label: "Innova con noi",
     position: 6,
