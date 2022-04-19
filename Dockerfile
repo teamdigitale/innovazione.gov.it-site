@@ -17,7 +17,6 @@ COPY source source
 COPY lib lib
 COPY locales locales
 COPY data data
-COPY .modernizrrc.js .
 COPY config.rb .
 COPY Gemfile .
 COPY Gemfile.lock .
