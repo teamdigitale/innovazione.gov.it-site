@@ -1,0 +1,49 @@
+"use strict";
+const util = require("util");
+const { buildModularBlock } = require("datocms-client");
+
+module.exports = async (client) => {
+  // Retrieve page model
+  const innovateSubpage = await client.itemType.find("innovate_subpage");
+
+  // Retrieve record to copy
+  const deptSubpageRecords = await client.items.all({
+    filter: {
+      type: "department_subpage",
+      fields: {
+        title: {
+          eq: "Informativa sul trattamento dei dati personali dei candidati",
+        },
+      },
+    },
+    nested: true,
+  });
+
+  const record = deptSubpageRecords[0];
+
+  const contentBlocks = record.contentBlocks.it;
+
+  // Remove ids from the blocks we are going to copy since we need to make copies
+  const blocksWithoutId = contentBlocks.map(({ id, ...rest }) => rest);
+
+  // Create new subpage record
+  await client.items.create({
+    itemType: innovateSubpage.id,
+    title: record.title,
+    subtitle: record.subtitle,
+    slug: { it: "informativa-trattamento-dati" },
+    summary: record.summary,
+    imageCover: record.imageCover,
+    imageCoverDescription: record.imageCoverDescription,
+    contentHasIndex: record.contentHasIndex,
+    contentBlocks: { it: blocksWithoutId },
+    attachments: record.attachments,
+    links: record.links,
+    embedDashboard: record.embedDashboard,
+    relatedItems: record.relatedItems,
+    tags: record.tags,
+    targets: record.targets,
+    dateShown: record.dateShown,
+    seo: record.seo,
+  });
+};
