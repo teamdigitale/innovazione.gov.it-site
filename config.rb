@@ -970,9 +970,11 @@ dato.tap do |dato|
     end
 
     if dato.innovate_page
+      published_inn_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
       proxy "/#{dato.innovate_page.slug}/index.html",
             "/templates/page.html",
-            locals: {page: dato.innovate_page},
+            locals: {page: dato.innovate_page,
+                     children: [dato.work_positions_index] + published_inn_subpages},
             locale: locale
 
       visible_innovate_subpages.each do |innovate_subpage|
