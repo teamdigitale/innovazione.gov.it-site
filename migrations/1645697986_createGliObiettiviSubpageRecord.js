@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = async (client) => {
-  // Retrive page model
+  // Retrieve page model
   const italy2026Subpage = await client.itemType.find("italy2026_subpage");
 
   // Retrive tag record

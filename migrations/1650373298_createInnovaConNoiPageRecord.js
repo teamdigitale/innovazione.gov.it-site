@@ -32,7 +32,7 @@ module.exports = async (client) => {
 
   // Create new record
   const innovaConNoiModel = await client.itemType.find("innovate");
-  const innovaConNoiPage = await client.items.create({
+  await client.items.create({
     itemType: innovaConNoiModel.id,
     title: "Innova con noi",
     subtitle:
@@ -40,7 +40,6 @@ module.exports = async (client) => {
     slug: "innova-con-noi",
     menuLabel: "Innova con noi",
     tags: [lavoraConNoiTagId],
-    //tags: [lavoraConNoiTagId, lavoraConNoiPNRRTagId],
     targets: [targetId],
     seo: {
       title: "Innova con noi",
