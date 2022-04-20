@@ -25,7 +25,7 @@ module.exports = async (client) => {
     itemType: tagModel.id,
     name: "Lavora con noi PNRR",
     slug: "lavora-con-noi-pnrr",
-    image_cover_description: { it: "" },
+    imageCoverDescription: { it: "" },
   });
 
   const PNRRTagId = tagPNRR.id;
@@ -44,7 +44,7 @@ module.exports = async (client) => {
   const targetId = targetRecords[0].id;
 
   // Create new record
-  const innovaConNoiModel = await client.itemType.find("innovate");
+  const innovaConNoiModel = await client.itemType.find("innovate_page");
   await client.items.create({
     itemType: innovaConNoiModel.id,
     title: "Innova con noi",

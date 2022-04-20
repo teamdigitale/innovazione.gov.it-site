@@ -31,7 +31,7 @@ module.exports = async (client) => {
   });
 
   // Update  parent menu item's position
-  const innovateModel = await client.itemType.find("innovate");
+  const innovateModel = await client.itemType.find("innovate_page");
   await client.menuItem.update(innovateMenuItem.id, {
     label: "Innova con noi",
     position: 6,

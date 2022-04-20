@@ -26,6 +26,21 @@ module.exports = async (client) => {
   // Remove ids from the blocks we are going to copy since we need to make copies
   const blocksWithoutId = contentBlocks.map(({ id, ...rest }) => rest);
 
+  // Find pnrr tag record
+  const filteredTags = await client.items.all({
+    filter: {
+      type: "tag",
+      fields: {
+        name: {
+          eq: "Lavora con noi PNRR",
+        },
+      },
+    },
+  });
+
+  const pnrrTag = filteredTags[0];
+  const pnrrTagId = pnrrTag.id;
+
   // Create new subpage record
   await client.items.create({
     itemType: innovateSubpage.id,
@@ -33,6 +48,7 @@ module.exports = async (client) => {
     subtitle: record.subtitle,
     slug: { it: "informativa-trattamento-dati" },
     summary: record.summary,
+    dateShown: record.dateShown,
     imageCover: record.imageCover,
     imageCoverDescription: record.imageCoverDescription,
     contentHasIndex: record.contentHasIndex,
@@ -41,7 +57,7 @@ module.exports = async (client) => {
     links: record.links,
     embedDashboard: record.embedDashboard,
     relatedItems: record.relatedItems,
-    tags: record.tags,
+    tags: record.tags.concat(pnrrTagId),
     targets: record.targets,
     dateShown: record.dateShown,
     seo: record.seo,

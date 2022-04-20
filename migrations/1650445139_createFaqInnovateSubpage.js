@@ -19,6 +19,21 @@ module.exports = async (client) => {
   const lavoraConNoiTag = tags[0];
   const lavoraConNoiTagId = lavoraConNoiTag.id;
 
+  // Find pnrr tag record
+  const filteredTags = await client.items.all({
+    filter: {
+      type: "tag",
+      fields: {
+        name: {
+          eq: "Lavora con noi PNRR",
+        },
+      },
+    },
+  });
+
+  const pnrrTag = filteredTags[0];
+  const pnrrTagId = pnrrTag.id;
+
   // Retrive target record
   const targetRecords = await client.items.all({
     filter: {
@@ -36,11 +51,12 @@ module.exports = async (client) => {
   await client.items.create({
     itemType: innovateSubpage.id,
     title: { it: "Domande frequenti" },
+    dateShown: "2022-04-15",
     subtitle: {
       it: "Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.",
     },
     slug: { it: "domande-frequenti" },
-    tags: [lavoraConNoiTagId],
+    tags: [lavoraConNoiTagId, pnrrTagId],
     targets: [targetId],
     seo: {
       it: {
