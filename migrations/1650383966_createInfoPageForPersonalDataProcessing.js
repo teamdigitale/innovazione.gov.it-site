@@ -44,7 +44,7 @@ module.exports = async (client) => {
   // Create new subpage record
   await client.items.create({
     itemType: innovateSubpage.id,
-    title: record.title,
+    title: "Informativa trattamento dati",
     subtitle: record.subtitle,
     slug: { it: "informativa-trattamento-dati" },
     summary: record.summary,
