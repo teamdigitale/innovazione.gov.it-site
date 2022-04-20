@@ -9,4 +9,19 @@ module.exports = async (client) => {
     name: "Scheda innova con noi",
     apiKey: "innovate_subpage",
   });
+
+  // Update date_shown so it is not required
+  await client.field.update("innovate_subpage::date_shown", {
+    validators: {},
+  });
+
+  // Update subtitle max limit
+  await client.field.update("innovate_subpage::subtitle", {
+    validators: {
+      required: {},
+      length: {
+        max: 180, // increase max
+      },
+    },
+  });
 };
