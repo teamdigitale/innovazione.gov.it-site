@@ -11,6 +11,10 @@
   margin-right: 0;
 }
 
+.it-brand-wrapper.cloned img._mid-logo-size {
+  margin-right: 0 !important;
+}
+
 @include media-breakpoint-only(lg) {
   .it-brand-wrapper.cloned img._mid-logo-size {
     width: 60px !important;
