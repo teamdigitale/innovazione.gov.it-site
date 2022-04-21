@@ -1,20 +1,33 @@
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
+ruby:
+  header_links ||= nil
+  has_owner = page.job_position_owner_link.present?
+  has_legal_reference = page.legal_reference.present?
+  has_closing_date = page.announcement_date_closing.present?
+  has_opening_date = page.announcement_date_opening.present?
+  has_fee = page.fee.present?
+  has_status = page.announcement_status.present?
+
 = partial "partials/headers/header-basic",
   locals: {page: page, share: true} do
 
   = content_for :col_one
-    - if page.announcement_date_opening.present?
-      .mb-5
+    - if has_opening_date
+      // .mb-5
+      - margin = has_legal_reference || has_fee ? "mb-5" : ""
+      div class=margin
         = partial "partials/column-title",
           locals: {title: t("announcement_date_opening")}
 
         = partial "partials/formatted-date",
           locals: {date: page.announcement_date_opening}
 
-    - if page.legal_reference.present?
-      .mb-5
+    - if has_legal_reference
+      // .mb-5
+      - margin = has_fee ? "mb-5" : ""
+      div class=margin
         = partial "partials/column-title",
           locals: {title: t("job_position_legal_reference")}
 
@@ -23,7 +36,7 @@
             label: page.legal_reference.title,
             html_class: "list-item"}
 
-    - if page.fee.present?
+    - if has_fee
       = partial "partials/column-title",
         locals: {title: t("job_position_fee")}
 
@@ -34,31 +47,34 @@
       p = "#{t('job_position_fee_to')} #{fee}"
 
   = content_for :col_two
-    - if page.announcement_status.present?
-      .mb-5
+    - if has_status
+      // .mb-5
+      - margin = has_closing_date || has_owner ? "mb-5" : ""
+      div class=margin
         = partial "partials/column-title",
           locals: {title: t("announcement_status")}
 
         p = page.announcement_status.name
 
-    - if page.announcement_date_closing.present?
-      .mb-5
+    - if has_closing_date
+      // .mb-5
+      - margin = has_owner ? "mb-5" : ""
+      div class=margin
         = partial "partials/column-title",
           locals: {title: t("announcement_date_closing")}
 
         = partial "partials/formatted-date",
           locals: {date: page.announcement_date_closing}
 
-    - if page.job_position_owner_link.present?
-      .mb-5
-        = partial "partials/column-title",
-          locals: {title: t("announcement_owner")}
+    - if has_owner
+      = partial "partials/column-title",
+        locals: {title: t("announcement_owner")}
 
-        - position_owner = page.job_position_owner_link.item_type.api_key
-        = partial "partials/links/#{position_owner}",
-          locals: {item: page.job_position_owner_link,
-            label: page.job_position_owner_link.title,
-            html_class: "list-item"}
+      - position_owner = page.job_position_owner_link.item_type.api_key
+      = partial "partials/links/#{position_owner}",
+        locals: {item: page.job_position_owner_link,
+          label: page.job_position_owner_link.title,
+          html_class: "list-item"}
 
   - if main_locale?(locale)
     = content_for :aside
@@ -68,6 +84,20 @@
       - page.tags.each do |tag|
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
+
+      .mt-5
+        = partial "partials/column-title",
+          locals: {title: t("correlated")}
+
+      - if header_links
+        .link-list-wrapper.mt-2
+          ul.link-list
+            - header_links.each do |link|
+              li
+                = link_to page_path(link),
+                  class: "p-0 list-item d-inline-block"
+                  span.font-weight-semibold.mr-0
+                    = link.title
 
 = partial "partials/page-content",
   locals: {page: page}

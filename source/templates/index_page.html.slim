@@ -5,10 +5,16 @@ ruby:
   flex_classes = %(d-flex justify-content-center justify-content-md-end
                   justify-content-lg-start align-items-center)
 
+  header_links = nil
+  if page.respond_to?(:header_links) && page.header_links.any?
+    header_links = page.header_links.map(&:link)
+  end
+
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-= partial "partials/headers/header-basic", locals: {page: page} do
+= partial "partials/headers/header-basic",
+  locals: {page: page, subs: header_links} do
   = content_for :aside
     = partial "partials/explore-aside",
       locals: {page: page}

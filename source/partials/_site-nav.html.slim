@@ -119,6 +119,12 @@
                         page_path(dato.news_page),
                         class: nav_element_classes
 
+                    - if dato.innovate_page
+                      li.nav-item
+                        = active_link_to dato.innovate_page.menu_label,
+                          page_path(dato.innovate_page),
+                          class: nav_element_classes
+
                   - if dato.italy2026_page
                     ul.navbar-nav.ml-lg-auto.pt-0
                       li.nav-item

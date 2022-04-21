@@ -26,6 +26,10 @@ module PathHelpers
     when "projects_subpage"
       dato.projects_page
 
+    when "innovate_subpage",
+      "work_position"
+      dato.innovate_page
+
     when "news_subpage",
       "announcement",
       "article",
@@ -45,7 +49,8 @@ module PathHelpers
       "italy2026_subpage",
       "projects_subpage",
       "news_subpage",
-      "general_page"
+      "general_page",
+      "innovate_subpage"
       page.parent
 
     when "minister_articles_index",
@@ -69,6 +74,12 @@ module PathHelpers
       "italy2026_articles_index",
       "italy2026_press_releases_index"
       dato.italy2026_page
+
+    when "work_positions_index"
+      dato.innovate_page
+
+    when "work_position"
+      dato.work_positions_index
 
     when "announcements_index",
       "articles_index",

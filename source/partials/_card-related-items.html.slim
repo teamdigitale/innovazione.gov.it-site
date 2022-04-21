@@ -6,14 +6,21 @@ ruby:
 - if item.present?
   ruby:
     date = ""
+    closing_date = ""
     is_focus = item.item_type.api_key == "focus_page"
     is_video = item.item_type.api_key == "video"
     is_project = item.item_type.api_key == "project"
+    is_work_position = item.item_type.api_key == "work_position"
     is_completed_project = if (is_project && !item.state_block.empty?) &&
       item.state_block.first.completed == true
       true
     end
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
+    show_closing_date = if is_work_position &&
+      item.respond_to?(:announcement_date_closing) &&
+      item.announcement_date_closing.present?
+      true
+    end
     placeholder = if item.respond_to?(:placeholder_image) &&
       (item.placeholder_image.present? && item.use_placeholder_image)
       true
@@ -21,7 +28,9 @@ ruby:
     if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
-
+    if is_work_position && show_closing_date
+      closing_date = partial "partials/formatted-date", locals: {date: item.date_shown}
+    end
     logo_url = ""
     if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
       logo_url = item.image_project_logo
@@ -50,6 +59,11 @@ ruby:
       txt_subtitle = "text-white"
       card_classes = "bg-primary rounded"
       padding = "p-3"
+    end
+
+    if is_work_position
+      card_classes = "lightgrey-bg-a3 rounded"
+      padding = "pl-4 pt-4 pr-4 pb-2"
     end
 
   - if logo_url.present?
@@ -173,13 +187,22 @@ ruby:
           .category.pb-2.card-text
             span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
               - pre_title = t("models.#{item.item_type.api_key}")
-              = "#{pre_title}#{is_completed_project ? ' concluso' : ''}"
+              - completed = is_completed_project ? " #{t('concluded')}" : ""
+              = "#{pre_title}#{completed}"
             span.px-2 class="#{txt_date}"
               = date
 
             - if item.respond_to?(:announcement_status)
               span.px-2 class="#{txt_date} font-weight-bold"
                 = item.announcement_status.name
+
+            - if show_closing_date
+              span.ml-4 class="#{txt_date}"
+                = "#{t('closing_date').upcase}: #{closing_date}"
+
+          - if is_work_position
+            .category.pb-2.card-text.font-weight-semibold
+              = item.office
 
           h3 class="h5 font-weight-semibold"
             = link_to page_path(item),
@@ -192,3 +215,13 @@ ruby:
 
           - if item.respond_to?(:source) && item.source.present?
             .h6.pb-0 = item.source
+
+          - if is_work_position && item.tags.present?
+            .pt-3
+              - item.tags.each do |tag|
+                = partial "partials/chip",
+                  locals: {label: tag.name,
+                  url: page_path(tag),
+                  chip_type: "chip-primary",
+                  btn_type: "btn-outline-primary",
+                  chip_size: "chip-lg"}

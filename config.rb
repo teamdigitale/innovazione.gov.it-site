@@ -45,15 +45,14 @@ rescue *RETRY_CLASSES => e
   raise e
 end
 
-# DATO_ENV = ENV.has_key?("DATO_ENV") ? ENV.fetch("DATO_ENV") : nil
+DATO_ENV = ENV.has_key?("DATO_ENV") ? ENV.fetch("DATO_ENV") : nil
 
 retry_on_error(limit: 10) do
   activate :dato,
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           environment: "develop"
-           # environment: DATO_ENV
+           environment: DATO_ENV
 end
 
 webpack_command =
@@ -105,6 +104,10 @@ module PresentationHelper
 
   def self.published_pnrr_job_positions(pnrr_job_positions)
     pnrr_job_positions.select(&:slug).sort_by(&:date_shown).reverse
+  end
+
+  def self.published_work_positions(work_positions)
+    work_positions.select(&:slug).sort_by(&:date_shown).reverse
   end
 
   def self.published_children_pages(page)
@@ -213,6 +216,10 @@ helpers do
     PresentationHelper.published_videos(dato.videos)
   end
 
+  def visible_work_positions
+    PresentationHelper.published_work_positions(dato.work_positions)
+  end
+
   def past_events
     visible_schedule_events.reverse.select do |event|
       event.date_shown < DateTime.now
@@ -276,10 +283,10 @@ helpers do
     visible_focus_pages +
     visible_videos +
     visible_schedule_events +
+    visible_work_positions +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
-    visible_pages(dato.italy2026_subpages) +
     visible_pages(dato.projects_subpages) +
     visible_pages(dato.news_subpages))
   end
@@ -347,9 +354,11 @@ helpers do
        general_page
        job_position
        pnrr_job_position
+       work_position
        minister_subpage
        department_subpage
        italy2026_subpage
+       innovate_subpage
        projects_subpage
        news_subpage]
   end
@@ -378,9 +387,11 @@ helpers do
        general_page
        job_position
        pnrr_job_position
+       work_position
        minister_subpage
        department_subpage
        italy2026_subpage
+       innovate_subpage
        projects_subpage
        news_subpage]
   end
@@ -407,6 +418,7 @@ helpers do
      dato.interviews_index,
      dato.job_positions_index,
      dato.pnrr_job_positions_index,
+     dato.work_positions_index,
      dato.participations_index,
      dato.press_releases_index,
      dato.focus_index,
@@ -428,6 +440,8 @@ helpers do
        general_page
        job_position
        pnrr_job_position
+       work_position
+       innovate_subpage
        minister_subpage
        department_subpage
        italy2026_subpage
@@ -462,10 +476,28 @@ dato.tap do |dato|
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
+    visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
+    visible_work_positions = PresentationHelper.published_work_positions(dato.work_positions)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
     visible_videos = PresentationHelper.published_videos(dato.videos)
+
+    visible_work_positions.each do |work_position|
+      proxy "/#{dato.innovate_page.slug}/#{dato.work_positions_index.slug}/#{locale}/#{work_position.slug}/index.html",
+            "/templates/job_position.html",
+            locals: {page: work_position},
+            locale: locale
+    end
+
+    visible_innovate_subpages.each do |innovate_subpage|
+      parent_path = innovate_subpage.parent ? "/#{innovate_subpage.parent.slug}" : ""
+      proxy "/#{dato.innovate_page.slug}#{parent_path}/#{locale}/#{innovate_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: innovate_subpage,
+                     children: PresentationHelper.published_children_pages(innovate_subpage)},
+            locale: locale
+    end
 
     visible_articles.each do |article|
       proxy "/#{dato.news_page.slug}/#{dato.articles_index.slug}/#{locale}/#{article.slug}/index.html",
@@ -581,6 +613,8 @@ dato.tap do |dato|
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
     visible_pnrr_job_positions = PresentationHelper.published_pnrr_job_positions(dato.pnrr_job_positions)
+    visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
+    visible_work_positions = PresentationHelper.published_work_positions(dato.work_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
@@ -933,6 +967,37 @@ dato.tap do |dato|
       end
     end
 
+    if dato.innovate_page
+      published_inn_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
+      proxy "/#{dato.innovate_page.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: dato.innovate_page,
+                     children: [dato.work_positions_index] + published_inn_subpages},
+            locale: locale
+
+      visible_innovate_subpages.each do |innovate_subpage|
+        parent_path = innovate_subpage.parent ? "/#{innovate_subpage.parent.slug}" : ""
+        proxy "/#{dato.innovate_page.slug}#{parent_path}/#{innovate_subpage.slug}/index.html",
+              "/templates/page.html",
+              locals: {page: innovate_subpage,
+                       children: PresentationHelper.published_children_pages(innovate_subpage)},
+              locale: locale
+      end
+
+      paginate_with_fallback(visible_work_positions,
+                             dato.work_positions_index,
+                             dato.innovate_page,
+                             locale,
+                             10)
+
+      visible_work_positions.each do |work_position|
+        proxy "/#{dato.innovate_page.slug}/#{dato.work_positions_index.slug}/#{work_position.slug}/index.html",
+              "/templates/job_position.html",
+              locals: {page: work_position, header_links: published_inn_subpages},
+              locale: locale
+      end
+    end
+
     proxy "/#{dato.projects_page.slug}/index.html",
           "/templates/projects.html",
           locals: {page: dato.projects_page},
@@ -1060,10 +1125,10 @@ dato.tap do |dato|
                         visible_videos +
                         visible_general_pages +
                         visible_job_positions +
+                        visible_work_positions +
                         visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
-                        visible_italy2026_subpages +
                         visible_projects_subpages +
                         visible_news_subpages +
                         visible_schedule_events
