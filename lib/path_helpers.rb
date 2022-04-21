@@ -26,7 +26,8 @@ module PathHelpers
     when "projects_subpage"
       dato.projects_page
 
-    when "innovate_subpage"
+    when "innovate_subpage",
+      "work_position"
       dato.innovate_page
 
     when "news_subpage",
