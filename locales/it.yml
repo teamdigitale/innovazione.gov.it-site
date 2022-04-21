@@ -12,6 +12,7 @@ it:
     department_subpage: Pagina Dipartimento
     projects_subpage: Pagina Progetti
     news_subpage: Pagina Notizie
+    work_position: Posizione lavorativa
     job_position: Posizione lavorativa
     pnrr_job_position: Posizione lavorativa PNRR
     schedule_event: Evento
@@ -34,8 +35,10 @@ it:
   button_aria_label: "%{topic}: %{cta}"
   calendars_section_title: I cronoprogrammi
   category: Categoria
+  closing_date: Chiusura
   chip_aria_label: Esplora contenuti %{topic}
   close: Chiudi
+  concluded: concluso
   contacts: Contatti
   credits: Crediti
   date_and_time: Data e ora

@@ -8,7 +8,7 @@ module.exports = async (client) => {
     apiKey: "long_duration",
     fieldType: "boolean",
     validators: {},
-    hint: "La linea tra eventi nel calendario verrà trattteggiata alla fine",
+    hint: "La linea tra eventi nel calendario verrà tratteggiata alla fine",
     appearance: {
       editor: "boolean",
       parameters: {},
