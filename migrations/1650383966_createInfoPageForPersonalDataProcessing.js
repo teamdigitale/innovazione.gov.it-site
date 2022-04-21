@@ -42,9 +42,9 @@ module.exports = async (client) => {
   const pnrrTagId = pnrrTag.id;
 
   // Create new subpage record
-  await client.items.create({
+  const trattamentoDati = await client.items.create({
     itemType: innovateSubpage.id,
-    title: "Informativa trattamento dati",
+    title: { it: "Informativa trattamento dati" },
     subtitle: record.subtitle,
     slug: { it: "informativa-trattamento-dati" },
     summary: record.summary,
@@ -61,5 +61,9 @@ module.exports = async (client) => {
     targets: record.targets,
     dateShown: record.dateShown,
     seo: record.seo,
+  });
+
+  await client.item.publish(trattamentoDati.id, {
+    recurisve: "false",
   });
 };

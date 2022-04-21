@@ -48,7 +48,7 @@ module.exports = async (client) => {
   const targetId = targetRecords[0].id;
 
   // Create new subpage record
-  await client.items.create({
+  const faq = await client.items.create({
     itemType: innovateSubpage.id,
     title: { it: "Domande frequenti" },
     dateShown: "2022-04-15",
@@ -64,5 +64,9 @@ module.exports = async (client) => {
         description: "Domande frequenti",
       },
     },
+  });
+
+  await client.item.publish(faq.id, {
+    recurisve: "false",
   });
 };
