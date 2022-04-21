@@ -16,7 +16,8 @@ ruby:
       true
     end
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
-    show_closing_date = if item.respond_to?(:announcement_date_closing) &&
+    show_closing_date = if is_work_position &&
+      item.respond_to?(:announcement_date_closing) &&
       item.announcement_date_closing.present?
       true
     end
@@ -58,6 +59,11 @@ ruby:
       txt_subtitle = "text-white"
       card_classes = "bg-primary rounded"
       padding = "p-3"
+    end
+
+    if is_work_position
+      card_classes = "lightgrey-bg-a3 rounded"
+      padding = "pl-4 pt-4 pr-4 pb-2"
     end
 
   - if logo_url.present?

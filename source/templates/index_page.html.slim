@@ -42,7 +42,7 @@ ruby:
       .row
         h2.sr-only = t("elements_list")
         - items.each do |n|
-          .col-lg-8.py-3
+          .col-lg-8
             = partial "partials/card-related-items",
               locals: {item: n}
 
