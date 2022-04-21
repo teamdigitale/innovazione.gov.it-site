@@ -26,7 +26,7 @@
 
                   = proxy_image_tag "logo-mitd-white.svg",
                     alt: t("logos.mid"),
-                    class: "icon _mid-logo-size"
+                    class: "icon _mid-logo-size mr-0"
 
                   .it-brand-text
                     div class=["h4",
@@ -118,6 +118,12 @@
                       = active_link_to dato.news_page.menu_label,
                         page_path(dato.news_page),
                         class: nav_element_classes
+
+                    - if dato.innovate_page
+                      li.nav-item
+                        = active_link_to dato.innovate_page.menu_label,
+                          page_path(dato.innovate_page),
+                          class: nav_element_classes
 
                   - if dato.italy2026_page
                     ul.navbar-nav.ml-lg-auto.pt-0

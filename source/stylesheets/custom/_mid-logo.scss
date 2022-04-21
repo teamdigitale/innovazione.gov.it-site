@@ -1,5 +1,5 @@
 ._mid-logo-size {
-  width: 160px !important;
+  width: 125px !important;
   max-height: 72px;
 }
 
@@ -18,7 +18,8 @@
   }
 
   .it-brand-wrapper.cloned img._mid-republic-logo-size {
-    width: 25px !important;
-    max-height: 72px;
+    display: none;
+    //width: 25px !important;
+    //max-height: 72px;
   }
 }
