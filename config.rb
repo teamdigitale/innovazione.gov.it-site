@@ -993,7 +993,7 @@ dato.tap do |dato|
       visible_work_positions.each do |work_position|
         proxy "/#{dato.innovate_page.slug}/#{dato.work_positions_index.slug}/#{work_position.slug}/index.html",
               "/templates/job_position.html",
-              locals: {page: work_position, header_links: published_inn_subpages},
+              locals: {page: work_position},
               locale: locale
       end
     end

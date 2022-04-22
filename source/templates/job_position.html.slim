@@ -2,7 +2,7 @@
   == proxy_dato_meta_tags(page)
 
 ruby:
-  header_links ||= nil
+  header_links = dato.work_positions_index.header_links
   has_owner = page.job_position_owner_link.present?
   has_legal_reference = page.legal_reference.present?
   has_closing_date = page.announcement_date_closing.present?
@@ -89,10 +89,10 @@ ruby:
         = partial "partials/column-title",
           locals: {title: t("correlated")}
 
-      - if header_links
+      - if header_links.any?
         .link-list-wrapper.mt-2
           ul.link-list
-            - header_links.each do |link|
+            - header_links.map(&:link).each do |link|
               li
                 = link_to page_path(link),
                   class: "p-0 list-item d-inline-block"
