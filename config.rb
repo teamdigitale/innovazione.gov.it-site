@@ -278,7 +278,6 @@ helpers do
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
     visible_pages(dato.department_subpages) +
-    visible_pages(dato.italy2026_subpages) +
     visible_pages(dato.projects_subpages) +
     visible_pages(dato.news_subpages))
   end
@@ -1062,7 +1061,6 @@ dato.tap do |dato|
                         visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
-                        visible_italy2026_subpages +
                         visible_projects_subpages +
                         visible_news_subpages +
                         visible_schedule_events
