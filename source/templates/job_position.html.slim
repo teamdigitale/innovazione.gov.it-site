@@ -15,7 +15,6 @@ ruby:
 
   = content_for :col_one
     - if has_opening_date
-      // .mb-5
       - margin = has_legal_reference || has_fee ? "mb-5" : ""
       div class=margin
         = partial "partials/column-title",
@@ -25,7 +24,6 @@ ruby:
           locals: {date: page.announcement_date_opening}
 
     - if has_legal_reference
-      // .mb-5
       - margin = has_fee ? "mb-5" : ""
       div class=margin
         = partial "partials/column-title",
@@ -48,7 +46,6 @@ ruby:
 
   = content_for :col_two
     - if has_status
-      // .mb-5
       - margin = has_closing_date || has_owner ? "mb-5" : ""
       div class=margin
         = partial "partials/column-title",
@@ -57,7 +54,6 @@ ruby:
         p = page.announcement_status.name
 
     - if has_closing_date
-      // .mb-5
       - margin = has_owner ? "mb-5" : ""
       div class=margin
         = partial "partials/column-title",

@@ -5,8 +5,7 @@ ruby:
 
 - if item.present?
   ruby:
-    date = ""
-    closing_date = ""
+    # Sort what an item is
     is_focus = item.item_type.api_key == "focus_page"
     is_video = item.item_type.api_key == "video"
     is_project = item.item_type.api_key == "project"
@@ -15,21 +14,30 @@ ruby:
       item.state_block.first.completed == true
       true
     end
+
+    # Deal with dates
+    date = ""
+    closing_date = ""
     show_date = item.respond_to?(:date_shown) && item.date_shown.present?
-    show_closing_date = if is_work_position &&
-      item.respond_to?(:announcement_date_closing) &&
+    closing_date_present = if item.respond_to?(:announcement_date_closing) &&
       item.announcement_date_closing.present?
       true
     end
-    placeholder = if item.respond_to?(:placeholder_image) &&
-      (item.placeholder_image.present? && item.use_placeholder_image)
+    show_closing_date = if (is_work_position && closing_date_present) &&
+      item.announcement_status.name == "APERTO"
       true
+    end
+    if is_work_position && show_closing_date
+      closing_date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
     if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
-    if is_work_position && show_closing_date
-      closing_date = partial "partials/formatted-date", locals: {date: item.date_shown}
+
+    # Deal with images
+    placeholder = if item.respond_to?(:placeholder_image) &&
+      (item.placeholder_image.present? && item.use_placeholder_image)
+      true
     end
     logo_url = ""
     if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
@@ -44,6 +52,7 @@ ruby:
       padding = "pl-lg-4 pr-lg-0"
     end
 
+    # Style/ classes
     type = ""
     txt_date = "text-secondary"
     txt_title = is_video ? "d-block text-primary text-truncate" : "text-primary"
