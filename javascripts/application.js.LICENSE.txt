@@ -35,8 +35,6 @@
  * Date: 2020-05-04T22:49Z
  */
 
-/*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */
-
 /**
  * @preserve
  * Sharer.js

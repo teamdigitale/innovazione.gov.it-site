@@ -10,12 +10,7 @@ import "lazysizes";
 import "lazysizes/plugins/respimg/ls.respimg";
 import "focus-visible/src/focus-visible.js";
 import Sharer from "sharer.js/sharer.js";
-import "core-js/features/promise";
-import "core-js/features/object/assign";
-import "core-js/features/string/repeat";
-import "core-js/features/number";
-import svg4everybody from "svg4everybody";
-const progressIndicator = require("progress-indicator-6de72121.js");
+const progressIndicator = require("progress-indicator-765c3323.js");
 const DatoCmsSearch = require("datocms-search.widget-061d36de.js");
 
 if ($(".swiper-container").length > 0) {
@@ -78,7 +73,6 @@ $(".nav-item").click(function (e) {
 });
 
 initSearch();
-svg4everybody();
 progressIndicator.updateProgress();
 window.onscroll = function () {
   progressIndicator.updateProgress();
