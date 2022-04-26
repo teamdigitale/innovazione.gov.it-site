@@ -15,8 +15,7 @@ ruby:
 
   = content_for :col_one
     - if has_opening_date
-      - margin = has_legal_reference || has_fee ? "mb-5" : ""
-      div class=margin
+      div class="#{has_legal_reference || has_fee ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_date_opening")}
 
@@ -24,8 +23,7 @@ ruby:
           locals: {date: page.announcement_date_opening}
 
     - if has_legal_reference
-      - margin = has_fee ? "mb-5" : ""
-      div class=margin
+      div class="#{has_fee ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("job_position_legal_reference")}
 
@@ -46,16 +44,14 @@ ruby:
 
   = content_for :col_two
     - if has_status
-      - margin = has_closing_date || has_owner ? "mb-5" : ""
-      div class=margin
+      div class="#{has_closing_date || has_owner ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_status")}
 
         p = page.announcement_status.name
 
     - if has_closing_date
-      - margin = has_owner ? "mb-5" : ""
-      div class=margin
+      div class="#{has_owner ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_date_closing")}
 
