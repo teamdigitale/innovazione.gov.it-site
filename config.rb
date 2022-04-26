@@ -98,14 +98,6 @@ module PresentationHelper
     pages.select(&:slug).sort_by(&:position)
   end
 
-  def self.published_job_positions(job_positions)
-    job_positions.select(&:slug).sort_by(&:date_shown).reverse
-  end
-
-  def self.published_pnrr_job_positions(pnrr_job_positions)
-    pnrr_job_positions.select(&:slug).sort_by(&:date_shown).reverse
-  end
-
   def self.published_work_positions(work_positions)
     work_positions.select(&:slug).sort_by(&:date_shown).reverse
   end
@@ -352,8 +344,6 @@ helpers do
        project
        video
        general_page
-       job_position
-       pnrr_job_position
        work_position
        minister_subpage
        department_subpage
@@ -385,8 +375,6 @@ helpers do
     %w[focus_page
        project
        general_page
-       job_position
-       pnrr_job_position
        work_position
        minister_subpage
        department_subpage
@@ -416,8 +404,6 @@ helpers do
     [dato.articles_index,
      dato.announcements_index,
      dato.interviews_index,
-     dato.job_positions_index,
-     dato.pnrr_job_positions_index,
      dato.work_positions_index,
      dato.participations_index,
      dato.press_releases_index,
@@ -438,8 +424,6 @@ helpers do
        participation
        press_release
        general_page
-       job_position
-       pnrr_job_position
        work_position
        innovate_subpage
        minister_subpage
@@ -611,8 +595,6 @@ dato.tap do |dato|
     visible_projects = PresentationHelper.published_projects(dato.projects)
     visible_completed_projects = PresentationHelper.published_completed_projects(dato.projects)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
-    visible_job_positions = PresentationHelper.published_job_positions(dato.job_positions)
-    visible_pnrr_job_positions = PresentationHelper.published_pnrr_job_positions(dato.pnrr_job_positions)
     visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
     visible_work_positions = PresentationHelper.published_work_positions(dato.work_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
@@ -682,32 +664,6 @@ dato.tap do |dato|
             locals: {page: general_page,
                      children: PresentationHelper.published_children_pages(general_page)},
             locale: locale
-    end
-
-    paginate_with_fallback(visible_job_positions,
-                           dato.job_positions_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    visible_job_positions.each do |job_position|
-      proxy "/#{dato.department_page.slug}/#{dato.job_positions_index.slug}/#{job_position.slug}/index.html",
-      "/templates/job_position.html",
-      locals: {page: job_position},
-      locale: locale
-    end
-
-    paginate_with_fallback(visible_pnrr_job_positions,
-                           dato.pnrr_job_positions_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    visible_pnrr_job_positions.each do |pnrr_job_position|
-      proxy "/#{dato.department_page.slug}/#{dato.pnrr_job_positions_index.slug}/#{pnrr_job_position.slug}/index.html",
-      "/templates/pnrr_job_position.html",
-      locals: {page: pnrr_job_position},
-      locale: locale
     end
 
     proxy "/#{dato.completed_projects_index.slug}/index.html",
@@ -1124,9 +1080,7 @@ dato.tap do |dato|
                         visible_press_releases +
                         visible_videos +
                         visible_general_pages +
-                        visible_job_positions +
                         visible_work_positions +
-                        visible_pnrr_job_positions +
                         visible_minister_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
