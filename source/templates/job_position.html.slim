@@ -81,11 +81,11 @@ ruby:
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
 
-      .mt-5
-        = partial "partials/column-title",
-          locals: {title: t("correlated")}
+      - if dato.innovate_page && header_links.any?
+        .mt-5
+          = partial "partials/column-title",
+            locals: {title: t("correlated")}
 
-      - if header_links.any?
         .link-list-wrapper.mt-2
           ul.link-list
             - header_links.map(&:link).each do |link|
