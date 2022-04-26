@@ -12,7 +12,7 @@ module.exports = async (client) => {
   const italy2026Content = italy2026Record[0];
   const italy2026RecordId = italy2026Content.id;
 
-  // Retrieve existing records in Italy 2-26 content blocks
+  // Retrieve existing records in Italy 2026 content blocks
   const contentBlocks = italy2026Content.contentBlocks;
 
   // Retrieve Italy2026 block from homepage content blocks
