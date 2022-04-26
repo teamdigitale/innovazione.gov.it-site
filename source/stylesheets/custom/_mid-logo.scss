@@ -19,11 +19,16 @@
   .it-brand-wrapper.cloned img._mid-logo-size {
     width: 60px !important;
     max-height: 72px;
+    margin-right: 8px;
   }
 
   .it-brand-wrapper.cloned img._mid-republic-logo-size {
     display: none;
     //width: 25px !important;
     //max-height: 72px;
+  }
+
+  .it-search-wrapper.cloned {
+    margin-left: 0px;
   }
 }
