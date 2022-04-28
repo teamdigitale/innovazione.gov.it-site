@@ -95,7 +95,7 @@ module.exports = async (client) => {
       relatedItems: r.relatedItems,
       owners: r.owners,
       tags: newTags,
-      office: "Dipartimento per la transformazione digitale",
+      office: "Dipartimento per la trasformazione digitale",
       announcementStatus: r.announcementStatus,
       legalReference: r.legalReference,
       fee: r.fee,
