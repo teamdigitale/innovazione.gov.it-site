@@ -8,7 +8,7 @@ module.exports = async (client) => {
   // ====== Redirect for informativa privacy ======
   // Find old informativa record
   const oldUrl =
-      "https://innovazione.gov.it/dipartimento/informativa-trattamento-dati-personali-candidati/",
+      "https://innovazione.gov.it/dipartimento/innova-con-noi/informativa-trattamento-dati-personali-candidati/",
     // Find the destination record
     [destinationRecord] = await client.items.all({
       filter: {
