@@ -20,7 +20,7 @@ module.exports = async (client) => {
     "https://innovazione.gov.it/dipartimento/posizioni-lavorative/";
 
   slugs.forEach(async (slug) => {
-    const oldUrl = `${firstPart}${slug}`;
+    const oldUrl = `${firstPart}${slug}/`;
 
     const [destinationRecord] = await client.items.all({
       filter: {
