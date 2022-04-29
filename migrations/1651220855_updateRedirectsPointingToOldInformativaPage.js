@@ -53,4 +53,17 @@ module.exports = async (client) => {
       link: newDestinationId,
     });
   });
+
+  // Create redirect from old Informativa page to new
+  const redirectModel = await client.itemType.find("resource_redirect");
+
+  const oldUrl =
+    "https://innovazione.gov.it/dipartimento/innova-con-noi/informativa-trattamento-dati-personali-candidati/";
+
+  // Create redirect
+  await client.items.create({
+    itemType: redirectModel.id,
+    oldUrl: { it: oldUrl },
+    link: destinationRecord.id,
+  });
 };
