@@ -13,7 +13,7 @@ module.exports = async (client) => {
     validators: {
       required: {},
       enum: {
-        values: ["PNRR", "Dipartimento per la transformazione digitale"],
+        values: ["PNRR", "Dipartimento per la trasformazione digitale"],
       },
     },
     appearance: {
@@ -22,8 +22,8 @@ module.exports = async (client) => {
         options: [
           { label: "PNRR", value: "PNRR" },
           {
-            label: "Dipartimento per la transformazione digitale",
-            value: "Dipartimento per la transformazione digitale",
+            label: "Dipartimento per la trasformazione digitale",
+            value: "Dipartimento per la trasformazione digitale",
           },
         ],
       },
