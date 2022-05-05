@@ -81,7 +81,7 @@ module.exports = async (client) => {
       },
     },
     appearance: {
-      editor: "link_select",
+      editor: "link_embed",
       parameters: {},
       addons: [],
     },
