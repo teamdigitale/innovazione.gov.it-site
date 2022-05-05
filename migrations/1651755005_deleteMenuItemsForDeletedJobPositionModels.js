@@ -11,6 +11,6 @@ module.exports = async (client) => {
     (item) => item.label === "Posizione lavorativa PNRR"
   );
 
-  const deleted1 = await client.menuItem.destroy(jobPositionMenuItem.id);
-  const deleted2 = await client.menuItem.destroy(pnrrMenuItem.id);
+  await client.menuItem.destroy(jobPositionMenuItem.id);
+  await client.menuItem.destroy(pnrrMenuItem.id);
 };

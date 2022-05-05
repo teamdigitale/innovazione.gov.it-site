@@ -42,11 +42,6 @@ module.exports = async (client) => {
 
   const newDestinationId = destinationRecord.id;
 
-  // Publish new innovate record
-  //const publishedDestination = await client.item.publish(destinationRecord.id, {
-  //recursive: true,
-  //});
-
   // Update redirect record
   redirectsIds.forEach(async (id) => {
     const updated = await client.items.update(id, {

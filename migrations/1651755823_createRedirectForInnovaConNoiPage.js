@@ -1,5 +1,4 @@
 "use strict";
-const util = require("util");
 
 module.exports = async (client) => {
   // Retrieve redirect item type
