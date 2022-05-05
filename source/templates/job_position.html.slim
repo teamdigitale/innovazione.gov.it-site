@@ -80,7 +80,7 @@ ruby:
       - if dato.innovate_page && header_links.any?
         .mt-5
           = partial "partials/column-title",
-            locals: {title: t("correlated")}
+            locals: {title: t("deepen")}
 
         .link-list-wrapper.mt-2
           ul.link-list
@@ -88,7 +88,7 @@ ruby:
               li
                 = link_to page_path(link),
                   class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.mr-0
+                  span.mid-caption--large.font-weight-semibold.mr-0
                     = link.title
 
 = partial "partials/page-content",
