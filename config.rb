@@ -345,6 +345,7 @@ helpers do
        video
        general_page
        work_position
+       work_positions_index
        minister_subpage
        department_subpage
        italy2026_subpage
