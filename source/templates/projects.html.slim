@@ -7,8 +7,9 @@
 = partial "partials/headers/header-basic",
   locals: {page: page, subs: vflp}
   = content_for :aside
-    = partial "partials/column-title",
-      locals: {title: t("explore_aside.title")}
+    .mt-4.pb-2
+      = partial "partials/column-title",
+        locals: {title: t("explore_aside.title")}
 
     = proxy_link_to t("projects_completed"),
       page_path(dato.completed_projects_index),
