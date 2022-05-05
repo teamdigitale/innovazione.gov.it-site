@@ -203,15 +203,15 @@ ruby:
               = date
 
             - if item.respond_to?(:announcement_status)
-              span.px-2 class="#{txt_date} font-weight-bold"
+              span.px-4 class="#{txt_date} font-weight-bold"
                 = item.announcement_status.name
 
             - if show_closing_date
-              span.ml-4 class="#{txt_date}"
+              p.mt-2 class="#{txt_date}"
                 = "#{t('closing_date').upcase}: #{closing_date}"
 
           - if is_work_position
-            .category.pb-2.card-text.font-weight-semibold
+            .category.pb-4.card-text.font-weight-semibold
               = item.office
 
           h3 class="h5 font-weight-semibold"
@@ -227,7 +227,7 @@ ruby:
             .h6.pb-0 = item.source
 
           - if is_work_position && item.tags.present?
-            .pt-3
+            .pt-4
               - item.tags.each do |tag|
                 = partial "partials/chip",
                   locals: {label: tag.name,
