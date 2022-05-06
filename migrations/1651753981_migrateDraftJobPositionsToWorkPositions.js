@@ -161,7 +161,9 @@ module.exports = async (client) => {
 
   // Array of pnrr record objects
   const draftPnrrObjectsToCopy = pnrrRecordsToCopy.map((r) => {
-    const newTags = r.tags.filter((t) => t !== lavoraTagId).concat(pnrrTagId);
+    const newTags = r.tags
+      .filter((t) => t !== lavoraTagId && t !== pnrrTagid)
+      .concat(pnrrTagId);
     return {
       itemType: workPositionModel.id,
       title: r.title,
