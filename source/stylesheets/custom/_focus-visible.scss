@@ -1,6 +1,6 @@
 *:focus:not(:focus-visible),
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: 0 !important;
-  box-shadow: none !important;
+  //outline: 0 !important;
+  //box-shadow: none !important;
   border: none !important;
 }
