@@ -17,31 +17,31 @@ ruby:
   case phase.state
   when "past"
     card_top = "_mid-past text-white"
-    timeline_icon = "check-circle"
-    pin_icon_class = "_mid-past"
-    icon_class = "icon-white"
   when "current"
     card_top = "primary-bg text-white"
-    timeline_icon = "exchange-circle"
-    pin_icon_class = "bg-primary"
-    icon_class = "icon-white"
   when "future"
     card_top = "_mid-future"
-    timeline_icon = "flag"
-    pin_icon_class = ""
-    icon_class = "icon-primary _mid-future_icon"
   end
 
   case milestone.state
   when "past"
     milestone_top = "_mid-past text-white it-evidence"
     timeframe_top_class = "round_top_past"
+    timeline_icon = "check-circle"
+    icon_class = "icon-white"
+    pin_icon_class = "_mid-past"
   when "current"
     milestone_top = "primary-bg text-white it-now"
     timeframe_top_class = "round_top_current"
+    timeline_icon = "exchange-circle"
+    icon_class = "icon-white"
+    pin_icon_class = "bg-primary"
   when "future"
     milestone_top = "_mid-future"
     timeframe_top_class = "round_top_future"
+    timeline_icon = "flag"
+    icon_class = "icon-primary _mid-future_icon"
+    pin_icon_class = ""
   end
 
   line_top = if last_in_past_phase
