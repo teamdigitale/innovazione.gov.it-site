@@ -104,14 +104,13 @@ swiperInstances.forEach(function (swiper, index) {
     }
   });
 
-  swiper.on("fromEdge", function () {
-    if (!(swiper.isBeginning || swiper.isEnd)) {
-      container.classList.remove(
-        "_mid-fade-in",
-        "_mid-mobile-fade-in",
-        "_mid-fade-out",
-        "_mid-mobile-fade-out"
-      );
+  swiper.on("activeIndexChange", function () {
+    let classes = container.classList;
+    let notDoubleFaded = !(
+      classes.contains("_mid-faded-calendar") ||
+      classes.contains("_mid-mobile-faded-calendar")
+    );
+    if (!(swiper.isBeginning || swiper.isEnd) && notDoubleFaded) {
       container.classList.add(
         "_mid-faded-calendar",
         "_mid-mobile-faded-calendar"
