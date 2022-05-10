@@ -24,11 +24,9 @@
 
   .it-brand-wrapper.cloned img._mid-republic-logo-size {
     display: none;
-    //width: 25px !important;
-    //max-height: 72px;
   }
+}
 
-  .it-search-wrapper.cloned {
-    margin-left: 0px;
-  }
+.it-search-wrapper.cloned {
+  margin-left: 0px !important;
 }
