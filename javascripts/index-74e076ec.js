@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
 import "bootstrap-italia/src/js/plugins/navbar";
-import "calendar-swiper-65c43d6a.js";
+import "calendar-swiper-f83132da.js";
 import "calendar-dropdown-3aa406c2.js";
 import "sticky-header-custom-48e6bb39.js";
 import "lazysizes";
