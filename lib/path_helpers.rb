@@ -15,9 +15,7 @@ module PathHelpers
       dato.minister_page
 
     when "department_subpage",
-      "focus_page",
-      "job_position",
-      "pnrr_job_position"
+      "focus_page"
       dato.department_page
 
     when "italy2026_subpage"
@@ -65,9 +63,7 @@ module PathHelpers
     when "department_articles_index",
       "department_announcements_index",
       "department_press_releases_index",
-      "focus_index",
-      "job_positions_index",
-      "pnrr_job_positions_index"
+      "focus_index"
       dato.department_page
 
     when "italy2026_announcements_index",
@@ -116,12 +112,6 @@ module PathHelpers
 
     when "tag"
       dato.tags_index
- 
-    when "job_position"
-      dato.job_positions_index
-
-    when "pnrr_job_position"
-      dato.pnrr_job_positions_index
     end
   end
 

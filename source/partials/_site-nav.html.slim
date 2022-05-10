@@ -1,4 +1,7 @@
-- nav_element_classes = "nav-link font-weight-semibold text-nowrap"
+ruby:
+  nav_element_classes = "nav-link font-weight-semibold text-nowrap"
+  search_text_classes = %(d-none d-md-block d-lg-none
+                        d-xl-block font-weight-semibold)
 
 - I18n.with_locale(:it)
   header.it-header-wrapper.it-header-sticky data-datocms-noindex=true lang="it"
@@ -18,7 +21,7 @@
         .container
           .row
             .it-header-center-content-wrapper.px-2.px-sm-0
-              .it-brand-wrapper.pr-0.pr-md-4
+              .it-brand-wrapper.pr-0.pr-md-4.pr-lg-2.pr-xl-4
                 = link_to home_path
                   = proxy_image_tag "logo-repubblica-italiana.svg",
                     alt: t("logos.italy"),
@@ -45,12 +48,12 @@
                   .ml-3
                     = partial "partials/socials"
 
-                .it-search-wrapper
-                  span.d-none.d-md-block.font-weight-semibold
+                .it-search-wrapper.ml-lg-0
+                  span class=search_text_classes
                     = t("search")
 
                   = link_to page_path(dato.search_page),
-                    class: "search-link rounded-icon",
+                    class: "search-link rounded-icon ml-lg-0 ml-xl-4",
                     aria: {label: t("search")}
                     svg.icon [
                         focusable="false"
@@ -77,7 +80,9 @@
                 svg.icon
                   use xlink:href="/images/sprite.svg#it-burger"
 
-              #nav02.navbar-collapsable style="z-index: 2000; min-width: 100%;"
+              #nav02.navbar-collapsable [
+                style="z-index: 2000; min-width: 100%;"
+                ]
                 .overlay style="display: none;"
                 .close-div.sr-only
                   button.btn.close-menu type="button"

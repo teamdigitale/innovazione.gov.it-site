@@ -12,7 +12,6 @@ ruby:
 - content_for(:head)
   == proxy_dato_meta_tags(page)
 
-
 = partial "partials/headers/header-basic",
   locals: {page: page,
   subs: children,
@@ -24,8 +23,9 @@ ruby:
 
   - if main_locale?(locale)
     = content_for :aside
-      = partial "partials/column-title",
-        locals: {title: t("ontology.arguments")}
+      .mt-4.pb-2
+        = partial "partials/column-title",
+          locals: {title: t("ontology.arguments")}
 
       - page.tags.each do |tag|
         = partial "partials/chip",

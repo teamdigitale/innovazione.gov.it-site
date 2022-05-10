@@ -1,5 +1,4 @@
 "use strict";
-const util = require("util");
 
 function recursivelyRemoveItemIds(thing) {
   if (Array.isArray(thing)) {
@@ -24,17 +23,47 @@ function recursivelyRemoveItemIds(thing) {
 }
 
 module.exports = async (client) => {
-  // Model for new records
-  const workPositionModel = await client.itemType.find("work_position");
+  // Get all work position records
+  const workPositionRecords = await client.items.all({
+    filter: {
+      type: "work_position",
+    },
+    allPages: true,
+    version: "current",
+  });
 
-  // Fetch regular job position records
-  const jobPositionRecords = await client.items.all({
+  const workPositionSlugs = workPositionRecords.map((r) => r.slug);
+
+  // Get draft department jobPositionRecords
+  const draftJobPositions = await client.items.all({
     filter: {
       type: "job_position",
     },
-    nested: true,
     allPages: true,
+    nested: true,
+    version: "draft",
   });
+
+  // Get draft PNRR jobPositionRecords
+  const draftPnrrPositions = await client.items.all({
+    filter: {
+      type: "pnrr_job_position",
+    },
+    allPages: true,
+    nested: true,
+    version: "draft",
+  });
+
+  const toMigrateAsDraft = draftJobPositions.filter(
+    (r) => !workPositionSlugs.includes(r.slug) && r.meta.status === "draft"
+  );
+
+  const toMigrateAsDraftPnrr = draftPnrrPositions.filter(
+    (r) => !workPositionSlugs.includes(r.slug) && r.meta.status === "draft"
+  );
+
+  // Model for new records
+  const workPositionModel = await client.itemType.find("work_position");
 
   // Find 'lavora con noi' tag record
   const tags = await client.items.all({
@@ -51,11 +80,50 @@ module.exports = async (client) => {
   const lavoraTag = tags[0];
   const lavoraTagId = lavoraTag.id;
 
-  // Remove id
-  const recordsToCopy = recursivelyRemoveItemIds(jobPositionRecords);
+  // Find pnrr tag record
+  const filteredTags = await client.items.all({
+    filter: {
+      type: "tag",
+      fields: {
+        name: {
+          eq: "Lavora con noi PNRR",
+        },
+      },
+    },
+  });
 
-  // Array of new record objects from generic job position
-  const jobPositionRecordObjects = recordsToCopy.map((r) => {
+  const pnrrTag = filteredTags[0];
+  const pnrrTagId = pnrrTag.id;
+
+  // Find record for office link to PNRR office
+  const [pnrrOffice] = await client.items.all({
+    filter: {
+      type: "office",
+      fields: {
+        name: {
+          eq: "PNRR",
+        },
+      },
+    },
+  });
+
+  // Find record for office link to department office
+  const [deptOffice] = await client.items.all({
+    filter: {
+      type: "office",
+      fields: {
+        name: {
+          eq: "Dipartimento per la trasformazione digitale",
+        },
+      },
+    },
+  });
+
+  // Remove id
+  const draftsToCopy = recursivelyRemoveItemIds(toMigrateAsDraft);
+
+  // Array of new record objects from records to migrate
+  const draftObjectsToCopy = draftsToCopy.map((r) => {
     const newTags = r.tags.includes(lavoraTagId)
       ? r.tags
       : r.tags.concat(lavoraTagId);
@@ -74,6 +142,7 @@ module.exports = async (client) => {
       owners: r.owners,
       tags: newTags,
       office: "Dipartimento per la trasformazione digitale",
+      officeLink: deptOffice.id,
       announcementStatus: r.announcementStatus,
       legalReference: r.legalReference,
       fee: r.fee,
@@ -87,37 +156,14 @@ module.exports = async (client) => {
     };
   });
 
-  // ===================================================
-  // Fetch pnrr job position records
-  const pnrrPositionRecords = await client.items.all({
-    filter: {
-      type: "pnrr_job_position",
-    },
-    nested: true,
-    allPages: true,
-  });
-
-  // Find pnrr tag record
-  const filteredTags = await client.items.all({
-    filter: {
-      type: "tag",
-      fields: {
-        name: {
-          eq: "Lavora con noi PNRR",
-        },
-      },
-    },
-  });
-
-  const pnrrTag = filteredTags[0];
-  const pnrrTagId = pnrrTag.id;
-
   // Remove id
-  const pnrrRecordsToCopy = recursivelyRemoveItemIds(pnrrPositionRecords);
+  const pnrrRecordsToCopy = recursivelyRemoveItemIds(toMigrateAsDraftPnrr);
 
   // Array of pnrr record objects
-  const pnrrRecordObjects = pnrrRecordsToCopy.map((r) => {
-    const newTags = r.tags.filter((t) => t !== lavoraTagId).concat(pnrrTagId);
+  const draftPnrrObjectsToCopy = pnrrRecordsToCopy.map((r) => {
+    const newTags = r.tags
+      .filter((t) => t !== lavoraTagId && t !== pnrrTagId)
+      .concat(pnrrTagId);
     return {
       itemType: workPositionModel.id,
       title: r.title,
@@ -133,6 +179,7 @@ module.exports = async (client) => {
       owners: r.owners,
       tags: newTags,
       office: "PNRR",
+      officeLink: pnrrOffice.id,
       announcementStatus: r.announcementStatus,
       legalReference: r.legalReference,
       fee: r.fee,
@@ -146,8 +193,9 @@ module.exports = async (client) => {
     };
   });
 
-  const allRecordObjects = jobPositionRecordObjects.concat(pnrrRecordObjects);
+  const allRecordObjects = draftObjectsToCopy.concat(draftPnrrObjectsToCopy);
 
+  // Migrate; create new record
   allRecordObjects.forEach(async (r) => {
     await client.items.create(r);
   });

@@ -15,8 +15,7 @@ ruby:
 
   = content_for :col_one
     - if has_opening_date
-      - margin = has_legal_reference || has_fee ? "mb-5" : ""
-      div class=margin
+      div class="#{has_legal_reference || has_fee ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_date_opening")}
 
@@ -24,8 +23,7 @@ ruby:
           locals: {date: page.announcement_date_opening}
 
     - if has_legal_reference
-      - margin = has_fee ? "mb-5" : ""
-      div class=margin
+      div class="#{has_fee ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("job_position_legal_reference")}
 
@@ -46,16 +44,14 @@ ruby:
 
   = content_for :col_two
     - if has_status
-      - margin = has_closing_date || has_owner ? "mb-5" : ""
-      div class=margin
+      div class="#{has_closing_date || has_owner ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_status")}
 
         p = page.announcement_status.name
 
     - if has_closing_date
-      - margin = has_owner ? "mb-5" : ""
-      div class=margin
+      div class="#{has_owner ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_date_closing")}
 
@@ -84,7 +80,7 @@ ruby:
       - if dato.innovate_page && header_links.any?
         .mt-5
           = partial "partials/column-title",
-            locals: {title: t("correlated")}
+            locals: {title: t("deepen")}
 
         .link-list-wrapper.mt-2
           ul.link-list
@@ -92,7 +88,7 @@ ruby:
               li
                 = link_to page_path(link),
                   class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.mr-0
+                  span.mid-caption--large.font-weight-semibold.mr-0
                     = link.title
 
 = partial "partials/page-content",
