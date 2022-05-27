@@ -29,7 +29,7 @@ ruby:
     end
     if is_work_position && show_closing_date
       closing_date = partial "partials/formatted-date",
-                     locals: {date: item.date_shown}
+                     locals: {date: item.announcement_date_closing}
     end
     if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
