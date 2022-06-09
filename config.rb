@@ -102,7 +102,7 @@ module PresentationHelper
     open, others = work_positions.partition { |p| p.announcement_status.name == "APERTO"}
     open_sorted = open.select(&:slug).sort_by(&:date_shown).reverse
     others_sorted = others.select(&:slug).sort_by(&:date_shown).reverse
-    open + others
+    open_sorted + others_sorted
   end
 
   def self.published_children_pages(page)
