@@ -231,7 +231,7 @@ ruby:
 
           - if is_work_position && item.tags.present?
             .pt-4.pt-md-3
-              - item.tags.each do |tag|
+              /- item.tags.each do |tag|
                 = partial "partials/chip",
                   locals: {label: tag.name,
                   url: page_path(tag),
