@@ -190,3 +190,6 @@ it:
     time: Durata
     highlights: In evidenza
     all: Tutti i video
+
+  work_position:
+    go_to_index: "Vai alle posizioni lavorative"
