@@ -193,3 +193,6 @@ it:
 
   work_position:
     go_to_index: "Vai alle posizioni lavorative"
+    none_open: "Al momento non ci sono posizioni lavorative aperte"
+    one_oppen: "posizione lavorativa aperta"
+    many_open: "posizioni lavorative aperte"
