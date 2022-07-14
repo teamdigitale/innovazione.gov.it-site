@@ -23,14 +23,7 @@ ruby:
       item.announcement_date_closing.present?
       true
     end
-    show_closing_date = if (is_work_position && closing_date_present) &&
-      item.announcement_status.name == "APERTO"
-      true
-    end
-    if is_work_position && show_closing_date
-      closing_date = partial "partials/formatted-date",
-                     locals: {date: item.announcement_date_closing}
-    end
+
     if page_show_update_date_in_preview?(item) && show_date
       date = partial "partials/formatted-date", locals: {date: item.date_shown}
     end
@@ -195,27 +188,38 @@ ruby:
       .card-body.px-0.py-2.p-lg-0.m-lg-0 class=card_classes
         .col-12 class="#{padding}"
           .category.pb-2.card-text
-            span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
-              - pre_title = t("models.#{item.item_type.api_key}")
-              - completed = is_completed_project ? " #{t('concluded')}" : ""
-              = "#{pre_title}#{completed}"
-            span.px-2 class="#{txt_date}"
-              = date
 
-            - if item.respond_to?(:announcement_status)
-              span.px-4.px-md-2 class="#{txt_date} font-weight-bold"
-                = item.announcement_status.name
+            /- if is_work_position && item.respond_to?(:announcement_status)
+              span.px-4.px-md-2
+                - state = item.announcement_status.name
+                - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
+                = t("work_position.search_state")
+                span.font-weight-bold
+                  = status
 
-            - if show_closing_date
-              span.d-none.d-md-inline.ml-4 class="#{txt_date}"
-                = "#{t('closing_date').upcase}: #{closing_date}"
-              .d-md-none
-                p.mt-2 class="#{txt_date}"
-                  = "#{t('closing_date').upcase}: #{closing_date}"
+            - if is_work_position
+              .d-flex.justify-content-between
+                .pr-2.text-uppercase.font-weight-semibold class="#{type}"
+                  - pre_title = t("models.#{item.item_type.api_key}")
+                  - completed = is_completed_project ? " #{t('concluded')}" : ""
+                  = "#{pre_title}#{completed}"
+                .px-4.px-md-2
+                  - state = item.announcement_status.name
+                  - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
+                  = t("work_position.search_state")
+                  span.font-weight-bold
+                    = status
+            - else
+              span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
+                - pre_title = t("models.#{item.item_type.api_key}")
+                - completed = is_completed_project ? " #{t('concluded')}" : ""
+                = "#{pre_title}#{completed}"
+              span.px-2 class="#{txt_date}"
+                = date
 
-          - if is_work_position
-            .category.pb-4.pb-md-2.card-text.font-weight-semibold
-              = item.office_link.name
+              - if !is_work_position && item.respond_to?(:announcement_status)
+                span.px-4.px-md-2 class="#{txt_date} font-weight-bold"
+                  = item.announcement_status.name
 
           h3 class="h5 font-weight-semibold"
             = link_to page_path(item),

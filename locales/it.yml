@@ -196,3 +196,4 @@ it:
     none_open: "Al momento non ci sono posizioni lavorative aperte"
     one_oppen: "posizione lavorativa aperta"
     many_open: "posizioni lavorative aperte"
+    search_state: "Stato ricerca: "
