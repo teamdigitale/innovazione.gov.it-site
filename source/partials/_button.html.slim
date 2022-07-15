@@ -1,6 +1,7 @@
 ruby:
   btn_url ||= nil
   color_class ||= "btn-primary"
+  text_case ||= "text-uppercase"
   label ||= t("view_more")
   white_outline ||= nil
   aria_label ||= ""
@@ -11,6 +12,6 @@ ruby:
 - if btn_url.present?
   = proxy_link_to label,
     page_path(btn_url),
-    class: "btn text-uppercase #{color_class}",
+    class: "btn #{text_case} #{color_class}",
     style: border,
     "aria-label": composed_arialabel

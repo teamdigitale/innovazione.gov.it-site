@@ -189,26 +189,21 @@ ruby:
         .col-12 class="#{padding}"
           .category.pb-2.card-text
 
-            /- if is_work_position && item.respond_to?(:announcement_status)
-              span.px-4.px-md-2
-                - state = item.announcement_status.name
-                - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
-                = t("work_position.search_state")
-                span.font-weight-bold
-                  = status
-
-            - if is_work_position
+            - if is_work_position && item.respond_to?(:announcement_status)
               .d-flex.justify-content-between
                 .pr-2.text-uppercase.font-weight-semibold class="#{type}"
                   - pre_title = t("models.#{item.item_type.api_key}")
                   - completed = is_completed_project ? " #{t('concluded')}" : ""
                   = "#{pre_title}#{completed}"
-                .px-4.px-md-2
+                div
                   - state = item.announcement_status.name
+                  - status_color = state == "APERTO" ? "text-open" : ""
                   - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
-                  = t("work_position.search_state")
-                  span.font-weight-bold
-                    = status
+                  div
+                    .d-none.d-md-inline-block.pr-2
+                      = t("work_position.search_state")
+                    span.font-weight-bold class="#{status_color}"
+                      = status
             - else
               span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
                 - pre_title = t("models.#{item.item_type.api_key}")
@@ -233,12 +228,12 @@ ruby:
           - if item.respond_to?(:source) && item.source.present?
             .h6.pb-0 = item.source
 
-          - if is_work_position && item.tags.present?
-            .pt-4.pt-md-3
-              /- item.tags.each do |tag|
-                = partial "partials/chip",
-                  locals: {label: tag.name,
-                  url: page_path(tag),
-                  chip_type: "chip-primary",
-                  btn_type: "btn-outline-primary",
-                  chip_size: "chip-lg"}
+          - if is_work_position
+            .py-3.pt-md-3
+              = link_to page_path(item),
+                class: "text-primary text-uppercase mid-caption font-weight-bold text-decoration-none"
+                div.d-flex.align-items-center
+                  = t("work_position.discover")
+                  span
+                    svg.icon.icon-sm.icon-primary.ml-2
+                      use xlink:href="/images/sprite.svg#it-arrow-right"
