@@ -952,9 +952,10 @@ dato.tap do |dato|
                              "/templates/job_positions_index.html")
 
       visible_work_positions.each do |work_position|
+        published_inn_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
         proxy "/#{dato.innovate_page.slug}/#{dato.work_positions_index.slug}/#{work_position.slug}/index.html",
               "/templates/job_position.html",
-              locals: {page: work_position},
+              locals: {page: work_position, innovate_subpages: published_inn_subpages},
               locale: locale
       end
     end

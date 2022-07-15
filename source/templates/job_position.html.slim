@@ -9,6 +9,8 @@ ruby:
   has_opening_date = page.announcement_date_opening.present?
   has_fee = page.fee.present?
   has_status = page.announcement_status.present?
+  list_item = %(p-0 list-item d-inline-block)
+  link_text = %(mb-2 mb-lg-0 mr-0 font-weight-semibold mid-caption--xlarge)
 
 = partial "partials/headers/header-basic",
   locals: {page: page, share: true} do
@@ -77,19 +79,18 @@ ruby:
         = partial "partials/chip",
           locals: {label: tag.name, url: page_path(tag)}
 
-      - if dato.innovate_page && header_links.any?
-        .mt-5
-          = partial "partials/column-title",
-            locals: {title: t("deepen")}
+      .mt-5.pb-2
+        = partial "partials/column-title",
+          locals: {title: t("deepen")}
 
-        .link-list-wrapper.mt-2
-          ul.link-list
-            - header_links.map(&:link).each do |link|
-              li
-                = link_to page_path(link),
-                  class: "p-0 list-item d-inline-block"
-                  span.mid-caption--large.font-weight-semibold.mr-0
-                    = link.title
+      .link-list-wrapper
+        ul.link-list
+          - innovate_subpages.each do |subpage|
+            li
+              = link_to page_path(subpage),
+                class: list_item
+                span class=link_text
+                  = subpage.title
 
 = partial "partials/page-content",
   locals: {page: page}

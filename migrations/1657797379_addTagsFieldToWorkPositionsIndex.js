@@ -36,11 +36,6 @@ module.exports = async (client) => {
       type: "work_positions_index",
     },
   });
-  console.log(
-    "workPositionsIndexRecord:",
-    util.inspect(workPositionsIndexRecord, false, 8, true)
-  );
-  console.log("============================");
 
   // Find 'lavora con noi PNRR' tag record
   const [lavoraConNoiTag] = await client.items.all({
@@ -53,16 +48,6 @@ module.exports = async (client) => {
       },
     },
   });
-  console.log(
-    "lavoraConNoiTag:",
-    util.inspect(lavoraConNoiTag, false, 8, true)
-  );
-  console.log("============================");
-
-  // Change 'Lavora con noi PNRR' tag title
-  //await client.items.update(lavoraConNoiTag.id, {
-  //  name: "Posizioni lavorative PNRR",
-  //});
 
   // Add tag to page record
   await client.items.update(workPositionsIndexRecord.id, {
