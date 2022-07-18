@@ -46,11 +46,16 @@ ruby:
 
   = content_for :col_two
     - if has_status
+      - state = page.announcement_status.name
+      - status_color = state == "APERTO" ? "text-open" : ""
+      - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
+
       div class="#{has_closing_date || has_owner ? "mb-5" : ""}"
         = partial "partials/column-title",
           locals: {title: t("announcement_status")}
 
-        p = page.announcement_status.name
+        p.font-weight-bold class="#{status_color}"
+          = status
 
     - if has_closing_date
       div class="#{has_owner ? "mb-5" : ""}"
