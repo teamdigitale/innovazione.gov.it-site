@@ -3,6 +3,8 @@ ruby:
   share ||= nil
   classes ||= ""
   subs ||= nil
+  btn_url ||= nil
+  btn_label ||= nil
   hide_caption ||= nil
   right_col_longer ||= nil
 
@@ -22,8 +24,12 @@ ruby:
         .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
           = partial "partials/headers/main-titles", locals: {page: page}
 
-          - if content_for?(:col_one) || content_for?(:col_two)
+          - if (content_for?(:col_one) || content_for?(:col_two)) || content_for?(:row)
             .row.mb-5.mb-md-0.mb-lg-5
+              - if content_for?(:row)
+                .col-12
+                  = yield_content :row
+
               - if content_for?(:col_one)
                 .col-md-6
                   = yield_content :col_one

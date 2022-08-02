@@ -1,0 +1,50 @@
+ruby:
+  items ||= []
+  description_classes = %( col-md-7 col-lg-6 offset-lg-1 text-center
+                        text-md-left px-4 pb-4 py-md-2 pl-md-2 pr-md-0)
+  flex_classes = %(d-flex justify-content-center justify-content-md-end
+                  justify-content-lg-start align-items-center)
+  open_positions = visible_work_positions.select { |p| p.announcement_status.name == "APERTO"}.count
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic",
+  locals: {page: page} do
+
+  = content_for :aside
+    .mt-4.pb-2
+      = partial "partials/column-title",
+        locals: {title: t("ontology.arguments")}
+
+    - page.tags.each do |tag|
+      = partial "partials/chip",
+        locals: {label: tag.name, url: page_path(tag)}
+
+.container
+  .border-bottom.mb-4
+
+.py-3.mb-lg-5
+  .container.mid-container
+    p.text-uppercase.font-weight-semibold
+      - if open_positions === 0
+        = "t(work_position.none_open)"
+      - if open_positions === 1
+        = "1 #{t("work_position.one_open")}"
+      - if open_positions > 1
+        = "#{open_positions} #{t("work_position.many_open")}"
+
+    - if items.any?
+      .row
+        h2.sr-only = t("elements_list")
+        - items.each do |n|
+          .col-lg-8
+            = partial "partials/card-related-items",
+              locals: {item: n}
+
+      .pt-lg-4
+        = partial "partials/pagination",
+          locals: {pager: pager}
+
+    - else
+      = t("empty_list")

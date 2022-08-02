@@ -3,7 +3,7 @@
 module.exports = async (client) => {
   // Create internal links to innovate subpages
 
-  // List all tag records
+  // List all subpages
   const subpages = await client.items.all({
     filter: {
       type: "innovate_subpage",

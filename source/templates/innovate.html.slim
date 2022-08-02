@@ -1,0 +1,37 @@
+ruby:
+  list_item = %(p-0 list-item d-inline-block)
+  link_text = %(mb-2 mb-lg-0 mr-0 font-weight-semibold mid-caption--xlarge)
+
+- content_for(:head)
+  == proxy_dato_meta_tags(page)
+
+= partial "partials/headers/header-basic",
+  locals: {page: page} do
+
+  = content_for :col_one
+    = partial "partials/switch-locale-button",
+      locals: {page: page}
+
+  = content_for :row
+    = partial "partials/button",
+      locals: {btn_url: dato.work_positions_index,
+      color_class: "btn-default btn-sm btn-primary mid-caption--large",
+      label: t("work_position.go_to_index")}
+
+  - if main_locale?(locale)
+    = content_for :aside
+      .mt-4.pb-2
+        = partial "partials/column-title",
+          locals: {title: t("deepen")}
+
+      .link-list-wrapper.mt-2
+        ul.link-list
+          - children.each do |subpage|
+            li
+              = link_to page_path(subpage),
+                class: list_item
+                span class=link_text
+                  = subpage.title
+
+= partial "partials/page-content",
+  locals: {page: page}
