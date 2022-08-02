@@ -28,7 +28,7 @@ ruby:
   .container.mid-container
     p.text-uppercase.font-weight-semibold
       - if open_positions === 0
-        = "t(work_position.none_open)"
+        = t("work_position.none_open")
       - if open_positions === 1
         = "1 #{t("work_position.one_open")}"
       - if open_positions > 1
