@@ -192,9 +192,7 @@ ruby:
             - if is_work_position && item.respond_to?(:announcement_status)
               .d-flex.justify-content-between
                 .pr-2.text-uppercase.font-weight-semibold class="#{type}"
-                  - pre_title = t("models.#{item.item_type.api_key}")
-                  - completed = is_completed_project ? " #{t('concluded')}" : ""
-                  = "#{pre_title}#{completed}"
+                  = t("models.#{item.item_type.api_key}")
                 div
                   - state = item.announcement_status.name
                   - status_color = state == "APERTO" ? "text-open" : ""
