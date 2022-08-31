@@ -53,7 +53,7 @@ link [
   crossorigin=true]
 
 link href="//www.google-analytics.com" rel="dns-prefetch"
-- if ENV["BUILD_ENV"] == "staging"
+- if ENV["BUILD_ENV"] != "production"
   meta name="robots" content="noindex, nofollow"
 
 = yield_content :head
