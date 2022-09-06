@@ -465,18 +465,10 @@ dato.tap do |dato|
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
-    visible_work_positions = PresentationHelper.published_work_positions(dato.work_positions)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
     visible_news_subpages = PresentationHelper.published_pages(dato.news_subpages)
     visible_resource_redirects = PresentationHelper.published_redirects(dato.resource_redirects)
     visible_videos = PresentationHelper.published_videos(dato.videos)
-
-    visible_work_positions.each do |work_position|
-      proxy "/#{dato.innovate_page.slug}/#{dato.work_positions_index.slug}/#{locale}/#{work_position.slug}/index.html",
-            "/templates/job_position.html",
-            locals: {page: work_position},
-            locale: locale
-    end
 
     visible_innovate_subpages.each do |innovate_subpage|
       parent_path = innovate_subpage.parent ? "/#{innovate_subpage.parent.slug}" : ""
