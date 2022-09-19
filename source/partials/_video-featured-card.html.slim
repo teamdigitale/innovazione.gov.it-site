@@ -13,10 +13,10 @@ ruby:
 - if item
   div class="#{cols} #{extra_mb}"
     .d-lg-none.my-4.pt-4.text-center
-      p.ml-lg-4.mid-caption.text-secondary
+      p.ms-lg-4.mid-caption.text-secondary
         = partial "partials/formatted-date",
           locals: {date: item.date_shown}
-      h2.ml-lg-4.h4.text-primary.mt-2g
+      h2.ms-lg-4.h4.text-primary.mt-2g
         = link_to page_path(item),
           class: "text-decoration-none"
           = item.title

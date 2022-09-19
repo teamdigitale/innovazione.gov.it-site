@@ -13,7 +13,7 @@
           .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
             = partial "partials/headers/main-titles", locals: {page: page}
 
-        .col-12.offset-lg-2.col-lg-5.mb-lg-0.pr-lg-0.mid-absolute-column
+        .col-12.offset-lg-2.col-lg-5.mb-lg-0.pe-lg-0.mid-absolute-column
           - if page.image.present?
             - image = page.image
             = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
@@ -51,12 +51,12 @@
             .col-lg-5
               .px-0.pt-5.pt-lg-0
                 .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-left
-                  h2.p-lg-0.mr-lg-4
+                  h2.p-lg-0.me-lg-4
                     .mid-text--large.text-uppercase.fw-semibold
                     = partial "partials/column-title",
                       locals: {title: page.featured_pre_title}
 
-                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.mr-4
+                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.me-4
                     = page.featured_title
 
               - if page.featured_links.present?
@@ -66,7 +66,7 @@
                   ruby:
                     first_link = page.featured_links.first
                     html_class = "btn text-uppercase"
-                    first_btn = "btn-outline-primary mr-lg-3 mt-3 #{html_class}"
+                    first_btn = "btn-outline-primary me-lg-3 mt-3 #{html_class}"
                     second_btn = "btn-primary mt-3 #{html_class}"
                   .d-lg-inline-block
                     = partial "partials/links/#{first_link.item_type.api_key}",

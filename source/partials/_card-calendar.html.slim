@@ -1,11 +1,11 @@
 ruby:
-  phase_title_classes = %(p-2 pl-4 mb-5 fw-semibold
+  phase_title_classes = %(p-2 ps-4 mb-5 fw-semibold
                           mid-caption--large _mid-phase-title)
   milestone ||= nil
   phase ||= nil
   last_in_past_phase ||= nil
   phase_title = first_in_phase ? phase.title : ""
-  add_right_margin = last_in_phase && !last ? "mr-2" : ""
+  add_right_margin = last_in_phase && !last ? "me-2" : ""
   show_dotted = milestone.long_duration ? "_mid-dotted" : ""
   card_top = nil
   milestone_top = nil
@@ -66,7 +66,7 @@ ruby:
       svg class=icon_class
         use xlink:href="/images/sprite.svg#it-#{timeline_icon}"
 
-  .card-body.mb-5.pr-0.pt-0
+  .card-body.mb-5.pe-0.pt-0
     .pin-text.d-inline-block.mid-caption--large class=milestone_top
       span class=timeframe_top_class
         = milestone.timeframe

@@ -37,13 +37,13 @@ ruby:
     if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
       logo_url = item.image_project_logo
       logo_length = "col-4 col-md-2 px-lg-0"
-      padding = "pl-lg-4 pr-lg-0"
+      padding = "ps-lg-4 pe-lg-0"
     elsif item.respond_to?(:video)
       id = item.video.provider_uid
       youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
       logo_url = placeholder ? item.placeholder_image : youtube_thumb
       logo_length = "col-4 col-md-2 px-lg-0"
-      padding = "pl-lg-4 pr-lg-0"
+      padding = "ps-lg-4 pe-lg-0"
     end
 
     # Style/ classes
@@ -66,7 +66,7 @@ ruby:
 
     if is_work_position
       card_classes = "lightgrey-bg-a3 rounded"
-      padding = "pl-4 pt-4 pr-4 pb-2"
+      padding = "ps-4 pt-4 pe-4 pb-2"
     end
 
   - if logo_url.present?
@@ -191,19 +191,19 @@ ruby:
 
             - if is_work_position && item.respond_to?(:announcement_status)
               .d-flex.justify-content-between
-                .pr-2.text-uppercase.fw-semibold class="#{type}"
+                .pe-2.text-uppercase.fw-semibold class="#{type}"
                   = t("models.#{item.item_type.api_key}")
                 div
                   - state = item.announcement_status.name
                   - status_color = state == "APERTO" ? "text-open" : ""
                   - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
                   div
-                    .d-none.d-md-inline-block.pr-2
+                    .d-none.d-md-inline-block.pe-2
                       = t("work_position.search_state")
                     span.fw-bold class="#{status_color}"
                       = status
             - else
-              span.pr-2.text-uppercase.fw-semibold class="#{type}"
+              span.pe-2.text-uppercase.fw-semibold class="#{type}"
                 - pre_title = t("models.#{item.item_type.api_key}")
                 - completed = is_completed_project ? " #{t('concluded')}" : ""
                 = "#{pre_title}#{completed}"
@@ -233,5 +233,5 @@ ruby:
                 div.d-flex.align-items-center
                   = t("work_position.discover")
                   span
-                    svg.icon.icon-sm.icon-primary.ml-2
+                    svg.icon.icon-sm.icon-primary.ms-2
                       use xlink:href="/images/sprite.svg#it-arrow-right"

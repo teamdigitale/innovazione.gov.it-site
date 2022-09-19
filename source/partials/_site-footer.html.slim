@@ -30,7 +30,7 @@ ruby:
                   style: "width: 160px",
                   class: "icon"
 
-                .it-brand-text.pr-0.pr-md-2
+                .it-brand-text.pe-0.pe-md-2
                   .h5.mt-4.mt-md-0.text-center.text-md-left [
                     style="max-width: 400px;"] = t("formatted_site_name")
 
@@ -98,7 +98,7 @@ ruby:
               div class=title_class
                 = t("follow_us_on")
 
-              .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
+              .d-flex.justify-content-center.ms-3.d-md-block.ms-md-0
                 = partial "partials/socials"
 
             - if footer_links.any?
@@ -135,7 +135,7 @@ ruby:
       .container
         ul.list-inline.link-list.mb-0.text-center.text-md-left
           - visible_links(subfooter_links).each do |item|
-            li.list-inline-item.mr-0.mr-md-5
+            li.list-inline-item.me-0.me-md-5
               = partial "partials/links/#{item.item_type.api_key}",
                 locals: {item: item,
                   label: item.title,

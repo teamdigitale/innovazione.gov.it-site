@@ -1,9 +1,5 @@
-ruby:
-  classes = %(col-lg-2
-               pt-5 d-ml-flex align-items-left
-               justify-content-lg-around)
 .row.my-lg-5
-  .text-center class=classes
+  .text-center.col-lg-2.pt-5
     figure.avatar style="width: 175px; height: 175px"
       = proxy_image_tag page.italy2026_thumbnail.url(w: 10, h: 10,
           fit: "crop"), data: {sizes: "100vw",
@@ -17,10 +13,10 @@ ruby:
   .col-lg-5
     .card-wrapper
       .card.bg-transparent
-        .card-body.ml-lg-4
+        .card-body.ms-lg-4
           div
             .py-2.text-center.text-lg-left
-              h2.h6.mid-caption--large.pr-2.text-uppercase.fw-semibold
+              h2.h6.mid-caption--large.pe-2.text-uppercase.fw-semibold
                 = page.italy2026_pre_title
             h3.h1.text-center.text-lg-left
               = page.italy2026_title

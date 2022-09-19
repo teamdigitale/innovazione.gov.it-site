@@ -1,7 +1,7 @@
 ruby:
   title ||= t("sections_nav_title")
   sections = sections.reject(&:blank?)
-  title_classes = %(h3 py-3 mb-0 pl-2 pr-1 mid-caption
+  title_classes = %(h3 py-3 mb-0 ps-2 pe-1 mid-caption
                     text-uppercase fw-semibold)
 
 - content = capture
@@ -18,7 +18,7 @@ ruby:
       .it-list-wrapper.menu-link-list
         .collapse-div role="tablist" id="accordionDiv-aside"
           .collapse-header id='headingA-aside'
-            .p-0.pr-2.pt-2 [aria-controls="accordion-aside"
+            .p-0.pe-2.pt-2 [aria-controls="accordion-aside"
                       aria-expanded="false"
                       data-target="#accordion-aside"
                       data-toggle="collapse"
@@ -28,7 +28,7 @@ ruby:
                 p.h3.text-uppercase.mid-caption.fw-semibold
                   = title
 
-              .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+              .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
                 ._progress-indicator.progress-indicator.primary-bg-b1
 
           .collapse [aria-labelledby="headingA-aside"

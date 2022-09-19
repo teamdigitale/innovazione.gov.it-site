@@ -21,7 +21,7 @@ ruby:
         .container
           .row
             .it-header-center-content-wrapper.px-2.px-sm-0
-              .it-brand-wrapper.pr-0.pr-md-4.pr-lg-2.pr-xl-4
+              .it-brand-wrapper.pe-0.pe-md-4.pe-lg-2.pe-xl-4
                 = link_to home_path
                   = proxy_image_tag "logo-repubblica-italiana.svg",
                     alt: t("logos.italy"),
@@ -38,14 +38,14 @@ ruby:
                                "d-xl-inline-block",
                                "fw-normal",
                                "mb-0",
-                               "ml-1"].join(" ")
+                               "ms-1"].join(" ")
                       = t("formatted_site_name")
 
               .it-right-zone
                 .it-socials.d-none.d-md-flex.text-nowrap
                   span = t("follow_us_on")
 
-                  .ml-3
+                  .ms-3
                     = partial "partials/socials"
 
                 .it-search-wrapper
@@ -53,7 +53,7 @@ ruby:
                     = t("search")
 
                   = link_to page_path(dato.search_page),
-                    class: "search-link rounded-icon ml-lg-0 ml-xl-4",
+                    class: "search-link rounded-icon ms-lg-0 ms-xl-4",
                     aria: {label: t("search")}
                     svg.icon [
                         focusable="false"
@@ -90,13 +90,13 @@ ruby:
                       = t("close")
 
                 .menu-wrapper
-                  .pl-4.pt-4.d-lg-none
+                  .ps-4.pt-4.d-lg-none
                     = link_to locale_path("/"),
                       class: "d-inline-flex"
                       = proxy_image_tag "logo-repubblica-italiana.svg",
                         alt: t("logos.italy"),
                         style: "max-height: 32px;",
-                        class: "mr-2"
+                        class: "me-2"
 
                       = proxy_image_tag "logo-mitd-white.svg",
                         alt: t("logos.mid"),
@@ -131,15 +131,15 @@ ruby:
                           class: nav_element_classes
 
                   - if dato.italy2026_page
-                    ul.navbar-nav.ml-lg-auto.pt-0
+                    ul.navbar-nav.ms-lg-auto.pt-0
                       li.nav-item
                         = active_link_to dato.italy2026_page.menu_label,
                           page_path(dato.italy2026_page),
                           class: nav_element_classes
 
-                  .it-socials.d-flex.text-nowrap.ml-4.pt-4.d-lg-none
+                  .it-socials.d-flex.text-nowrap.ms-4.pt-4.d-lg-none
                     span.text-white
                       = t("follow_us_on")
 
-                    .ml-3
+                    .ms-3
                       = partial "partials/socials"

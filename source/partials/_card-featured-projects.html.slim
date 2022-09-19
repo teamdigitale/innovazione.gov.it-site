@@ -3,7 +3,7 @@ ruby:
     justify-content-center align-items-center justify-content-lg-start)
 
   toggler_classes = %(p-0 btn btn-default btn-dropdown
-    dropdown-toggle m-4 ml-md-3 mr-lg-0 ml-xl-4)
+    dropdown-toggle m-4 ms-md-3 me-lg-0 ms-xl-4)
 
 .row.mt-4.my-lg-5
   .col-lg-5.pt-lg-5
@@ -25,7 +25,7 @@ ruby:
       = page.projects_text
 
     div class=projects_button_parent_classes
-      .mx-4.ml-lg-0
+      .mx-4.ms-lg-0
         = partial "partials/button",
           locals: {btn_url: dato.projects_page,
           aria_label: page.projects_pre_title}

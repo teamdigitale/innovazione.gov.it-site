@@ -55,7 +55,7 @@ ruby:
                     style: "height: 136px; width: 208px; object-fit: cover;",
                     alt: block.thumbnail.alt
         .col-md-10.d-md-flex.align-items-md-between.mt-3.mt-md-0
-          .m-4.ml-md-0.d-flex.flex-column.justify-content-center
+          .m-4.ms-md-0.d-flex.flex-column.justify-content-center
             h3.mid-caption--lead.fw-semibold.text-center.text-md-left
               = block.title
             .d-none.d-md-block
@@ -65,7 +65,7 @@ ruby:
               p.mid-caption--xlarge.pb-0.mb-0.text-center
                 = block.description
 
-          .ml-md-auto.d-flex.align-items-center.justify-content-center
+          .ms-md-auto.d-flex.align-items-center.justify-content-center
             .m-4.m-md-0 class=button_background
               - html_class = "btn btn-primary"
               = partial "partials/links/#{block.link.item_type.api_key}",

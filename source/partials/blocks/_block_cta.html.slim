@@ -4,4 +4,4 @@
   - visible_links(block.cta_items).each.with_index do |item, i|
     - html_class = i == buttons_amount ? "btn-primary" : "btn-outline-primary"
     = partial "partials/links/#{item.item_type.api_key}",
-      locals: {item: item, html_class: "btn my-3 mr-sm-4 #{html_class}"}
+      locals: {item: item, html_class: "btn my-3 me-sm-4 #{html_class}"}

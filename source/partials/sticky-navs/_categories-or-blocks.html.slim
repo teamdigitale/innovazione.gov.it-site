@@ -32,7 +32,7 @@ ruby:
       li.nav-item
         = link_to cat.name,
           "##{cat.slug}",
-          class: "nav-link pr-4"
+          class: "nav-link pe-4"
 
   - else
     - page.content_blocks.each do |block|
@@ -40,25 +40,25 @@ ruby:
         li.nav-item
           = link_to block.text_title,
             "##{anchor_id(block.text_title)}",
-            class: "nav-link pr-4"
+            class: "nav-link pe-4"
 
   - if show_attachments
     li.nav-item
       = link_to t("attachments"),
         "#_attachments",
-        class: "nav-link pr-4",
+        class: "nav-link pe-4",
         tabindex: "-1"
   - if show_links
     li.nav-item
       = link_to t("useful_links"),
         "#_useful_links",
-        class: "nav-link pr-4",
+        class: "nav-link pe-4",
         tabindex: "-1"
   - if show_related
     li.nav-item
       = link_to t("related_content"),
         "#_related-content",
-        class: "nav-link pr-4",
+        class: "nav-link pe-4",
         tabindex: "-1"
 
 - extra_content = show_related || show_attachments || show_links
@@ -70,7 +70,7 @@ ruby:
       .it-list-wrapper.menu-link-list
         .collapse-div role="tablist" id="accordionDiv-aside"
           .collapse-header id='headingA-aside'
-            .p-0.pt-2.pr-2 [aria-controls="accordion-aside"
+            .p-0.pt-2.pe-2 [aria-controls="accordion-aside"
                       aria-expanded="false"
                       data-target="#accordion-aside"
                       data-toggle="collapse"
@@ -79,7 +79,7 @@ ruby:
                 p.h3.text-uppercase.mid-caption.fw-semibold
                   = title
 
-              .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+              .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
                 ._progress-indicator.progress-indicator.primary-bg-b1
           .collapse [aria-labelledby="headingA-aside"
                     id="accordion-aside"
@@ -95,7 +95,7 @@ ruby:
         p.h3.pt-3.pb-2.text-uppercase.mid-caption.fw-semibold
           = title
 
-        .col-12.neutral-1-bg-a1.pr-0.pl-0.relative
+        .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
           ._progress-indicator.progress-indicator.primary-bg-b1
 
         ul.it-list.small.pt-3._top-menu
