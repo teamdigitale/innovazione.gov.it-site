@@ -37,21 +37,19 @@ section.lightgrey-bg-b2.py-4
                 h2.h1.text-white.no_toc.mb-1 = block.title
                 .h5.text-white.pt-2 = block.subtitle
 
-              .mr-5.ml-auto.bg-dark.pr-5
-                - visible_links(block.links).each.with_index do |item, i|
-                  - html_class = "btn btn-outline-primary mr-4" if !i.zero?
-                  = partial "partials/links/#{item.item_type.api_key}",
-                    locals: {item: item, html_class: html_class}
+                .me-5.ms-auto.bg-dark.pe-5 style="z-index: 2000;"
+                  - visible_links(block.links).each.with_index do |item|
+                    = partial "partials/links/#{item.item_type.api_key}",
+                      locals: {item: item, html_class: "btn btn-outline-primary"}
           .col-12.d-lg-none[
             aria-hidden="true"
             aria-label="Contenuto in evidenza mobile"]
             .container
               .row
                 .bg-dark
-                  .it-hero-text-wrapper.pl-3
+                  .it-hero-text-wrapper.ps-3
                     h2.h1.text-white.no_toc.mb-1 = block.title
                     .h5.text-white.pt-2.pb-5 = block.subtitle
-                    - visible_links(block.links).each.with_index do |item, i|
-                      - html_class = "btn btn-outline-primary" if !i.zero?
+                    - visible_links(block.links).each.with_index do |item|
                       = partial "partials/links/#{item.item_type.api_key}",
-                        locals: {item: item, html_class: html_class}
+                        locals: {item: item, html_class: "btn btn-outline-primary"}
