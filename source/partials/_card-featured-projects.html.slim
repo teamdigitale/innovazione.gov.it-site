@@ -55,7 +55,7 @@ ruby:
   .col-lg-6.pt-lg-5.pb-5.order-lg-first
     .col-lg-8.offset-lg-2.mb-5
       - if page.featured_projects.present?
-        h3.sr-only = t("projects.highlights")
+        h3.visually-hidden = t("projects.highlights")
         = partial "partials/image_text_gallery",
           locals: {slides: page.featured_projects}
 

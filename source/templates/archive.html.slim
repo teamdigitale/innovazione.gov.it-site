@@ -18,7 +18,7 @@
 .py-3.my-lg-5
   .container.mid-container
     - if items.present?
-      h2.sr-only = t("event_list")
+      h2.visually-hidden = t("event_list")
       - items.each do |month_and_year, events_by_day|
         ruby:
           m = month_and_year.split.first

@@ -6,7 +6,7 @@ ruby:
   icon_classes = %(icon bg-white icon-primary rounded p-1 video_slide_icon)
 
 - if slides.present?
-  h3.sr-only = t("highlights")
+  h3.visually-hidden = t("highlights")
   .swiper.swiper--text
     .swiper-container.fixed-height.fixed-width.mb-4.shadow-lg
       .swiper-wrapper.h-100

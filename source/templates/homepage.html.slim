@@ -14,7 +14,7 @@ h1 class=mobile_title_classes
     = " per l'innovazione tecnologica e la transizione digitale"
 
 - if page.banners.present?
-  h2.sr-only = t("notes")
+  h2.visually-hidden = t("notes")
   - page.banners.each do |block|
     - if block.item_type.api_key != "block_hero_banner" || block.show
       = partial "partials/blocks/#{block.item_type.api_key}",

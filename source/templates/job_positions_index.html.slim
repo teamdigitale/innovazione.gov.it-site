@@ -36,7 +36,7 @@ ruby:
 
     - if items.any?
       .row
-        h2.sr-only = t("elements_list")
+        h2.visually-hidden = t("elements_list")
         - items.each do |n|
           .col-lg-8
             = partial "partials/card-related-items",
