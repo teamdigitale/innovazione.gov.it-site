@@ -4,7 +4,7 @@
       - block.images.each do |img|
         .swiper-slide
           .mid-fixed-height--400
-            = proxy_image_tag img.lqip_data_url(w: 10, h: 6, fit: "max"),
+            = proxy_image_tag placeholder_url(img, {w: 10, h: 6, fit: "max"}),
                 data: {sizes: "100vw",
                   src: img.url(w: 700, h: 400, fit: "max", auto: "compress"),
                   srcset: "#{img.url(w: 450,

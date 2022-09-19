@@ -85,9 +85,9 @@ ruby:
               = link_to page_path(item),
                 aria_label: t("video.go_to_video"),
                 title: "video: #{item.title}"
-                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                = proxy_image_tag placeholder_url(logo_url, {w: 10,
                     h: 10,
-                    fit: "max"),
+                    fit: "max"}),
                   data: {sizes: "100vw",
                     src: logo_url.url(w: 120,
                       h: 120,
@@ -105,9 +105,9 @@ ruby:
                   alt: logo_url.alt,
                   title: logo_url.title
             - else
-              = proxy_image_tag logo_url.lqip_data_url(w: 10,
+              = proxy_image_tag placeholder_url(logo_url, {w: 10,
                 h: 10,
-                fit: "max"),
+                fit: "max"}),
                 data: {sizes: "100vw",
                   src: logo_url.url(w: 120,
                      h: 120,
@@ -144,9 +144,9 @@ ruby:
               aria_label: t("video.go_to_video"),
               title: "video: #{item.title}"
               figure style="height: 100px;"
-                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                = proxy_image_tag placeholder_url(logo_url, {w: 10,
                     h: 10,
-                    fit: "max"),
+                    fit: "max"}),
                   data: {sizes: "100vw",
                     src: logo_url.url(w: 120,
                       h: 120,
@@ -165,9 +165,9 @@ ruby:
                   title: logo_url.title
           - else
             figure
-              = proxy_image_tag logo_url.lqip_data_url(w: 10,
+              = proxy_image_tag placeholder_url(logo_url, {w: 10,
                   h: 10,
-                  fit: "max"),
+                  fit: "max"}),
                 data: {sizes: "100vw",
                   src: logo_url.url(w: 120,
                     h: 120,

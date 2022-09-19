@@ -6,8 +6,9 @@
     end
 
   figure
-    = proxy_image_tag page.image_cover.lqip_data_url(w: 10, h: 4,
-      fit: "crop"), data: {sizes: "100vw",
+    - image = page.image_cover
+    = proxy_image_tag placeholder_url(image, {w: 10, h: 4,
+      fit: "crop"}), data: {sizes: "100vw",
         src: page.image_cover.url(w: 2500, h: 750,
           fit: "crop", auto: "compress"),
         srcset: "#{page.image_cover.url(w: 480, h: 350,

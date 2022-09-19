@@ -12,9 +12,10 @@ ruby:
           .d-none.d-md-block
             .img-responsive-wrapper
                 figure.my-0
-                  = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                  - image = block.thumbnail
+                  = proxy_image_tag placeholder_url(image, {w: 10,
                       h: 10,
-                      fit: "clip"),
+                      fit: "clip"}),
                     data: {sizes: "100vw",
                       src: block.thumbnail.url(w: 100,
                         h: 100,
@@ -34,9 +35,10 @@ ruby:
             .mx-5.mt-4
               .d-flex.align-items-center.justify-content-center
                 figure
-                  = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                  - image = block.thumbnail
+                  = proxy_image_tag placeholder_url(image, {w: 10,
                       h: 10,
-                      fit: "clip"),
+                      fit: "clip"}),
                     data: {sizes: "100vw",
                       src: block.thumbnail.url(w: 100,
                         h: 100,

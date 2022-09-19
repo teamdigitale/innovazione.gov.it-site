@@ -9,9 +9,10 @@ ruby:
       .img-responsive-wrapper
         .img-responsive
           figure.img-wrapper.h-75
-            = proxy_image_tag article.image_thumbnail.lqip_data_url(w: 10,
+            - image = article.image_thumbnail
+            = proxy_image_tag placeholder_url(image, {w: 10,
               h: 6,
-              fit: "crop"),
+              fit: "crop"}),
                 data: {sizes: "100vw",
                   src: article.image_thumbnail.url(w: 700,
                     h: 400,

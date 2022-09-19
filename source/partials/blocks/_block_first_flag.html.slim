@@ -42,9 +42,10 @@ ruby:
   .row
     div class="#{image_col} #{img_mobile} #{image_position}"
       figure.d-flex.flex-grow-1.align-items-center.justify-content-center
-        = proxy_image_tag block.image.lqip_data_url(w: 10,
+        - image = block.image
+        = proxy_image_tag placeholder_url(image, {w: 10,
             h: 6,
-            fit: "clip"),
+            fit: "clip"}),
             data: {sizes: "100vw",
               src: block.image.url(w: 700,
                   h: 400,

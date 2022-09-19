@@ -82,9 +82,9 @@
       .img-responsive-wrapper
         .img-responsive
           figure.img-wrapper
-            = proxy_image_tag image_link.lqip_data_url(w: 10,
+            = proxy_image_tag placeholder_url(image_link, {w: 10,
               h: 6,
-              fit: "crop"),
+              fit: "crop"}),
               data: {sizes: "100vw",
                 src: image_link.url(w: 700,
                     h: 400,

@@ -83,8 +83,8 @@
         .d-lg-none
           .img-responsive.img-responsive-panoramic
             figure.img-wrapper.p-0
-              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"),
+              = proxy_image_tag placeholder_url(card_image, {w: 10, h: 6,
+                fit: "crop"}),
                 data: {sizes: "100vw",
                   src: image_src,
                   srcset: image_mobile_srcset},
@@ -94,8 +94,8 @@
         .d-none.d-lg-block
           .img-responsive-panoramic
             figure.position-absolute.w-100.h-100
-              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"),
+              = proxy_image_tag placeholder_url(card_image, {w: 10, h: 6,
+                fit: "crop"}),
                 data: {sizes: "100vw",
                   src: image_src,
                   srcset: image_desk_srcset},

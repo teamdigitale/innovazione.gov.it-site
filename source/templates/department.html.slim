@@ -13,9 +13,10 @@
           .col-6.px-0
             .img-responsive-wrapper
               figure
-                = proxy_image_tag page.logo.lqip_data_url(w: 10,
+                - image = page.logo
+                = proxy_image_tag placeholder_url(image, {w: 10,
                   h: 10,
-                  fit: "max"),
+                  fit: "max"}),
                   data: {sizes: "100vw",
                     src: page.logo.url(w: 230,
                     h: 460,

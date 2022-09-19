@@ -8,8 +8,9 @@ ruby:
     .row.my-lg-5
       .text-center class=classes
         figure.avatar style="width: 175px; height: 175px"
-          = proxy_image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10,
-              fit: "crop"), data: {sizes: "100vw",
+          - image = dato.minister_page.photo
+          = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
+              fit: "crop"}), data: {sizes: "100vw",
               src: dato.minister_page.photo.url(w: 1200, h: 1200,
               fit: "crop", auto: "compress"),
               srcset: "#{dato.minister_page.photo.url(w: 800, h: 800,

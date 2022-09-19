@@ -40,9 +40,9 @@ ruby:
               fit: "crop",
               auto: "compress")
 
-          = proxy_image_tag flag.image.lqip_data_url(w: 10,
+          = proxy_image_tag placeholder_url(flag.image, {w: 10,
               h: 6,
-              fit: "crop"),
+              fit: "crop"}),
               data: {sizes: "100vw",
                 src: flag.image.url(w: 700,
                     h: 400,
@@ -71,8 +71,8 @@ ruby:
 
         - else
           figure.m-0
-            = proxy_image_tag flag.image.lqip_data_url(w: 10, h: 8,
-              fit: "crop"),
+            = proxy_image_tag placeholder_url(flag.image, {w: 10, h: 8,
+              fit: "crop"}),
               data: {sizes: "100vw",
                 src: flag.image.url(w: 650,
                   h: 550,
@@ -103,9 +103,9 @@ ruby:
           .img-responsive
             .img-wrapper
               figure.m-0
-                = proxy_image_tag flag.image.lqip_data_url(w: 10,
+                = proxy_image_tag placeholder_url(flag.image, {w: 10,
                   h: 6,
-                  fit: "crop"),
+                  fit: "crop"}),
                    data: {sizes: "100vw",
                      src: flag.image.url(w: 560,
                        h: 320,

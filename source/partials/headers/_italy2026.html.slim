@@ -15,8 +15,9 @@
 
         .col-12.offset-lg-2.col-lg-5.mb-lg-0.pr-lg-0.mid-absolute-column
           - if page.image.present?
-            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
-              fit: "crop"), data: {sizes: "100vw",
+            - image = page.image
+            = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
+              fit: "crop"}), data: {sizes: "100vw",
                 src: page.image.url(w: 1200, h: 1200,
                 fit: "crop", auto: "compress"),
                 srcset: "#{page.image.url(w: 480, h: 350,

@@ -16,7 +16,8 @@ ruby:
     div class=column_class
       - if block.image_little.present?
         figure.block-body__small-image
-          = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6),
+          - image = block.image_little
+          = proxy_image_tag placeholder_url(image, {w: 10, h: 6}),
             data: {sizes: "100vw",
             src: block.image_little.url(w: 700, h: 400,
             fit: "max", auto: "compress"),

@@ -16,9 +16,9 @@ ruby:
     .img-responsive
       figure.img-wrapper
         - if placeholder
-          = proxy_image_tag thumbnail.lqip_data_url(w: 10,
+          = proxy_image_tag placeholder_url(thumbnail, {w: 10,
             h: 6,
-            fit: "crop"),
+            fit: "crop"}),
             data: {sizes: "100vw",
               src: thumbnail.url(w: 700,
                  h: 400,

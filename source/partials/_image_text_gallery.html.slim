@@ -5,8 +5,9 @@
         .swiper-slide.fixed-width
           .swiper-slide__image
             - if slide.image_thumbnail
-              = proxy_image_tag slide.image_thumbnail.lqip_data_url(w: 10, h: 6,
-                  fit: "fillmax"), data: {sizes: "100vw",
+              - image = slide.image_thumbnail
+              = proxy_image_tag placeholder_url(image, {w: 10, h: 6,
+                  fit: "fillmax"}), data: {sizes: "100vw",
                   src: slide.image_thumbnail.url(w: 700, h: 400,
                   fit: "fillmax", auto: "compress"),
                   srcset: "#{slide.image_thumbnail.url(w: 450, h: 330,

@@ -32,8 +32,8 @@ ruby:
             - image = page.photo
             .text-center
               figure
-                = proxy_image_tag image.lqip_data_url(w: 10, h: 10,
-                  fit: "crop"), data: {sizes: "100vw",
+                = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
+                  fit: "crop"}), data: {sizes: "100vw",
                     src: image.url(w: 920, h: 920,
                     fit: "crop", auto: "compress"),
                     srcset: "#{image.url(w: 660, h: 660,
