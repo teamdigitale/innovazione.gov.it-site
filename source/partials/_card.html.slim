@@ -52,9 +52,9 @@
     if large_title
       title_style = "h2"
     elsif medium_title
-      title_style = "h5 font-weight-bold"
+      title_style = "h5 fw-bold"
     else
-      title_style = "mid-caption--xlarge font-weight-bold"
+      title_style = "mid-caption--xlarge fw-bold"
       subtitle_style = "mid-caption--large"
     end
 
@@ -115,7 +115,7 @@
       div
         - if show_item_type
           .category.pb-3.card-text
-            span.pr-2.text-uppercase.font-weight-semibold
+            span.pr-2.text-uppercase.fw-semibold
               = t("models.#{article.item_type.api_key}")
             span.px-2.text-secondary
               = partial "partials/formatted-date",

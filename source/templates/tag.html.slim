@@ -10,7 +10,7 @@
         = partial "partials/breadcrumb", locals: {page: page}
 
       .col-md-7.offset-lg-1
-        h1.font-weight-bold = page.name
+        h1.fw-bold = page.name
 
       .offset-lg-1.col-md-4.mt-5.m-md-0
         = partial "partials/column-title",
@@ -20,17 +20,17 @@
             li
               = link_to page_path(dato.search_page),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.mr-0
+                  span.fw-semibold.mr-0
                     = t("explore_aside.search_title")
             li
               = link_to page_path(dato.tags_index),
                 class: "p-0 list-item d-inline-block"
-                span.font-weight-semibold.mr-0
+                span.fw-semibold.mr-0
                   = t("explore_aside.tags_title")
             li
               = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.mr-0
+                  span.fw-semibold.mr-0
                     = dato.explore_page.title
 
     = if page.title.present? || page.subtitle.present?
@@ -51,7 +51,7 @@
     - if focus_pages.any?
       section.py-4
         header.container
-          h2.display-3.font-weight-semibold.mb-4
+          h2.display-3.fw-semibold.mb-4
             = t("focus.title")
 
         .container.mid-container
@@ -66,7 +66,7 @@
     - if projects.any?
       section.py-4
         header.container
-          h2.display-3.font-weight-semibold.mb-4
+          h2.display-3.fw-semibold.mb-4
             = t("projects.title")
 
         .container.mid-container.px-0
@@ -78,7 +78,7 @@
   - if items.any?
     section.pt-4
       header.container
-        h2.display-3.font-weight-semibold.mb-4
+        h2.display-3.fw-semibold.mb-4
           = t("contents.title")
 
       .container.mid-container.px-0

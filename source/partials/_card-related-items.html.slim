@@ -191,7 +191,7 @@ ruby:
 
             - if is_work_position && item.respond_to?(:announcement_status)
               .d-flex.justify-content-between
-                .pr-2.text-uppercase.font-weight-semibold class="#{type}"
+                .pr-2.text-uppercase.fw-semibold class="#{type}"
                   = t("models.#{item.item_type.api_key}")
                 div
                   - state = item.announcement_status.name
@@ -200,10 +200,10 @@ ruby:
                   div
                     .d-none.d-md-inline-block.pr-2
                       = t("work_position.search_state")
-                    span.font-weight-bold class="#{status_color}"
+                    span.fw-bold class="#{status_color}"
                       = status
             - else
-              span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
+              span.pr-2.text-uppercase.fw-semibold class="#{type}"
                 - pre_title = t("models.#{item.item_type.api_key}")
                 - completed = is_completed_project ? " #{t('concluded')}" : ""
                 = "#{pre_title}#{completed}"
@@ -211,10 +211,10 @@ ruby:
                 = date
 
               - if !is_work_position && item.respond_to?(:announcement_status)
-                span.px-4.px-md-2 class="#{txt_date} font-weight-bold"
+                span.px-4.px-md-2 class="#{txt_date} fw-bold"
                   = item.announcement_status.name
 
-          h3 class="h5 font-weight-semibold"
+          h3 class="h5 fw-semibold"
             = link_to page_path(item),
               class: "#{txt_title} text-decoration-none"
               = item.title
@@ -229,7 +229,7 @@ ruby:
           - if is_work_position
             .py-3.pt-md-3
               = link_to page_path(item),
-                class: "text-primary text-uppercase mid-caption font-weight-bold text-decoration-none"
+                class: "text-primary text-uppercase mid-caption fw-bold text-decoration-none"
                 div.d-flex.align-items-center
                   = t("work_position.discover")
                   span

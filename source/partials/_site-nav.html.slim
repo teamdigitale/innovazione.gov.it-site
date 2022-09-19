@@ -1,7 +1,7 @@
 ruby:
-  nav_element_classes = "nav-link font-weight-semibold text-nowrap"
+  nav_element_classes = "nav-link fw-semibold text-nowrap"
   search_text_classes = %(d-none d-md-block d-lg-none
-                        d-xl-block font-weight-semibold)
+                        d-xl-block fw-semibold)
 
 - I18n.with_locale(:it)
   header.it-header-wrapper.it-header-sticky data-datocms-noindex=true lang="it"
@@ -14,7 +14,7 @@ ruby:
                 "//www.governo.it/",
                 target: "_blank",
                 rel: "noopener",
-                class: "navbar-brand font-weight-semibold"
+                class: "navbar-brand fw-semibold"
 
     .it-nav-wrapper
       .it-header-center-wrapper
@@ -36,7 +36,7 @@ ruby:
                                "no_toc",
                                "d-none",
                                "d-xl-inline-block",
-                               "font-weight-normal",
+                               "fw-normal",
                                "mb-0",
                                "ml-1"].join(" ")
                       = t("formatted_site_name")

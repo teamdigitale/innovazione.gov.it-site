@@ -10,7 +10,7 @@ ruby:
   has_fee = page.fee.present?
   has_status = page.announcement_status.present?
   list_item = %(p-0 list-item d-inline-block)
-  link_text = %(mb-2 mb-lg-0 mr-0 font-weight-semibold mid-caption--xlarge)
+  link_text = %(mb-2 mb-lg-0 mr-0 fw-semibold mid-caption--xlarge)
 
 = partial "partials/headers/header-basic",
   locals: {page: page, share: true} do
@@ -54,7 +54,7 @@ ruby:
         = partial "partials/column-title",
           locals: {title: t("announcement_status")}
 
-        p.font-weight-bold class="#{status_color}"
+        p.fw-bold class="#{status_color}"
           = status
 
     - if has_closing_date

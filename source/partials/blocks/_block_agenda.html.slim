@@ -30,11 +30,11 @@
                 .swiper-slide__text.py-0
                   .mid-agenda-block-border
                   .pb-3.px-3.text-center.text-md-left
-                    .category.pb-2.mid-caption.font-weight-semibold
+                    .category.pb-2.mid-caption.fw-semibold
                       span.pr-2
                         = partial "partials/formatted-date",
                           locals: {date: event.date_shown}
-                    h3.h5.font-weight-semibold
+                    h3.h5.fw-semibold
                       = link_to page_path(event),
                         class: "text-primary text-decoration-none"
                         = event.title
@@ -53,11 +53,11 @@
                       .swiper-slide__text.py-0
                         .mid-agenda-block-border
                           .pb-3.px-3.text-center.text-md-left
-                            .category.pb-2.mid-caption.font-weight-semibold
+                            .category.pb-2.mid-caption.fw-semibold
                               span.pr-2
                                 = partial "partials/formatted-date",
                                   locals: {date: event.date_shown}
-                            h3.h6.font-weight-semibold
+                            h3.h6.fw-semibold
                               = link_to page_path(event),
                                 class: "text-primary text-decoration-none"
                                 = event.title

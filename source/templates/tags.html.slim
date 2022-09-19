@@ -13,12 +13,12 @@
         li
           = link_to page_path(dato.search_page),
             class: "p-0 list-item d-inline-block"
-              span.font-weight-semibold.mr-0
+              span.fw-semibold.mr-0
                 = t("explore_aside.search_title")
         li
           = link_to page_path(dato.explore_page),
             class: "p-0 list-item d-inline-block"
-              span.font-weight-semibold.mr-0
+              span.fw-semibold.mr-0
                 = dato.explore_page.title
 
 .container.pb-5.mb-5
@@ -27,7 +27,7 @@
   .row.py-lg-5
     - letters.each do |letter|
       .col-lg-4.col-xl-3.mb-5
-        h2.display-1.font-weight-normal.text-uppercase = letter
+        h2.display-1.fw-normal.text-uppercase = letter
         - visible_tags.select { |t| t.name[0].downcase == letter }.each do |tag|
           = partial "partials/chip",
             locals: {label: tag.name,

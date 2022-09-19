@@ -1,12 +1,7 @@
-ruby:
-  classes = %(col-lg-2
-               pt-5 d-ml-flex align-items-left
-               justify-content-lg-around)
-
 .py-5.py-5.lightgrey-bg-a2
   .container
     .row.my-lg-5
-      .text-center class=classes
+      .text-center.col-lg-2.pt-5
         figure.avatar style="width: 175px; height: 175px"
           - image = dato.minister_page.photo
           = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
@@ -21,23 +16,23 @@ ruby:
       .col-lg-5
         .card-wrapper
           .card.bg-transparent
-            .card-body.ml-lg-4
+            .card-body.ms-lg-4
               div
-                .py-2.text-center.text-lg-left
+                .py-2.text-center.text-lg-start
                   h2 class=["h6",
                     "mid-caption--large",
-                    "pr-2",
+                    "pe-2",
                     "text-uppercase",
-                    "font-weight-semibold"].join(" ")
+                    "fw-semibold"].join(" ")
                     = block.pre_title
 
-                h3.h1.text-center.text-lg-left
+                h3.h1.text-center.text-lg-start
                   = block.title
 
-                p.h5.mid-text-dark.text-center.text-lg-left
+                p.h5.mid-text-dark.text-center.text-lg-start
                   = block.text
 
-              .my-3.mt-lg-5.text-center.text-lg-left
+              .my-3.mt-lg-5.text-center.text-lg-start
                 = partial "partials/button",
                   locals: {btn_url: dato.minister_page,
                     aria_label: block.pre_title}

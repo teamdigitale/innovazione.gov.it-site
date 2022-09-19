@@ -57,7 +57,7 @@
         div
           .category.py-2.card-text
             - if show_item_type
-              span.pr-4.text-uppercase.font-weight-semibold
+              span.pr-4.text-uppercase.fw-semibold
                 = t("models.#{article.item_type.api_key}")
             span.text-secondary
               = partial "partials/formatted-date",

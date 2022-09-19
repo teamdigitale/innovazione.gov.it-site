@@ -2,15 +2,15 @@
 
 - if element.present?
   .card.d-flex.flex-row.rounded.mb-3.shadow-lg.p-3.align-items-center
-    .card-body.pl-4.py-2
-      h4.text-primary.h5.font-weight-bold
+    .card-body.ps-4.py-2
+      h4.text-primary.h5.fw-bold
         = element.title
       .card-text.text-secondary
         span = element.description
-    .text-primary.h2.font-weight-semibold.mb-0
+    .text-primary.h2.fw-semibold.mb-0
       = "#{element.number}%"
     .img-responsive-wrapper.pr-3
-        .icon.mid-icon-large.text-primary.ml-3
+        .icon.mid-icon-large.text-primary.ms-3
           figure.mb-0
             - image = element.image_icon
             = proxy_image_tag placeholder_url(image, {w: 48,

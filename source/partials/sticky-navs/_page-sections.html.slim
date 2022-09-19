@@ -2,7 +2,7 @@ ruby:
   title ||= t("sections_nav_title")
   sections = sections.reject(&:blank?)
   title_classes = %(h3 py-3 mb-0 pl-2 pr-1 mid-caption
-                    text-uppercase font-weight-semibold)
+                    text-uppercase fw-semibold)
 
 - content = capture
   - sections.each do |section|
@@ -25,7 +25,7 @@ ruby:
                       role="button"]
 
               .pt-1.pb-2.px-3
-                p.h3.text-uppercase.mid-caption.font-weight-semibold
+                p.h3.text-uppercase.mid-caption.fw-semibold
                   = title
 
               .col-12.neutral-1-bg-a1.pr-0.pl-0.relative

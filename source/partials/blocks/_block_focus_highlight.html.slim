@@ -1,7 +1,7 @@
 ruby:
   items ||= block.focus_elements
   pretitle_font_classes = %(h6 mid-caption--large
-                 text-uppercase mt-4 text-white font-weight-semibold)
+                 text-uppercase mt-4 text-white fw-semibold)
 
 - if items.present?
   - section_title = t("models.#{items.first.item_type.api_key}")

@@ -38,14 +38,14 @@ ruby:
               .h-100.d-flex.flex-column.justify-content-around
                 .px-3.px-md-5
                   - if !hide_type
-                    span.pr-2.text-uppercase.font-weight-semibold
+                    span.pr-2.text-uppercase.fw-semibold
                       = t("models.#{slide.item_type.api_key}")
                   - if !hide_date && has_date
                     span.px-2.text-secondary
                       = partial "partials/formatted-date",
                         locals: {date: slide.date_shown}
                   - if slide.title
-                    h4.pt-1.text-primary.font-weight-bold class=title_style
+                    h4.pt-1.text-primary.fw-bold class=title_style
                       = proxy_link_to slide.title,
                         page_path(slide),
                         class: "text-decoration-none"
