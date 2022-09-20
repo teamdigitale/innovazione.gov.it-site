@@ -25,7 +25,7 @@
             m = month_and_year.split.first
             y = month_and_year.split.last
             month = t("time.#{m}").concat(" #{y}")
-          h4.mb-5.text-center.text-md-left = month
+          h4.mb-5.text-center.text-md-start = month
         - events_by_day.each do |_day, events|
           .row
             .col-md-1.offset-lg-1.px-0

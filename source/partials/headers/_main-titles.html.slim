@@ -17,11 +17,11 @@
       page.summary
     end
 
-  .text-center.text-sm-left.pb-4 class=classes
+  .text-center.text-sm-start.pb-4 class=classes
     - if title
       h1 class=big_title = title
     - if subtitle
       p.lead.mid-caption--lead = subtitle
     - if summary
-      .text-left.text-sm-left
+      .text-start.text-sm-start
         = markdown summary

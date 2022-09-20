@@ -3,7 +3,7 @@
 
 - if page.present?
   .text-white.position-relative style="background-color: #0073E6;"
-    .container.text-center.text-sm-left
+    .container.text-center.text-sm-start
       .row
         .col-12.col-lg-5.pb-2.pb-lg-5
           = partial "partials/breadcrumb",
@@ -31,7 +31,7 @@
               alt: page.image.alt
 
   .lightgrey-bg-a2
-    .container.pt-5.pb-4.py-lg-5.text-center.text-sm-left
+    .container.pt-5.pb-4.py-lg-5.text-center.text-sm-start
       .col-12
         .row
           .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
@@ -50,7 +50,7 @@
           - if page.featured_title.present?
             .col-lg-5
               .px-0.pt-5.pt-lg-0
-                .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-left
+                .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-start
                   h2.p-lg-0.me-lg-4
                     .mid-text--large.text-uppercase.fw-semibold
                     = partial "partials/column-title",
@@ -60,7 +60,7 @@
                     = page.featured_title
 
               - if page.featured_links.present?
-                - txt = "text-center text-lg-left"
+                - txt = "text-center text-lg-start"
                 - spacing = "my-3 pb-5 pb-lg-0"
                 .d-flex.flex-column.d-lg-block class="#{txt} #{spacing}"
                   ruby:

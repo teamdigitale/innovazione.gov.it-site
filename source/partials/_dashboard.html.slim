@@ -7,12 +7,12 @@ ruby:
     .container.pt-5.pb-2.py-lg-5
       .row
         .col-12.col-lg-6.offset-lg-1.container
-          h2.h4.fw-semibold.text-center.text-lg-left
+          h2.h4.fw-semibold.text-center.text-lg-start
             = page.dashboard_title
-          p.h5.text-center.text-lg-left
+          p.h5.text-center.text-lg-start
             = page.dashboard_subtitle
 
-        .col-12.col-lg-3.text-align-right class=button_classes
+        .col-12.col-lg-3.text-align-end class=button_classes
           .pt-5.pt-lg-0
 
             button.btn.btn-outline-dark.mid-text-dark [
@@ -31,7 +31,7 @@ ruby:
 
               .modal-dialog.modal-lg role="dashboard"
                 .modal-content
-                  button.btn-close.text-right [
+                  button.btn-close.text-end [
                     type="button"
                     data-dismiss="modal"
                     aria-label="Close"]

@@ -2,9 +2,9 @@ ruby:
   menu_title = block.menu_title || nil
   pre_title_classes = %(mid-caption--large
                       text-uppercase fw-semibold
-                      pt-5 p-lg-0 text-center text-lg-left)
+                      pt-5 p-lg-0 text-center text-lg-start)
   txt_classes = %(pt-2 fw-normal
-                    text-center text-lg-left)
+                    text-center text-lg-start)
 
 section
   .container
@@ -15,12 +15,12 @@ section
           = block.pre_title
 
         .d-none.d-lg-block
-          h3.h2.pt-2.text-center.text-lg-left
+          h3.h2.pt-2.text-center.text-lg-start
             = block.title
           p.d-none.d-lg-block.mid-caption--lead class=txt_classes
             = block.text
         .d-lg-none
-          h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-left
+          h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-start
             = block.title
           p.d-lg-none.mid-caption--large class=txt_classes
             = block.text

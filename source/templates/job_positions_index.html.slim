@@ -1,9 +1,5 @@
 ruby:
   items ||= []
-  description_classes = %( col-md-7 col-lg-6 offset-lg-1 text-center
-                        text-md-left px-4 pb-4 py-md-2 ps-md-2 pe-md-0)
-  flex_classes = %(d-flex justify-content-center justify-content-md-end
-                  justify-content-lg-start align-items-center)
   open_positions = visible_work_positions.select { |p| p.announcement_status.name == "APERTO"}.count
 
 - content_for(:head)

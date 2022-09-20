@@ -7,3 +7,15 @@
   border-bottom: 4px solid #27D1D6;
   height: 100%;
 }
+
+@media (min-width: 992px) {
+  .mid-border-lg-top {
+    border-top: 1px solid #e6e9f2 !important;
+  }
+  .mid-border-lg-end {
+    border-right: 1px solid #e6e9f2 !important;
+  }
+  .mid-border-lg-start {
+    border-left: 1px solid #e6e9f2 !important;
+  }
+}

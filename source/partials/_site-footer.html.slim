@@ -1,6 +1,6 @@
 ruby:
   title_class = %w[h6 text-uppercase fw-bold text-center
-    text-md-left mb-3].join(" ")
+    text-md-start mb-3].join(" ")
 
 - I18n.with_locale(:it)
   - transparency_links = visible_links(dato.company.footer_transparency_links)
@@ -31,7 +31,7 @@ ruby:
                   class: "icon"
 
                 .it-brand-text.pe-0.pe-md-2
-                  .h5.mt-4.mt-md-0.text-center.text-md-left [
+                  .h5.mt-4.mt-md-0.text-center.text-md-start [
                     style="max-width: 400px;"] = t("formatted_site_name")
 
       .py-4
@@ -43,7 +43,7 @@ ruby:
 
               .mb-2
                 - if dato.company.google_maps_url.present?
-                  .text-center.text-md-left
+                  .text-center.text-md-start
                     svg.mb-3.align-top.icon.icon-sm.icon-white [
                         role="img"
                         aria-label=t("hq")
@@ -61,7 +61,7 @@ ruby:
                             = t("formatted_address")
 
               .mb-2
-                .text-center.text-md-left
+                .text-center.text-md-start
                   svg.mb-3.align-top.icon.icon-sm.icon-white [
                       role="img"
                       aria-label=t("email_contact")
@@ -106,7 +106,7 @@ ruby:
                 div class=title_class
                   = t("other_links")
 
-                .text-center.text-md-left
+                .text-center.text-md-start
                   .link-list-wrapper
                     ul.link-list
                       - footer_links.each do |item|
@@ -121,7 +121,7 @@ ruby:
                 div class=title_class
                   = t("transparency")
 
-                .text-center.text-md-left
+                .text-center.text-md-start
                   .link-list-wrapper
                     ul.link-list
                       - transparency_links.each do |item|
@@ -133,7 +133,7 @@ ruby:
 
     .it-footer-small-prints.py-4
       .container
-        ul.list-inline.link-list.mb-0.text-center.text-md-left
+        ul.list-inline.link-list.mb-0.text-center.text-md-start
           - visible_links(subfooter_links).each do |item|
             li.list-inline-item.me-0.me-md-5
               = partial "partials/links/#{item.item_type.api_key}",

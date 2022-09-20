@@ -7,16 +7,16 @@
       .row
         .col-12.col-lg-9.container
 
-          h2.h6.text-uppercase.text-center.text-lg-left.py-3.py-lg-0
+          h2.h6.text-uppercase.text-center.text-lg-start.py-3.py-lg-0
             = t("numbers_section_title")
 
           .d-none.d-lg-block
             .my-4.row.row-cols-lg-3
               - numbers.each do |number|
                 .col-lg-4
-                  .mid-huge-numbers.fw-semibold.text-lg-left
+                  .mid-huge-numbers.fw-semibold.text-lg-start
                     = number.number
-                  .h6.text-center.text-lg-left
+                  .h6.text-center.text-lg-start
                     = number.text
 
           .d-lg-none
