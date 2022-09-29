@@ -22,13 +22,13 @@
 
     show_art_img = !hide_image && article.respond_to?(:image_cover)
     if show_art_img && article.image_cover.present?
-      image = "card-img no-after"
+      image = "no-after"
       image_link = article.image_cover
     end
 
     show_thumbnail = !hide_image && article.respond_to?(:image_thumbnail)
     if show_thumbnail && article.image_thumbnail.present?
-      image = "card-img no-after"
+      image = "no-after"
       image_link = article.image_thumbnail
     end
 
