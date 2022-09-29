@@ -1,8 +1,8 @@
 *:focus:not(:focus-visible),
-.js-focus-visible :focus:not(.focus-visible) {
+.js-focus-visible :focus:not(.focus-visible) :focus:not(.focus--mouse) {
   outline: 0 !important;
-  box-shadow: none;
-  border: none !important;
+  box-shadow: none !important;
+  //border: none !important;
 }
 
 a.btn-outline-primary:focus {
