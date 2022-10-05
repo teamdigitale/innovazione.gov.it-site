@@ -2,7 +2,8 @@ import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
 //import "bootstrap-select/js/bootstrap-select.js";
 import "bootstrap-italia/src/js/plugins/dropdown";
-import "bootstrap-italia/src/js/plugins/navbar-collapsible";
+import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
+import Sticky from "bootstrap-italia/src/js/plugins/sticky";
 import "calendar-swiper.js";
 import "calendar-dropdown.js";
 import "sticky-header-custom.js";
@@ -60,20 +61,14 @@ const initSearch = () => {
   });
 };
 
-// Close accordion on click outside
-$(document).click(function (e) {
-  var container = $(".collapse");
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    container.collapse("hide");
-  }
-});
-
-$(".nav-item").click(function (e) {
-  $(".collapse").collapse("hide");
-});
-
 initSearch();
 progressIndicator.updateProgress();
 window.onscroll = function () {
   progressIndicator.updateProgress();
 };
+
+const navbarcollapsible = new NavBarCollapsible(
+  document.getElementById("nav02")
+);
+
+const sticky = new Sticky(document.getElementsByClassName("it-header-sticky"));

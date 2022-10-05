@@ -1,6 +1,7 @@
 /**
  * sticky-header js lib
  * @ Fabio Fumis
+ */
 (function () {
   const elSticky = document.querySelector(".it-header-sticky");
   const elCenter = document.querySelector(".it-header-center-wrapper");
@@ -141,4 +142,3 @@
     initSticky(isDesktop);
   }
 })();
- */

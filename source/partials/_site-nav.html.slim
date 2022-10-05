@@ -4,7 +4,7 @@ ruby:
                         d-xl-block fw-semibold)
 
 - I18n.with_locale(:it)
-  header.it-header-wrapper.it-header-sticky data-datocms-noindex=true lang="it"
+  header.it-header-wrapper.it-header-sticky data-bs-toggle="sticky" data-datocms-noindex=true lang="it"
     .it-header-slim-wrapper.px-0
       .container
         .row
@@ -72,9 +72,10 @@ ruby:
             ]
               button.custom-navbar-toggler [
                   aria-controls="nav02"
-                  aria-expanded="true"
+                  aria-expanded="false"
                   aria-label=t("main_nav_label")
-                  data-target="#nav02"
+                  data-bs-target="#nav02"
+                  data-bs-toggle="navbarcollapsible" 
                   type="button"
                 ]
                 svg.icon
@@ -86,8 +87,10 @@ ruby:
                 .overlay style="display: none;"
                 .close-div.visually-hidden
                   button.btn.close-menu type="button"
-                    span.it-close
+                    span.visually-hidden
                       = t("close")
+                    svg.icon
+                      use xlink:href="/images/sprite.svg#it-close-big"
 
                 .menu-wrapper
                   .ps-4.pt-4.d-lg-none
