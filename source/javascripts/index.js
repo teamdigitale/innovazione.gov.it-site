@@ -1,7 +1,5 @@
 import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
-//import "bootstrap-select/js/bootstrap-select.js";
-import "bootstrap-italia/src/js/plugins/dropdown";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
 import Sticky from "bootstrap-italia/src/js/plugins/sticky";
 import "calendar-swiper.js";
