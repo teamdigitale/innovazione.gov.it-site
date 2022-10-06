@@ -1,15 +1,18 @@
 .container
   .mb-5
-    - block.accordion_items.each do |acc|
-      .collapse-div role="tablist" id="accordionDiv-#{acc.id}"
-        .collapse-header id="headingA-#{acc.id}"
-          button [aria-controls="accordion-#{acc.id}"
-                  aria-expanded="false"
-                  data-target="#accordion-#{acc.id}"
-                  data-toggle="collapse"
-                  role="tab"]
-            span.text-uppercase = acc.accordion_item_title
-        .collapse [aria-labelledby="headingA-#{acc.id}" id="accordion-#{acc.id}"
-         data-parent="#accordionDiv-#{acc.id}" role="tabpanel"]
-          .collapse-body
-            = markdown acc.accordion_item_body_text
+    .accordion#accordion_block
+      - block.accordion_items.each do |acc|
+        .accordion-item
+          p.text-uppercase.accordion-header  id="header-#{acc.id}"
+            button.accordion-button.collapsed [type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-#{acc.id}"
+                                    aria-expanded="false"
+                                    aria-controls="collapse-#{acc.id}"]
+              span.text-uppercase = acc.accordion_item_title
+          .accordion-collapse.collapse [id="collapse-#{acc.id}"
+                                            data-bs-parent="accordion_block"
+                                            role="region"
+                                            aria-labelledBy="header-#{acc.id}"]
+            .accordion-body
+              = markdown acc.accordion_item_body_text
