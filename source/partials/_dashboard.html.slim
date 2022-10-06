@@ -16,8 +16,8 @@ ruby:
           .pt-5.pt-lg-0
 
             button.btn.btn-outline-dark.mid-text-dark [
-              data-target=".dashboard"
-              data-toggle="modal"
+              data-bs-target=".dashboard"
+              data-bs-toggle="modal"
               type="button"]
 
               = t("open_dashboard")
@@ -33,8 +33,8 @@ ruby:
                 .modal-content
                   button.btn-close.text-end [
                     type="button"
-                    data-dismiss="modal"
-                    aria-label="Close"]
+                    data-bs-dismiss="modal"
+                    aria-bs-label="Close"]
                     svg.icon
                       use xlink:href="/images/sprite.svg#it-close"
                   iframe [
