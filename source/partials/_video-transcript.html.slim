@@ -1,21 +1,19 @@
-ruby:
-  video ||= nil
-  button_classes = %(d-flex flex-row-reverse
-    justify-content-start border-0 px-0 py-4)
+- video ||= nil
 
-.collapse-div.border-0 role="tablist" id="accordionDiv#{video.id}"
-  .collapse-header.mid-caption--large id="headingA#{video.id}"
-    .d-flex.flex-row-reverse
-      .col-6
-        button [class=button_classes
-                aria-controls="accordion#{video.id}"
-                aria-expanded="false"
-                data-target="#accordion#{video.id}"
-                data-toggle="collapse"
-                role="tab"]
-          span.me-3 = t("video.transcript")
-
-  .collapse [aria-labelledby="headingA#{video.id}" id="accordion#{video.id}"
-   data-parent="#accordionDiv#{video.id}" role="tabpanel"]
-    .collapse-body.px-0
+.accordion.border-0 id="video_accordion-#{video.id}"
+  p.accordion-header id="header=#{video.id}"
+    button.accordion-button.collapsed [type="button"
+                            class="border-0 px-0 py-4"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-#{video.id}"
+                            aria-expanded="false"
+                            aria-controls="collapse-#{video.id}"]
+      span.flex-grow-1.d-flex.justify-content-end
+        .me-3.d-flex.align-items-center
+          = t("video.transcript")
+  .accordion-collapse.collapse [id="collapse-#{video.id}"
+                                    data-bs-parent="video_accordion-#{video.id}"
+                                    role="region"
+                                    aria-labelledBy="header-#{video.id}"]
+    .accordion-body
       = markdown video.transcription
