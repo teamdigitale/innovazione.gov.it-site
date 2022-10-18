@@ -53,8 +53,14 @@ const initSearch = () => {
   if (searchClient === null) {
     return null;
   }
+  //return searchClient.addWidget("#search-container", {
+  //  initialLocale: $("html").attr("lang"),
+  //  initialQuery: "",
+  //});
+  const lang = document.documentElement.lang;
+  console.log("lang: ", lang);
   return searchClient.addWidget("#search-container", {
-    initialLocale: $("html").attr("lang"),
+    initialLocale: document.documentElement.lang,
     initialQuery: "",
   });
 };
