@@ -29,36 +29,36 @@ ruby:
 - content = capture
   - if categories.present?
     - categories.each do |cat|
-      li.nav-item
+      li.nav-item.navscroll_link
         = link_to cat.name,
           "##{cat.slug}",
-          class: "nav-link pe-4"
+          class: "nav-link navscroll_link pe-4"
 
   - else
     - page.content_blocks.each do |block|
       - if block.respond_to?(:text_title) && block.text_title.present?
-        li.nav-item
+        li.nav-item.navscroll_link
           = link_to block.text_title,
             "##{anchor_id(block.text_title)}",
-            class: "nav-link pe-4"
+            class: "nav-link navscroll_link pe-4"
 
   - if show_attachments
-    li.nav-item
+    li.nav-item.navscroll_link
       = link_to t("attachments"),
         "#_attachments",
-        class: "nav-link pe-4",
+        class: "nav-link navscroll_link pe-4",
         tabindex: "-1"
   - if show_links
-    li.nav-item
+    li.nav-item.navscroll_link
       = link_to t("useful_links"),
         "#_useful_links",
-        class: "nav-link pe-4",
+        class: "nav-link navscroll_link pe-4",
         tabindex: "-1"
   - if show_related
-    li.nav-item
+    li.nav-item.navscroll_link
       = link_to t("related_content"),
         "#_related-content",
-        class: "nav-link pe-4",
+        class: "nav-link navscroll_link pe-4",
         tabindex: "-1"
 
 - extra_content = show_related || show_attachments || show_links
@@ -68,26 +68,25 @@ ruby:
     nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
       aria-label="indice di pagina mobile" aria-hidden="true"]
       .it-list-wrapper.menu-link-list
-        .collapse-div role="tablist" id="accordionDiv-aside"
-          .collapse-header id='headingA-aside'
-            .p-0.pt-2.pe-2 [aria-controls="accordion-aside"
-                      aria-expanded="false"
-                      data-target="#accordion-aside"
-                      data-toggle="collapse"
-                      role="button"]
-              .pt-1.pb-2.px-3
-                p.h3.text-uppercase.mid-caption.fw-semibold
+        .accordion id="accordionDiv-aside"
+          p.accordion-header#headingA-aside
+            p-0.py-2.pe-2.accordion-button#accordion-button.collapsed [type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-aside"
+                                    aria-expanded="true"
+                                    aria-controls="accordion-aside"]
+              span.d-flex.align-items-center.px-3.pt-2
+                span.h3.text-uppercase.mid-caption.fw-semibold.text-primary
                   = title
-
-              .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
-                ._progress-indicator.progress-indicator.primary-bg-b1
-          .collapse [aria-labelledby="headingA-aside"
-                    id="accordion-aside"
-                    data-parent="#accordionDiv-aside"
-                    role="tabpanel"]
-            .collapse-body.p-0
+          .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
+            ._progress-indicator.progress-indicator.primary-bg-b1
+          #accordion-aside [role="region"
+                            aria-labelledby="headingA-aside"
+                            class="accordion-collapse collapse"]
+            .accordion-body.p-0
               ul.it-list.small.py-3._top-menu
                 = content
+
   - else
     nav.sticky-top.menu-wrapper.pb-5 [
       aria-label="indice di pagina" aria-hidden="false"]

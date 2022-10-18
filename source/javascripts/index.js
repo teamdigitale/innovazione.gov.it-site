@@ -65,8 +65,26 @@ window.onscroll = function () {
   progressIndicator.updateProgress();
 };
 
+// initiate navbar
 const navbarcollapsible = new NavBarCollapsible(
   document.getElementById("nav02")
 );
 
-const sticky = new Sticky(document.getElementsByClassName("it-header-sticky"));
+// initiate sticky header
+const stickyHeaders = document.getElementsByClassName("it-header-sticky");
+console.log("sticky headers: ", stickyHeaders);
+for (let index = 0; index < stickyHeaders.length; index++) {
+  const header = stickyHeaders[index];
+  const stickyInstances = [];
+  stickyInstances[index] = new Sticky(header);
+}
+
+// Hide nav links after a click in mobile view of navscroll
+const navscrollLinks = document.querySelectorAll("a.navscroll_link");
+for (let index = 0; index < navscrollLinks.length; index++) {
+  const element = navscrollLinks[index];
+  element.addEventListener("click", function () {
+    document.getElementById("accordion-button").classList.add("collapsed");
+    document.getElementById("accordion-aside").classList.remove("show");
+  });
+}
