@@ -91,9 +91,9 @@
                 class: "lazyload d-block w-100 m-0",
                 alt: card_image.alt
 
-        .d-none.d-lg-block
+        .d-none.d-lg-flex
           .img-responsive-panoramic
-            figure.position-absolute.w-100.h-100
+            figure.w-100.h-100
               = proxy_image_tag placeholder_url(card_image, {w: 10, h: 6,
                 fit: "crop"}),
                 data: {sizes: "100vw",
