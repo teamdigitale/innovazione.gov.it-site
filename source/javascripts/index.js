@@ -58,7 +58,6 @@ const initSearch = () => {
   //  initialQuery: "",
   //});
   const lang = document.documentElement.lang;
-  console.log("lang: ", lang);
   return searchClient.addWidget("#search-container", {
     initialLocale: document.documentElement.lang,
     initialQuery: "",
@@ -78,7 +77,6 @@ const navbarcollapsible = new NavBarCollapsible(
 
 // initiate sticky header
 const stickyHeaders = document.getElementsByClassName("it-header-sticky");
-console.log("sticky headers: ", stickyHeaders);
 for (let index = 0; index < stickyHeaders.length; index++) {
   const header = stickyHeaders[index];
   const stickyInstances = [];
