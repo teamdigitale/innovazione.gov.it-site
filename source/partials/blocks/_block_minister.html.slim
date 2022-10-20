@@ -38,7 +38,11 @@
                     aria_label: block.pre_title}
 
       .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
-        = partial "partials/text_gallery",
+        /= partial "partials/text_gallery",
+          locals: {slides: block.minister_featured_news,
+            hide_date: true,
+            hide_video_tags: true}
+        = partial "partials/text_carousel",
           locals: {slides: block.minister_featured_news,
             hide_date: true,
             hide_video_tags: true}

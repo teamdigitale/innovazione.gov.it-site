@@ -1,5 +1,6 @@
 import Swiper from "swiper/bundle";
-import "bootstrap/dist/js/bootstrap";
+//import "bootstrap/dist/js/bootstrap";
+import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
 import Sticky from "bootstrap-italia/src/js/plugins/sticky";
 import "calendar-swiper.js";
@@ -91,4 +92,12 @@ for (let index = 0; index < navscrollLinks.length; index++) {
     document.getElementById("accordion-button").classList.add("collapsed");
     document.getElementById("accordion-aside").classList.remove("show");
   });
+}
+
+// initiate carousel
+const carouselList = document.getElementsByClassName("splide");
+for (let index = 0; index < carouselList.length; index++) {
+  const carousel = carouselList[index];
+  const carouselInstances = [];
+  carouselInstances[index] = new CarouselBI(carousel);
 }

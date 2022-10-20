@@ -48,7 +48,7 @@ module.exports = {
         use: "import-glob-loader",
       },
       {
-        test: /\.s[ac]ss$/,
+        test: /\.(s[ac]ss|css)$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: "css-loader" },
