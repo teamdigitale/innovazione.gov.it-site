@@ -27,8 +27,8 @@ ruby:
                     alt: t("logos.italy"),
                     class: "icon _mid-republic-logo-size"
 
-                  = proxy_image_tag "logo-mitd-white.svg",
-                    alt: t("logos.mid"),
+                  = proxy_image_tag "logo-d.svg",
+                    alt: t("logos.d"),
                     class: "icon _mid-logo-size"
 
                   .it-brand-text
@@ -104,10 +104,10 @@ ruby:
                         class: ""
 
                   ul.navbar-nav
-                    li.nav-item
-                      = active_link_to dato.minister_page.menu_label,
-                        page_path(dato.minister_page),
-                        class: nav_element_classes
+                    / li.nav-item
+                    /   = active_link_to dato.minister_page.menu_label,
+                    /     page_path(dato.minister_page),
+                    /     class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.department_page.menu_label,
