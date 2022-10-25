@@ -56,7 +56,7 @@ ruby:
     .col-lg-8.offset-lg-2.mb-5
       - if page.featured_projects.present?
         h3.visually-hidden = t("projects.highlights")
-        = partial "partials/image_text_gallery",
+        = partial "partials/_text_image_carousel",
           locals: {slides: page.featured_projects}
 
   .col-lg-1
