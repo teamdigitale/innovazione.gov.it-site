@@ -1,14 +1,14 @@
 {
-    "name": "Ministro per l'innovazione tecnologica e la transizione digitale",
-    "short_name": "Ministro per l'innovazione tecnologica e la transizione digitale",
+    "name": "Dipartimento per la trasformazione digitale",
+    "short_name": "Dipartimento per la trasformazione digitale",
     "icons": [
         {
-            "src": "\/android-chrome-192x192-f480daea.png",
+            "src": "\/android-chrome-192x192-4a9a7008.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "\/android-chrome-512x512-c2cf24cb.png",
+            "src": "\/android-chrome-512x512-8dff8472.png",
             "sizes": "512x512",
             "type": "image/png"
         }
