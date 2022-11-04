@@ -126,7 +126,7 @@ module PathHelpers
   end
 
   def page_path(page, locale: I18n.locale)
-    if page.respond_to?(slug)
+    if page.respond_to?(:slug)
       ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
       parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
       locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
