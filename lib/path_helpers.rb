@@ -126,11 +126,18 @@ module PathHelpers
   end
 
   def page_path(page, locale: I18n.locale)
-    ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
-    parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
-    locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
+    if page.slug
+      ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
+      parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
+      locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
+      "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
+    else
+      "/"
+    end
+  end
 
-    "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
+  def home_path
+    "/"
   end
 
   def active?(url)
@@ -165,10 +172,6 @@ module PathHelpers
       localized_paths[resource.metadata[:options][:locale]] = resource.url
     end
     localized_paths
-  end
-
-  def home_path
-    "/"
   end
 
   private
