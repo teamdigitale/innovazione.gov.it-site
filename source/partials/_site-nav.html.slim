@@ -105,10 +105,11 @@ ruby:
                         class: ""
 
                   ul.navbar-nav
-                    li.nav-item
-                      = active_link_to dato.undersecretary_page.menu_label,
-                        page_path(dato.undersecretary_page),
-                        class: nav_element_classes
+                    - if dato.undersecretary_page
+                      li.nav-item
+                        = active_link_to dato.undersecretary_page.menu_label,
+                          page_path(dato.undersecretary_page),
+                          class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.department_page.menu_label,
