@@ -281,6 +281,7 @@ helpers do
     visible_work_positions +
     visible_pages(dato.general_pages) +
     visible_pages(dato.minister_subpages) +
+    visible_pages(dato.undersecretary_subpages) +
     visible_pages(dato.department_subpages) +
     visible_pages(dato.projects_subpages) +
     visible_pages(dato.news_subpages))
@@ -350,6 +351,7 @@ helpers do
        work_position
        work_positions_index
        minister_subpage
+       undersecretary_subpage
        department_subpage
        italy2026_subpage
        innovate_subpage
@@ -381,6 +383,7 @@ helpers do
        general_page
        work_position
        minister_subpage
+       undersecretary_subpage
        department_subpage
        italy2026_subpage
        innovate_subpage
@@ -431,6 +434,7 @@ helpers do
        work_position
        innovate_subpage
        minister_subpage
+       undersecretary_subpage
        department_subpage
        italy2026_subpage
        projects_subpage
@@ -462,6 +466,7 @@ dato.tap do |dato|
     visible_press_releases = PresentationHelper.published_press_releases(dato.press_releases)
     visible_general_pages = PresentationHelper.published_pages(dato.general_pages)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
+    visible_undersecretary_subpages = PresentationHelper.published_pages(dato.undersecretary_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
@@ -534,6 +539,15 @@ dato.tap do |dato|
             locale: locale
     end
 
+    visible_undersecretary_subpages.each do |undersecretary_subpage|
+      parent_path = undersecretary_subpage.parent ? "/#{undersecretary_subpage.parent.slug}" : ""
+      proxy "/#{dato.undersecretary_page.slug}#{parent_path}/#{locale}/#{undersecretary_subpage.slug}/index.html",
+            "/templates/page.html",
+            locals: {page: undersecretary_subpage,
+                     children: PresentationHelper.published_children_pages(undersecretary_subpage)},
+            locale: locale
+    end
+
     visible_italy2026_subpages.each do |italy2026_subpage|
       parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
       proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{locale}/#{italy2026_subpage.slug}/index.html",
@@ -594,6 +608,7 @@ dato.tap do |dato|
     visible_innovate_subpages = PresentationHelper.published_pages(dato.innovate_subpages)
     visible_work_positions = PresentationHelper.published_work_positions(dato.work_positions)
     visible_minister_subpages = PresentationHelper.published_pages(dato.minister_subpages)
+    visible_undersecretary_subpages = PresentationHelper.published_pages(dato.undersecretary_subpages)
     visible_department_subpages = PresentationHelper.published_pages(dato.department_subpages)
     visible_italy2026_subpages = PresentationHelper.published_pages(dato.italy2026_subpages)
     visible_projects_subpages = PresentationHelper.published_pages(dato.projects_subpages)
@@ -680,11 +695,6 @@ dato.tap do |dato|
             locals: {page: completed_project},
             locale: locale
     end
-
-    proxy "/#{dato.minister_page.slug}/index.html",
-          "/templates/minister.html",
-          locals: {page: dato.minister_page},
-          locale: locale
 
     proxy "/#{dato.schedule_archive_page.slug}/index.html",
           "/templates/archive.html",
@@ -787,96 +797,153 @@ dato.tap do |dato|
             locale: locale
     end
 
-    minister_articles = visible_articles.select { |a| a.owners.include?(dato.minister_page) }
-
-    paginate_with_fallback(minister_articles,
-                           dato.minister_articles_index,
-                           dato.minister_page,
-                           locale,
-                           10)
-
-    minister_interviews = visible_interviews.select { |i| i.owners.include?(dato.minister_page) }
-
-    paginate_with_fallback(minister_interviews,
-                           dato.minister_interviews_index,
-                           dato.minister_page,
-                           locale,
-                           10)
-
-    minister_participations = visible_participations.select { |i| i.owners.include?(dato.minister_page) }
-
-    paginate_with_fallback(minister_participations,
-                           dato.minister_participations_index,
-                           dato.minister_page,
-                           locale,
-                           10)
-
-    minister_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.minister_page) }
-
-    paginate_with_fallback(minister_press_releases,
-                           dato.minister_press_releases_index,
-                           dato.minister_page,
-                           locale,
-                           10)
-
-    visible_minister_subpages.each do |minister_subpage|
-      parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
-      proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
-            "/templates/page.html",
-            locals: {page: minister_subpage,
-                     children: PresentationHelper.published_children_pages(minister_subpage)},
+    if dato.undersecretary_page
+      proxy "/#{dato.undersecretary_page.slug}/index.html",
+            "/templates/undersecretary.html",
+            locals: {page: dato.undersecretary_page},
             locale: locale
+
+      undersecretary_articles = visible_articles.select { |a| a.owners.include?(dato.undersecretary_page) }
+
+      paginate_with_fallback(undersecretary_articles,
+                            dato.undersecretary_articles_index,
+                            dato.undersecretary_page,
+                            locale,
+                            10)
+
+      undersecretary_interviews = visible_interviews.select { |i| i.owners.include?(dato.undersecretary_page) }
+
+      paginate_with_fallback(undersecretary_interviews,
+                            dato.undersecretary_interviews_index,
+                            dato.undersecretary_page,
+                            locale,
+                            10)
+
+      undersecretary_participations = visible_participations.select { |i| i.owners.include?(dato.undersecretary_page) }
+
+      paginate_with_fallback(undersecretary_participations,
+                            dato.undersecretary_participations_index,
+                            dato.undersecretary_page,
+                            locale,
+                            10)
+
+      undersecretary_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.undersecretary_page) }
+
+      paginate_with_fallback(undersecretary_press_releases,
+                            dato.undersecretary_press_releases_index,
+                            dato.undersecretary_page,
+                            locale,
+                            10)
+
+      visible_undersecretary_subpages.each do |undersecretary_subpage|
+        parent_path = undersecretary_subpage.parent ? "/#{undersecretary_subpage.parent.slug}" : ""
+        proxy "/#{dato.undersecretary_page.slug}#{parent_path}/#{undersecretary_subpage.slug}/index.html",
+              "/templates/page.html",
+              locals: {page: undersecretary_subpage,
+                      children: PresentationHelper.published_children_pages(undersecretary_subpage)},
+              locale: locale
+      end
     end
 
-    proxy "/#{dato.department_page.slug}/index.html",
-          "/templates/department.html",
-          locals: {page: dato.department_page},
-          locale: locale
-
-    paginate_with_fallback(visible_focus_pages,
-                           dato.focus_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    visible_focus_pages.each do |focus_page|
-      proxy "/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
-            "/templates/focus.html",
-            locals: {page: focus_page},
+    if dato.minister_page
+      proxy "/#{dato.minister_page.slug}/index.html",
+            "/templates/minister.html",
+            locals: {page: dato.minister_page},
             locale: locale
+
+      minister_articles = visible_articles.select { |a| a.owners.include?(dato.minister_page) }
+
+      paginate_with_fallback(minister_articles,
+                            dato.minister_articles_index,
+                            dato.minister_page,
+                            locale,
+                            10)
+
+      minister_interviews = visible_interviews.select { |i| i.owners.include?(dato.minister_page) }
+
+      paginate_with_fallback(minister_interviews,
+                            dato.minister_interviews_index,
+                            dato.minister_page,
+                            locale,
+                            10)
+
+      minister_participations = visible_participations.select { |i| i.owners.include?(dato.minister_page) }
+
+      paginate_with_fallback(minister_participations,
+                            dato.minister_participations_index,
+                            dato.minister_page,
+                            locale,
+                            10)
+
+      minister_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.minister_page) }
+
+      paginate_with_fallback(minister_press_releases,
+                            dato.minister_press_releases_index,
+                            dato.minister_page,
+                            locale,
+                            10)
+
+      visible_minister_subpages.each do |minister_subpage|
+        parent_path = minister_subpage.parent ? "/#{minister_subpage.parent.slug}" : ""
+        proxy "/#{dato.minister_page.slug}#{parent_path}/#{minister_subpage.slug}/index.html",
+              "/templates/page.html",
+              locals: {page: minister_subpage,
+                      children: PresentationHelper.published_children_pages(minister_subpage)},
+              locale: locale
+      end
     end
 
-    department_announcements = visible_announcements.select { |i| i.owners.include?(dato.department_page) }
-
-    paginate_with_fallback(department_announcements,
-                           dato.department_announcements_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    department_articles = visible_articles.select { |i| i.owners.include?(dato.department_page) }
-
-    paginate_with_fallback(department_articles,
-                           dato.department_articles_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    department_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.department_page) }
-
-    paginate_with_fallback(department_press_releases,
-                           dato.department_press_releases_index,
-                           dato.department_page,
-                           locale,
-                           10)
-
-    visible_department_subpages.each do |department_subpage|
-      parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
-      proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
-            "/templates/page.html",
-            locals: {page: department_subpage,
-                     children: PresentationHelper.published_children_pages(department_subpage)},
+    if dato.department_page
+      proxy "/#{dato.department_page.slug}/index.html",
+            "/templates/department.html",
+            locals: {page: dato.department_page},
             locale: locale
+
+      paginate_with_fallback(visible_focus_pages,
+                            dato.focus_index,
+                            dato.department_page,
+                            locale,
+                            10)
+
+      visible_focus_pages.each do |focus_page|
+        proxy "/#{dato.department_page.slug}/#{dato.focus_index.slug}/#{focus_page.slug}/index.html",
+              "/templates/focus.html",
+              locals: {page: focus_page},
+              locale: locale
+      end
+
+      department_announcements = visible_announcements.select { |i| i.owners.include?(dato.department_page) }
+
+      paginate_with_fallback(department_announcements,
+                            dato.department_announcements_index,
+                            dato.department_page,
+                            locale,
+                            10)
+
+      department_articles = visible_articles.select { |i| i.owners.include?(dato.department_page) }
+
+      paginate_with_fallback(department_articles,
+                            dato.department_articles_index,
+                            dato.department_page,
+                            locale,
+                            10)
+
+      department_press_releases = visible_press_releases.select { |i| i.owners.include?(dato.department_page) }
+
+      paginate_with_fallback(department_press_releases,
+                            dato.department_press_releases_index,
+                            dato.department_page,
+                            locale,
+                            10)
+
+      visible_department_subpages.each do |department_subpage|
+        parent_path = department_subpage.parent ? "/#{department_subpage.parent.slug}" : ""
+        proxy "/#{dato.department_page.slug}#{parent_path}/#{department_subpage.slug}/index.html",
+              "/templates/page.html",
+              locals: {page: department_subpage,
+                      children: PresentationHelper.published_children_pages(department_subpage)},
+              locale: locale
+      end
     end
 
     if dato.italy2026_page
@@ -1080,6 +1147,7 @@ dato.tap do |dato|
                         visible_general_pages +
                         visible_work_positions +
                         visible_minister_subpages +
+                        visible_undersecretary_subpages +
                         visible_department_subpages +
                         visible_projects_subpages +
                         visible_news_subpages +
