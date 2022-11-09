@@ -1,5 +1,5 @@
 import Swiper from "swiper/bundle";
-//import "bootstrap/dist/js/bootstrap";
+import "bootstrap/dist/js/bootstrap";
 import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
 import Sticky from "bootstrap-italia/src/js/plugins/sticky";
