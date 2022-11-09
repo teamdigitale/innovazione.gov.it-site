@@ -26,6 +26,32 @@ ruby:
              10
            end
 
+  .it-carousel-wrapper.splide.it-calendar-wrapper data-bs-carousel-splide="" role="group" aria-label="carousel"
+    .splide__track.p-0
+      ul.splide__list
+        - milestones.each_with_index do |milestone, i|
+
+          ruby:
+            last_in_past_phase = last_past_idx ? last_past_idx == i : nil
+            first_in_phase = start_idx.include?(i)
+            last_in_phase = last_idx.include?(i)
+            phase = if i < phase1_idx
+                      phase1
+                    elsif i < phase2_idx
+                      phase2
+                    else
+                      phase3
+                    end
+
+          li.splide__slide
+            = partial "partials/card-calendar",
+              locals: {milestone: milestone,
+              phase: phase,
+              last_in_past_phase: last_in_past_phase,
+              last_in_phase: last_in_phase,
+              last: i == milestones.size - 1,
+              first_in_phase: first_in_phase}
+
   .row.justify-content-lg-center
     .col-lg-1.order-2.order-lg-0
       a.swiper-button-prev class="prev-#{calendar_idx}"
