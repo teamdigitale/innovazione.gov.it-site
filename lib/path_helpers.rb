@@ -14,6 +14,9 @@ module PathHelpers
     when "minister_subpage"
       dato.minister_page
 
+    when "undersecretary_subpage"
+      dato.undersecretary_page
+
     when "department_subpage",
       "focus_page"
       dato.department_page
@@ -43,6 +46,7 @@ module PathHelpers
     case page.item_type.api_key
 
     when "minister_subpage",
+      "undersecretary_subpage",
       "department_subpage",
       "italy2026_subpage",
       "projects_subpage",
@@ -56,6 +60,12 @@ module PathHelpers
       "minister_participations_index",
       "minister_press_releases_index"
       dato.minister_page
+
+    when "undersecretary_articles_index",
+      "undersecretary_interviews_index",
+      "undersecretary_participations_index",
+      "undersecretary_press_releases_index"
+      dato.undersecretary_page
 
     when "schedule_event"
       dato.schedule_page
@@ -116,11 +126,18 @@ module PathHelpers
   end
 
   def page_path(page, locale: I18n.locale)
-    ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
-    parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
-    locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
+    if page.respond_to?(:slug)
+      ancestor_path = page_ancestor(page).nil? ? "" : "#{page_ancestor(page).slug}/"
+      parent_path = page_parent(page).nil? ? "" : "#{page_parent(page).slug}/"
+      locale_prefix = page_is_localizable?(page) ? path_prefix(locale).to_s : ""
+      "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
+    else
+      "/"
+    end
+  end
 
-    "/#{ancestor_path}#{parent_path}#{locale_prefix}#{page.slug}"
+  def home_path
+    "/"
   end
 
   def active?(url)
@@ -155,10 +172,6 @@ module PathHelpers
       localized_paths[resource.metadata[:options][:locale]] = resource.url
     end
     localized_paths
-  end
-
-  def home_path
-    "/"
   end
 
   private
