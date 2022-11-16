@@ -36,7 +36,7 @@ const CONFIGS = {
     perPage: 4,
     gap: 0,
     padding: { left: 0, right: 0 },
-    arrows: false,
+    arrows: true,
     pagination: true,
     breakpoints: {
       560: {
@@ -49,13 +49,13 @@ const CONFIGS = {
         perPage: 2,
         gap: 0,
         padding: { left: 0, right: 0 },
-        arrows: false,
+        arrows: true,
       },
       992: {
         perPage: 3,
         gap: 0,
         padding: { left: 0, right: 0 },
-        arrows: false,
+        arrows: true,
       },
     },
   },

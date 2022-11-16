@@ -27,10 +27,21 @@ ruby:
            end
 
   .row.justify-content-lg-center
-    .col-lg-1.order-2.order-lg-0
-    .col-lg-10.px-0
-      .it-custom-carousel-wrapper.splide.it-calendar-wrapper data-bs-carousel-splide="" role="group" aria-label="carousel"
-        .splide__track.p-0
+    /.col-lg-1.order-2.order-lg-0
+
+      /.splide__arrow--prev
+        svg.icon.icon-lg.icon-primary
+          use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+    .px-0.it-carousel-wrapper.splide{ data-calendar-splide=""
+        data-slides="#{milestones.size}"
+        data-initial=current_milestone_index
+        data-fixed=fixed_slides_per_view
+        role="group"
+        aria-label="carousel" }
+
+      .row.justify-content-lg-center
+        .splide__track class="col-lg-#{cols}"
+
           ul.splide__list
             - milestones.each_with_index do |milestone, i|
 
@@ -54,9 +65,47 @@ ruby:
                   last_in_phase: last_in_phase,
                   last: i == milestones.size - 1,
                   first_in_phase: first_in_phase}
+
+        /.splide__arrows
+          button.splide__arrow.splide__arrow-prev 
+            | Prev 
+          button.splide__arrow.splide__arrow--next 
+            | Next
+
+    .col-lg-1
+      /.splide__arrow--next
+        svg.icon.icon-lg.icon-primary
+          use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+
+  /.row.justify-content-lg-center
+    .col-lg-1.order-2.order-lg-0
+    .col-lg-10.px-0
+      .it-custom-carousel-wrapper.splide.it-calendar-wrapper data-bs-carousel-splide="" role="group" aria-label="carousel"
+        .splide__track.p-0
+          ul.splide__list
+            - milestones.each_with_index do |milestone, i|
+              ruby:
+                last_in_past_phase = last_past_idx ? last_past_idx == i : nil
+                first_in_phase = start_idx.include?(i)
+                last_in_phase = last_idx.include?(i)
+                phase = if i < phase1_idx
+                          phase1
+                        elsif i < phase2_idx
+                          phase2
+                        else
+                          phase3
+                        end
+              li.splide__slide
+                = partial "partials/card-calendar",
+                  locals: {milestone: milestone,
+                  phase: phase,
+                  last_in_past_phase: last_in_past_phase,
+                  last_in_phase: last_in_phase,
+                  last: i == milestones.size - 1,
+                  first_in_phase: first_in_phase}
     .col-lg-1
 
-  .row.justify-content-lg-center
+  .row.justify-content-lg-center.mt-8
     .col-lg-1.order-2.order-lg-0
       a.swiper-button-prev class="prev-#{calendar_idx}"
         svg.icon.icon-lg.icon-primary

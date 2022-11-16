@@ -1,7 +1,9 @@
 import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
-//import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
-import CarouselBI from "./carousel";
+import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
+//import CarouselBI from "./carousel";
+//import "carousel-custom-calendar.js"
+import CarouselCalendar from "./carousel-custom-calendar";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
 import Sticky from "bootstrap-italia/src/js/plugins/sticky";
 import "calendar-swiper.js";
@@ -96,9 +98,19 @@ for (let index = 0; index < navscrollLinks.length; index++) {
 }
 
 // initiate carousel
-const carouselList = document.getElementsByClassName("splide");
+const carouselList = document.querySelectorAll("[data-bs-carousel-splide]");
 for (let index = 0; index < carouselList.length; index++) {
   const carousel = carouselList[index];
   const carouselInstances = [];
   carouselInstances[index] = new CarouselBI(carousel);
+}
+
+// initiate custom calendar carousels
+const carouselCalendarList = document.querySelectorAll(
+  "[data-calendar-splide]"
+);
+for (let index = 0; index < carouselCalendarList.length; index++) {
+  const carousel = carouselCalendarList[index];
+  const carouselInstances = [];
+  carouselInstances[index] = new CarouselCalendar(carousel);
 }

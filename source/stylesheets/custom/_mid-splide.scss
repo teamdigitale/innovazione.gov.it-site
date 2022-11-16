@@ -34,3 +34,29 @@
 #numbers-carousel .splide__pagination__page {
   background-color: #33485C;
 }
+
+.splide-button-prev {
+  //left: 35%;
+  width: 48px;
+  transform: rotate(180deg);
+}
+
+.splide-button-next {
+  //right: 35%;
+  width: 48px;
+}
+
+.splide-arrows-position {
+  position: relative;
+  top: 225px;
+}
+
+@include media-breakpoint-up(lg) {
+  .splide-button-prev {
+    width: 48px;
+  }
+
+  .splide-button-next {
+    width: 48px;
+  }
+}
