@@ -27,12 +27,12 @@ ruby:
                     alt: t("logos.italy"),
                     class: "icon _mid-republic-logo-size"
 
-                  = proxy_image_tag "logo-mitd-white.svg",
-                    alt: t("logos.mid"),
+                  = proxy_image_tag "logo-d.svg",
+                    alt: t("logos.d"),
                     class: "icon _mid-logo-size"
 
                   .it-brand-text
-                    div class=["h4",
+                    div class=["h3",
                                "no_toc",
                                "d-none",
                                "d-xl-inline-block",
@@ -101,16 +101,17 @@ ruby:
                         style: "max-height: 32px;",
                         class: "me-2"
 
-                      = proxy_image_tag "logo-mitd-white.svg",
-                        alt: t("logos.mid"),
-                        style: "width: 160px; max-height: 32px;",
+                      = proxy_image_tag "logo-d.svg",
+                        alt: t("logos.d"),
+                        style: "width: 64px; max-height: 32px;",
                         class: ""
 
                   ul.navbar-nav
-                    li.nav-item
-                      = active_link_to dato.minister_page.menu_label,
-                        page_path(dato.minister_page),
-                        class: nav_element_classes
+                    - if dato.undersecretary_page
+                      li.nav-item
+                        = active_link_to dato.undersecretary_page.menu_label,
+                          page_path(dato.undersecretary_page),
+                          class: nav_element_classes
 
                     li.nav-item
                       = active_link_to dato.department_page.menu_label,

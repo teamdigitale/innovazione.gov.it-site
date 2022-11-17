@@ -20,6 +20,7 @@ it:
   logos:
     italy: Logo Repubblica Italiana
     mid: Logo Ministro Innovazione
+    d: Logo Dipartimento per la trasformazione digitale
 
   alt_search: Vai alla pagina di ricerca
   announcement_date_closing: Data di chiusura
@@ -53,7 +54,7 @@ it:
   file_type: File %{ext}
   follow_us_on: Seguici su
   formatted_address: Largo Pietro di Brazzà, 86 — 00187 Roma
-  formatted_site_name: "<span>Ministro</span> per l'innovazione tecnologica e la transizione digitale"
+  formatted_site_name: "<span>Dipartimento per la trasformazione digitale</span>"
   go_home: Vai alla pagina iniziale
   go_to: Vai a
   highlighted_topics: Argomenti in evidenza
@@ -194,7 +195,7 @@ it:
   work_position:
     go_to_index: "Vai alle posizioni lavorative"
     none_open: "Al momento non ci sono posizioni lavorative aperte"
-    one_oppen: "posizione lavorativa aperta"
+    one_open: "posizione lavorativa aperta"
     many_open: "posizioni lavorative aperte"
     search_state: "Stato ricerca: "
     discover: "Scopri la posizione"

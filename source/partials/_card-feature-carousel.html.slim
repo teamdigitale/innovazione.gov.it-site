@@ -1,0 +1,40 @@
+- if dato.minister_page
+
+  ruby:
+    classes = %(col-lg-2
+                pt-5 d-ml-flex align-items-left
+                justify-content-lg-around)
+  .row.my-lg-5
+    .text-center class=classes
+      figure.avatar style="width: 175px; height: 175px"
+        = proxy_image_tag dato.minister_page.photo.lqip_data_url(w: 10, h: 10,
+            fit: "crop"), data: {sizes: "100vw",
+            src: dato.minister_page.photo.url(w: 1200, h: 1200,
+            fit: "crop", auto: "compress"),
+            srcset: "#{dato.minister_page.photo.url(w: 800, h: 800,
+            fit: 'crop', auto: 'compress')} 480w"},
+          class: "lazyload rounded-circle d-block w-100 h-100 bg-primary",
+          alt: dato.minister_page.photo.alt
+
+    .col-lg-5
+      .card-wrapper
+        .card.bg-transparent
+          .card-body.ml-lg-4
+            div
+              .py-2.text-center.text-lg-left
+                h2.h6.mid-caption--large.pr-2.text-uppercase.font-weight-semibold
+                  = page.minister_pre_title
+              h3.h1.text-center.text-lg-left
+                = page.minister_title
+              p.h5.mid-text-dark.text-center.text-lg-left
+                = page.minister_text
+            .my-3.mt-lg-5.text-center.text-lg-left
+              = partial "partials/button", locals: {btn_url: dato.minister_page,
+                aria_label: page.minister_pre_title}
+
+    .col-lg-4.px-4.p-md-0.mb-5.mb-md-0
+      = partial "partials/text_gallery",
+        locals: {slides: page.minister_featured_news,
+          hide_date: true,
+          hide_video_tags: true}
+    .col-lg-1
