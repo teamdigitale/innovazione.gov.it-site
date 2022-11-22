@@ -32,14 +32,15 @@ section
               .h6 = number.text
 
     .d-lg-none.mt-4.mb-5
-      .swiper-container
-        .swiper-wrapper.h-100
-          - block.numbers.each do |number|
-            .swiper-slide
-              .swiper-slide__text.px-3.px-md-5
-                .h-100.d-flex.flex-column.justify-content-around
-                  .mid-huge-numbers.fw-semibold.text-center
-                    = number.number
-                  .h6.text-center.pt-5
-                    = number.text
-      .swiper-pagination
+      .it-carousel-wrapper.pt-0.splide data-bs-carousel-splide="" role="group" aria-label="carousel"
+        .splide__track.pt-0
+          ul.splide__list.h-100
+            - block.numbers.each do |number|
+              li.splide__slide
+                .it-single-slide-wrapper
+                  .px-3.px-md-5
+                    .h-100.d-flex.flex-column.justify-content-around
+                      .mid-huge-numbers.fw-semibold.text-center
+                        = number.number
+                      .h6.text-center.pt-2
+                        = number.text
