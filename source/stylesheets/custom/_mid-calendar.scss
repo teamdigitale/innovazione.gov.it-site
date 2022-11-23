@@ -134,6 +134,39 @@
   );
 }
 
+// splidejs arrows for calendars
+.splide-button-next {
+  margin-right: -90px;
+}
+
+.splide-arrow-custom {
+  background-color: transparent;
+  border-color: #0066CC;
+}
+
+.splide-button-prev {
+  transform: rotate(180deg);
+  margin-left: -70px;
+}
+
+.splide-arrows-position {
+  position: relative;
+  top: 225px;
+}
+
+button.splide__arrow > svg {
+  width: 25px;
+  filter: invert(23%) sepia(79%) saturate(1530%) hue-rotate(189deg) brightness(116%) contrast(112%);
+}
+
+.splide-button-next:disabled {
+  display: none !important;
+}
+
+//.splide-button-prev:disabled {
+//  display: none !important;
+//}
+
 // swiper buttons for calendars
 .swiper-button-next::after,
 .swiper-button-prev::after {

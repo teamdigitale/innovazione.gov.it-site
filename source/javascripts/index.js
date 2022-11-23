@@ -1,7 +1,7 @@
 import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
-import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
-//import CarouselBI from "./carousel";
+//import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
+import CarouselBI from "./carousel";
 //import "carousel-custom-calendar.js"
 import CarouselCalendar from "./carousel-custom-calendar";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";

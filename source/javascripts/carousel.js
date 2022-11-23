@@ -31,34 +31,6 @@ const CONFIG_DEFAULT = {
 }
 
 const CONFIGS = {
-  'it-custom-calendar-wrapper': {
-    type: 'slide',
-    perPage: 4,
-    gap: 0,
-    padding: { left: 0, right: 0 },
-    arrows: true,
-    pagination: true,
-    breakpoints: {
-      560: {
-        perPage: 1,
-        gap: 0,
-        padding: { left: 24, right: 24 },
-        arrows: true,
-      },
-      768: {
-        perPage: 2,
-        gap: 0,
-        padding: { left: 0, right: 0 },
-        arrows: true,
-      },
-      992: {
-        perPage: 3,
-        gap: 0,
-        padding: { left: 0, right: 0 },
-        arrows: true,
-      },
-    },
-  },
   'it-carousel-landscape-abstract-three-cols': {
     type: 'slide',
     perPage: 3,
