@@ -1,0 +1,50 @@
+ruby:
+  items ||= nil
+  large_title ||= nil
+  medium_title ||= nil
+  hide_image ||= nil
+  show_item_type ||= nil
+  special_subtitle ||= nil
+  unequal_height ||= nil
+  hide_shadow ||= nil
+  shadow = hide_shadow ? "" : "shadow-lg"
+  background ||= "bg-white"
+
+- if items.present?
+  .it-carousel-wrapper.splide data-bs-carousel-splide="" role="group" aria-label="carousel"
+    .splide__track.p-0.mb-4.rounded class="#{shadow} #{background}"
+      ul.splide__list
+        - items.each do |item|
+          li.splide__slide.fixed-width-white
+            .it-single-slide-wrapper.h-100
+              ruby:
+                use_card = if (item.item_type.api_key == "article" ||
+                  item.item_type.api_key == "press_release") ||
+                  (item.item_type.api_key == "interview" ||
+                  item.item_type.api_key == "participation")
+                  true
+                end
+
+                card_partial = ""
+                if item.item_type.api_key == "announcement"
+                  card_partial = partial "partials/card-avvisi-pubblici",
+                  locals: {announcement: item,
+                  hide_shadow: true}
+                elsif item.item_type.api_key == "video"
+                  card_partial = partial "partials/video-featured-card",
+                  locals: {item: item}
+                elsif use_card
+                  card_partial = partial "partials/card",
+                  locals: {article: item,
+                  large_title: large_title,
+                  medium_title: medium_title,
+                  special_subtitle: special_subtitle,
+                  hide_shadow: true,
+                  hide_image: hide_image,
+                  unequal_height: unequal_height,
+                  show_item_type: show_item_type,
+                  hide_tags: true}
+                end
+
+              - if card_partial.present?
+                = card_partial
