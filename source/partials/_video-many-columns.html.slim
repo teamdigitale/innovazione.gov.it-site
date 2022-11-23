@@ -42,7 +42,8 @@ ruby:
         add_mb: add_mb}
 
 .d-lg-none
-  = partial "partials/text-gallery-card",
-    locals: {items: items,
-    background: "lightgrey-bg-a2",
-    hide_shadow: true}
+  .mb-4
+    = partial "partials/text-gallery-carousel",
+      locals: {items: items,
+      background: "lightgrey-bg-a2",
+      hide_shadow: true}
