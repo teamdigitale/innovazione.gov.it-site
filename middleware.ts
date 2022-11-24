@@ -9,7 +9,7 @@ export default function middleware(req: Request) {
     });
   }
 
-  const basicAuth = req.headers['authorization'];
+  const basicAuth = req.headers.get('authorization');
   if (basicAuth) {
     const pwdLines = basicAuthPasswords.split(/\s+/);
 
