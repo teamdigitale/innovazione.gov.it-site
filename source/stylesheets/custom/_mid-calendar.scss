@@ -141,7 +141,12 @@
 
 .splide-arrow-custom {
   background-color: transparent;
-  border-color: #0066CC;
+  border: none;
+  filter: invert(23%) sepia(79%) saturate(1530%) hue-rotate(189deg) brightness(116%) contrast(112%);
+}
+
+.splide-arrow-custom:disabled {
+  filter: invert(94%) sepia(2%) saturate(60%) hue-rotate(336deg) brightness(95%) contrast(93%);
 }
 
 .splide-button-prev {
@@ -151,86 +156,130 @@
 
 .splide-arrows-position {
   position: relative;
-  top: 225px;
+  top: 355px;
 }
 
-button.splide__arrow > svg {
-  width: 25px;
-  filter: invert(23%) sepia(79%) saturate(1530%) hue-rotate(189deg) brightness(116%) contrast(112%);
+.splide-custom-prev {
+  background-color: transparent;
+  border: none;
 }
 
-.splide-button-next:disabled {
-  display: none !important;
+.splide-custom-prev:disabled {
+  opacity: 0.35;
+} 
+
+.splide-custom-next {
+  background-color: transparent;
+  border: none;
 }
 
+.splide-custom-next:disabled {
+  opacity: 0.35;
+} 
+
+
+@include media-breakpoint-up(lg) {
+  .splide-arrows-position {
+    position: relative;
+    top: 225px;
+  }
+
+  .splide-custom-prev {
+    margin-left: -70px;
+  }
+  
+  .splide-custom-next {
+    margin-right: -90px;
+  }
+}
+
+._mid-faded-calendar {
+  mask-image: linear-gradient(
+    to right,
+    RGB(237, 245, 252, 0%),
+    black 5%,
+    black 95%,
+    RGB(237, 245, 252, 0%)
+  );
+}
+
+//button.splide__arrow > svg {
+//  width: 25px;
+//  filter: invert(23%) sepia(79%) saturate(1530%) hue-rotate(189deg) brightness(116%) contrast(112%);
+//}
+
+//.splide-button-next:disabled {
+//  display: none !important;
+//}
+//
 //.splide-button-prev:disabled {
 //  display: none !important;
 //}
 
 // swiper buttons for calendars
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
-}
-
-.swiper-button-prev {
-  left: 35%;
-  width: 48px;
-}
-
-.swiper-button-next {
-  right: 35%;
-  width: 48px;
-}
-
-@include media-breakpoint-up(lg) {
-  .swiper-button-prev {
-    position: absolute;
-  }
-
-  .swiper-button-next {
-    position: absolute;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  ._mid-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
-  }
-
-  ._mid-fade-out {
-    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
-  }
-
-  ._mid-faded-calendar {
-    mask-image: linear-gradient(
-      to right,
-      RGB(237, 245, 252, 0%),
-      black 5%,
-      black 95%,
-      RGB(237, 245, 252, 0%)
-    );
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  ._mid-mobile-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
-    margin-right: 12px;
-  }
-
-  ._mid-mobile-fade-out {
-    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
-    margin-left: 12px;
-  }
-
-  ._mid-mobile-faded-calendar {
-    mask-image: linear-gradient(
-      to right,
-      RGB(237, 245, 252, 0%),
-      black 5%,
-      black 95%,
-      RGB(237, 245, 252, 0%)
-    );
-  }
-}
+//.swiper-button-next::after,
+//.swiper-button-prev::after {
+//  content: "";
+//}
+//
+//.swiper-button-prev {
+//  left: 35%;
+//  width: 48px;
+//}
+//
+//.swiper-button-next {
+//  right: 35%;
+//  width: 48px;
+//}
+//
+//@include media-breakpoint-up(lg) {
+//  .swiper-button-prev {
+//    position: absolute;
+//  }
+//
+//  .swiper-button-next {
+//    position: absolute;
+//  }
+//}
+//
+//@include media-breakpoint-up(lg) {
+//  ._mid-fade-in {
+//    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
+//  }
+//
+//  ._mid-fade-out {
+//    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
+//  }
+//
+//  ._mid-faded-calendar {
+//    mask-image: linear-gradient(
+//      to right,
+//      RGB(237, 245, 252, 0%),
+//      black 5%,
+//      black 95%,
+//      RGB(237, 245, 252, 0%)
+//    );
+//  }
+//}
+//
+//@include media-breakpoint-down(lg) {
+//  ._mid-mobile-fade-in {
+//    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
+//    margin-right: 12px;
+//  }
+//
+//  ._mid-mobile-fade-out {
+//    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
+//    margin-left: 12px;
+//  }
+//
+//  ._mid-mobile-faded-calendar {
+//    mask-image: linear-gradient(
+//      to right,
+//      RGB(237, 245, 252, 0%),
+//      black 5%,
+//      black 95%,
+//      RGB(237, 245, 252, 0%)
+//    );
+//  }
+//}
