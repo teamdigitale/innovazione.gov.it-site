@@ -106,7 +106,6 @@ class CarouselCalendar extends BaseComponent {
     };
 
     conf = Object.assign({}, conf, customConfig);
-    console.log("conf: ", conf);
     return conf;
   }
 }

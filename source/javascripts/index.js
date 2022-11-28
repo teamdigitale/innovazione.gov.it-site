@@ -1,12 +1,9 @@
-import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap";
 //import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
 import CarouselBI from "./carousel";
-//import "carousel-custom-calendar.js"
 import CarouselCalendar from "./carousel-custom-calendar";
 import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
 import Sticky from "bootstrap-italia/src/js/plugins/sticky";
-import "calendar-swiper.js";
 import "calendar-dropdown.js";
 import "sticky-header-custom.js";
 import "lazysizes";
@@ -15,38 +12,6 @@ import "focus-visible/src/focus-visible.js";
 import Sharer from "sharer.js/sharer.js";
 const progressIndicator = require("progress-indicator.js");
 const DatoCmsSearch = require("datocms-search.widget.js");
-
-if ($(".swiper-container").length > 0) {
-  //some-slider-wrap-in
-  let swiperInstances = [];
-  $(".swiper-container").each(function (index, element) {
-    //some-slider-wrap-in
-    const $this = $(this);
-    $this.addClass("instance-" + index); //instance need to be unique
-    $this
-      .parent()
-      .find(".swiper-pagination")
-      .addClass("pagination-" + index);
-    swiperInstances[index] = new Swiper(".instance-" + index, {
-      //instance need to be unique (ex: some-slider)
-      preloadImages: false,
-      lazy: true,
-      pagination: {
-        el: ".pagination-" + index,
-        type: "bullets",
-        clickable: true,
-      },
-      a11y: {
-        enabled: true,
-        prevSlideMessage: "Slide precedente",
-        nextSlideMessage: "Slide successiva",
-        firstSlideMessage: "Questa è la prima slide",
-        lastSlideMessage: "Questa è l'ultima slide",
-        paginationBulletMessage: "Vai alla slide {{index}}",
-      },
-    });
-  });
-}
 
 const searchClient = new DatoCmsSearch(
   "7bc02ea800b5526cd655912c1b6cfa",
