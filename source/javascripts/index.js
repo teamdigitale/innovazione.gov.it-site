@@ -22,10 +22,6 @@ const initSearch = () => {
   if (searchClient === null) {
     return null;
   }
-  //return searchClient.addWidget("#search-container", {
-  //  initialLocale: $("html").attr("lang"),
-  //  initialQuery: "",
-  //});
   const lang = document.documentElement.lang;
   return searchClient.addWidget("#search-container", {
     initialLocale: document.documentElement.lang,
