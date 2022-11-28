@@ -1,0 +1,34 @@
+.it-carousel-wrapper.splide data-bs-carousel-splide="" 
+  .splide__track
+    ul.splide__list
+      - block.images.each do |img|
+        li.splide__slide
+          .it-single-slide-wrapper 
+            .card-wrapper
+              .card.card-img.no-after
+                .mid-fixed-height--400
+                  = proxy_image_tag placeholder_url(img, {w: 10, h: 6, fit: "max"}),
+                      data: {sizes: "100vw",
+                        src: img.url(w: 700, h: 400, fit: "max", auto: "compress"),
+                        srcset: "#{img.url(w: 450,
+                          h: 330,
+                          fit: 'max',
+                          auto: 'compress')} 480w,
+                        #{img.url(w: 600,
+                          h: 333,
+                          fit: 'max',
+                          auto: 'compress')} 632w,
+                        #{img.url(w: 560,
+                          h: 333,
+                          fit: 'max',
+                          auto: 'compress')} 844w,
+                        #{img.url(w: 700,
+                          h: 400,
+                          fit: 'max',
+                          auto: 'compress')} 1091w,
+                        #{img.url(w: 800,
+                          h: 500,
+                          fit: 'max',
+                          auto: 'compress')} 1320w"},
+                      class: "lazyload d-block w-100 m-0 img-gallery",
+                      alt: img.alt

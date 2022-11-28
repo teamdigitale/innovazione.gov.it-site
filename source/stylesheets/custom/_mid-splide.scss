@@ -34,3 +34,11 @@
 #numbers-carousel .splide__pagination__page {
   background-color: #33485C;
 }
+
+.img-gallery {
+  object-fit: contain;
+  object-position: center;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+}
