@@ -28,6 +28,7 @@ const CONFIG_DEFAULT = {
     play: 'Attiva autoplay',
     pause: 'Pausa autoplay',
   },
+  arrows: false,
 }
 
 const CONFIGS = {
