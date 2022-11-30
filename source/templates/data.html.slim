@@ -12,7 +12,42 @@
     p.lead.mid-caption--lead = page.text_link_to_source
 
 .container
-  h2.h4.text-uppercase.neutral-1-color
-    = page.introduction_title
-  p
-    = page.introduction
+  .col-lg-6
+    h2.h4.text-uppercase.neutral-1-color
+      = page.introduction_title
+    p
+      = page.introduction
+
+  / Kpi indicators
+  ruby: 
+    indicators = [
+      {
+        title: "Risorse a disposizione (misure)",
+        amount: 2.861,
+        percentage: nil,
+        bg_color: "lightgrey-bg-a3" 
+      },
+      {
+        title: "Risorse stanziate (avvisi)",
+        amount: 2.631,
+        percentage: 92,
+        bg_color: "lightgrey-bg-a3" 
+      },
+      {
+        title: "Risorse ancora da bandire",
+        amount: 230,
+        percentage: 8,
+        bg_color: "neutral-1-bg-a2" 
+      },
+      ]
+  .row
+    - indicators.each do |indicator|
+      .col-lg-4.primary-border-color-a9.border.border-bottom-0.border-top-0.border-end-0.border-4
+        .p-2.ps-3 class=indicator[:bg_color]
+          .mid-caption--xlarge.fw-semibold.text-black = indicator[:title]
+          .font-monospace
+            span.mid-caption--xxlarge.primary-color-a9.fw-semibold
+              | &euro;  
+            span.mid-caption--xxlarge.primary-color-a9.fw-semibold = "#{indicator[:amount]} mln "
+            - if indicator[:percentage]
+              span.mid-caption = "(#{indicator[:percentage]}%)"
