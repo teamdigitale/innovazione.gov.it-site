@@ -20,6 +20,8 @@
 
   / Kpi indicators
   ruby: 
+    border_classes = %(primary-border-color-a9 border border-end-0
+                        border-top-0 border-bottom-0 border-4)
     indicators = [
       {
         title: "Risorse a disposizione (misure)",
@@ -38,12 +40,12 @@
         amount: 230,
         percentage: 8,
         bg_color: "neutral-1-bg-a2" 
-      },
-      ]
-  .row
+      }
+    ]
+  .row.my-4
     - indicators.each do |indicator|
-      .col-lg-4.primary-border-color-a9.border.border-bottom-0.border-top-0.border-end-0.border-4
-        .p-2.ps-3 class=indicator[:bg_color]
+      .col-lg-4
+        .p-2.ps-3 class="#{indicator[:bg_color]} #{border_classes}"
           .mid-caption--xlarge.fw-semibold.text-black = indicator[:title]
           .font-monospace
             span.mid-caption--xxlarge.primary-color-a9.fw-semibold
@@ -51,3 +53,54 @@
             span.mid-caption--xxlarge.primary-color-a9.fw-semibold = "#{indicator[:amount]} mln "
             - if indicator[:percentage]
               span.mid-caption = "(#{indicator[:percentage]}%)"
+
+  // Tree map hover
+  .container.lightgrey-bg-a3.mb-4
+    .py-4.px-2
+      h3.mid-caption--lead.fw-semibold.text-black
+        = "Suddivisione risorse per finalità"
+      p.mid-caption
+        = "Il grafico mostra le risorse economiche messe a disposizione per ciascuna misura"
+
+    ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
+      li.nav-item.lightgrey-bg-a3#dataviz-tabs
+        a.nav-link.active{ id="tab1-tab"
+            data-bs-toggle="tab"
+            href="#tab1"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true" }
+          = "Grafico"
+      li.nav-item
+        a.nav-link { id="tab-2-tab"
+            data-bs-toggle="tab"
+            href="#tab2"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false" }
+          = "Tabella dati"
+      li.nav-item
+        a.nav-link { id="tab-3-tab"
+            data-bs-toggle="tab"
+            href="#tab3"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false" }
+          = "Info"
+
+    .tab-content#myTabContent
+      .tab-pane.p-4.fade{ class="show active"
+          id="tab1"
+          role="tabpanel"
+          aria-labelledby="tab1-tab" }
+        = "Graffico lorem ipsum"
+      .tab-pane.p-4.fade{
+          id="tab2"
+          role="tabpanel"
+          aria-labelledby="tab2-tab" }
+        = "Tabella lorem ipsum"
+      .tab-pane.p-4.fade{
+          id="tab3"
+          role="tabpanel"
+          aria-labelledby="tab3-tab" }
+        = "Lorem ipsum dolor sit amet. Eos consequatur porro aut animi voluptatem est deleniti ipsa qui veritatis exercitationem ut accusantium voluptatem in magnam tempore ea deserunt dolorem. Sed aliquam ipsam ut adipisci voluptatem ea quia quidem."
