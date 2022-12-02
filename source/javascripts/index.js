@@ -82,6 +82,7 @@ const chartDom = document.getElementById("chart1");
 const chartDom2 = document.getElementById("chart2");
 const chartDom3 = document.getElementById("chart3");
 
+// Bar chart
 if (chartDom) {
   var myChart = echarts.init(chartDom);
   const labelOption = {
@@ -95,27 +96,76 @@ if (chartDom) {
   };
 
   const options = {
-    grid: { top: 20, right: 40, bottom: 20, left: 240 },
     textStyle: {
       fontFamily: "Roboto Mono",
       fontWeight: "bold",
-      fontSize: 12,
+      fontSize: 13,
     },
+    grid: { top: 40, bottom: 60, right: 40, left: 50 },
     yAxis: {
       type: "category",
-
-      data: [
-        "Item 3",
-        "Item 4",
-        "Item 5",
-        "1.4.1 Esperienza del cittadino nei servizi pubblici",
-        "1.4.3 Adozione PagoPa e AppIo",
-      ],
+      data: ["1.4.5", "1.4.4", "1.2", "1.3.1", "1.4.1", "1.4.3"],
     },
     xAxis: {
       type: "value",
     },
-
+    series: [
+      {
+        name: "",
+        baseline: "bottom",
+        color: "white",
+        data: [
+          { name: "1.4.5 Digitalizzazione degli avvisi pubblici", value: 0 },
+          { name: "1.4.4 Adozione identità digitale", value: 0 },
+          {
+            name: "1.2 Abilitazione e facilitazione migrazione al Cloud",
+            value: 0,
+          },
+          { name: "1.3.1 Piattaforma Digitale Nazionale Dati", value: 0 },
+          {
+            name: "1.4.1 Esperienza del cittadino nei servizi pubblici",
+            value: 0,
+          },
+          { name: "1.4.3 Adozione PagoPa e AppIo", value: 0 },
+        ],
+        type: "bar",
+        label: {
+          show: true,
+          position: "insideLeft",
+          formatter: "{b}",
+          offset: [5, 0],
+        },
+      },
+      {
+        name: "stanziati",
+        baseline: "bottom",
+        color: "#94c4f5",
+        data: [200, 400, 500, 360, 200, 280],
+        type: "bar",
+        smooth: true,
+        // barWidth: "40%",
+        // label: labelOption,
+        itemStyle: {
+          borderRadius: [0, 10, 10, 0],
+        },
+      },
+      {
+        name: "spesi",
+        color: "#0066cc",
+        data: [150, 280, 300, 350, 250, 320],
+        type: "bar",
+        smooth: true,
+        // barWidth: "20%",
+        // label: labelOption,
+        itemStyle: {
+          borderRadius: [0, 10, 10, 0],
+        },
+      },
+    ],
+    legend: {
+      left: "center",
+      top: "bottom",
+    },
     toolbox: {
       show: true,
       left: "center",
@@ -126,40 +176,8 @@ if (chartDom) {
         saveAsImage: {},
       },
     },
-    series: [
-      {
-        name: "stanziati",
-        baseline: "bottom",
-        color: "#94c4f5",
-        data: [400, 500, 360, 200, 280],
-        type: "bar",
-        smooth: true,
-        barWidth: "20%",
-        label: labelOption,
-        itemStyle: {
-          borderRadius: [0, 10, 10, 0],
-        },
-      },
-      {
-        name: "spesi",
-        color: "#0066cc",
-        data: [280, 300, 350, 250, 320],
-        type: "bar",
-        smooth: true,
-        barWidth: "20%",
-        label: labelOption,
-        itemStyle: {
-          borderRadius: [0, 10, 10, 0],
-        },
-      },
-    ],
-    legend: {
-      left: "right",
-      top: "top",
-    },
     tooltip: {},
   };
-
   options && myChart.setOption(options);
 }
 
