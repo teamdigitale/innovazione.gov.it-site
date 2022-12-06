@@ -33,7 +33,7 @@
                   alt: page.logo.alt
 
 .py-5
-  .container
+  .container-xl
     .mt-lg-3.mb-4.mb-lg-0
       = partial "partials/section-title",
         locals: {title: t("articles_section_title")}
@@ -43,14 +43,14 @@
       hide_tags: true,
       btn_url: dato.department_articles_index}
 
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("press_releases_section_title"),
       items: page.press_releases.take(3),
       hide_tags: true,
       btn_url: dato.department_press_releases_index}
 
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
       items: page.announcements.take(3),
@@ -61,7 +61,7 @@
     locals: {items: page.focus_elements}
 
 .lightgrey-bg-a2
-  .container
+  .container-xl
     = partial "partials/flags",
       locals: {flags: page.sections}
 

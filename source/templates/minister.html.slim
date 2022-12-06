@@ -15,7 +15,7 @@ ruby:
 
 - if page.present?
   .pb-5.lightgrey-bg-a2.mid-section-border-above
-    .container.pb-5.text-center.text-sm-start
+    .container-xl.pb-5.text-center.text-sm-start
       .row
         .col-12.order-1
           = partial "partials/breadcrumb",
@@ -57,7 +57,7 @@ ruby:
   = partial "partials/sticky-navs/page-sections",
     locals: {sections: section_titles}
 
-  .container.pt-3
+  .container-xl.pt-3
     .pt-5.pb-4
       = partial "partials/section-title",
         locals: {title: t("articles_section_title"),
@@ -81,7 +81,7 @@ ruby:
 
   - if dato.minister_page.video_section.any?
     .lightgrey-bg-a2
-      .container.pt-3
+      .container-xl.pt-3
         .pt-5
           = partial "partials/section-title",
           locals: {title: dato.minister_page.video_section_title,
@@ -95,7 +95,7 @@ ruby:
             locals: {btn_url: dato.videos_index,
               label: t("see_more")}
 
-  .container.pt-3
+  .container-xl.pt-3
     = partial "partials/cards-horizontal-list",
       locals: {title: t("participations_section_title"),
       title_is_anchor: true,

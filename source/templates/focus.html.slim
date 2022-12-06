@@ -3,7 +3,7 @@
 
 .bg-dark
   .bg-primary.text-white.position-relative
-    .container.text-center.text-sm-start
+    .container-xl.text-center.text-sm-start
       .row
         .col-12.col-lg-7.pb-5
           = partial "partials/breadcrumb",
@@ -42,6 +42,6 @@
   locals: {page: page}
 
 .lightgrey-bg-a2
-  .container
+  .container-xl
     = partial "partials/flags",
       locals: {flags: page.sections, image_right: true}

@@ -19,13 +19,13 @@ ruby:
     = partial "partials/explore-aside",
       locals: {page: page}
 
-.container
+.container-xl
   .border-bottom
 
 - if page.respond_to?(:banner_block) && page.banner_block.any?
   .mb-5
     .mid-banner-border style="background-color: rgba(39,209,214,0.2)"
-      .container
+      .container-xl
         .row.py-5.py-md-4
           div class=description_classes
             p.h4.fw-semibold
@@ -37,7 +37,7 @@ ruby:
               html_class: "btn mid-button-banner d-inline-block"}
 
 .py-3.my-lg-5
-  .container.mid-container
+  .container-xl.mid-container
     - if items.any?
       .row
         h2.visually-hidden = t("elements_list")

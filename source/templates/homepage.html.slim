@@ -17,7 +17,7 @@ h1 class=mobile_title_classes
       = partial "partials/blocks/#{block.item_type.api_key}",
         locals: {block: block}
 
-.container.pt-5
+.container-xl.pt-5
   h2.h4.mb-4
     = t("home.highlights")
 
@@ -44,18 +44,18 @@ h1 class=mobile_title_classes
     image_mobile_top: false,
     center_pre_title: true}
 
-.container
+.container-xl
   = partial "partials/card-featured-projects", locals: {page: page}
 
 - if page.sections.any?
   .lightgrey-bg-a2
-    .container
+    .container-xl
       = partial "partials/flags",
         locals: {flags: page.sections, image_right: true}
 
 / blocco avvisi pubblici
 - if page.announcements.any?
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
       items: page.announcements,

@@ -16,13 +16,13 @@ ruby:
   .lightgrey-bg-a2
 
     - if featured.size == 1
-      .container.pt-3.pb-5
+      .container-xl.pt-3.pb-5
         .mb-3
         = partial "partials/video-single",
           locals: {item: featured.first}
 
     - else
-      .container.pb-3 class="#{featured.size == 2 ? "pb-lg-5" : ""}"
+      .container-xl.pb-3 class="#{featured.size == 2 ? "pb-lg-5" : ""}"
         = partial "partials/video-many-columns",
           locals: {items: featured,
           center_pre_title: true,
@@ -30,7 +30,7 @@ ruby:
 
 .pt-3.mb-lg-5
   - if items.any?
-    .container
+    .container-xl
       .py-5
         h2 class=section_name_classes
           = t("video.all")
@@ -55,11 +55,11 @@ ruby:
                 locals: {item: video,
                 add_card_shadow: "shadow-lg"}
 
-    .container
+    .container-xl
       .pt-lg-4
         = partial "partials/pagination",
           locals: {pager: pager}
 
   - else
-    .container
+    .container-xl
       = t("empty_list")
