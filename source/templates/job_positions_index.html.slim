@@ -17,11 +17,11 @@ ruby:
       = partial "partials/chip",
         locals: {label: tag.name, url: page_path(tag)}
 
-.container
+.container-xl
   .border-bottom.mb-4
 
 .py-3.mb-lg-5
-  .container.mid-container
+  .container-xl.mid-container
     p.text-uppercase.fw-semibold
       - if open_positions === 0
         = t("work_position.none_open")

@@ -1,6 +1,6 @@
 - buttons_amount = block.cta_items.size - 1
 
-.container.d-flex.flex-column.align-items-center.flex-sm-row.mb-5
+.container-xl.d-flex.flex-column.align-items-center.flex-sm-row.mb-5
   - visible_links(block.cta_items).each.with_index do |item, i|
     - html_class = i == buttons_amount ? "btn-primary" : "btn-outline-primary"
     = partial "partials/links/#{item.item_type.api_key}",

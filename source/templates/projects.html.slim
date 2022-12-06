@@ -15,7 +15,7 @@
       page_path(dato.completed_projects_index),
       class: "text-decoration-none fw-semibold d-block mb-3"
 
-.container
+.container-xl
   .row
     .col-lg-3.px-0.border-end.hidden.d-none.d-lg-block.border-top._content
       = partial "partials/sticky-navs/categories-or-blocks",
@@ -30,7 +30,7 @@
 
       - if highlight_projects.any?
         section.section.p-0
-          .container
+          .container-xl
             .row.py-5.ps-lg-5
               .col-12.col-md-9.mb-4.px-md-0.offset-lg-1
                 h2.fw-semibold.mb-3 tabindex="-1"
@@ -47,7 +47,7 @@
         - bg = i.even? ? "section-muted" : ""
         - if category_projects.any?
           section.section.p-0.mx-md-n4.mx-lg-0 class=bg
-            .container
+            .container-xl
               .row.py-5.ps-lg-5.offset-lg-1
                 .col-12.col-md-9.mb-4.px-md-0._anchor
                   h2.fw-semibold._mid-target
