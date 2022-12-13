@@ -14,7 +14,8 @@
     "lint:autocorrect": "eslint source/javascripts/* --fix",
     "lint:styles": "stylelint source/stylesheets/**/*.scss",
     "start": "concurrently \"npm run start:proxy\" \"npm run start:lambda\" \"npm run start:webpack\"",
-    "deploy": "gh-pages -u 'Deploy Bot <no-reply@teamdigitale.governo.it>' -d ./build/"
+    "deploy": "gh-pages -u 'Deploy Bot <no-reply@teamdigitale.governo.it>' -d ./build/",
+    "go": "concurrently \"bundle exec middleman \" \"yarn dev\""
   },
   "author": "Cantiere Creativo s.r.l.",
   "main": "index.js",

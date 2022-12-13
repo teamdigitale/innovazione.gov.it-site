@@ -1,32 +1,26 @@
-FROM circleci/ruby:2.7.0-node-browsers
+FROM ruby:2.7.0
 
-ENV PORT 4567
-ENV BUILD_ENV production
-ENV DATO_API_TOKEN xx
-ENV BASE_URL http://localhost:4567/
-ENV TZ Europe/Rome
+# RUN apt-get update -qq && apt-get install -y build-essential
+RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh  && \
+    bash nodesource_setup.sh && \
+    apt install nodejs
+# RUN apt-get install direnv
+RUN npm install yarn -g
+RUN npm install -g concurrently
+RUN npm install netlify-cli -g
 
-WORKDIR /usr/src/innovazione.gov.it
+ENV APP_HOME ./app
 
-USER root
+RUN mkdir $APP_HOME
+WORKDIR $APP_HOME
 
-USER ${RUNAS}
+# Copy Ruby and Node dependencies
+COPY Gemfile Gemfile.lock package.json yarn.lock ./
 
-# Copy useful files inside the workdir
-COPY source source
-COPY lib lib
-COPY locales locales
-COPY data data
-COPY config.rb .
-COPY Gemfile .
-COPY Gemfile.lock .
-COPY LICENSE .
-COPY yarn.lock .
-COPY package.json .
-
+RUN gem install bundler:2.1.4
 RUN bundle
 RUN yarn install
 
-EXPOSE $PORT 8080 35729
+EXPOSE 4567
 
-CMD ["bundle", "exec", "middleman"]
+# CMD ["bundle", "exec", "middleman"]

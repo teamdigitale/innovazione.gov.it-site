@@ -1,32 +1,18 @@
-version: '3.3'
+# docker-compose.yml
+
+version: '3.7'
 
 services:
-  innovazione.gov.it:
-    image: italia/innovazione.gov.it-site
-    container_name: innovazione_gov_it
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    user: "${RUNAS?Try $ echo RUNAS=$(id -u):$(id -g) >> .env}"
+  web:
+    build: ./
+    command: yarn go
+    volumes:
+      - '.:/app'
+      - 'node_modules:/app/node_modules'
+    ports:
+      - 4567:4567
     env_file:
       - .env
-    ports:
-      # Middleman
-      - 4567:4567
-      # Webpack live reload
-      - 35729:35729
-      # webpack-dev-server
-      - 8080:8080
-    # By default, we mount all the working dir to
-    # facilitate local development. Then, we exclude
-    # folders which content changes through a build:
-    # assets, _data, node_modules, vendor
-    volumes:
-      - .:/usr/src/innovazione.gov.it
-      - /usr/src/innovazione.gov.it/node_modules
-      - /usr/src/innovazione.gov.it/vendor
-    networks:
-      - overlay
 
-networks:
-  overlay:
+volumes:
+  node_modules:
