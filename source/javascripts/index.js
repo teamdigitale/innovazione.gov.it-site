@@ -80,18 +80,10 @@ for (let index = 0; index < carouselCalendarList.length; index++) {
 }
 
 // Charts per dataviz
-const chartWrap = document.getElementById('chartWrap');
 const chartDom = document.getElementById('chart1');
 const chartDom2 = document.getElementById('chart2');
 const chartDom3 = document.getElementById('chart3');
 
-function ChartSample() {
-  return <div>Hello</div>;
-}
-
-if (chartWrap) {
-  // const { summaryBottomText } = checkoutWrapper.dataset;
-  ReactDOM.render(<ChartSample />, chartWrap);
 }
 
 // Bar chart
@@ -346,3 +338,13 @@ if (chartDom3) {
   };
   options && myChart.setOption(options);
 }
+
+
+const chartWrap = document.getElementById('chartWrap');
+function ChartSample() {
+  return <div>Hello</div>;
+}
+
+if (chartWrap) {
+  // const { summaryBottomText } = checkoutWrapper.dataset;
+  ReactDOM.render(<ChartSample />, chartWrap);

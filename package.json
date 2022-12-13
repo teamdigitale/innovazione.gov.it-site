@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.18.6",
     "autoprefixer": "^9",
     "babel-loader": "^9.1.0",
+    "babel-preset-react": "^6.24.1",
     "bemo-scaffold": "*",
     "compression-webpack-plugin": "^7.0.0",
     "css-loader": "^5",
