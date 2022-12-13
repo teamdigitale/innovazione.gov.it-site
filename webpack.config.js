@@ -6,7 +6,6 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-// const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 const extractMiniCss = new MiniCssExtractPlugin({
   filename: 'stylesheets/[name].css',
@@ -34,7 +33,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
