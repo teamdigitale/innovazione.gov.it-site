@@ -11,7 +11,10 @@
             format: "%d/%m/%Y"}
     p.lead.mid-caption--lead = page.text_link_to_source
 
+
 .container
+  #chartWrap.py-8.mx-8 style="height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px"
+
   .col-lg-6
     h2.h4.text-uppercase.neutral-1-color
       = page.introduction_title
@@ -155,8 +158,6 @@
         = "Confronto tra risorse disponibili e risorse stanziate"
       p.mid-caption
         = "Il grafico confronta per ciascuna misura le risorse economiche a disposizione con quelle effettivamente erogate (milioni)"
-
-    #chartWrap.py-8.mx-8 style="height: 300px; width: 100%;"
 
     ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
       li.nav-item.lightgrey-bg-a3#dataviz-tabs
