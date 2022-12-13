@@ -13,6 +13,7 @@ import 'lazysizes/plugins/respimg/ls.respimg';
 import 'focus-visible/src/focus-visible.js';
 import Sharer from 'sharer.js/sharer.js';
 import * as echarts from 'echarts';
+import SampleChart from '../components/SampleChart';
 
 const progressIndicator = require('progress-indicator.js');
 const DatoCmsSearch = require('datocms-search.widget.js');
@@ -338,10 +339,8 @@ if (chartDom3) {
 }
 
 const chartWrap = document.getElementById('chartWrap');
-function ChartSample() {
-  return <div>Hello</div>;
-}
+
 if (chartWrap) {
   // const { summaryBottomText } = checkoutWrapper.dataset;
-  ReactDOM.render(<ChartSample />, chartWrap);
+  ReactDOM.render(<SampleChart />, chartWrap);
 }
