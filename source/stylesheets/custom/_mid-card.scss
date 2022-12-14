@@ -1,0 +1,14 @@
+.card:after {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.card.rounded {
+  overflow: hidden;
+}
+
+//@include media-breakpoint-down(lg) {
+//  .card {
+//    max-width: 640px;;
+//  }
+//}
