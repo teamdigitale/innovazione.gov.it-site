@@ -60,39 +60,40 @@ ruby:
                             rel: "noopener"
                             = t("formatted_address")
 
-              .mb-2
-                .text-center.text-md-start
-                  svg.mb-3.align-top.icon.icon-sm.icon-white [
-                      role="img"
-                      aria-label=t("email_contact")
-                      focusable="false"
-                    ]
-                    use xlink:href="/images/sprite.svg#it-mail"
+              - if dato.company.secretariat_email.present? || dato.company.media_email.present?
+                .mb-2
+                  .text-center.text-md-start
+                    svg.mb-3.align-top.icon.icon-sm.icon-white [
+                        role="img"
+                        aria-label=t("email_contact")
+                        focusable="false"
+                      ]
+                      use xlink:href="/images/sprite.svg#it-mail"
 
-                  .link-list-wrapper
-                    - if dato.company.secretariat_email.present?
-                      ul.link-list
-                        li
-                          = t("ministry_secretariat")
+                    .link-list-wrapper
+                      - if dato.company.secretariat_email.present?
+                        ul.link-list
+                          li
+                            = t("ministry_secretariat")
 
-                        li
-                          = link_to "mailto:#{dato.company.secretariat_email}",
-                            class: "list-item mid-footer-link",
-                            target: "_blank",
-                            rel: "noopener"
-                            = dato.company.secretariat_email
+                          li
+                            = link_to "mailto:#{dato.company.secretariat_email}",
+                              class: "list-item mid-footer-link",
+                              target: "_blank",
+                              rel: "noopener"
+                              = dato.company.secretariat_email
 
-                    - if dato.company.media_email.present?
-                      ul.link-list
-                        li
-                          = t("media_comunication")
+                      - if dato.company.media_email.present?
+                        ul.link-list
+                          li
+                            = t("media_comunication")
 
-                        li
-                          = link_to "mailto:#{dato.company.media_email}",
-                            class: "list-item mid-footer-link",
-                            target: "_blank",
-                            rel: "noopener"
-                            = dato.company.media_email
+                          li
+                            = link_to "mailto:#{dato.company.media_email}",
+                              class: "list-item mid-footer-link",
+                              target: "_blank",
+                              rel: "noopener"
+                              = dato.company.media_email
 
             .col-md-6.col-xl-3.mb-5
               div class=title_class
