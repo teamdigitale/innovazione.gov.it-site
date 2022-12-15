@@ -122,6 +122,19 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     CarouselCalendar.getOrCreateInstance(carousel);
   });
 });
+[].forEach.call(document.querySelectorAll("a.click-tab"), function (t) {
+  t.addEventListener(
+    "click",
+    function () {
+      const carousels = SelectorEngine.find(SELECTOR_CALENDAR_CUSTOM_CAROUSEL);
+      carousels.forEach((carousel) => {
+        CarouselCalendar.getInstance(carousel).dispose();
+        CarouselCalendar.getOrCreateInstance(carousel);
+      });
+    },
+    false
+  );
+});
 
 export default CarouselCalendar;
 

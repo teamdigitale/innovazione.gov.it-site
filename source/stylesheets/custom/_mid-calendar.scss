@@ -138,29 +138,30 @@
 .splide-arrows-position {
   position: relative;
   top: 355px;
+  z-index: 1;
 }
 
 .splide-custom-prev {
   background-color: transparent;
   border: none;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .splide-custom-prev:disabled {
   opacity: 0.3;
   pointer-events: none;
-} 
+}
 
 .splide-custom-next {
   background-color: transparent;
   border: none;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .splide-custom-next:disabled {
   opacity: 0.3;
   pointer-events: none;
-} 
+}
 
 @include media-breakpoint-up(lg) {
   .splide-arrows-position {
@@ -171,7 +172,7 @@
   .splide-custom-prev {
     margin-left: -70px;
   }
-  
+
   .splide-custom-next {
     margin-right: -90px;
   }
