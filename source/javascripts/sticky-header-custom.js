@@ -78,9 +78,10 @@
         if (toAdd) {
           elSticky.nextElementSibling.style.paddingTop =
             navbarHeight +
-            (isDesktop
-              ? navOffsetTop - scrollToGap
-              : navbarHeight - scrollToGap) +
+            // (isDesktop
+            //   ? navOffsetTop - scrollToGap
+            //   : navbarHeight - scrollToGap) +
+            (navbarHeight - scrollToGap) +
             "px";
         } else {
           elSticky.nextElementSibling.style.paddingTop = 0 + "px";
