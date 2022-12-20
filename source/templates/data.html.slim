@@ -11,15 +11,15 @@
             format: "%d/%m/%Y"}
     p.lead.mid-caption--lead = page.text_link_to_source
 
-
 .container
-  #chartWrap.py-8.mx-8 style="height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px" chart-data=id chart-geojson=url
-
   .col-lg-6
     h2.h4.text-uppercase.neutral-1-color
       = page.introduction_title
     p
       = page.introduction
+
+
+  #chartWrap.py-8.mx-8 style="height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px"
 
   / Kpi indicators
   ruby:
@@ -64,7 +64,6 @@
         = "Suddivisione risorse per finalità"
       p.mid-caption
         = "Il grafico mostra le risorse economiche messe a disposizione per ciascuna misura"
-
     ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
       li.nav-item.lightgrey-bg-a3#dataviz-tabs
         a.nav-link.active{
@@ -98,10 +97,7 @@
           role="tabpanel"
           aria-labelledby="tab1-treemap" }
         = "Graffico lorem ipsum"
-
         #chart3.py-8.mx-8 style="height: 300px; width: 100%;"
-
-
       .tab-pane.p-4.fade{
           id="tab2-tree"
           role="tabpanel"
@@ -158,7 +154,6 @@
         = "Confronto tra risorse disponibili e risorse stanziate"
       p.mid-caption
         = "Il grafico confronta per ciascuna misura le risorse economiche a disposizione con quelle effettivamente erogate (milioni)"
-
     ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
       li.nav-item.lightgrey-bg-a3#dataviz-tabs
         a.nav-link.active{ id="tab1-tab"
@@ -184,14 +179,12 @@
             aria-controls="tab3"
             aria-selected="false" }
           = "Info"
-
     .tab-content#myTabContent
       .tab-pane.p-4.fade{ class="show active"
           id="tab1"
           role="tabpanel"
           aria-labelledby="tab1-tab" }
         #chart1.py-8.mx-8 style="height: 500px;"
-
       .tab-pane.p-4.fade{
           id="tab2"
           role="tabpanel"
@@ -210,7 +203,6 @@
         = "Suddivisione risorse per finalità"
       p.mid-caption
         = "Il grafico mostra le risorse economiche messe a disposizione per ciascuna misura"
-
     ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
       li.nav-item.lightgrey-bg-a3#dataviz-tabs
         a.nav-link.active{ id="tab1-piechart"
@@ -244,7 +236,6 @@
           aria-labelledby="tab1-piechart" }
         = "Graffico lorem ipsum"
         #chart2.py-8.mx-8 style="height: 300px; width: 100%;"
-
       .tab-pane.p-4.fade{
           id="tab2-pie"
           role="tabpanel"
