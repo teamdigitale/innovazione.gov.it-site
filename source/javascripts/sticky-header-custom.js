@@ -4,14 +4,6 @@
  */
 (function () {
   const elSticky = document.querySelector(".it-header-sticky");
-  const elCenter = document.querySelector(".it-header-center-wrapper");
-  const elNavbar = document.querySelector(".it-header-navbar-wrapper");
-  const elSlim = document.querySelector(".it-header-slim-wrapper");
-
-  const navbarHeight = (elNavbar && elNavbar.offsetHeight) || 0;
-  // const slimHeight = (elSlim && elSlim.offsetHeight) || 0;
-
-  const otherStickyElements = document.querySelectorAll(".sticky-top");
 
   if (!!elSticky) {
     function isHidden(el) {
@@ -28,8 +20,6 @@
 
     let isSticky = false;
     let scrollToGap = 0;
-
-    let runCheckSticky = undefined;
 
     const initSticky = (isDesktop) => {
 
@@ -81,10 +71,6 @@
         elSticky.classList.remove("is-sticky");
         toggleClonedElement(isDesktop, false);
       })
-
-      window.addEventListener("scroll", runCheckSticky);
-
-      runCheckSticky();
     };
 
     initSticky(isDesktop);
