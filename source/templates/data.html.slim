@@ -1,0 +1,257 @@
+.container.pb-5.text-center.text-sm-start
+  .col-12
+    = partial "partials/breadcrumb", locals: {page: page}
+
+  .text-center.mb-0.mb-lg-4
+    h1.h1
+      = page.title
+    span = "Ultimo aggiornamento "
+    span = partial "partials/formatted-date",
+            locals: {date: page.last_update,
+            format: "%d/%m/%Y"}
+    p.lead.mid-caption--lead = page.text_link_to_source
+
+
+.container
+  #chartWrap.py-8.mx-8 style="height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px" chart-data=id chart-geojson=url
+
+  .col-lg-6
+    h2.h4.text-uppercase.neutral-1-color
+      = page.introduction_title
+    p
+      = page.introduction
+
+  / Kpi indicators
+  ruby:
+    border_classes = %(primary-border-color-a9 border border-end-0
+                        border-top-0 border-bottom-0 border-4)
+    indicators = [
+      {
+        title: "Risorse a disposizione (misure)",
+        amount: 2.861,
+        percentage: nil,
+        bg_color: "lightgrey-bg-a3"
+      },
+      {
+        title: "Risorse stanziate (avvisi)",
+        amount: 2.631,
+        percentage: 92,
+        bg_color: "lightgrey-bg-a3"
+      },
+      {
+        title: "Risorse ancora da bandire",
+        amount: 230,
+        percentage: 8,
+        bg_color: "neutral-1-bg-a2"
+      }
+    ]
+  .row.my-4
+    - indicators.each do |indicator|
+      .col-lg-4
+        .p-2.ps-3 class="#{indicator[:bg_color]} #{border_classes}"
+          .mid-caption--xlarge.fw-semibold.text-black = indicator[:title]
+          .font-monospace
+            span.mid-caption--xxlarge.primary-color-a9.fw-semibold
+              | &euro;
+            span.mid-caption--xxlarge.primary-color-a9.fw-semibold = "#{indicator[:amount]} mln "
+            - if indicator[:percentage]
+              span.mid-caption = "(#{indicator[:percentage]}%)"
+
+  // Treemap
+  .container.lightgrey-bg-a3.mb-4
+    .py-4.px-2
+      h3.mid-caption--lead.fw-semibold.text-black
+        = "Suddivisione risorse per finalità"
+      p.mid-caption
+        = "Il grafico mostra le risorse economiche messe a disposizione per ciascuna misura"
+
+    ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
+      li.nav-item.lightgrey-bg-a3#dataviz-tabs
+        a.nav-link.active{
+            id="tab1-treemap"
+            data-bs-toggle="tab"
+            href="#tab1-tree"
+            role="tab"
+            aria-controls="tab1-tree"
+            aria-selected="true" }
+          = "Grafico"
+      li.nav-item
+        a.nav-link { id="tab2-treemap"
+            data-bs-toggle="tab"
+            href="#tab2-tree"
+            role="tab"
+            aria-controls="tab2-tree"
+            aria-selected="false" }
+          = "Tabella dati"
+      li.nav-item
+        a.nav-link { id="tab3-treemap"
+            data-bs-toggle="tab"
+            href="#tab3-tree"
+            role="tab"
+            aria-controls="tab3-tree"
+            aria-selected="false" }
+          = "Info"
+
+    .tab-content#myTabContent
+      .tab-pane.p-4.fade{ class="show active"
+          id="tab1-tree"
+          role="tabpanel"
+          aria-labelledby="tab1-treemap" }
+        = "Graffico lorem ipsum"
+
+        #chart3.py-8.mx-8 style="height: 300px; width: 100%;"
+
+
+      .tab-pane.p-4.fade{
+          id="tab2-tree"
+          role="tabpanel"
+          aria-labelledby="tab2-treemap" }
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th scope="col"
+                = "#"
+              th scope="col"
+                = "Abilitazione Cloud"
+              th scope="col"
+                = "Adozione PagoPA e AppIO"
+              th scope="col"
+                = "Esperienza cittadino"
+              th scope="col"
+                = "Adozione digitale"
+          tbody
+            tr
+              th scope="row"
+                = "1"
+              td
+                = "34% delle risorse"
+              td
+                = "32%"
+              td
+                = "26%"
+              td
+                = "7%"
+            tr
+              th scope="row"
+                = "2"
+              td
+                | &euro;
+                span = " 987.000.000"
+              td
+                | &euro;
+                span = " 3.948.000.000"
+              td
+                | &euro;
+                span = " 3.220.000.000"
+              td
+
+      .tab-pane.p-4.fade{
+          id="tab3-tree"
+          role="tabpanel"
+          aria-labelledby="tab3-treemap" }
+        = "Lorem ipsum dolor sit amet. Eos consequatur porro aut animi voluptatem est deleniti ipsa qui veritatis exercitationem ut accusantium voluptatem in magnam tempore ea deserunt dolorem. Sed aliquam ipsam ut adipisci voluptatem ea quia quidem."
+
+  // Bar chart
+  .container.lightgrey-bg-a3.mb-4
+    .py-4.px-2
+      h3.mid-caption--lead.fw-semibold.text-black
+        = "Confronto tra risorse disponibili e risorse stanziate"
+      p.mid-caption
+        = "Il grafico confronta per ciascuna misura le risorse economiche a disposizione con quelle effettivamente erogate (milioni)"
+
+    ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
+      li.nav-item.lightgrey-bg-a3#dataviz-tabs
+        a.nav-link.active{ id="tab1-tab"
+            data-bs-toggle="tab"
+            href="#tab1"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true" }
+          = "Grafico"
+      li.nav-item
+        a.nav-link { id="tab2-tab"
+            data-bs-toggle="tab"
+            href="#tab2"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false" }
+          = "Tabella dati"
+      li.nav-item
+        a.nav-link { id="tab3-tab"
+            data-bs-toggle="tab"
+            href="#tab3"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false" }
+          = "Info"
+
+    .tab-content#myTabContent
+      .tab-pane.p-4.fade{ class="show active"
+          id="tab1"
+          role="tabpanel"
+          aria-labelledby="tab1-tab" }
+        #chart1.py-8.mx-8 style="height: 500px;"
+
+      .tab-pane.p-4.fade{
+          id="tab2"
+          role="tabpanel"
+          aria-labelledby="tab2-tab" }
+        = "Tabella lorem ipsum"
+      .tab-pane.p-4.fade{
+          id="tab3"
+          role="tabpanel"
+          aria-labelledby="tab3-tab" }
+        = "Lorem ipsum dolor sit amet. Eos consequatur porro aut animi voluptatem est deleniti ipsa qui veritatis exercitationem ut accusantium voluptatem in magnam tempore ea deserunt dolorem. Sed aliquam ipsam ut adipisci voluptatem ea quia quidem."
+
+  // Chart 2: pie chart
+  .container.lightgrey-bg-a3.mb-4
+    .py-4.px-2
+      h3.mid-caption--lead.fw-semibold.text-black
+        = "Suddivisione risorse per finalità"
+      p.mid-caption
+        = "Il grafico mostra le risorse economiche messe a disposizione per ciascuna misura"
+
+    ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
+      li.nav-item.lightgrey-bg-a3#dataviz-tabs
+        a.nav-link.active{ id="tab1-piechart"
+            data-bs-toggle="tab"
+            href="#tab1-pie"
+            role="tab"
+            aria-controls="tab1-pie"
+            aria-selected="true" }
+          = "Grafico"
+      li.nav-item
+        a.nav-link { id="tab2-piechart"
+            data-bs-toggle="tab"
+            href="#tab2-pie"
+            role="tab"
+            aria-controls="tab2-pie"
+            aria-selected="false" }
+          = "Tabella dati"
+      li.nav-item
+        a.nav-link { id="tab3-piechart"
+            data-bs-toggle="tab"
+            href="#tab3-pie"
+            role="tab"
+            aria-controls="tab3-pie"
+            aria-selected="false" }
+          = "Info"
+
+    .tab-content#myTabContent
+      .tab-pane.p-4.fade{ class="show active"
+          id="tab1-pie"
+          role="tabpanel"
+          aria-labelledby="tab1-piechart" }
+        = "Graffico lorem ipsum"
+        #chart2.py-8.mx-8 style="height: 300px; width: 100%;"
+
+      .tab-pane.p-4.fade{
+          id="tab2-pie"
+          role="tabpanel"
+          aria-labelledby="tab2-piechart" }
+        = "Tabella lorem ipsum"
+      .tab-pane.p-4.fade{
+          id="tab3-pie"
+          role="tabpanel"
+          aria-labelledby="tab3-piechart" }
+        = "Lorem ipsum dolor sit amet. Eos consequatur porro aut animi voluptatem est deleniti ipsa qui veritatis exercitationem ut accusantium voluptatem in magnam tempore ea deserunt dolorem. Sed aliquam ipsam ut adipisci voluptatem ea quia quidem."

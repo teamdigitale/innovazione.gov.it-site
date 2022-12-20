@@ -23,15 +23,15 @@ ruby:
 
   .pt-5.text-center
     .pb-5.mb-0
-      h2.h6.mid-caption--large.text-uppercase.font-weight-semibold
+      h2.h6.mid-caption--large.text-uppercase.fw-semibold
         = item.item_type.api_key
 
     p.mid-caption.text-secondary
       = partial "partials/formatted-date",
         locals: {date: item.date_shown}
 
-  .col-lg-8.offset-lg-2.pl-lg-6.text-center
-    h2.mb-4.h3.ml-lg-4.text-primary
+  .col-lg-8.offset-lg-2.ps-lg-6.text-center
+    h2.mb-4.h3.ms-lg-4.text-primary
       = item.title
 
   .col-lg-10.offset-lg-1

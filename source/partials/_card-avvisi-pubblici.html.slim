@@ -21,11 +21,11 @@ ruby:
 
   .card.rounded.h-100 class="#{shadow}"
     .card-body
-      .mid-caption.text-uppercase.font-weight-semibold.pb-3
+      .mid-caption.text-uppercase.fw-semibold.pb-3
         = announcement.announcement_status.name
-      h3.mid-caption--xlarge.text-primary.font-weight-bold.pb-2
+      h3.mid-caption--xlarge.text-primary.fw-bold.pb-2
         = proxy_link_to page_path(announcement),
           class: "text-decoration-none"
           = announcement.title
-      p.mid-caption--large.text-secondary.font-weight-semibold
+      p.mid-caption--large.text-secondary.fw-semibold
         = date

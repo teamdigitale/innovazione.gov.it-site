@@ -3,7 +3,7 @@
 
 - if page.present?
   .text-white.position-relative style="background-color: #0073E6;"
-    .container.text-center.text-sm-left
+    .container-xl.text-center.text-sm-start
       .row
         .col-12.col-lg-5.pb-2.pb-lg-5
           = partial "partials/breadcrumb",
@@ -13,10 +13,11 @@
           .offset-lg-1.col-12.col-lg-11.mb-0.mb-md-4
             = partial "partials/headers/main-titles", locals: {page: page}
 
-        .col-12.offset-lg-2.col-lg-5.mb-lg-0.pr-lg-0.mid-absolute-column
+        .col-12.offset-lg-2.col-lg-5.mb-lg-0.pe-lg-0.mid-absolute-column
           - if page.image.present?
-            = proxy_image_tag page.image.lqip_data_url(w: 10, h: 10,
-              fit: "crop"), data: {sizes: "100vw",
+            - image = page.image
+            = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
+              fit: "crop"}), data: {sizes: "100vw",
                 src: page.image.url(w: 1200, h: 1200,
                 fit: "crop", auto: "compress"),
                 srcset: "#{page.image.url(w: 480, h: 350,
@@ -30,7 +31,7 @@
               alt: page.image.alt
 
   .lightgrey-bg-a2
-    .container.pt-5.pb-4.py-lg-5.text-center.text-sm-left
+    .container-xl.pt-5.pb-4.py-lg-5.text-center.text-sm-start
       .col-12
         .row
           .offset-lg-1.col-lg-6.col-md-8.mb-0.mb-lg-4
@@ -38,7 +39,7 @@
               locals: {subs: subs,
               hide_caption: false,
               right_col_longer: false}
-            .pt-4
+            .pt-4.me-4
               = partial "partials/column-title",
                   locals: {title: t("ontology.arguments")}
               - page.tags.each do |tag|
@@ -49,23 +50,23 @@
           - if page.featured_title.present?
             .col-lg-5
               .px-0.pt-5.pt-lg-0
-                .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-left
-                  h2.p-lg-0.mr-lg-4
-                    .mid-text--large.text-uppercase.font-weight-semibold
+                .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-start
+                  h2.p-lg-0.me-lg-4
+                    .mid-text--large.text-uppercase.fw-semibold
                     = partial "partials/column-title",
                       locals: {title: page.featured_pre_title}
 
-                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.mr-4
+                  h3.h3.text-primary.d-lg-block.h2.pt-4.pb-3.pb-lg-4.me-4
                     = page.featured_title
 
               - if page.featured_links.present?
-                - txt = "text-center text-lg-left"
+                - txt = "text-center text-lg-start"
                 - spacing = "my-3 pb-5 pb-lg-0"
                 .d-flex.flex-column.d-lg-block class="#{txt} #{spacing}"
                   ruby:
                     first_link = page.featured_links.first
                     html_class = "btn text-uppercase"
-                    first_btn = "btn-outline-primary mr-lg-3 mt-3 #{html_class}"
+                    first_btn = "btn-outline-primary me-lg-3 mt-3 #{html_class}"
                     second_btn = "btn-primary mt-3 #{html_class}"
                   .d-lg-inline-block
                     = partial "partials/links/#{first_link.item_type.api_key}",

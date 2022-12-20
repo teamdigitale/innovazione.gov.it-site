@@ -22,13 +22,13 @@
 
     show_art_img = !hide_image && article.respond_to?(:image_cover)
     if show_art_img && article.image_cover.present?
-      image = "card-img no-after"
+      image = "no-after"
       image_link = article.image_cover
     end
 
     show_thumbnail = !hide_image && article.respond_to?(:image_thumbnail)
     if show_thumbnail && article.image_thumbnail.present?
-      image = "card-img no-after"
+      image = "no-after"
       image_link = article.image_thumbnail
     end
 
@@ -52,9 +52,9 @@
     if large_title
       title_style = "h2"
     elsif medium_title
-      title_style = "h5 font-weight-bold"
+      title_style = "h5 fw-bold"
     else
-      title_style = "mid-caption--xlarge font-weight-bold"
+      title_style = "mid-caption--xlarge fw-bold"
       subtitle_style = "mid-caption--large"
     end
 
@@ -82,9 +82,9 @@
       .img-responsive-wrapper
         .img-responsive
           figure.img-wrapper
-            = proxy_image_tag image_link.lqip_data_url(w: 10,
+            = proxy_image_tag placeholder_url(image_link, {w: 10,
               h: 6,
-              fit: "crop"),
+              fit: "crop"}),
               data: {sizes: "100vw",
                 src: image_link.url(w: 700,
                     h: 400,
@@ -115,7 +115,7 @@
       div
         - if show_item_type
           .category.pb-3.card-text
-            span.pr-2.text-uppercase.font-weight-semibold
+            span.pe-2.text-uppercase.fw-semibold
               = t("models.#{article.item_type.api_key}")
             span.px-2.text-secondary
               = partial "partials/formatted-date",

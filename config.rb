@@ -78,7 +78,7 @@ configure :build do
 end
 
 configure :development do
-  activate :livereload
+  # activate :livereload
   activate :search_engine_sitemap,
            default_priority: 0.5,
            default_change_frequency: "weekly"
@@ -950,6 +950,11 @@ dato.tap do |dato|
       proxy "/#{dato.italy2026_page.slug}/index.html",
             "/templates/italy2026.html",
             locals: {page: dato.italy2026_page},
+            locale: locale
+
+      proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
+            "/templates/data.html",
+            locals: {page: dato.dataviz_page},
             locale: locale
 
       italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }

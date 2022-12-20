@@ -26,41 +26,44 @@ ruby:
              10
            end
 
-  .row.justify-content-lg-center
-    .col-lg-1.order-2.order-lg-0
-      a.swiper-button-prev class="prev-#{calendar_idx}"
-        svg.icon.icon-lg.icon-primary
-          use xlink:href="/images/sprite.svg#it-arrow-left-circle"
-    .px-0 class="col-lg-#{cols}"
-      .swiper.overflow-hidden
-        .swiper-container-calendar{ data-slides="#{milestones.size}"
+  .row.justify-content-center 
+    div class="col-lg-#{cols}"
+      .px-0.it-carousel-wrapper.splide{ data-calendar-splide=""
+          data-slides="#{milestones.size}"
           data-initial=current_milestone_index
-          data-fixed=fixed_slides_per_view }
-          .swiper-wrapper
-            - milestones.each_with_index do |milestone, i|
+          data-fixed=fixed_slides_per_view
+          role="group"
+          aria-label="carousel" }
 
-              ruby:
-                last_in_past_phase = last_past_idx ? last_past_idx == i : nil
-                first_in_phase = start_idx.include?(i)
-                last_in_phase = last_idx.include?(i)
-                phase = if i < phase1_idx
-                          phase1
-                        elsif i < phase2_idx
-                          phase2
-                        else
-                          phase3
-                        end
+        .splide__arrows.d-flex.justify-content-center.justify-content-between.splide-arrows-position
+          button.splide__arrow.splide__arrow--prev.splide-custom-prev
+            svg.icon.icon-lg.icon-primary
+              use xlink:href="/images/sprite.svg#it-arrow-left-circle"
+          button.splide__arrow.splide__arrow--next.splide-custom-next
+            svg.icon.icon-lg.icon-primary
+              use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+        .justify-content-lg-center._mid-faded-calendar
+          .splide__track
+            ul.splide__list
+              - milestones.each_with_index do |milestone, i|
 
-              .swiper-slide
-                = partial "partials/card-calendar",
-                  locals: {milestone: milestone,
-                  phase: phase,
-                  last_in_past_phase: last_in_past_phase,
-                  last_in_phase: last_in_phase,
-                  last: i == milestones.size - 1,
-                  first_in_phase: first_in_phase}
+                ruby:
+                  last_in_past_phase = last_past_idx ? last_past_idx == i : nil
+                  first_in_phase = start_idx.include?(i)
+                  last_in_phase = last_idx.include?(i)
+                  phase = if i < phase1_idx
+                            phase1
+                          elsif i < phase2_idx
+                            phase2
+                          else
+                            phase3
+                          end
 
-    .col-lg-1
-      a.swiper-button-next class="next-#{calendar_idx}"
-        svg.icon.icon-lg.icon-primary
-          use xlink:href="/images/sprite.svg#it-arrow-right-circle"
+                li.splide__slide
+                  = partial "partials/card-calendar",
+                    locals: {milestone: milestone,
+                    phase: phase,
+                    last_in_past_phase: last_in_past_phase,
+                    last_in_phase: last_in_phase,
+                    last: i == milestones.size - 1,
+                    first_in_phase: first_in_phase}

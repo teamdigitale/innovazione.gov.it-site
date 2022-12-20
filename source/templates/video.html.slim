@@ -23,7 +23,7 @@
           locals: {label: tag.name, url: page_path(tag)}
 
 .lightgrey-bg-a2.pt-5
-  .container.py-5
+  .container-xl.py-5
     = partial "partials/video-cover", locals: {item: page}
     .d-lg-flex.justify-content-center
       .col-lg-6.mt-lg-3.mb-lg-5
@@ -31,7 +31,7 @@
           locals: {video: page}
 
 - if page.attachments.any? || page.links.any?
-  .container.py-5
+  .container-xl.py-5
     .row.justify-content-center
       .col-12.col-md-6.justify-content-md-center
         = partial "partials/page-attachments-links",
@@ -42,6 +42,6 @@
           locals: {page: page}
 
 - if page.related_items.any?
-  .container.pb-5.pt-5
+  .container-xl.pb-5.pt-5
     = partial "partials/page-related",
       locals: {page: page}

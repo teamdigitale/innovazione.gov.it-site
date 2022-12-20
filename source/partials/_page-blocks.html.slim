@@ -15,7 +15,7 @@
       elsif block_is_expandable && compact_columns && !block_is_big
         "col-12 col-lg-7 px-0"
       elsif block_is_expandable && !compact_columns && !block_is_big
-        "col-12 col-lg-9 px-0 pl-lg-4 pr-lg-5 offset-lg-1"
+        "col-12 col-lg-9 px-0 ps-lg-4 pe-lg-5 offset-lg-1"
       elsif block_is_expandable && !compact_columns && block_is_big
         "col-12 px-0"
       elsif block_is_calendar
@@ -23,7 +23,7 @@
       elsif !block_is_expandable && compact_columns
         "col-12 col-lg-7"
       elsif block.item_type.api_key == "block_cta_special"
-        "col-12 mx-0 px-0 px-md-4 px-lg-0"
+        "col-12 mx-lg-3 px-0 px-md-4 px-lg-0"
       elsif !block_is_expandable && !compact_columns
         "col-12 col-lg-11 offset-lg-1"
       end

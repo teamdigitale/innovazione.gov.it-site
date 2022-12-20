@@ -3,10 +3,10 @@ html lang=I18n.locale
   head = partial "partials/head"
   body
     div data-datocms-noindex=true
-      a.sr-only.sr-only-focusable href="#content"
+      a.visually-hidden.visually-hidden-focusable href="#content"
         = t("skiplinks.content")
 
-      a.sr-only.sr-only-focusable href="#footer"
+      a.visually-hidden.visually-hidden-focusable href="#footer"
         = t("skiplinks.footer")
 
     = partial "partials/site-nav"

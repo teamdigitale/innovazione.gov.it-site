@@ -14,8 +14,8 @@ ruby:
     btn
     text-primary
     text-uppercase
-    ml-0
-    ml-md-4
+    ms-0
+    ms-md-4
     pt-0
     pt-md-3
     pb-3
@@ -23,13 +23,13 @@ ruby:
   ].join(" ")
 
 .border-bottom.py-2.py-lg-1
-  .container
+  .container-xl
     section class=classes
       .pt-3.pb-1.pb-md-3.d-lg-flex.align-items-lg-center
         - if banner.title.present?
-          h3.h5.font-weight-bold.pr-lg-3.pt-1
+          h3.h5.fw-bold.pe-lg-3.pt-1
             = banner.title
-        .pr-lg-4 = banner.text
+        .pe-lg-4 = banner.text
 
       - if links_to_existing_page?(banner.link)
         = partial "partials/links/#{banner.link.item_type.api_key}",

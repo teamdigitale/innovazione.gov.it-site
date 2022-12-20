@@ -2,13 +2,13 @@
   == proxy_dato_meta_tags(page)
 
 .mb-5
-  .container.pb-5.text-center.text-sm-left
+  .container-xl.pb-5.text-center.text-sm-start
     .row
       .col-12
         = partial "partials/breadcrumb", locals: {page: page}
 
       .col-lg-7.mb-4
-        h1.sr-only = t("search")
+        h1.visually-hidden = t("search")
         #search-container.mid-search
 
       .offset-lg-1.col-lg-4
@@ -20,11 +20,11 @@
             li
               = link_to page_path(dato.tags_index),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.m-0
+                  span.fw-semibold.m-0
                     = t("explore_aside.tags_title")
 
             li
               = link_to page_path(dato.explore_page),
                 class: "p-0 list-item d-inline-block"
-                  span.font-weight-semibold.m-0
+                  span.fw-semibold.m-0
                     = dato.explore_page.title

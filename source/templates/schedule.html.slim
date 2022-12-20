@@ -10,22 +10,22 @@
 
     = proxy_link_to t("schedule_archive"),
       page_path(dato.schedule_archive_page),
-      class: "text-decoration-none font-weight-semibold d-block mb-3"
+      class: "text-decoration-none fw-semibold d-block mb-3"
 
-.container
+.container-xl
   .border-bottom
 
 .py-3.mt-5.mb-lg-5
-  .container.mid-container
+  .container-xl.mid-container
     - if items.present?
-      h2.sr-only = t("event_list")
+      h2.visually-hidden = t("event_list")
       - items.each do |month_and_year, events_by_day|
         .col-12.mb-5
           ruby:
             m = month_and_year.split.first
             y = month_and_year.split.last
             month = t("time.#{m}").concat(" #{y}")
-          h4.mb-5.text-center.text-md-left = month
+          h4.mb-5.text-center.text-md-start = month
         - events_by_day.each do |_day, events|
           .row
             .col-md-1.offset-lg-1.px-0

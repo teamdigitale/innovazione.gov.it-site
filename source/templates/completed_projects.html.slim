@@ -10,16 +10,16 @@
 
     = proxy_link_to t("projects_active"),
       page_path(dato.projects_page),
-      class: "text-decoration-none font-weight-semibold d-block mb-3"
+      class: "text-decoration-none fw-semibold d-block mb-3"
 
-.container
+.container-xl
   .border-bottom
 
 .py-3.my-lg-5
-  .container.mid-container
+  .container-xl.mid-container
     - if items.any?
       .row
-        h2.sr-only = t("elements_list")
+        h2.visually-hidden = t("elements_list")
         - items.each do |n|
           .col-lg-8
             = partial "partials/card-related-items",

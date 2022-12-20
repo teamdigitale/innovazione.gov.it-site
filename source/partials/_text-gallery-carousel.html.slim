@@ -11,12 +11,12 @@ ruby:
   background ||= "bg-white"
 
 - if items.present?
-  .swiper
-    .swiper-container.p-0.mb-4.rounded class="#{shadow} #{background}"
-      .swiper-wrapper
+  .it-carousel-wrapper.splide data-bs-carousel-splide="" role="group" aria-label="carousel"
+    .splide__track.p-0.mb-4.rounded class="#{shadow} #{background}"
+      ul.splide__list
         - items.each do |item|
-          .swiper-slide
-            .swiper-slide__text.py-0
+          li.splide__slide.fixed-width-white
+            .it-single-slide-wrapper.h-100
               ruby:
                 use_card = if (item.item_type.api_key == "article" ||
                   item.item_type.api_key == "press_release") ||
@@ -48,5 +48,3 @@ ruby:
 
               - if card_partial.present?
                 = card_partial
-
-    .swiper-pagination.py-3

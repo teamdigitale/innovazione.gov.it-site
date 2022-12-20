@@ -1,16 +1,16 @@
 - compact_columns ||= true
 - col_lg_layout = compact_columns ? "col-lg-6" : "col-lg-3"
 
-.container.mb-5
+.container-xl.mb-5
   .row
     - block.images_logo.each do |item|
       .col-6.col-md-4 class="#{col_lg_layout}"
         .mb-5
           .mid-fixed-height--300.d-flex.justify-content-center.flex-column
             figure.figure.m-0.mh-100
-              = proxy_image_tag item.lqip_data_url(w: 10,
+              = proxy_image_tag placeholder_url(item, {w: 10,
                 h: 10,
-                fit: "max"),
+                fit: "max"}),
                   data: {sizes: "100vw",
                     src: item.url(w: 150,
                       h: 250,
@@ -24,7 +24,7 @@
                         h: 250,
                         fit: 'max',
                         auto: 'compress')} 632w"},
-                  class: "lazyload figure-img img-fluid m-0 pr-0 mh-100",
+                  class: "lazyload figure-img img-fluid m-0 pe-0 mh-100",
                   alt: item.alt
 
-          p: small.font-weight-semibold = item.title
+          p: small.fw-semibold = item.title

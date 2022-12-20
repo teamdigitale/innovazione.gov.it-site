@@ -3,35 +3,35 @@
 - if numbers.present?
 
   .section.mid-numbers-background
-    .container
+    .container-xl
       .row
-        .col-12.col-lg-9.container
+        .col-12.col-lg-9.container-xl
 
-          h2.h6.text-uppercase.text-center.text-lg-left.py-3.py-lg-0
+          h2.h6.text-uppercase.text-center.text-lg-start.py-lg-0
             = t("numbers_section_title")
 
           .d-none.d-lg-block
             .my-4.row.row-cols-lg-3
               - numbers.each do |number|
                 .col-lg-4
-                  .mid-huge-numbers.font-weight-semibold.text-lg-left
+                  .mid-huge-numbers.fw-semibold.text-lg-start
                     = number.number
-                  .h6.text-center.text-lg-left
+                  .h6.text-center.text-lg-start
                     = number.text
 
           .d-lg-none
-            .swiper-container
-              .swiper-wrapper.h-100
-                - numbers.each do |number|
-                  .swiper-slide
-                    .swiper-slide__text.px-3.mid-numbers-background.px-md-5
-                      .h-100.d-flex.flex-column.justify-content-around
-                        .mid-huge-numbers.font-weight-semibold.text-center
-                          = number.number
-                        .h6.text-center.pt-5
-                          = number.text
-            .swiper-pagination.numbers-pagination-bullet
+            .it-carousel-wrapper.pt-0.splide#numbers-carousel data-bs-carousel-splide="" role="group" aria-label="carousel"
+              .splide__track.pt-0
+                ul.splide__list.h-100
+                  - numbers.each do |number|
+                    li.splide__slide
+                      .it-single-slide-wrapper
+                        .px-3.mid-numbers-background.px-md-5
+                          .h-100.d-flex.flex-column.justify-content-around
+                            .mid-huge-numbers.fw-semibold.text-center
+                              = number.number
+                            .h6.text-center.pt-2
+                              = number.text
 
         .col-12.col-lg-2.pt-3
-          / insert button
         .col-lg-1

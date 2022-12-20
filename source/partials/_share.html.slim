@@ -7,7 +7,7 @@
         "dropdown-toggle"].join(" ")
       aria-expanded="false"
       aria-haspopup="true"
-      data-toggle="dropdown"
+      data-bs-toggle="dropdown"
       type="button"
     ]
     = t("share")
@@ -22,7 +22,7 @@
         - sharable_socials.each do |social|
           li
             button [
-              class="btn text-capitalize text-primary font-weight-normal"
+              class="btn text-capitalize text-primary fw-normal social-share"
               data-sharer=social
               data-url=page_complete_url(page)
               data-width="800"

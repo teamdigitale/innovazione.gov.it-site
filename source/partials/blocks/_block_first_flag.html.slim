@@ -38,13 +38,14 @@ ruby:
                   fit: 'clip',
                   auto: 'compress')} 1320w"
 
-.container.py-lg-5 class="#{txt_mobile == "order-2" ? "pt-5" : "py-5"}"
+.container-xl.py-lg-5 class="#{txt_mobile == "order-2" ? "pt-5" : "py-5"}"
   .row
     div class="#{image_col} #{img_mobile} #{image_position}"
       figure.d-flex.flex-grow-1.align-items-center.justify-content-center
-        = proxy_image_tag block.image.lqip_data_url(w: 10,
+        - image = block.image
+        = proxy_image_tag placeholder_url(image, {w: 10,
             h: 6,
-            fit: "clip"),
+            fit: "clip"}),
             data: {sizes: "100vw",
               src: block.image.url(w: 700,
                   h: 400,
@@ -56,14 +57,14 @@ ruby:
 
     div class="#{text_col} #{txt_mobile} #{text_position}"
       .col-lg-10.offset-lg-2.px-0.py-lg-5.my-4
-        .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-left
-          h2.h6.mid-text--large.text-uppercase.font-weight-semibold.p-lg-0
+        .px-2.px-lg-0.pt-4.pt-lg-0.text-center.text-lg-start
+          h2.h6.mid-text--large.text-uppercase.fw-semibold.p-lg-0
             = block.pre_title
 
           h3.d-lg-block.h2.pt-2.pb-3
             = block.title
 
-          .mt-3.mt-lg-4.text-center.text-lg-left.pb-5.pb-lg-0.mb-3.mb-lg-0
+          .mt-3.mt-lg-4.text-center.text-lg-start.pb-5.pb-lg-0.mb-3.mb-lg-0
             - html_class = "btn text-uppercase btn-primary"
             = partial "partials/links/#{block.link.item_type.api_key}",
               locals: {item: block.link, html_class: html_class}

@@ -37,13 +37,13 @@ ruby:
     if item.respond_to?(:image_project_logo) && item.image_project_logo.present?
       logo_url = item.image_project_logo
       logo_length = "col-4 col-md-2 px-lg-0"
-      padding = "pl-lg-4 pr-lg-0"
+      padding = "ps-lg-4 pe-lg-0"
     elsif item.respond_to?(:video)
       id = item.video.provider_uid
       youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
       logo_url = placeholder ? item.placeholder_image : youtube_thumb
       logo_length = "col-4 col-md-2 px-lg-0"
-      padding = "pl-lg-4 pr-lg-0"
+      padding = "ps-lg-4 pe-lg-0"
     end
 
     # Style/ classes
@@ -66,7 +66,7 @@ ruby:
 
     if is_work_position
       card_classes = "lightgrey-bg-a3 rounded"
-      padding = "pl-4 pt-4 pr-4 pb-2"
+      padding = "ps-4 pt-4 pe-4 pb-2"
     end
 
   - if logo_url.present?
@@ -85,9 +85,9 @@ ruby:
               = link_to page_path(item),
                 aria_label: t("video.go_to_video"),
                 title: "video: #{item.title}"
-                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                = proxy_image_tag placeholder_url(logo_url, {w: 10,
                     h: 10,
-                    fit: "max"),
+                    fit: "max"}),
                   data: {sizes: "100vw",
                     src: logo_url.url(w: 120,
                       h: 120,
@@ -105,9 +105,9 @@ ruby:
                   alt: logo_url.alt,
                   title: logo_url.title
             - else
-              = proxy_image_tag logo_url.lqip_data_url(w: 10,
+              = proxy_image_tag placeholder_url(logo_url, {w: 10,
                 h: 10,
-                fit: "max"),
+                fit: "max"}),
                 data: {sizes: "100vw",
                   src: logo_url.url(w: 120,
                      h: 120,
@@ -144,9 +144,9 @@ ruby:
               aria_label: t("video.go_to_video"),
               title: "video: #{item.title}"
               figure style="height: 100px;"
-                = proxy_image_tag logo_url.lqip_data_url(w: 10,
+                = proxy_image_tag placeholder_url(logo_url, {w: 10,
                     h: 10,
-                    fit: "max"),
+                    fit: "max"}),
                   data: {sizes: "100vw",
                     src: logo_url.url(w: 120,
                       h: 120,
@@ -165,9 +165,9 @@ ruby:
                   title: logo_url.title
           - else
             figure
-              = proxy_image_tag logo_url.lqip_data_url(w: 10,
+              = proxy_image_tag placeholder_url(logo_url, {w: 10,
                   h: 10,
-                  fit: "max"),
+                  fit: "max"}),
                 data: {sizes: "100vw",
                   src: logo_url.url(w: 120,
                     h: 120,
@@ -191,19 +191,19 @@ ruby:
 
             - if is_work_position && item.respond_to?(:announcement_status)
               .d-flex.justify-content-between
-                .pr-2.text-uppercase.font-weight-semibold class="#{type}"
+                .pe-2.text-uppercase.fw-semibold class="#{type}"
                   = t("models.#{item.item_type.api_key}")
                 div
                   - state = item.announcement_status.name
                   - status_color = state == "APERTO" ? "text-open" : ""
                   - status = state[-1] === "O" ? "#{state[0..-2]}A" : state
                   div
-                    .d-none.d-md-inline-block.pr-2
+                    .d-none.d-md-inline-block.pe-2
                       = t("work_position.search_state")
-                    span.font-weight-bold class="#{status_color}"
+                    span.fw-bold class="#{status_color}"
                       = status
             - else
-              span.pr-2.text-uppercase.font-weight-semibold class="#{type}"
+              span.pe-2.text-uppercase.fw-semibold class="#{type}"
                 - pre_title = t("models.#{item.item_type.api_key}")
                 - completed = is_completed_project ? " #{t('concluded')}" : ""
                 = "#{pre_title}#{completed}"
@@ -211,10 +211,10 @@ ruby:
                 = date
 
               - if !is_work_position && item.respond_to?(:announcement_status)
-                span.px-4.px-md-2 class="#{txt_date} font-weight-bold"
+                span.px-4.px-md-2 class="#{txt_date} fw-bold"
                   = item.announcement_status.name
 
-          h3 class="h5 font-weight-semibold"
+          h3 class="h5 fw-semibold"
             = link_to page_path(item),
               class: "#{txt_title} text-decoration-none"
               = item.title
@@ -229,9 +229,9 @@ ruby:
           - if is_work_position
             .py-3.pt-md-3
               = link_to page_path(item),
-                class: "text-primary text-uppercase mid-caption font-weight-bold text-decoration-none"
+                class: "text-primary text-uppercase mid-caption fw-bold text-decoration-none"
                 div.d-flex.align-items-center
                   = t("work_position.discover")
                   span
-                    svg.icon.icon-sm.icon-primary.ml-2
+                    svg.icon.icon-sm.icon-primary.ms-2
                       use xlink:href="/images/sprite.svg#it-arrow-right"

@@ -4,11 +4,8 @@ hide_from_sitemap: true
 ---
 
 - page = dato.four_o_four
-
-.container.my-5.py-5.text-center.text-primary
+.container-xl.my-5.py-5.text-center.text-primary
   h1.display-1 style="font-size: 7em" = page.title
-  .display-3 = page.subtitle
-
+  .mid-caption--xxlarge = page.subtitle
   .my-4.text-normal = markdown page.body
-
   = link_to t("go_home"), "/", class: "btn text-uppercase btn-primary"

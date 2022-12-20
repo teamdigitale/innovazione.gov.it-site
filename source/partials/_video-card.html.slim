@@ -11,14 +11,14 @@ ruby:
   youtube_thumb = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
   thumbnail = placeholder ? item.placeholder_image : youtube_thumb
 
-.card.rounded.card-img.no-after.h-100.bg-transparent class=add_card_shadow
+.card.rounded.no-after.h-100.bg-transparent class=add_card_shadow
   .img-responsive-wrapper.rounded class=image_shadow
     .img-responsive
       figure.img-wrapper
         - if placeholder
-          = proxy_image_tag thumbnail.lqip_data_url(w: 10,
+          = proxy_image_tag placeholder_url(thumbnail, {w: 10,
             h: 6,
-            fit: "crop"),
+            fit: "crop"}),
             data: {sizes: "100vw",
               src: thumbnail.url(w: 700,
                  h: 400,
@@ -62,7 +62,7 @@ ruby:
       p.card-text.text-secondary
         = partial "partials/formatted-date",
           locals: {date: item.date_shown}
-      h3.h4.text-primary class="mid-caption--xlarge font-weight-bold"
+      h3.h4.text-primary class="mid-caption--xlarge fw-bold"
         = link_to page_path(item),
           class: "text-decoration-none"
           = item.title

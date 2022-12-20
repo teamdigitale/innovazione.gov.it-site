@@ -1,10 +1,10 @@
 - image = block.image
 
 section.lightgrey-bg-b2.py-4
-  .container
+  .container-xl
     .row
       .col-lg-6
-        = proxy_image_tag image.lqip_data_url(w: 10, h: 6, fit: "max"),
+        = proxy_image_tag placeholder_url(image, {w: 10, h: 6, fit: "max"}),
           data: {sizes: "100vw",
             src: image.url(w: 1000,
               h: 640,
@@ -26,11 +26,11 @@ section.lightgrey-bg-b2.py-4
           alt: image.alt
 
       .col-lg-6.d-lg-flex.flex-lg-column.justify-content-lg-center.my-5.my-lg-0
-        .ml-lg-5
-          h3.h2.font-weight-normal = block.title
+        .ms-lg-5
+          h3.h2.fw-normal = block.title
 
           .mt-3.mt-lg-4
             - visible_links(block.links).each.with_index do |item, i|
-              - html_class = "btn btn-outline-primary mr-4" if !i.zero?
+              - html_class = "btn btn-outline-primary me-4" if !i.zero?
               = partial "partials/links/#{item.item_type.api_key}",
                 locals: {item: item, html_class: html_class}

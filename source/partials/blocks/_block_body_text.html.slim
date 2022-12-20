@@ -6,7 +6,7 @@ ruby:
       "col-12 col-lg-9"
     end
 
-.container.mb-4._anchor.mid-formatted-content
+.container-xl.mb-4._anchor.mid-formatted-content
   - if block.text_title.present?
     h2.h4.mb-4._mid-target
       span._mid-target-point id=anchor_id(block.text_title)
@@ -16,7 +16,8 @@ ruby:
     div class=column_class
       - if block.image_little.present?
         figure.block-body__small-image
-          = proxy_image_tag block.image_little.lqip_data_url(w: 10, h: 6),
+          - image = block.image_little
+          = proxy_image_tag placeholder_url(image, {w: 10, h: 6}),
             data: {sizes: "100vw",
             src: block.image_little.url(w: 700, h: 400,
             fit: "max", auto: "compress"),
@@ -32,5 +33,5 @@ ruby:
 
     - if block.text_note.present?
       .col-10.offset-2.col-lg-3.offset-lg-0
-        .mid-notes.pl-3
+        .mid-notes.ps-3
           = markdown block.text_note

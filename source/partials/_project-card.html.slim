@@ -13,7 +13,7 @@
                 alt: logo.alt
 
             - else
-              = proxy_image_tag logo.lqip_data_url(w: 10, h: 10, fit: "max"),
+              = proxy_image_tag placeholder_url(logo, {w: 10, h: 10, fit: "max"}),
                 data: {sizes: "100vw",
                   src: logo.url(w: 190, h: 190,
                     fit: "max", auto: "compress"),
@@ -24,7 +24,7 @@
                 class: "lazyload d-block w-100",
                 alt: logo.alt
 
-      h3.h4.card-title.font-weight-bold
+      h3.h4.card-title.fw-bold
         = link_to project.title,
           page_path(project),
           class: "text-decoration-none"
@@ -36,12 +36,12 @@
           - project.links_external_project_card.each do |link|
             li.list-inline-item
               = link_to link.link,
-                class: "btn-link pl-0 text-decoration-none",
+                class: "btn-link ps-0 text-decoration-none",
                 target: "_blank",
                 rel: "noopener",
                 aria: {label: "#{link.title}: #{project_link_label(link)}"} do
 
-                  span.mid-caption--xlarge.font-weight-semibold
+                  span.mid-caption--xlarge.fw-semibold
                     = project_link_label(link)
-                  svg.icon.icon.icon-sm.icon-primary.ml-2.align-bottom.mb-1
+                  svg.icon.icon.icon-sm.icon-primary.ms-2.align-bottom.mb-1
                     use xlink:href="/images/sprite.svg#it-external-link"

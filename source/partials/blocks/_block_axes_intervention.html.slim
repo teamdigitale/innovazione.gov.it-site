@@ -1,16 +1,16 @@
 ruby:
   items ||= block.interventions
-  classes = %(pt-5 text-center d-flex align-items-left
+  classes = %(pt-5 text-center d-flex align-items-start
                justify-content-center justify-content-lg-around)
   pretitle_font_classes = %(h6 mid-caption--large
-               text-uppercase mt-4 text-white font-weight-semibold)
+               text-uppercase mt-4 text-white fw-semibold)
   figure_classes = %(d-flex justify-content-center
                bg-white rounded-circle)
 
 - if items.present?
 
   .primary-bg.pt-5.pb-4
-    .container.white-color
+    .container-xl.white-color
       .row: .col-12.text-center
         h2 class=pretitle_font_classes
           = block.pre_title
@@ -31,9 +31,9 @@ ruby:
           .col-lg-4
             .card-wrapper
               .card.bg-transparent
-                .card-body.py-0.py-lg-4.ml-lg-4
-                  .text-center.text-lg-left.text-white
-                    h3.h5.my-3.mid-caption--xxxlarge.font-weight-bold
+                .card-body.py-0.py-lg-4.ms-lg-4
+                  .text-center.text-lg-start.text-white
+                    h3.h5.my-3.mid-caption--xxxlarge.fw-bold
                       = item.title
 
                     p.mid-caption--xlarge

@@ -2,14 +2,14 @@
 - text_left ||= nil
 
 - if item.present?
-  - align_left = text_left ? "text-lg-left" : ""
+  - align_left = text_left ? "text-lg-start" : ""
 
   .card.h-100.mt-4
     .card-body.primary-bg.text-center class="#{align_left}"
       h3.h5.my-3
         = proxy_link_to item.title,
           page_path(item),
-          class: "mid-caption--xxlarge text-white font-weight-bold"
+          class: "mid-caption--xxlarge text-white fw-bold"
 
       p.text-white.mid-caption--xmlarge
         = item.subtitle

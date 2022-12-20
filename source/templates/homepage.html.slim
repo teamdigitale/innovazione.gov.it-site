@@ -2,7 +2,7 @@
   == proxy_dato_meta_tags(page)
 
 ruby:
-  mobile_title_classes = %(d-lg-none
+  mobile_title_classes = %(d-md-none
     h5 px-3 px-sm-5 text-md-center pb-3
     primary-bg text-white mb-0)
 
@@ -11,13 +11,13 @@ h1 class=mobile_title_classes
     = "Dipartimento per la trasformazione digitale"
 
 - if page.banners.present?
-  h2.sr-only = t("notes")
+  h2.visually-hidden = t("notes")
   - page.banners.each do |block|
     - if block.item_type.api_key != "block_hero_banner" || block.show
       = partial "partials/blocks/#{block.item_type.api_key}",
         locals: {block: block}
 
-.container.pt-5
+.container-xl.pt-5
   h2.h4.mb-4
     = t("home.highlights")
 
@@ -44,18 +44,18 @@ h1 class=mobile_title_classes
     image_mobile_top: false,
     center_pre_title: true}
 
-.container
+.container-xl
   = partial "partials/card-featured-projects", locals: {page: page}
 
 - if page.sections.any?
   .lightgrey-bg-a2
-    .container
+    .container-xl
       = partial "partials/flags",
         locals: {flags: page.sections, image_right: true}
 
 / blocco avvisi pubblici
 - if page.announcements.any?
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
       items: page.announcements,
