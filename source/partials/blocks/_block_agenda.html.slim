@@ -2,11 +2,11 @@
   ruby:
     featured_events = block.agenda_events.sort_by(&:date_shown)
     events_num = block.agenda_events.size
-    selected = if events_num <= 4
+    selected =  if events_num <= 4
                   featured_events
-               else
-                 [past_events[0]].concat(current_and_future_events[0..2])
-               end
+                else
+                  [past_events[0]].concat(current_and_future_events[0..2])
+                end
 
   .pt-5.container-xl.px-0
     .col-12.mb-4
@@ -43,7 +43,7 @@
     // or future are shown.
     .d-lg-none
       .it-carousel-wrapper.splide.it-calendar-wrapper data-bs-carousel-splide="" role="group" aria-label="carousel"
-        .splide__track.p-0
+        .splide__track.p-0.pb-sm-4
           ul.splide__list
             - selected.each do |event|
               li.splide__slide
