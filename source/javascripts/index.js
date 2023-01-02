@@ -341,6 +341,6 @@ if (chartDom3) {
 const chartWrap = document.getElementById('chartWrap');
 
 if (chartWrap) {
-  // const { summaryBottomText } = checkoutWrapper.dataset;
+  // const { chart } = checkoutWrapper.dataset;
   ReactDOM.render(<SampleChart />, chartWrap);
 }

@@ -61,8 +61,9 @@ const options = {
 
 export default function SampleChart(id, dataUrl) {
   //fetch
-  
   return (
-    <ReactEcharts option={options} style={{ width: '100%', height: 300 }} />
+    <>
+      <ReactEcharts option={options} style={{ width: '100%', height: 300 }} />
+    </>
   );
 }
