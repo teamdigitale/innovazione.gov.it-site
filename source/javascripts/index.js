@@ -338,9 +338,11 @@ if (chartDom3) {
   options && myChart.setOption(options);
 }
 
-const chartWrap = document.getElementById('chartWrap');
+const chartWrap = document.getElementsByClassName('chartWrap');
 
 if (chartWrap) {
-  // const { chart } = checkoutWrapper.dataset;
-  ReactDOM.render(<SampleChart />, chartWrap);
+  for (let i = 0; i < chartWrap.length; i++) {
+    const chartId = chartWrap[i].id;
+    ReactDOM.render(<SampleChart id={chartId} />, chartWrap[i]);
+  }
 }

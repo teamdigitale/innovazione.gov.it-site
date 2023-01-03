@@ -59,11 +59,13 @@ const options = {
   ],
 };
 
-export default function SampleChart(id, dataUrl) {
+export default function SampleChart(chartId, data, dataUrl, dataChart) {
+  const {id} = chartId
+  console.log('id', id)
   //fetch
   return (
     <>
-      <ReactEcharts option={options} style={{ width: '100%', height: 300 }} />
+      <ReactEcharts id={id} option={options} style={{ width: '100%', height: 300 }} />
     </>
   );
 }
