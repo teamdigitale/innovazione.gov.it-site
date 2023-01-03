@@ -4,14 +4,6 @@
  */
 (function () {
   const elSticky = document.querySelector(".it-header-sticky");
-  const elCenter = document.querySelector(".it-header-center-wrapper");
-  const elNavbar = document.querySelector(".it-header-navbar-wrapper");
-  const elSlim = document.querySelector(".it-header-slim-wrapper");
-
-  const navbarHeight = (elNavbar && elNavbar.offsetHeight) || 0;
-  const slimHeight = (elSlim && elSlim.offsetHeight) || 0;
-
-  const otherStickyElements = document.querySelectorAll(".sticky-top");
 
   if (!!elSticky) {
     function isHidden(el) {
@@ -29,14 +21,7 @@
     let isSticky = false;
     let scrollToGap = 0;
 
-    let runCheckSticky = undefined;
-
     const initSticky = (isDesktop) => {
-      let navOffsetTop = slimHeight;
-
-      if (isDesktop && navbarHeight) {
-        navOffsetTop = slimHeight + elCenter ? elCenter.offsetHeight : 0;
-      }
 
       const toggleClonedElement = (isDesktop, toAdd = true, callback) => {
         if (isDesktop) {
@@ -74,70 +59,18 @@
             }
           }
         }
-
-        if (toAdd) {
-          elSticky.nextElementSibling.style.paddingTop =
-            navbarHeight +
-            // (isDesktop
-            //   ? navOffsetTop - scrollToGap
-            //   : navbarHeight - scrollToGap) +
-            (navbarHeight - scrollToGap) +
-            "px";
-        } else {
-          elSticky.nextElementSibling.style.paddingTop = 0 + "px";
-        }
       };
-
-      const toggleOn = () => {
+      elSticky.addEventListener('on.bs.sticky', function () {
         isSticky = true;
         elSticky.classList.add("is-sticky");
         toggleClonedElement(isDesktop, true);
-      };
+      })
 
-      const toggleOff = () => {
+      elSticky.addEventListener('off.bs.sticky', function () {
         isSticky = false;
         elSticky.classList.remove("is-sticky");
         toggleClonedElement(isDesktop, false);
-      };
-
-      runCheckSticky = () => {
-        const nbh = navbarHeight;
-        if (window.scrollY + scrollToGap >= navOffsetTop && !isSticky) {
-          toggleOn();
-          if (nbh !== navbarHeight) scrollToGap = navbarHeight - nbh;
-        } else if (window.scrollY + scrollToGap < navOffsetTop && isSticky) {
-          toggleOff();
-        }
-        runCheckHeight();
-      };
-
-      runCheckHeight = () => {
-        const cssVarElement = document.querySelector(":root").style;
-        const cssVarHeight = cssVarElement.getPropertyValue(
-          "--sticky-header-height"
-        );
-
-        const centerResizeHeight = elCenter.offsetHeight;
-        const navbarResizeHeight = elNavbar.offsetHeight;
-        const actualNavHeight =
-          centerResizeHeight > navbarResizeHeight
-            ? centerResizeHeight
-            : navbarResizeHeight;
-
-        const stickyHeaderHeight = actualNavHeight + "px";
-
-        if (otherStickyElements && stickyHeaderHeight != cssVarHeight) {
-          cssVarElement.setProperty(
-            "--sticky-header-height",
-            stickyHeaderHeight
-          );
-        }
-      };
-
-      window.addEventListener("scroll", runCheckSticky);
-      window.addEventListener("resize", runCheckHeight);
-
-      runCheckSticky();
+      })
     };
 
     initSticky(isDesktop);
