@@ -18,15 +18,15 @@
     p
       = page.introduction
 
-
   - page.content_blocks.each do |chart_block|
-    / - chart = JSON.generate(chart_block.chart.chart_data)
-    / - chart_data = chart.to_json
-
-    div = chart_block.chart.title
-    div = chart_block.chart.description
-    div id="#{chart_block.chart.id}" class="chartWrap py-8 mx-8" style="height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px"
-
+    - chart = JSON.generate(chart_block.chart.chart_data)
+    - chart_data = chart.to_json
+    .chartBlock
+      div = chart_block.chart.title
+      div = chart_block.chart.description
+      template id="#{chart_block.chart.id}"
+        = chart_data
+      div id="#{chart_block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px"
 
   / Kpi indicators
   ruby:
