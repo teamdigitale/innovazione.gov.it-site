@@ -22,55 +22,12 @@
   - page.content_blocks.each do |block|
 
     - if block.item_type.api_key == "chart_block"
-      - chart = JSON.generate(block.chart.chart_data)
-      - chart_data = chart.to_json
-      .chartBlock
-        div = block.chart.title
-        div = block.chart.info
-        template id="#{block.chart.id}"
-          = chart_data
-        div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%; border: 1px solid blue; margin-bottom:20px"
-
+      = partial "partials/blocks/block_chart_wrapper", locals: {block: block}
 
     - if block.item_type.api_key == "kpi_group"
       = partial "partials/blocks/block_kpi", locals: {block: block}
 
 
-  / Kpi indicators
-  / ruby:
-  /   border_classes = %(primary-border-color-a9 border border-end-0
-  /                       border-top-0 border-bottom-0 border-4)
-  /   indicators = [
-  /     {
-  /       title: "Risorse a disposizione (misure)",
-  /       amount: 2.861,
-  /       percentage: nil,
-  /       bg_color: "lightgrey-bg-a3"
-  /     },
-  /     {
-  /       title: "Risorse stanziate (avvisi)",
-  /       amount: 2.631,
-  /       percentage: 92,
-  /       bg_color: "lightgrey-bg-a3"
-  /     },
-  /     {
-  /       title: "Risorse ancora da bandire",
-  /       amount: 230,
-  /       percentage: 8,
-  /       bg_color: "neutral-1-bg-a2"
-  /     }
-  /   ]
-  / .row.my-4
-  /   - indicators.each do |indicator|
-  /     .col-lg-4
-  /       .p-2.ps-3 class="#{indicator[:bg_color]} #{border_classes}"
-  /         .mid-caption--xlarge.fw-semibold.text-black = indicator[:title]
-  /         .font-monospace
-  /           span.mid-caption--xxlarge.primary-color-a9.fw-semibold
-  /             | &euro;
-  /           span.mid-caption--xxlarge.primary-color-a9.fw-semibold = "#{indicator[:amount]} mln "
-  /           - if indicator[:percentage]
-  /             span.mid-caption = "(#{indicator[:percentage]}%)"
 
   // Treemap
   .container.lightgrey-bg-a3.mb-4
