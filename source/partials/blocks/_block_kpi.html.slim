@@ -4,7 +4,7 @@
   - if block.layout == "row"
     .row.my-4
       - block.kpi_items.each do |item|
-        .col-lg-4
+        .col-lg-4.mb-2
           - el = item.kpi_element
           .p-2.ps-3 class="#{el.background_color} #{border_classes}"
             .mid-caption--xlarge.fw-semibold.text-black
@@ -50,7 +50,7 @@
               - if el.show_flow
                 - bg = el.flow_direction.present? && el.flow_direction == "+" ? "bg-success" : "bg-danger"
                 - arrow = el.flow_direction.present? && el.flow_direction == "+" ? "&#8593;" : "&#8595;"
-                span class="#{bg} text-white py-1 px-3 rounded ms-3"
+                span class="#{bg} text-white py-1 px-3 rounded ms-3 mid-caption"
                   - if el.flow_value
                     span.font-semibold
                       span.me-3 = arrow
