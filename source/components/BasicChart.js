@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-function BasicChart({ id, config, dataSource }) {
+function BasicChart({ id, config, dataSource, downLoadImage }) {
+  const refCanvas = useRef(null);
   useEffect(() => {
     console.log('MOUNT');
     return () => {
       console.log('UNMOUNT');
     };
   }, []);
+
+  const getImage = () => {
+    const echartInstance = refCanvas.current.getEchartsInstance();
+    console.log('echartInstance', echartInstance);
+    const base64DataUrl = echartInstance.getDataURL();
+    return downLoadImage(base64DataUrl, id);
+  };
+
   const axis =
     config.direction === 'vertical'
       ? {
@@ -72,6 +81,7 @@ function BasicChart({ id, config, dataSource }) {
         };
 
   const options = {
+    backgroundColor: config.background ? config.background : '#F2F7FC',
     color: config.colors,
     ...axis,
     series: dataSource.series.map((serie) => {
@@ -110,15 +120,19 @@ function BasicChart({ id, config, dataSource }) {
   };
 
   return (
-    <ReactEcharts
-      id={id}
-      option={options}
-      style={{
-        width: config.w,
-        height: config.h,
-        maxWidth: '100%',
-      }}
-    />
+    <>
+      <ReactEcharts
+        id={id}
+        option={options}
+        ref={refCanvas}
+        style={{
+          width: config.w,
+          height: config.h,
+          maxWidth: '100%',
+        }}
+      />
+      <button onClick={() => getImage()}>Download</button>
+    </>
   );
 }
 

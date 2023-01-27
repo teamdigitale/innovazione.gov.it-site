@@ -1,50 +1,61 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ReactEcharts from 'echarts-for-react';
 
+function PieChart({ id, config, dataSource, downLoadImage }) {
+  const refCanvas = useRef(null);
+  const getImage = () => {
+    const echartInstance = refCanvas.current.getEchartsInstance();
+    console.log('echartInstance', echartInstance);
+    const base64DataUrl = echartInstance.getDataURL();
+    return downLoadImage(base64DataUrl, id);
+  };
 
-function PieChart({ id, config, dataSource }) {
-    const options = {
-      title: {
-        text: config?.titles?.join('\n') || 'PIE CHART',
-        left: 'center',
-        top: 'center',
+  const options = {
+    backgroundColor: config.background ? config.background : '#F2F7FC',
+    title: {
+      text: config?.titles?.join('\n') || 'PIE CHART',
+      left: 'center',
+      top: 'center',
+    },
+    color: config.colors,
+    series: dataSource.series,
+    textStyle: {
+      fontWeight: '600',
+      fontSize: 14,
+    },
+    tooltip: {
+      show: config.tooltip,
+    },
+    legend: {
+      left: 'center',
+      top: 'top',
+      show: config.legend,
+    },
+    toolbox: {
+      show: config.toolbox,
+      left: 'right',
+      top: 'top',
+      feature: {
+        // dataView: {},
+        // restore: {},
+        saveAsImage: {},
       },
-      color: config.colors,
-      series: dataSource.series,
-      textStyle: {
-        fontWeight: '600',
-        fontSize: 14,
-      },
-      tooltip: {
-        show: config.tooltip,
-      },
-      legend: {
-        left: 'center',
-        top: 'top',
-        show: config.legend,
-      },
-      toolbox: {
-        show: config.toolbox,
-        left: 'right',
-        top: 'top',
-        feature: {
-          // dataView: {},
-          // restore: {},
-          saveAsImage: {},
-        },
-      },
-    };
-    return (
+    },
+  };
+  return (
+    <>
       <ReactEcharts
         option={options}
+        ref={refCanvas}
         style={{
           width: config.w,
           height: config.h,
           maxWidth: '100%',
         }}
       />
-    );
-  }
+      <button onClick={() => getImage()}>Download</button>
+    </>
+  );
+}
 
-  export default PieChart;
-
+export default PieChart;

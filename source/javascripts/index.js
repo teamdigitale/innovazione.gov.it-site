@@ -13,9 +13,18 @@ import 'lazysizes/plugins/respimg/ls.respimg';
 import 'focus-visible/src/focus-visible.js';
 import Sharer from 'sharer.js/sharer.js';
 import * as echarts from 'echarts';
-import SampleChart from '../components/SampleChart';
 import BasicChart from '../components/BasicChart';
 import PieChart from '../components/PieChart';
+import { saveAs } from 'file-saver';
+
+async function downLoadImage(dataUrl, name) {
+  try {
+    const blob = await fetch(dataUrl).then((res) => res.blob());
+    saveAs(blob, `${name}.png`);
+  } catch (error) {
+    console.log('error', error);
+  }
+}
 
 const progressIndicator = require('progress-indicator.js');
 const DatoCmsSearch = require('datocms-search.widget.js');
@@ -343,23 +352,51 @@ const chartWrap = document.getElementsByClassName('chartWrap');
 
 if (chartWrap) {
   for (let i = 0; i < chartWrap.length; i++) {
-    const chartTemplate = chartWrap[i].parentNode.getElementsByTagName("template")[0].innerHTML;
+    const chartTemplate = chartWrap[i].parentNode.getElementsByTagName(
+      'template'
+    )[0].innerHTML;
     const chartId = chartWrap[i].id;
     const chartData = JSON.parse(chartTemplate);
     const chart = JSON.parse(chartData);
-    const { config, dataSource } = chart
-    const type = dataSource.series.type ? dataSource.series.type : dataSource.series[0].type
-    console.log('type',type)
+    const { config, dataSource } = chart;
+    const type = dataSource.series.type
+      ? dataSource.series.type
+      : dataSource.series[0].type;
+    console.log('type', type);
 
-    switch (type){
-      case "bar":
-        ReactDOM.render(<BasicChart id={chartId} config={config} dataSource={dataSource} />, chartWrap[i]);
-      break;
-      case "pie":
-        ReactDOM.render(<PieChart id={chartId} config={config} dataSource={dataSource} />, chartWrap[i]);
-      break;
+    switch (type) {
+      case 'bar':
+        ReactDOM.render(
+          <BasicChart
+            id={chartId}
+            config={config}
+            dataSource={dataSource}
+            downLoadImage={downLoadImage}
+          />,
+          chartWrap[i]
+        );
+        break;
+      case 'pie':
+        ReactDOM.render(
+          <PieChart
+            id={chartId}
+            config={config}
+            dataSource={dataSource}
+            downLoadImage={downLoadImage}
+          />,
+          chartWrap[i]
+        );
+        break;
       default:
-        ReactDOM.render(<BasicChart id={chartId} config={config} dataSource={dataSource} />, chartWrap[i]);
+        ReactDOM.render(
+          <BasicChart
+            id={chartId}
+            config={config}
+            dataSource={dataSource}
+            downLoadImage={downLoadImage}
+          />,
+          chartWrap[i]
+        );
     }
   }
 }
