@@ -75,45 +75,25 @@ export default function ChartWrapper(props) {
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
       <ul className="nav nav-tabs lightgrey-bg-a3" id="myTab" role="tablist">
-        <li className="nav-item lightgrey-bg-a3" id="dataviz-tabs">
-          <a
-            aria-controls={`tab1-${id}-content`}
-            aria-selected="true"
-            className="nav-link active"
-            data-bs-toggle="tab"
-            href={`#tab1-${id}-content`}
-            id={`tab1-${id}`}
-            role="tab"
+        {['Grafico', 'Tabella dati', 'Info'].map((name, i) => (
+          <li
+            key={`${id}-tab_${i}`}
+            className="nav-item lightgrey-bg-a3"
+            id="dataviz-tabs"
           >
-            Grafico
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            aria-controls={`tab2-${id}-content`}
-            aria-selected="false"
-            className="nav-link"
-            data-bs-toggle="tab"
-            href={`#tab2-${id}-content`}
-            id={`tabtab1-${id}`}
-            role="tab"
-          >
-            Tabella dati
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            aria-controls={`tab3-${id}-content`}
-            aria-selected="false"
-            className="nav-link"
-            data-bs-toggle="tab"
-            href={`#tab3-${id}-content`}
-            id={`tab3-${id}`}
-            role="tab"
-          >
-            Info
-          </a>
-        </li>
+            <a
+              aria-controls={`tab${i + 1}-${id}-content`}
+              aria-selected="true"
+              className={`nav-link ${i === 0 ? 'active' : ''}`}
+              data-bs-toggle="tab"
+              href={`#tab${i + 1}-${id}-content`}
+              id={`tab${i + 1}-${id}`}
+              role="tab"
+            >
+              {name}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div className="tab-content" id="myTabContent">
@@ -174,27 +154,30 @@ export default function ChartWrapper(props) {
         </div>
         <div className="py-2 d-flex align-items-center">
           <span className="ps-2 fw-bold text-primary">
-            <a
-              href="#"
+            <button
+              className="btn btn-primary"
               aria-label={labelsDownload || 'Scarica CSV'}
               onClick={() => downloadCSV(csvData, id)}
             >
               {labelsDownload || 'Scarica'} CSV
-            </a>
+            </button>
           </span>
           <span className="ps-2 fw-bold text-primary">
-            <a
-              href="#"
+            <button
+              className="btn btn-primary"
               aria-label={labelsDownload || 'Scarica PNG'}
               onClick={() => downLoadPng(echartInstance, id)}
             >
               {labelsDownload || 'Scarica'} PNG
-            </a>
+            </button>
           </span>
           <span className="ps-2 fw-bold text-primary">
-            <a href="#" aria-label={labelsShare || 'Condividi'}>
+            <button
+              className="btn btn-primary"
+              aria-label={labelsShare || 'Condividi'}
+            >
               {labelsShare || 'Condividi'}
-            </a>
+            </button>
           </span>
         </div>
       </div>
