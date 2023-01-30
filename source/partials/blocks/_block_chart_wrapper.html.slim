@@ -1,13 +1,17 @@
 - chart = JSON.generate(block.chart.chart_data)
 - chart_data = chart.to_json
 
+
 .container.lightgrey-bg-a3.mb-4
+    template id="#{block.chart.id}"
+      = chart_data
+    div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%;" data-title="#{block.chart.title}" data-subtitle="#{block.chart.subtitle}" data-labels-share="#{t('share')}"  data-source="#{block.chart.source}"  data-labels-download="#{t('download')}" data-labels-source="#{t('source')}" data-info="#{block.chart.info}"
+/
   .px-4.pt-4.pb-2
     h3.mid-caption--lead.fw-semibold.text-black
       = block.chart.title
     p.mid-caption
       = block.chart.subtitle
-
     ul.nav.nav-tabs.lightgrey-bg-a3#myTab role="tablist"
       li.nav-item.lightgrey-bg-a3#dataviz-tabs
         a.nav-link.active{
@@ -34,15 +38,14 @@
             aria-controls="tab3-#{block.chart.id}-content"
             aria-selected="false" }
           = "Info"
-
     .tab-content#myTabContent
       .tab-pane.py-4.fade{ class="show active"
           id="tab1-#{block.chart.id}-content"
           role="tabpanel"
           aria-labelledby="tab1-#{block.chart.id}" }
-        template id="#{block.chart.id}"
+       /template id="#{block.chart.id}"
           = chart_data
-        div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%; border: 1px solid blue;"
+       / div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%;"
       .tab-pane.py-4.fade{
           id="tab2-#{block.chart.id}-content"
           role="tabpanel"
@@ -82,27 +85,22 @@
               td
                 = ""
               td
-
       .tab-pane.py-4.fade{
           id="tab3-#{block.chart.id}-content"
           role="tabpanel"
           aria-labelledby="tab3-#{block.chart.id}" }
         = block.chart.info
-
-
     .d-flex.justify-content-between
       .py-2
         span.fw-semibold.text-uppercase
           = "Fonte:"
         / - source_label = "#{block.chart.source}"
         / - source_label["https://"] = ""
-
         = link_to "#{block.chart.source}",
             block.chart.source,
             class: "ms-2 fw-semibold",
             target: "_blank",
             aria: {label: "Fonte"}
-
       .py-2.d-flex.align-items-center
         span.ps-2.fw-bold.text-primary
           = link_to "#",
@@ -134,3 +132,5 @@
                 role="img"
               ]
               use xlink:href="/images/sprite.svg#it-share"
+
+

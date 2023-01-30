@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-function BasicChart({ id, config, dataSource, downLoadImage }) {
+function BasicChart({ id, config, dataSource, setEchartInstance }) {
   const refCanvas = useRef(null);
   useEffect(() => {
     console.log('MOUNT');
@@ -10,12 +10,13 @@ function BasicChart({ id, config, dataSource, downLoadImage }) {
     };
   }, []);
 
-  const getImage = () => {
-    const echartInstance = refCanvas.current.getEchartsInstance();
-    console.log('echartInstance', echartInstance);
-    const base64DataUrl = echartInstance.getDataURL();
-    return downLoadImage(base64DataUrl, id);
-  };
+  useEffect(() => {
+    if (refCanvas.current) {
+      const echartInstance = refCanvas.current.getEchartsInstance();
+      // const base64DataUrl = echartInstance.getDataURL();
+      setEchartInstance(echartInstance);
+    }
+  }, [refCanvas.current]);
 
   const axis =
     config.direction === 'vertical'
@@ -131,7 +132,7 @@ function BasicChart({ id, config, dataSource, downLoadImage }) {
           maxWidth: '100%',
         }}
       />
-      <button onClick={() => getImage()}>Download</button>
+      {/* <button onClick={() => getImage()}>Download</button> */}
     </>
   );
 }

@@ -1,14 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-function PieChart({ id, config, dataSource, downLoadImage }) {
+function PieChart({ id, config, dataSource, setEchartInstance }) {
   const refCanvas = useRef(null);
-  const getImage = () => {
-    const echartInstance = refCanvas.current.getEchartsInstance();
-    console.log('echartInstance', echartInstance);
-    const base64DataUrl = echartInstance.getDataURL();
-    return downLoadImage(base64DataUrl, id);
-  };
+  useEffect(() => {
+    if (refCanvas.current) {
+      const echartInstance = refCanvas.current.getEchartsInstance();
+      // const base64DataUrl = echartInstance.getDataURL();
+      setEchartInstance(echartInstance);
+    }
+  }, [refCanvas.current]);
 
   const options = {
     backgroundColor: config.background ? config.background : '#F2F7FC',
@@ -53,7 +54,7 @@ function PieChart({ id, config, dataSource, downLoadImage }) {
           maxWidth: '100%',
         }}
       />
-      <button onClick={() => getImage()}>Download</button>
+      {/* <button onClick={() => getImage()}>Download</button> */}
     </>
   );
 }
