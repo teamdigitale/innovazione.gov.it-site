@@ -1,6 +1,7 @@
 import React from 'react';
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
+import Table from './Table';
 import { saveAs } from 'file-saver';
 
 async function downLoadPng(echartInstance, name) {
@@ -24,6 +25,26 @@ async function downloadCSV(data, name) {
   }
 }
 
+function generateCSV(dataSource) {
+  const columns = '_,' + dataSource.categories.join(',');
+  const rows = dataSource.series.map((serie) => {
+    const { name = '', data = [] } = serie;
+    return [name, ...data].join(',');
+  });
+  return [columns, ...rows].join('\n');
+}
+
+function generateCSVPie(serie) {
+  if (!serie) {
+    return null;
+  }
+  const columns = 'name,value';
+  const rows = serie.data.map(({ name, value }) => {
+    return [name, value].join(',');
+  });
+  return [columns, ...rows].join('\n');
+}
+
 export default function ChartWrapper(props) {
   const {
     id,
@@ -33,7 +54,7 @@ export default function ChartWrapper(props) {
     subtitle,
     info,
     source,
-    labelsDownload, 
+    labelsDownload,
     labelsShare,
     labelsSource,
   } = props;
@@ -44,7 +65,10 @@ export default function ChartWrapper(props) {
     ? dataSource.series.type
     : dataSource.series[0].type;
 
-  const csvData = `a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z\n1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26`;
+  const csvData =
+    type === 'pie'
+      ? generateCSVPie(dataSource.series)
+      : generateCSV(dataSource);
 
   return (
     <div className="px-4 pt-4 pb-2">
@@ -123,33 +147,7 @@ export default function ChartWrapper(props) {
           id={`tab2-${id}-content`}
           role="tabpanel"
         >
-          {/* <table className="table table-hover table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table> */}
+          <Table id={id} ds={dataSource} />
         </div>
         <div
           aria-labelledby={`tab3-${id}`}
