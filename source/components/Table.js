@@ -13,37 +13,49 @@ export default function Table({ id, ds }) {
   }
 
   return (
-    <table className="table table-hover table-bordered">
-      <thead>
-        <tr>
-          {columns.map((c, i) => (
-            <th scope="col" key={`${id}-th_` + i}>
-              {c}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((r, ii) => (
-          <tr key={`${id}-tr_` + ii}>
-            {r.map((v, iii) => {
-              if (iii === 0) {
-                return (
-                  <th scope="row" key={`${id}-r-th_` + iii}>
-                    {v}
+    <div className="mid-table-wrapper">
+      <table className="table table-hover mid-table">
+        <thead>
+          <tr>
+            {columns.map((c, i) => {
+              if (i === 0) {
+                return(
+                  <th scope="col" key={`${id}-th_` + i}>
+                    {c}
                   </th>
-                );
+                )
               } else {
                 return (
-                  <td scope="row" key={`${id}-r-td_` + iii}>
-                    {v}
-                  </td>
-                );
+                  <th scope="col" key={`${id}-th_` + i}>
+                    {c}
+                  </th>
+                )
               }
             })}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {rows.map((r, ii) => (
+            <tr key={`${id}-tr_` + ii}>
+              {r.map((v, iii) => {
+                if (iii === 0) {
+                  return (
+                    <th scope="row" key={`${id}-r-th_` + iii}>
+                      {v}
+                    </th>
+                  );
+                } else {
+                  return (
+                    <td key={`${id}-r-td_` + iii}>
+                      {v}
+                    </td>
+                  );
+                }
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
