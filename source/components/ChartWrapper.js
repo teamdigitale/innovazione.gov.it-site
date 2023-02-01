@@ -144,7 +144,7 @@ export default function ChartWrapper(props) {
             {labelsSource || 'Fonte dati'}:
           </span>
           <a
-            href="https://padigitale2026.gov.it/"
+            href={source}
             className="ms-2 fw-semibold"
             target="_blank"
             aria-label={labelsSource || 'Fonte dati'}
@@ -154,29 +154,53 @@ export default function ChartWrapper(props) {
         </div>
         <div className="py-2 d-flex align-items-center">
           <span className="ps-2 fw-bold text-primary">
-            <button
-              className="btn btn-primary"
+            <a
+              className="mid-button-link"
+              title={labelsDownload || 'Scarica CSV'}
               aria-label={labelsDownload || 'Scarica CSV'}
               onClick={() => downloadCSV(csvData, id)}
             >
               {labelsDownload || 'Scarica'} CSV
-            </button>
+              <svg className="icon icon-sm icon-primary ms-1"
+                focusable="false"
+                aria-label={`${labelsDownload || 'Scarica'} CSV`}
+                role="img"
+              >
+                <use href="/images/sprite.svg#it-download"></use>
+              </svg>
+            </a>
           </span>
           <span className="ps-2 fw-bold text-primary">
             <button
-              className="btn btn-primary"
+              className="mid-button-link"
+              title={labelsDownload || 'Scarica PNG'}
               aria-label={labelsDownload || 'Scarica PNG'}
               onClick={() => downLoadPng(echartInstance, id)}
             >
               {labelsDownload || 'Scarica'} PNG
+              <svg className="icon icon-sm icon-primary ms-1"
+                focusable="false"
+                aria-label={`${labelsDownload || 'Scarica'} PNG`}
+                role="img"
+              >
+                <use href="/images/sprite.svg#it-download"></use>
+              </svg>
             </button>
           </span>
           <span className="ps-2 fw-bold text-primary">
             <button
-              className="btn btn-primary"
+              className="mid-button-link"
+              title={labelsShare || 'Condividi'}
               aria-label={labelsShare || 'Condividi'}
             >
               {labelsShare || 'Condividi'}
+              <svg className="icon icon-sm icon-primary ms-1"
+                focusable="false"
+                aria-label={labelsShare || 'Condividi'}
+                role="img"
+              >
+                <use href="/images/sprite.svg#it-share"></use>
+              </svg>
             </button>
           </span>
         </div>
