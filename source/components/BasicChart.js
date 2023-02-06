@@ -108,16 +108,16 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
       top: 'top',
       show: config.legend,
     },
-    toolbox: {
-      show: config.toolbox,
-      left: 'right',
-      top: 'top',
-      feature: {
-        // dataView: {},
-        // restore: {},
-        saveAsImage: {},
-      },
-    },
+    // toolbox: {
+    //   show: config.toolbox,
+    //   left: 'right',
+    //   top: 'top',
+    //   feature: {
+    //     // dataView: {},
+    //     // restore: {},
+    //     saveAsImage: {},
+    //   },
+    // },
   };
 
   return (
