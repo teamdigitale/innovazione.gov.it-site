@@ -34,23 +34,24 @@
               = el.title
 
             div
-              - if el.value_prefix.present?
-                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
-                  = el.value_prefix
+              .d-xxl-inline-block
+                - if el.value_prefix.present?
+                  span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
+                    = el.value_prefix
 
-              span.mid-caption--xxlarge.primary-color-a9.fw-semibold = el.value
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold = el.value
 
-              - if el.value_suffix.present?
-                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.ms-3
-                  = el.value_suffix
+                - if el.value_suffix.present?
+                  span.mid-caption--xxlarge.primary-color-a9.fw-semibold.ms-3
+                    = el.value_suffix
 
-              - if el.percentage.present?
-                span.big-caption.ms-3 = "(#{el.percentage})"
+                - if el.percentage.present?
+                  span.big-caption.mx-3  = "(#{el.percentage})"
 
               - if el.show_flow
                 - bg = el.flow_direction.present? && el.flow_direction == "+" ? "bg-success" : "bg-danger"
                 - arrow = el.flow_direction.present? && el.flow_direction == "+" ? "&#8593;" : "&#8595;"
-                span class="#{bg} text-white py-1 px-3 rounded ms-3 mid-caption"
+                span class="#{bg} d-inline-block text-white py-1 px-3 rounded mid-caption"
                   - if el.flow_value
                     span.font-semibold
                       span.me-3 = arrow
