@@ -21,15 +21,16 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
     color: config.colors,
     series: dataSource.series,
     textStyle: {
-      fontWeight: '600',
-      fontSize: 14,
+      fontFamily: 'Titillium Web, sans-serif',
+      fontWeight: 'bold',
+      fontSize: 12,
     },
     tooltip: {
       show: config.tooltip,
     },
     legend: {
       left: 'center',
-      top: 'top',
+      top: 'bottom',
       show: config.legend,
     },
     // toolbox: {
