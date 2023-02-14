@@ -2,7 +2,7 @@
 - chart_data = chart.to_json
 
 
-.container.lightgrey-bg-a3.mb-4
+.lightgrey-bg-a3.mb-4
     template id="#{block.chart.id}"
       = chart_data
     div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 300px; width: 100%;" data-title="#{block.chart.title}" data-subtitle="#{block.chart.subtitle}" data-labels-share="#{t('share')}"  data-source="#{block.chart.source}"  data-labels-download="#{t('download')}" data-labels-source="#{t('source')}" data-info="#{block.chart.info}"

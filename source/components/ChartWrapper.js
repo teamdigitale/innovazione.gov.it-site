@@ -71,7 +71,7 @@ export default function ChartWrapper(props) {
       : generateCSV(dataSource);
 
   return (
-    <div className="px-4 pt-4 pb-2">
+    <div className="p-2 p-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
       <ul className="nav nav-tabs lightgrey-bg-a3" id="myTab" role="tablist">
@@ -138,7 +138,7 @@ export default function ChartWrapper(props) {
           <div dangerouslySetInnerHTML={{ __html: `${info || ' '}` }} />
         </div>
       </div>
-      <div className="d-flex justify-content-between">
+      <div className="d-md-flex justify-content-md-between">
         <div className="py-2">
           <span className="fw-semibold text-uppercase">
             {labelsSource || 'Fonte dati'}:
@@ -153,7 +153,7 @@ export default function ChartWrapper(props) {
           </a>
         </div>
         <div className="py-2 d-flex align-items-center">
-          <span className="ps-2 fw-bold text-primary">
+          <span className="ps-md-2 pe-3 pe-md-0 fw-bold text-primary">
             <a
               className="mid-button-link"
               title={labelsDownload || 'Scarica CSV'}
@@ -170,7 +170,7 @@ export default function ChartWrapper(props) {
               </svg>
             </a>
           </span>
-          <span className="ps-2 fw-bold text-primary">
+          <span className="ps-md-2 pe-3 pe-md-0 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsDownload || 'Scarica PNG'}
@@ -187,7 +187,7 @@ export default function ChartWrapper(props) {
               </svg>
             </button>
           </span>
-          <span className="ps-2 fw-bold text-primary">
+          <span className="ps-md-2 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsShare || 'Condividi'}
