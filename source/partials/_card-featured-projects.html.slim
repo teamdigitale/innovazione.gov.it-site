@@ -3,29 +3,29 @@ ruby:
     justify-content-center align-items-center justify-content-lg-start)
 
   toggler_classes = %(p-0 btn btn-default btn-dropdown
-    dropdown-toggle m-4 ml-md-3 mr-lg-0 ml-xl-4)
+    dropdown-toggle m-4 ms-md-3 me-lg-0 ms-xl-4)
 
 .row.mt-4.my-lg-5
   .col-lg-5.pt-lg-5
     h2.h6 class=["mid-caption--large",
               "text-uppercase",
-              "font-weight-semibold",
+              "fw-semibold",
               "pt-5", "p-lg-0", "text-center",
-              "text-lg-left"].join(" ")
+              "text-lg-start"].join(" ")
 
       = page.projects_pre_title
 
-    h3.d-lg-block.h1.pt-2.text-center.text-lg-left
+    h3.d-lg-block.h1.pt-2.text-center.text-lg-start
       = page.projects_title
 
-    p.d-none.d-lg-block.h3.font-weight-normal.text-center.text-lg-left
+    p.d-none.d-lg-block.h3.fw-normal.text-center.text-lg-start
       = page.projects_text
 
-    p.d-lg-none.font-weight-normal.text-center.text-lg-left
+    p.d-lg-none.fw-normal.text-center.text-lg-start
       = page.projects_text
 
     div class=projects_button_parent_classes
-      .mx-4.ml-lg-0
+      .mx-4.ms-lg-0
         = partial "partials/button",
           locals: {btn_url: dato.projects_page,
           aria_label: page.projects_pre_title}
@@ -34,7 +34,7 @@ ruby:
         button#projectsCategories [class=toggler_classes
             aria-expanded="false"
             aria-haspopup="true"
-            data-toggle="dropdown"
+            data-bs-toggle="dropdown"
             type="button"]
 
           = t("project_categories_dropdown")
@@ -55,8 +55,8 @@ ruby:
   .col-lg-6.pt-lg-5.pb-5.order-lg-first
     .col-lg-8.offset-lg-2.mb-5
       - if page.featured_projects.present?
-        h3.sr-only = t("projects.highlights")
-        = partial "partials/image_text_gallery",
+        h3.visually-hidden = t("projects.highlights")
+        = partial "partials/_text_image_carousel",
           locals: {slides: page.featured_projects}
 
   .col-lg-1

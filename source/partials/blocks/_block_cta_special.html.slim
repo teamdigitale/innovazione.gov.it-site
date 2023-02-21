@@ -12,9 +12,10 @@ ruby:
           .d-none.d-md-block
             .img-responsive-wrapper
                 figure.my-0
-                  = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                  - image = block.thumbnail
+                  = proxy_image_tag placeholder_url(image, {w: 10,
                       h: 10,
-                      fit: "clip"),
+                      fit: "clip"}),
                     data: {sizes: "100vw",
                       src: block.thumbnail.url(w: 100,
                         h: 100,
@@ -34,9 +35,10 @@ ruby:
             .mx-5.mt-4
               .d-flex.align-items-center.justify-content-center
                 figure
-                  = proxy_image_tag block.thumbnail.lqip_data_url(w: 10,
+                  - image = block.thumbnail
+                  = proxy_image_tag placeholder_url(image, {w: 10,
                       h: 10,
-                      fit: "clip"),
+                      fit: "clip"}),
                     data: {sizes: "100vw",
                       src: block.thumbnail.url(w: 100,
                         h: 100,
@@ -53,8 +55,8 @@ ruby:
                     style: "height: 136px; width: 208px; object-fit: cover;",
                     alt: block.thumbnail.alt
         .col-md-10.d-md-flex.align-items-md-between.mt-3.mt-md-0
-          .m-4.ml-md-0.d-flex.flex-column.justify-content-center
-            h3.mid-caption--lead.font-weight-semibold.text-center.text-md-left
+          .m-4.ms-md-0.d-flex.flex-column.justify-content-center
+            h3.mid-caption--lead.fw-semibold.text-center.text-md-start
               = block.title
             .d-none.d-md-block
               p.mid-caption--large.pb-0.mb-0
@@ -63,7 +65,7 @@ ruby:
               p.mid-caption--xlarge.pb-0.mb-0.text-center
                 = block.description
 
-          .ml-md-auto.d-flex.align-items-center.justify-content-center
+          .ms-md-auto.d-flex.align-items-center.justify-content-center
             .m-4.m-md-0 class=button_background
               - html_class = "btn btn-primary"
               = partial "partials/links/#{block.link.item_type.api_key}",

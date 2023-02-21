@@ -47,4 +47,12 @@ module ImageHelpers
       ASSET_PROXY_BASE
     )
   end
+
+  def placeholder_url(image, options = {})
+    if ENV.fetch('BUILD_ENV') == 'development'
+      image.url(options)
+    else
+      image.lqip_data_url(options)
+    end
+  end
 end

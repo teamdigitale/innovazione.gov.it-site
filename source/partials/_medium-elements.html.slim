@@ -2,7 +2,7 @@
   - cols = dato.news_page.medium_articles.size
 
   .d-lg-flex.mb-lg-0.pb-lg-0
-    .mr-lg-auto
+    .me-lg-auto
       = partial "partials/section-title",
         locals: {title: t("medium_articles"),
         is_anchor: true}
@@ -12,7 +12,7 @@
         use xlink:href="/images/sprite.svg#it-external-link"
       span.d-lg-none.px-2
         = "Link esterni"
-    .pt-2.pl-2.d-none.d-lg-block
+    .pt-2.ps-2.d-none.d-lg-block
       = "Link esterni"
 
   .row.mt-4.mx-n4
@@ -25,8 +25,8 @@
       button.btn.btn-sm.py-2.btn-outline-primary.mid-button-medium.btn-icon
         = proxy_link_to dato.company.medium_url,
           class: "text-decoration-none align-middle"
-          .d-inline-block.pr-3
-            p.mb-0.mid-caption--large.text-uppercase.font-weight-bold
+          .d-inline-block.pe-3
+            p.mb-0.mid-caption--large.text-uppercase.fw-bold
               = t("medium")
           span.d-none.d-lg-inline
             svg.icon.icon-lg.icon-primary

@@ -4,8 +4,8 @@
   ruby:
     larger_of_two ||= nil
     show_item_type ||= nil
-    length_image = "col-lg"
-    length_card = "col-lg"
+    length_image = "col-lg position-relative"
+    length_card = "col-lg position-relative"
 
     if larger_of_two
       length_image = "col-lg-3"
@@ -57,7 +57,7 @@
         div
           .category.py-2.card-text
             - if show_item_type
-              span.pr-4.text-uppercase.font-weight-semibold
+              span.pe-4.text-uppercase.fw-semibold
                 = t("models.#{article.item_type.api_key}")
             span.text-secondary
               = partial "partials/formatted-date",
@@ -83,19 +83,19 @@
         .d-lg-none
           .img-responsive.img-responsive-panoramic
             figure.img-wrapper.p-0
-              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"),
+              = proxy_image_tag placeholder_url(card_image, {w: 10, h: 6,
+                fit: "crop"}),
                 data: {sizes: "100vw",
                   src: image_src,
                   srcset: image_mobile_srcset},
                 class: "lazyload d-block w-100 m-0",
                 alt: card_image.alt
 
-        .d-none.d-lg-block
+        .d-none.d-lg-flex.h-100
           .img-responsive-panoramic
-            figure.position-absolute.w-100.h-100
-              = proxy_image_tag card_image.lqip_data_url(w: 10, h: 6,
-                fit: "crop"),
+            figure.w-100.h-100
+              = proxy_image_tag placeholder_url(card_image, {w: 10, h: 6,
+                fit: "crop"}),
                 data: {sizes: "100vw",
                   src: image_src,
                   srcset: image_desk_srcset},

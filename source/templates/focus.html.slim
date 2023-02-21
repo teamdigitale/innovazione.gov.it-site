@@ -3,7 +3,7 @@
 
 .bg-dark
   .bg-primary.text-white.position-relative
-    .container.text-center.text-sm-left
+    .container-xl.text-center.text-sm-start
       .row
         .col-12.col-lg-7.pb-5
           = partial "partials/breadcrumb",
@@ -21,10 +21,11 @@
                         url: page_path(tag),
                         text_color: "text-white"}
 
-        .col-12.col-lg-5.mid-absolute-column.mb-lg-0.pr-lg-0
+        .col-12.col-lg-5.mid-absolute-column.mb-lg-0.pe-lg-0
           - if page.image_cover.present?
-            = proxy_image_tag page.image_cover.lqip_data_url(w: 10, h: 10,
-              fit: "crop"), data: {sizes: "100vw",
+            - image = page.image_cover
+            = proxy_image_tag placeholder_url(image, {w: 10, h: 10,
+              fit: "crop"}), data: {sizes: "100vw",
                 src: page.image_cover.url(w: 1200, h: 1200,
                 fit: "crop", auto: "compress"),
                 srcset: "#{page.image_cover.url(w: 480, h: 350,
@@ -41,6 +42,6 @@
   locals: {page: page}
 
 .lightgrey-bg-a2
-  .container
+  .container-xl
     = partial "partials/flags",
       locals: {flags: page.sections, image_right: true}

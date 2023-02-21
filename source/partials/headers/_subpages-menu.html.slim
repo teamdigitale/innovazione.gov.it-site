@@ -19,9 +19,9 @@ ruby:
 
   .row
     - groups.each do |group|
-      .col-sm-6 class=("m-auto m-sm-0 pr-sm-5" if i == 1)
+      .col-sm-6 class=("m-auto m-sm-0 pe-sm-5" if i == 1)
         - i += 1
         - group.each do |item|
           = link_to item.title,
             page_path(item),
-            class: "text-decoration-none font-weight-semibold d-block mb-3"
+            class: "text-decoration-none fw-semibold d-block mb-3"

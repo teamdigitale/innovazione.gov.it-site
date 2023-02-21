@@ -85,10 +85,14 @@
       border-bottom-left-radius: 4px;
     }
 
+    &.is-active:focus,
     &.is-active {
-      border: 1px solid $primary;
+      border: 1px solid $primary !important;
       color: $primary;
       pointer-events: none;
+    }
+    &:hover {
+      color: $primary;
     }
 
     @media (min-width: 576px) {

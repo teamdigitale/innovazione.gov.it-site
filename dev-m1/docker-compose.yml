@@ -1,0 +1,18 @@
+# docker-compose.yml
+
+version: '3.7'
+
+services:
+  web:
+    build: ./
+    command: yarn --cwd  ./innovazione.gov.it/ go
+    volumes:
+      - './innovazione.gov.it:/app'
+      - './innovazione.gov.it/node_modules:/app/node_modules'
+    ports:
+      - 4567:4567
+    env_file:
+      - ./innovazione.gov.it/.env
+
+volumes:
+  node_modules:

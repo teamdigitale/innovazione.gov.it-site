@@ -1,0 +1,44 @@
+#numbers-carousel .splide__arrow.splide__arrow--prev {
+  display: none;
+}
+
+//.splide__arrow.splide__arrow--next {
+//  display: none;
+//}
+
+.splide-slide__text__title {
+  color: #0066CC;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 33px;
+}
+
+.splide-slide__text {
+  color: #33485C;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding: 25px 0;
+}
+
+.it-carousel-wrapper .splide__pagination button {
+  height: 16px;
+  margin: 0 20px;
+  width: 16px;
+
+  &:last-child {
+    margin-right: none;
+  }
+}
+
+#numbers-carousel .splide__pagination__page {
+  background-color: #33485C;
+}
+
+.img-gallery {
+  object-fit: contain;
+  object-position: center;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+}

@@ -134,74 +134,56 @@
   );
 }
 
-// swiper buttons for calendars
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
+// splidejs arrows for calendars
+.splide-arrows-position {
+  position: relative;
+  top: 355px;
+  z-index: 1;
 }
 
-.swiper-button-prev {
-  left: 35%;
-  width: 48px;
+.splide-custom-prev {
+  background-color: transparent;
+  border: none;
+  // transition: opacity 0.3s ease;
 }
 
-.swiper-button-next {
-  right: 35%;
-  width: 48px;
+.splide-custom-prev:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.splide-custom-next {
+  background-color: transparent;
+  border: none;
+  // transition: opacity 0.3s ease;
+}
+
+.splide-custom-next:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @include media-breakpoint-up(lg) {
-  .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    width: 48px;
+  .splide-arrows-position {
+    position: relative;
+    top: 225px;
   }
 
-  .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    width: 48px;
+  .splide-custom-prev {
+    margin-left: -70px;
+  }
+
+  .splide-custom-next {
+    margin-right: -90px;
   }
 }
 
-@include media-breakpoint-up(lg) {
-  ._mid-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
-  }
-
-  ._mid-fade-out {
-    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
-  }
-
-  ._mid-faded-calendar {
-    mask-image: linear-gradient(
-      to right,
-      RGB(237, 245, 252, 0%),
-      black 5%,
-      black 95%,
-      RGB(237, 245, 252, 0%)
-    );
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  ._mid-mobile-fade-in {
-    mask-image: linear-gradient(to right, RGB(237, 245, 252, 0%), black 5%);
-    margin-right: 12px;
-  }
-
-  ._mid-mobile-fade-out {
-    mask-image: linear-gradient(to right, black 95%, RGB(237, 245, 252, 0%));
-    margin-left: 12px;
-  }
-
-  ._mid-mobile-faded-calendar {
-    mask-image: linear-gradient(
-      to right,
-      RGB(237, 245, 252, 0%),
-      black 5%,
-      black 95%,
-      RGB(237, 245, 252, 0%)
-    );
-  }
+._mid-faded-calendar {
+  mask-image: linear-gradient(
+    to right,
+    RGB(237, 245, 252, 0%),
+    black 5%,
+    black 95%,
+    RGB(237, 245, 252, 0%)
+  );
 }

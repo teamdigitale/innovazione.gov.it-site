@@ -1,28 +1,28 @@
 /* Titillium+Web:300,400,600,700 */
 @include font-face(
   "Titillium Web",
-  "Titillium_Web/TitilliumWeb-Light",
+  "Titillium_Web/titillium-web-v10-latin-ext_latin-300",
   300,
   normal,
   ttf woff woff2
 );
 @include font-face(
   "Titillium Web",
-  "Titillium_Web/TitilliumWeb-Regular",
+  "Titillium_Web/titillium-web-v10-latin-ext_latin-regular",
   400,
   normal,
   ttf woff woff2
 );
 @include font-face(
   "Titillium Web",
-  "Titillium_Web/TitilliumWeb-SemiBold",
+  "Titillium_Web/titillium-web-v10-latin-ext_latin-600",
   600,
   normal,
   ttf woff woff2
 );
 @include font-face(
   "Titillium Web",
-  "Titillium_Web/TitilliumWeb-Bold",
+  "Titillium_Web/titillium-web-v10-latin-ext_latin-700",
   700,
   normal,
   ttf woff woff2
@@ -31,14 +31,14 @@
 /* Lora:400,700 */
 @include font-face(
   "Lora",
-  "Lora/Lora-Regular",
+  "Lora/lora-v20-latin-ext_latin-regular",
   400,
   normal,
   ttf woff woff2
 );
 @include font-face(
   "Lora",
-  "Lora/Lora-Bold",
+  "Lora/lora-v20-latin-ext_latin-700",
   700,
   normal,
   ttf woff woff2
@@ -47,14 +47,14 @@
 /* Roboto+Mono:400,700 */
 @include font-face(
   "Roboto_Mono",
-  "Roboto_Mono/RobotoMono-Regular",
+  "Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular",
   400,
   normal,
   ttf woff woff2
 );
 @include font-face(
   "Roboto_Mono",
-  "Roboto_Mono/RobotoMono-Bold",
+  "Roboto_Mono/roboto-mono-v13-latin-ext_latin-700",
   700,
   normal,
   ttf woff woff2

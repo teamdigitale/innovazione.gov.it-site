@@ -1,0 +1,116 @@
+ruby:
+  slides ||= nil
+  hide_tags ||= nil
+  hide_type ||= nil
+  hide_date ||= nil
+  icon_classes = %(icon bg-white icon-primary rounded p-1 video_slide_icon)
+  carousel_wrapper = %(fixed-height mb-4 shadow-lg bg-white
+                      rounded-top border border-bottom border-primary
+                      border-top-0 border-start-0 border-end-0 border-5)
+
+.it-carousel-wrapper.splide data-bs-carousel-splide="" role="group" aria-label="carousel" 
+  .splide__track class=carousel_wrapper
+    ul.splide__list
+      - slides.each do |slide|
+        ruby:
+          has_tags = slide.respond_to?(:tags) && slide.tags.present?
+
+          is_video = if slide.item_type.api_key == "video" &&
+            slide.respond_to?(:video)
+            true
+          end
+
+          hide_tags = is_video && hide_video_tags
+          title_style = is_video ? "mid-caption--xmlarge" : "h4"
+
+          placeholder = if slide.respond_to?(:placeholder_image) &&
+            (slide.placeholder_image.present? && slide.use_placeholder_image)
+            true
+          end
+
+          has_date = if slide.respond_to?(:date_shown) &&
+            slide.date_shown.present?
+            true
+          end
+
+        li.splide__slide.fixed-width-white
+          .it-single-slide-wrapper.h-100
+
+            .h-100.d-flex.flex-column.justify-content-around
+              .px-3.px-md-5
+                - if !hide_type
+                  span.pe-2.text-uppercase.fw-semibold
+                    = t("models.#{slide.item_type.api_key}")
+                - if !hide_date && has_date
+                  span.px-2.text-secondary
+                    = partial "partials/formatted-date",
+                      locals: {date: slide.date_shown}
+                - if slide.title
+                  h4.pt-1.text-primary.fw-bold class=title_style
+                    = proxy_link_to slide.title,
+                      page_path(slide),
+                      class: "text-decoration-none"
+                - if !is_video
+                  .mid-caption--xlarge
+                    = slide.subtitle
+              - if is_video
+                ruby:
+                  id = slide.video.provider_uid
+                  youtube = "https://i.ytimg.com/vi/#{id}/maxresdefault.jpg"
+                  thumbnail = placeholder ? slide.placeholder_image : youtube
+                figure.mb-0
+                  - if placeholder
+                    = proxy_image_tag placeholder_url(thumbnail, {w: 10,
+                      h: 6,
+                      fit: "crop"}),
+                      data: {sizes: "100vw",
+                        src: thumbnail.url(w: 700,
+                            h: 400,
+                            fit: "crop",
+                            auto: "compress"),
+                        srcset: "#{thumbnail.url(w: 450,
+                            h: 330,
+                            fit: 'crop',
+                            auto: 'compress')} 480w,
+                          #{thumbnail.url(w: 600,
+                            h: 333,
+                            fit: 'crop',
+                            auto: 'compress')} 632w,
+                            #{thumbnail.url(w: 560,
+                              h: 333,
+                              fit: 'crop',
+                              auto: 'compress')} 844w,
+                            #{thumbnail.url(w: 700,
+                              h: 400,
+                              fit: 'crop',
+                              auto: 'compress')} 1091w,
+                            #{thumbnail.url(w: 360,
+                              h: 226,
+                              fit: 'crop',
+                              auto: 'compress')} 1320w,
+                            #{thumbnail.url(w: 590,
+                              h: 385,
+                              fit: 'crop',
+                              auto: 'compress')} 1440w"},
+                      style: "width:100%; object-fit:cover",
+                      class: "lazyload d-block video_thumbnail_height",
+                      alt: thumbnail.alt,
+                      title: thumbnail.title
+                  - else
+                    = image_tag thumbnail,
+                      style: "width:100%; object-fit:cover",
+                      class: "lazyload d-block video_thumbnail_height"
+
+                  svg class=icon_classes
+                    use xlink:href="/images/sprite.svg#it-video"
+
+              - if !hide_tags && has_tags
+                .px-3.px-md-5
+                  .d-flex.flex-wrap-reverse.flex-row-reverse.align-items-end
+                    - slide.tags.each do |tag|
+                      = partial "partials/chip",
+                        locals: {label: tag.name,
+                        url: page_path(tag),
+                        chip_type: "",
+                        btn_type: "",
+                        chip_size: ""}

@@ -4,20 +4,20 @@ ruby:
 
 - if page.respond_to?(:dashboard_embed) && page.dashboard_embed.present?
   .mid-numbers-background.py-5
-    .container.pt-5.pb-2.py-lg-5
+    .container-xl.pt-5.pb-2.py-lg-5
       .row
-        .col-12.col-lg-6.offset-lg-1.container
-          h2.h4.font-weight-semibold.text-center.text-lg-left
+        .col-12.col-lg-6.offset-lg-1.container-xl
+          h2.h4.fw-semibold.text-center.text-lg-start
             = page.dashboard_title
-          p.h5.text-center.text-lg-left
+          p.h5.text-center.text-lg-start
             = page.dashboard_subtitle
 
-        .col-12.col-lg-3.text-align-right class=button_classes
+        .col-12.col-lg-3.text-align-end class=button_classes
           .pt-5.pt-lg-0
 
             button.btn.btn-outline-dark.mid-text-dark [
-              data-target=".dashboard"
-              data-toggle="modal"
+              data-bs-target=".dashboard"
+              data-bs-toggle="modal"
               type="button"]
 
               = t("open_dashboard")
@@ -31,10 +31,10 @@ ruby:
 
               .modal-dialog.modal-lg role="dashboard"
                 .modal-content
-                  button.close.text-right [
+                  button.btn-close.text-end [
                     type="button"
-                    data-dismiss="modal"
-                    aria-label="Close"]
+                    data-bs-dismiss="modal"
+                    aria-bs-label="Close"]
                     svg.icon
                       use xlink:href="/images/sprite.svg#it-close"
                   iframe [

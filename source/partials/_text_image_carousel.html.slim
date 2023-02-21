@@ -1,0 +1,45 @@
+ruby:
+  slides ||= nil
+  carousel_wrapper = %(shadow-lg fixed-height mb-4 rounded-top rounded-5)
+
+.it-carousel-wrapper.splide.d-flex.flex-column.align-items-center data-bs-carousel-splide="" role="group" aria-label="carousel" 
+  .splide__track.p-0 class=carousel_wrapper style="max-width:350px;border-top-right-radius:10px;border-top-left-radius:10px;"
+    ul.splide__list
+      - slides.each do |slide|
+        li.splide__slide.fixed-width
+          .it-single-slide-wrapper.h-100
+            .card-wrapper
+              .card.card-img.no-after
+                .img-responsive-wrapper
+                  .img-responsive
+                    .img-wrapper
+                      - if slide.image_thumbnail 
+                        - image = slide.image_thumbnail
+                        = proxy_image_tag placeholder_url(image, {w: 10, h: 6,
+                            fit: "fillmax"}), data: {sizes: "100vw",
+                            src: slide.image_thumbnail.url(w: 700, h: 400,
+                            fit: "fillmax", auto: "compress"),
+                            srcset: "#{slide.image_thumbnail.url(w: 450, h: 330,
+                            fit: 'fillmax', auto: 'compress')} 480w,
+                            #{slide.image_thumbnail.url(w: 600, h: 333,
+                            fit: 'fillmax', auto: 'compress')} 632w,
+                            #{slide.image_thumbnail.url(w: 560, h: 333,
+                            fit: 'fillmax', auto: 'compress')} 844w,
+                            #{slide.image_thumbnail.url(w: 700, h: 400,
+                            fit: 'fillmax', auto: 'compress')} 1091w,
+                            #{slide.image_thumbnail.url(w: 320, h: 200,
+                            fit: 'fillmax', auto: 'compress')} 1320w,
+                            #{slide.image_thumbnail.url(w: 400, h: 245,
+                            fit: 'fillmax', auto: 'compress')} 1400w"},
+                          class: "lazyload d-block w-100",
+                          alt: slide.image_thumbnail.alt,
+                          title: slide.image_thumbnail.title
+                .px-3.pt-4.h-40 
+                  - if slide.title
+                    h4.splide-slide__text__title.pb-2
+                      = proxy_link_to slide.title,
+                        page_path(slide),
+                        class: "text-decoration-none"
+
+                  - if slide.subtitle
+                    = slide.subtitle

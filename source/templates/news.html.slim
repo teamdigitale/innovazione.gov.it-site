@@ -27,7 +27,7 @@ ruby:
   = partial "partials/sticky-navs/page-sections",
     locals: {sections: section_titles}
 
-  .container
+  .container-xl
     .row.d-lg-flex
       .col-lg-7.pt-5
         = partial "partials/cards-vertical-list",
@@ -37,7 +37,7 @@ ruby:
           large_title: true,
           btn_url: dato.articles_index}
 
-      .col-lg-4.offset-lg-1.pl-lg-4.mb-lg-3.mid-border-lg-left.pt-lg-5
+      .col-lg-4.offset-lg-1.ps-lg-4.mb-lg-3.mid-border-lg-start.pt-lg-5
         = partial "partials/cards-vertical-list",
           locals: {title: t("press_releases_section_title"),
           title_is_anchor: true,

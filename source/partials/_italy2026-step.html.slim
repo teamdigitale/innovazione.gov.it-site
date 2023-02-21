@@ -6,13 +6,11 @@
 
   .col-12.d-lg-none
     - if block.percent_numbers.present?
-      .swiper
-        .swiper-container.p-0.mb-4.bg-white.rounded.shadow-lg
-          .swiper-wrapper
+      .it-carousel-wrapper.splide data-bs-carousel-splide="" role="group" aria-label="carousel"
+        .splide__track.p-0.mb-4.bg-white.rounded.shadow-lg
+          ul.splide__list.h-100
             - block.percent_numbers.each do |item|
-              .swiper-slide
-                .swiper-slide__text.py-0
+              li.splide__slide
+                .it-single-slide-wrapper.splide-slide__text.py-0
                   = partial "partials/card-2026-mobile",
                     locals: {element: item}
-
-        .swiper-pagination.py-3

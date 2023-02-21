@@ -39,7 +39,7 @@ ruby:
       image_mobile_top: true}
 
   / Three-column blocks
-  .container
+  .container-xl
     - if page.articles.any?
       .mt-5.mb-4.mb-lg-0
         = partial "partials/section-title",
@@ -52,7 +52,7 @@ ruby:
       hide_tags: true,
       btn_url: dato.italy2026_articles_index}
 
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("press_releases_section_title"),
       title_is_anchor: true,
@@ -60,7 +60,7 @@ ruby:
       hide_tags: true,
       btn_url: dato.italy2026_press_releases_index}
 
-  .container
+  .container-xl
     = partial "partials/cards-horizontal-list",
       locals: {title: t("public_announcements_title"),
       items: page.announcements.take(3),

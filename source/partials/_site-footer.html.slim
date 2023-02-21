@@ -1,6 +1,6 @@
 ruby:
-  title_class = %w[h6 text-uppercase font-weight-bold text-center
-    text-md-left mb-3].join(" ")
+  title_class = %w[h6 text-uppercase fw-bold text-center
+    text-md-start mb-3].join(" ")
 
 - I18n.with_locale(:it)
   - transparency_links = visible_links(dato.company.footer_transparency_links)
@@ -9,7 +9,7 @@ ruby:
 
   footer#footer.it-footer data-datocms-noindex=true tabindex="-1" lang="it"
     .it-footer-main
-      .container
+      .container-xl
         .row.clearfix
           .col-sm-12
             .it-brand-wrapper
@@ -30,12 +30,12 @@ ruby:
                     class: "icon pr-2 _mid-logo-size",
                     style: "width: 72px"
 
-                .it-brand-text.pr-0.pr-md-2
-                  h5.mt-4.mb-md-0.mt-md-0.text-center.text-md-left [
+                .it-brand-text.pe-0.pe-md-2
+                  .h5.mt-4.mt-md-0.text-center.text-md-start [
                     style="max-width: 400px;"] = t("formatted_site_name")
 
       .py-4
-        .container
+        .container-xl
           .row
             .col-md-6.col-xl-3.mb-3
               div class=title_class
@@ -43,7 +43,7 @@ ruby:
 
               .mb-2
                 - if dato.company.google_maps_url.present?
-                  .text-center.text-md-left
+                  .text-center.text-md-start
                     svg.mb-3.align-top.icon.icon-sm.icon-white [
                         role="img"
                         aria-label=t("hq")
@@ -55,14 +55,14 @@ ruby:
                       ul.link-list
                         li
                           = link_to dato.company.google_maps_url,
-                            class: "list-item font-weight-semibold",
+                            class: "list-item fw-semibold",
                             target: "_blank",
                             rel: "noopener"
                             = t("formatted_address")
 
               - if dato.company.secretariat_email.present? || dato.company.media_email.present?
                 .mb-2
-                  .text-center.text-md-left
+                  .text-center.text-md-start
                     svg.mb-3.align-top.icon.icon-sm.icon-white [
                         role="img"
                         aria-label=t("email_contact")
@@ -99,7 +99,7 @@ ruby:
               div class=title_class
                 = t("follow_us_on")
 
-              .d-flex.justify-content-center.ml-3.d-md-block.ml-md-0
+              .d-flex.justify-content-center.ms-3.d-md-block.ms-md-0
                 = partial "partials/socials"
 
             - if footer_links.any?
@@ -107,7 +107,7 @@ ruby:
                 div class=title_class
                   = t("other_links")
 
-                .text-center.text-md-left
+                .text-center.text-md-start
                   .link-list-wrapper
                     ul.link-list
                       - footer_links.each do |item|
@@ -122,7 +122,7 @@ ruby:
                 div class=title_class
                   = t("transparency")
 
-                .text-center.text-md-left
+                .text-center.text-md-start
                   .link-list-wrapper
                     ul.link-list
                       - transparency_links.each do |item|
@@ -133,11 +133,14 @@ ruby:
                               html_class: "list-item mid-footer-link"}
 
     .it-footer-small-prints.py-4
-      .container
-        ul.list-inline.link-list.mb-0.text-center.text-md-left
+      .container-xl
+        ul.list-inline.link-list.mb-0.text-center.text-md-start
           - visible_links(subfooter_links).each do |item|
-            li.list-inline-item.mr-0.mr-md-5
+            li.list-inline-item.me-0.me-md-5
               = partial "partials/links/#{item.item_type.api_key}",
                 locals: {item: item,
                   label: item.title,
                   html_class: "list-item mid-footer-link mx-4 mx-md-0"}
+              - if item.item_type.api_key == "link_external"
+                svg.icon.icon-sm.icon-footer-links.ms-2
+                  use xlink:href="/images/sprite.svg#it-external-link"

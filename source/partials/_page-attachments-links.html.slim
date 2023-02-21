@@ -17,8 +17,8 @@ ruby:
     = page.embed_dashboard
 
 - if show_attachtments
-  .container.mt-5.py-3._anchor
-    h2.h5.font-weight-semibold._mid-target
+  .container-xl.mt-5.py-3._anchor
+    h2.h5.fw-semibold._mid-target
       span._mid-target-point id="_attachments"
       = t("attachments")
     .row
@@ -27,8 +27,8 @@ ruby:
           = partial "partials/attachment", locals: {attachment: attachment}
 
 - if show_links
-  .container.mt-5.py-3._anchor
-    h2.h5.font-weight-semibold._mid-target
+  .container-xl.mt-5.py-3._anchor
+    h2.h5.fw-semibold._mid-target
       span._mid-target-point id="_useful_links"
       = t("useful_links")
     .row

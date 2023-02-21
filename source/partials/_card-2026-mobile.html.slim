@@ -3,18 +3,19 @@
 - if element.present?
   .card.rounded.text-center
     .card-body
-      h4.card-title.text-primary.mb-0.h5.font-weight-bold
+      h4.card-title.text-primary.mb-0.h5.fw-bold
         = element.title
       .card-text.text-secondary.pt-0.pb-3
         span = element.description
-    .card-title.text-primary.mid-huge-numbers.font-weight-semibold
+    .card-title.text-primary.mid-huge-numbers.fw-semibold
       = "#{element.number}%"
     .img-responsive-wrapper.text-center.py-4
         .icon.mid-icon-large-x.text-primary.mx-auto
           figure.mb-0
-            = proxy_image_tag element.image_icon.lqip_data_url(w: 64,
+            - image = element.image_icon
+            = proxy_image_tag placeholder_url(image, {w: 64,
               h: 64,
-              fit: "crop"),
+              fit: "crop"}),
                 data: {sizes: "100vw",
                   src: element.image_icon.url(w: 400,
                     h: 400,

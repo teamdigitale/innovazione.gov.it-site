@@ -1,0 +1,28 @@
+.container.pb-5.text-center.text-sm-start
+  .col-12
+    = partial "partials/breadcrumb", locals: {page: page}
+
+  .text-center.mb-0.mb-lg-4
+    h1.h1
+      = page.title
+    span = "Ultimo aggiornamento "
+    span = partial "partials/formatted-date",
+            locals: {date: page.last_update,
+            format: "%d/%m/%Y"}
+    p.lead.mid-caption--lead = page.text_link_to_source
+
+
+.container
+  .col-lg-6
+    h2.h4.text-uppercase.neutral-1-color
+      = page.introduction_title
+    p
+      = page.introduction
+
+  - page.content_blocks.each do |block|
+
+    - if block.item_type.api_key == "chart_block"
+      = partial "partials/blocks/block_chart_wrapper", locals: {block: block}
+
+    - if block.item_type.api_key == "kpi_group"
+      = partial "partials/blocks/block_kpi", locals: {block: block}

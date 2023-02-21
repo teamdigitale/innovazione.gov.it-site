@@ -4,7 +4,7 @@
 - if block.videos.present?
 
   .lightgrey-bg-a2
-    .container.py-3
+    .container-xl.py-3
       - if block.videos.size == 1
         = partial "partials/video-single",
           locals: {item: block.videos.first}

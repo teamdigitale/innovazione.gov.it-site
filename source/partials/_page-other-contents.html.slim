@@ -4,12 +4,12 @@ ruby:
     page_show_update_date?(page)
 
 - if page.respond_to?(:credits) && page.credits.present?
-  .container
+  .container-xl
     = partial "partials/credits",
       locals: {credits: page.credits}
 
 - if show_date
-  .container.my-5
+  .container-xl.my-5
     = partial "partials/column-title",
       locals: {title: I18n.t("updated_at"), large: true}
 

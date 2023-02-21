@@ -78,7 +78,8 @@ module PathHelpers
 
     when "italy2026_announcements_index",
       "italy2026_articles_index",
-      "italy2026_press_releases_index"
+      "italy2026_press_releases_index",
+      "dataviz_page"
       dato.italy2026_page
 
     when "work_positions_index"

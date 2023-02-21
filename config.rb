@@ -52,7 +52,7 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           environment: DATO_ENV
+          environment: DATO_ENV
 end
 
 webpack_command =
@@ -78,7 +78,7 @@ configure :build do
 end
 
 configure :development do
-  activate :livereload
+  # activate :livereload
   activate :search_engine_sitemap,
            default_priority: 0.5,
            default_change_frequency: "weekly"
@@ -951,7 +951,12 @@ dato.tap do |dato|
             "/templates/italy2026.html",
             locals: {page: dato.italy2026_page},
             locale: locale
-
+      # if dato.dataviz_page
+      #   proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
+      #         "/templates/data.html",
+      #         locals: {page: dato.dataviz_page},
+      #         locale: locale
+      #   end
       italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }
 
       paginate_with_fallback(italy2026_articles,

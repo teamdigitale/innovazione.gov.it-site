@@ -13,15 +13,15 @@ ruby:
 - if item
   div class="#{cols} #{extra_mb}"
     .d-lg-none.my-4.pt-4.text-center
-      p.ml-lg-4.mid-caption.text-secondary
+      p.ms-lg-4.mid-caption.text-secondary
         = partial "partials/formatted-date",
           locals: {date: item.date_shown}
-      h2.ml-lg-4.h4.text-primary.mt-2g
+      h2.ms-lg-4.h4.text-primary.mt-2g
         = link_to page_path(item),
           class: "text-decoration-none"
           = item.title
     = link_to page_path(item)
-      .img-responsive-wrapper
+      .img-responsive-wrapper.position-relative
         svg.bg-white.icon.icon-primary.rounded.p-1 class=icon_classes
           use xlink:href="/images/sprite.svg#it-video"
         figure.mb-0
@@ -32,9 +32,9 @@ ruby:
             thumbnail = placeholder ? item.placeholder_image : youtube_thumb
 
           - if placeholder
-            = proxy_image_tag thumbnail.lqip_data_url(w: 10,
+            = proxy_image_tag placeholder_url(thumbnail, {w: 10,
               h: 10,
-              fit: "crop"),
+              fit: "crop"}),
               data: {sizes: "100vw",
                 src: thumbnail.url(w: 700,
                    h: 400,

@@ -5,7 +5,7 @@
 ruby:
   current_classes = [
     html_class,
-    ("d-none d-sm-block" if page_is_editorial(page) && main_locale?(locale))
+    ("d-none d-sm-inline-flex" if page_is_editorial(page) && main_locale?(locale))
   ].join(" ")
 
 nav.breadcrumb-container [

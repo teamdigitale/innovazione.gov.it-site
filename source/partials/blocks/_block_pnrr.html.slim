@@ -1,13 +1,13 @@
 ruby:
   menu_title = block.menu_title || nil
   pre_title_classes = %(mid-caption--large
-                      text-uppercase font-weight-semibold
-                      pt-5 p-lg-0 text-center text-lg-left)
-  txt_classes = %(pt-2 font-weight-normal
-                    text-center text-lg-left)
+                      text-uppercase fw-semibold
+                      pt-5 p-lg-0 text-center text-lg-start)
+  txt_classes = %(pt-2 fw-normal
+                    text-center text-lg-start)
 
 section
-  .container
+  .container-xl
     .row.mt-4.my-lg-5
       .offset-lg-1.col-lg-5.pt-lg-4
         h2.h6._mid-target class=pre_title_classes
@@ -15,12 +15,12 @@ section
           = block.pre_title
 
         .d-none.d-lg-block
-          h3.h2.pt-2.text-center.text-lg-left
+          h3.h2.pt-2.text-center.text-lg-start
             = block.title
           p.d-none.d-lg-block.mid-caption--lead class=txt_classes
             = block.text
         .d-lg-none
-          h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-left
+          h3.mid-caption--xxxlarge.pt-2.text-center.text-lg-start
             = block.title
           p.d-lg-none.mid-caption--large class=txt_classes
             = block.text
@@ -32,14 +32,15 @@ section
               .h6 = number.text
 
     .d-lg-none.mt-4.mb-5
-      .swiper-container
-        .swiper-wrapper.h-100
-          - block.numbers.each do |number|
-            .swiper-slide
-              .swiper-slide__text.px-3.px-md-5
-                .h-100.d-flex.flex-column.justify-content-around
-                  .mid-huge-numbers.font-weight-semibold.text-center
-                    = number.number
-                  .h6.text-center.pt-5
-                    = number.text
-      .swiper-pagination
+      .it-carousel-wrapper.pt-0.splide data-bs-carousel-splide="" role="group" aria-label="carousel"
+        .splide__track.pt-0
+          ul.splide__list.h-100
+            - block.numbers.each do |number|
+              li.splide__slide
+                .it-single-slide-wrapper
+                  .px-3.px-md-5
+                    .h-100.d-flex.flex-column.justify-content-around
+                      .mid-huge-numbers.fw-semibold.text-center
+                        = number.number
+                      .h6.text-center.pt-2
+                        = number.text
