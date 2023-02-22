@@ -25,6 +25,12 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
       fontWeight: 'bold',
       fontSize: 12,
     },
+    grid: {
+      // top: 0,
+      // bottom: "50px",
+      left: 0,
+      right: 0,
+    },
     tooltip: {
       show: config.tooltip,
     },
@@ -44,14 +50,15 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
     //   },
     // },
   };
+  const chartHeight = config.h ? config.h : '550px'
   return (
     <>
       <ReactEcharts
         option={options}
         ref={refCanvas}
         style={{
-          width: config.w,
-          height: config.h,
+          width: '100%',
+          height: chartHeight,
           maxWidth: '100%',
         }}
       />
