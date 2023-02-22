@@ -58,8 +58,9 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
         ref={refCanvas}
         style={{
           width: '100%',
-          height: chartHeight,
+          height: '550px',
           maxWidth: '100%',
+          maxHeight: '550px',
         }}
       />
       {/* <button onClick={() => getImage()}>Download</button> */}
