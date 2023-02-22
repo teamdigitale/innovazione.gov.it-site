@@ -74,7 +74,8 @@ export default function ChartWrapper(props) {
     <div className="p-2 p-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
-      <ul className="nav nav-tabs lightgrey-bg-a3" id="myTab" role="tablist">
+
+      <ul className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3" id="myTab" role="tablist">
         {['Grafico', 'Tabella dati', 'Info'].map((name, i) => (
           <li
             key={`${id}-tab_${i}`}
@@ -96,14 +97,15 @@ export default function ChartWrapper(props) {
         ))}
       </ul>
 
-      <div className="tab-content" id="myTabContent">
+      <div className="tab-content mid-tabs-content" id="myTabContent">
         <div
           aria-labelledby={`tab1-${id}`}
-          className="tab-pane py-4 fade show active"
+          className="tab-pane mid-tabs-pane py-4 fade show active"
           id={`tab1-${id}-content`}
           role="tabpanel"
         >
-          <div key={id} className="d-flex justify-content-center">
+          {/* <div key={id} className="d-flex justify-content-center"> */}
+          <div key={id} className="mid-chart">
             {type === 'pie' ? (
               <PieChart
                 id={id}
@@ -123,7 +125,7 @@ export default function ChartWrapper(props) {
         </div>
         <div
           aria-labelledby={`tab2-${id}`}
-          className="tab-pane py-4 fade"
+          className="tab-pane mid-tabs-pane py-4 fade"
           id={`tab2-${id}-content`}
           role="tabpanel"
         >
@@ -131,13 +133,14 @@ export default function ChartWrapper(props) {
         </div>
         <div
           aria-labelledby={`tab3-${id}`}
-          className="tab-pane py-4 fade"
+          className="tab-pane mid-tabs-pane py-4 fade"
           id={`tab3-${id}-content`}
           role="tabpanel"
         >
           <div dangerouslySetInnerHTML={{ __html: `${info || ' '}` }} />
         </div>
       </div>
+
       <div className="d-md-flex justify-content-md-between">
         <div className="py-2">
           <span className="fw-semibold text-uppercase">
