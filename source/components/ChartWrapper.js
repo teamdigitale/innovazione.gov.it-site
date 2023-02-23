@@ -74,8 +74,11 @@ export default function ChartWrapper(props) {
     <div className="p-2 p-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
-
-      <ul className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3" id="myTab" role="tablist">
+      <ul
+        className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3"
+        id="myTab"
+        role="tablist"
+      >
         {['Grafico', 'Tabella dati', 'Info'].map((name, i) => (
           <li
             key={`${id}-tab_${i}`}
@@ -96,7 +99,6 @@ export default function ChartWrapper(props) {
           </li>
         ))}
       </ul>
-
       <div className="tab-content mid-tabs-content" id="myTabContent">
         <div
           aria-labelledby={`tab1-${id}`}
@@ -140,7 +142,6 @@ export default function ChartWrapper(props) {
           <div dangerouslySetInnerHTML={{ __html: `${info || ' '}` }} />
         </div>
       </div>
-
       <div className="d-md-flex justify-content-md-between">
         <div className="py-2">
           <span className="fw-semibold text-uppercase">
@@ -164,7 +165,8 @@ export default function ChartWrapper(props) {
               onClick={() => downloadCSV(csvData, id)}
             >
               {labelsDownload || 'Scarica'} CSV
-              <svg className="icon icon-sm icon-primary ms-1"
+              <svg
+                className="icon icon-sm icon-primary ms-1"
                 focusable="false"
                 aria-label={`${labelsDownload || 'Scarica'} CSV`}
                 role="img"
@@ -181,7 +183,8 @@ export default function ChartWrapper(props) {
               onClick={() => downLoadPng(echartInstance, id)}
             >
               {labelsDownload || 'Scarica'} PNG
-              <svg className="icon icon-sm icon-primary ms-1"
+              <svg
+                className="icon icon-sm icon-primary ms-1"
                 focusable="false"
                 aria-label={`${labelsDownload || 'Scarica'} PNG`}
                 role="img"
@@ -197,7 +200,8 @@ export default function ChartWrapper(props) {
               aria-label={labelsShare || 'Condividi'}
             >
               {labelsShare || 'Condividi'}
-              <svg className="icon icon-sm icon-primary ms-1"
+              <svg
+                className="icon icon-sm icon-primary ms-1"
                 focusable="false"
                 aria-label={labelsShare || 'Condividi'}
                 role="img"
