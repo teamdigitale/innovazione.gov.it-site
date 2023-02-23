@@ -97,13 +97,10 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
       fontSize: 12,
     },
     grid: {
-      // top: 0,
-      // bottom: "50px",
       left: 0,
       right: 0,
     },
     tooltip: {
-      // trigger: 'axis',
       axisPointer: {
         type: config.axisPointer,
       },
@@ -114,19 +111,9 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
       top: 'bottom',
       show: config.legend,
     },
-    // toolbox: {
-    //   show: config.toolbox,
-    //   left: 'right',
-    //   top: 'top',
-    //   feature: {
-    //     // dataView: {},
-    //     // restore: {},
-    //     saveAsImage: {},
-    //   },
-    // },
   };
 
-  const chartHeight = config.h ? config.h : '550px'
+  const chartHeight = config.h ? config.h : '550px';
   return (
     <>
       <ReactEcharts
