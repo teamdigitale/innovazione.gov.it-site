@@ -22,13 +22,8 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
     : dataSource.series;
   const options = {
     backgroundColor: config.background ? config.background : '#F2F7FC',
-    title: {
-      text: config?.titles?.join('\n') || 'PIE CHART',
-      left: 'center',
-      top: 'center',
-    },
+
     color: config.colors,
-    series: serie,
     textStyle: {
       fontFamily: 'Titillium Web, sans-serif',
       fontWeight: 'bold',
@@ -41,6 +36,25 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
       left: 'center',
       top: 'bottom',
       show: config.legend,
+    },
+    title: {
+      text: config?.titles?.join('\n') || 'PIE CHART',
+      left: 'center',
+      top: 'center',
+    },
+    series: {
+      type: 'pie',
+      radius: ['50%', '85%'],
+      avoidLabelOverlap: false,
+      label: {
+        show: true,
+        position: 'inside',
+      },
+      labelLine: {
+        show: false,
+      },
+      name: serie.name || '',
+      data: serie.data,
     },
   };
   const height = config.h || 550;
