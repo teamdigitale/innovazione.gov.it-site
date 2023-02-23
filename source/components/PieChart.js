@@ -17,6 +17,9 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
     }
   }, [refCanvas.current]);
 
+  const serie = Array.isArray(dataSource.series)
+    ? dataSource.series[0]
+    : dataSource.series;
   const options = {
     backgroundColor: config.background ? config.background : '#F2F7FC',
     title: {
@@ -25,7 +28,7 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
       top: 'center',
     },
     color: config.colors,
-    series: dataSource.series,
+    series: serie,
     textStyle: {
       fontFamily: 'Titillium Web, sans-serif',
       fontWeight: 'bold',

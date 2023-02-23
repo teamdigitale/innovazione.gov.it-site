@@ -2,48 +2,13 @@ import React from 'react';
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
 import Table from './Table';
-import { saveAs } from 'file-saver';
 
-async function downLoadPng(echartInstance, name) {
-  const dataUrl = echartInstance.getDataURL();
-  try {
-    const blob = await fetch(dataUrl).then((res) => res.blob());
-    saveAs(blob, `${name}.png`);
-  } catch (error) {
-    console.log('error', error);
-  }
-}
-
-async function downloadCSV(data, name) {
-  try {
-    const blob = new Blob([data], {
-      type: 'text/csv;charset=utf-8',
-    });
-    saveAs(blob, `${name}.csv`);
-  } catch (error) {
-    console.log('error', error);
-  }
-}
-
-function generateCSV(dataSource) {
-  const columns = '_,' + dataSource.categories.join(',');
-  const rows = dataSource.series.map((serie) => {
-    const { name = '', data = [] } = serie;
-    return [name, ...data].join(',');
-  });
-  return [columns, ...rows].join('\n');
-}
-
-function generateCSVPie(serie) {
-  if (!serie) {
-    return null;
-  }
-  const columns = 'name,value';
-  const rows = serie.data.map(({ name, value }) => {
-    return [name, value].join(',');
-  });
-  return [columns, ...rows].join('\n');
-}
+import {
+  generateCSV,
+  generateCSVPie,
+  downLoadPng,
+  downloadCSV,
+} from './utils/chartUtils';
 
 export default function ChartWrapper(props) {
   const {
@@ -61,15 +26,16 @@ export default function ChartWrapper(props) {
 
   const [echartInstance, setEchartInstance] = React.useState(null);
 
-  const type = dataSource.series.type
-    ? dataSource.series.type
-    : dataSource.series[0].type;
+  const series = Array.isArray(dataSource.series)
+    ? dataSource.series[0]
+    : dataSource.series;
+
+  const chartType = series.type;
 
   const csvData =
-    type === 'pie'
-      ? generateCSVPie(dataSource.series)
-      : generateCSV(dataSource);
+    chartType === 'pie' ? generateCSVPie(series) : generateCSV(dataSource);
 
+  console.log('csvData', csvData);
   return (
     <div className="p-2 p-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
@@ -108,7 +74,7 @@ export default function ChartWrapper(props) {
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
           <div key={id} className="mid-chart">
-            {type === 'pie' ? (
+            {chartType === 'pie' ? (
               <PieChart
                 id={id}
                 config={config}
