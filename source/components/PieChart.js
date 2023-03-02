@@ -57,13 +57,13 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
       data: serie.data,
     },
   };
-  const height = config.h || 550;
+  const chartHeight = config.h ? config.h : '550px';
   return (
     <ReactEcharts
       option={options}
       ref={refCanvas}
       style={{
-        height,
+        height: chartHeight,
         width: '100%',
         maxWidth: '100%',
       }}

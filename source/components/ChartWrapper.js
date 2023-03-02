@@ -68,12 +68,13 @@ export default function ChartWrapper(props) {
       <div className="tab-content mid-tabs-content" id="myTabContent">
         <div
           aria-labelledby={`tab1-${id}`}
-          className="tab-pane mid-tabs-pane py-4 fade show active"
+          className="tab-pane mid-tabs-pane my-4 fade show active"
+          style={{ height: config.h }}
           id={`tab1-${id}-content`}
           role="tabpanel"
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
-          <div key={id} className="mid-chart">
+          <div key={id} className="mid-chart" style={{ height: config.h }}>
             {chartType === 'pie' ? (
               <PieChart
                 id={id}
@@ -122,8 +123,8 @@ export default function ChartWrapper(props) {
             {source}
           </a>
         </div>
-        <div className="py-2 d-flex align-items-center">
-          <span className="ps-md-2 pe-3 pe-md-0 fw-bold text-primary">
+        <div className="py-2 d-flex flex-wrap align-items-center">
+          <span className="ps-md-2 pe-3 pe-md-0 pb-3 pb-md-0 fw-bold text-primary">
             <a
               className="mid-button-link"
               title={labelsDownload || 'Scarica CSV'}
@@ -141,7 +142,7 @@ export default function ChartWrapper(props) {
               </svg>
             </a>
           </span>
-          <span className="ps-md-2 pe-3 pe-md-0 fw-bold text-primary">
+          <span className="ps-md-2 pe-3 pe-md-0 pb-3 pb-md-0 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsDownload || 'Scarica PNG'}
