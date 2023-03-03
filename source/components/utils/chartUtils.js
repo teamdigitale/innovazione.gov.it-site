@@ -52,7 +52,7 @@ export function generateCSVPie(serie) {
   return [columns, ...rows].join('\n');
 }
 
-function getBarValues(data) {
+export function getBarValues(data) {
   return {
     ...data,
     dataSource: {
@@ -64,7 +64,7 @@ function getBarValues(data) {
   };
 }
 
-function getLineValues(data) {
+export function getLineValues(data) {
   return {
     ...data,
     dataSource: {
@@ -76,7 +76,7 @@ function getLineValues(data) {
   };
 }
 
-function getPieValues(data) {
+export function getPieValues(data) {
   return {
     ...data,
     dataSource: {
@@ -98,4 +98,16 @@ function getPieValues(data) {
       },
     },
   };
+}
+
+function getFormattedData(payload) {
+  const { chart } = payload;
+  const formatted =
+    chart === 'pie'
+      ? getPieValues(payload)
+      : chart === 'line'
+      ? getLineValues(payload)
+      : getBarValues(payload);
+
+  return formatted;
 }

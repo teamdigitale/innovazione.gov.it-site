@@ -8,13 +8,15 @@ import {
   generateCSVPie,
   downLoadPng,
   downloadCSV,
+  getPieValues,
+  getBarValues,
+  getLineValues,
 } from './utils/chartUtils';
 
 export default function ChartWrapper(props) {
   const {
     id,
-    config,
-    dataSource,
+    data,
     title,
     subtitle,
     info,
@@ -24,18 +26,16 @@ export default function ChartWrapper(props) {
     labelsSource,
   } = props;
 
+  const { dataSource, config, chart } = data;
   const [echartInstance, setEchartInstance] = React.useState(null);
 
+  const chartType = chart; //series.type;
   const series = Array.isArray(dataSource.series)
     ? dataSource.series[0]
     : dataSource.series;
-
-  const chartType = series.type;
-
   const csvData =
     chartType === 'pie' ? generateCSVPie(series) : generateCSV(dataSource);
 
-  console.log('csvData', csvData);
   return (
     <div className="p-2 p-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
@@ -75,18 +75,24 @@ export default function ChartWrapper(props) {
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
           <div key={id} className="mid-chart" style={{ height: config.h }}>
-            {chartType === 'pie' ? (
-              <PieChart
-                id={id}
-                config={config}
-                dataSource={dataSource}
-                setEchartInstance={setEchartInstance}
-              />
-            ) : (
+            {chartType === 'bar' && (
               <BasicChart
                 id={id}
-                config={config}
-                dataSource={dataSource}
+                data={getBarValues(data)}
+                setEchartInstance={setEchartInstance}
+              />
+            )}
+            {chartType === 'line' && (
+              <BasicChart
+                id={id}
+                data={getLineValues(data)}
+                setEchartInstance={setEchartInstance}
+              />
+            )}
+            {chartType === 'pie' && (
+              <PieChart
+                id={id}
+                data={getPieValues(data)}
                 setEchartInstance={setEchartInstance}
               />
             )}

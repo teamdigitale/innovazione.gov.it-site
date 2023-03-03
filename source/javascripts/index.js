@@ -90,17 +90,12 @@ if (chartWrap) {
       const domNode = chartWrap[i];
 
       const chartData = JSON.parse(chartTemplate);
-      const chart = JSON.parse(chartData); //double parse ?
-      const { config, dataSource } = chart;
-      console.log('dataSource', dataSource);
+      const data = JSON.parse(chartData); //double parse ?
+      // const { config, dataSource ,} = chart;
+      // console.log('dataSource', dataSource);
       const root = createRoot(domNode);
       root.render(
-        <ChartWrapper
-          id={domNode.id}
-          config={config}
-          dataSource={dataSource}
-          {...domNode.dataset}
-        />
+        <ChartWrapper id={domNode.id} data={data} {...domNode.dataset} />
       );
     } catch (error) {
       console.log('error', error);
