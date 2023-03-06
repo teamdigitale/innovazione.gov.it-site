@@ -36,8 +36,9 @@ export default function ChartWrapper(props) {
   const csvData =
     chartType === 'pie' ? generateCSVPie(series) : generateCSV(dataSource);
 
+  // console.log('csvData', csvData);
   return (
-    <div className="p-2 p-md-4">
+    <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
       <ul
@@ -69,12 +70,12 @@ export default function ChartWrapper(props) {
         <div
           aria-labelledby={`tab1-${id}`}
           className="tab-pane mid-tabs-pane my-4 fade show active"
-          style={{ height: config.h }}
+          style={{ height: config.h ? config.h : '550px' }}
           id={`tab1-${id}-content`}
           role="tabpanel"
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
-          <div key={id} className="mid-chart" style={{ height: config.h }}>
+          <div key={id} className="mid-chart" style={{ height: config.h ? config.h : '550px' }}>
             {chartType === 'bar' && (
               <BasicChart
                 id={id}
@@ -100,7 +101,7 @@ export default function ChartWrapper(props) {
         </div>
         <div
           aria-labelledby={`tab2-${id}`}
-          className="tab-pane mid-tabs-pane py-4 fade"
+          className="tab-pane mid-tabs-pane my-4 fade"
           id={`tab2-${id}-content`}
           role="tabpanel"
         >
@@ -108,7 +109,7 @@ export default function ChartWrapper(props) {
         </div>
         <div
           aria-labelledby={`tab3-${id}`}
-          className="tab-pane mid-tabs-pane py-4 fade"
+          className="tab-pane mid-tabs-pane my-4 fade"
           id={`tab3-${id}-content`}
           role="tabpanel"
         >
@@ -116,7 +117,7 @@ export default function ChartWrapper(props) {
         </div>
       </div>
       <div className="d-md-flex justify-content-md-between">
-        <div className="py-2">
+        <div className="pt-3">
           <span className="fw-semibold text-uppercase">
             {labelsSource || 'Fonte dati'}:
           </span>
@@ -129,8 +130,8 @@ export default function ChartWrapper(props) {
             {source}
           </a>
         </div>
-        <div className="py-2 d-flex flex-wrap align-items-center">
-          <span className="ps-md-2 pe-3 pe-md-0 pb-3 pb-md-0 fw-bold text-primary">
+        <div className="pb-3 d-flex flex-wrap align-items-center">
+          <span className="ps-md-2 pe-3 pe-md-0 pt-3 pb-md-0 fw-bold text-primary">
             <a
               className="mid-button-link"
               title={labelsDownload || 'Scarica CSV'}
@@ -148,7 +149,7 @@ export default function ChartWrapper(props) {
               </svg>
             </a>
           </span>
-          <span className="ps-md-2 pe-3 pe-md-0 pb-3 pb-md-0 fw-bold text-primary">
+          <span className="ps-md-2 pe-3 pe-md-0 pt-3 pb-md-0 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsDownload || 'Scarica PNG'}
@@ -166,7 +167,7 @@ export default function ChartWrapper(props) {
               </svg>
             </button>
           </span>
-          <span className="ps-md-2 fw-bold text-primary">
+          <span className="ps-md-2 pt-3 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsShare || 'Condividi'}

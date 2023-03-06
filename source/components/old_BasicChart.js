@@ -113,7 +113,7 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
     },
   };
 
-  const chartHeight = config.h ? config.h : '550px';
+  const chartHeight = config.h ? config.h : '500px';
   return (
     <>
       <ReactEcharts
@@ -123,7 +123,7 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
         style={{
           width: '100%',
           height: chartHeight,
-          // height: '550px',
+          // height: '500px',
           maxWidth: '100%',
         }}
       />

@@ -192,7 +192,7 @@ function BasicChart({ id, data, setEchartInstance }) {
   }
 
   if (!data) return <div>...</div>;
-  const chartHeight = data.config?.h || '550px';
+  const chartHeight = data.config?.h || '500px';
   return (
     <div key={id} id={'chart_' + id}>
       <ReactEcharts

@@ -57,7 +57,7 @@ function PieChart({ id, config, dataSource, setEchartInstance }) {
       data: serie.data,
     },
   };
-  const chartHeight = config.h ? config.h : '550px';
+  const chartHeight = config.h ? config.h : '500px';
   return (
     <ReactEcharts
       option={options}
