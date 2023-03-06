@@ -19,10 +19,10 @@
     p
       = page.introduction
 
-  - page.content_blocks.each do |block|
+  - page.content_blocks.each_with_index do |block, i|
 
     - if block.item_type.api_key == "chart_block"
-      = partial "partials/blocks/block_chart_wrapper", locals: {block: block}
+      = partial "partials/blocks/block_chart_wrapper", locals: {block: block, istance: i}
 
     - if block.item_type.api_key == "kpi_group"
       = partial "partials/blocks/block_kpi", locals: {block: block}

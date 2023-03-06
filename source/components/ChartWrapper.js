@@ -24,6 +24,7 @@ export default function ChartWrapper(props) {
     labelsDownload,
     labelsShare,
     labelsSource,
+    istance,
   } = props;
 
   const { dataSource, config, chart } = data;
@@ -48,16 +49,16 @@ export default function ChartWrapper(props) {
       >
         {['Grafico', 'Tabella dati', 'Info'].map((name, i) => (
           <li
-            key={`${id}-tab_${i}`}
+            key={`${id}-tab_${i}-${istance}`}
             className="nav-item lightgrey-bg-a3"
             id="dataviz-tabs"
           >
             <a
-              aria-controls={`tab${i + 1}-${id}-content`}
+              aria-controls={`tab${i + 1}-${id}-content-${istance}`}
               aria-selected="true"
               className={`nav-link ${i === 0 ? 'active' : ''}`}
               data-bs-toggle="tab"
-              href={`#tab${i + 1}-${id}-content`}
+              href={`#tab${i + 1}-${id}-content-${istance}`}
               id={`tab${i + 1}-${id}`}
               role="tab"
             >
@@ -68,14 +69,14 @@ export default function ChartWrapper(props) {
       </ul>
       <div className="tab-content mid-tabs-content" id="myTabContent">
         <div
-          aria-labelledby={`tab1-${id}`}
+          aria-labelledby={`tab1-${id}-${istance}`}
           className="tab-pane mid-tabs-pane my-4 fade show active"
-          style={{ height: config.h ? config.h : '550px' }}
-          id={`tab1-${id}-content`}
+          style={{ height: config.h ? config.h : '500px' }}
+          id={`tab1-${id}-content-${istance}`}
           role="tabpanel"
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
-          <div key={id} className="mid-chart" style={{ height: config.h ? config.h : '550px' }}>
+          <div key={id} className="mid-chart" style={{ height: config.h ? config.h : '500px' }}>
             {chartType === 'bar' && (
               <BasicChart
                 id={id}
@@ -100,17 +101,17 @@ export default function ChartWrapper(props) {
           </div>
         </div>
         <div
-          aria-labelledby={`tab2-${id}`}
+          aria-labelledby={`tab2-${id}-${istance}`}
           className="tab-pane mid-tabs-pane my-4 fade"
-          id={`tab2-${id}-content`}
+          id={`tab2-${id}-content-${istance}`}
           role="tabpanel"
         >
           <Table id={id} ds={dataSource} />
         </div>
         <div
-          aria-labelledby={`tab3-${id}`}
+          aria-labelledby={`tab3-${id}-${istance}`}
           className="tab-pane mid-tabs-pane my-4 fade"
-          id={`tab3-${id}-content`}
+          id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
           <div dangerouslySetInnerHTML={{ __html: `${info || ' '}` }} />
