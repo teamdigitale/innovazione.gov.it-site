@@ -176,8 +176,7 @@ function BasicChart({ id, data, setEchartInstance }) {
         };
       }),
       textStyle: {
-        fontFamily: 'Titillium Web, sans-serif',
-        fontWeight: 'semibold',
+        fontFamily: "Titillium Web",
         fontSize: 12,
       },
       tooltip,

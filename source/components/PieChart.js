@@ -81,8 +81,7 @@ function PieChart({ id, data, setEchartInstance }) {
       color: config.colors,
       series: dataSource.series,
       textStyle: {
-        fontFamily: 'Titillium Web, sans-serif',
-        fontWeight: 'bold',
+        fontFamily: "Titillium Web",
         fontSize: 12,
       },
       tooltip,
