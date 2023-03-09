@@ -1,6 +1,7 @@
 import React from 'react';
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
+import GeoMapChart from './GeoMapChart';
 import Table from './Table';
 
 import {
@@ -11,6 +12,7 @@ import {
   getPieValues,
   getBarValues,
   getLineValues,
+  getMapValues,
 } from './utils/chartUtils';
 
 export default function ChartWrapper(props) {
@@ -76,7 +78,11 @@ export default function ChartWrapper(props) {
           role="tabpanel"
         >
           {/* <div key={id} className="d-flex justify-content-center"> */}
-          <div key={id} className="mid-chart" style={{ height: config.h ? config.h : '500px' }}>
+          <div
+            key={id}
+            className="mid-chart"
+            style={{ height: config.h ? config.h : '500px' }}
+          >
             {chartType === 'bar' && (
               <BasicChart
                 id={id}
@@ -95,6 +101,13 @@ export default function ChartWrapper(props) {
               <PieChart
                 id={id}
                 data={getPieValues(data)}
+                setEchartInstance={setEchartInstance}
+              />
+            )}
+            {chartType === 'map' && (
+              <GeoMapChart
+                id={id}
+                data={getMapValues(data)}
                 setEchartInstance={setEchartInstance}
               />
             )}
