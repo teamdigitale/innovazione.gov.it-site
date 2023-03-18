@@ -1,4 +1,6 @@
 import React from 'react';
+import { marked } from 'marked';
+
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
 import GeoMapChart from './GeoMapChart';
@@ -26,7 +28,9 @@ export default function ChartWrapper(props) {
     labelsDownload,
     labelsShare,
     labelsSource,
+    labelsUpdated,
     istance,
+    updated
   } = props;
 
   const { dataSource, config, chart } = data;
@@ -39,7 +43,15 @@ export default function ChartWrapper(props) {
   const csvData =
     chartType === 'pie' ? generateCSVPie(series) : generateCSV(dataSource);
 
-  // console.log('csvData', csvData);
+
+  const dateOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
+  const updatedAt = new Date(updated);
+  const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions)
+
+  const markedInfo = marked.parse(info).replaceAll(/<a/g, `<a class=""  target="_blank"`)
+
+  const markedSource = marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`)
+
   return (
     <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
@@ -73,7 +85,7 @@ export default function ChartWrapper(props) {
         <div
           aria-labelledby={`tab1-${id}-${istance}`}
           className="tab-pane mid-tabs-pane my-4 fade show active"
-          style={{ height: config.h ? config.h : '500px' }}
+          style={{ height: config.h ? config.h : '300px' }}
           id={`tab1-${id}-content-${istance}`}
           role="tabpanel"
         >
@@ -81,7 +93,7 @@ export default function ChartWrapper(props) {
           <div
             key={id}
             className="mid-chart"
-            style={{ height: config.h ? config.h : '500px' }}
+            style={{ height: config.h ? config.h : '300px' }}
           >
             {chartType === 'bar' && (
               <BasicChart
@@ -127,25 +139,21 @@ export default function ChartWrapper(props) {
           id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
-          <div dangerouslySetInnerHTML={{ __html: `${info || ' '}` }} />
+          <div dangerouslySetInnerHTML={{ __html: `${markedInfo || ' '}` }} />
+          <div className="mt-5 mid-caption">{labelsUpdated || 'Dati aggiornati al'} <span className="fw-semibold">{formatUpdatedAt}</span></div>
         </div>
       </div>
-      <div className="d-md-flex justify-content-md-between">
-        <div className="pt-3">
+      <div className="d-lg-flex justify-content-lg-between">
+        <div className="pt-2">
           <span className="fw-semibold text-uppercase">
             {labelsSource || 'Fonte dati'}:
           </span>
-          <a
-            href={source}
-            className="ms-2 fw-semibold"
-            target="_blank"
-            aria-label={labelsSource || 'Fonte dati'}
-          >
-            {source}
-          </a>
+          {source &&
+            <span className="ms-2" dangerouslySetInnerHTML={{ __html: (markedSource) || ' ' }} />
+          }
         </div>
         <div className="pb-3 d-flex flex-wrap align-items-center">
-          <span className="ps-md-2 pe-3 pe-md-0 pt-3 pb-md-0 fw-bold text-primary">
+          <span className="ps-lg-2 pe-3 pe-lg-0 pt-2 pb-lg-0 fw-bold text-primary">
             <a
               className="mid-button-link"
               title={labelsDownload || 'Scarica CSV'}
@@ -163,7 +171,7 @@ export default function ChartWrapper(props) {
               </svg>
             </a>
           </span>
-          <span className="ps-md-2 pe-3 pe-md-0 pt-3 pb-md-0 fw-bold text-primary">
+          <span className="ps-lg-2 pe-3 pe-lg-0 pt-2 pb-lg-0 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsDownload || 'Scarica PNG'}
@@ -181,7 +189,7 @@ export default function ChartWrapper(props) {
               </svg>
             </button>
           </span>
-          <span className="ps-md-2 pt-3 fw-bold text-primary">
+          <span className="ps-lg-2 pt-2 fw-bold text-primary">
             <button
               className="mid-button-link"
               title={labelsShare || 'Condividi'}
