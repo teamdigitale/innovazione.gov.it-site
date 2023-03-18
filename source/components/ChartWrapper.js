@@ -139,7 +139,7 @@ export default function ChartWrapper(props) {
           id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
-          <div dangerouslySetInnerHTML={{ __html: `${markedInfo || ' '}` }} />
+          <div dangerouslySetInnerHTML={{ __html: markedInfo || ' ' }} />
           <div className="mt-5 mid-caption">{labelsUpdated || 'Dati aggiornati al'} <span className="fw-semibold">{formatUpdatedAt}</span></div>
         </div>
       </div>
@@ -149,7 +149,7 @@ export default function ChartWrapper(props) {
             {labelsSource || 'Fonte dati'}:
           </span>
           {source &&
-            <span className="ms-2" dangerouslySetInnerHTML={{ __html: (markedSource) || ' ' }} />
+            <span className="ms-2" dangerouslySetInnerHTML={{ __html: markedSource || ' ' }} />
           }
         </div>
         <div className="pb-3 d-flex flex-wrap align-items-center">
