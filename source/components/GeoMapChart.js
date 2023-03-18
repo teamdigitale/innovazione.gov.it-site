@@ -118,7 +118,7 @@ function GeoMapChart({ data, id, setEchartInstance }) {
   if (!data) return <div>Caricamento...</div>;
   if (!geoData) return <div>In attesa dei dati geo...</div>;
 
-  const chartHeight = data.config?.h || '500px';
+  const chartHeight = data.config?.h || '300px';
 
   return (
     <div key={id} id={'chart_' + id}>
