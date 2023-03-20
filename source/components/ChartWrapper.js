@@ -1,5 +1,7 @@
 import React from 'react';
-import { marked } from 'marked';
+// import { marked } from 'marked';
+import ReactMarkdown from 'react-markdown'
+
 
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
@@ -48,9 +50,26 @@ export default function ChartWrapper(props) {
   const updatedAt = new Date(updated);
   const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions);
 
-  const markedInfo = info ? marked.parse(info).replaceAll(/<a/g, `<a class="" target="_blank"`) : "";
+  // const markedInfo = info ? marked.parse(info).replaceAll(/<a/g, `<a class="" target="_blank"`) : "";
 
-  const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
+  // const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
+  // const markedInfo = info ? <ReactMarkdown>This ~is not~ strikethrough, but ~~this is~~!</ReactMarkdown>
+
+  // const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
+
+  function LinkRenderer(props) {
+    return (
+      <a href={props.href} class="fw-semibold" target="_blank" aria-label={`${labelsSource || 'Fonte dati'}`} rel="noreferrer">
+        {props.children}
+      </a>
+    );
+  }
+
+  const MarkdownRenderer = ({ children }) => {
+    return (
+      <ReactMarkdown components={{ a: LinkRenderer }}>{children}</ReactMarkdown>
+    );
+  };
 
   return (
     <div className="px-3 pt-3 px-md-4 pt-md-4">
@@ -139,17 +158,23 @@ export default function ChartWrapper(props) {
           id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
-          <div dangerouslySetInnerHTML={{ __html: markedInfo || ' ' }} />
+          {info &&
+            <MarkdownRenderer components={{ a: LinkRenderer }}>
+              {info}
+            </MarkdownRenderer>
+          }
           <div className="mt-5 mid-caption">{labelsUpdated || 'Dati aggiornati al'} <span className="fw-semibold">{formatUpdatedAt}</span></div>
         </div>
       </div>
       <div className="d-lg-flex justify-content-lg-between">
-        <div className="pt-2">
+        <div className="pt-2 d-flex">
           <span className="fw-semibold text-uppercase">
             {labelsSource || 'Fonte dati'}:
           </span>
           {source &&
-            <span className="ms-2" dangerouslySetInnerHTML={{ __html: markedSource || ' ' }} />
+            <MarkdownRenderer components={{ a: LinkRenderer }}>
+              {source}
+            </MarkdownRenderer>
           }
         </div>
         <div className="pb-3 d-flex flex-wrap align-items-center">
