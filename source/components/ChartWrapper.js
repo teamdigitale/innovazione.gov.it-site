@@ -44,7 +44,6 @@ export default function ChartWrapper(props) {
   const csvData =
     chartType === 'pie' ? generateCSVPie(series) : generateCSV(dataSource);
 
-
   const dateOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const updatedAt = new Date(updated);
   const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions);
