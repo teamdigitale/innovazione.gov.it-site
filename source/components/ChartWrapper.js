@@ -1,7 +1,6 @@
 import React from 'react';
-// import { marked } from 'marked';
 import ReactMarkdown from 'react-markdown'
-
+import remarkGfm from 'remark-gfm'
 
 import BasicChart from './BasicChart';
 import PieChart from './PieChart';
@@ -50,16 +49,9 @@ export default function ChartWrapper(props) {
   const updatedAt = new Date(updated);
   const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions);
 
-  // const markedInfo = info ? marked.parse(info).replaceAll(/<a/g, `<a class="" target="_blank"`) : "";
-
-  // const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
-  // const markedInfo = info ? <ReactMarkdown>This ~is not~ strikethrough, but ~~this is~~!</ReactMarkdown>
-
-  // const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
-
   function LinkRenderer(props) {
     return (
-      <a href={props.href} class="fw-semibold" target="_blank" aria-label={`${labelsSource || 'Fonte dati'}`} rel="noreferrer">
+      <a href={props.href} className="fw-semibold" target="_blank" aria-label={`${labelsSource || 'Fonte dati'}`} rel="noreferrer">
         {props.children}
       </a>
     );
@@ -67,7 +59,9 @@ export default function ChartWrapper(props) {
 
   const MarkdownRenderer = ({ children }) => {
     return (
-      <ReactMarkdown components={{ a: LinkRenderer }}>{children}</ReactMarkdown>
+      <ReactMarkdown components={{ a: LinkRenderer }} remarkPlugins={[remarkGfm]}>
+        {children}
+      </ReactMarkdown>
     );
   };
 
@@ -168,7 +162,7 @@ export default function ChartWrapper(props) {
       </div>
       <div className="d-lg-flex justify-content-lg-between">
         <div className="pt-2 d-flex">
-          <span className="fw-semibold text-uppercase">
+          <span className="fw-semibold text-uppercase me-2">
             {labelsSource || 'Fonte dati'}:
           </span>
           {source &&
