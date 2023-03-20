@@ -46,11 +46,11 @@ export default function ChartWrapper(props) {
 
   const dateOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const updatedAt = new Date(updated);
-  const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions)
+  const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions);
 
-  const markedInfo = marked.parse(info).replaceAll(/<a/g, `<a class=""  target="_blank"`)
+  const markedInfo = info ? marked.parse(info).replaceAll(/<a/g, `<a class="" target="_blank"`) : "";
 
-  const markedSource = marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`)
+  const markedSource = source ? marked.parseInline(source).replaceAll(/<a/g, `<a class="fw-semibold"  target="_blank" aria-label="${labelsSource || 'Fonte dati'}"`) : "";
 
   return (
     <div className="px-3 pt-3 px-md-4 pt-md-4">
