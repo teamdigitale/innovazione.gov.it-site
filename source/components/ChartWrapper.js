@@ -48,6 +48,8 @@ export default function ChartWrapper(props) {
   const updatedAt = new Date(updated);
   const formatUpdatedAt = updatedAt.toLocaleDateString('it-IT', dateOptions);
 
+  const infoClean = info.replaceAll('&gt;', '>');
+
   function LinkRenderer(props) {
     return (
       <a href={props.href} className="fw-semibold" target="_blank" aria-label={`${labelsSource || 'Fonte dati'}`} rel="noreferrer">
@@ -152,8 +154,8 @@ export default function ChartWrapper(props) {
           role="tabpanel"
         >
           {info &&
-            <MarkdownRenderer components={{ a: LinkRenderer }}>
-              {info}
+            <MarkdownRenderer>
+              {infoClean}
             </MarkdownRenderer>
           }
           <div className="mt-5 mid-caption">{labelsUpdated || 'Dati aggiornati al'} <span className="fw-semibold">{formatUpdatedAt}</span></div>
@@ -165,7 +167,7 @@ export default function ChartWrapper(props) {
             {labelsSource || 'Fonte dati'}:
           </span>
           {source &&
-            <MarkdownRenderer components={{ a: LinkRenderer }}>
+            <MarkdownRenderer>
               {source}
             </MarkdownRenderer>
           }
