@@ -12,7 +12,7 @@
     top: 0;
     background: #f2f7fc;
     z-index: 1;
-    white-space: nowrap;
+    // white-space: nowrap;
     box-shadow: 0 -2px 0 currentColor inset, -1px 0 0 var(--bs-gray-100) inset;
 
     &:first-child {
@@ -25,7 +25,7 @@
       position: sticky;
       left: 0;
       background: #f2f7fc;
-      white-space: nowrap;
+      // white-space: nowrap;
 
       &:after {
         content: "";
