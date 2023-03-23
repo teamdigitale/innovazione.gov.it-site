@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import ReactEcharts from 'echarts-for-react';
+import React, { useRef, useEffect } from "react";
+import ReactEcharts from "echarts-for-react";
+import { formatTooltip, log } from "./utils/chartUtils";
 
 function PieChart({ id, data, setEchartInstance }) {
   const refCanvas = useRef(null);
@@ -7,7 +8,6 @@ function PieChart({ id, data, setEchartInstance }) {
     if (refCanvas.current) {
       try {
         const echartInstance = refCanvas.current.getEchartsInstance();
-        // const base64DataUrl = echartInstance.getDataURL();
         if (setEchartInstance) {
           setEchartInstance(echartInstance);
         }
@@ -28,66 +28,68 @@ function PieChart({ id, data, setEchartInstance }) {
     const config = data.config;
 
     const tooltip = {
-      trigger: config.tooltipTrigger || 'item',
+      trigger: config.tooltipTrigger || "item",
       axisPointer: {
         type: config.axisPointer,
       },
       valueFormatter: (value) => {
-        const formatter = config.tooltipFormatter;
-        const valueFormatter = config.valueFormatter;
-        let valueFormatted = value;
-        if (formatter) {
-          if (formatter === 'percentage') {
-            valueFormatted = `${value}%`;
-          } else if (formatter === 'currency') {
-            valueFormatted = new Intl.NumberFormat('it-IT', {
-              style: 'currency',
-              currency: 'EUR',
-            }).format(value);
-          } else if (formatter === 'number') {
-            valueFormatted = new Intl.NumberFormat('it-IT', {
-              style: 'decimal',
-            }).format(value);
-          }
-        }
-        return `${valueFormatted} ${valueFormatter ? valueFormatter : ''}`;
+        return formatTooltip(value, config);
       },
       show: config.tooltip,
-      // formatter: (params: any) => {},
     };
 
-    console.log('dataSource', dataSource);
-    let total = 0;
+    log("dataSource", dataSource);
+    let total = "";
     try {
       const serie = dataSource.series;
       let serieData;
-      if (typeof serie === 'object' && !Array.isArray(serie)) {
+      if (typeof serie === "object" && !Array.isArray(serie)) {
         serieData = serie.data;
       } else if (Array.isArray(serie)) {
         serieData = serie[0].data;
       }
-      total = getTotal(serieData);
+      const totale = getTotal(serieData);
+      total = formatTooltip(totale, config);
     } catch (error) {}
 
-    const options = {
-      backgroundColor: config.background ? config.background : '#F2F7FC',
+    let options = {
+      backgroundColor: config.background ? config.background : "#F2F7FC",
       title: {
-        text: `${config?.totalLabel || 'Total'}\n${total} ${
-          config.valueFormatter || ''
-        }`,
-        left: 'center',
-        top: 'center',
+        text: `${config?.totalLabel || "Totale"}\n${total ? total : "0"}`,
+        left: "center",
+        top: "center",
       },
-      color: config.colors,
-      series: dataSource.series,
+      color: config.colors || [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc",
+      ],
+      series: {
+        ...dataSource.series,
+        labelLine: {
+          show: config.labeLine,
+        },
+        label: {
+          show: true,
+          position: config.labeLine ? "outside" : "inside",
+        },
+      },
       textStyle: {
         fontFamily: "Titillium Web",
         fontSize: 12,
       },
       tooltip,
+
       legend: {
-        left: 'center',
-        top: 'bottom',
+        type: "scroll",
+        left: "center",
+        top: "bottom",
         show: config.legend,
       },
     };
@@ -95,16 +97,16 @@ function PieChart({ id, data, setEchartInstance }) {
   }
 
   if (!data) return <div>...</div>;
-  const chartHeight = data.config?.h || '300px';
+  const chartHeight = data.config?.h || "350px";
   return (
-    <div key={id} id={'chart_' + id}>
+    <div key={id} id={"chart_" + id}>
       <ReactEcharts
         option={getOptions(data)}
         ref={refCanvas}
         style={{
           height: chartHeight,
-          width: '100%',
-          maxWidth: '100%',
+          width: "100%",
+          maxWidth: "100%",
         }}
       />
     </div>

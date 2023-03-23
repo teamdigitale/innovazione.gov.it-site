@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import { useRef, useEffect, useState } from 'react';
-import * as echarts from 'echarts';
+import React from "react";
+import ReactEcharts from "echarts-for-react";
+import { useRef, useEffect, useState } from "react";
+import * as echarts from "echarts";
+import { formatTooltip, log } from "./utils/chartUtils";
 
 function GeoMapChart({ data, id, setEchartInstance }) {
   const [geoData, setGeoData] = useState(null);
@@ -26,26 +27,9 @@ function GeoMapChart({ data, id, setEchartInstance }) {
     const config = data.config;
 
     const tooltip = {
-      trigger: 'item',
+      trigger: "item",
       valueFormatter: (value) => {
-        const formatter = config.tooltipFormatter;
-        const valueFormatter = config.valueFormatter;
-        let valueFormatted = value;
-        if (formatter) {
-          if (formatter === 'percentage') {
-            valueFormatted = `${value}%`;
-          } else if (formatter === 'currency') {
-            valueFormatted = new Intl.NumberFormat('it-IT', {
-              style: 'currency',
-              currency: 'EUR',
-            }).format(value);
-          } else if (formatter === 'number') {
-            valueFormatted = new Intl.NumberFormat('it-IT', {
-              style: 'decimal',
-            }).format(value);
-          }
-        }
-        return `${valueFormatted} ${valueFormatter ? valueFormatter : ''}`;
+        return formatTooltip(value, config);
       },
       show: config.tooltip,
       // formatter: (params) => {},
@@ -54,22 +38,21 @@ function GeoMapChart({ data, id, setEchartInstance }) {
     const min = Math.min(...data.dataSource.series[0].data.map((d) => d.value));
     const max = Math.max(...data.dataSource.series[0].data.map((d) => d.value));
 
-    console.log('min', min);
-    console.log('max', max);
+    console.log("min", min);
+    console.log("max", max);
     const options = {
-      backgroundColor: config.background ? config.background : '#F2F7FC',
+      backgroundColor: config.background ? config.background : "#F2F7FC",
       color: config.colors,
       textStyle: {
-        fontFamily: 'Titillium Web, sans-serif',
-        fontWeight: 'semibold',
+        fontFamily: "Titillium Web, sans-serif",
         fontSize: 12,
       },
       tooltip,
       visualMap: {
-        left: 'right',
+        left: "right",
         min,
         max,
-        text: ['Max', 'Min'],
+        text: ["Max", "Min"],
         calculable: true,
         inRange: {
           color: config.colors,
@@ -81,15 +64,13 @@ function GeoMapChart({ data, id, setEchartInstance }) {
           ...serie,
           roam: true,
           emphasis: {
-            // focus: "self",
             itemStyle: {
-              areaColor: '#D3D3D3',
-              borderWidth: 1,
+              areaColor: "#F2F7FC",
             },
           },
-          name: config.serieName || '',
+          name: config.serieName || "",
           map: id,
-          nameProperty: config.nameProperty ? config.nameProperty : 'NAME',
+          nameProperty: config.nameProperty ? config.nameProperty : "NAME",
           // data: serie.data,
         };
       }),
@@ -100,12 +81,11 @@ function GeoMapChart({ data, id, setEchartInstance }) {
   async function getGeoData() {
     if (data) {
       const config = data.config;
-      const url = config?.geoJsonUrl || '';
+      const url = config?.geoJsonUrl || "";
       if (url) {
         const response = await fetch(url);
-        console.log('response', response.status);
+        console.log("response", response.status);
         const raw = await response.json();
-        // console.log('length', raw.features.length);
         setGeoData(raw);
       }
     }
@@ -118,17 +98,17 @@ function GeoMapChart({ data, id, setEchartInstance }) {
   if (!data) return <div>Caricamento...</div>;
   if (!geoData) return <div>In attesa dei dati geo...</div>;
 
-  const chartHeight = data.config?.h || '300px';
+  const chartHeight = data.config?.h || "500px";
 
   return (
-    <div key={id} id={'chart_' + id}>
+    <div key={id} id={"chart_" + id}>
       <ReactEcharts
         option={getOptions(data, geoData)}
         ref={refCanvas}
         style={{
-          width: '100%',
+          width: "100%",
           height: chartHeight,
-          maxWidth: '100%',
+          maxWidth: "100%",
         }}
       />
     </div>
