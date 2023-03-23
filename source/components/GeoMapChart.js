@@ -2,7 +2,7 @@ import React from "react";
 import ReactEcharts from "echarts-for-react";
 import { useRef, useEffect, useState } from "react";
 import * as echarts from "echarts";
-import { formatTooltip, log } from "./utils/chartUtils";
+import { formatTooltip } from "./utils/chartUtils";
 
 function GeoMapChart({ data, id, setEchartInstance }) {
   const [geoData, setGeoData] = useState(null);
@@ -32,7 +32,6 @@ function GeoMapChart({ data, id, setEchartInstance }) {
         return formatTooltip(value, config);
       },
       show: config.tooltip,
-      // formatter: (params) => {},
     };
 
     const min = Math.min(...data.dataSource.series[0].data.map((d) => d.value));

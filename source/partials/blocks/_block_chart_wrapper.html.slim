@@ -7,7 +7,7 @@
 
 .lightgrey-bg-a3.mb-4.border-2
     template id="#{block.chart.id}"
-      = chart_data
+      = chart_data || ''
     template class="info"
       = info_data
 

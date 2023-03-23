@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
-import { formatTooltip, log } from "./utils/chartUtils";
+import { formatTooltip } from "./utils/chartUtils";
 
 function PieChart({ id, data, setEchartInstance }) {
   const refCanvas = useRef(null);
@@ -28,17 +28,12 @@ function PieChart({ id, data, setEchartInstance }) {
     const config = data.config;
 
     const tooltip = {
-      trigger: config.tooltipTrigger || "item",
-      axisPointer: {
-        type: config.axisPointer,
-      },
+      trigger: "item",
       valueFormatter: (value) => {
         return formatTooltip(value, config);
       },
       show: config.tooltip,
     };
-
-    log("dataSource", dataSource);
     let total = "";
     try {
       const serie = dataSource.series;
@@ -85,7 +80,6 @@ function PieChart({ id, data, setEchartInstance }) {
         fontSize: 12,
       },
       tooltip,
-
       legend: {
         type: "scroll",
         left: "center",

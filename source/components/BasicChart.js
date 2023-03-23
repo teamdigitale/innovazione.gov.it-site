@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import ReactEcharts from "echarts-for-react";
-import { formatTooltip, log } from "./utils/chartUtils";
+import { formatTooltip } from "./utils/chartUtils";
 
 function BasicChart({ id, data, setEchartInstance }) {
   const refCanvas = useRef(null);
