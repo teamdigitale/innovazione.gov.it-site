@@ -158,7 +158,7 @@ export default function ChartWrapper(props) {
           </div>
         </div>
       </div>
-      <div className="d-lg-flex justify-content-lg-between">
+      <div className="d-lg-flex justify-content-lg-between mid-caption ">
         <div className="pt-2 d-flex">
           <span className="fw-semibold text-uppercase me-2">
             {labelsSource || "Fonte dati"}:
