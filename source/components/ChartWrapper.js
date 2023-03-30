@@ -47,6 +47,9 @@ export default function ChartWrapper(props) {
   const defaultHeight =
     chartType === "map" ? "500px" : chartType === "pie" ? "350px" : "300px";
 
+  const sharableSocials=['facebook', 'twitter', 'linkedin', 'whatsapp']
+
+
   function LinkRenderer(props) {
     return (
       <a
@@ -203,21 +206,44 @@ export default function ChartWrapper(props) {
             </button>
           </span>
           <span className="ps-lg-2 pt-2 fw-bold text-primary">
-            <button
-              className="mid-button-link"
-              title={labelsShare || "Condividi"}
-              aria-label={labelsShare || "Condividi"}
-            >
-              {labelsShare || "Condividi"}
-              <svg
-                className="icon icon-sm icon-primary ms-1"
-                focusable="false"
-                aria-label={labelsShare || "Condividi"}
-                role="img"
-              >
-                <use href="/images/sprite.svg#it-share"></use>
-              </svg>
-            </button>
+            <div className="dropdown">
+
+              <button aria-expanded="false" aria-haspopup="true" className="mid-button-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuLink" type="button">
+                {labelsShare || "Condividi"}
+                <svg
+                  className="icon icon-sm icon-primary ms-1"
+                  focusable="false"
+                  aria-label={labelsShare || "Condividi"}
+                  role="img"
+                >
+                  <use href="/images/sprite.svg#it-share"></use>
+                </svg>
+              </button>
+
+              <div aria-labelledby="dropdownMenuLink" className="dropdown-menu">
+                <div className="link-list-wrapper">
+                  <ul className="link-list px-4">
+                    {sharableSocials.map((social) => {
+                      return (
+                        <li key={social}>
+                          <button
+                            className="mid-button-link text-capitalize text-primary fw-normal social-share"
+                            data-width="800"
+                            data-height="600"
+                            data-sharer={`${social}`}
+                            data-title={title}
+                            data-url={`${window.location.href}/#chart-${id}`}
+                          >
+                            {social}
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </span>
         </div>
       </div>
