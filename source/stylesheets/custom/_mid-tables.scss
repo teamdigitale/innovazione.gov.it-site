@@ -15,16 +15,16 @@
     // white-space: nowrap;
     box-shadow: 0 -2px 0 currentColor inset, -1px 0 0 var(--bs-gray-100) inset;
 
-    &:first-child {
-      left: 0;
-      z-index: 2;
-    }
+    // &:first-child {
+    //   left: 0;
+    //   z-index: 2;
+    // }
   }
   tbody th {
     &:first-child {
-      position: sticky;
-      left: 0;
-      background: #f2f7fc;
+      // position: sticky;
+      // left: 0;
+      // background: #f2f7fc;
       // white-space: nowrap;
 
       &:after {
