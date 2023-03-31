@@ -210,8 +210,14 @@ export default function ChartWrapper(props) {
           </span>
           <span className="ps-lg-2 pt-2 fw-bold text-primary">
             <div className="dropdown">
-
-              <button aria-expanded="false" aria-haspopup="true" className="mid-button-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuLink" type="button">
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="mid-button-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                id="dropdownMenuLink"
+                type="button"
+              >
                 {labelsShare || "Condividi"}
                 <svg
                   className="icon icon-sm icon-primary ms-1"
@@ -240,13 +246,12 @@ export default function ChartWrapper(props) {
                             {social}
                           </button>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </div>
               </div>
             </div>
-
           </span>
         </div>
       </div>

@@ -5,22 +5,9 @@ import * as echarts from "echarts";
 import { formatTooltip } from "./utils/chartUtils";
 
 function GeoMapChart({ data, id, setEchartInstance }) {
+  const refCanvas = useRef(null);
   const [geoData, setGeoData] = useState(null);
-  const refCanvas = useRef();
-
-  useEffect(() => {
-    if (refCanvas.current) {
-      try {
-        const echartInstance = refCanvas.current.getEchartsInstance();
-        // const base64DataUrl = echartInstance.getDataURL();
-        if (setEchartInstance) {
-          setEchartInstance(echartInstance);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  }, [refCanvas.current]);
+  const [weDoNotHaveInstance, setWeDoNotHaveInstance] = useState(true);
 
   function getOptions(data, geoData) {
     echarts.registerMap(id, geoData);
@@ -31,14 +18,12 @@ function GeoMapChart({ data, id, setEchartInstance }) {
       valueFormatter: (value) => {
         return formatTooltip(value, config);
       },
-      show: config.tooltip,
+      show: config.tooltip ?? true,
     };
 
     const min = Math.min(...data.dataSource.series[0].data.map((d) => d.value));
     const max = Math.max(...data.dataSource.series[0].data.map((d) => d.value));
 
-    console.log("min", min);
-    console.log("max", max);
     const options = {
       backgroundColor: config.background ? config.background : "#F2F7FC",
       color: config.colors,
@@ -61,16 +46,25 @@ function GeoMapChart({ data, id, setEchartInstance }) {
       series: data.dataSource.series.map((serie) => {
         return {
           ...serie,
+          label: {
+            show: config.showMapLabels ? true : false,
+            color: "inherit",
+          },
+          zoom: 1.2,
           roam: true,
+          select: { disabled: true },
           emphasis: {
+            label: {
+              show: config.showMapLabels,
+              color: "inherit",
+            },
             itemStyle: {
-              areaColor: "#F2F7FC",
+              areaColor: config.areaColor || "#F2F7FC",
             },
           },
           name: config.serieName || "",
           map: id,
           nameProperty: config.nameProperty ? config.nameProperty : "NAME",
-          // data: serie.data,
         };
       }),
     };
@@ -82,10 +76,14 @@ function GeoMapChart({ data, id, setEchartInstance }) {
       const config = data.config;
       const url = config?.geoJsonUrl || "";
       if (url) {
-        const response = await fetch(url);
-        console.log("response", response.status);
-        const raw = await response.json();
-        setGeoData(raw);
+        try {
+          const response = await fetch(url);
+          const raw = await response.json();
+          setGeoData(raw);
+        } catch (error) {
+          console.log(error);
+          setGeoData(null);
+        }
       }
     }
   }
@@ -94,22 +92,32 @@ function GeoMapChart({ data, id, setEchartInstance }) {
     getGeoData();
   }, [data]);
 
-  if (!data) return <div>Caricamento...</div>;
-  if (!geoData) return <div>In attesa dei dati geo...</div>;
+  useEffect(() => {
+    if (refCanvas.current && weDoNotHaveInstance) {
+      const echartInstance = refCanvas.current.getEchartsInstance();
+      setEchartInstance(echartInstance);
+      setWeDoNotHaveInstance(false);
+    }
+  });
 
   const chartHeight = data.config?.h || "500px";
-
+  const options = data && geoData ? getOptions(data, geoData) : null;
   return (
     <div key={id} id={"chart_" + id}>
-      <ReactEcharts
-        option={getOptions(data, geoData)}
-        ref={refCanvas}
-        style={{
-          width: "100%",
-          height: chartHeight,
-          maxWidth: "100%",
-        }}
-      />
+      {!data && <div>Caricamento...</div>}
+      {!geoData && <div>In attesa dei dati geo...</div>}
+      {options && (
+        <ReactEcharts
+          id={id}
+          option={options}
+          ref={refCanvas}
+          style={{
+            width: "100%",
+            height: chartHeight,
+            maxWidth: "100%",
+          }}
+        />
+      )}
     </div>
   );
 }

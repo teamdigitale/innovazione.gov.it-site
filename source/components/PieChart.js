@@ -83,8 +83,8 @@ function PieChart({ id, data, setEchartInstance }) {
       legend: {
         type: "scroll",
         left: "center",
-        top: "bottom",
-        show: config.legend,
+        top: config?.legendPosition || "bottom",
+        show: config.legend ?? true,
       },
     };
     return options;

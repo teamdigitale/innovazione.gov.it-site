@@ -131,22 +131,46 @@ function BasicChart({ id, data, setEchartInstance }) {
 
     const options = {
       backgroundColor: config.background ? config.background : "#F2F7FC",
-      color: config.colors || null,
+      color: config.colors || [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc",
+      ],
       ...axis,
       grid,
       series: data.dataSource.series.map((serie) => {
-        let rest = { stack: false, smooth: false };
-        if (config.stack) {
+        let rest = {};
+        if (serie.type === "bar" && config.stack) {
           let stack = config.stack
             ? config.direction === "vertical"
               ? "x"
               : "y"
             : false;
-          rest = { ...rest, stack };
+          rest = {
+            ...rest,
+            stack,
+            itemStyle: { borderColor: "white", borderWidth: 0.25 },
+          };
         }
-        if (serie.type === "line" && config.smooth) {
-          let smooth = config.smooth ? parseFloat(config.smooth) : false;
-          rest = { ...rest, smooth };
+        if (serie.type === "line") {
+          if (config.smooth) {
+            let smooth = config.smooth ? parseFloat(config.smooth) : false;
+            rest = { ...rest, smooth };
+          }
+          if (config.showArea) {
+            const area = { areaStyle: {} };
+            rest = { ...rest, ...area };
+          }
+          if (config.showAllSymbol) {
+            const symbols = { showAllSymbol: true || "auto" };
+            rest = { ...rest, ...symbols };
+          }
         }
         return {
           ...serie,
@@ -161,8 +185,8 @@ function BasicChart({ id, data, setEchartInstance }) {
       legend: {
         type: "scroll",
         left: "center",
-        top: "bottom",
-        show: config.legend,
+        top: config?.legendPosition || "bottom",
+        show: config.legend ?? true,
       },
       ...dataZoomOpt,
     };

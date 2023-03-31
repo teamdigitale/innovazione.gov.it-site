@@ -5,6 +5,7 @@ export function log(...args) {
 }
 
 export async function downLoadPng(echartInstance, name) {
+  if (!echartInstance) return;
   const dataUrl = echartInstance.getDataURL();
   try {
     const blob = await fetch(dataUrl).then((res) => res.blob());
@@ -115,7 +116,11 @@ export function getPieValues({ config, data, chart }) {
           show: false,
         },
         data: series.map((row) => {
-          return { name: row.name, value: row.data[0] };
+          return {
+            name: row.name,
+            value: row.data[0],
+            itemStyle: { borderColor: "white", borderWidth: 1 },
+          };
         }),
       },
     },
@@ -139,12 +144,6 @@ export function getMapValues({ config, data, chart }) {
       series: [
         {
           type: "map",
-          label: {
-            show: true,
-          },
-          zoom: 1.2,
-          roam: "scale",
-          select: { disabled: true },
           data: objectData,
         },
       ],
