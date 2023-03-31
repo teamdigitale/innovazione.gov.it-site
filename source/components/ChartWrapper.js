@@ -49,6 +49,9 @@ export default function ChartWrapper(props) {
 
   const sharableSocials=['facebook', 'twitter', 'linkedin', 'whatsapp']
 
+  if (window) {
+    window.Sharer.init();
+  }
 
   function LinkRenderer(props) {
     return (
@@ -230,7 +233,7 @@ export default function ChartWrapper(props) {
                             className="mid-button-link text-capitalize text-primary fw-normal social-share"
                             data-width="800"
                             data-height="600"
-                            data-sharer={`${social}`}
+                            data-sharer={social}
                             data-title={title}
                             data-url={`${window.location.href}/#chart-${id}`}
                           >
