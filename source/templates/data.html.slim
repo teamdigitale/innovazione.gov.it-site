@@ -13,16 +13,23 @@
 
 
 .container
-  .col-lg-6
-    h2.h4.text-uppercase.neutral-1-color
-      = page.introduction_title
-    p
-      = page.introduction
+  .row
+    .col-lg-6
+      h2.h4.text-uppercase.neutral-1-color
+        = page.introduction_title
+      p
+        = page.introduction
 
-  - page.content_blocks.each_with_index do |block, i|
+    - page.content_blocks.each_with_index do |block, i|
+      = partial "partials/blocks/#{block.item_type.api_key}",
+        locals: {block: block,
+        image_right: false,
+        image_mobile_top: true,
+        compact_columns: true,
+        istance: i}
 
-    - if block.item_type.api_key == "chart_block"
-      = partial "partials/blocks/block_chart_wrapper", locals: {block: block, istance: i}
+      / - if block.item_type.api_key == "block_chart"
+      /   = partial "partials/blocks/block_chart", locals: {block: block, istance: i}
 
-    - if block.item_type.api_key == "kpi_group"
-      = partial "partials/blocks/block_kpi", locals: {block: block}
+      / - if block.item_type.api_key == "block_kpi"
+      /   = partial "partials/blocks/block_kpi", locals: {block: block}
