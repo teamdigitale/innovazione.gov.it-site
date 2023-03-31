@@ -52,6 +52,7 @@ export default function ChartWrapper(props) {
   if (window) {
     window.Sharer.init();
   }
+  const sharedUrl = window.location.href.replace(window.location.hash, "")
 
   function LinkRenderer(props) {
     return (
@@ -241,7 +242,7 @@ export default function ChartWrapper(props) {
                             data-height="600"
                             data-sharer={social}
                             data-title={title}
-                            data-url={`${window.location.href}/#chart-${id}`}
+                            data-url={`${sharedUrl}#chart-${id}`}
                           >
                             {social}
                           </button>
