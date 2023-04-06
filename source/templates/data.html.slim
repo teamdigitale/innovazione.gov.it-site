@@ -5,11 +5,11 @@
   .text-center.mb-0.mb-lg-4
     h1.h1
       = page.title
-    span = "Ultimo aggiornamento "
-    span = partial "partials/formatted-date",
+    span.mid-caption.fw-semibold = "Ultimo aggiornamento "
+    span.mid-caption.fw-semibold = partial "partials/formatted-date",
             locals: {date: page.last_update,
             format: "%d/%m/%Y"}
-    p.lead.mid-caption--lead = page.text_link_to_source
+    p = page.text_link_to_source
 
 
 .container

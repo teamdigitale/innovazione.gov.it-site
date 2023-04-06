@@ -158,10 +158,12 @@ export default function ChartWrapper(props) {
           id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
-          {info && <MarkdownRenderer>{infoClean}</MarkdownRenderer>}
-          <div className="mt-5 mid-caption">
-            {labelsUpdated || "Dati aggiornati al"}{" "}
-            <span className="fw-semibold">{formatUpdatedAt}</span>
+          <div className="mid-tabs-pane-inner">
+            {info && <MarkdownRenderer>{infoClean}</MarkdownRenderer>}
+            <div className="mt-5 mid-caption">
+              {labelsUpdated || "Dati aggiornati al"}{" "}
+              <span className="fw-semibold">{formatUpdatedAt}</span>
+            </div>
           </div>
         </div>
       </div>
