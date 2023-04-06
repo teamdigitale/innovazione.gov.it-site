@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
 import { formatTooltip } from "./utils/chartUtils";
 
-function PieChart({ id, data, setEchartInstance }) {
+function PieChart({ id, data, setEchartInstance, isMobile = false }) {
   const refCanvas = useRef(null);
   useEffect(() => {
     if (refCanvas.current) {
@@ -29,7 +29,12 @@ function PieChart({ id, data, setEchartInstance }) {
 
     const tooltip = {
       trigger: "item",
-      extraCssText: "z-index:1000;width:250px;",
+      confine: true,
+      extraCssText: "z-index:1000;max-width:80%;white-space:pre-wrap;",
+      textStyle: {
+        overflow: "breakAll",
+        width: 150,
+      },
       valueFormatter: (value) => {
         return formatTooltip(value, config);
       },
@@ -53,7 +58,13 @@ function PieChart({ id, data, setEchartInstance }) {
       title: {
         text: `${config?.totalLabel || "Totale"}\n${total ? total : "0"}`,
         left: "center",
-        top: "center",
+        top: "50%",
+        textVerticalAlign: "middle",
+        textStyle: {
+          fontFamily: "Titillium Web",
+          fontWeight: "normal",
+          fontSize: 14,
+        },
       },
       color: config.colors || [
         "#5470c6",
@@ -92,7 +103,8 @@ function PieChart({ id, data, setEchartInstance }) {
   }
 
   if (!data) return <div>...</div>;
-  const chartHeight = data.config?.h || "350px";
+  let h = data.config?.h || 350;
+  const chartHeight = isMobile ? (h / 100) * 75 : h;
   return (
     <div key={id} id={"chart_" + id}>
       <ReactEcharts

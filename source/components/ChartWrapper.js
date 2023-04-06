@@ -6,6 +6,7 @@ import BasicChart from "./BasicChart";
 import PieChart from "./PieChart";
 import GeoMapChart from "./GeoMapChart";
 import DataTable from "./DataTable";
+import { useElementSize } from "usehooks-ts";
 
 import {
   dataToCSV,
@@ -34,6 +35,8 @@ export default function ChartWrapper(props) {
 
   const { config, chart } = data;
   const [echartInstance, setEchartInstance] = React.useState(null);
+  const [wrapRef, { width, height }] = useElementSize();
+  const isMobile = width <= 460;
 
   const chartType = chart;
   const csvData = dataToCSV(data.data);
@@ -47,12 +50,12 @@ export default function ChartWrapper(props) {
   const defaultHeight =
     chartType === "map" ? "500px" : chartType === "pie" ? "350px" : "300px";
 
-  const sharableSocials=['facebook', 'twitter', 'linkedin', 'whatsapp']
+  const sharableSocials = ["facebook", "twitter", "linkedin", "whatsapp"];
 
   if (window) {
     window.Sharer.init();
   }
-  const sharedUrl = window.location.href.replace(window.location.hash, "")
+  const sharedUrl = window.location.href.replace(window.location.hash, "");
 
   function LinkRenderer(props) {
     return (
@@ -83,6 +86,14 @@ export default function ChartWrapper(props) {
     <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
+      <p>
+        <small>
+          DIMENSIONS = {width}, {height}
+        </small>
+      </p>
+      <p>
+        <small>ISMOBILE = {isMobile ? "TRUE" : "FALSE"}</small>
+      </p>
       <ul
         className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3"
         id="myTab"
@@ -120,12 +131,14 @@ export default function ChartWrapper(props) {
             key={id}
             className="mid-chart"
             style={{ height: config.h ? config.h : defaultHeight }}
+            ref={wrapRef}
           >
             {(chartType === "bar" || chartType === "line") && (
               <BasicChart
                 id={id}
                 data={getBasicValues(data)}
                 setEchartInstance={setEchartInstance}
+                isMobile={isMobile}
               />
             )}
             {chartType === "pie" && (
@@ -133,6 +146,7 @@ export default function ChartWrapper(props) {
                 id={id}
                 data={getPieValues(data)}
                 setEchartInstance={setEchartInstance}
+                isMobile={isMobile}
               />
             )}
             {chartType === "map" && (
@@ -140,6 +154,7 @@ export default function ChartWrapper(props) {
                 id={id}
                 data={getMapValues(data)}
                 setEchartInstance={setEchartInstance}
+                isMobile={isMobile}
               />
             )}
           </div>

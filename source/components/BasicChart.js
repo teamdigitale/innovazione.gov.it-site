@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ReactEcharts from "echarts-for-react";
 import { formatTooltip } from "./utils/chartUtils";
 
-function BasicChart({ id, data, setEchartInstance }) {
+function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
   const refCanvas = useRef(null);
 
   useEffect(() => {
@@ -15,8 +15,9 @@ function BasicChart({ id, data, setEchartInstance }) {
 
   function getOptions(data) {
     const config = data.config;
+    const isLine = data.dataSource?.series[0]?.type === "line" ? true : false;
     let grid = {
-      left: config.gridLeft || "10%",
+      left: isMobile ? 10 : config.gridLeft || "10%",
       right: config.gridRight || "10%",
       height: config.gridHeight || "auto",
       width: config.gridWidth || "auto",
@@ -94,13 +95,14 @@ function BasicChart({ id, data, setEchartInstance }) {
               ...xName,
               type: "category",
               data: data.dataSource.categories,
-              alignTicks: true,
+              axisTick: { show: false },
             },
             yAxis: {
               ...yName,
               nameRotate: 90,
               type: "value",
-              alignTicks: true,
+              axisTick: { show: false },
+              axisLabel: { show: !isMobile },
             },
           }
         : {
@@ -109,25 +111,31 @@ function BasicChart({ id, data, setEchartInstance }) {
               nameRotate: 90,
               type: "category",
               data: data.dataSource.categories,
-              alignTicks: true,
+              axisTick: { show: false },
+              axisLabel: { show: !isMobile },
             },
             xAxis: {
               ...yName,
               type: "value",
-              alignTicks: true,
+              axisTick: { show: false },
             },
           };
 
     const tooltip = {
       trigger: config.tooltipTrigger || "item",
+      confine: true,
+      extraCssText: "z-index:1000;max-width:90%;white-space:pre-wrap;",
+      textStyle: {
+        overflow: "breakAll",
+        width: 150,
+      },
       axisPointer: {
-        type: "shadow",
+        type: isLine ? "cross" : "shadow",
       },
       valueFormatter: (value) => {
         return formatTooltip(value, config);
       },
       show: config.tooltip,
-      extraCssText: "z-index:1000;width:250px;",
     };
 
     const options = {
@@ -159,6 +167,27 @@ function BasicChart({ id, data, setEchartInstance }) {
             itemStyle: { borderColor: "white", borderWidth: 0.25 },
           };
         }
+
+        // if (
+        //   serie.type === "bar" &&
+        //   isMobile &&
+        //   config.direction === "horizontal"
+        // ) {
+        //   rest = {
+        //     ...rest,
+        //     label: {
+        //       show: true,
+        //       formatter: "{b}",
+        //       position: "insideLeft",
+        //       verticalAlign: "top",
+        //     },
+        //     barWidth: "20%",
+        //     itemStyle: {
+        //       borderRadius: [0, 10, 10, 0],
+        //     },
+        //   };
+        // }
+
         if (serie.type === "line") {
           if (config.smooth) {
             let smooth = config.smooth ? parseFloat(config.smooth) : false;
