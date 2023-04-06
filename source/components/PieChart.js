@@ -29,6 +29,7 @@ function PieChart({ id, data, setEchartInstance }) {
 
     const tooltip = {
       trigger: "item",
+      extraCssText: "z-index:1000;width:250px;",
       valueFormatter: (value) => {
         return formatTooltip(value, config);
       },

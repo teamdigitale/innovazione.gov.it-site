@@ -127,6 +127,7 @@ function BasicChart({ id, data, setEchartInstance }) {
         return formatTooltip(value, config);
       },
       show: config.tooltip,
+      extraCssText: "z-index:1000;width:250px;",
     };
 
     const options = {
