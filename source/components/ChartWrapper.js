@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -6,7 +6,7 @@ import BasicChart from "./BasicChart";
 import PieChart from "./PieChart";
 import GeoMapChart from "./GeoMapChart";
 import DataTable from "./DataTable";
-import { useElementSize } from "usehooks-ts";
+// import { useElementSize } from "usehooks-ts";
 
 import {
   dataToCSV,
@@ -34,9 +34,8 @@ export default function ChartWrapper(props) {
   } = props;
 
   const { config, chart } = data;
-  const [echartInstance, setEchartInstance] = React.useState(null);
-  const [wrapRef, { width, height }] = useElementSize();
-  const isMobile = width <= 460;
+  const [echartInstance, setEchartInstance] = useState(null);
+  // const [wrapRef, { width, height }] = useElementSize();
 
   const chartType = chart;
   const csvData = dataToCSV(data.data);
@@ -82,14 +81,34 @@ export default function ChartWrapper(props) {
     );
   };
 
+  const wrapRef = useRef(null);
+  const [width, setWidth] = useState(null);
+  const isMobile = width && width <= 460;
+
+  function setDimension() {
+    setWidth(wrapRef?.current?.clientWidth);
+  }
+
+  // useEffect(() => {
+  //   if (wrapRef.current && !width) {
+  //     setDimension();
+  //   }
+  // }, [wrapRef.current]);
+
+  useEffect(() => {
+    window.addEventListener("resize", setDimension);
+    setDimension();
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, []);
+
   return (
     <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
       <p>
-        <small>
-          DIMENSIONS = {width}, {height}
-        </small>
+        <small>WIDTH = {width}</small>
       </p>
       <p>
         <small>ISMOBILE = {isMobile ? "TRUE" : "FALSE"}</small>
