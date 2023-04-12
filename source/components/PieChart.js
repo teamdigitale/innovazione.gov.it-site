@@ -63,7 +63,7 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
         textVerticalAlign: "middle",
         textStyle: {
           fontFamily: "Titillium Web",
-          fontWeight: "semibold",
+          fontWeight: "bold",
           fontSize: 14,
         },
       },
