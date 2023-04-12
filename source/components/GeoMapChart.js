@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import * as echarts from "echarts";
 import { formatTooltip } from "./utils/chartUtils";
 
-function GeoMapChart({ data, id, setEchartInstance }) {
+function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
   const refCanvas = useRef(null);
   const [geoData, setGeoData] = useState(null);
   const [weDoNotHaveInstance, setWeDoNotHaveInstance] = useState(true);

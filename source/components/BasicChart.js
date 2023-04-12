@@ -16,8 +16,9 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
   function getOptions(data) {
     const config = data.config;
     const isLine = data.dataSource?.series[0]?.type === "line" ? true : false;
+    const responsive = config.responsive || true;
     let grid = {
-      left: isMobile ? 10 : config.gridLeft || "10%",
+      left: isMobile && responsive ? 10 : config.gridLeft || "10%",
       right: config.gridRight || "10%",
       height: config.gridHeight || "auto",
       width: config.gridWidth || "auto",
@@ -102,7 +103,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               nameRotate: 90,
               type: "value",
               axisTick: { show: false },
-              axisLabel: { show: !isMobile },
+              axisLabel: { show: responsive ? !isMobile : true },
             },
           }
         : {
@@ -112,7 +113,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               type: "category",
               data: data.dataSource.categories,
               axisTick: { show: false },
-              axisLabel: { show: !isMobile },
+              axisLabel: { show: responsive ? !isMobile : true },
             },
             xAxis: {
               ...yName,

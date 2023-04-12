@@ -6,7 +6,6 @@ import BasicChart from "./BasicChart";
 import PieChart from "./PieChart";
 import GeoMapChart from "./GeoMapChart";
 import DataTable from "./DataTable";
-// import { useElementSize } from "usehooks-ts";
 
 import {
   dataToCSV,
@@ -83,7 +82,7 @@ export default function ChartWrapper(props) {
 
   const wrapRef = useRef(null);
   const [width, setWidth] = useState(null);
-  const isMobile = width && width <= 460;
+  const isMobile = width && width <= 700;
 
   function setDimension() {
     setWidth(wrapRef?.current?.clientWidth);
@@ -107,12 +106,6 @@ export default function ChartWrapper(props) {
     <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
       <p className="mid-caption">{subtitle}</p>
-      <p>
-        <small>WIDTH = {width}</small>
-      </p>
-      <p>
-        <small>ISMOBILE = {isMobile ? "TRUE" : "FALSE"}</small>
-      </p>
       <ul
         className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3"
         id="myTab"

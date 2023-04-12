@@ -4,6 +4,7 @@ import { formatTooltip } from "./utils/chartUtils";
 
 function PieChart({ id, data, setEchartInstance, isMobile = false }) {
   const refCanvas = useRef(null);
+
   useEffect(() => {
     if (refCanvas.current) {
       try {
@@ -62,7 +63,7 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
         textVerticalAlign: "middle",
         textStyle: {
           fontFamily: "Titillium Web",
-          fontWeight: "normal",
+          fontWeight: "semibold",
           fontSize: 14,
         },
       },
@@ -104,7 +105,9 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
 
   if (!data) return <div>...</div>;
   let h = data.config?.h || 350;
-  const chartHeight = isMobile ? (h / 100) * 75 : h;
+  const responsive = data.config?.responsive || true;
+  const chartHeight = responsive && isMobile ? (h / 100) * 80 : h;
+
   return (
     <div key={id} id={"chart_" + id}>
       <ReactEcharts
