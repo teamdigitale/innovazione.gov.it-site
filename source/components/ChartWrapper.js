@@ -88,11 +88,6 @@ export default function ChartWrapper(props) {
     setWidth(wrapRef?.current?.clientWidth);
   }
 
-  // useEffect(() => {
-  //   if (wrapRef.current && !width) {
-  //     setDimension();
-  //   }
-  // }, [wrapRef.current]);
 
   useEffect(() => {
     window.addEventListener("resize", setDimension);
