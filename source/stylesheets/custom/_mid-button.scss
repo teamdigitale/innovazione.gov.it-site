@@ -6,3 +6,21 @@
 .mid-button-banner {
   box-shadow: inset 0 0 0 1px $text-color;
 }
+
+.mid-button-link {
+  @extend .btn;
+  font-size: 14px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  color: #06c;
+  text-transform: none;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &:hover {
+    color: #06c;
+    text-decoration: underline;
+  }
+}

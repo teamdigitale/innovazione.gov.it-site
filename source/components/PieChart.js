@@ -1,61 +1,126 @@
-import React, { useRef, useEffect } from 'react';
-import ReactEcharts from 'echarts-for-react';
+import React, { useRef, useEffect } from "react";
+import ReactEcharts from "echarts-for-react";
+import { formatTooltip } from "./utils/chartUtils";
 
-function PieChart({ id, config, dataSource, setEchartInstance }) {
+function PieChart({ id, data, setEchartInstance, isMobile = false }) {
   const refCanvas = useRef(null);
+
   useEffect(() => {
     if (refCanvas.current) {
-      const echartInstance = refCanvas.current.getEchartsInstance();
-      // const base64DataUrl = echartInstance.getDataURL();
-      setEchartInstance(echartInstance);
+      try {
+        const echartInstance = refCanvas.current.getEchartsInstance();
+        if (setEchartInstance) {
+          setEchartInstance(echartInstance);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
   }, [refCanvas.current]);
 
-  const options = {
-    backgroundColor: config.background ? config.background : '#F2F7FC',
-    title: {
-      text: config?.titles?.join('\n') || 'PIE CHART',
-      left: 'center',
-      top: 'center',
-    },
-    color: config.colors,
-    series: dataSource.series,
-    textStyle: {
-      fontWeight: '600',
-      fontSize: 14,
-    },
-    tooltip: {
-      show: config.tooltip,
-    },
-    legend: {
-      left: 'center',
-      top: 'top',
-      show: config.legend,
-    },
-    toolbox: {
-      show: config.toolbox,
-      left: 'right',
-      top: 'top',
-      feature: {
-        // dataView: {},
-        // restore: {},
-        saveAsImage: {},
+  function getTotal(data) {
+    return data.reduce((acc, v) => {
+      return acc + Number(v.value);
+    }, 0);
+  }
+
+  function getOptions(data) {
+    const { dataSource } = data;
+    const config = data.config;
+
+    const tooltip = {
+      trigger: "item",
+      confine: true,
+      extraCssText: "z-index:1000;max-width:80%;white-space:pre-wrap;",
+      textStyle: {
+        overflow: "breakAll",
+        width: 150,
       },
-    },
-  };
+      valueFormatter: (value) => {
+        return formatTooltip(value, config);
+      },
+      show: config.tooltip,
+    };
+    let total = "";
+    try {
+      const serie = dataSource.series;
+      let serieData;
+      if (typeof serie === "object" && !Array.isArray(serie)) {
+        serieData = serie.data;
+      } else if (Array.isArray(serie)) {
+        serieData = serie[0].data;
+      }
+      const totale = getTotal(serieData);
+      total = formatTooltip(totale, config);
+    } catch (error) {}
+
+    let options = {
+      backgroundColor: config.background ? config.background : "#F2F7FC",
+      title: {
+        text: `${config?.totalLabel || "Totale"}\n${total ? total : "0"}`,
+        left: "center",
+        top: "50%",
+        textVerticalAlign: "middle",
+        textStyle: {
+          fontFamily: "Titillium Web",
+          fontWeight: "600",
+          fontSize: 16,
+          color: "#003366"
+        },
+      },
+      color: config.colors || [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc",
+      ],
+      series: {
+        ...dataSource.series,
+        labelLine: {
+          show: config.labeLine,
+        },
+        label: {
+          show: true,
+          position: config.labeLine ? "outside" : "inside",
+        },
+      },
+      textStyle: {
+        fontFamily: "Titillium Web",
+        fontSize: 12,
+      },
+      tooltip,
+      legend: {
+        type: "scroll",
+        left: "center",
+        top: config?.legendPosition || "bottom",
+        show: config.legend ?? true,
+      },
+    };
+    return options;
+  }
+
+  if (!data) return <div>...</div>;
+  let h = data.config?.h || 350;
+  const responsive = data.config?.responsive || true;
+  const chartHeight = responsive && isMobile ? (h / 100) * 80 : h;
+
   return (
-    <>
+    <div key={id} id={"chart_" + id}>
       <ReactEcharts
-        option={options}
+        option={getOptions(data)}
         ref={refCanvas}
         style={{
-          width: config.w,
-          height: config.h,
-          maxWidth: '100%',
+          height: chartHeight,
+          width: "100%",
+          maxWidth: "100%",
         }}
       />
-      {/* <button onClick={() => getImage()}>Download</button> */}
-    </>
+    </div>
   );
 }
 

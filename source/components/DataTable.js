@@ -1,41 +1,29 @@
-import React from 'react';
-export default function Table({ id, ds }) {
-  let columns = ['Name', 'Value'];
-  let rows = [];
-  if (Array.isArray(ds.series)) {
-    columns = ['', ...ds.categories];
-    rows = ds.series.map((serie) => {
-      const { name = '', data = [] } = serie;
-      return [name, ...data];
-    });
-  } else {
-    rows = ds.series.data.map(({ name, value }) => [name, value]);
-  }
-
+import React from "react";
+export default function Table({ id, data }) {
   return (
     <div className="mid-table-wrapper">
       <table className="table table-hover mid-table">
         <thead>
           <tr>
-            {columns.map((c, i) => {
+            {data[0].map((c, i) => {
               if (i === 0) {
-                return(
+                return (
                   <th scope="col" key={`${id}-th_` + i}>
                     {c}
                   </th>
-                )
+                );
               } else {
                 return (
                   <th scope="col" key={`${id}-th_` + i}>
                     {c}
                   </th>
-                )
+                );
               }
             })}
           </tr>
         </thead>
         <tbody>
-          {rows.map((r, ii) => (
+          {data.slice(1).map((r, ii) => (
             <tr key={`${id}-tr_` + ii}>
               {r.map((v, iii) => {
                 if (iii === 0) {
@@ -45,11 +33,7 @@ export default function Table({ id, ds }) {
                     </th>
                   );
                 } else {
-                  return (
-                    <td key={`${id}-r-td_` + iii}>
-                      {v}
-                    </td>
-                  );
+                  return <td key={`${id}-r-td_` + iii}>{v}</td>;
                 }
               })}
             </tr>

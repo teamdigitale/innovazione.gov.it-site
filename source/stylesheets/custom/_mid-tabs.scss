@@ -11,8 +11,14 @@
     }
   }
 }
+.mid-nav-tabs {
+  overflow-x: auto !important;
+}
 
-.mid-tabs-content {
-  border-top: 5px solid #0066cc;
-  background-color: #E6F2FF;
+.mid-tabs-pane {
+  height: 300px;
+}
+.mid-tabs-pane-inner {
+  height: 100%;
+  overflow: auto;
 }

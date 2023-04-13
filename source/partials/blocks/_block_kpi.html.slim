@@ -1,8 +1,9 @@
 - border_classes = %(primary-border-color-a9 border border-end-0 border-top-0 border-bottom-0 border-4)
+- layout = block.layout
 
-.kpiGroup
-  - if block.layout == "row"
-    .row.my-4
+div id="kpi-#{block.id}" class="col-lg-#{layout} pt-5 mb-5"
+  - if block.direction == "row"
+    .row
       - block.kpi_items.each do |item|
         .col-lg-4.mb-2
           - el = item.kpi_element
@@ -24,16 +25,15 @@
               - if el.percentage.present?
                 span.mid-caption.ms-3 = "(#{el.percentage})"
 
-  - if block.layout == "column"
-    .row.my-4
-      .col-lg-5
-        - block.kpi_items.each do |item|
-          - el = item.kpi_element
-          .my-2.pt-4.pb-4.ps-3 class="#{el.background_color} #{border_classes}"
-            .mid-caption--xlarge.fw-semibold.text-black
-              = el.title
+  - if block.direction == "column"
+      - block.kpi_items.each do |item|
+        - el = item.kpi_element
+        .mb-2.pt-4.pb-4.ps-3 class="#{el.background_color} #{border_classes}"
+          .mid-caption--xlarge.fw-semibold.text-black
+            = el.title
 
-            div
+          div
+            .d-xxl-inline-block
               - if el.value_prefix.present?
                 span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_prefix
@@ -45,18 +45,18 @@
                   = el.value_suffix
 
               - if el.percentage.present?
-                span.big-caption.ms-3 = "(#{el.percentage})"
+                span.big-caption.mx-3  = "(#{el.percentage})"
 
-              - if el.show_flow
-                - bg = el.flow_direction.present? && el.flow_direction == "+" ? "bg-success" : "bg-danger"
-                - arrow = el.flow_direction.present? && el.flow_direction == "+" ? "&#8593;" : "&#8595;"
-                span class="#{bg} text-white py-1 px-3 rounded ms-3 mid-caption"
-                  - if el.flow_value
-                    span.font-semibold
-                      span.me-3 = arrow
-                      = el.flow_value
-                  - if el.flow_detail
-                    span.ms-3 = "(#{el.flow_detail})"
+            - if el.show_flow
+              - bg = el.flow_direction.present? && el.flow_direction == "+" ? "bg-success" : "bg-danger"
+              - arrow = el.flow_direction.present? && el.flow_direction == "+" ? "&#8593;" : "&#8595;"
+              span class="#{bg} d-inline-block text-white py-1 px-3 rounded mid-caption"
+                - if el.flow_value
+                  span.font-semibold
+                    span.me-3 = arrow
+                    = el.flow_value
+                - if el.flow_detail
+                  span.ms-3 = "(#{el.flow_detail})"
 
-            - if el.footer_text.present?
-              div.mid-caption.pt-1.mt-3.border-top.border-secondary = el.footer_text
+          - if el.footer_text.present?
+            div.mid-caption.pt-1.mt-3.border-top.border-secondary = el.footer_text
