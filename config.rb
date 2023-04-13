@@ -951,12 +951,12 @@ dato.tap do |dato|
             "/templates/italy2026.html",
             locals: {page: dato.italy2026_page},
             locale: locale
-      # if dato.dataviz_page
-      #   proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
-      #         "/templates/data.html",
-      #         locals: {page: dato.dataviz_page},
-      #         locale: locale
-      #   end
+      if dato.dataviz_page
+        proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
+              "/templates/data.html",
+              locals: {page: dato.dataviz_page},
+              locale: locale
+      end
       italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }
 
       paginate_with_fallback(italy2026_articles,
