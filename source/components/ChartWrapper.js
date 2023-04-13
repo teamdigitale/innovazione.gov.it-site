@@ -82,7 +82,7 @@ export default function ChartWrapper(props) {
 
   const wrapRef = useRef(null);
   const [width, setWidth] = useState(null);
-  const isMobile = width && width <= 700;
+  const isMobile = width && width <= 480;
 
   function setDimension() {
     setWidth(wrapRef?.current?.clientWidth);
