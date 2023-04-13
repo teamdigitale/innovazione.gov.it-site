@@ -34,7 +34,6 @@ export default function ChartWrapper(props) {
 
   const { config, chart } = data;
   const [echartInstance, setEchartInstance] = useState(null);
-  // const [wrapRef, { width, height }] = useElementSize();
 
   const chartType = chart;
   const csvData = dataToCSV(data.data);
@@ -88,11 +87,6 @@ export default function ChartWrapper(props) {
     setWidth(wrapRef?.current?.clientWidth);
   }
 
-  // useEffect(() => {
-  //   if (wrapRef.current && !width) {
-  //     setDimension();
-  //   }
-  // }, [wrapRef.current]);
 
   useEffect(() => {
     window.addEventListener("resize", setDimension);
