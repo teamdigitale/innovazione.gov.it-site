@@ -105,7 +105,7 @@ export default function ChartWrapper(props) {
   return (
     <div className="px-3 pt-3 px-md-4 pt-md-4">
       <h3 className="mid-caption--lead fw-semibold text-black">{title}</h3>
-      <p className="mid-caption">{subtitle}</p>
+      <p className="mid-caption--large">{subtitle}</p>
       <ul
         className="nav nav-tabs mid-nav-tabs lightgrey-bg-a3"
         id="myTab"
@@ -185,7 +185,7 @@ export default function ChartWrapper(props) {
           id={`tab3-${id}-content-${istance}`}
           role="tabpanel"
         >
-          <div className="mid-tabs-pane-inner">
+          <div className="mid-tabs-pane-inner mid-caption--large">
             {info && <MarkdownRenderer>{infoClean}</MarkdownRenderer>}
             <div className="mt-5 mid-caption">
               {labelsUpdated || "Dati aggiornati al"}{" "}
