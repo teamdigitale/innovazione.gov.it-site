@@ -52,7 +52,8 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-          environment: DATO_ENV
+           environment: "dataviz"
+           #environment: DATO_ENV
 end
 
 webpack_command =
@@ -951,6 +952,7 @@ dato.tap do |dato|
             "/templates/italy2026.html",
             locals: {page: dato.italy2026_page},
             locale: locale
+
       if dato.dataviz_page
         proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
               "/templates/data.html",
