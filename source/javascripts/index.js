@@ -96,8 +96,6 @@ if (chartWrap) {
       const data = JSON.parse(chartData); //double parse ?
       const infoData = JSON.parse(infoTemplate);
       const info = JSON.parse(infoData); //double parse ?
-      // const { config, dataSource ,} = chart;
-      // console.log('dataSource', dataSource);
       const root = createRoot(domNode);
       root.render(
         <ChartWrapper id={domNode.id} data={data} info={info} {...domNode.dataset} />
