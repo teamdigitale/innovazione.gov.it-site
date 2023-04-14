@@ -16,7 +16,8 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
   function getOptions(data) {
     const config = data.config;
     const isLine = data.dataSource?.series[0]?.type === "line" ? true : false;
-    const responsive = config.responsive || true;
+    const responsive =
+      typeof config.responsive === "undefined" ? true : config.responsive;
     let grid = {
       left: isMobile && responsive ? 10 : config.gridLeft || "10%",
       right: config.gridRight || "10%",

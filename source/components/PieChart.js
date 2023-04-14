@@ -65,7 +65,7 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
           fontFamily: "Titillium Web",
           fontWeight: "600",
           fontSize: 16,
-          color: "#003366"
+          color: "#003366",
         },
       },
       color: config.colors || [
@@ -106,7 +106,10 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
 
   if (!data) return <div>...</div>;
   let h = data.config?.h || 350;
-  const responsive = data.config?.responsive || true;
+  const responsive =
+    typeof data.config?.responsive === "undefined"
+      ? true
+      : data.config.responsive;
   const chartHeight = responsive && isMobile ? (h / 100) * 80 : h;
 
   return (
