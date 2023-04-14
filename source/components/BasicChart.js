@@ -97,13 +97,18 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               type: "category",
               data: data.dataSource.categories,
               axisTick: { show: false },
+              axisLabel: {
+                hideOverlap: true,
+              },
             },
             yAxis: {
               ...yName,
               nameRotate: 90,
               type: "value",
               axisTick: { show: false },
-              axisLabel: { show: responsive ? !isMobile : true },
+              axisLabel: {
+                show: responsive ? !isMobile : true,
+              },
             },
           }
         : {
@@ -113,12 +118,17 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               type: "category",
               data: data.dataSource.categories,
               axisTick: { show: false },
-              axisLabel: { show: responsive ? !isMobile : true },
+              axisLabel: {
+                show: responsive ? !isMobile : true,
+              },
             },
             xAxis: {
               ...yName,
               type: "value",
               axisTick: { show: false },
+              axisLabel: {
+                hideOverlap: true,
+              },
             },
           };
 
