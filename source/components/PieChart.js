@@ -54,6 +54,7 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
       total = formatTooltip(totale, config);
     } catch (error) {}
 
+    const showLabels = config.showPieLabels === false ? false : true;
     let options = {
       backgroundColor: config.background ? config.background : "#F2F7FC",
       title: {
@@ -82,10 +83,10 @@ function PieChart({ id, data, setEchartInstance, isMobile = false }) {
       series: {
         ...dataSource.series,
         labelLine: {
-          show: config.labeLine,
+          show: showLabels && config.labeLine,
         },
         label: {
-          show: true,
+          show: showLabels,
           position: config.labeLine ? "outside" : "inside",
         },
       },
