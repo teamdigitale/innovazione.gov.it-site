@@ -25,6 +25,9 @@ div id="kpi-#{block.id}" class="col-lg-#{layout} pt-3 mb-3"
               - if el.percentage.present?
                 span.mid-caption.ms-3 = "(#{el.percentage})"
 
+            - if el.footer_text.present?
+              div.mid-caption.pt-1.mt-3.border-top.border-secondary = el.footer_text
+
   - if block.direction == "column"
       - block.kpi_items.each do |item|
         - el = item.kpi_element
