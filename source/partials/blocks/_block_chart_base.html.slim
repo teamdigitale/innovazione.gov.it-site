@@ -1,11 +1,16 @@
+- wrap |= nil
+
 - chart = JSON.generate(block.chart.chart_data)
 - chart_data = chart.to_json
 
 - info = JSON.generate(block.info)
 - info_data = info.to_json
 
-div id="chart-#{block.chart.id}" class="col-12 pt-5 mb-5 "
+- inner_wrap_class = wrap ? "container-lg" : ""
+
+div id="chart-#{block.chart.id}" class="col-12 pt-3 mb-3"
   .lightgrey-bg-a3.border-2
+    div class="#{inner_wrap_class}"
       template id="#{block.chart.id}"
         = chart_data || ''
       template class="info"
