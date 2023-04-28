@@ -1,7 +1,7 @@
 - border_classes = %(primary-border-color-a9 border border-end-0 border-top-0 border-bottom-0 border-4)
 - layout = block.layout
 
-div id="kpi-#{block.id}" class="col-lg-#{layout} pt-5 mb-5"
+div id="kpi-#{block.id}" class="col-lg-#{layout} pt-3 mb-3"
   - if block.direction == "row"
     .row
       - block.kpi_items.each do |item|
