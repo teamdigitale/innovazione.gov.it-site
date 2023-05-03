@@ -17,11 +17,11 @@ div id="kpi-#{block.id}" class="pt-3 mb-3"
                 span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_prefix
 
-              span.mid-caption--xxlarge.primary-color-a9.fw-semibold = el.value
+              span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3 = el.value
 
               - if el.value_suffix.present?
-                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.ms-3
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_suffix
 
               - if el.percentage.present?
-                span.mid-caption.ms-3 = "(#{el.percentage})"
+                span.mid-caption.me-3 = "(#{el.percentage})"

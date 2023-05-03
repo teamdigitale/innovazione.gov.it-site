@@ -16,14 +16,14 @@ div id="kpi-#{block.id}" class="col-lg-#{layout} pt-3 mb-3"
                 span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_prefix
 
-              span.mid-caption--xxlarge.primary-color-a9.fw-semibold = el.value
+              span.mid-caption--xxlarge.primary-color-a9.fw-semiboldme-3 = el.value
 
               - if el.value_suffix.present?
-                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.ms-3
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_suffix
 
               - if el.percentage.present?
-                span.mid-caption.ms-3 = "(#{el.percentage})"
+                span.mid-caption.me-3 = "(#{el.percentage})"
 
             - if el.footer_text.present?
               div.mid-caption.pt-1.mt-3.border-top.border-secondary = el.footer_text
@@ -41,14 +41,14 @@ div id="kpi-#{block.id}" class="col-lg-#{layout} pt-3 mb-3"
                 span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_prefix
 
-              span.mid-caption--xxlarge.primary-color-a9.fw-semibold = el.value
+              span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3 = el.value
 
               - if el.value_suffix.present?
-                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.ms-3
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
                   = el.value_suffix
 
               - if el.percentage.present?
-                span.big-caption.mx-3  = "(#{el.percentage})"
+                span.big-caption.me-3  = "(#{el.percentage})"
 
             - if el.show_flow
               - bg = el.flow_direction.present? && el.flow_direction == "+" ? "bg-success" : "bg-danger"
