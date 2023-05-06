@@ -5,9 +5,12 @@
   .text-center.mb-0.mb-lg-4
     h1.h1
       = page.title
-    .mid-custom-paragraph = markdown page.text_link_to_source
+    - if defined?(page.text_link_to_source)
+      .mid-custom-paragraph
+        = markdown_ext_link page.text_link_to_source
     span.mid-caption.fw-semibold = "Ultimo aggiornamento "
-    span.mid-caption.fw-semibold = partial "partials/formatted-date",
+    - if defined?(page.last_update)
+      span.mid-caption.fw-semibold = partial "partials/formatted-date",
             locals: {date: page.last_update,
             format: "%d/%m/%Y"}
 
@@ -15,10 +18,12 @@
 .container
   .row
     .col-lg-6
-      h2.h4.text-uppercase.neutral-1-color
-        = page.introduction_title
-      p
-        = page.introduction
+      - if defined?(page.introduction_title)
+        h2.h4.text-uppercase.neutral-1-color
+          = page.introduction_title
+      - if defined?(page.introduction)
+        p
+          = page.introduction
 
     - page.content_blocks.each_with_index do |block, i|
       = partial "partials/blocks/#{block.item_type.api_key}",

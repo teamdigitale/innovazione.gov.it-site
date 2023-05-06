@@ -13,7 +13,17 @@ module TextHelpers
     replace_external_links(new_content)
   end
 
+  def markdown_ext_link(content)
+    return "" if content.blank?
+
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
+                                       autolink: true, space_after_headers: true)
+    new_content = markdown.render(content)
+    add_icon_external_links(new_content)
+  end
+
   WORDS_PER_MINUTE = 180
+  SVG = '<svg class="icon icon icon-sm icon-primary ms-2 align-bottom mb-1"><use xlink:href="/images/sprite.svg#it-external-link"/></svg>'
 
   def article_reading_time(page)
     return 0 if page.item_type.api_key != "article"
@@ -32,6 +42,26 @@ module TextHelpers
   def reading_time(text)
     words = text.split.size
     (words / WORDS_PER_MINUTE).floor
+  end
+
+  def add_icon_external_links(content)
+    return "" if content.blank?
+    doc = Nokogiri::HTML.fragment(content)
+    svg = Nokogiri::HTML.fragment(SVG)
+
+    links = doc.search("a")
+    links.each do |link|
+      link.add_next_sibling SVG
+      url = link.attributes["href"].content
+
+      if url.include? ".pdf"
+        add_pdf_attributes(link)
+      elsif !url.start_with?("/") && !url.include?(ENV["BASE_URL"])
+        add_link_attributes(link)
+      end
+    end
+
+    doc.to_html
   end
 
   def replace_external_links(content)
