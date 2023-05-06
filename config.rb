@@ -984,12 +984,21 @@ dato.tap do |dato|
                              10)
 
       visible_italy2026_subpages.each do |italy2026_subpage|
-        parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
-        proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
-              "/templates/page.html",
-              locals: {page: italy2026_subpage,
-                       children: PresentationHelper.published_children_pages(italy2026_subpage)},
-              locale: locale
+        if italy2026_subpage.dashboard_template
+          parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+          proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+                "/templates/data.html",
+                locals: {page: italy2026_subpage,
+                        children: PresentationHelper.published_children_pages(italy2026_subpage)},
+                locale: locale
+        else
+          parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+          proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+                "/templates/page.html",
+                locals: {page: italy2026_subpage,
+                        children: PresentationHelper.published_children_pages(italy2026_subpage)},
+                locale: locale
+        end
       end
     end
 
