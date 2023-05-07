@@ -984,7 +984,7 @@ dato.tap do |dato|
                              10)
 
       visible_italy2026_subpages.each do |italy2026_subpage|
-        if italy2026_subpage.dashboard_template
+        if italy2026_subpage.template == "dashboard"
           parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
           proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
                 "/templates/data.html",

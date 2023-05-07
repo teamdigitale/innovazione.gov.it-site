@@ -8,11 +8,12 @@
     - if defined?(page.text_link_to_source)
       .mid-custom-paragraph
         = markdown_ext_link page.text_link_to_source
-    span.mid-caption.fw-semibold = "Ultimo aggiornamento "
     - if defined?(page.last_update)
-      span.mid-caption.fw-semibold = partial "partials/formatted-date",
-            locals: {date: page.last_update,
-            format: "%d/%m/%Y"}
+      - if page.last_update.present?
+        span.mid-caption.fw-semibold = "Ultimo aggiornamento "
+        span.mid-caption.fw-semibold = partial "partials/formatted-date",
+              locals: {date: page.last_update,
+              format: "%d/%m/%Y"}
 
 
 .container
