@@ -221,7 +221,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
       }),
       textStyle: {
         fontFamily: "Titillium Web",
-        fontSize: 12,
+        fontSize: 14,
       },
       tooltip,
       legend: {
