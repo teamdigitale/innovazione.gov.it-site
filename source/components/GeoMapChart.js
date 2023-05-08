@@ -15,10 +15,20 @@ function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
 
     const tooltip = {
       trigger: "item",
-      valueFormatter: (value) => {
-        return formatTooltip(value, config);
-      },
+      // valueFormatter: (value) => {
+      //   return formatTooltip(value, config);
+      // },
       show: config.tooltip ?? true,
+      formatter: (params: any) => {
+        const value = params.value;
+        const name = params.name;
+        const serieName = params.seriesName;
+        const formattedValue = formatTooltip(value, config);
+        if (serieName) {
+          return `${serieName}<br/>${name} <strong>${formattedValue}</strong>`;
+        }
+        return `${name} <strong>${formattedValue}</strong>`;
+      },
     };
 
     const min = Math.min(...data.dataSource.series[0].data.map((d) => d.value));
@@ -33,19 +43,30 @@ function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
       },
       tooltip,
       visualMap: {
-        left: "right",
+        left: config.visualMapLeft ?? "right",
+        orient: config.visualMapOrient ?? "vertical",
         min,
         max,
-        text: ["Max", "Min"],
-        calculable: true,
+        text: [
+          ` ${formatTooltip(min, config)} `,
+          ` ${formatTooltip(max, config)} `,
+        ],
+        calculable: false,
         inRange: {
           color: config.colors,
         },
         show: config.visualMap || false,
       },
       series: data.dataSource.series.map((serie) => {
+        let otherConfig = {};
+        if (config.serieName) {
+          otherConfig = {
+            name: config.serieName,
+          };
+        }
         return {
           ...serie,
+          ...otherConfig,
           label: {
             show: config.showMapLabels ? true : false,
             color: "inherit",
@@ -62,7 +83,6 @@ function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
               areaColor: config.areaColor || "#F2F7FC",
             },
           },
-          name: config.serieName || "",
           map: id,
           nameProperty: config.nameProperty ? config.nameProperty : "NAME",
         };
