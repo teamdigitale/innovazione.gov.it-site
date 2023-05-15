@@ -19,7 +19,7 @@ function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
       //   return formatTooltip(value, config);
       // },
       show: config.tooltip ?? true,
-      formatter: (params: any) => {
+      formatter: (params) => {
         const value = params.value;
         const name = params.name;
         const serieName = params.seriesName;
