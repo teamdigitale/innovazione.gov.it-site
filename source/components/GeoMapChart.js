@@ -48,9 +48,17 @@ function GeoMapChart({ data, id, setEchartInstance, isMobile = false }) {
         min,
         max,
         text: [
-          ` ${formatTooltip(min, config)} `,
-          ` ${formatTooltip(max, config)} `,
+          `${formatTooltip(max, config)} `,
+          `${formatTooltip(min, config)} `,
         ],
+        backgroundColor: "rgba(255,255,255,1)",
+        inverse: true,
+        textStyle: {
+          fontSize: 11,
+          lineHeight: 0,
+          overflow: "truncate",
+        },
+        padding: 15,
         calculable: false,
         inRange: {
           color: config.colors,
