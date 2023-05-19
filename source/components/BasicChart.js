@@ -100,6 +100,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               axisTick: { show: false },
               axisLabel: {
                 hideOverlap: true,
+                fontSize: 14,
               },
             },
             yAxis: {
@@ -109,6 +110,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               axisTick: { show: false },
               axisLabel: {
                 show: responsive ? !isMobile : true,
+                fontSize: 14,
               },
             },
           }
@@ -121,6 +123,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               axisTick: { show: false },
               axisLabel: {
                 show: responsive ? !isMobile : true,
+                fontSize: 14,
               },
             },
             xAxis: {
@@ -129,6 +132,7 @@ function BasicChart({ id, data, setEchartInstance, isMobile = false }) {
               axisTick: { show: false },
               axisLabel: {
                 hideOverlap: true,
+                fontSize: 14,
               },
             },
           };
