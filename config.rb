@@ -52,7 +52,6 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-           #environment: "dataviz"
            environment: DATO_ENV
 end
 
