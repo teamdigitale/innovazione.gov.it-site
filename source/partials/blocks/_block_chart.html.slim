@@ -1,0 +1,18 @@
+- chart = JSON.generate(block.chart.chart_data)
+- chart_data = chart.to_json
+
+- info = JSON.generate(block.info)
+- info_data = info.to_json
+
+- layout = block.layout
+
+
+div id="chart-#{block.chart.id}" class="col-lg-#{layout} pt-3 mb-3"
+  .lightgrey-bg-a3.border-2
+      template id="#{block.chart.id}"
+        = chart_data || ''
+      template class="info"
+        = info_data
+
+      div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 550px; width: 100%;" data-istance="#{istance}" data-title="#{block.title}" data-subtitle="#{block.subtitle}" data-labels-share="#{t('share')}"  data-source="#{block.source}"  data-labels-download="#{t('download')}" data-labels-source="#{t('source')}"  data-updated="#{block.chart.updated_at}" data-labels-updated="#{t('updated_data_at')}"
+      button.visually-hidden data-sharer="facebook"

@@ -1,0 +1,27 @@
+- border_classes = %(primary-border-color-a9 border border-end-0 border-top-0 border-bottom-0 border-4)
+- wrap |= nil
+- inner_wrap_class = wrap ? "container-lg" : ""
+
+div id="kpi-#{block.id}" class="pt-3 mb-3"
+  div class="#{inner_wrap_class}"
+    .row
+      - block.kpi_items.each do |item|
+        .col-lg-4.mb-2
+          - el = item.kpi_element
+          .p-2.ps-3 class="#{el.background_color} #{border_classes}"
+            .mid-caption--xlarge.fw-semibold.text-black
+              = el.title
+
+            div
+              - if el.value_prefix.present?
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
+                  = el.value_prefix
+
+              span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3 = el.value
+
+              - if el.value_suffix.present?
+                span.mid-caption--xxlarge.primary-color-a9.fw-semibold.me-3
+                  = el.value_suffix
+
+              - if el.percentage.present?
+                span.mid-caption.me-3 = "(#{el.percentage})"

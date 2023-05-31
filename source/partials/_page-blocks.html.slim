@@ -30,5 +30,4 @@
 
   div class="#{block_class} #{html_class if i.zero?}"
     = partial "partials/blocks/#{block.item_type.api_key}",
-      locals: {block: block,
-        compact_columns: compact_columns}
+      locals: {block: block, compact_columns: compact_columns, istance: i}

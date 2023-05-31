@@ -52,7 +52,7 @@ retry_on_error(limit: 10) do
            token: ENV.fetch("DATO_API_TOKEN"),
            live_reload: true,
            preview: ENV.fetch("BUILD_ENV") != "production",
-          environment: DATO_ENV
+           environment: DATO_ENV
 end
 
 webpack_command =
@@ -951,12 +951,13 @@ dato.tap do |dato|
             "/templates/italy2026.html",
             locals: {page: dato.italy2026_page},
             locale: locale
-      # if dato.dataviz_page
-      #   proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
-      #         "/templates/data.html",
-      #         locals: {page: dato.dataviz_page},
-      #         locale: locale
-      #   end
+
+      if dato.dataviz_page
+        proxy "/#{dato.italy2026_page.slug}/#{dato.dataviz_page.slug}/index.html",
+              "/templates/data.html",
+              locals: {page: dato.dataviz_page},
+              locale: locale
+      end
       italy2026_articles = visible_articles.select { |i| i.owners.include?(dato.italy2026_page) }
 
       paginate_with_fallback(italy2026_articles,
@@ -982,12 +983,21 @@ dato.tap do |dato|
                              10)
 
       visible_italy2026_subpages.each do |italy2026_subpage|
-        parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
-        proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
-              "/templates/page.html",
-              locals: {page: italy2026_subpage,
-                       children: PresentationHelper.published_children_pages(italy2026_subpage)},
-              locale: locale
+        if italy2026_subpage.template == "dashboard"
+          parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+          proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+                "/templates/data.html",
+                locals: {page: italy2026_subpage,
+                        children: PresentationHelper.published_children_pages(italy2026_subpage)},
+                locale: locale
+        else
+          parent_path = italy2026_subpage.parent ? "/#{italy2026_subpage.parent.slug}" : ""
+          proxy "/#{dato.italy2026_page.slug}#{parent_path}/#{italy2026_subpage.slug}/index.html",
+                "/templates/page.html",
+                locals: {page: italy2026_subpage,
+                        children: PresentationHelper.published_children_pages(italy2026_subpage)},
+                locale: locale
+        end
       end
     end
 
