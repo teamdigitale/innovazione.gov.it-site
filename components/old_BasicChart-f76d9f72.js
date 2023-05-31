@@ -96,8 +96,11 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
       fontWeight: 'bold',
       fontSize: 12,
     },
+    grid: {
+      left: 0,
+      right: 0,
+    },
     tooltip: {
-      // trigger: 'axis',
       axisPointer: {
         type: config.axisPointer,
       },
@@ -105,21 +108,12 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
     },
     legend: {
       left: 'center',
-      top: 'top',
+      top: 'bottom',
       show: config.legend,
-    },
-    toolbox: {
-      show: config.toolbox,
-      left: 'right',
-      top: 'top',
-      feature: {
-        // dataView: {},
-        // restore: {},
-        saveAsImage: {},
-      },
     },
   };
 
+  const chartHeight = config.h ? config.h : '500px';
   return (
     <>
       <ReactEcharts
@@ -127,8 +121,9 @@ function BasicChart({ id, config, dataSource, setEchartInstance }) {
         option={options}
         ref={refCanvas}
         style={{
-          width: config.w,
-          height: config.h,
+          width: '100%',
+          height: chartHeight,
+          // height: '500px',
           maxWidth: '100%',
         }}
       />

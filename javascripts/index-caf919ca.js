@@ -82,24 +82,26 @@ for (let index = 0; index < carouselCalendarList.length; index++) {
 const chartWrap = document.getElementsByClassName('chartWrap');
 if (chartWrap) {
   for (let i = 0; i < chartWrap.length; i++) {
-    const chartTemplate = chartWrap[i].parentNode.getElementsByTagName(
-      'template'
-    )[0].innerHTML;
+    try {
+      const chartTemplate = chartWrap[i].parentNode.getElementsByTagName(
+        'template'
+      )[0].innerHTML;
+      const infoTemplate = chartWrap[i].parentNode.getElementsByClassName(
+        'info'
+      )[0].innerHTML;
 
-    const domNode = chartWrap[i];
+      const domNode = chartWrap[i];
 
-    const chartData = JSON.parse(chartTemplate);
-    const chart = JSON.parse(chartData); //double parse ?
-    const { config, dataSource } = chart;
-
-    const root = createRoot(domNode);
-    root.render(
-      <ChartWrapper
-        id={domNode.id}
-        config={config}
-        dataSource={dataSource}
-        {...domNode.dataset}
-      />
-    );
+      const chartData = JSON.parse(chartTemplate);
+      const data = JSON.parse(chartData); //double parse ?
+      const infoData = JSON.parse(infoTemplate);
+      const info = JSON.parse(infoData); //double parse ?
+      const root = createRoot(domNode);
+      root.render(
+        <ChartWrapper id={domNode.id} data={data} info={info} {...domNode.dataset} />
+      );
+    } catch (error) {
+      console.log('error', error);
+    }
   }
 }
