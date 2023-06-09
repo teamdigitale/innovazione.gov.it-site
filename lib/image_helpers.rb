@@ -6,7 +6,7 @@ module ImageHelpers
 
   ASSET_PROXY_BASE = ENV.fetch(
     "ASSET_PROXY_BASE",
-    "https://assets.innovazione.gov.it/"
+    "https://assets1.innovazione.gov.it/"
   )
 
   def favicon_json_path(path, escape = '\/')
