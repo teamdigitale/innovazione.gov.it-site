@@ -16,5 +16,5 @@ div id="chart-#{block.chart.id}" class="col-12 pt-3 mb-3"
       template class="info"
         = info_data
 
-      div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 550px; width: 100%;" data-istance="#{istance}" data-title="#{block.title}" data-subtitle="#{block.subtitle}" data-labels-share="#{t('share')}"  data-source="#{block.source}"  data-labels-download="#{t('download')}" data-labels-source="#{t('source')}"  data-updated="#{block.chart.updated_at}" data-labels-updated="#{t('updated_data_at')}"
+      div id="#{block.chart.id}" class="chartWrap py-8 mx-8" style="min-height: 550px; width: 100%;" data-istance="#{istance}" data-title="#{block.title}" data-subtitle="#{block.subtitle}" data-labels-share="#{t('share')}"  data-source="#{block.source}"  data-labels-download="#{t('download')}" data-labels-source="#{t('source')}"  data-updated="#{block.chart.updated_at.iso8601}" data-labels-updated="#{t('updated_data_at')}"
       button.visually-hidden data-sharer="facebook"
