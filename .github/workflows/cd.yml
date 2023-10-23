@@ -46,7 +46,7 @@ jobs:
     - name: Copy file
       run: |
         rm "./build/images/logo-mid-white-6d6c98f9.svg"
-        cp "./source/images/logo-d.svg" "./build/images/logo-mid-white-6d6c98f9.svg"
+        cp "./source/images/logo-mitd-white.svg" "./build/images/logo-mid-white-6d6c98f9.svg"
       
     - name: gh_pages_deploy
       run: |
