@@ -6,16 +6,16 @@ ruby:
 
 - content = capture
   - sections.each do |section|
-    li.nav-item
+    li
       = link_to section,
         "##{anchor_id(section)}",
-        class: "nav-link navscroll_link"
+        class: "list-item"
 
 - if sections.any?
   .sticky-top.bg-white.mid-section-border-below
     nav.menu-wrapper.d-lg-none.px-0.container-xl [
       aria-label="indice di pagina mobile" aria-hidden="true"]
-      .it-list-wrapper.menu-link-list
+      .link-list-wrapper
         .accordion#sticky-sections-menu
           p.accordion-header#heading-section
             p-0.py-2.pe-2.accordion-button.collapsed [type="button"
@@ -39,9 +39,9 @@ ruby:
     .container-xl
       nav.menu-wrapper.d-none.d-lg-block.border-bottom [
         aria-label="indice di pagina" aria-hidden="false"]
-        .it-list-wrapper.menu-link-list.d-inline-flex
+        .link-list-wrapper.d-inline-flex
           p class=title_classes
             = title
 
-          ul.it-list.small.d-inline-flex.mt-1
+          ul.link-list.d-inline-flex.mt-3
             = content
