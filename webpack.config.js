@@ -105,7 +105,8 @@ module.exports = {
               { name: 'mergePaths', active: true },
               { name: 'moveElemsAttrsToGroup', active: true },
               { name: 'moveGroupAttrsToElems', active: true },
-              //{removeAttrs: {attrs: '(fill|stroke)'}}, // if you don't want any color from the original SVG - see also the removeStyleElement option
+              { name: 'removeAttrs', params: {attrs: "(fill|stroke)"}},
+              // {removeAttrs: {attrs: '(fill|stroke)'}}, // if you don't want any color from the original SVG - see also the removeStyleElement option
               { name: 'removeComments', active: true },
               { name: 'removeDesc', active: false }, // for usability reasons
               { name: 'removeDimensions', active: true },
