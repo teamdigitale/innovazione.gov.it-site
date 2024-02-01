@@ -19,7 +19,7 @@ ruby:
 
   .row
     - groups.each do |group|
-      .col-sm-6 class=("m-auto m-sm-0 pe-sm-5" if i == 1)
+      .col-sm-12 class=("m-auto m-sm-0 pe-sm-5" if i == 0)
         - i += 1
         - group.each do |item|
           = link_to item.title,
