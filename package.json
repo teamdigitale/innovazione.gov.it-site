@@ -67,5 +67,8 @@
   "browserslist": [
     "last 2 versions",
     "> 1%"
-  ]
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

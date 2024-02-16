@@ -14,3 +14,5 @@ gem "pry"
 gem "redcarpet"
 gem "slim"
 gem "slim_lint"
+
+ruby '2.7.8'
