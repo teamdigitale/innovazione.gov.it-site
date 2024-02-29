@@ -27,7 +27,7 @@ echo "3c99c5699b7df170ca2fcf7aedfdd9f0  rvm.sh" | md5sum -c
 # We need to run setup and build in a single script, otherwise env variables won't be set
 # properly.
 #
-# rvm is design for interactive use, but we can't open new shells at will like its
+# rvm is designed for interactive use, but we can't open new shells at will like its
 # docs are suggesting.
 #
 # Let's append our local build step to the rvm installation script.
