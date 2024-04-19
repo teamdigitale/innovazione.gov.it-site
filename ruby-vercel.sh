@@ -24,5 +24,10 @@ export PATH=$PATH:/usr/local/rvm/rubies/ruby-2.7.8/bin
 
 gem install bundler -v 2.3.26
 
+which ruby
+which bundle
+ls -l /
+env
+
 bundle install --deployment
 bundle exec middleman build
