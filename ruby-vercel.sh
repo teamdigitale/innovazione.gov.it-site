@@ -6,8 +6,9 @@
 
 set -euo pipefail
 
-# Remove the Vercel installed Ruby
-rm -fr /ruby32 /usr/bin/ruby /usr/bin/gem
+echo "Removing the Vercel installed Ruby..."
+
+rm -fr /ruby* /usr/bin/ruby /usr/bin/gem
 
 # Remove the Ruby version from the Gemfile, otherwise Vercel will detect
 # an unsupported version and stop the build
