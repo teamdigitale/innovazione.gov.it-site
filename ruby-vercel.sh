@@ -6,6 +6,8 @@
 
 set -euo pipefail
 
+echo "Removing /ruby32..."
+
 # Remove the Vercel installed Ruby
 rm -fr /ruby32 /usr/bin/ruby /usr/bin/gem
 
