@@ -6,10 +6,9 @@
 
 set -euo pipefail
 
-echo "Removing /ruby32..."
+echo "Removing the Vercel installed Ruby..."
 
-# Remove the Vercel installed Ruby
-rm -fr /ruby32 /usr/bin/ruby /usr/bin/gem
+rm -fr /ruby* /usr/bin/ruby /usr/bin/gem
 
 # Remove the Ruby version from the Gemfile, otherwise Vercel will detect
 # an unsupported version and stop the build
@@ -23,11 +22,6 @@ ln -s /etc/ssl/certs /opt/openssl-1.1.1q/certs
 export PATH=$PATH:/usr/local/rvm/rubies/ruby-2.7.8/bin
 
 gem install bundler -v 2.3.26
-
-which ruby
-which bundle
-ls -l /
-env
 
 bundle install --deployment
 bundle exec middleman build
