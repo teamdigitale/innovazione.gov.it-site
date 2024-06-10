@@ -7,11 +7,11 @@
 / Url da DatoCMS: https://www.youtube.com/watch?v=vQKT3k_MUuo
 / Url desiderato: https://www.youtube-nocookie.com/embed/vQKT3k_MUuo
 
+/ "?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=it&widget_referrer=https://designers.italia.it/design-system/componenti/video-player/&enablejsapi=1&widgetid=1&origin=https://innovazione.gov.it"
 ruby:
   if item.video.present?
-    nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
-                   "youtube-nocookie.com/embed/")
-    minheight = item.video.height < 400 ? 400 : video.height
+    nocookie_url = item.video.url.gsub("youtube.com/watch?v=", "youtube-nocookie.com/embed/")
+    minheight =   item.video.height < 400 ? 400 : video.height
     allows = %w[accelerometer
                 autoplay
                 clipboard-write
@@ -21,22 +21,42 @@ ruby:
   end
 
 - if item.present?
-  .d-none.d-lg-block
-    div class=offset
-      iframe [width="100%"
-              height=minheight
-              src=nocookie_url
-              frameborder="0"
-              allow=allows
-              title="Youtube video"
-              allowfullscreen="allowfullscreen"]
 
-  / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
-  .col-12.d-lg-none.p-0
-    iframe [width="100%"
-            height="200"
-            src=nocookie_url
-            frameborder="0"
-            allow=allows
-            title="Youtube video"
-            allowfullscreen="allowfullscreen"]
+  div  [class="acceptoverlayable" data-bs-accept-overlay]
+    div [class="acceptoverlay acceptoverlay-primary fade show" ]
+      div class="acceptoverlay-inner"
+        div class="acceptoverlay-icon"
+          svg class="icon icon-xl"
+            use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"
+        div class="text-white"
+          span Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella nostra
+          a [class="text-white" target="_blank" href="/informativa-sul-trattamento-dei-dati-personali"]  Informativa sulla privacy
+        div class="acceptoverlay-buttons bg-dark"
+          button [
+              type="button" class="btn btn-primary" data-videoid="vid1"   data-bs-accept-from="youtube.com" data-bs-accept-button] Accetta
+        div class="form-check"
+          input [id="chk-remember" type="checkbox" data-bs-accept-remember]
+          label [for="chk-remember"] Ricorda per tutti i video
+    div
+      video [controls data-bs-video id="vid1" class="video-js" width="640" height="264" data-url="https://youtu.be/sr8r1R1vPm4"]
+
+  /
+    .d-none.d-lg-block
+      div class=offset
+        iframe [width="100%"
+                height=minheight
+                src=nocookie_url
+                frameborder="0"
+                allow=allows
+                title="Youtube video"
+                allowfullscreen="allowfullscreen"]
+  /
+    / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
+    .col-12.d-lg-none.p-0
+        iframe [width="100%"
+                height="200"
+                src=nocookie_url
+                frameborder="0"
+                allow=allows
+                title="Youtube video"
+                allowfullscreen="allowfullscreen"]
