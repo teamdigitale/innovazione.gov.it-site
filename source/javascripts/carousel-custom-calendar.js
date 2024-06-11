@@ -47,9 +47,7 @@ const CONFIG_DEFAULT = {
 class CarouselCalendar extends BaseComponent {
   constructor(element) {
     super(element);
-    this._config = this._getConfig(this._element);
     this._splide = new Splide(this._element, this._config);
-
     this._init();
   }
 
@@ -70,11 +68,11 @@ class CarouselCalendar extends BaseComponent {
     this._splide.mount();
   }
 
-  _getConfig(element) {
+  _getConfig() {
     let conf = Object.assign({}, CONFIG_DEFAULT);
-    let initialSlideIndex = parseInt(element.dataset.initial);
-    let slides = parseInt(element.dataset.slides);
-    const fixedSlidesPerView = parseInt(element.dataset.fixed);
+    let initialSlideIndex = parseInt(this._element.dataset.initial);
+    let slides = parseInt(this._element.dataset.slides);
+    const fixedSlidesPerView = parseInt(this._element.dataset.fixed);
     let slidesNumber = null;
     if (fixedSlidesPerView > 0) {
       slidesNumber = fixedSlidesPerView;
