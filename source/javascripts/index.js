@@ -153,3 +153,37 @@ if (chartWrap) {
     }
   }
 }
+
+//setup coockies management
+const hookDiv = document.getElementById("cookies-management");
+function CookieManager({ onRevoke }) {
+  return (
+    <div>
+      <span>YouTube per la visualizzazione di video</span>
+      <button
+        type="button"
+        className="btn btn-outline-primary ms-5"
+        onClick={() => onRevoke()}
+      >
+        Revoca consenso
+      </button>
+    </div>
+  );
+}
+if (hookDiv) {
+  const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
+  let content = "Non hai installato cookie di terze parti.";
+  const root = createRoot(hookDiv);
+  if (hasYtCookies) {
+    content = (
+      <CookieManager
+        services={[YT_SERVICE]}
+        onRevoke={() => {
+          cookies.clearAllRememberedChoices();
+          window.location.reload();
+        }}
+      />
+    );
+  }
+  root.render(content);
+}

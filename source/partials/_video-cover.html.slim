@@ -10,7 +10,7 @@
 ruby:
   if item.video.present?
     nocookie_url = item.video.url.gsub("youtube.com/watch?v=","https://youtu.be/")
-    minheight = item.video.height < 400 ? 400 : video.height
+    minheight = item.video.height < 480 ? 480 : video.height
     allows = %w[accelerometer
                 autoplay
                 clipboard-write
@@ -21,21 +21,24 @@ ruby:
 
 - if item.present?
 
-  div  [class="acceptoverlayable" data-bs-accept-overlay]
+  div  [class="acceptoverlayable" data-bs-accept-overlay width="100%" height=minheight ]
     div [class="acceptoverlay acceptoverlay-primary fade show" ]
       div class="acceptoverlay-inner"
         div class="acceptoverlay-icon"
-          svg class="icon icon-xl"
-            use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"
+          svg.icon.icon-xl [
+            focusable="false"
+            role="img"
+            ]
+            use xlink:href="/images/sprite.svg#it-video"
         div class="text-white"
           span Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella nostra
-          a [class="text-white" target="_blank" href="/informativa-sul-trattamento-dei-dati-personali"]  Informativa sulla privacy
+          a [class="text-white px-2" target="_blank" href="/informativa-sul-trattamento-dei-dati-personali"] Informativa sulla privacy
         div class="acceptoverlay-buttons bg-dark"
           button [
               type="button" class="btn btn-primary" data-videoid="vid1"   data-bs-accept-from="youtube.com" data-bs-accept-button] Accetta
-        div class="form-check"
-          input [id="chk-remember" type="checkbox" data-bs-accept-remember]
-          label [for="chk-remember"] Ricorda per tutti i video
+          div class="form-check"
+            input [id="chk-remember" type="checkbox" data-bs-accept-remember]
+            label [for="chk-remember"] Ricorda per tutti i video
     div
       video [controls data-bs-video id="vid1" class="video-js" width="100%"  height=minheight  data-url=nocookie_url]
 
