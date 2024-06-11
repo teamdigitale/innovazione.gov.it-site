@@ -10,7 +10,7 @@
 ruby:
   if item.video.present?
     nocookie_url = item.video.url.gsub("youtube.com/watch?v=","https://youtu.be/")
-    minheight = item.video.height < 400 ? 400 : video.height
+    minheight = item.video.height < 480 ? 480 : video.height
     allows = %w[accelerometer
                 autoplay
                 clipboard-write
@@ -21,7 +21,7 @@ ruby:
 
 - if item.present?
 
-  div  [class="acceptoverlayable" data-bs-accept-overlay]
+  div  [class="acceptoverlayable" data-bs-accept-overlay width="100%"  height=minheight ]
     div [class="acceptoverlay acceptoverlay-primary fade show" ]
       div class="acceptoverlay-inner"
         div class="acceptoverlay-icon"
