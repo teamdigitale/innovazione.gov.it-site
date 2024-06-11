@@ -156,28 +156,16 @@ if (chartWrap) {
 
 //setup coockies management
 const hookDiv = document.getElementById("cookies-management");
+console.log("hookDiv", hookDiv);
+
 if (hookDiv) {
   const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
+  let html = "";
   if (hasYtCookies) {
-    hookDiv.appendChild(
-      <div>
-        <span>YouTube per la visualizzazione di video</span>
-        <button
-          type="button"
-          class="btn btn-primary"
-          onClick={() => {
-            cookies.clearAllRememberedChoices();
-            window.location.reload();
-          }}
-        >
-          Revoca consenso
-        </button>
-      </div>
-    );
-  }else{
-     hookDiv.appendChild(
-      <div>
-        <span>Non hai installato cookie di terze parti.</span>
-      </div>
+    html = `<div><span>YouTube per la visualizzazione di video</span>
+        <button type="button" class="btn btn-primary" onclick="cookies.clearAllRememberedChoices();window.location.reload();">Revoca consenso</button></div>`;
+  } else {
+    html = `<div><span>Non hai installato cookie di terze parti.</span></div>`;
   }
+  hookDiv.innerHTML = html;
 }
