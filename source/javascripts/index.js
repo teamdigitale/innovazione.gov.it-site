@@ -158,14 +158,36 @@ if (chartWrap) {
 const hookDiv = document.getElementById("cookies-management");
 console.log("hookDiv", hookDiv);
 
+function CookieManager({ onRevoke }) {
+  return (
+    <div>
+      <span>YouTube per la visualizzazione di video</span>
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={() => onRevoke()}
+      >
+        Revoca consenso
+      </button>
+    </div>
+  );
+}
+
 if (hookDiv) {
   const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
-  let html = "";
   if (hasYtCookies) {
-    html = `<div><span>YouTube per la visualizzazione di video</span>
-        <button type="button" class="btn btn-primary" onclick="cookies.clearAllRememberedChoices();window.location.reload();">Revoca consenso</button></div>`;
+    const root = createRoot(hookDiv);
+    root.render(
+      <CookieManager
+        services={[YT_SERVICE]}
+        onRevoke={() => {
+          cookies.clearAllRememberedChoices();
+          window.location.reload();
+        }}
+      />
+    );
   } else {
-    html = `<div><span>Non hai installato cookie di terze parti.</span></div>`;
+    // html = `<div><span>Non hai installato cookie di terze parti.</span></div>`;
+    console.log("no cookies");
   }
-  hookDiv.innerHTML = html;
 }
