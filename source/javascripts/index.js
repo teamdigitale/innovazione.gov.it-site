@@ -1,24 +1,28 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import 'bootstrap/dist/js/bootstrap';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "bootstrap/dist/js/bootstrap";
 //import CarouselBI from "bootstrap-italia/src/js/plugins/carousel-bi";
-import CarouselBI from './carousel';
-import CarouselCalendar from './carousel-custom-calendar';
-import NavBarCollapsible from 'bootstrap-italia/src/js/plugins/navbar-collapsible';
-import Sticky from 'bootstrap-italia/src/js/plugins/sticky';
-import 'calendar-dropdown.js';
-import 'sticky-header-custom.js';
-import 'lazysizes';
-import 'lazysizes/plugins/respimg/ls.respimg';
-import 'focus-visible/src/focus-visible.js';
-import Sharer from 'sharer.js/sharer.js';
-import ChartWrapper from '../components/ChartWrapper';
+import CarouselBI from "./carousel";
+import CarouselCalendar from "./carousel-custom-calendar";
+import NavBarCollapsible from "bootstrap-italia/src/js/plugins/navbar-collapsible";
+import Sticky from "bootstrap-italia/src/js/plugins/sticky";
+import "calendar-dropdown.js";
+import "sticky-header-custom.js";
+import "lazysizes";
+import "lazysizes/plugins/respimg/ls.respimg";
+import "focus-visible/src/focus-visible.js";
+import Sharer from "sharer.js/sharer.js";
+import ChartWrapper from "../components/ChartWrapper";
 
-const progressIndicator = require('progress-indicator.js');
-const DatoCmsSearch = require('datocms-search.widget.js');
+import VideoPlayer from "bootstrap-italia/src/js/plugins/videoplayer";
+import AcceptOverlay from "bootstrap-italia/src/js/plugins/accept-overlay";
+import { cookies } from "bootstrap-italia/src/js/plugins/util/cookies";
+
+const progressIndicator = require("progress-indicator.js");
+const DatoCmsSearch = require("datocms-search.widget.js");
 const searchClient = new DatoCmsSearch(
-  '7bc02ea800b5526cd655912c1b6cfa',
-  'production'
+  "7bc02ea800b5526cd655912c1b6cfa",
+  "production"
 );
 
 const initSearch = () => {
@@ -26,9 +30,9 @@ const initSearch = () => {
     return null;
   }
   const lang = document.documentElement.lang;
-  return searchClient.addWidget('#search-container', {
+  return searchClient.addWidget("#search-container", {
     initialLocale: document.documentElement.lang,
-    initialQuery: '',
+    initialQuery: "",
   });
 };
 
@@ -40,11 +44,11 @@ window.onscroll = function () {
 
 // initiate navbar
 const navbarcollapsible = new NavBarCollapsible(
-  document.getElementById('nav02')
+  document.getElementById("nav02")
 );
 
 // initiate sticky header
-const stickyHeaders = document.getElementsByClassName('it-header-sticky');
+const stickyHeaders = document.getElementsByClassName("it-header-sticky");
 for (let index = 0; index < stickyHeaders.length; index++) {
   const header = stickyHeaders[index];
   const stickyInstances = [];
@@ -52,17 +56,17 @@ for (let index = 0; index < stickyHeaders.length; index++) {
 }
 
 // Hide nav links after a click in mobile view of navscroll
-const navscrollLinks = document.querySelectorAll('a.navscroll_link');
+const navscrollLinks = document.querySelectorAll("a.navscroll_link");
 for (let index = 0; index < navscrollLinks.length; index++) {
   const element = navscrollLinks[index];
-  element.addEventListener('click', function () {
-    document.getElementById('accordion-button').classList.add('collapsed');
-    document.getElementById('accordion-aside').classList.remove('show');
+  element.addEventListener("click", function () {
+    document.getElementById("accordion-button").classList.add("collapsed");
+    document.getElementById("accordion-aside").classList.remove("show");
   });
 }
 
 // initiate carousel
-const carouselList = document.querySelectorAll('[data-bs-carousel-splide]');
+const carouselList = document.querySelectorAll("[data-bs-carousel-splide]");
 for (let index = 0; index < carouselList.length; index++) {
   const carousel = carouselList[index];
   const carouselInstances = [];
@@ -71,7 +75,7 @@ for (let index = 0; index < carouselList.length; index++) {
 
 // initiate custom calendar carousels
 const carouselCalendarList = document.querySelectorAll(
-  '[data-calendar-splide]'
+  "[data-calendar-splide]"
 );
 for (let index = 0; index < carouselCalendarList.length; index++) {
   const carousel = carouselCalendarList[index];
@@ -79,16 +83,55 @@ for (let index = 0; index < carouselCalendarList.length; index++) {
   carouselInstances[index] = new CarouselCalendar(carousel);
 }
 
-const chartWrap = document.getElementsByClassName('chartWrap');
+// setup yt videos
+const YT_SERVICE = "youtube.com";
+const loadYouTubeVideo = (videoId) => {
+  console.log("videoId", videoId);
+  const videoEl = document.getElementById(videoId);
+  const url = videoEl.dataset.url;
+  console.log("videoUrl", url);
+  const video = VideoPlayer.getOrCreateInstance(videoEl);
+  console.log("video", video);
+  video.setYouTubeVideo(url);
+};
+const manageVideo = (overlay) => {
+  const videoLoadButton = overlay.querySelector("button");
+  const videoId = videoLoadButton.dataset.videoid;
+  if (cookies.isChoiceRemembered(YT_SERVICE)) {
+    loadYouTubeVideo(videoId);
+    const overlayAccept = new AcceptOverlay(overlay, {
+      service: YT_SERVICE,
+    });
+    overlayAccept.hide();
+  } else {
+    videoLoadButton.addEventListener("click", () => {
+      const checkbox = overlay.querySelector("input");
+      if (checkbox.checked) {
+        cookies.rememberChoice(YT_SERVICE, true);
+      }
+      loadYouTubeVideo(videoId);
+      const overlayAccept = new AcceptOverlay(overlay, {
+        service: YT_SERVICE,
+      });
+      overlayAccept.hide();
+    });
+  }
+};
+
+const overlay = document.querySelector("[data-bs-accept-overlay]");
+if (overlay) {
+  manageVideo(overlay);
+}
+
+//setup charts
+const chartWrap = document.getElementsByClassName("chartWrap");
 if (chartWrap) {
   for (let i = 0; i < chartWrap.length; i++) {
     try {
-      const chartTemplate = chartWrap[i].parentNode.getElementsByTagName(
-        'template'
-      )[0].innerHTML;
-      const infoTemplate = chartWrap[i].parentNode.getElementsByClassName(
-        'info'
-      )[0].innerHTML;
+      const chartTemplate =
+        chartWrap[i].parentNode.getElementsByTagName("template")[0].innerHTML;
+      const infoTemplate =
+        chartWrap[i].parentNode.getElementsByClassName("info")[0].innerHTML;
 
       const domNode = chartWrap[i];
 
@@ -98,10 +141,15 @@ if (chartWrap) {
       const info = JSON.parse(infoData); //double parse ?
       const root = createRoot(domNode);
       root.render(
-        <ChartWrapper id={domNode.id} data={data} info={info} {...domNode.dataset} />
+        <ChartWrapper
+          id={domNode.id}
+          data={data}
+          info={info}
+          {...domNode.dataset}
+        />
       );
     } catch (error) {
-      console.log('error', error);
+      console.log("error", error);
     }
   }
 }
