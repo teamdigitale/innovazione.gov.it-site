@@ -3,8 +3,7 @@ ruby:
   label ||= cta_label(item)
   white_outline ||= nil
   border = white_outline ? "box-shadow: inset 0 0 0 2px white" : ""
-page_link_path = item.anchor&.present? ? page_path_with_anchor(item.link, "##{item.anchor}") : page_path(item.link)
-
+  page_link_path = item.anchor&.present? ? page_path_with_anchor(item.link, "##{item.anchor}") : page_path(item.link)
 
 = proxy_link_to label,
   page_link_path,

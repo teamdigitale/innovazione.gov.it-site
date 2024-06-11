@@ -9,9 +9,8 @@
 
 ruby:
   if item.video.present?
-    nocookie_url = item.video.url.gsub("youtube.com/watch?v=",
-                   "youtube-nocookie.com/embed/")
-    minheight = item.video.height < 400 ? 400 : video.height
+    nocookie_url = item.video.url.gsub("youtube.com/watch?v=","youtube-nocookie.com/embed/")
+    minheight = item.video.height < 480 ? 480 : video.height
     allows = %w[accelerometer
                 autoplay
                 clipboard-write
@@ -21,22 +20,23 @@ ruby:
   end
 
 - if item.present?
-  .d-none.d-lg-block
-    div class=offset
-      iframe [width="100%"
-              height=minheight
-              src=nocookie_url
-              frameborder="0"
-              allow=allows
-              title="Youtube video"
-              allowfullscreen="allowfullscreen"]
-
-  / Trick: dimensionare altezza iframe video in mobile RT 05-05-2021
-  .col-12.d-lg-none.p-0
-    iframe [width="100%"
-            height="200"
-            src=nocookie_url
-            frameborder="0"
-            allow=allows
-            title="Youtube video"
-            allowfullscreen="allowfullscreen"]
+  div [class="acceptoverlayable" data-bs-accept-overlay width="100%" height=minheight ]
+    div [class="acceptoverlay acceptoverlay-primary fade show" ]
+      div class="acceptoverlay-inner"
+        div class="acceptoverlay-icon"
+          svg.icon.icon-xl [
+            focusable="false"
+            role="img"
+            ]
+            use xlink:href="/images/sprite.svg#it-video"
+        div class="text-white"
+          span Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella nostra
+          a [class="text-white px-2" target="_blank" href="/informativa-sul-trattamento-dei-dati-personali"] Informativa sulla privacy
+        div class="acceptoverlay-buttons bg-dark"
+          button [
+              type="button" class="btn btn-primary" data-videoid="vid1"   data-bs-accept-from="youtube.com" data-bs-accept-button] Accetta
+          div class="form-check"
+            input [id="chk-remember" type="checkbox" data-bs-accept-remember]
+            label [for="chk-remember"] Ricorda per tutti i video
+    div
+      video [controls data-bs-video id="vid1" class="video-js" width="100%"  height=minheight  data-url=nocookie_url]
