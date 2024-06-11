@@ -153,3 +153,31 @@ if (chartWrap) {
     }
   }
 }
+
+//setup coockies management
+const hookDiv = document.getElementById("cookies-management");
+if (hookDiv) {
+  const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
+  if (hasYtCookies) {
+    hookDiv.appendChild(
+      <div>
+        <span>YouTube per la visualizzazione di video</span>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => {
+            cookies.clearAllRememberedChoices();
+            window.location.reload();
+          }}
+        >
+          Revoca consenso
+        </button>
+      </div>
+    );
+  }else{
+     hookDiv.appendChild(
+      <div>
+        <span>Non hai installato cookie di terze parti.</span>
+      </div>
+  }
+}
