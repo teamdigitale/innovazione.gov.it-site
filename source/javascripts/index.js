@@ -156,15 +156,13 @@ if (chartWrap) {
 
 //setup coockies management
 const hookDiv = document.getElementById("cookies-management");
-console.log("hookDiv", hookDiv);
-
 function CookieManager({ onRevoke }) {
   return (
     <div>
       <span>YouTube per la visualizzazione di video</span>
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn btn-outline-primary ms-5"
         onClick={() => onRevoke()}
       >
         Revoca consenso
@@ -172,12 +170,12 @@ function CookieManager({ onRevoke }) {
     </div>
   );
 }
-
 if (hookDiv) {
   const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
+  let content = "Non hai installato cookie di terze parti.";
+  const root = createRoot(hookDiv);
   if (hasYtCookies) {
-    const root = createRoot(hookDiv);
-    root.render(
+    content = (
       <CookieManager
         services={[YT_SERVICE]}
         onRevoke={() => {
@@ -186,8 +184,6 @@ if (hookDiv) {
         }}
       />
     );
-  } else {
-    // html = `<div><span>Non hai installato cookie di terze parti.</span></div>`;
-    console.log("no cookies");
   }
+  root.render(content);
 }
