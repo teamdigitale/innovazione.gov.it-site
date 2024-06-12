@@ -21,12 +21,15 @@ ruby:
 
 - if item.present?
 
-  div  [class="acceptoverlayable" data-bs-accept-overlay width="100%"  height=minheight ]
+  div  [class="acceptoverlayable" data-bs-accept-overlay width="100%" height=minheight ]
     div [class="acceptoverlay acceptoverlay-primary fade show" ]
       div class="acceptoverlay-inner"
         div class="acceptoverlay-icon"
-          svg class="icon icon-xl"
-            use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"
+          svg.icon.icon-xl [
+            focusable="false"
+            role="img"
+            ]
+            use xlink:href="/images/sprite.svg#it-video"
         div class="text-white"
           span Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella nostra
           a [class="text-white" target="_blank" href="/informativa-sul-trattamento-dei-dati-personali"]  Informativa sulla privacy
