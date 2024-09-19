@@ -137,6 +137,10 @@ module PathHelpers
     end
   end
 
+  def page_path_with_anchor(page, anchor)
+      anchor ? "#{page_path(page)}#{anchor}" : page_path(page, locale)
+  end
+
   def home_path
     "/"
   end

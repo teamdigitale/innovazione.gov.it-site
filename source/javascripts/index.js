@@ -14,6 +14,10 @@ import 'focus-visible/src/focus-visible.js';
 import Sharer from 'sharer.js/sharer.js';
 import ChartWrapper from '../components/ChartWrapper';
 
+import VideoPlayer from 'bootstrap-italia/src/js/plugins/videoplayer';
+import AcceptOverlay from 'bootstrap-italia/src/js/plugins/accept-overlay';
+import { cookies } from 'bootstrap-italia/src/js/plugins/util/cookies';
+
 const progressIndicator = require('progress-indicator.js');
 const DatoCmsSearch = require('datocms-search.widget.js');
 const searchClient = new DatoCmsSearch(
@@ -79,29 +83,103 @@ for (let index = 0; index < carouselCalendarList.length; index++) {
   carouselInstances[index] = new CarouselCalendar(carousel);
 }
 
+// setup yt videos
+const YT_SERVICE = 'youtube.com';
+const loadYouTubeVideo = (videoId) => {
+  const videoEl = document.getElementById(videoId);
+  const url = videoEl.dataset.url;
+  const video = VideoPlayer.getOrCreateInstance(videoEl);
+  video.setYouTubeVideo(url);
+};
+
+const manageVideo = (overlay) => {
+  const videoLoadButton = overlay.querySelector('button');
+  const videoId = videoLoadButton.dataset.videoid;
+  if (cookies.isChoiceRemembered(YT_SERVICE)) {
+    loadYouTubeVideo(videoId);
+    const overlayAccept = new AcceptOverlay(overlay, {
+      service: YT_SERVICE,
+    });
+    overlayAccept.hide();
+  } else {
+    videoLoadButton.addEventListener('click', () => {
+      const checkbox = overlay.querySelector('input');
+      if (checkbox.checked) {
+        cookies.rememberChoice(YT_SERVICE, true);
+      }
+      loadYouTubeVideo(videoId);
+      const overlayAccept = new AcceptOverlay(overlay, {
+        service: YT_SERVICE,
+      });
+      overlayAccept.hide();
+    });
+  }
+};
+
+const overlay = document.querySelector('[data-bs-accept-overlay]');
+if (overlay) {
+  manageVideo(overlay);
+}
+
+//setup charts
 const chartWrap = document.getElementsByClassName('chartWrap');
 if (chartWrap) {
   for (let i = 0; i < chartWrap.length; i++) {
     try {
-      const chartTemplate = chartWrap[i].parentNode.getElementsByTagName(
-        'template'
-      )[0].innerHTML;
-      const infoTemplate = chartWrap[i].parentNode.getElementsByClassName(
-        'info'
-      )[0].innerHTML;
-
+      const chartTemplate =
+        chartWrap[i].parentNode.getElementsByTagName('template')[0].innerHTML;
+      const infoTemplate =
+        chartWrap[i].parentNode.getElementsByClassName('info')[0].innerHTML;
       const domNode = chartWrap[i];
-
       const chartData = JSON.parse(chartTemplate);
       const data = JSON.parse(chartData); //double parse ?
       const infoData = JSON.parse(infoTemplate);
       const info = JSON.parse(infoData); //double parse ?
       const root = createRoot(domNode);
       root.render(
-        <ChartWrapper id={domNode.id} data={data} info={info} {...domNode.dataset} />
+        <ChartWrapper
+          id={domNode.id}
+          data={data}
+          info={info}
+          {...domNode.dataset}
+        />
       );
     } catch (error) {
       console.log('error', error);
     }
   }
+}
+
+const hookDiv = document.getElementById('cookies-management');
+function CookieManager({ onRevoke }) {
+  return (
+    <div>
+      <span>YouTube per la visualizzazione di video</span>
+      <button
+        type="button"
+        className="btn btn-outline-primary ms-5"
+        onClick={() => onRevoke()}
+      >
+        Revoca consenso
+      </button>
+    </div>
+  );
+}
+
+if (hookDiv) {
+  const hasYtCookies = cookies.isChoiceRemembered(YT_SERVICE);
+  let content = 'Non hai installato cookie di terze parti.';
+  const root = createRoot(hookDiv);
+  if (hasYtCookies) {
+    content = (
+      <CookieManager
+        services={[YT_SERVICE]}
+        onRevoke={() => {
+          cookies.clearAllRememberedChoices();
+          window.location.reload();
+        }}
+      />
+    );
+  }
+  root.render(content);
 }
