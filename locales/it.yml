@@ -18,9 +18,9 @@ it:
     schedule_event: Evento
     video: Video
   logos:
-    italy: Logo Repubblica Italiana
+    italy: Stemma Repubblica Italiana
     mid: Logo Ministro Innovazione
-    d: Logo Dipartimento per la trasformazione digitale
+    d: ""
 
   alt_search: Vai alla pagina di ricerca
   announcement_date_closing: Data di chiusura
