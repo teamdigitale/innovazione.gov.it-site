@@ -65,7 +65,7 @@ ruby:
 
 - if categories.present? || any_title_present || extra_content
   - if mobile
-    nav.sticky-top.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
+    nav.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
       aria-label="indice di pagina mobile" aria-hidden="true"]
       .it-list-wrapper.menu-link-list
         .accordion id="accordionDiv-aside"
@@ -88,7 +88,7 @@ ruby:
                 = content
 
   - else
-    nav.sticky-top.menu-wrapper.pb-5 [
+    nav.menu-wrapper.pb-5 [
       aria-label="indice di pagina" aria-hidden="false"]
       .it-list-wrapper.menu-link-list
         p.h3.pt-3.pb-2.text-uppercase.mid-caption.fw-semibold

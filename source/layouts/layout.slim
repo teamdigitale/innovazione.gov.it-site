@@ -2,11 +2,11 @@ doctype 5
 html lang=I18n.locale
   head = partial "partials/head"
   body
-    div data-datocms-noindex=true
-      a.visually-hidden.visually-hidden-focusable href="#content"
+    div.skiplinks data-datocms-noindex=true
+      a.visually-hidden-focusable href="#content"
         = t("skiplinks.content")
 
-      a.visually-hidden.visually-hidden-focusable href="#footer"
+      a.visually-hidden-focusable href="#footer"
         = t("skiplinks.footer")
 
     = partial "partials/site-nav"

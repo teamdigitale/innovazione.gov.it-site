@@ -12,11 +12,11 @@ ruby:
         class: "list-item"
 
 - if sections.any?
-  .sticky-top.bg-white.mid-section-border-below
+  .bg-white.mid-section-border-below
     nav.menu-wrapper.d-lg-none.px-0.container-xl [
       aria-label="indice di pagina mobile" aria-hidden="true"]
       .link-list-wrapper
-        .accordion#sticky-sections-menu
+        .accordion
           p.accordion-header#heading-section
             p-0.py-2.pe-2.accordion-button.collapsed [type="button"
                                     data-bs-toggle="collapse"
@@ -30,7 +30,7 @@ ruby:
           .col-12.neutral-1-bg-a1.pe-0.ps-0.relative
             ._progress-indicator.progress-indicator.primary-bg-b1
           #accordion-aside [role="region"
-                            aria-labelledby="headingA-aside"
+                            aria-labelledby="heading-section"
                             class="accordion-collapse collapse"]
             .accordion-body.p-0
               ul.it-list.small.py-3._top-menu
