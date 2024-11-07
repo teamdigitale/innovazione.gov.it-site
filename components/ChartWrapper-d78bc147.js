@@ -210,7 +210,7 @@ export default function ChartWrapper(props) {
                 aria-label={`${labelsDownload || "Scarica"} CSV`}
                 role="img"
               >
-                <use href="/images/sprite-b6417d13.svg#it-download"></use>
+                <use href="/images/sprite-b5182491.svg#it-download"></use>
               </svg>
             </a>
           </span>
@@ -228,7 +228,7 @@ export default function ChartWrapper(props) {
                 aria-label={`${labelsDownload || "Scarica"} PNG`}
                 role="img"
               >
-                <use href="/images/sprite-b6417d13.svg#it-download"></use>
+                <use href="/images/sprite-b5182491.svg#it-download"></use>
               </svg>
             </button>
           </span>
@@ -249,7 +249,7 @@ export default function ChartWrapper(props) {
                   aria-label={labelsShare || "Condividi"}
                   role="img"
                 >
-                  <use href="/images/sprite-b6417d13.svg#it-share"></use>
+                  <use href="/images/sprite-b5182491.svg#it-share"></use>
                 </svg>
               </button>
 
