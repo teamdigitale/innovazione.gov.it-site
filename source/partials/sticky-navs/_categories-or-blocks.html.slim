@@ -29,7 +29,7 @@ ruby:
 - content = capture
   - if categories.present?
     - categories.each do |cat|
-      li.nav-item.navscroll_link
+      li.nav-item.navscroll_link.border
         = link_to cat.name,
           "##{cat.slug}",
           class: "nav-link navscroll_link pe-4"
