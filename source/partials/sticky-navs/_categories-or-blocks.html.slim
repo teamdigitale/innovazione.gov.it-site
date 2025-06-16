@@ -29,37 +29,42 @@ ruby:
 - content = capture
   - if categories.present?
     - categories.each do |cat|
-      li.nav-item.navscroll_link.border
-        = link_to cat.name,
-          "##{cat.slug}",
-          class: "nav-link navscroll_link pe-4"
+      li.nav-item
+        = link_to "##{cat.slug}",
+          class: "nav-link pe-4",
+          data: { bs_scrollspy: true } do
+          span = cat.name
 
   - else
     - page.content_blocks.each do |block|
       - if block.respond_to?(:text_title) && block.text_title.present?
-        li.nav-item.navscroll_link
-          = link_to block.text_title,
-            "##{anchor_id(block.text_title)}",
-            class: "nav-link navscroll_link pe-4"
+        li.nav-item
+          = link_to "##{anchor_id(block.text_title)}",
+            class: "nav-link pe-4",
+            data: { bs_scrollspy: true } do
+            span = block.text_title
 
   - if show_attachments
-    li.nav-item.navscroll_link
-      = link_to t("attachments"),
-        "#_attachments",
-        class: "nav-link navscroll_link pe-4",
-        tabindex: "-1"
+    li.nav-item
+      = link_to "#_attachments",
+        class: "nav-link pe-4",
+        data: { bs_scrollspy: true },
+        tabindex: "-1" do
+        span = t("attachments")
   - if show_links
-    li.nav-item.navscroll_link
-      = link_to t("useful_links"),
-        "#_useful_links",
-        class: "nav-link navscroll_link pe-4",
-        tabindex: "-1"
+    li.nav-item
+      = link_to "#_useful_links",
+        class: "nav-link pe-4",
+        data: { bs_scrollspy: true },
+        tabindex: "-1" do
+        span = t("useful_links")
   - if show_related
-    li.nav-item.navscroll_link
-      = link_to t("related_content"),
-        "#_related-content",
-        class: "nav-link navscroll_link pe-4",
-        tabindex: "-1"
+    li.nav-item
+      = link_to "#_related-content",
+        class: "nav-link pe-4",
+        data: { bs_scrollspy: true },
+        tabindex: "-1" do
+        span = t("related_content")
 
 - extra_content = show_related || show_attachments || show_links
 
@@ -67,7 +72,7 @@ ruby:
   - if mobile
     nav.menu-wrapper.col-12.d-lg-none.px-0.bg-white [
       aria-label="indice di pagina mobile" aria-hidden="true"]
-      .it-list-wrapper.menu-link-list
+      .it-list-wrapper.link-list-wrapper
         .accordion id="accordionDiv-aside"
           p.accordion-header#headingA-aside
             p-0.py-2.pe-2.accordion-button#accordion-button.collapsed [type="button"
@@ -88,9 +93,13 @@ ruby:
                 = content
 
   - else
-    nav.menu-wrapper.pb-5 [
-      aria-label="indice di pagina" aria-hidden="false"]
-      .it-list-wrapper.menu-link-list
+    nav.navbar.it-navscroll-wrapper.navbar-expand-lg.it-bottom-navscroll.it-right-side.pb-5 [
+      aria-label="indice di pagina" 
+      aria-hidden="false" 
+      data-bs-navscroll
+      data-bs-scrollspy="true"
+      data-bs-scrollspy-offset="100"]
+      .it-list-wrapper.link-list-wrapper
         p.h3.pt-3.pb-2.text-uppercase.mid-caption.fw-semibold
           = title
 

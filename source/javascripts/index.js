@@ -17,6 +17,7 @@ import ChartWrapper from '../components/ChartWrapper';
 import VideoPlayer from 'bootstrap-italia/src/js/plugins/videoplayer';
 import AcceptOverlay from 'bootstrap-italia/src/js/plugins/accept-overlay';
 import { cookies } from 'bootstrap-italia/src/js/plugins/util/cookies';
+import NavScroll from 'bootstrap-italia/src/js/plugins/navscroll';
 
 const progressIndicator = require('progress-indicator.js');
 const DatoCmsSearch = require('datocms-search.widget.js');
@@ -41,6 +42,20 @@ progressIndicator.updateProgress();
 window.onscroll = function () {
   progressIndicator.updateProgress();
 };
+
+// initiate navscroll
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('nav.it-navscroll-wrapper[data-bs-navscroll]')
+    .forEach((el) => {
+      const navscroll = new NavScroll(el, {
+        scrollspy: true,
+        scrollspyOptions: {
+          offset: 100
+        }
+      });
+    });
+});
 
 // initiate navbar
 const navbarcollapsible = new NavBarCollapsible(
