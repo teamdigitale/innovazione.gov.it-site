@@ -1,6 +1,9 @@
 ruby:
   items ||= []
   open_positions = visible_work_positions.select { |p| p.announcement_status.name == "APERTO"}.count
+  
+  # Transform items to JSON for data attribute
+  job_positions_json = visible_work_positions.map(&:to_hash).to_json
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
@@ -21,7 +24,8 @@ ruby:
   .border-bottom.mb-4
 
 .py-3.mb-lg-5
-  .container-xl.mid-container
+  .container-xl.mid-container.jobPositionsWrapper[
+    data-job-positions="#{h(job_positions_json)}"]
     p.text-uppercase.fw-semibold
       - if open_positions === 0
         = t("work_position.none_open")
@@ -29,11 +33,11 @@ ruby:
         = "1 #{t("work_position.one_open")}"
       - if open_positions > 1
         = "#{open_positions} #{t("work_position.many_open")}"
-
-    - if items.any?
+    
+    - if visible_work_positions.any?
       .row
         h2.visually-hidden = t("elements_list")
-        - items.each do |n|
+        - visible_work_positions.each do |n|
           .col-lg-8
             = partial "partials/card-related-items",
               locals: {item: n}
