@@ -1,14 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
+import JobPosition from "./JobPosition";
+import { generatePagePath, filterJobPositions, calculatePagination } from "./utils/JobPositionsUtils";
 
 export default function JobPositionsWrapper(props) {
-  const { jobPositions, existingHTML } = props;
+  const { jobPositions = [], existingHTML = "", translations = {} } = props;
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
   const itemsPerPage = 10;
   const containerRef = useRef(null);
 
-  const totalPages = Math.ceil(jobPositions.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+  const filteredJobPositions = filterJobPositions(jobPositions, searchTerm);
+  const { totalPages, startIndex, endIndex } = calculatePagination(filteredJobPositions.length, currentPage, itemsPerPage);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -24,16 +30,16 @@ export default function JobPositionsWrapper(props) {
 
       updateExistingPagination();
     }
-  }, [currentPage, startIndex, endIndex, totalPages]);
+  }, [currentPage, startIndex, endIndex, totalPages, filteredJobPositions]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    
+
     // Smooth scroll to the container with offset
     if (containerRef.current) {
       const containerTop = containerRef.current.offsetTop;
       const offset = 100; // 100px above the container
-      
+
       window.scrollTo({
         top: containerTop - offset,
         behavior: 'smooth'
@@ -113,10 +119,44 @@ export default function JobPositionsWrapper(props) {
 
   return (
     <div>
-      <div
-        ref={containerRef}
-        dangerouslySetInnerHTML={{ __html: existingHTML }}
-      />
+      <div className="mb-4">
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            id="searchInput"
+            placeholder={translations.searchPlaceholder}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div ref={containerRef}>
+        {filteredJobPositions.length > 0 ? (
+          <>
+            <div className="row">
+              <h2 className="visually-hidden">Lista posizioni lavorative</h2>
+              {filteredJobPositions.map((jobPosition, index) => (
+                <JobPosition
+                  key={jobPosition?.id || index}
+                  jobPosition={jobPosition}
+                  translations={translations}
+                />
+              ))}
+            </div>
+            <div
+              dangerouslySetInnerHTML={{ __html: existingHTML }}
+            />
+          </>
+        ) : (
+          <div className="text-center py-4">
+            <p className="text-muted">
+              {searchTerm ? translations.noResultsFound : translations.noPositions}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

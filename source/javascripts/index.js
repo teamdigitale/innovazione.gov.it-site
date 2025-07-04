@@ -175,17 +175,34 @@ if (jobPositionsWrapper) {
     const jobPositionData = JSON.parse(wrapper.dataset.jobPositions);
     console.log('jobPositionData', jobPositionData);
     
-    // Capture the existing HTML before replacing it
-    const existingHTML = wrapper.innerHTML;
-    console.log('existingHTML', existingHTML);
+    const translationsData = JSON.parse(wrapper.dataset.translations);
+    console.log('translationsData', translationsData);
     
-    const root = createRoot(wrapper);
-    root.render(
-      <JobPositionsWrapper 
-        jobPositions={jobPositionData} 
-        existingHTML={existingHTML}
-      />
-    );
+    const paginationElement = wrapper.querySelector('.pagination-wrapper');
+    const existingHTML = paginationElement ? paginationElement.outerHTML : '';
+    console.log('existingHTML (pagination only)', existingHTML);
+    
+    // Store original HTML for static rendering
+    const originalHTML = wrapper.innerHTML;
+    
+    // setup toggle functionality
+    const toggle = document.getElementById('reactToggle');
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          const root = createRoot(wrapper);
+          root.render(
+            <JobPositionsWrapper 
+              jobPositions={jobPositionData} 
+              existingHTML={existingHTML}
+              translations={translationsData}
+            />
+          );
+        } else {
+          wrapper.innerHTML = originalHTML;
+        }
+      });
+    }
   }
 }
 

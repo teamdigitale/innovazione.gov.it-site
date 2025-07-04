@@ -2,8 +2,24 @@ ruby:
   items ||= []
   open_positions = visible_work_positions.select { |p| p.announcement_status.name == "APERTO"}.count
   
-  # Transform items to JSON for data attribute
-  job_positions_json = visible_work_positions.map(&:to_hash).to_json
+  # Transform items to JSON for data attribute with path information
+  job_positions_json = visible_work_positions.map do |position|
+    position_hash = position.to_hash
+    position_hash[:ancestor_slug] = dato.innovate_page.slug
+    position_hash[:parent_slug] = dato.work_positions_index.slug
+    position_hash[:locale_prefix] = page_is_localizable?(position) ? path_prefix(I18n.locale).to_s : ""
+    position_hash
+  end.to_json
+  
+  # Prepare translations for the React component
+  translations_json = {
+    workPosition: t("models.work_position"),
+    searchState: t("work_position.search_state"),
+    discover: t("work_position.discover"),
+    searchPlaceholder: t("work_position.search_placeholder"),
+    noResultsFound: t("empty_list"),
+    noPositions: t("work_position.none_open")
+  }.to_json
 
 - content_for(:head)
   == proxy_dato_meta_tags(page)
@@ -24,8 +40,7 @@ ruby:
   .border-bottom.mb-4
 
 .py-3.mb-lg-5
-  .container-xl.mid-container.jobPositionsWrapper[
-    data-job-positions="#{h(job_positions_json)}"]
+  .container-xl.mid-container
     p.text-uppercase.fw-semibold
       - if open_positions === 0
         = t("work_position.none_open")
@@ -33,18 +48,30 @@ ruby:
         = "1 #{t("work_position.one_open")}"
       - if open_positions > 1
         = "#{open_positions} #{t("work_position.many_open")}"
-    
-    - if visible_work_positions.any?
-      .row
-        h2.visually-hidden = t("elements_list")
-        - visible_work_positions.each do |n|
-          .col-lg-8
-            = partial "partials/card-related-items",
-              locals: {item: n}
 
-      .pt-lg-4
-        = partial "partials/pagination",
-          locals: {pager: pager}
+    .mb-3
+      div
+        .form-check.form-check-inline
+          .toggles
+            label for="reactToggle"
+              = t("work_position.toggle")
+              input type="checkbox" id="reactToggle"
+              span.lever
 
-    - else
-      = t("empty_list")
+    div.jobPositionsWrapper[
+      data-job-positions="#{h(job_positions_json)}"
+      data-translations="#{h(translations_json)}"]
+      - if items.any?
+        .row
+          h2.visually-hidden = t("elements_list")
+          - items.each do |n|
+            .col-lg-8
+              = partial "partials/card-related-items",
+                locals: {item: n}
+
+        .pt-lg-4
+          = partial "partials/pagination",
+            locals: {pager: pager}
+
+      - else
+        = t("empty_list")
