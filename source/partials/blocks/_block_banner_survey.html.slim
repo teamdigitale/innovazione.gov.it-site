@@ -1,0 +1,19 @@
+.banner-survey.position-relative.overflow-hidden
+  .container.pt-5.pb-5
+    .row
+      .col-12.col-lg-7.col-xl-6.order-2.order-lg-1.pe-3.pe-lg-0.ps-3.ps-lg-0
+        .it-hero-text-wrapper
+          .banner-survey__title-wrapper
+            h2.h2 = t("banner_survey.title")
+          p.pt-2.pb-2.pt-lg-3.pb-lg-3.pe-3.pe-lg-0
+            = t("banner_survey.description")
+          .it-btn-container.pt-3.pt-lg-0.mb-2
+            a.btn.btn-sm.btn-primary[href="https://ec.europa.eu/eusurvey/runner/redesignsitidipartimento" title=t("banner_survey.cta") target="_blank"]
+              = t("banner_survey.cta")
+      .col-12.col-lg-5.col-xl-6.order-1.order-lg-2
+        .d-flex.justify-content-end.position-relative.w-100
+          .banner-survey__shape
+          = proxy_image_tag "survey.png",
+            alt: t("banner_survey.image_alt"),
+            rel: "noopener",
+            class: "banner-survey__image pe-3 pe-lg-0 mt-lg-3"

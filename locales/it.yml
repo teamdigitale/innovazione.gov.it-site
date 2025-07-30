@@ -201,3 +201,9 @@ it:
     many_open: "posizioni lavorative aperte"
     search_state: "Stato ricerca: "
     discover: "Scopri la posizione"
+
+  banner_survey:
+    title: "Aiutaci a migliorare i nostri siti"
+    description: "Partecipa al sondaggio e condividi la tua opinione sui siti del Dipartimento per la trasformazione digitale. Ci vorranno solo 2 minuti!"
+    cta: "Partecipa al sondaggio"
+    image_alt: "Immagine Survey"
