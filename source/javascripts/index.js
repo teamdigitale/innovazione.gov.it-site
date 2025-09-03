@@ -181,12 +181,22 @@ if (jobPositionsWrapper) {
     const paginationElement = wrapper.querySelector('.pagination-wrapper');
     const existingHTML = paginationElement ? paginationElement.outerHTML : '';
     
+    const loaderElement = wrapper.parentNode.querySelector('.job-positions-loader');
+    
+    const handleComponentReady = () => {
+      if (loaderElement) {
+        loaderElement.classList.add('d-none');
+      }
+      wrapper.classList.add('loaded');
+    };
+    
     const root = createRoot(wrapper);
     root.render(
       <JobPositionsWrapper 
         jobPositions={jobPositionData} 
         existingHTML={existingHTML}
         translations={translationsData}
+        onReady={handleComponentReady}
       />
     );
   }

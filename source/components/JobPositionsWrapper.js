@@ -6,7 +6,7 @@ import {
 } from "./utils/JobPositionsUtils";
 
 export default function JobPositionsWrapper(props) {
-  const { jobPositions = [], existingHTML = "", translations = {} } = props;
+  const { jobPositions = [], existingHTML = "", translations = {}, onReady } = props;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [showClosed, setShowClosed] = useState(false);
@@ -27,6 +27,13 @@ export default function JobPositionsWrapper(props) {
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, showClosed]);
+
+  // Call onReady callback when component is mounted and ready
+  useEffect(() => {
+    if (onReady && typeof onReady === 'function') {
+      onReady();
+    }
+  }, [onReady]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -66,6 +73,7 @@ export default function JobPositionsWrapper(props) {
       ".pagination-wrapper"
     );
     if (!paginationNav) return;
+    paginationNav.classList.remove("d-none");
 
     const paginationUl = paginationNav.querySelector(".pagination");
     if (!paginationUl) return;
