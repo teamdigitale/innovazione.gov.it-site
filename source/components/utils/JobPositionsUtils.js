@@ -11,13 +11,21 @@ export const generatePagePath = (page) => {
   return `/${ancestorPath}${parentPath}${localePrefix}${page.slug}`.replace(/\/+/g, '/');
 };
 
-// Filter job positions based on search term
-export const filterJobPositions = (jobPositions, searchTerm) => {
+export const filterJobPositions = (jobPositions, searchTerm, showClosed = false) => {
   if (!jobPositions || !Array.isArray(jobPositions)) return [];
-  if (!searchTerm) return jobPositions;
+  
+  let filtered = jobPositions;
+  
+  if (!showClosed) {
+    filtered = jobPositions.filter(jobPosition => 
+      jobPosition?.announcement_status?.name === "APERTO"
+    );
+  }
+  
+  if (!searchTerm) return filtered;
   
   const searchLower = searchTerm.toLowerCase();
-  return jobPositions.filter(jobPosition => (
+  return filtered.filter(jobPosition => (
     jobPosition?.title?.toLowerCase()?.includes(searchLower) ||
     jobPosition?.subtitle?.toLowerCase()?.includes(searchLower) ||
     jobPosition?.description?.toLowerCase()?.includes(searchLower)

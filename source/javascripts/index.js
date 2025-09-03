@@ -180,29 +180,15 @@ if (jobPositionsWrapper) {
     
     const paginationElement = wrapper.querySelector('.pagination-wrapper');
     const existingHTML = paginationElement ? paginationElement.outerHTML : '';
-    console.log('existingHTML (pagination only)', existingHTML);
     
-    // Store original HTML for static rendering
-    const originalHTML = wrapper.innerHTML;
-    
-    // setup toggle functionality
-    const toggle = document.getElementById('reactToggle');
-    if (toggle) {
-      toggle.addEventListener('change', function() {
-        if (this.checked) {
-          const root = createRoot(wrapper);
-          root.render(
-            <JobPositionsWrapper 
-              jobPositions={jobPositionData} 
-              existingHTML={existingHTML}
-              translations={translationsData}
-            />
-          );
-        } else {
-          wrapper.innerHTML = originalHTML;
-        }
-      });
-    }
+    const root = createRoot(wrapper);
+    root.render(
+      <JobPositionsWrapper 
+        jobPositions={jobPositionData} 
+        existingHTML={existingHTML}
+        translations={translationsData}
+      />
+    );
   }
 }
 

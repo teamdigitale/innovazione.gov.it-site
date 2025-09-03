@@ -17,6 +17,7 @@ ruby:
     searchState: t("work_position.search_state"),
     discover: t("work_position.discover"),
     searchPlaceholder: t("work_position.search_placeholder"),
+    toggle: t("work_position.toggle"),
     noResultsFound: t("empty_list"),
     noPositions: t("work_position.none_open")
   }.to_json
@@ -49,25 +50,12 @@ ruby:
       - if open_positions > 1
         = "#{open_positions} #{t("work_position.many_open")}"
 
-    .mb-3
-      div
-        .form-check.form-check-inline
-          .toggles
-            label for="reactToggle"
-              = t("work_position.toggle")
-              input type="checkbox" id="reactToggle"
-              span.lever
+
 
     div.jobPositionsWrapper[
       data-job-positions="#{h(job_positions_json)}"
       data-translations="#{h(translations_json)}"]
       - if items.any?
-        .row
-          h2.visually-hidden = t("elements_list")
-          - items.each do |n|
-            .col-lg-8
-              = partial "partials/card-related-items",
-                locals: {item: n}
 
         .pt-lg-4
           = partial "partials/pagination",
