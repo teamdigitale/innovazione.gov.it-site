@@ -13,6 +13,7 @@ import 'lazysizes/plugins/respimg/ls.respimg';
 import 'focus-visible/src/focus-visible.js';
 import Sharer from 'sharer.js/sharer.js';
 import ChartWrapper from '../components/ChartWrapper';
+import JobPositionsWrapper from '../components/JobPositionsWrapper';
 
 import VideoPlayer from 'bootstrap-italia/src/js/plugins/videoplayer';
 import AcceptOverlay from 'bootstrap-italia/src/js/plugins/accept-overlay';
@@ -162,6 +163,42 @@ if (chartWrap) {
     } catch (error) {
       console.log('error', error);
     }
+  }
+}
+
+// setup job positions
+const jobPositionsWrapper = document.getElementsByClassName('jobPositionsWrapper');
+if (jobPositionsWrapper) {
+  for (let i = 0; i < jobPositionsWrapper.length; i++) {
+    const wrapper = jobPositionsWrapper[i];
+    console.log('wrapper', wrapper.dataset.jobPositions);
+    const jobPositionData = JSON.parse(wrapper.dataset.jobPositions);
+    console.log('jobPositionData', jobPositionData);
+    
+    const translationsData = JSON.parse(wrapper.dataset.translations);
+    console.log('translationsData', translationsData);
+    
+    const paginationElement = wrapper.querySelector('.pagination-wrapper');
+    const existingHTML = paginationElement ? paginationElement.outerHTML : '';
+    
+    const loaderElement = wrapper.parentNode.querySelector('.job-positions-loader');
+    
+    const handleComponentReady = () => {
+      if (loaderElement) {
+        loaderElement.classList.add('d-none');
+      }
+      wrapper.classList.add('loaded');
+    };
+    
+    const root = createRoot(wrapper);
+    root.render(
+      <JobPositionsWrapper 
+        jobPositions={jobPositionData} 
+        existingHTML={existingHTML}
+        translations={translationsData}
+        onReady={handleComponentReady}
+      />
+    );
   }
 }
 
