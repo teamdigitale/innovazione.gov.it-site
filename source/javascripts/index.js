@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const navscroll = new NavScroll(el, {
         scrollspy: true,
         scrollspyOptions: {
-          offset: 100
-        }
+          offset: 100,
+        },
       });
     });
 });
@@ -167,33 +167,31 @@ if (chartWrap) {
 }
 
 // setup job positions
-const jobPositionsWrapper = document.getElementsByClassName('jobPositionsWrapper');
+const jobPositionsWrapper = document.getElementsByClassName(
+  'jobPositionsWrapper'
+);
 if (jobPositionsWrapper) {
   for (let i = 0; i < jobPositionsWrapper.length; i++) {
     const wrapper = jobPositionsWrapper[i];
-    console.log('wrapper', wrapper.dataset.jobPositions);
     const jobPositionData = JSON.parse(wrapper.dataset.jobPositions);
-    console.log('jobPositionData', jobPositionData);
-    
     const translationsData = JSON.parse(wrapper.dataset.translations);
-    console.log('translationsData', translationsData);
-    
     const paginationElement = wrapper.querySelector('.pagination-wrapper');
     const existingHTML = paginationElement ? paginationElement.outerHTML : '';
-    
-    const loaderElement = wrapper.parentNode.querySelector('.job-positions-loader');
-    
+    const loaderElement = wrapper.parentNode.querySelector(
+      '.job-positions-loader'
+    );
+
     const handleComponentReady = () => {
       if (loaderElement) {
         loaderElement.classList.add('d-none');
       }
       wrapper.classList.add('loaded');
     };
-    
+
     const root = createRoot(wrapper);
     root.render(
-      <JobPositionsWrapper 
-        jobPositions={jobPositionData} 
+      <JobPositionsWrapper
+        jobPositions={jobPositionData}
         existingHTML={existingHTML}
         translations={translationsData}
         onReady={handleComponentReady}
@@ -208,8 +206,8 @@ function CookieManager({ onRevoke }) {
     <div>
       <span>YouTube per la visualizzazione di video</span>
       <button
-        type="button"
-        className="btn btn-outline-primary ms-5"
+        type='button'
+        className='btn btn-outline-primary ms-5'
         onClick={() => onRevoke()}
       >
         Revoca consenso

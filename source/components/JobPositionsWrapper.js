@@ -1,14 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
-import JobPosition from "./JobPosition";
+import React, { useState, useEffect, useRef } from 'react';
+import JobPosition from './JobPosition';
 import {
   filterJobPositions,
   calculatePagination,
-} from "./utils/JobPositionsUtils";
+} from './utils/JobPositionsUtils';
 
 export default function JobPositionsWrapper(props) {
-  const { jobPositions = [], existingHTML = "", translations = {}, onReady } = props;
+  const {
+    jobPositions = [],
+    existingHTML = '',
+    translations = {},
+    onReady,
+  } = props;
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [showClosed, setShowClosed] = useState(false);
   const itemsPerPage = 10;
   const containerRef = useRef(null);
@@ -37,13 +42,13 @@ export default function JobPositionsWrapper(props) {
 
   useEffect(() => {
     if (containerRef.current) {
-      const allItems = containerRef.current.querySelectorAll(".col-lg-8");
+      const allItems = containerRef.current.querySelectorAll('.col-lg-8');
 
       allItems.forEach((item, index) => {
         if (index >= startIndex && index < endIndex) {
-          item.style.display = "block";
+          item.style.display = 'block';
         } else {
-          item.style.display = "none";
+          item.style.display = 'none';
         }
       });
 
@@ -61,7 +66,7 @@ export default function JobPositionsWrapper(props) {
 
       window.scrollTo({
         top: containerTop - offset,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -70,23 +75,23 @@ export default function JobPositionsWrapper(props) {
     if (!containerRef.current) return;
 
     const paginationNav = containerRef.current.querySelector(
-      ".pagination-wrapper"
+      '.pagination-wrapper'
     );
     if (!paginationNav) return;
-    paginationNav.classList.remove("d-none");
+    paginationNav.classList.remove('d-none');
 
-    const paginationUl = paginationNav.querySelector(".pagination");
+    const paginationUl = paginationNav.querySelector('.pagination');
     if (!paginationUl) return;
 
-    paginationUl.innerHTML = "";
+    paginationUl.innerHTML = '';
 
     if (currentPage > 1) {
-      const prevLi = document.createElement("li");
-      prevLi.className = "page-item";
+      const prevLi = document.createElement('li');
+      prevLi.className = 'page-item';
 
-      const prevButton = document.createElement("button");
-      prevButton.className = "page-link";
-      prevButton.setAttribute("aria-label", "Pagina precedente");
+      const prevButton = document.createElement('button');
+      prevButton.className = 'page-link';
+      prevButton.setAttribute('aria-label', 'Pagina precedente');
       prevButton.onclick = () => handlePageChange(currentPage - 1);
 
       prevButton.innerHTML = `
@@ -108,7 +113,7 @@ export default function JobPositionsWrapper(props) {
       dynamicLastPage = null;
     } else {
       const halfVisible = Math.floor(maxVisiblePages / 2);
-      
+
       if (currentPage <= halfVisible) {
         startPage = 1;
         endPage = maxVisiblePages;
@@ -125,14 +130,14 @@ export default function JobPositionsWrapper(props) {
     }
 
     for (let i = startPage; i <= endPage; i++) {
-      const pageLi = document.createElement("li");
-      pageLi.className = "page-item";
+      const pageLi = document.createElement('li');
+      pageLi.className = 'page-item';
 
-      const pageButton = document.createElement("button");
-      pageButton.className = `page-link ${i === currentPage ? "active" : ""}`;
+      const pageButton = document.createElement('button');
+      pageButton.className = `page-link ${i === currentPage ? 'active' : ''}`;
       pageButton.onclick = () => handlePageChange(i);
       if (i === currentPage) {
-        pageButton.setAttribute("aria-current", "page");
+        pageButton.setAttribute('aria-current', 'page');
       }
       pageButton.textContent = i;
 
@@ -141,18 +146,18 @@ export default function JobPositionsWrapper(props) {
     }
 
     if (dynamicLastPage && dynamicLastPage <= totalPages) {
-      const ellipsisLi = document.createElement("li");
-      ellipsisLi.className = "page-item disabled";
-      const ellipsisSpan = document.createElement("span");
-      ellipsisSpan.className = "page-link";
-      ellipsisSpan.textContent = "...";
+      const ellipsisLi = document.createElement('li');
+      ellipsisLi.className = 'page-item disabled';
+      const ellipsisSpan = document.createElement('span');
+      ellipsisSpan.className = 'page-link';
+      ellipsisSpan.textContent = '...';
       ellipsisLi.appendChild(ellipsisSpan);
       paginationUl.appendChild(ellipsisLi);
 
-      const dynamicLastLi = document.createElement("li");
-      dynamicLastLi.className = "page-item";
-      const dynamicLastButton = document.createElement("button");
-      dynamicLastButton.className = "page-link";
+      const dynamicLastLi = document.createElement('li');
+      dynamicLastLi.className = 'page-item';
+      const dynamicLastButton = document.createElement('button');
+      dynamicLastButton.className = 'page-link';
       dynamicLastButton.onclick = () => handlePageChange(dynamicLastPage);
       dynamicLastButton.textContent = dynamicLastPage;
       dynamicLastLi.appendChild(dynamicLastButton);
@@ -160,12 +165,12 @@ export default function JobPositionsWrapper(props) {
     }
 
     if (currentPage < totalPages) {
-      const nextLi = document.createElement("li");
-      nextLi.className = "page-item";
+      const nextLi = document.createElement('li');
+      nextLi.className = 'page-item';
 
-      const nextButton = document.createElement("button");
-      nextButton.className = "page-link";
-      nextButton.setAttribute("aria-label", "Pagina successiva");
+      const nextButton = document.createElement('button');
+      nextButton.className = 'page-link';
+      nextButton.setAttribute('aria-label', 'Pagina successiva');
       nextButton.onclick = () => handlePageChange(currentPage + 1);
 
       nextButton.innerHTML = `
@@ -181,27 +186,27 @@ export default function JobPositionsWrapper(props) {
 
   return (
     <div>
-      <div className="mb-4">
-        <div className="form-group col-lg-8">
+      <div className='mb-4'>
+        <div className='form-group col-lg-8'>
           <input
-            type="text"
-            className="form-control"
-            id="searchInput"
+            type='search'
+            className='form-control'
+            id='searchInput'
             placeholder={translations.searchPlaceholder}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <div className="form-check form-check-inline d-flex mt-3">
-            <div className="toggles">
-              <label htmlFor="reactToggle">
+          <div className='form-check form-check-inline d-flex mt-3'>
+            <div className='toggles'>
+              <label htmlFor='reactToggle'>
                 {translations.toggle}
                 <input
-                  type="checkbox"
-                  id="reactToggle"
+                  type='checkbox'
+                  id='reactToggle'
                   checked={showClosed}
                   onChange={(e) => setShowClosed(e.target.checked)}
                 />
-                <span className="lever"></span>
+                <span className='lever'></span>
               </label>
             </div>
           </div>
@@ -211,8 +216,8 @@ export default function JobPositionsWrapper(props) {
       <div ref={containerRef}>
         {filteredJobPositions.length > 0 ? (
           <>
-            <div className="row">
-              <h2 className="visually-hidden">Lista posizioni lavorative</h2>
+            <div className='row'>
+              <h2 className='visually-hidden'>Lista posizioni lavorative</h2>
               {filteredJobPositions.map((jobPosition, index) => (
                 <JobPosition
                   key={jobPosition?.id || index}
@@ -224,8 +229,8 @@ export default function JobPositionsWrapper(props) {
             <div dangerouslySetInnerHTML={{ __html: existingHTML }} />
           </>
         ) : (
-          <div className="text-center py-4">
-            <p className="text-muted">
+          <div className='text-center py-4'>
+            <p className='text-muted'>
               {searchTerm
                 ? translations.noResultsFound
                 : translations.noPositions}
