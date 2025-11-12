@@ -1,8 +1,12 @@
 .container-xl.border-top.pb-5
   .row.g-0
     aside.col-lg-3.border-end.hidden.d-none.d-lg-block.px-0
-      = partial "partials/sticky-navs/categories-or-blocks",
-        locals: {page: page}
+      .bs-sticky-container [
+        data-bs-toggle="sticky"
+        data-bs-stackable="true"
+        data-bs-offset="100"]
+          = partial "partials/sticky-navs/categories-or-blocks",
+            locals: {page: page}
 
     .col-12.col-lg-9.pt-lg-5._content
       .row
