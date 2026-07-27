@@ -134,12 +134,20 @@ ruby:
                           page_path(dato.innovate_page),
                           class: nav_element_classes
 
-                  - if dato.italy2026_page
-                    ul.navbar-nav.ms-lg-auto.pt-0
-                      li.nav-item
-                        = active_link_to dato.italy2026_page.menu_label,
-                          page_path(dato.italy2026_page),
-                          class: nav_element_classes
+                  ul.navbar-nav.ms-lg-auto.pt-0
+                    / - if dato.italy2026_page
+                    /  li.nav-item
+                    /    = active_link_to dato.italy2026_page.menu_label,
+                    /      page_path(dato.italy2026_page),
+                    /      class: nav_element_classes
+                    li.nav-item
+                      = link_to "https://pnrr.innovazione.gov.it",
+                        target: "_blank",
+                        rel: "noopener",
+                        class: nav_element_classes
+                        = "Risultati PNRR"
+                        svg.icon.icon-sm.icon-white.ms-2 aria-hidden="true"
+                          use xlink:href="/images/sprite.svg#it-external-link"
 
                   .it-socials.d-flex.text-nowrap.ms-4.pt-4.d-lg-none
                     span.text-white
