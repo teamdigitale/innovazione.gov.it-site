@@ -4,12 +4,24 @@
 module TextHelpers
   module_function
 
+  # I contenuti incollati nel CMS da editor esterni (Word, Google Docs)
+  # contengono spazi unificatori (U+00A0 e varianti) invisibili nell'editor:
+  # il browser non può andare a capo su di essi e spezza le righe in punti
+  # anomali. Li normalizziamo in spazi ordinari al momento del rendering.
+  NO_BREAK_SPACES = /[\u00A0\u2007\u202F]/
+
+  def normalize_spaces(text)
+    return text unless text.is_a?(String)
+
+    text.gsub(NO_BREAK_SPACES, " ")
+  end
+
   def markdown(content)
     return "" if content.blank?
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
                                        autolink: true, space_after_headers: true)
-    new_content = markdown.render(content)
+    new_content = markdown.render(normalize_spaces(content))
     replace_external_links(new_content)
   end
 
@@ -18,7 +30,7 @@ module TextHelpers
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML,
                                        autolink: true, space_after_headers: true)
-    new_content = markdown.render(content)
+    new_content = markdown.render(normalize_spaces(content))
     add_icon_external_links(new_content)
   end
 
