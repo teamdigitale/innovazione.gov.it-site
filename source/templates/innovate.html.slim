@@ -13,19 +13,20 @@ ruby:
       locals: {page: page}
 
   = content_for :row
-    / = partial "partials/button",
-    /   locals: {btn_url: dato.work_positions_index,
-    /   color_class: "btn-default btn-sm btn-primary mid-caption--large",
-    /   label: t("work_position.go_to_index")}
 
     = link_to "https://recruitment.innovazione.gov.it/",
-      class: "btn text-uppercase btn-default btn-sm btn-primary mid-caption--large",
+      class: "btn text-uppercase btn-default btn-sm btn-primary mid-caption--large me-2",
       target: "_blank",
       rel: "noopener",
       "aria-label": "#{t('work_position.go_to_index')} #{t('new_tab')}" do
       = t("work_position.go_to_index")
       svg.icon.icon-sm.icon-white.ms-2 aria-hidden="true"
         use xlink:href="/images/sprite.svg#it-external-link"
+
+    = partial "partials/button",
+      locals: {btn_url: dato.work_positions_index,
+      color_class: "ms-2 btn btn-sm btn-outline-primary mid-caption--large",
+      label: t("work_position.archive")}
 
   - if main_locale?(locale)
     = content_for :aside
