@@ -18,12 +18,14 @@ ruby:
     /   color_class: "btn-default btn-sm btn-primary mid-caption--large",
     /   label: t("work_position.go_to_index")}
 
-    = link_to t("work_position.go_to_index"),
-      "https://recruitment.innovazione.gov.it/",
+    = link_to "https://recruitment.innovazione.gov.it/",
       class: "btn text-uppercase btn-default btn-sm btn-primary mid-caption--large",
       target: "_blank",
       rel: "noopener",
-      "aria-label": "#{t('work_position.go_to_index')} #{t('new_tab')}"
+      "aria-label": "#{t('work_position.go_to_index')} #{t('new_tab')}" do
+      = t("work_position.go_to_index")
+      svg.icon.icon-sm.icon-white.ms-2 aria-hidden="true"
+        use xlink:href="/images/sprite.svg#it-external-link"
 
   - if main_locale?(locale)
     = content_for :aside
