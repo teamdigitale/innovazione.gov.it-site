@@ -1,7 +1,7 @@
 ruby:
   items ||= []
   open_positions = visible_work_positions.select { |p| p.announcement_status.name == "APERTO"}.count
-  
+
   # Transform items to JSON for data attribute with path information
   job_positions_json = visible_work_positions.map do |position|
     position_hash = position.to_hash
@@ -10,7 +10,7 @@ ruby:
     position_hash[:locale_prefix] = page_is_localizable?(position) ? path_prefix(I18n.locale).to_s : ""
     position_hash
   end.to_json
-  
+
   # Prepare translations for the React component
   translations_json = {
     workPosition: t("models.work_position"),
@@ -42,15 +42,13 @@ ruby:
 
 .py-3.mb-lg-5
   .container-xl.mid-container
-    p.text-uppercase.fw-semibold
+    /p.text-uppercase.fw-semibold
       - if open_positions === 0
         = t("work_position.none_open")
       - if open_positions === 1
         = "1 #{t("work_position.one_open")}"
       - if open_positions > 1
         = "#{open_positions} #{t("work_position.many_open")}"
-
-
 
     .job-positions-loader.d-flex.flex-column.align-items-center
       .spinner

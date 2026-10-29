@@ -4,6 +4,7 @@
   "private": true,
   "description": "Sito https://innovazione.gov.it/",
   "scripts": {
+    "dev:docker": "docker compose -f local-dev/compose.yml up --build -d",
     "dev": "webpack --mode development --watch --progress --color",
     "build": "webpack --mode production --progress",
     "middleman:build": "bundle exec middleman build",
