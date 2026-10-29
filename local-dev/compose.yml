@@ -1,0 +1,27 @@
+# Local development only. Independent from the root Dockerfile / docker-compose.yml
+# and from dev-m1/: it has its own project name, image and volumes.
+#
+#   docker compose -f local-dev/compose.yml up --build
+
+name: innovazione-local-dev
+
+services:
+  web:
+    image: innovazione-local-dev
+    build:
+      context: ..
+      dockerfile: local-dev/Dockerfile
+    init: true
+    env_file:
+      - ../.env
+    ports:
+      - "${MIDDLEMAN_PORT:-4567}:4567"
+    volumes:
+      - ..:/app
+      # Linux builds of the dependencies stay in volumes, away from the host folder
+      - node_modules:/app/node_modules
+      - bundle:/usr/local/bundle
+
+volumes:
+  node_modules:
+  bundle:
