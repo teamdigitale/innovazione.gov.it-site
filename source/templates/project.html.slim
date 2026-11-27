@@ -1,5 +1,5 @@
 - completed = !page.state_block.empty? && page.state_block.first.completed
-- logo = page.image_project_logo
+- logo = page.image_heading.present? ? page.image_heading : page.image_project_logo
 - image_url = logo.file.width(800).format("pjpg").to_url
 
 - content_for(:head)
